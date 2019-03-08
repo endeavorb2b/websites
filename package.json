@@ -10,6 +10,9 @@
     "packages/*",
     "sites/*"
   ],
+  "scripts": {
+    "lint": "node_modules/.bin/lerna run lint"
+  },
   "devDependencies": {
     "@base-cms/web-cli": "^0.4.18",
     "lerna": "^3.13.1"

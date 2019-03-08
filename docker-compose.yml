@@ -42,6 +42,14 @@ services:
     environment:
       <<: *env
 
+  lint:
+    <<: *node
+    working_dir: /root
+    entrypoint: ["yarn"]
+    command: ["run", "lint"]
+    environment:
+      <<: *env
+
   evaluation-engineering:
     <<: *node
     <<: *site-cmd
