@@ -171,10 +171,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.4.15.tgz#38dbf62ee4826e32565955b71ac925db823d5403"
   integrity sha512-q7DPRBaG9WIUk26ya2vlngZ6AtegZ4NnQB18aHQdv36LVntr1SSvpnsJqCwLhs7/QHvyW+n8TZsmJhpkeWor7A==
 
-"@base-cms/web-cli@^0.4.17":
-  version "0.4.17"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.4.17.tgz#efbd3102a833430ca7eadb7e4f1a767b47022ebc"
-  integrity sha512-Qz2L46FBBeQ4u/XmdNIDqml/FQTh47qCvLLkZwyvNNO7sdjhZlBTq773kF5fMaB8pzj/aPPQRZN/rMPwg3gmUQ==
+"@base-cms/web-cli@^0.4.18":
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.4.18.tgz#69f838e35d432fb009bc8124c1a44902fa0118fd"
+  integrity sha512-/ZQvCD+6JMyqyUKouCNFu1/lXInD8WuN4JINvX8H2l1HhDGw4qJuGZe6QKoyRHblNCHibMlUV7dxltW9wmqiWw==
   dependencies:
     "@base-cms/express-apollo" "^0.4.15"
     "@base-cms/marko-web" "^0.4.16"
