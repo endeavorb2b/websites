@@ -11,6 +11,7 @@
     "sites/*"
   ],
   "devDependencies": {
+    "@base-cms/web-cli": "^0.4.17",
     "lerna": "^3.13.1"
   }
 }
