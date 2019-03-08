@@ -80,3 +80,5 @@ typings/
 *.marko.js
 .marko-cli
 .marko-devtools
+
+.bash_history
