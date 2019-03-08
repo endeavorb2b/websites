@@ -30,5 +30,12 @@ services:
     environment:
       <<: *env
 
+  cli:
+    <<: *node
+    working_dir: /root/sites
+    entrypoint: ["/root/node_modules/.bin/basecms-website"]
+    environment:
+      <<: *env
+
 volumes:
   yarn-cache: {}
