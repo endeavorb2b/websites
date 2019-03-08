@@ -1,0 +1,16 @@
+{
+  "name": "@endeavorb2b/websites",
+  "version": "0.1.0",
+  "description": "Website monorepo for Endeavor Business Media",
+  "repository": "https://github.com/endeavorb2b/websites.git",
+  "author": "Jacob Bare <jacob@limit0.io>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "websites/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.13.1"
+  }
+}
