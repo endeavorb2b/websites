@@ -1,0 +1,34 @@
+version: '3.7'
+
+x-node-defaults: &node
+  tty: true
+  init: true
+  image: node:10.15
+  entrypoint: ["node"]
+  working_dir: /root
+  volumes:
+    - .:/root:cached
+    - ./node_modules:/root/node_modules:delegated
+    - yarn-cache:/.yarn-cache
+
+x-env-defaults: &env
+  YARN_CACHE_FOLDER: /.yarn-cache
+  NODE_ENV: development
+
+services:
+  terminal:
+    <<: *node
+    working_dir: /root
+    entrypoint: ["/bin/bash"]
+    environment:
+      <<: *env
+
+  yarn:
+    <<: *node
+    working_dir: /root
+    entrypoint: ["yarn"]
+    environment:
+      <<: *env
+
+volumes:
+  yarn-cache: {}
