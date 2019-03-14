@@ -144,7 +144,7 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.5.0":
+"@base-cms/marko-web@^0.5.0", "@base-cms/marko-web@~0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.5.0.tgz#d0190cf29cd1b7ffeb449d1b055593f7cdb32d68"
   integrity sha512-kW3/neZHCmMacUMtOi7BN50ZAXUHS7419NY12CirEs0uM3Ywn1Xw1leKjV/SrI8WvIddGNqweWC/gVByFITr7A==
@@ -159,6 +159,14 @@
     marko "^4.15.2"
     moment "^2.23.0"
 
+"@base-cms/object-path@^0.4.15":
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-0.4.15.tgz#fdd06b79037f444044d84d460679fd2487c9b22d"
+  integrity sha512-0rINbhwYGgOC3SgLylwZ0EKwSsKFdUETsSVpys8G8kgrMkPvhBE+rU6iMqwFgWF0G5R0+8qCkFlE5/7w3Rt0SQ==
+  dependencies:
+    "@base-cms/utils" "^0.4.15"
+    object-path "^0.11.4"
+
 "@base-cms/object-path@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-0.5.0.tgz#fc49d20a3db72f1679e55b4f05b9c03be22de3b1"
@@ -166,6 +174,11 @@
   dependencies:
     "@base-cms/utils" "^0.5.0"
     object-path "^0.11.4"
+
+"@base-cms/utils@^0.4.15":
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.4.15.tgz#38dbf62ee4826e32565955b71ac925db823d5403"
+  integrity sha512-q7DPRBaG9WIUk26ya2vlngZ6AtegZ4NnQB18aHQdv36LVntr1SSvpnsJqCwLhs7/QHvyW+n8TZsmJhpkeWor7A==
 
 "@base-cms/utils@^0.5.0":
   version "0.5.0"
@@ -1534,6 +1547,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bootstrap@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
