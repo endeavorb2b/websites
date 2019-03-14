@@ -4,10 +4,10 @@ $ const section = getAsObject(input, 'section');
 
 <document>
   <@head>
-    <-page-metadata for="website-section" ...section />
+    <cms-page-metadata for="website-section" ...section />
     <${input.head} />
   </@head>
-  <-page-container for="website-section" data=section>
+  <cms-page-container for="website-section" data=section>
     <${input.renderBody} />
-  </-page-container>
+  </cms-page-container>
 </document>

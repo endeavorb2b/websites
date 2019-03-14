@@ -5,6 +5,7 @@ module.exports = {
     { href: '/ee-blogs', label: 'EE Blogs' },
     { href: '/industries', label: 'Industries' },
     { href: '/industry-events', label: 'Industry Events' },
+    { href: '/instrumentation', label: 'Instrumentation' },
     { href: '/new-products', label: 'New Products' },
   ],
 };
