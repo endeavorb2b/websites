@@ -1,0 +1,24 @@
+language: node_js
+node_js: "10.15"
+cache: yarn
+
+stages:
+  - name: test
+  - name: deploy
+    if: tag is present
+  - name: notify
+    if: tag is present
+
+jobs:
+  include:
+    - stage: test
+    - stage: notify
+      script: scripts/deploy-notify.sh
+
+    - stage: deploy
+      name: Deploy Officer
+      script: scripts/deploy.js officer
+
+    - stage: deploy
+      name: Deploy Evaluation Engineering
+      script: scripts/deploy.js evaluation-engineering
