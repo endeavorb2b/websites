@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/evaluation-engineering",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
