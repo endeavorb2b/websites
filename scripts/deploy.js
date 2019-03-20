@@ -23,13 +23,35 @@ const site = process.argv[2];
 const sitePath = join('sites', site, 'package.json');
 const image = `endeavorb2b/website-${site}`;
 
-if (TRAVIS_TAG !== version) {
-  log(`Tagged version ${TRAVIS_TAG} differs from lerna version ${version}, aborting!`);
-  process.exit(1);
+const error = (message) => {
+  log(`ERROR: ${message}`);
+  const text = `Deployment of \`${image}\` @ \`${version}\` to production FAILED!\n${message}`;
+  const payload = JSON.stringify({ attachments: [{ color: 'danger', text }] });
+  const req = https.request({
+    hostname: 'hooks.slack.com',
+    path: '/services/TDA6JTAKC/BGCT0SNGY/vJSPL4S2NQN8SDAjCPilP773',
+    port: 443,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Content-Length': payload.length,
+    }
+  }, (res) => {
+    res.on('data', () => {
+      log('Slack notified.');
+      process.exit(1);
+    });
+  });
+
+  req.on('error', e => log(e));
+  req.write(payload);
+  req.end();
+
 }
 
-if (!site) throw new Error('You must specify the site folder to deploy.');
-if (!existsSync(sitePath)) throw new Error(`Could not read ${sitePath}!`);
+if (TRAVIS_TAG !== version) error(`Tagged version ${TRAVIS_TAG} differs from lerna version ${version}, aborting!`);
+if (!site) error('You must specify the site folder to deploy.');
+if (!existsSync(sitePath)) error(`Could not read ${sitePath}!`);
 
 const pkg = require(`../${sitePath}`);
 
@@ -90,7 +112,4 @@ const main = async () => {
   log('  Deploy complete.\n');
 };
 
-main().catch(e => {
-  log(`ERROR: ${e}`);
-  process.exit(1);
-});
+main().catch(e => error);
