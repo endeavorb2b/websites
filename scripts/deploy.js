@@ -7,6 +7,8 @@
  *   - DOCKERHUB_USERNAME
  *   - DOCKERHUB_PASSWORD
  *   - TRAVIS_TAG
+ *   - K8S_SERVER
+ *   - K8S_TOKEN
  */
 
 const { existsSync } = require('fs');
@@ -91,13 +93,13 @@ const shouldBuild = async () => {
 const build = async () => {
   log(`Building  ${image}:${version}...\n`);
   const { status } = await spawnSync('bash', ['scripts/deploy-image.sh', site, version], { stdio: 'inherit' });
-  if (status !== 0) throw new Error('Image build failed!');
+  if (status !== 0) error('Image build failed!');
 }
 
 const deploy = async () => {
   log(`Deploying ${image}:${version} on Kubernertes`);
-
-  // Tell k8s to update the deployment with the new image version
+  const { status } = await spawnSync('bash', ['scripts/deploy-k8s.sh', site, version], { stdio: 'inherit' });
+  if (status !== 0) error('Image deploy failed!');
 };
 
 const main = async () => {
