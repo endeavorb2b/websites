@@ -11,7 +11,9 @@
     "sites/*"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/lerna run lint"
+    "lint": "node_modules/.bin/lerna run lint",
+    "deploy": "scripts/deploy.js",
+    "test": "node_modules/.bin/lerna run test"
   },
   "devDependencies": {
     "@base-cms/web-cli": "~0.5.1",
