@@ -67,15 +67,11 @@ const handler = async (argv) => {
 
   const args = [
     'create',
-    `--path=${folder}`,
-    `--npmOrg=${npmOrg}`,
-    `--templateDir=${templateDir}`,
-    `--siteName=${siteName}`,
-    `--graphqlUri=${graphqlUri}`,
-    '--proceed=true',
-    '--withNavItems=true',
-    '--withBootstrap=true',
-    '--proceed=true'
+    folder,
+    `--npm-org=${npmOrg}`,
+    `--template-dir=${templateDir}`,
+    `--site-name=${siteName}`,
+    `--graphql-uri=${graphqlUri}`,
   ];
   log('Executing basecms-website with options...');
   const { status } = spawnSync('./node_modules/.bin/basecms-website', args, { stdio: 'inherit' });
