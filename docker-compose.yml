@@ -39,8 +39,8 @@ services:
 
   cli:
     <<: *node
-    working_dir: /root/sites
-    entrypoint: ["/root/node_modules/.bin/basecms-website"]
+    working_dir: /root
+    entrypoint: ["/root/packages/cli/src/index.js"]
     environment:
       <<: *env
 
