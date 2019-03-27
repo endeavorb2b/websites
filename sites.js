@@ -60,7 +60,6 @@ module.exports = {
   },
 
   // Bizbash Media, LLC
-
   bizbash: {
     name: 'BizBash',
     accountKey: 'bizbash',
@@ -80,25 +79,144 @@ module.exports = {
   },
 
   // Cygnus Business Media
-  // { account: 'cygnus', group: 'cavc', namespace: 'aviationpros', tenantKey: 'cygnus_cavc', replicaSet: picon },
-  // { account: 'cygnus', group: 'cpa',  namespace: 'cpapracticeadvisor', tenantKey: 'cygnus_cpa', replicaSet: picon },
-  // { account: 'cygnus', group: 'fhc',  namespace: 'firehouse', tenantKey: 'cygnus_fhc', replicaSet: picon },
-  // { account: 'cygnus', group: 'll',   namespace: 'locksmithledger', tenantKey: 'cygnus_ll', replicaSet: picon },
-  // { account: 'cygnus', group: 'mass', namespace: 'masstransitmag', tenantKey: 'cygnus_mass', replicaSet: picon },
-  // { account: 'cygnus', group: 'ofcr', namespace: 'officer', tenantKey: 'cygnus_ofcr', replicaSet: picon, version: '0.2.2' },
-  // { account: 'cygnus', group: 'siw',  namespace: 'securityinfowatch', tenantKey: 'cygnus_siw', replicaSet: picon },
-  // { account: 'cygnus', group: 'vmw',  namespace: 'vendingmarketwatch', tenantKey: 'cygnus_vmw', replicaSet: picon },
-  // { account: 'cygnus', group: 'vspc', namespace: 'vehicleservicepros', tenantKey: 'cygnus_vspc', replicaSet: picon },
+  aviationpros: {
+    name: 'Aviation Pros',
+    domain: 'aviationpros.com',
+    accountKey: 'ebm',
+    groupKey: 'cavc',
+    tenantKey: 'cygnus_cavc',
+    replicaSet: 'picon'
+  },
+  cpapracticeadvisor: {
+    name: 'CPA Practice Advisor',
+    domain: 'cpapracticeadvisor.com',
+    accountKey: 'ebm',
+    groupKey: 'cpa',
+    tenantKey: 'cygnus_cpa',
+    replicaSet: 'picon'
+  },
+  firehouse: {
+    name: 'Firehouse',
+    domain: 'firehouse.com',
+    accountKey: 'ebm',
+    groupKey: 'fhc',
+    tenantKey: 'cygnus_fhc',
+    replicaSet: 'picon'
+  },
+  locksmithledger: {
+    name: 'Locksmith Ledger',
+    domain: 'locksmithledger.com',
+    accountKey: 'ebm',
+    groupKey: 'll',
+    tenantKey: 'cygnus_ll',
+    replicaSet: 'picon'
+  },
+  masstransitmag: {
+    name: 'Mass Transit Magazine',
+    domain: 'masstransitmag.com',
+    accountKey: 'ebm',
+    groupKey: 'mass',
+    tenantKey: 'cygnus_mass',
+    replicaSet: 'picon'
+  },
+  officer: {
+    name: 'Officer',
+    domain: 'officer.com',
+    accountKey: 'ebm',
+    groupKey: 'ofcr',
+    tenantKey: 'cygnus_ofcr',
+    replicaSet: 'picon',
+  },
+  securityinfowatch: {
+    name: 'Security Info Watch',
+    domain: 'securityinfowatch.com',
+    accountKey: 'ebm',
+    groupKey: 'siw',
+    tenantKey: 'cygnus_siw',
+    replicaSet: 'picon'
+  },
+  vendingmarketwatch: {
+    name: 'Vending Market Watch',
+    domain: 'vendingmarketwatch.com',
+    accountKey: 'ebm',
+    groupKey: 'vmw',
+    tenantKey: 'cygnus_vmw',
+    replicaSet: 'picon'
+  },
+  vehicleservicepros: {
+    name: 'Vehicle Service Pros',
+    domain: 'vehicleservicepros.com',
+    accountKey: 'ebm',
+    groupKey: 'vspc',
+    tenantKey: 'cygnus_vspc',
+    replicaSet: 'picon'
+  },
 
   // Endeavor Business Media
-  // { account: 'ebm', group: 'ee',  namespace: 'evaluationengineering', tenantKey: 'ebm_ee', replicaSet: picon, version: '0.2.2' },
-  // { account: 'ebm', group: 'fcn', namespace: 'flowcontrolnetwork', tenantKey: 'ebm_fcn', replicaSet: picon },
-  // { account: 'ebm', group: 'hci', namespace: 'hcinnovationgroup', tenantKey: 'ebm_hci', replicaSet: picon },
-  // { account: 'ebm', group: 'hpn', namespace: 'hpnonline', tenantKey: 'ebm_hpn', replicaSet: picon },
-  // { account: 'ebm', group: 'mlo', namespace: 'mlo-online', tenantKey: 'ebm_mlo', replicaSet: picon },
-  // { account: 'ebm', group: 'pm',  namespace: 'processingmagazine', tenantKey: 'ebm_pm', replicaSet: picon },
-  // { account: 'ebm', group: 'pmm', namespace: 'plasticsmachinerymagazine', tenantKey: 'ebm_pmm', replicaSet: picon },
-  // { account: 'ebm', group: 'wto', namespace: 'watertechonline', tenantKey: 'ebm_wto', replicaSet: picon },
+  evaluationengineering: {
+    name: 'Evaluation Engineering',
+    domain: 'evaluationengineering.com',
+    accountKey: 'ebm',
+    groupKey: 'ee',
+    replicaSet: 'picon',
+  },
+  flowcontrolnetwork: {
+    name: 'Flow Control Network',
+    domain: 'flowcontrolnetwork.com',
+    accountKey: 'ebm',
+    groupKey: 'fcn',
+    replicaSet: 'picon',
+  },
+  forresternetwork: {
+    name: 'Forrester Network',
+    domain: 'forresternetwork.com',
+    accountKey: 'ebm',
+    groupKey: 'frn',
+    tenantKey: 'ebm_frn',
+    replicaSet: 'picon',
+  },
+  hcinnovationgroup: {
+    name: 'Healthcare Innovation',
+    domain: 'hcinnovationgroup.com',
+    accountKey: 'ebm',
+    groupKey: 'hci',
+    replicaSet: 'picon',
+  },
+  hpnonline: {
+    name: 'Healthcare Purchasing News',
+    domain: 'hpnonline.com',
+    accountKey: 'ebm',
+    groupKey: 'hpn',
+    replicaSet: 'picon',
+  },
+  'mlo-online': {
+    name: 'Medical Laboratory Observer',
+    domain: 'mlo-online.com',
+    accountKey: 'ebm',
+    groupKey: 'mlo',
+    replicaSet: 'picon',
+  },
+  processingmagazine: {
+    name: 'Processing Magazine',
+    domain: 'processingmagazine.com',
+    accountKey: 'ebm',
+    groupKey: 'pm',
+    replicaSet: 'picon',
+  },
+  plasticsmachinerymagazine: {
+    name: 'Plastics Machinery Magazine',
+    domain: 'plasticsmachinerymagazine.com',
+    accountKey: 'ebm',
+    groupKey: 'pmm',
+    replicaSet: 'picon',
+  },
+  watertechonline: {
+    name: 'Water Technology',
+    domain: 'watertechonline.com',
+    accountKey: 'ebm',
+    groupKey: 'wto',
+    replicaSet: 'picon',
+  },
 
   // Euclid Media Group
   citybeat: {
@@ -120,45 +238,97 @@ module.exports = {
 
   // FW Publishing
   nfocusnashville: {
-    // { account: 'fwp', group: 'nfn', namespace: 'nfocusnashville', tenantKey: 'scomm_nfn', replicaSet: caprica },
+    name: 'nFocus Nashville',
+    domain: 'nfocusnashville.com',
+    accountKey: 'fwp',
+    groupKey: 'nfn',
+    tenantKey: 'scomm_nfn',
+    replicaSet: 'caprica',
   },
   nashvillescene: {
-    // { account: 'fwp', group: 'nvs', namespace: 'nashvillescene', tenantKey: 'scomm_nvs', replicaSet: caprica },
+    name: 'Nashville Scene',
+    domain: 'nashvillescene.com',
+    accountKey: 'fwp',
+    groupKey: 'nvs',
+    tenantKey: 'scomm_nvs',
+    replicaSet: 'caprica',
   },
   nashvillepost: {
-    // { account: 'fwp', group: 'nvp', namespace: 'nashvillepost', tenantKey: 'scomm_nvp', replicaSet: caprica },
+    name: 'Nashville Post',
+    domain: 'nashvillepost.com',
+    accountKey: 'fwp',
+    groupKey: 'nvp',
+    tenantKey: 'scomm_nvp',
+    replicaSet: 'caprica',
   },
 
   // Industrial Media Group
   cannabisequipmentnews: {
-    // { account: 'indm', group: 'cen', namespace: 'cannabisequipmentnews', tenantKey: 'indm_cen', replicaSet: caprica },
+    name: 'Cannabis Equipment News',
+    domain: 'cannabisequipmentnews.com',
+    accountKey: 'indm',
+    groupKey: 'cen',
+    tenantKey: 'indm_cen',
+    replicaSet: 'caprica',
   },
   designdevelopmenttoday: {
-    // { account: 'indm', group: 'ddt', namespace: 'designdevelopmenttoday', tenantKey: 'indm_ddt', replicaSet: caprica },
+    name: 'Design & Development Today',
+    domain: 'designdevelopmenttoday.com',
+    accountKey: 'indm',
+    groupKey: 'ddt',
+    tenantKey: 'indm_ddt',
+    replicaSet: 'caprica',
   },
   ien: {
-    // { account: 'indm', group: 'ien', namespace: 'ien', tenantKey: 'indm_ien', replicaSet: caprica },
+    name: 'Industrial Equipment News',
+    domain: 'ien.com',
+    accountKey: 'indm',
+    groupKey: 'ien',
+    tenantKey: 'indm_ien',
+    replicaSet: 'caprica',
   },
   madeinamericaseries: {
-    // { account: 'indm', group: 'mia', namespace: 'madeinamericaseries', tenantKey: 'indm_mia', replicaSet: aerilon },
+    name: 'Made In America Series',
+    domain: 'madeinamericaseries.com',
+    accountKey: 'indm',
+    groupKey: 'mia',
+    tenantKey: 'indm_mia',
+    replicaSet: 'aerilon'
   },
 
   // PenWell Corporation
-  // { account: 'penwell', group: 'bow',   namespace: 'bioopticsworld', tenantKey: 'penwell_bow', replicaSet: aerilon },
-  // { account: 'penwell', group: 'btr',   namespace: 'broadbandtechreport', tenantKey: 'penwell_btr', replicaSet: aerilon },
-  // { account: 'penwell', group: 'cim',   namespace: 'cablinginstall', tenantKey: 'penwell_cim', replicaSet: aerilon },
-  // { account: 'penwell', group: 'dace',  namespace: 'dentalacademyofce', tenantKey: 'penwell_dace', replicaSet: aerilon },
-  // { account: 'penwell', group: 'ias',   namespace: 'intelligent-aerospace', tenantKey: 'penwell_ias', replicaSet: aerilon },
-  // { account: 'penwell', group: 'ils',   namespace: 'industrial-lasers', tenantKey: 'penwell_ils', replicaSet: aerilon },
-  // { account: 'penwell', group: 'leds',  namespace: 'ledsmagazine', tenantKey: 'penwell_leds', replicaSet: aerilon },
-  // { account: 'penwell', group: 'lfw',   namespace: 'laserfocusworld', tenantKey: 'penwell_lfw', replicaSet: aerilon },
-  // { account: 'penwell', group: 'lw',    namespace: 'lightwaveonline', tenantKey: 'penwell_lw', replicaSet: aerilon },
-  // { account: 'penwell', group: 'mae',   namespace: 'militaryaerospace', tenantKey: 'penwell_mae', replicaSet: aerilon },
-  // { account: 'penwell', group: 'os',    namespace: 'offshore-mag', tenantKey: 'penwell_os', replicaSet: aerilon },
-  // { account: 'penwell', group: 'ogj',   namespace: 'ogj', tenantKey: 'penwell_ogj', replicaSet: aerilon },
-  // { account: 'penwell', group: 'rdh',   namespace: 'rdhmag', tenantKey: 'penwell_rdh', replicaSet: aerilon },
-  // { account: 'penwell', group: 'sr',    namespace: 'perioimplantadvisory', tenantKey: 'penwell_sr', replicaSet: aerilon },
-  // { account: 'penwell', group: 'su',    namespace: 'strategies-u', tenantKey: 'penwell_su', replicaSet: aerilon },
+  bioopticsworld: {
+    name: 'Bio Optics World',
+    domain: 'bioopticsworld.com',
+    accountKey: 'ebm',
+    groupKey: 'bow',
+    tenantKey: 'penwell_bow',
+    replicaSet: 'aerilon'
+  },
+  broadbandtechreport: {
+    name: 'Broadband Technology Report',
+    domain: 'broadbandtechreport.com',
+    accountKey: 'ebm',
+    groupKey: 'btr',
+    tenantKey: 'penwell_btr',
+    replicaSet: 'aerilon'
+  },
+  cablinginstall: {
+    name: 'Cabling Installation & Maintenance',
+    domain: 'cablinginstall.com',
+    accountKey: 'ebm',
+    groupKey: 'cim',
+    tenantKey: 'penwell_cim',
+    replicaSet: 'aerilon'
+  },
+  dentalacademyofce: {
+    name: 'Dental Academy of Continuing Education',
+    domain: 'dentalacademyofce.com',
+    accountKey: 'ebm',
+    groupKey: 'dace',
+    tenantKey: 'penwell_dace',
+    replicaSet: 'aerilon'
+  },
   dentaleconomics: {
     name: 'Dental Economics',
     domain: 'dentaleconomics.com',
@@ -167,7 +337,7 @@ module.exports = {
     groupKey: 'de',
     tenantKey: 'ebm_de',
     replicaSet: 'aerilon',
-    primaryNav: [
+    primaryNavItems: [
       { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
       { href: '/practice', label: 'Practice' },
       { href: '/science-tech', label: 'Science & Tech' },
@@ -207,7 +377,7 @@ module.exports = {
     groupKey: 'diq',
     tenantKey: 'ebm_diq',
     replicaSet: 'aerilon',
-    primaryNav: [
+    primaryNavItems: [
       { href: '/practice-management', label: 'Practice Management' },
       { href: '/assistants', label: 'Assistants' },
       { href: '/clinical', label: 'Clinical' },
@@ -241,6 +411,127 @@ module.exports = {
       },
     },
   },
+  'intelligent-aerospace': {
+    name: 'Intelligent Aerospace',
+    domain: 'intelligent-aerospace.com',
+    accountKey: 'ebm',
+    groupKey: 'ias',
+    tenantKey: 'penwell_ias',
+    replicaSet: 'aerilon',
+  },
+  'industrial-lasers': {
+    name: 'Industrial Laser Solutions',
+    domain: 'industrial-lasers.com',
+    accountKey: 'ebm',
+    groupKey: 'ils',
+    tenantKey: 'penwell_ils',
+    replicaSet: 'aerilon',
+  },
+  ledsmagazine: {
+    name: 'LEDs Magazine',
+    domain: 'ledsmagazine.com',
+    accountKey: 'ebm',
+    groupKey: 'leds',
+    tenantKey: 'penwell_leds',
+    replicaSet: 'aerilon',
+  },
+  laserfocusworld: {
+    name: 'Laser Focus World',
+    domain: 'laserfocusworld.com',
+    accountKey: 'ebm',
+    groupKey: 'lfw',
+    tenantKey: 'penwell_lfw',
+    replicaSet: 'aerilon',
+  },
+  lightwaveonline: {
+    name: 'Lightwave',
+    domain: 'lightwaveonline.com',
+    accountKey: 'ebm',
+    groupKey: 'lw',
+    tenantKey: 'penwell_lw',
+    replicaSet: 'aerilon',
+  },
+  militaryaerospace: {
+    name: 'Military & Aerospace Electronics',
+    domain: 'militaryaerospace.com',
+    accountKey: 'ebm',
+    groupKey: 'mae',
+    tenantKey: 'penwell_mae',
+    replicaSet: 'aerilon',
+  },
+  'offshore-mag': {
+    name: 'Offshore Magazine',
+    domain: 'offshore-mag.com',
+    accountKey: 'ebm',
+    groupKey: 'os',
+    tenantKey: 'penwell_os',
+    replicaSet: 'aerilon',
+  },
+  ogj: {
+    name: 'Oil & Gas Journal',
+    domain: 'ogj.com',
+    accountKey: 'ebm',
+    groupKey: 'ogj',
+    tenantKey: 'penwell_ogj',
+    replicaSet: 'aerilon',
+  },
+  rdhmag: {
+    name: 'Registered Dental Hygienist',
+    domain: 'rdhmag.com',
+    accountKey: 'ebm',
+    groupKey: 'rdh',
+    tenantKey: 'penwell_rdh',
+    replicaSet: 'aerilon',
+  },
+  perioimplantadvisory: {
+    name: 'Perio-Implant Advisory',
+    domain: 'perioimplantadvisory.com',
+    logo: 'https://img.perioimplantadvisory.com/',
+    accountKey: 'ebm',
+    groupKey: 'pia',
+    tenantKey: 'ebm_pia',
+    replicaSet: 'aerilon',
+    primaryNav: [
+      { href: '/clinical-tips-from-the-editor', label: 'Clinical Tips from the Editor' },
+      { href: '/complications', label: 'Complications' },
+      { href: '/dental-practice-management', label: 'Dental Practice Management' },
+      { href: '/hygiene', label: 'Hygiene' },
+      { href: '/oral-systemic', label: 'Oral-Systemic' },
+      { href: '/restorative', label: 'Restorative' },
+      { href: '/surgical', label: 'Surgical' },
+      { href: '/team-treatment-planning', label: 'Team Treatment Planning' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/editors-picks', label: 'Editor\'s Picks' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/job-listings', label: 'Job Listings' },
+    ],
+    ads: {
+      units: {
+        BS: {
+          path: '/21687441225/PIA/PIA_BS',
+          size: [[970, 250], [970, 90], [728, 90], [300, 50]],
+        },
+        MR: {
+          path: '/21687441225/PIA/PIA_MR',
+          size: [300, 250],
+        },
+        HP: {
+          path: '/21687441225/PIA/PIA_HP',
+          size: [300, 600],
+        },
+      },
+    },
+  },
+  'strategies-u': {
+    name: 'Strategies Unlimited',
+    domain: 'strategies-u.com',
+    accountKey: 'ebm',
+    groupKey: 'su',
+    tenantKey: 'penwell_su',
+    replicaSet: 'aerilon',
+  },
   utilityproducts: {
     name: 'Utility Products',
     domain: 'utilityproducts.com',
@@ -249,7 +540,7 @@ module.exports = {
     groupKey: 'up',
     tenantKey: 'ebm_up',
     replicaSet: 'aerilon',
-    primaryNav: [
+    primaryNavItems: [
       { href: '/transmission-distribution', label: 'Transmission & Distribution' },
       { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },
       { href: '/tools-supplies', label: 'Tools & Supplies' },
@@ -280,8 +571,22 @@ module.exports = {
       },
     },
   },
-  // { account: 'penwell', group: 'vsd',   namespace: 'vision-systems', tenantKey: 'penwell_vsd', replicaSet: aerilon },
-  // { account: 'penwell', group: 'ww',    namespace: 'waterworld', tenantKey: 'penwell_ww', replicaSet: aerilon },
+  'vision-systems': {
+    name: 'Vision Systems Design',
+    domain: 'vision-systems.com',
+    accountKey: 'ebm',
+    groupKey: 'vsd',
+    tenantKey: 'ebm_vsd',
+    replicaSet: 'aerilon',
+  },
+  waterworld: {
+    name: 'Water World',
+    domain: 'waterworld.com',
+    accountKey: 'ebm',
+    groupKey: 'ww',
+    tenantKey: 'penwell_ww',
+    replicaSet: 'aerilon',
+  },
 
   // Washington City Paper
   washingtoncitypaper: {
