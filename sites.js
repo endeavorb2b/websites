@@ -580,12 +580,42 @@ module.exports = {
     replicaSet: 'aerilon',
   },
   waterworld: {
-    name: 'Water World',
+    name: 'WaterWorld',
     domain: 'waterworld.com',
+    logo: 'https://cdn.waterworld.com/',
     accountKey: 'ebm',
     groupKey: 'ww',
-    tenantKey: 'penwell_ww',
+    tenantKey: 'ebm_ww',
     replicaSet: 'aerilon',
+    primaryNav: [
+      { href: '/municipal', label: 'Municipal' },
+      { href: '/industrial', label: 'Industrial' },
+      { href: '/international', label: 'International' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
+      { href: '/whitepapers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/events', label: 'Events' },
+      { href: '/video', label: 'Video' },
+    ],
+    ads: {
+      units: {
+        BS: {
+          path: '/21687441225/WW/WW_BS',
+          size: [[970, 250], [970, 90], [728, 90], [300, 50]],
+        },
+        MR: {
+          path: '/21687441225/WW/WW_MR',
+          size: [300, 250],
+        },
+        HP: {
+          path: '/21687441225/WW/WW_HP',
+          size: [300, 600],
+        },
+      },
+    },
   },
 
   // Washington City Paper
