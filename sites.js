@@ -148,8 +148,6 @@ module.exports = {
   // { account: 'penwell', group: 'btr',   namespace: 'broadbandtechreport', tenantKey: 'penwell_btr', replicaSet: aerilon },
   // { account: 'penwell', group: 'cim',   namespace: 'cablinginstall', tenantKey: 'penwell_cim', replicaSet: aerilon },
   // { account: 'penwell', group: 'dace',  namespace: 'dentalacademyofce', tenantKey: 'penwell_dace', replicaSet: aerilon },
-  // { account: 'penwell', group: 'de',    namespace: 'dentaleconomics', tenantKey: 'penwell_de', replicaSet: aerilon },
-  // { account: 'penwell', group: 'diq',   namespace: 'dentistryiq', tenantKey: 'penwell_diq', replicaSet: aerilon },
   // { account: 'penwell', group: 'ias',   namespace: 'intelligent-aerospace', tenantKey: 'penwell_ias', replicaSet: aerilon },
   // { account: 'penwell', group: 'ils',   namespace: 'industrial-lasers', tenantKey: 'penwell_ils', replicaSet: aerilon },
   // { account: 'penwell', group: 'leds',  namespace: 'ledsmagazine', tenantKey: 'penwell_leds', replicaSet: aerilon },
@@ -161,8 +159,90 @@ module.exports = {
   // { account: 'penwell', group: 'rdh',   namespace: 'rdhmag', tenantKey: 'penwell_rdh', replicaSet: aerilon },
   // { account: 'penwell', group: 'sr',    namespace: 'perioimplantadvisory', tenantKey: 'penwell_sr', replicaSet: aerilon },
   // { account: 'penwell', group: 'su',    namespace: 'strategies-u', tenantKey: 'penwell_su', replicaSet: aerilon },
+  dentaleconomics: {
+    name: 'Dental Economics',
+    domain: 'dentaleconomics.com',
+    logo: 'https://img.dentaleconomics.com/',
+    accountKey: 'ebm',
+    groupKey: 'de',
+    tenantKey: 'ebm_de',
+    replicaSet: 'aerilon',
+    primaryNav: [
+      { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
+      { href: '/practice', label: 'Practice' },
+      { href: '/science-tech', label: 'Science & Tech' },
+      { href: '/money', label: 'Money' },
+      { href: '/dental-office-design', label: 'Dental Office Design' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
+      { href: '/white-papers', label: 'White Papers' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/job-listings', label: 'Job Listings' },
+      { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
+    ],
+    ads: {
+      units: {
+        BS: {
+          path: '/21687441225/DE/DE_BS',
+          size: [[970, 250], [970, 90], [728, 90], [300, 50]],
+        },
+        MR: {
+          path: '/21687441225/DE/DE_MR',
+          size: [300, 250],
+        },
+        HP: {
+          path: '/21687441225/DE/DE_HP',
+          size: [300, 600],
+        },
+      },
+    },
+  },
+  dentistryiq: {
+    name: 'DentistryIQ',
+    domain: 'dentistryiq.com',
+    logo: 'https://img.dentistryiq.com/',
+    accountKey: 'ebm',
+    groupKey: 'diq',
+    tenantKey: 'ebm_diq',
+    replicaSet: 'aerilon',
+    primaryNav: [
+      { href: '/practice-management', label: 'Practice Management' },
+      { href: '/assistants', label: 'Assistants' },
+      { href: '/clinical', label: 'Clinical' },
+      { href: '/front-office', label: 'Front Office' },
+      { href: '/dental-hygiene', label: 'Dental Hygiene' },
+      { href: '/industry', label: 'Industry' },
+      { href: '/products', label: 'Products' },
+      { href: '/continuing-education', label: 'Continuing Education' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/products/free-samples', label: 'Free Samples' },
+      { href: '/blogs', label: 'Blogs' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    ads: {
+      units: {
+        BS: {
+          path: '/21687441225/DIQ/DIQ_BS',
+          size: [[970, 250], [970, 90], [728, 90], [300, 50]],
+        },
+        MR: {
+          path: '/21687441225/DIQ/DIQ_MR',
+          size: [300, 250],
+        },
+        HP: {
+          path: '/21687441225/DIQ/DIQ_HP',
+          size: [300, 600],
+        },
+      },
+    },
+  },
   utilityproducts: {
-    name: 'Utlity Products',
+    name: 'Utility Products',
     domain: 'utilityproducts.com',
     logo: 'https://cdn.utilityproducts.com/',
     accountKey: 'ebm',
@@ -178,11 +258,10 @@ module.exports = {
       { href: '/test-measurement', label: 'Test & Measurement' },
     ],
     secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/events', label: 'Events' },
-      { href: '/advertise', label: 'Advertise' },
-      { href: '/contact-us', label: 'Contact Us' },
     ],
     ads: {
       units: {
