@@ -1,26 +1,23 @@
-import { getAsArray, get} from '@base-cms/object-path';
+$ const { site, config } = out.global;
 
-$ const primaryNavItems = getAsArray(out.global, 'site.config.primaryNavItems');
-$ const logo = get(out.global, 'site.config.logo');
-$ const siteName = get(out.global, 'site.config.siteName');
-
-<nav class="site-navigation">
-  <a href="/">
-    <if(logo)>
-      <img src=logo height="40">
-    </if>
-    <else>
-      <h3>${siteName}</h3>
-    </else>
+<nav class="navbar navbar--site navbar-dark navbar-expand-lg">
+  <a class="navbar-brand" href="/">
+    <img alt=config.siteName() src=site.get('logo') height="35">
   </a>
-  <if(primaryNavItems.length)>
-    <ul>
-      <for|item| of=primaryNavItems>
-        <li>
-          <a href=item.href>${item.label}</a>
+  <div class="d-flex flex-column-reverse">
+    <ul class="navbar-nav navbar-nav--primary">
+      <for|item| of=site.getAsArray('primaryNavItems')>
+        <li class="nav-item">
+          <a class="nav-link pt-1 text-white" href=item.href>${item.label}</a>
         </li>
       </for>
     </ul>
-  </if>
-  <hr>
+    <ul class="navbar-nav">
+      <for|item| of=site.getAsArray('secondaryNavItems')>
+        <li class="nav-item">
+          <a class="nav-link pb-1 text-secondary" href=item.href><small>${item.label}</small></a>
+        </li>
+      </for>
+    </ul>
+  </div>
 </nav>
