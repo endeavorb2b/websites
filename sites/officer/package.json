@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/officer",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
