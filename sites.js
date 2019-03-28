@@ -3,14 +3,25 @@ module.exports = {
   dmnews: {
     name: 'DM News',
     domain: 'dmnews.com',
+    project: 'AC Business Media',
     accountKey: 'acbm',
     groupKey: 'dmn',
     tenantKey: 'acbm_dmn',
     replicaSet: 'caprica',
   },
+  greenindustrypros: {
+    name: 'Green Industry Pros',
+    domain: 'greenindustrypros.com',
+    project: 'AC Business Media',
+    accountKey: 'acbm',
+    groupKey: 'gip',
+    tenantKey: 'acbm_gip',
+    replicaSet: 'caprica',
+  },
   forconstructionpros: {
     name: 'For Construction Pros',
     domain: 'forconstructionpros.com',
+    project: 'AC Business Media',
     accountKey: 'acbm',
     groupKey: 'fcp',
     tenantKey: 'acbm_fcp',
@@ -19,6 +30,7 @@ module.exports = {
   foodlogistics: {
     name: 'Food Logistics',
     domain: 'foodlogistics.com',
+    project: 'AC Business Media',
     accountKey: 'acbm',
     groupKey: 'fl',
     tenantKey: 'acbm_fl',
@@ -27,6 +39,7 @@ module.exports = {
   oemoffhighway: {
     name: 'OEM Off Highway',
     domain: 'oemoffhighway.com',
+    project: 'AC Business Media',
     accountKey: 'acbm',
     groupKey: 'ooh',
     tenantKey: 'acbm_ooh',
@@ -35,6 +48,7 @@ module.exports = {
   sdcexec: {
     name: 'Supply & Demand Chain Executive',
     domain: 'sdcexec.com',
+    project: 'AC Business Media',
     accountKey: 'acbm',
     groupKey: 'sdce',
     tenantKey: 'acbm_sdce',
@@ -45,6 +59,7 @@ module.exports = {
   baseplatform: {
     name: 'Base Platform',
     domain: 'baseplatform.io',
+    project: 'AS3',
     accountKey: 'as3',
     groupKey: 'baseplatform',
     tenantKey: 'as3_baseplatform',
@@ -53,6 +68,7 @@ module.exports = {
   clarity: {
     name: 'Clarity',
     domain: 'clarity.endeavorb2b.com',
+    project: 'AS3',
     accountKey: 'as3',
     groupKey: 'clarity',
     tenantKey: 'as3_clarity',
@@ -62,6 +78,8 @@ module.exports = {
   // Bizbash Media, LLC
   bizbash: {
     name: 'BizBash',
+    domain: 'bizbash.com',
+    project: 'BizBash',
     accountKey: 'bizbash',
     groupKey: 'bzb',
     tenantKey: 'bizbash_bzb',
@@ -72,6 +90,7 @@ module.exports = {
   thepitchkc: {
     name: 'The Pitch',
     domain: 'thepitchkc.com',
+    project: 'Carey Media',
     accountKey: 'careymedia',
     groupKey: 'kcp',
     tenantKey: 'scomm_kcp',
@@ -82,6 +101,7 @@ module.exports = {
   aviationpros: {
     name: 'Aviation Pros',
     domain: 'aviationpros.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'cavc',
     tenantKey: 'cygnus_cavc',
@@ -90,6 +110,7 @@ module.exports = {
   cpapracticeadvisor: {
     name: 'CPA Practice Advisor',
     domain: 'cpapracticeadvisor.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'cpa',
     tenantKey: 'cygnus_cpa',
@@ -98,6 +119,7 @@ module.exports = {
   firehouse: {
     name: 'Firehouse',
     domain: 'firehouse.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'fhc',
     tenantKey: 'cygnus_fhc',
@@ -106,6 +128,7 @@ module.exports = {
   locksmithledger: {
     name: 'Locksmith Ledger',
     domain: 'locksmithledger.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'll',
     tenantKey: 'cygnus_ll',
@@ -114,6 +137,7 @@ module.exports = {
   masstransitmag: {
     name: 'Mass Transit Magazine',
     domain: 'masstransitmag.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'mass',
     tenantKey: 'cygnus_mass',
@@ -122,6 +146,7 @@ module.exports = {
   officer: {
     name: 'Officer',
     domain: 'officer.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'ofcr',
     tenantKey: 'cygnus_ofcr',
@@ -130,6 +155,7 @@ module.exports = {
   securityinfowatch: {
     name: 'Security Info Watch',
     domain: 'securityinfowatch.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'siw',
     tenantKey: 'cygnus_siw',
@@ -138,6 +164,7 @@ module.exports = {
   vendingmarketwatch: {
     name: 'Vending Market Watch',
     domain: 'vendingmarketwatch.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'vmw',
     tenantKey: 'cygnus_vmw',
@@ -146,6 +173,7 @@ module.exports = {
   vehicleservicepros: {
     name: 'Vehicle Service Pros',
     domain: 'vehicleservicepros.com',
+    project: 'Cygnus Business Media',
     accountKey: 'ebm',
     groupKey: 'vspc',
     tenantKey: 'cygnus_vspc',
@@ -156,6 +184,7 @@ module.exports = {
   evaluationengineering: {
     name: 'Evaluation Engineering',
     domain: 'evaluationengineering.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'ee',
     replicaSet: 'picon',
@@ -163,6 +192,7 @@ module.exports = {
   flowcontrolnetwork: {
     name: 'Flow Control Network',
     domain: 'flowcontrolnetwork.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'fcn',
     replicaSet: 'picon',
@@ -170,6 +200,7 @@ module.exports = {
   forresternetwork: {
     name: 'Forrester Network',
     domain: 'forresternetwork.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'frn',
     tenantKey: 'ebm_frn',
@@ -178,6 +209,7 @@ module.exports = {
   hcinnovationgroup: {
     name: 'Healthcare Innovation',
     domain: 'hcinnovationgroup.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'hci',
     replicaSet: 'picon',
@@ -185,6 +217,7 @@ module.exports = {
   hpnonline: {
     name: 'Healthcare Purchasing News',
     domain: 'hpnonline.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'hpn',
     replicaSet: 'picon',
@@ -192,6 +225,7 @@ module.exports = {
   'mlo-online': {
     name: 'Medical Laboratory Observer',
     domain: 'mlo-online.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'mlo',
     replicaSet: 'picon',
@@ -199,6 +233,7 @@ module.exports = {
   processingmagazine: {
     name: 'Processing Magazine',
     domain: 'processingmagazine.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'pm',
     replicaSet: 'picon',
@@ -206,6 +241,7 @@ module.exports = {
   plasticsmachinerymagazine: {
     name: 'Plastics Machinery Magazine',
     domain: 'plasticsmachinerymagazine.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'pmm',
     replicaSet: 'picon',
@@ -213,6 +249,7 @@ module.exports = {
   watertechonline: {
     name: 'Water Technology',
     domain: 'watertechonline.com',
+    project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'wto',
     replicaSet: 'picon',
@@ -222,6 +259,7 @@ module.exports = {
   citybeat: {
     name: 'City Beat',
     domain: 'citybeat.com',
+    project: 'Euclid Media Group',
     accountKey: 'euclid',
     groupKey: 'cb',
     tenantKey: 'scomm_cb',
@@ -230,6 +268,7 @@ module.exports = {
   cltampa: {
     name: 'Creative Loafing: Tampa',
     domain: 'cltampa.com',
+    project: 'Euclid Media Group',
     accountKey: 'euclid',
     groupKey: 'cltampa',
     tenantKey: 'scomm_cltampa',
@@ -240,6 +279,7 @@ module.exports = {
   nfocusnashville: {
     name: 'nFocus Nashville',
     domain: 'nfocusnashville.com',
+    project: 'FW Publishing',
     accountKey: 'fwp',
     groupKey: 'nfn',
     tenantKey: 'scomm_nfn',
@@ -248,6 +288,7 @@ module.exports = {
   nashvillescene: {
     name: 'Nashville Scene',
     domain: 'nashvillescene.com',
+    project: 'FW Publishing',
     accountKey: 'fwp',
     groupKey: 'nvs',
     tenantKey: 'scomm_nvs',
@@ -256,6 +297,7 @@ module.exports = {
   nashvillepost: {
     name: 'Nashville Post',
     domain: 'nashvillepost.com',
+    project: 'FW Publishing',
     accountKey: 'fwp',
     groupKey: 'nvp',
     tenantKey: 'scomm_nvp',
@@ -266,6 +308,7 @@ module.exports = {
   cannabisequipmentnews: {
     name: 'Cannabis Equipment News',
     domain: 'cannabisequipmentnews.com',
+    project: 'Industrial Media Group',
     accountKey: 'indm',
     groupKey: 'cen',
     tenantKey: 'indm_cen',
@@ -274,6 +317,7 @@ module.exports = {
   designdevelopmenttoday: {
     name: 'Design & Development Today',
     domain: 'designdevelopmenttoday.com',
+    project: 'Industrial Media Group',
     accountKey: 'indm',
     groupKey: 'ddt',
     tenantKey: 'indm_ddt',
@@ -282,6 +326,7 @@ module.exports = {
   ien: {
     name: 'Industrial Equipment News',
     domain: 'ien.com',
+    project: 'Industrial Media Group',
     accountKey: 'indm',
     groupKey: 'ien',
     tenantKey: 'indm_ien',
@@ -290,6 +335,7 @@ module.exports = {
   madeinamericaseries: {
     name: 'Made In America Series',
     domain: 'madeinamericaseries.com',
+    project: 'Industrial Media Group',
     accountKey: 'indm',
     groupKey: 'mia',
     tenantKey: 'indm_mia',
@@ -300,39 +346,44 @@ module.exports = {
   bioopticsworld: {
     name: 'Bio Optics World',
     domain: 'bioopticsworld.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'bow',
-    tenantKey: 'penwell_bow',
+    tenantKey: 'ebm_bow',
     replicaSet: 'aerilon'
   },
   broadbandtechreport: {
     name: 'Broadband Technology Report',
     domain: 'broadbandtechreport.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'btr',
-    tenantKey: 'penwell_btr',
+    tenantKey: 'ebm_btr',
     replicaSet: 'aerilon'
   },
   cablinginstall: {
     name: 'Cabling Installation & Maintenance',
     domain: 'cablinginstall.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'cim',
-    tenantKey: 'penwell_cim',
+    tenantKey: 'ebm_cim',
     replicaSet: 'aerilon'
   },
   dentalacademyofce: {
     name: 'Dental Academy of Continuing Education',
     domain: 'dentalacademyofce.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'dace',
-    tenantKey: 'penwell_dace',
+    tenantKey: 'ebm_dace',
     replicaSet: 'aerilon'
   },
   dentaleconomics: {
     name: 'Dental Economics',
     domain: 'dentaleconomics.com',
     logo: 'https://img.dentaleconomics.com/',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'de',
     tenantKey: 'ebm_de',
@@ -373,6 +424,7 @@ module.exports = {
     name: 'DentistryIQ',
     domain: 'dentistryiq.com',
     logo: 'https://img.dentistryiq.com/',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'diq',
     tenantKey: 'ebm_diq',
@@ -414,79 +466,89 @@ module.exports = {
   'intelligent-aerospace': {
     name: 'Intelligent Aerospace',
     domain: 'intelligent-aerospace.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ias',
-    tenantKey: 'penwell_ias',
+    tenantKey: 'ebm_ias',
     replicaSet: 'aerilon',
   },
   'industrial-lasers': {
     name: 'Industrial Laser Solutions',
     domain: 'industrial-lasers.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ils',
-    tenantKey: 'penwell_ils',
+    tenantKey: 'ebm_ils',
     replicaSet: 'aerilon',
   },
   ledsmagazine: {
     name: 'LEDs Magazine',
     domain: 'ledsmagazine.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'leds',
-    tenantKey: 'penwell_leds',
+    tenantKey: 'ebm_leds',
     replicaSet: 'aerilon',
   },
   laserfocusworld: {
     name: 'Laser Focus World',
     domain: 'laserfocusworld.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lfw',
-    tenantKey: 'penwell_lfw',
+    tenantKey: 'ebm_lfw',
     replicaSet: 'aerilon',
   },
   lightwaveonline: {
     name: 'Lightwave',
     domain: 'lightwaveonline.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lw',
-    tenantKey: 'penwell_lw',
+    tenantKey: 'ebm_lw',
     replicaSet: 'aerilon',
   },
   militaryaerospace: {
     name: 'Military & Aerospace Electronics',
     domain: 'militaryaerospace.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'mae',
-    tenantKey: 'penwell_mae',
+    tenantKey: 'ebm_mae',
     replicaSet: 'aerilon',
   },
   'offshore-mag': {
     name: 'Offshore Magazine',
     domain: 'offshore-mag.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'os',
-    tenantKey: 'penwell_os',
+    tenantKey: 'ebm_os',
     replicaSet: 'aerilon',
   },
   ogj: {
     name: 'Oil & Gas Journal',
     domain: 'ogj.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ogj',
-    tenantKey: 'penwell_ogj',
+    tenantKey: 'ebm_ogj',
     replicaSet: 'aerilon',
   },
   rdhmag: {
     name: 'Registered Dental Hygienist',
     domain: 'rdhmag.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'rdh',
-    tenantKey: 'penwell_rdh',
+    tenantKey: 'ebm_rdh',
     replicaSet: 'aerilon',
   },
   perioimplantadvisory: {
     name: 'Perio-Implant Advisory',
     domain: 'perioimplantadvisory.com',
     logo: 'https://img.perioimplantadvisory.com/',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'pia',
     tenantKey: 'ebm_pia',
@@ -527,15 +589,17 @@ module.exports = {
   'strategies-u': {
     name: 'Strategies Unlimited',
     domain: 'strategies-u.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'su',
-    tenantKey: 'penwell_su',
+    tenantKey: 'ebm_su',
     replicaSet: 'aerilon',
   },
   utilityproducts: {
     name: 'Utility Products',
     domain: 'utilityproducts.com',
     logo: 'https://cdn.utilityproducts.com/',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'up',
     tenantKey: 'ebm_up',
@@ -574,6 +638,7 @@ module.exports = {
   'vision-systems': {
     name: 'Vision Systems Design',
     domain: 'vision-systems.com',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'vsd',
     tenantKey: 'ebm_vsd',
@@ -583,6 +648,7 @@ module.exports = {
     name: 'WaterWorld',
     domain: 'waterworld.com',
     logo: 'https://cdn.waterworld.com/',
+    project: 'PenWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ww',
     tenantKey: 'ebm_ww',
@@ -622,6 +688,7 @@ module.exports = {
   washingtoncitypaper: {
     name: 'Washington City Paper',
     domain: 'washingtoncitypaper.com',
+    project: 'Washington City Paper',
     accountKey: 'wcp',
     groupKey: 'wcp',
     tenantKey: 'scomm_wcp',
@@ -632,6 +699,7 @@ module.exports = {
   printingnews: {
     name: 'Printing News',
     domain: 'printingnews.com',
+    project: 'What They Think',
     accountKey: 'wtt',
     groupKey: 'pn',
     tenantKey: 'cygnus_mprc',
