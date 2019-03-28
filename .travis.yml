@@ -21,4 +21,4 @@ jobs:
 
     - stage: deploy
       name: Deploy Evaluation Engineering
-      script: scripts/deploy.js evaluation-engineering
+      script: scripts/deploy.js evaluationengineering
