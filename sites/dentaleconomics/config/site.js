@@ -8,7 +8,7 @@ module.exports = {
     { href: '/dental-office-design', label: 'Dental Office Design' },
   ],
   secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe'},
+    { href: '/subscribe', label: 'Subscribe' },
     { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
     { href: '/white-papers', label: 'White Papers' },
     { href: '/videos', label: 'Videos' },
