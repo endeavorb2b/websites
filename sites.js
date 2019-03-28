@@ -354,6 +354,7 @@ module.exports = {
   bioopticsworld: {
     name: 'Bio Optics World',
     domain: 'bioopticsworld.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/bow/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'bow',
@@ -363,6 +364,7 @@ module.exports = {
   broadbandtechreport: {
     name: 'Broadband Technology Report',
     domain: 'broadbandtechreport.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/btr/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'btr',
@@ -372,6 +374,7 @@ module.exports = {
   cablinginstall: {
     name: 'Cabling Installation & Maintenance',
     domain: 'cablinginstall.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/cim/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'cim',
@@ -381,6 +384,7 @@ module.exports = {
   dentalacademyofce: {
     name: 'Dental Academy of Continuing Education',
     domain: 'dentalacademyofce.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/dace/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'dace',
@@ -390,7 +394,7 @@ module.exports = {
   dentaleconomics: {
     name: 'Dental Economics',
     domain: 'dentaleconomics.com',
-    logo: 'https://img.dentaleconomics.com/',
+    logo: 'http://base.imgix.net/files/base/pennwell/de/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'de',
@@ -431,7 +435,7 @@ module.exports = {
   dentistryiq: {
     name: 'DentistryIQ',
     domain: 'dentistryiq.com',
-    logo: 'https://img.dentistryiq.com/',
+    logo: 'http://base.imgix.net/files/base/pennwell/diq/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'diq',
@@ -474,6 +478,7 @@ module.exports = {
   'intelligent-aerospace': {
     name: 'Intelligent Aerospace',
     domain: 'intelligent-aerospace.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/ias/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ias',
@@ -483,6 +488,7 @@ module.exports = {
   'industrial-lasers': {
     name: 'Industrial Laser Solutions',
     domain: 'industrial-lasers.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/ils/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ils',
@@ -492,6 +498,7 @@ module.exports = {
   ledsmagazine: {
     name: 'LEDs Magazine',
     domain: 'ledsmagazine.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/leds/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'leds',
@@ -501,6 +508,7 @@ module.exports = {
   laserfocusworld: {
     name: 'Laser Focus World',
     domain: 'laserfocusworld.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/lfw/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lfw',
@@ -510,6 +518,7 @@ module.exports = {
   lightwaveonline: {
     name: 'Lightwave',
     domain: 'lightwaveonline.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/lw/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lw',
@@ -519,6 +528,7 @@ module.exports = {
   militaryaerospace: {
     name: 'Military & Aerospace Electronics',
     domain: 'militaryaerospace.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/mae/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'mae',
@@ -528,6 +538,7 @@ module.exports = {
   'offshore-mag': {
     name: 'Offshore Magazine',
     domain: 'offshore-mag.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/os/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'os',
@@ -537,6 +548,7 @@ module.exports = {
   ogj: {
     name: 'Oil & Gas Journal',
     domain: 'ogj.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/ogj/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ogj',
@@ -546,6 +558,7 @@ module.exports = {
   rdhmag: {
     name: 'Registered Dental Hygienist',
     domain: 'rdhmag.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/rdh/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'rdh',
@@ -555,7 +568,7 @@ module.exports = {
   perioimplantadvisory: {
     name: 'Perio-Implant Advisory',
     domain: 'perioimplantadvisory.com',
-    logo: 'https://img.perioimplantadvisory.com/',
+    logo: 'http://base.imgix.net/files/base/pennwell/pia/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'pia',
@@ -597,6 +610,7 @@ module.exports = {
   'strategies-u': {
     name: 'Strategies Unlimited',
     domain: 'strategies-u.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/su/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'su',
@@ -606,7 +620,7 @@ module.exports = {
   utilityproducts: {
     name: 'Utility Products',
     domain: 'utilityproducts.com',
-    logo: 'https://cdn.utilityproducts.com/',
+    logo: 'http://base.imgix.net/files/base/pennwell/up/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'up',
@@ -646,6 +660,7 @@ module.exports = {
   'vision-systems': {
     name: 'Vision Systems Design',
     domain: 'vision-systems.com',
+    logo: 'http://base.imgix.net/files/base/pennwell/vsd/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'vsd',
@@ -655,7 +670,7 @@ module.exports = {
   waterworld: {
     name: 'WaterWorld',
     domain: 'waterworld.com',
-    logo: 'https://cdn.waterworld.com/',
+    logo: 'http://base.imgix.net/files/base/pennwell/ww/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ww',
