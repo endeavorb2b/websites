@@ -10,5 +10,4 @@ startServer({
   siteConfig,
   routes,
   errorTemplate,
-  graphqlUri: 'https://graphql.base-cms.io/ebm/de',
 });
