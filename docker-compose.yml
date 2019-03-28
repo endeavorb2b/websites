@@ -92,5 +92,19 @@ services:
       - "12153:80"
       - "35153:35153"
 
+  dentaleconomics:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentaleconomics
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12154
+      LIVERELOAD_PORT: 35154
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/de}
+    ports:
+      - "12154:80"
+      - "35154:35154"
+
 volumes:
   yarn-cache: {}

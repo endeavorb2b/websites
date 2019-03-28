@@ -26,3 +26,7 @@ jobs:
     - stage: deploy
       name: Deploy Utility Products
       script: scripts/deploy.js utilityproducts
+
+    - stage: deploy
+      name: Deploy Dental Economics
+      script: scripts/deploy.js dentaleconomics
