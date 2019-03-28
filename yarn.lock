@@ -669,14 +669,6 @@
     moment "^2.23.0"
     vue "^2.6.10"
 
-"@base-cms/object-path@^0.4.15":
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-0.4.15.tgz#fdd06b79037f444044d84d460679fd2487c9b22d"
-  integrity sha512-0rINbhwYGgOC3SgLylwZ0EKwSsKFdUETsSVpys8G8kgrMkPvhBE+rU6iMqwFgWF0G5R0+8qCkFlE5/7w3Rt0SQ==
-  dependencies:
-    "@base-cms/utils" "^0.4.15"
-    object-path "^0.11.4"
-
 "@base-cms/object-path@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@base-cms/object-path/-/object-path-0.6.0.tgz#c5e622b5337e8466bf804dd389753bc5d112aa8c"
@@ -684,11 +676,6 @@
   dependencies:
     "@base-cms/utils" "^0.6.0"
     object-path "^0.11.4"
-
-"@base-cms/utils@^0.4.15":
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.4.15.tgz#38dbf62ee4826e32565955b71ac925db823d5403"
-  integrity sha512-q7DPRBaG9WIUk26ya2vlngZ6AtegZ4NnQB18aHQdv36LVntr1SSvpnsJqCwLhs7/QHvyW+n8TZsmJhpkeWor7A==
 
 "@base-cms/utils@^0.6.0":
   version "0.6.0"
