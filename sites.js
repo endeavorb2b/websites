@@ -187,6 +187,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'ee',
+    tenantKey: 'ebm_ee',
     replicaSet: 'picon',
   },
   flowcontrolnetwork: {
@@ -195,6 +196,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'fcn',
+    tenantKey: 'ebm_fcn',
     replicaSet: 'picon',
   },
   forresternetwork: {
@@ -212,6 +214,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'hci',
+    tenantKey: 'ebm_hci',
     replicaSet: 'picon',
   },
   hpnonline: {
@@ -220,6 +223,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'hpn',
+    tenantKey: 'ebm_hpn',
     replicaSet: 'picon',
   },
   'mlo-online': {
@@ -228,6 +232,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'mlo',
+    tenantKey: 'ebm_mlo',
     replicaSet: 'picon',
   },
   processingmagazine: {
@@ -236,6 +241,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'pm',
+    tenantKey: 'ebm_pm',
     replicaSet: 'picon',
   },
   plasticsmachinerymagazine: {
@@ -244,6 +250,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'pmm',
+    tenantKey: 'ebm_pmm',
     replicaSet: 'picon',
   },
   watertechonline: {
@@ -252,6 +259,7 @@ module.exports = {
     project: 'Endeavor Business Media',
     accountKey: 'ebm',
     groupKey: 'wto',
+    tenantKey: 'ebm_wto',
     replicaSet: 'picon',
   },
 
