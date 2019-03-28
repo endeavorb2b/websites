@@ -682,10 +682,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.6.0.tgz#4797b962576902223ffb1dc5fee7b24801cf9088"
   integrity sha512-bqBMnvhADjZ6pTNRuzX1pnISuHbdB0oG85It1a3MrG2SQ4DL/AWzdBpkbBgffr8Aspshk/a589BPNKnM2xTdhw==
 
-"@base-cms/web-cli@~0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.6.2.tgz#3217c1265de8cfd2570a331a0abd05e3ae23b378"
-  integrity sha512-QYZieWFpFU0pm2QmBWyCaEJjxaq7TtIrPJ/3fYb61dJ/GnqZb9s7nYfzaLrm7Rp/fXk6WYw3D/oYth8f/BK/Lw==
+"@base-cms/web-cli@~0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.6.3.tgz#ca0f7a4f80893efb021885863b876c280f459c1c"
+  integrity sha512-ONGpKcC4mgiekxZsoq6+oz/Fk+K/nqnscdZ3uGgsH09Axmr5gAPR9B0baljKxZRhWaWoEcOqD5TXVpshWWqK7w==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
