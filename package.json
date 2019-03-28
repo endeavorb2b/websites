@@ -1,6 +1,5 @@
 {
   "name": "@endeavorb2b/websites",
-  "version": "0.1.0",
   "description": "Website monorepo for Endeavor Business Media",
   "repository": "https://github.com/endeavorb2b/websites.git",
   "author": "Jacob Bare <jacob@limit0.io>",
@@ -16,7 +15,7 @@
     "test": "node_modules/.bin/lerna run test"
   },
   "devDependencies": {
-    "@base-cms/web-cli": "~0.6.0",
+    "@base-cms/web-cli": "~0.6.2",
     "lerna": "^3.13.1"
   }
 }
