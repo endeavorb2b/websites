@@ -59,7 +59,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12151
       LIVERELOAD_PORT: 35151
-      GRAPHQL_URI: https://graphql.base-cms.io/ebm/ee
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ee}
     ports:
       - "12151:80"
       - "35151:35151"
@@ -73,10 +73,24 @@ services:
       PORT: 80
       EXPOSED_PORT: 12152
       LIVERELOAD_PORT: 35152
-      GRAPHQL_URI: https://graphql.base-cms.io/ebm/ofcr
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ofcr}
     ports:
       - "12152:80"
       - "35152:35152"
+
+  utilityproducts:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/utilityproducts
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12153
+      LIVERELOAD_PORT: 35153
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/up}
+    ports:
+      - "12153:80"
+      - "35153:35153"
 
 volumes:
   yarn-cache: {}
