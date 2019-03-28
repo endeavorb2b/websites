@@ -342,11 +342,11 @@ module.exports = {
     replicaSet: 'aerilon'
   },
 
-  // PenWell Corporation
+  // PennWell Corporation
   bioopticsworld: {
     name: 'Bio Optics World',
     domain: 'bioopticsworld.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'bow',
     tenantKey: 'ebm_bow',
@@ -355,7 +355,7 @@ module.exports = {
   broadbandtechreport: {
     name: 'Broadband Technology Report',
     domain: 'broadbandtechreport.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'btr',
     tenantKey: 'ebm_btr',
@@ -364,7 +364,7 @@ module.exports = {
   cablinginstall: {
     name: 'Cabling Installation & Maintenance',
     domain: 'cablinginstall.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'cim',
     tenantKey: 'ebm_cim',
@@ -373,7 +373,7 @@ module.exports = {
   dentalacademyofce: {
     name: 'Dental Academy of Continuing Education',
     domain: 'dentalacademyofce.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'dace',
     tenantKey: 'ebm_dace',
@@ -383,7 +383,7 @@ module.exports = {
     name: 'Dental Economics',
     domain: 'dentaleconomics.com',
     logo: 'https://img.dentaleconomics.com/',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'de',
     tenantKey: 'ebm_de',
@@ -424,7 +424,7 @@ module.exports = {
     name: 'DentistryIQ',
     domain: 'dentistryiq.com',
     logo: 'https://img.dentistryiq.com/',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'diq',
     tenantKey: 'ebm_diq',
@@ -466,7 +466,7 @@ module.exports = {
   'intelligent-aerospace': {
     name: 'Intelligent Aerospace',
     domain: 'intelligent-aerospace.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ias',
     tenantKey: 'ebm_ias',
@@ -475,7 +475,7 @@ module.exports = {
   'industrial-lasers': {
     name: 'Industrial Laser Solutions',
     domain: 'industrial-lasers.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ils',
     tenantKey: 'ebm_ils',
@@ -484,7 +484,7 @@ module.exports = {
   ledsmagazine: {
     name: 'LEDs Magazine',
     domain: 'ledsmagazine.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'leds',
     tenantKey: 'ebm_leds',
@@ -493,7 +493,7 @@ module.exports = {
   laserfocusworld: {
     name: 'Laser Focus World',
     domain: 'laserfocusworld.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lfw',
     tenantKey: 'ebm_lfw',
@@ -502,7 +502,7 @@ module.exports = {
   lightwaveonline: {
     name: 'Lightwave',
     domain: 'lightwaveonline.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'lw',
     tenantKey: 'ebm_lw',
@@ -511,7 +511,7 @@ module.exports = {
   militaryaerospace: {
     name: 'Military & Aerospace Electronics',
     domain: 'militaryaerospace.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'mae',
     tenantKey: 'ebm_mae',
@@ -520,7 +520,7 @@ module.exports = {
   'offshore-mag': {
     name: 'Offshore Magazine',
     domain: 'offshore-mag.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'os',
     tenantKey: 'ebm_os',
@@ -529,7 +529,7 @@ module.exports = {
   ogj: {
     name: 'Oil & Gas Journal',
     domain: 'ogj.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ogj',
     tenantKey: 'ebm_ogj',
@@ -538,7 +538,7 @@ module.exports = {
   rdhmag: {
     name: 'Registered Dental Hygienist',
     domain: 'rdhmag.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'rdh',
     tenantKey: 'ebm_rdh',
@@ -548,7 +548,7 @@ module.exports = {
     name: 'Perio-Implant Advisory',
     domain: 'perioimplantadvisory.com',
     logo: 'https://img.perioimplantadvisory.com/',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'pia',
     tenantKey: 'ebm_pia',
@@ -589,7 +589,7 @@ module.exports = {
   'strategies-u': {
     name: 'Strategies Unlimited',
     domain: 'strategies-u.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'su',
     tenantKey: 'ebm_su',
@@ -599,7 +599,7 @@ module.exports = {
     name: 'Utility Products',
     domain: 'utilityproducts.com',
     logo: 'https://cdn.utilityproducts.com/',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'up',
     tenantKey: 'ebm_up',
@@ -638,7 +638,7 @@ module.exports = {
   'vision-systems': {
     name: 'Vision Systems Design',
     domain: 'vision-systems.com',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'vsd',
     tenantKey: 'ebm_vsd',
@@ -648,7 +648,7 @@ module.exports = {
     name: 'WaterWorld',
     domain: 'waterworld.com',
     logo: 'https://cdn.waterworld.com/',
-    project: 'PenWell Corporation',
+    project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'ww',
     tenantKey: 'ebm_ww',
