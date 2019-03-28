@@ -22,3 +22,7 @@ jobs:
     - stage: deploy
       name: Deploy Evaluation Engineering
       script: scripts/deploy.js evaluationengineering
+
+    - stage: deploy
+      name: Deploy Utility Products
+      script: scripts/deploy.js utilityproducts
