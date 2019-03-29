@@ -26,7 +26,7 @@ $ const block = 'content-page';
         <div class="card border-0">
           <div class="card-body">
 
-            <if(content.primaryImage && content.primaryImage.src)>
+            <!-- <if(content.primaryImage && content.primaryImage.src)>
               <div class="embed-responsive embed-responsive-16by9 mb-3">
                 <cms-image-element
                   obj=content.primaryImage
@@ -34,7 +34,7 @@ $ const block = 'content-page';
                   options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
                 />
               </div>
-            </if>
+            </if> -->
             <cms-content-body tag="div" block=block obj=content />
           </div>
         </div>
