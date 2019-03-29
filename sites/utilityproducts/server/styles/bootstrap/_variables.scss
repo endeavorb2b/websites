@@ -1,6 +1,10 @@
 // Override variables that are _not_ dependant on other bootstrap vars here...
 $font-family-sans-serif: $site-font-family-sans-serif !default;
 
+$blue: #0967f9;
+$primary: #494232;
+$dark: #212529;
+
 // Import default vars...
 @import "../../node_modules/bootstrap/scss/variables";
 
