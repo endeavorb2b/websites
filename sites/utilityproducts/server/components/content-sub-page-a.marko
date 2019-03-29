@@ -40,16 +40,16 @@ $ const params = {
   $ const deckNodes = asArray(nodes.slice(0, 11));
   $ const listNodes = asArray(nodes.slice(11));
 
-  $ const coreClass = 'mb-4 col-12 col-md-6 col-lg-4';
+  $ const coreClass = 'mb-5 col-12 col-md-6 col-lg-4';
 
   <if(deckNodes.length)>
     <div class="row">
       <for|content, index| of=deckNodes>
         <div class=coreClass>
-          <div class="card h-100">
+          <div class="card card-content-hero h-100">
             <cms-image-element
               obj=content.primaryImage
-              class="card-img-top img-fluid embed-responsive-item border-bottom"
+              class="card-img-top img-fluid embed-responsive-item"
               link-class="embed-responsive embed-responsive-16by9"
               options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
               link-to=content
@@ -68,6 +68,7 @@ $ const params = {
               <cms-content-published block="card-deck-item" obj=content />
             </div>
           </div>
+          <!-- <div class="pb-4"></div> -->
         </div>
         <if(index === 3)>
           <div class=coreClass>

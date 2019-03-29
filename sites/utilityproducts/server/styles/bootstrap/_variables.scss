@@ -19,6 +19,8 @@ $gold:     #494232 !default;
 $primary: $gold !default;
 $body-bg: $gold-100 !default;
 
+$border-radius: .5rem !default;
+
 // Import default vars...
 @import "../../node_modules/bootstrap/scss/variables";
 

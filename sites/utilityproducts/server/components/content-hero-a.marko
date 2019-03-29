@@ -40,9 +40,9 @@ $ const params = {
   $ const listNodes = asArray(nodes.slice(1))
 
   <div class="row">
-    <div class="col-lg-7 col-xl-8">
+    <div class="col-lg-7 col-xl-8 mb-5">
       <if(heroNode)>
-        <div class="card card-content-hero">
+        <div class="card card-content-hero h-100">
           <cms-image-element
             obj=heroNode.primaryImage
             class="card-img-top img-fluid embed-responsive-item"
@@ -66,9 +66,9 @@ $ const params = {
         </div>
       </if>
     </div>
-    <div class="col-lg-5 col-xl-4">
+    <div class="col-lg-5 col-xl-4 mb-5">
       <if(listNodes.length)>
-        <div class="card border">
+        <div class="card card-content-hero-list h-100">
           <ul class="list-group list-group-flush">
             <for|content| of=listNodes>
               <li class="list-group-item">
