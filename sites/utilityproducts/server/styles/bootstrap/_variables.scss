@@ -1,12 +1,26 @@
 // Override variables that are _not_ dependant on other bootstrap vars here...
 $font-family-sans-serif: $site-font-family-sans-serif !default;
 
-$blue: #0967f9;
-$primary: #494232;
-$dark: #212529;
+$blue: #0967f9 !default;
+
+$yellow: #ffd503 !default;
+
+// Generated from https://maketintsandshades.com/#494232
+$gold-100: #edeceb !default;
+$gold-200: #dbd9d6 !default;
+$gold-300: #c8c6c2 !default;
+$gold-400: #b6b3ad !default;
+$gold-500: #a4a199 !default;
+$gold-600: #928e84 !default;
+$gold-700: #807b70 !default;
+$gold-800: #6d685b !default;
+$gold-900: #5b5547 !default;
+$gold:     #494232 !default;
+
+$primary: $gold !default;
+$body-bg: $gold-100 !default;
 
 // Import default vars...
 @import "../../node_modules/bootstrap/scss/variables";
 
 // Override variables that _are_ dependent on other bootstrap vars here...
-$body-bg: $gray-200;

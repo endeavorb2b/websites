@@ -12,13 +12,25 @@ $site-font-family-serif: "PT Serif", serif !default;
 .navbar {
   &--site {
     @extend .sticky-top;
-    background-color: $dark;
+    background-color: $gray-900;
+    border-bottom: 3px solid $yellow;
     box-shadow: $box-shadow;
+    .navbar-brand img {
+      height: 50px;
+    }
     .nav-item {
-      padding: 0 .2rem;
       font-size: .8rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.navbar-nav {
+  &--primary {
+    margin-top: map-get($spacers, 2);
+    .nav-item {
+      font-size: $font-size-base;
     }
   }
 }
