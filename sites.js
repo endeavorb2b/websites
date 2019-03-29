@@ -8,6 +8,7 @@ module.exports = {
     groupKey: 'dmn',
     tenantKey: 'acbm_dmn',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/dmn/image/static/logo/site_logo_white.png',
   },
   greenindustrypros: {
     name: 'Green Industry Pros',
@@ -17,6 +18,7 @@ module.exports = {
     groupKey: 'gip',
     tenantKey: 'acbm_gip',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/gip/image/static/logo/site_logo.png',
   },
   forconstructionpros: {
     name: 'For Construction Pros',
@@ -26,6 +28,27 @@ module.exports = {
     groupKey: 'fcp',
     tenantKey: 'acbm_fcp',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/fcp/image/static/logo/site_logo.png',
+    primaryNavItems: [
+      { href: '/equipment', label: 'Equipment' },
+      { href: '/trucks', label: 'Trucks' },
+      { href: '/rental', label: 'Rental' },
+      { href: '/concrete', label: 'Concrete' },
+      { href: '/asphalt', label: 'Asphalt' },
+      { href: '/pavement-maintenance', label: 'Pavement Maintenance' },
+      { href: '/profit-matters', label: 'Profit Matters' },
+      { href: '/equipment-management', label: 'Equipment Management' },
+    ],
+    secondaryNavItems: [
+      { href: '/directory', label: 'New Equipment Directory' },
+      { href: '/technology', label: 'Technology' },
+      { href: '/business', label: 'Business' },
+      { href: '/video', label: 'Video Network' },
+      { href: '/magazine', label: 'Magazines' },
+      { href: '/events', label: 'Events' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/contact-us', label: 'Contact Us' },
+    ],
   },
   foodlogistics: {
     name: 'Food Logistics',
@@ -35,6 +58,7 @@ module.exports = {
     groupKey: 'fl',
     tenantKey: 'acbm_fl',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/fl/image/static/logo/site_logo.png'
   },
   oemoffhighway: {
     name: 'OEM Off Highway',
@@ -44,6 +68,7 @@ module.exports = {
     groupKey: 'ooh',
     tenantKey: 'acbm_ooh',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/ooh/image/static/logo/site_logo.png',
   },
   sdcexec: {
     name: 'Supply & Demand Chain Executive',
@@ -53,6 +78,7 @@ module.exports = {
     groupKey: 'sdce',
     tenantKey: 'acbm_sdce',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/acbm/sdce/image/static/logo/site_logo.png',
   },
 
   // AS3
@@ -64,6 +90,7 @@ module.exports = {
     groupKey: 'baseplatform',
     tenantKey: 'as3_baseplatform',
     replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/as3/baseplatform/image/static/base-logo.png',
   },
   clarity: {
     name: 'Clarity',
@@ -84,6 +111,7 @@ module.exports = {
     groupKey: 'bzb',
     tenantKey: 'bizbash_bzb',
     replicaSet: 'caprica',
+    logo: 'https://cdn.baseplatform.io/files/base/as3/bizbash/image/static/site-logo.png',
   },
 
   // Carey Media
@@ -95,6 +123,7 @@ module.exports = {
     groupKey: 'kcp',
     tenantKey: 'scomm_kcp',
     replicaSet: 'caprica',
+    logo: 'https://cdn.thepitchkc.com/files/base/scomm/kcp/image/static/logo/kcp-large-red.png',
   },
 
   // Cygnus Business Media
@@ -105,7 +134,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'cavc',
     tenantKey: 'cygnus_cavc',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/cygnus/cavc/image/static/logo/site_logo.png',
   },
   cpapracticeadvisor: {
     name: 'CPA Practice Advisor',
@@ -114,7 +144,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'cpa',
     tenantKey: 'cygnus_cpa',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.cpapracticeadvisor.com/files/base/cygnus/cpa/image/static/logo/site_logo_white.png',
   },
   firehouse: {
     name: 'Firehouse',
@@ -123,7 +154,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'fhc',
     tenantKey: 'cygnus_fhc',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.firehouse.com/files/base/cygnus/fhc/image/static/logo/site_logo.png',
   },
   locksmithledger: {
     name: 'Locksmith Ledger',
@@ -132,7 +164,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'll',
     tenantKey: 'cygnus_ll',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.locksmithledger.com/files/base/cygnus/ll/image/static/logo/lsl.png',
   },
   masstransitmag: {
     name: 'Mass Transit Magazine',
@@ -141,7 +174,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'mass',
     tenantKey: 'cygnus_mass',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.masstransitmag.com/files/base/cygnus/mass/image/static/logo/site_logo.png',
   },
   officer: {
     name: 'Officer',
@@ -151,6 +185,23 @@ module.exports = {
     groupKey: 'ofcr',
     tenantKey: 'cygnus_ofcr',
     replicaSet: 'picon',
+    logo: 'https://cdn.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
+    primaryNavItems: [
+      { href: '/tactical', label: 'Tactical' },
+      { href: '/training-careers', label: 'Training & Careers' },
+      { href: '/on-the-street', label: 'On the Street' },
+      { href: '/investigations', label: 'Investigations' },
+      { href: '/command-hq', label: 'Command/HQ' },
+      { href: '/directory', label: 'Product Guide' },
+      { href: 'https://forum.officer.com', label: 'Forums' },
+    ],
+    secondaryNavItems: [
+      { href: '/features/honoring-the-fallen', label: 'Honoring the Fallen' },
+      { href: '/magazine', label: 'Publications' },
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/contact-us', label: 'Contact Us' },
+    ],
   },
   securityinfowatch: {
     name: 'Security Info Watch',
@@ -159,7 +210,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'siw',
     tenantKey: 'cygnus_siw',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.securityinfowatch.com/files/base/cygnus/siw/image/static/logo/site_logo_red_on_black.png',
   },
   vendingmarketwatch: {
     name: 'Vending Market Watch',
@@ -168,7 +220,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'vmw',
     tenantKey: 'cygnus_vmw',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/cygnus/vmw/image/static/logo/vending.png',
   },
   vehicleservicepros: {
     name: 'Vehicle Service Pros',
@@ -177,7 +230,8 @@ module.exports = {
     accountKey: 'ebm',
     groupKey: 'vspc',
     tenantKey: 'cygnus_vspc',
-    replicaSet: 'picon'
+    replicaSet: 'picon',
+    logo: 'https://cdn.vehicleservicepros.com/files/base/cygnus/vspc/image/static/logo/vsp.png',
   },
 
   // Endeavor Business Media
@@ -189,6 +243,7 @@ module.exports = {
     groupKey: 'ee',
     tenantKey: 'ebm_ee',
     replicaSet: 'picon',
+    logo: '',
   },
   flowcontrolnetwork: {
     name: 'Flow Control Network',
@@ -198,6 +253,7 @@ module.exports = {
     groupKey: 'fcn',
     tenantKey: 'ebm_fcn',
     replicaSet: 'picon',
+    logo: 'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
   },
   forresternetwork: {
     name: 'Forrester Network',
@@ -207,6 +263,7 @@ module.exports = {
     groupKey: 'frn',
     tenantKey: 'ebm_frn',
     replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/ebm/frn/image/static/logo/site_logo.png',
   },
   hcinnovationgroup: {
     name: 'Healthcare Innovation',
@@ -216,6 +273,7 @@ module.exports = {
     groupKey: 'hci',
     tenantKey: 'ebm_hci',
     replicaSet: 'picon',
+    logo: 'https://cdn.hcinnovationgroup.com/files/base/ebm/hci/image/static/logo/site_logo.png',
   },
   hpnonline: {
     name: 'Healthcare Purchasing News',
@@ -225,6 +283,7 @@ module.exports = {
     groupKey: 'hpn',
     tenantKey: 'ebm_hpn',
     replicaSet: 'picon',
+    logo: 'https://cdn.hpnonline.com/files/base/ebm/hpn/image/static/logo/site_logo_white.png',
   },
   'mlo-online': {
     name: 'Medical Laboratory Observer',
@@ -234,6 +293,7 @@ module.exports = {
     groupKey: 'mlo',
     tenantKey: 'ebm_mlo',
     replicaSet: 'picon',
+    logo: 'https://cdn.mlo-online.com/files/base/ebm/mlo/image/static/logo/site_logo.png',
   },
   processingmagazine: {
     name: 'Processing Magazine',
@@ -243,6 +303,7 @@ module.exports = {
     groupKey: 'pm',
     tenantKey: 'ebm_pm',
     replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/ebm/pm/image/static/site_logo.png',
   },
   plasticsmachinerymagazine: {
     name: 'Plastics Machinery Magazine',
@@ -252,6 +313,7 @@ module.exports = {
     groupKey: 'pmm',
     tenantKey: 'ebm_pmm',
     replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/ebm/pmm/image/static/site_logo.png',
   },
   watertechonline: {
     name: 'Water Technology',
@@ -261,6 +323,7 @@ module.exports = {
     groupKey: 'wto',
     tenantKey: 'ebm_wto',
     replicaSet: 'picon',
+    logo: 'https://cdn.baseplatform.io/files/base/ebm/wto/image/static/site_logo.png',
   },
 
   // Euclid Media Group
@@ -272,6 +335,7 @@ module.exports = {
     groupKey: 'cb',
     tenantKey: 'scomm_cb',
     replicaSet: 'caprica',
+    logo: 'https://cdn.citybeat.com/files/base/scomm/cb/image/static/logo/site_logo.png',
   },
   cltampa: {
     name: 'Creative Loafing: Tampa',
@@ -281,6 +345,7 @@ module.exports = {
     groupKey: 'cltampa',
     tenantKey: 'scomm_cltampa',
     replicaSet: 'caprica',
+    logo: 'https://cdn.cltampa.com/files/base/scomm/cltampa/image/static/logo/cltampa-large-light.png',
   },
 
   // FW Publishing
@@ -292,6 +357,7 @@ module.exports = {
     groupKey: 'nfn',
     tenantKey: 'scomm_nfn',
     replicaSet: 'caprica',
+    logo: 'https://cdn.nfocusnashville.com/files/base/scomm/nfn/image/static/logo/site_logo.jpg',
   },
   nashvillescene: {
     name: 'Nashville Scene',
@@ -301,6 +367,7 @@ module.exports = {
     groupKey: 'nvs',
     tenantKey: 'scomm_nvs',
     replicaSet: 'caprica',
+    logo: 'https://cdn.nashvillescene.com/files/base/scomm/nvs/image/static/logo/nvs-large-red.png',
   },
   nashvillepost: {
     name: 'Nashville Post',
@@ -310,6 +377,7 @@ module.exports = {
     groupKey: 'nvp',
     tenantKey: 'scomm_nvp',
     replicaSet: 'caprica',
+    logo: 'https://cdn.nashvillepost.com/files/base/scomm/nvp/image/static/logo/site_logo.png',
   },
 
   // Industrial Media Group
@@ -321,6 +389,7 @@ module.exports = {
     groupKey: 'cen',
     tenantKey: 'indm_cen',
     replicaSet: 'caprica',
+    logo: 'https://cdn.cannabisequipmentnews.com/files/base/indm/cen/image/static/logo.jpg',
   },
   designdevelopmenttoday: {
     name: 'Design & Development Today',
@@ -330,6 +399,7 @@ module.exports = {
     groupKey: 'ddt',
     tenantKey: 'indm_ddt',
     replicaSet: 'caprica',
+    logo: 'https://cdn.designdevelopmenttoday.com/files/base/indm/ddt/image/static/logo/site_logo.png',
   },
   ien: {
     name: 'Industrial Equipment News',
@@ -339,6 +409,7 @@ module.exports = {
     groupKey: 'ien',
     tenantKey: 'indm_ien',
     replicaSet: 'caprica',
+    logo: 'https://s3.amazonaws.com/cygnusimages/base/rmg/ien/logo.gif',
   },
   madeinamericaseries: {
     name: 'Made In America Series',
@@ -347,7 +418,7 @@ module.exports = {
     accountKey: 'indm',
     groupKey: 'mia',
     tenantKey: 'indm_mia',
-    replicaSet: 'aerilon'
+    replicaSet: 'aerilon',
   },
 
   // PennWell Corporation
@@ -716,6 +787,7 @@ module.exports = {
     groupKey: 'wcp',
     tenantKey: 'scomm_wcp',
     replicaSet: 'caprica',
+    logo: 'https://cdn.washingtoncitypaper.com/files/guidr/scomm/wcp/logo.png',
   },
 
   // What They Think
@@ -727,5 +799,6 @@ module.exports = {
     groupKey: 'pn',
     tenantKey: 'cygnus_mprc',
     replicaSet: 'caprica',
+    logo: 'https://cdn.printingnews.com/files/base/cygnus/mprc/image/static/logo/site_logo.png',
   },
 };
