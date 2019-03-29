@@ -38,12 +38,19 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 // @todo All of the below CSS is tentative and should be turned into variables/mixins.
 // Also, should explore proper class names?
 
+.card-ad {
+  background-color: transparent;
+  border: 0;
+}
+
 .card-content-hero-list {
   color: $gray-800;
   background-color: $white;
   border: 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-
+  .list-group-item {
+    // border: 0;
+  }
   a {
     color: $gold;
     &:hover {
@@ -100,7 +107,8 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 }
 
 .hero-card-item,
-.card-deck-item {
+.card-deck-item,
+.card-list-item {
   &__content-short-name {
     font-family: $site-font-family-serif;
   }
@@ -113,5 +121,18 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
   &__content-published {
     text-transform: uppercase;
+  }
+}
+
+.card-list-item {
+  &__image-link {
+    margin-left: -2.25rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    // box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 16px 38px -12px rgba(0, 0, 0, .56),  ;
+
+    img {
+      border-radius: .5rem;
+    }
   }
 }
