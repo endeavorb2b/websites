@@ -1,5 +1,10 @@
 module.exports = {
-  logo: 'https://base.imgix.net/files/base/pennwell/up/logo.png',
+  logo: {
+    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=35',
+    srcset: [
+      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=70 2x',
+    ],
+  },
   primaryNavItems: [
     { href: '/transmission-distribution', label: 'Transmission & Distribution' },
     { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },
