@@ -243,7 +243,7 @@ module.exports = {
     groupKey: 'ee',
     tenantKey: 'ebm_ee',
     replicaSet: 'picon',
-    logo: '',
+    logo: 'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
   },
   flowcontrolnetwork: {
     name: 'Flow Control Network',
