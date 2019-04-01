@@ -28,10 +28,50 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 
 .navbar-nav {
   &--primary {
+
+    @include media-breakpoint-down("md") {
+      display: none;
+    }
+    @include media-breakpoint-up("lg") {
+      display: flex;
+    }
+
+
     margin-top: map-get($spacers, 2);
     .nav-item {
-      font-size: $font-size-base;
+      font-size: .9rem;
+      @include media-breakpoint-down("md") {
+        text-align: left;
+      }
+      @include media-breakpoint-up("lg") {
+        text-align: center;
+      }
+
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
     }
+  }
+
+  &--secondary {
+    margin-top: auto;
+    @include media-breakpoint-down("md") {
+      display: none;
+    }
+    @include media-breakpoint-up("lg") {
+      display: flex;
+    }
+  }
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: map-get($spacers, 3);
+  right: map-get($spacers, 3);
+  &:focus {
+    outline: none;
   }
 }
 
