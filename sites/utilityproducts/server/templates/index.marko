@@ -5,9 +5,10 @@ $ const section = getAsObject(data, 'section');
 <document>
   <@head>
     <cms-page-metadata for="website-section" ...section />
+    <cms-ad-gam-head />
   </@head>
   <cms-page-container for="home" class="container-fluid-max">
-    <cms-ad-placeholder size="970x90" class="text-center mb-5" />
+    <gam-ad alias="BS" class="text-center mb-5" />
     <content-hero-a
       section-id=section.id
       limit=7
