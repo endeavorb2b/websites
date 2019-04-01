@@ -20,13 +20,13 @@ $ const params = {
 
 <cms-query-related-published-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class="card border mb-4">
+    <div class="card card-content-related mb-4">
       <div class="card-header">Related Content</div>
       <ul class="list-group list-group-flush">
         <for|content| of=nodes>
           <li class="list-group-item">
-            <cms-content-short-name tag="h5" block=block obj=content link=true />
-            <cms-content-teaser tag="p" block=block obj=content />
+            <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
+            <cms-content-teaser tag="p" block="hero-list-item" obj=content />
           </li>
         </for>
       </ul>

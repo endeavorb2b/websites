@@ -20,12 +20,12 @@ $ const params = {
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class="card border">
+    <div class="card card-content-related">
       <div class="card-header">You May Also Like</div>
       <ul class="list-group list-group-flush">
         <for|content| of=nodes>
           <li class="list-group-item">
-            <cms-content-short-name tag="h5" block=block obj=content link=true />
+            <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
           </li>
         </for>
       </ul>

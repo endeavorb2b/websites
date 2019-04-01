@@ -75,6 +75,16 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
 }
 
+.card-content-related {
+  border: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  .card-header {
+    text-transform: uppercase;
+    background-color: $gold-100;
+    border-bottom: 0;
+  }
+}
+
 .card-content-hero {
   color: $gray-800;
   background-color: $white;
@@ -97,11 +107,11 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     margin-top: -1.5rem;
     margin-right: 1.25rem;
     margin-left: 1.25rem;
-    border-radius: .5rem;
+    border-radius: $border-radius;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
 
     img {
-      border-radius: .5rem;
+      border-radius: $border-radius;
     }
   }
 }
@@ -127,12 +137,45 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 .card-list-item {
   &__image-link {
     margin-left: -2.25rem;
-    border-radius: .5rem;
+    border-radius: $border-radius;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     // box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 16px 38px -12px rgba(0, 0, 0, .56),  ;
 
     img {
-      border-radius: .5rem;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.content-page {
+  margin-bottom: map-get($spacers, 5);
+  .content-wrapper {
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+  }
+  &__content-name {
+    font-family: $site-font-family-serif;
+    color: $gold;
+  }
+  &__content-teaser {
+    font-style: italic;
+  }
+  &__website-section-name {
+    font-weight: 500;
+    text-transform: uppercase;
+    a {
+      color: $gray-800;
+    }
+  }
+  &__content-published {
+    text-transform: uppercase;
+  }
+  &__content-body {
+    img {
+      margin-bottom: map-get($spacers, 1);
+      border-radius: $border-radius;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
   }
 }
