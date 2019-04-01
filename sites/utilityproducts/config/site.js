@@ -19,11 +19,16 @@ module.exports = {
     { href: '/white-papers', label: 'White Papers' },
     { href: '/events', label: 'Events' },
   ],
-  ads: {
+  ad: {
     units: {
       BS: {
         path: '/21687441225/UP/UP_BS',
         size: [[970, 250], [970, 90], [728, 90], [320, 50], [300, 50]],
+        sizeMapping: [
+          { viewport: [980, 0], size: [[970, 250], [970, 90]] },
+          { viewport: [750, 0], size: [728, 90] },
+          { viewport: [320, 0], size: [[300, 50], [320, 50]] },
+        ],
       },
       MR: {
         path: '/21687441225/UP/UP_MR',

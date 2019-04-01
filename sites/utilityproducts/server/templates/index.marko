@@ -1,5 +1,23 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const section = getAsObject(data, 'section');
+
 <document>
+  <@head>
+    <cms-page-metadata for="website-section" ...section />
+    <cms-ad-gam-head />
+  </@head>
   <cms-page-container for="home" class="container-fluid-max">
-    <h1>Homepage</h1>
+    <gam-ad alias="BS" class="text-center mb-5" />
+    <content-hero-a
+      section-id=section.id
+      limit=7
+      requires-image=true
+    />
+    <div class="mb-4"></div>
+    <content-sub-page-a
+      skip=7
+      section-id=section.id
+    />
   </cms-page-container>
 </document>
