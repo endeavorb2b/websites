@@ -1,4 +1,7 @@
 import Browser from '@base-cms/marko-web/browser';
+import NavbarToggle from './navbar-toggle.vue';
+
+Browser.registerComponent('NavbarToggle', NavbarToggle);
 
 // Register custom Vue components here...
 /*
