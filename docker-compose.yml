@@ -19,6 +19,8 @@ x-site-command: &site-cmd
   entrypoint: ["node_modules/.bin/basecms-website"]
   command: ["dev", "index.js"]
 
+volumes:
+  yarn-cache: {}
 
 services:
   terminal:
@@ -105,6 +107,3 @@ services:
     ports:
       - "12154:80"
       - "35154:35154"
-
-volumes:
-  yarn-cache: {}
