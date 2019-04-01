@@ -19,7 +19,7 @@ module.exports = {
     { href: '/white-papers', label: 'White Papers' },
     { href: '/events', label: 'Events' },
   ],
-  ads: {
+  ad: {
     units: {
       BS: {
         path: '/21687441225/UP/UP_BS',

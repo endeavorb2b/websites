@@ -1,10 +1,19 @@
 import { getAsObject, get } from '@base-cms/object-path';
 
+$ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const block = 'content-page';
 
 <layout content=content>
-  <cms-ad-placeholder size="970x90" class="text-center mb-4" />
+  <@head>
+    <cms-ad-gam-head
+      slots={
+        'gpt-ad-header': { path: site.get('ad.units.BS.path'), size: site.get('ad.units.BS.size') },
+        'gpt-ad-rail': { path: site.get('ad.units.MR.path'), size: site.get('ad.units.MR.size') },
+      }
+    />
+  </@head>
+  <cms-ad-gam-display id="gpt-ad-header" class="text-center mb-4" />
 
   <cms-page-container for="content" data=content>
     <div class="row content-wrapper">
@@ -33,7 +42,7 @@ $ const block = 'content-page';
           <aside class="col-lg-4">
             <div class="card mb-4 border-0">
               <div class="card-body px-1 d-flex justify-content-center">
-                <cms-ad-placeholder size="300x250" />
+                <cms-ad-gam-display id="gpt-ad-rail" />
               </div>
             </div>
 
