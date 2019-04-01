@@ -40,16 +40,16 @@ $ const params = {
   $ const deckNodes = asArray(nodes.slice(0, 11));
   $ const listNodes = asArray(nodes.slice(11));
 
-  $ const coreClass = 'mb-4 col-12 col-md-6 col-lg-4';
+  $ const coreClass = 'mb-5 col-12 col-md-6 col-lg-4';
 
   <if(deckNodes.length)>
     <div class="row">
       <for|content, index| of=deckNodes>
         <div class=coreClass>
-          <div class="card h-100">
+          <div class="card card-content-hero h-100">
             <cms-image-element
               obj=content.primaryImage
-              class="card-img-top img-fluid embed-responsive-item border-bottom"
+              class="card-img-top img-fluid embed-responsive-item"
               link-class="embed-responsive embed-responsive-16by9"
               options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
               link-to=content
@@ -68,10 +68,11 @@ $ const params = {
               <cms-content-published block="card-deck-item" obj=content />
             </div>
           </div>
+          <!-- <div class="pb-4"></div> -->
         </div>
         <if(index === 3)>
           <div class=coreClass>
-            <div class="card h-100">
+            <div class="card card-ad h-100">
               <div class="card-body d-flex justify-content-center align-items-center">
                 <cms-ad-placeholder size="300x250" />
               </div>
@@ -84,15 +85,15 @@ $ const params = {
 
   <if(listNodes.length)>
     <div class="row">
-      <div class="mb-3 col-12 col-lg-6 col-xl-4">
-        <div class="card h-100 border">
+      <div class="mb-5 col-12 col-lg-6 col-xl-4">
+        <div class="card card-ad h-100">
           <div class="card-body d-flex justify-content-center align-items-center">
             <cms-ad-placeholder size="300x600" />
           </div>
         </div>
       </div>
-      <div class="mb-3 col-12 col-lg-6 col-xl-8">
-        <div class="card h-100 border">
+      <div class="mb-5 col-12 col-lg-6 col-xl-8">
+        <div class="card card-content-hero-list h-100">
 
           <ul class="list-group list-group-flush">
             <for|content| of=listNodes>
@@ -101,7 +102,7 @@ $ const params = {
                   block="card-list-item"
                   obj=content.primaryImage
                   link-to=content
-                  link-class="mr-3 my-auto"
+                  link-class="mr-3 my-auto card-list-item__image-link"
                   width=192
                   options={ w: 192, fit: 'clip', dpr: 2 }
                 />
@@ -128,7 +129,7 @@ $ const params = {
     blockName=block
     params=params
     page-info=pageInfo
-    button-class-obj={ btn: true, 'btn-lg': true, 'btn-primary': true }
+    button-class-obj={ btn: true, 'btn-lg': true, 'btn-primary': true, 'mb-5': true }
     wrapping-class-obj={ 'text-center': true, 'pb-3': true }
   />
 </cms-query-website-scheduled-content>
