@@ -7,8 +7,9 @@
  *   - DOCKERHUB_USERNAME
  *   - DOCKERHUB_PASSWORD
  *   - TRAVIS_TAG
- *   - K8S_SERVER
- *   - K8S_TOKEN
+ *   - RANCHER_URL
+ *   - RANCHER_TOKEN
+ *   - RANCHER_CLUSTERID
  */
 
 const { existsSync } = require('fs');
