@@ -45,6 +45,7 @@ If the body contained the following html...
 A `Contact` would be created as:
 ```json
 {
+  "name": "Jenny Shiner",
   "firstName": "Jenny",
   "lastName": "Shiner",
   "body": "<p><strong class=\"charStyle_bold\">The Author: </strong></p><p>Jenny Shiner is the communications manager for GPS Insight. She graduated from Arizona State University with a bachelor’s degree in communication and is responsible for communication for all business segments that GPS Insight targets. For more information on telematics and fuel card technologies, visit www.gpsinsight.com.</p>"
