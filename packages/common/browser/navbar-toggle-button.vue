@@ -1,7 +1,6 @@
 <template>
   <button
     v-on:click="toggle"
-    v-bind:id="id"
     v-bind:class="{ expanded: isExpanded }"
     class="navbar-toggler"
     type="button"
@@ -13,11 +12,6 @@
 <script>
 export default {
   props: {
-    id: {
-      type: String,
-      required: true,
-      default: "primary-navbar-toggle"
-    },
     targets: {
       type: Array,
     },
