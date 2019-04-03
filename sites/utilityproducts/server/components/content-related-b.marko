@@ -8,6 +8,13 @@ $ const queryFragment = gql`
     shortName
     teaser
     canonicalPath
+    primarySection {
+      id
+      canonicalPath
+      name
+      fullName
+    }
+    published
   }
 `;
 
@@ -20,12 +27,17 @@ $ const params = {
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class="card card-content-related">
+    <div class="card card-content-related mb-3">
       <div class="card-header">You May Also Like</div>
       <ul class="list-group list-group-flush">
         <for|content| of=nodes>
           <li class="list-group-item">
             <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
+            <cms-content-name tag="small" block="hero-list-item" obj=content.company link=true />
+            <small class="element-row">
+              <cms-website-section-name block="hero-list-item" obj=content.primarySection link=true />
+              <cms-content-published block="hero-list-item" obj=content />
+            </small>
           </li>
         </for>
       </ul>
