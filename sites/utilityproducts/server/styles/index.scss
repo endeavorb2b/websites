@@ -249,7 +249,6 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 
   &__content-name {
     font-family: $site-font-family-serif;
-    color: $gold;
   }
   &__content-teaser {
     font-style: italic;
@@ -265,10 +264,24 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     text-transform: uppercase;
   }
   &__content-body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $site-font-family-serif;
+    }
     img {
       margin-bottom: map-get($spacers, 1);
       border-radius: $border-radius;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+    .caption {
+      color: $gold-600;
+    }
+    p:empty {
+      display: none;
     }
   }
 }
