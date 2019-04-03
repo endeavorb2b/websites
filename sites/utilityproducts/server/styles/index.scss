@@ -15,8 +15,11 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     background-color: $gray-900;
     border-bottom: 3px solid $yellow;
     box-shadow: $box-shadow;
-    .navbar-brand img {
-      height: 50px;
+    .navbar-brand {
+      margin-bottom: 0;
+      img {
+        height: 50px;
+      }
     }
     .nav-item {
       font-size: .8rem;
@@ -122,7 +125,8 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
 }
 
-.card-content-hero {
+.card-content-hero,
+.card-content-section-list {
   color: $gray-800;
   background-color: $white;
   border: 0;
@@ -150,6 +154,19 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     img {
       border-radius: $border-radius;
     }
+  }
+}
+
+.card-content-section-list {
+  margin-bottom: map-get($spacers, 4);
+  .card-header {
+    margin-bottom: map-get($spacers, 5);
+    // font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $gray-800;
+    border-bottom: 2px solid $yellow;
   }
 }
 
@@ -184,6 +201,8 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
 }
 
+
+
 .content-page {
   margin-bottom: map-get($spacers, 5);
   .container-fluid {
@@ -191,6 +210,35 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     border-radius: $border-radius;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
   }
+
+  .breadcrumb {
+    margin-bottom: map-get($spacers, 3);
+    font-size: 80%;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: $gold-100;
+    a {
+      color: $gray-800;
+    }
+  }
+
+  .content-authorable {
+    .prefix {
+      margin-right: map-get($spacers, 1);
+      font-weight: 500;
+      text-transform: uppercase;
+      &::after {
+        margin-left: map-get($spacers, 1);
+        content: "\2014";
+      }
+    }
+
+    div:last-child {
+      margin-bottom: map-get($spacers, 2);
+    }
+  }
+
+
 
   &__content-name {
     font-family: $site-font-family-serif;

@@ -14,10 +14,40 @@ $ const section = getAsObject(data, 'section');
       limit=7
       requires-image=true
     />
-    <div class="mb-4"></div>
-    <content-sub-page-a
-      skip=7
-      section-id=section.id
-    />
+
+    <div class="row">
+      <div class="col-4">
+        <content-section-list section-id=30003 header="Transmission & Distribution" />
+      </div>
+      <div class="col-4">
+        <content-section-list section-id=30004 header="Vehicles & Accessories" />
+      </div>
+      <div class="col-4">
+        <content-section-list section-id=30005 header="Tools & Supplies" />
+      </div>
+    </div>
+
+    <gam-ad alias="BS" class="text-center my-5" />
+
+    <div class="row">
+      <div class="col-4">
+        <content-section-list section-id=30006 header="Safety" />
+      </div>
+      <div class="col-4">
+        <content-section-list section-id=30007 header="Line Construction & Maintenance" />
+      </div>
+      <div class="col-4">
+        <content-section-list section-id=30008 header="Test & Mesurement" />
+      </div>
+    </div>
+
+    <gam-ad alias="BS" class="text-center my-5" />
+
+    <div class="pt-4">
+      <content-sub-page-a
+        skip=7
+        section-id=section.id
+      />
+    </div>
   </cms-page-container>
 </document>
