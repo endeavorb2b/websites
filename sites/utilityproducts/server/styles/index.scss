@@ -125,7 +125,8 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
 }
 
-.card-content-hero {
+.card-content-hero,
+.card-content-section-list {
   color: $gray-800;
   background-color: $white;
   border: 0;
@@ -153,6 +154,19 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     img {
       border-radius: $border-radius;
     }
+  }
+}
+
+.card-content-section-list {
+  margin-bottom: map-get($spacers, 4);
+  .card-header {
+    margin-bottom: map-get($spacers, 5);
+    // font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $gray-800;
+    border-bottom: 2px solid $yellow;
   }
 }
 
