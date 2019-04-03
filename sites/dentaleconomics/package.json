@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/dentaleconomics",
-  "version": "0.3.5",
+  "version": "0.3.7",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
