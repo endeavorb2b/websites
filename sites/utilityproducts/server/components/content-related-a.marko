@@ -6,7 +6,7 @@ $ const queryFragment = gql`
     id
     type
     shortName
-    teaser
+    teaser(input: { maxLength: 100 })
     canonicalPath
     primarySection {
       id
@@ -33,7 +33,12 @@ $ const params = {
         <for|content| of=nodes>
           <li class="list-group-item">
             <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
-            <cms-content-name tag="small" block="hero-list-item" obj=content.company link=true />
+            <cms-content-name tag="small" class="mb-2" block="hero-list-item" obj=content.company link=true>
+              <@before>
+                From:&nbsp;
+              </@before>
+            </cms-content-name>
+            <cms-content-teaser tag="p" block="hero-list-item" obj=content />
             <small class="element-row">
               <cms-website-section-name block="hero-list-item" obj=content.primarySection link=true />
               <cms-content-published block="hero-list-item" obj=content />
