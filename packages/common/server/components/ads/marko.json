@@ -1,0 +1,12 @@
+{
+  "tags": {
+    "endeavor-gam-ad-unit": {
+      "template": "./gam-adunit.marko",
+      "@alias": {
+        "type": "string",
+        "required": true
+      },
+      "@class": "string"
+    }
+  }
+}
