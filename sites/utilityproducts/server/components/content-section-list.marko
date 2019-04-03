@@ -49,44 +49,40 @@ $ const params = {
     </if>
 
     <if(heroNode.id)>
-      <!-- <div class="card card-content-hero h-100"> -->
-        <cms-image-element
-          obj=heroNode.primaryImage
-          class="card-img-top img-fluid embed-responsive-item"
-          link-class="embed-responsive embed-responsive-16by9"
-          options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-          link-to=heroNode
-        />
-        <div class="card-body" style="flex: none;">
-          <cms-content-short-name tag="h4" block="hero-card-item" obj=heroNode link=true />
-          <cms-content-name tag="small" class="mb-2" block="hero-card-item" obj=heroNode.company link=true>
-            <@before>
-              From:&nbsp;
-            </@before>
-          </cms-content-name>
-          <cms-content-teaser tag="p" class="mb-0" block="hero-card-item" obj=heroNode />
-        </div>
-        <div class="card-footer d-flex justify-content-between small">
-          <cms-website-section-name block="hero-card-item" obj=heroNode.primarySection link=true />
-          <cms-content-published block="hero-card-item" obj=heroNode />
-        </div>
-      <!-- </div> -->
+      <cms-image-element
+        obj=heroNode.primaryImage
+        class="card-img-top img-fluid embed-responsive-item"
+        link-class="embed-responsive embed-responsive-16by9"
+        options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+        link-to=heroNode
+      />
+      <div class="card-body" style="flex: none;">
+        <cms-content-short-name tag="h4" block="hero-card-item" obj=heroNode link=true />
+        <cms-content-name tag="small" class="mb-2" block="hero-card-item" obj=heroNode.company link=true>
+          <@before>
+            From:&nbsp;
+          </@before>
+        </cms-content-name>
+        <cms-content-teaser tag="p" class="mb-0" block="hero-card-item" obj=heroNode />
+      </div>
+      <div class="card-footer d-flex justify-content-between small">
+        <cms-website-section-name block="hero-card-item" obj=heroNode.primarySection link=true />
+        <cms-content-published block="hero-card-item" obj=heroNode />
+      </div>
     </if>
     <if(listNodes.length)>
-      <!-- <div class="card card-content-hero-list h-100"> -->
-        <ul class="list-group list-group-flush">
-          <for|content| of=listNodes>
-            <li class="list-group-item">
-              <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
-              <cms-content-name tag="small" block="hero-list-item" obj=content.company link=true />
-              <small class="element-row">
-                <cms-website-section-name block="hero-list-item" obj=content.primarySection link=true />
-                <cms-content-published block="hero-list-item" obj=content />
-              </small>
-            </li>
-          </for>
-        </ul>
-      <!-- </div> -->
+      <ul class="list-group list-group-flush">
+        <for|content| of=listNodes>
+          <li class="list-group-item">
+            <cms-content-short-name tag="h5" block="hero-list-item" obj=content link=true />
+            <cms-content-name tag="small" block="hero-list-item" obj=content.company link=true />
+            <small class="element-row">
+              <cms-website-section-name block="hero-list-item" obj=content.primarySection link=true />
+              <cms-content-published block="hero-list-item" obj=content />
+            </small>
+          </li>
+        </for>
+      </ul>
     </if>
   </div>
 </cms-query-website-scheduled-content>
