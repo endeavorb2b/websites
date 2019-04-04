@@ -156,20 +156,6 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
   }
 
-  .breadcrumb {
-    margin-bottom: map-get($spacers, 3);
-    font-size: 80%;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: $gold-100;
-    a {
-      color: $gray-800;
-    }
-  }
-
-
-
-
   &__content-name {
     font-family: $site-font-family-serif;
   }
