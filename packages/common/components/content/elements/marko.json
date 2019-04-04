@@ -53,6 +53,28 @@
       },
       "@class": "string",
       "@itemClass": "string"
+    },
+    "endeavor-content-source": {
+      "template": "./source.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "From"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
     }
   }
 }
