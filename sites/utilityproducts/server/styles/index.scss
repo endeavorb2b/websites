@@ -1,9 +1,8 @@
 $site-font-family-sans-serif: "Roboto", sans-serif !default;
 $site-font-family-serif: "Roboto Slab", serif !default;
 
-@import "embedded-media";
 @import "bootstrap";
-
+@import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 @import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
 
 .element-row {

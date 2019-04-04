@@ -1,14 +1,4 @@
-// Collapse empty p elements
-.content-page {
-  &__content-body {
-    p:empty {
-      display: none;
-    }
-  }
-}
-
-
-// @todo Review using data attributes for embedded media.
+// Apply the 16x9 bootstrap responsive embed classes to embedded videos
 [data-embed-type] {
   display: inline-block;
   width: 100%;
@@ -65,4 +55,25 @@ p [data-embed-type] {
 
 [data-embed-invalid] {
   display: none;
+}
+
+// Bootstrap specific styling
+[data-oembed-type="video"] {
+  @extend .embed-responsive;
+  @extend .embed-responsive-16by9;
+}
+
+// Ensure embedded media goes to full-width on small devices
+[data-embed-type][data-embed-align="left"] {
+  @include media-breakpoint-down("sm") {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+[data-embed-type][data-embed-align="right"] {
+  @include media-breakpoint-down("sm") {
+    width: 100%;
+    margin-left: 0;
+  }
 }
