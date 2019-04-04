@@ -6,4 +6,13 @@
   &--content-page-right {
     margin-bottom: map-get($spacers, 4);
   }
+  &--in-card {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    > div {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
 }
