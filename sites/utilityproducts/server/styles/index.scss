@@ -172,6 +172,7 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   }
 
   .content-authorable {
+    text-transform: uppercase;
     .prefix {
       margin-right: map-get($spacers, 1);
       font-weight: 500;

@@ -1,0 +1,58 @@
+{
+  "tags": {
+    "endeavor-content-authors": {
+      "template": "./authors.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Author"
+      },
+      "@class": "string",
+      "@itemClass": "string"
+    },
+    "endeavor-content-contributors": {
+      "template": "./contributors.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Contributor"
+      },
+      "@class": "string",
+      "@itemClass": "string"
+    },
+    "endeavor-content-photographers": {
+      "template": "./photographers.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Photographer"
+      },
+      "@class": "string",
+      "@itemClass": "string"
+    }
+  }
+}

@@ -42,7 +42,11 @@ $ const adSlots = {
                   <@before><span class="prefix">By</span></@before>
                 </cms-content-byline>
 
-                <cms-content-authors|{ contact }| tag="div" class="small" block=block obj=content>
+                <endeavor-content-authors block="content-authorable" content=content  />
+                <endeavor-content-contributors block="content-authorable" content=content  />
+                <endeavor-content-photographers block="content-authorable" content=content  />
+
+                <!-- <cms-content-authors|{ contact }| tag="div" class="small" block=block obj=content>
                   <@before|{ length }|>
                     <span class="prefix">
                       Author<if(length > 1)>s</if>
@@ -65,7 +69,7 @@ $ const adSlots = {
                     </span>
                   </@before>
                   <cms-content-name tag="span" block=block obj=contact link=true />
-                </cms-content-photographers>
+                </cms-content-photographers> -->
 
                 <cms-content-source tag="div" class="small" block=block obj=content>
                   <@before><span class="prefix">Source</span></@before>
