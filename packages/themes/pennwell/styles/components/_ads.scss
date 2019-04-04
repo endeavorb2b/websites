@@ -1,0 +1,9 @@
+.ad-container {
+  text-align: center;
+  &--content-page-top {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &--content-page-right {
+    margin-bottom: map-get($spacers, 5);
+  }
+}

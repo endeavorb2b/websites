@@ -14,7 +14,7 @@ $ const adSlots = {
       slots=adSlots
     />
   </@head>
-  <cms-ad-gam-display id="gpt-ad-header" class="text-center mb-4" />
+  <cms-ad-gam-display id="gpt-ad-header" class="ad-container ad-container--content-page-top" />
 
   <cms-page-container for="content" data=content>
     <div class="container-fluid">
@@ -30,7 +30,7 @@ $ const adSlots = {
         </div>
 
         <aside class="col-lg-4">
-          <cms-ad-gam-display id="gpt-ad-rail" class="text-center mb-5" />
+          <cms-ad-gam-display id="gpt-ad-rail" class="ad-container ad-container--content-page-right" />
           <content-related-a content-id=content.id />
           <content-related-b
             exclude-content-ids=[content.id]
