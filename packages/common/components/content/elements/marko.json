@@ -16,7 +16,15 @@
         "default-value": "Author"
       },
       "@class": "string",
-      "@itemClass": "string"
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
     },
     "endeavor-content-contributors": {
       "template": "./contributors.marko",
@@ -34,7 +42,15 @@
         "default-value": "Contributor"
       },
       "@class": "string",
-      "@itemClass": "string"
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
     },
     "endeavor-content-photographers": {
       "template": "./photographers.marko",
@@ -52,7 +68,15 @@
         "default-value": "Photographer"
       },
       "@class": "string",
-      "@itemClass": "string"
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
     },
     "endeavor-content-source": {
       "template": "./source.marko",
