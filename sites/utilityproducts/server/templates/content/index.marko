@@ -2,19 +2,18 @@ import { getAsObject, get } from '@base-cms/object-path';
 
 $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
+$ const section = getAsObject(content, 'primarySection');
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-header': { ...site.get('ad.units.BS') },
-  'gpt-ad-rail': { ...site.get('ad.units.MR') },
+  'gpt-ad-top': { ...site.get('ad.units.BS') },
+  'gpt-ad-right': { ...site.get('ad.units.MR') },
 };
 
 <layout content=content>
   <@head>
-    <cms-ad-gam-head
-      slots=adSlots
-    />
+    <cms-ad-gam-head slots=adSlots />
   </@head>
-  <cms-ad-gam-display id="gpt-ad-header" class="ad-container ad-container--content-page-top" />
+  <cms-ad-gam-display id="gpt-ad-top" class="ad-container ad-container--content-page-top" />
 
   <cms-page-container for="content" data=content>
     <div class="container-fluid">
@@ -30,18 +29,22 @@ $ const adSlots = {
         </div>
 
         <aside class="col-lg-4">
-          <cms-ad-gam-display id="gpt-ad-rail" class="ad-container ad-container--content-page-right" />
-          <endeavor-content-query-related-a exclude-content-ids=[content.id] section-id=get(content, 'primarySection.id') />
+          <cms-ad-gam-display id="gpt-ad-right" class="ad-container ad-container--content-page-right" />
+          <endeavor-content-query-related-a exclude-content-ids=[content.id] section-id=section.id />
         </aside>
       </div>
     </div>
   </cms-page-container>
 
-  $ const section = getAsObject(content, 'primarySection');
   <if(section.id)>
-    <div class="text-center">
-      <h2 class="text-uppercase mb-5">More in ${section.name}</h2>
-    </div>
+    <endeavor-load-more-header>
+      <h2>More in ${section.name}</h2>
+    </endeavor-load-more-header>
+    <endeavor-content-query-load-more-a
+      skip=5
+      exclude-content-ids=[content.id]
+      section-id=section.id
+    />
     <content-sub-page-a
       skip=5
       exclude-content-ids=[content.id]
