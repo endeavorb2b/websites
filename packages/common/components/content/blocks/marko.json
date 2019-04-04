@@ -1,0 +1,11 @@
+{
+  "tags": {
+    "endeavor-content-block-attribution": {
+      "template": "./attribution.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    }
+  }
+}
