@@ -100,6 +100,28 @@
         "default-value": "div"
       }
     },
+    "endeavor-content-byline": {
+      "template": "./byline.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "By"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
+    },
     "endeavor-content-company-name": {
       "template": "./company-name.marko",
       "@company": {

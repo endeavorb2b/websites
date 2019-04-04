@@ -38,10 +38,11 @@ $ const adSlots = {
               <cms-content-teaser tag="p" block=block obj=content />
 
               <div class="content-authorable">
-                <cms-content-byline tag="div" class="small" block=block obj=content>
+                <!-- <cms-content-byline tag="div" class="small" block=block obj=content>
                   <@before><span class="prefix">By</span></@before>
-                </cms-content-byline>
+                </cms-content-byline> -->
 
+                <endeavor-content-byline block="content-authorable" content=content  />
                 <endeavor-content-authors block="content-authorable" content=content  />
                 <endeavor-content-contributors block="content-authorable" content=content  />
                 <endeavor-content-photographers block="content-authorable" content=content  />
