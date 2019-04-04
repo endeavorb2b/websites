@@ -1,0 +1,34 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-card-a';
+$ const primaryImage = getAsObject(input.content, 'primaryImage');
+$ const primarySection = getAsObject(input.content, 'primarySection');
+$ const company = getAsObject(input.content, 'company');
+
+<div class=`${block} card`>
+  <if(primaryImage && primaryImage.id)>
+    <!-- @todo Determine how to modify image size options -->
+    <cms-image-element
+      block=block
+      obj=primaryImage
+      link-class="content-card-a__image-link"
+      options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+      link-to=input.content
+    />
+  </if>
+  <else>
+    <cms-link-element block=block class="content-card-a__image-link content-card-a__image-link--placeholder" to=input.content>
+      <div class="content-card-a__image-placeholder">
+      </div>
+    </cms-link-element>
+  </else>
+  <div class="card-body">
+    <cms-content-short-name tag="h4" block=block obj=input.content link=true />
+    <endeavor-content-company-name block=block company=company />
+    <cms-content-teaser tag="p" block=block obj=input.content />
+  </div>
+  <div class="card-footer">
+    <cms-website-section-name block=block obj=primarySection link=true />
+    <cms-content-published block=block obj=input.content />
+  </div>
+</div>

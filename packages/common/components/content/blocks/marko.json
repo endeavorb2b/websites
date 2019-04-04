@@ -35,8 +35,18 @@
         "required": true
       }
     },
+    "endeavor-content-block-card-a": {
+      "template": "./card-a.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
     "endeavor-content-query-related-a": {
       "template": "./query-related-a.marko"
+    },
+    "endeavor-content-query-load-more-a": {
+      "template": "./query-load-more-a.marko"
     }
   }
 }

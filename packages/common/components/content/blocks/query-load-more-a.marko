@@ -1,0 +1,75 @@
+import gql from 'graphql-tag';
+import { asArray } from '@base-cms/utils';
+
+$ const queryFragment = gql`
+  fragment ContentBlockQueryLoadMoreAFragment on Content {
+    id
+    type
+    shortName
+    teaser
+    canonicalPath
+    published
+    company {
+      id
+      type
+      name
+      canonicalPath
+    }
+    primarySection {
+      id
+      name
+      fullName
+      canonicalPath
+    }
+    primaryImage {
+      id
+      src
+      alt
+    }
+  }
+`;
+
+$ const block = 'content-query-load-more-a';
+$ const params = {
+  ...input,
+  limit: 15,
+  queryFragment,
+};
+$ const colClass = 'content-query-load-more-a__col';
+
+<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
+  $ const cardNodes = asArray(nodes.slice(0, 11));
+  $ const listNodes = asArray(nodes.slice(11));
+  <if(cardNodes.length || listNodes.length)>
+    <div class=block>
+      <if(cardNodes.length)>
+        <div class="row">
+          <for|content, index| of=cardNodes>
+            <div class=colClass>
+              <endeavor-content-block-card-a content=content />
+            </div>
+            <if(index === 3)>
+              <div class=colClass>
+
+              </div>
+            </if>
+          </for>
+        </div>
+      </if>
+
+      <if(listNodes.length)>
+        <div class="row">
+          <div class=colClass>
+
+          </div>
+        </div>
+      </if>
+    </div>
+    <endeavor-load-more-button
+      label="Load More Content"
+      block-name=block
+      params=params
+      page-info=pageInfo
+    />
+  </if>
+</cms-query-website-scheduled-content>
