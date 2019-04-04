@@ -1,7 +1,5 @@
-$site-font-family-sans-serif: "Roboto", sans-serif !default;
-$site-font-family-serif: "Roboto Slab", serif !default;
 
-@import "bootstrap";
+@import "variables";
 @import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
 @import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 @import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
@@ -10,6 +8,17 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 .navbar {
   &--site-a {
     border-bottom: 3px solid $secondary;
+    .navbar-nav {
+      &--primary {
+        .nav-item {
+          a {
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -27,7 +36,7 @@ $site-font-family-serif: "Roboto Slab", serif !default;
   border: 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
   a {
-    color: $gold;
+    color: $primary;
     &:hover {
       color: $gray-800;
     }
@@ -51,15 +60,15 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 }
 
 .card-content-related {
-  border-color: $gold-100;
+  border-color: $light;
   .card-header {
     text-transform: uppercase;
     letter-spacing: 1px;
-    background-color: $gold-100;
+    background-color: $light;
     border-bottom: 0;
   }
   .list-group-item {
-    border-color: $gold-100;
+    border-color: $light;
   }
 }
 
@@ -76,7 +85,7 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     border: 0;
   }
   a {
-    color: $gold;
+    color: $primary;
     &:hover {
       color: $gray-800;
     }
@@ -156,22 +165,16 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
   }
 
-  &__content-name {
-    font-family: $site-font-family-serif;
-  }
-  &__content-teaser {
-    font-style: italic;
-  }
-  &__website-section-name {
-    font-weight: 500;
-    text-transform: uppercase;
-    a {
-      color: $gray-800;
-    }
-  }
-  &__content-published {
-    text-transform: uppercase;
-  }
+  // &__content-name {
+  //   font-family: $site-font-family-serif;
+  // }
+  // &__content-teaser {
+  //   font-style: italic;
+  // }
+  // &__content-published {
+  //   text-transform: uppercase;
+  // }
+
   &__content-body {
     h1,
     h2,
@@ -187,7 +190,7 @@ $site-font-family-serif: "Roboto Slab", serif !default;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
     .caption {
-      color: $gold-600;
+      color: $info;
     }
     p:empty {
       display: none;

@@ -1,0 +1,8 @@
+.content-page-header {
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
+
+  &__content-name {
+    font-family: $site-font-family-serif;
+  }
+}

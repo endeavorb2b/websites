@@ -1,5 +1,18 @@
-@import "content-attribution";
-@import "content-breadcrumbs";
+$site-font-family-sans-serif: "Roboto", sans-serif !default;
+$site-font-family-serif: "Roboto Slab", serif !default;
+
+@import "bootstrap";
+@import "components";
+
+.container-fluid-max {
+  @include make-container();
+  @include media-breakpoint-up("xl", $grid-breakpoints) {
+    max-width: map-get($grid-breakpoints, "xl");
+  }
+  height: 100%;
+  padding-top: map-get($spacers, 4);
+  background-color: $light;
+}
 
 .element-row {
   display: flex;
