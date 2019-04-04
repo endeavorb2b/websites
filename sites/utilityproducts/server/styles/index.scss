@@ -2,6 +2,7 @@ $site-font-family-sans-serif: "Roboto", sans-serif !default;
 $site-font-family-serif: "Roboto Slab", serif !default;
 
 @import "bootstrap";
+@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
 @import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 @import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
 
@@ -171,22 +172,6 @@ $site-font-family-serif: "Roboto Slab", serif !default;
     }
   }
 
-  .content-authorable {
-    text-transform: uppercase;
-    .prefix {
-      margin-right: map-get($spacers, 1);
-      font-weight: 500;
-      text-transform: uppercase;
-      &::after {
-        margin-left: map-get($spacers, 1);
-        content: "\2014";
-      }
-    }
-
-    div:last-child {
-      margin-bottom: map-get($spacers, 2);
-    }
-  }
 
 
 
