@@ -1,8 +1,14 @@
 // Override variables that are _not_ dependant on other bootstrap vars here...
 $font-family-sans-serif: $site-font-family-sans-serif !default;
 
-$blue: #0967f9 !default;
 $yellow: #ffd503 !default;
+$primary: $yellow !default;
+$secondary: #494232 !default;
+$light: #edeceb !default;
+$dark: #343a40 !default;
+$info: #928e84 !default;
+
+$body-bg: $light !default;
 
 // Generated from https://maketintsandshades.com/#494232
 $gold-100: #edeceb !default;
@@ -15,9 +21,6 @@ $gold-700: #807b70 !default;
 $gold-800: #6d685b !default;
 $gold-900: #5b5547 !default;
 $gold:     #494232 !default;
-
-$primary: $gold !default;
-$body-bg: $gold-100 !default;
 
 $border-radius: .5rem !default;
 

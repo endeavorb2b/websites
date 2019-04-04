@@ -4,78 +4,11 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 @import "embedded-media";
 @import "bootstrap";
 
+@import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
+
 .element-row {
   display: flex;
   justify-content: space-between;
-}
-
-.navbar {
-  &--site {
-    @extend .sticky-top;
-    background-color: $gray-900;
-    border-bottom: 3px solid $yellow;
-    box-shadow: $box-shadow;
-    .navbar-brand {
-      margin-bottom: 0;
-      img {
-        height: 50px;
-      }
-    }
-    .nav-item {
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  }
-}
-
-.navbar-nav {
-  &--primary {
-
-    @include media-breakpoint-down("md") {
-      display: none;
-    }
-    @include media-breakpoint-up("lg") {
-      display: flex;
-    }
-
-
-    margin-top: map-get($spacers, 2);
-    .nav-item {
-      font-size: .9rem;
-      @include media-breakpoint-down("md") {
-        text-align: left;
-      }
-      @include media-breakpoint-up("lg") {
-        text-align: center;
-      }
-
-      &:first-child {
-        a {
-          padding-left: 0;
-        }
-      }
-    }
-  }
-
-  &--secondary {
-    margin-top: auto;
-    @include media-breakpoint-down("md") {
-      display: none;
-    }
-    @include media-breakpoint-up("lg") {
-      display: flex;
-    }
-  }
-}
-
-.navbar-toggler {
-  position: absolute;
-  top: map-get($spacers, 3);
-  right: map-get($spacers, 3);
-  &:focus {
-    outline: none;
-  }
 }
 
 // @todo All of the below CSS is tentative and should be turned into variables/mixins.
