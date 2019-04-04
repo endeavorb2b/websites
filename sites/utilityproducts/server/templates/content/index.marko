@@ -31,11 +31,7 @@ $ const adSlots = {
 
         <aside class="col-lg-4">
           <cms-ad-gam-display id="gpt-ad-rail" class="ad-container ad-container--content-page-right" />
-          <content-related-a content-id=content.id />
-          <content-related-b
-            exclude-content-ids=[content.id]
-            section-id=get(content, 'primarySection.id')
-          />
+          <endeavor-content-query-related-a exclude-content-ids=[content.id] section-id=get(content, 'primarySection.id') />
         </aside>
       </div>
     </div>

@@ -27,6 +27,16 @@
         "type": "object",
         "required": true
       }
+    },
+    "endeavor-content-block-list-item-a": {
+      "template": "./list-item-a.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
+    "endeavor-content-query-related-a": {
+      "template": "./query-related-a.marko"
     }
   }
 }

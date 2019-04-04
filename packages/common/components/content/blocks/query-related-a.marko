@@ -1,0 +1,45 @@
+import gql from 'graphql-tag';
+
+$ const queryFragment = gql`
+  fragment ContentQueryRelatedAFragment on Content {
+    id
+    type
+    shortName
+    teaser(input: { maxLength: 75 })
+    canonicalPath
+    primarySection {
+      id
+      canonicalPath
+      name
+      fullName
+    }
+    company {
+      id
+      type
+      name
+      canonicalPath
+    }
+    published
+  }
+`;
+
+$ const block = 'content-query-related-a';
+$ const params = {
+  limit: 5,
+  ...input,
+  queryFragment,
+};
+$ const header = input.header || 'You May Also Like';
+
+<cms-query-website-scheduled-content|{ nodes }| ...params>
+  <if(nodes.length)>
+    <div class=`${block} card`>
+      <div class="card-header">${header}</div>
+      <ul class="list-group list-group-flush">
+        <for|content| of=nodes>
+          <endeavor-content-block-list-item-a content=content />
+        </for>
+      </ul>
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

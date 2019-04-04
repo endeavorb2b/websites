@@ -1,0 +1,13 @@
+.content-query-related-a {
+  margin-bottom: map-get($spacers, 3);
+  border-color: $light;
+  .card-header {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $light;
+    border-bottom: 0;
+  }
+  .list-group-item {
+    border-color: $light;
+  }
+}

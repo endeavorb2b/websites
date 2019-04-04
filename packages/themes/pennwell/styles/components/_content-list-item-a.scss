@@ -1,0 +1,18 @@
+.content-list-item-a {
+  &__content-short-name {
+    font-family: $site-font-family-serif;
+  }
+  &__website-section-name {
+    font-weight: 500;
+    text-transform: uppercase;
+    a {
+      color: $dark;
+    }
+  }
+  &__content-published {
+    text-transform: uppercase;
+  }
+  .element-row {
+    font-size: $font-size-sm;
+  }
+}
