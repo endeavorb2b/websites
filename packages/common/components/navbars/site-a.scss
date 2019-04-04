@@ -1,0 +1,75 @@
+.navbar {
+  &--site-a {
+    @extend .sticky-top;
+    @extend .navbar-dark;
+    @extend .navbar-expand-lg;
+    background-color: $dark;
+    border-bottom: 3px solid $primary;
+    box-shadow: $box-shadow;
+    .navbar-brand {
+      padding-bottom: 0;
+      img {
+        height: 40px;
+      }
+    }
+    .nav-item {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .navbar-nav {
+      &--primary {
+        margin-top: map-get($spacers, 2);
+        @include media-breakpoint-down("md") {
+          display: none;
+        }
+        @include media-breakpoint-up("lg") {
+          display: flex;
+        }
+        .nav-item {
+          font-size: .9rem;
+          @include media-breakpoint-down("md") {
+            text-align: left;
+          }
+          @include media-breakpoint-up("lg") {
+            text-align: center;
+          }
+          a {
+            padding-top: map-get($spacers, 1);
+            padding-bottom: map-get($spacers, 1);
+            color: $white;
+            &:hover {
+              color: $primary;
+            }
+          }
+          &:first-child {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      &--secondary {
+        margin-top: auto;
+        @include media-breakpoint-down("md") {
+          display: none;
+        }
+        @include media-breakpoint-up("lg") {
+          display: flex;
+        }
+        a {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .navbar-toggler {
+      position: absolute;
+      top: map-get($spacers, 2);
+      right: map-get($spacers, 3);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

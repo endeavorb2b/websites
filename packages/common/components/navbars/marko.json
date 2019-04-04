@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-navbar-site-a": {
+      "template": "./site-a.marko"
+    }
+  }
+}
