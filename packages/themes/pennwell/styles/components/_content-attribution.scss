@@ -1,5 +1,5 @@
 .content-attribution {
-  font-size: 80%;
+  font-size: $font-size-sm;
   text-transform: uppercase;
   &__prefix {
     margin-right: map-get($spacers, 1);
