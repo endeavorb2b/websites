@@ -5,6 +5,13 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 @import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 @import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
 
+// Override navbar--site-a to use secondary colors
+.navbar {
+  &--site-a {
+    border-bottom: 3px solid $secondary;
+  }
+}
+
 .element-row {
   display: flex;
   justify-content: space-between;
