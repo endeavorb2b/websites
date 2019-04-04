@@ -1,0 +1,23 @@
+{
+  "tags": {
+    "endeavor-load-more-header": {
+      "template": "./header.marko"
+    },
+    "endeavor-load-more-button": {
+      "template": "./button.marko",
+      "@label": {
+        "type": "string",
+        "default-value": "Load More"
+      },
+      "@block-name": {
+        "type": "string",
+        "required": true
+      },
+      "@params": {
+        "type": "object",
+        "required": true
+      },
+      "@page-info": "object"
+    }
+  }
+}
