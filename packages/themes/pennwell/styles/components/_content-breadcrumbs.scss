@@ -1,6 +1,6 @@
 .content-breadcrumbs {
   margin-bottom: map-get($spacers, 3);
-  font-size: 80%;
+  font-size: $font-size-sm;
   font-weight: 500;
   text-transform: uppercase;
   &__website-section-hierarchy {
