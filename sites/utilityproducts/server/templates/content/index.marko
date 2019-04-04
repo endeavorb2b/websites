@@ -17,7 +17,6 @@ $ const adSlots = {
   <cms-ad-gam-display id="gpt-ad-header" class="text-center mb-4" />
 
   <cms-page-container for="content" data=content>
-
     <div class="container-fluid">
       <div class="row">
         <div class="col">
@@ -31,14 +30,8 @@ $ const adSlots = {
         </div>
 
         <aside class="col-lg-4">
-          <div class="card mb-5 border-0">
-            <div class="card-body px-1 py-0 d-flex justify-content-center">
-              <cms-ad-gam-display id="gpt-ad-rail" />
-            </div>
-          </div>
-
+          <cms-ad-gam-display id="gpt-ad-rail" class="text-center mb-5" />
           <content-related-a content-id=content.id />
-
           <content-related-b
             exclude-content-ids=[content.id]
             section-id=get(content, 'primarySection.id')
@@ -46,7 +39,6 @@ $ const adSlots = {
         </aside>
       </div>
     </div>
-
   </cms-page-container>
 
   $ const section = getAsObject(content, 'primarySection');
