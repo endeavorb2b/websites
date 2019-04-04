@@ -99,6 +99,28 @@
         "required": true,
         "default-value": "div"
       }
+    },
+    "endeavor-content-company-name": {
+      "template": "./company-name.marko",
+      "@company": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "From"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
     }
   }
 }

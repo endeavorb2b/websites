@@ -45,8 +45,9 @@ $ const adSlots = {
                 <endeavor-content-authors block="content-authorable" content=content  />
                 <endeavor-content-contributors block="content-authorable" content=content  />
                 <endeavor-content-photographers block="content-authorable" content=content  />
-
                 <endeavor-content-source block="content-authorable" content=content />
+                <endeavor-content-company-name block="content-authorable" company=content.company />
+
                 <!-- <cms-content-authors|{ contact }| tag="div" class="small" block=block obj=content>
                   <@before|{ length }|>
                     <span class="prefix">
@@ -76,9 +77,9 @@ $ const adSlots = {
                   <@before><span class="prefix">Source</span></@before>
                 </cms-content-source> -->
 
-                <cms-content-name tag="div" class="small" block=block obj=content.company link=true>
+                <!-- <cms-content-name tag="div" class="small" block=block obj=content.company link=true>
                   <@before><span class="prefix">From</span></@before>
-                </cms-content-name>
+                </cms-content-name> -->
               </div>
 
               <cms-content-published tag="small" block=block obj=content />
