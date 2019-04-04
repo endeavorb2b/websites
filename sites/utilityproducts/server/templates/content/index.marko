@@ -23,17 +23,7 @@ $ const adSlots = {
         <div class="col">
           <div class="card border-0">
             <div class="card-body px-0">
-              <nav aria-label="breadcrumb">
-                <cms-website-section-hierarchy|{ section }| tag="ol" class="breadcrumb" block=block obj=content.primarySection>
-                  <@before>
-                    <li class="breadcrumb-item">
-                      <a href="/" title="Home">Home</a>
-                    </li>
-                  </@before>
-                  <cms-website-section-name tag="li" class="breadcrumb-item" block=block obj=section link=true />
-                </cms-website-section-hierarchy>
-              </nav>
-
+              <endeavor-content-block-breadcrumbs content=content />
               <cms-content-name tag="h1" block=block obj=content />
               <cms-content-teaser tag="p" block=block obj=content />
               <endeavor-content-block-attribution content=content />
