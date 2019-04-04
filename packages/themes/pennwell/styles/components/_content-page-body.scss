@@ -1,0 +1,23 @@
+.content-page-body {
+  &__content-body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $site-font-family-serif;
+    }
+    img {
+      margin-bottom: map-get($spacers, 1);
+      border-radius: $border-radius;
+      box-shadow: $site-box-shadow-sm;
+    }
+    .caption {
+      color: $info;
+    }
+    p:empty {
+      display: none;
+    }
+  }
+}

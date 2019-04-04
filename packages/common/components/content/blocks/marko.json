@@ -20,6 +20,13 @@
         "type": "object",
         "required": true
       }
+    },
+    "endeavor-content-block-page-body": {
+      "template": "./page-body.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
     }
   }
 }
