@@ -3,7 +3,8 @@
   "version": "0.3.9",
   "private": true,
   "dependencies": {
-    "@base-cms/object-path": "^0.6.0"
+    "@base-cms/object-path": "^0.6.0",
+    "@base-cms/utils": "^0.6.0"
   },
   "peerDependencies": {
     "@base-cms/marko-web": "~0.6.5"
