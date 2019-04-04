@@ -3,6 +3,8 @@ $site-font-family-serif: "Roboto Slab", serif !default;
 
 @import "bootstrap";
 @import "components";
+@import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
+@import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
 
 .container-fluid-max {
   @include make-container();
