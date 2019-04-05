@@ -19,6 +19,10 @@ p [data-embed-type] {
   width: 50%;
   width: calc(50% - 1rem);
   margin-right: 1rem;
+  @include media-breakpoint-down("sm") {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 [data-embed-type][data-embed-align="right"] {
@@ -26,6 +30,10 @@ p [data-embed-type] {
   width: 50%;
   width: calc(50% - 1rem);
   margin-left: 1rem;
+  @include media-breakpoint-down("sm") {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 [data-embed-type] img {
@@ -61,19 +69,4 @@ p [data-embed-type] {
 [data-oembed-type="video"] {
   @extend .embed-responsive;
   @extend .embed-responsive-16by9;
-}
-
-// Ensure embedded media goes to full-width on small devices
-[data-embed-type][data-embed-align="left"] {
-  @include media-breakpoint-down("sm") {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-[data-embed-type][data-embed-align="right"] {
-  @include media-breakpoint-down("sm") {
-    width: 100%;
-    margin-left: 0;
-  }
 }
