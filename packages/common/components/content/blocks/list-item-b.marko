@@ -1,0 +1,36 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-list-item-b';
+$ const primaryImage = getAsObject(input.content, 'primaryImage');
+$ const primarySection = getAsObject(input.content, 'primarySection');
+$ const company = getAsObject(input.content, 'company');
+
+<li class=`${block} list-group-item`>
+  <if(primaryImage && primaryImage.id)>
+    <!-- @todo Determine how to modify image size options -->
+    <cms-image-element
+      block=block
+      obj=primaryImage
+      link-to=input.content
+      link-class=`${block}__image-link`
+      width=192
+      options={ w: 192, fit: 'clip', dpr: 2 }
+    />
+  </if>
+  <else>
+    <cms-link-element block=block class=`${block}__image-link ${block}__image-link--placeholder` to=input.content>
+      <div class=`${block}__image-placeholder`>
+      </div>
+    </cms-link-element>
+  </else>
+  <!-- <div class="w-100 d-flex flex-column"> -->
+  <div class=`${block}__wrapper`>
+    <cms-content-short-name tag="h5" block=block obj=input.content link=true />
+    <endeavor-content-company-name block=block company=company />
+    <cms-content-teaser tag="p" block=block obj=input.content />
+    <small class="element-row">
+      <cms-website-section-name block=block obj=primarySection link=true />
+      <cms-content-published block=block obj=input.content />
+    </small>
+  </div>
+</li>

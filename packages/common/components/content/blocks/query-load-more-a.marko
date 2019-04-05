@@ -35,7 +35,6 @@ $ const params = {
   limit: 15,
   queryFragment,
 };
-$ const colClass = 'content-query-load-more-a__col';
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
   $ const cardNodes = asArray(nodes.slice(0, 11));
@@ -45,11 +44,11 @@ $ const colClass = 'content-query-load-more-a__col';
       <if(cardNodes.length)>
         <div class="row">
           <for|content, index| of=cardNodes>
-            <div class=colClass>
+            <div class=`${block}__col`>
               <endeavor-content-block-card-a content=content />
             </div>
             <if(index === 3)>
-              <div class=colClass>
+              <div class=`${block}__col`>
                 <endeavor-gam-ad-unit alias="MR" modifiers=["in-card"] />
               </div>
             </if>
@@ -58,12 +57,14 @@ $ const colClass = 'content-query-load-more-a__col';
       </if>
 
       <if(listNodes.length)>
+        <!-- @todo Should each row/col be it's own block? -->
         <div class="row">
-          <div class=colClass>
+          <div class=`${block}__col-ad`>
             <endeavor-gam-ad-unit alias="HP" modifiers=["in-card"]  />
           </div>
-          <div class=colClass>
 
+          <div class=`${block}__col-list`>
+            <endeavor-content-block-list-a nodes=listNodes />
           </div>
         </div>
       </if>

@@ -28,8 +28,22 @@
         "required": true
       }
     },
+    "endeavor-content-block-list-a": {
+      "template": "./list-a.marko",
+      "@nodes": {
+        "type": "array",
+        "required": true
+      }
+    },
     "endeavor-content-block-list-item-a": {
       "template": "./list-item-a.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
+    "endeavor-content-block-list-item-b": {
+      "template": "./list-item-b.marko",
       "@content": {
         "type": "object",
         "required": true
