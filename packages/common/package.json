@@ -7,6 +7,9 @@
     "@base-cms/utils": "^0.6.0"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "~0.6.5"
+    "@base-cms/marko-web": "~0.6.5",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
