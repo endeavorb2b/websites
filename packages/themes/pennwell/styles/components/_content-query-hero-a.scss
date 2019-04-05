@@ -19,6 +19,7 @@
       @include make-col(4);
     }
     .card {
+      min-height: 100%;
       border: 0;
       box-shadow: $site-box-shadow-sm;
     }

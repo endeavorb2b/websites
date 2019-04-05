@@ -6,23 +6,12 @@ $ const primarySection = getAsObject(input.content, 'primarySection');
 $ const company = getAsObject(input.content, 'company');
 
 <li class=`${block} list-group-item`>
-  <if(primaryImage && primaryImage.id)>
-    <!-- @todo Determine how to modify image size options -->
-    <cms-image-element
-      block=block
-      obj=primaryImage
-      link-to=input.content
-      link-class=`${block}__image-link`
-      width=192
-      options={ w: 192, fit: 'clip', dpr: 2 }
-    />
-  </if>
-  <else>
-    <cms-link-element block=block class=`${block}__image-link ${block}__image-link--placeholder` to=input.content>
-      <div class=`${block}__image-placeholder`>
-      </div>
-    </cms-link-element>
-  </else>
+  <endeavor-content-block-primary-image
+    content=input.content
+    modifiers=['list']
+    width=192
+    options={ w: 192, fit: 'clip', dpr: 2 }
+  />
   <div class=`${block}__wrapper`>
     <cms-content-short-name tag="h5" block=block obj=input.content link=true />
     <endeavor-content-company-name block=block company=company />

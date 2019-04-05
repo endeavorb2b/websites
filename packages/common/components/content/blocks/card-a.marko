@@ -6,22 +6,11 @@ $ const primarySection = getAsObject(input.content, 'primarySection');
 $ const company = getAsObject(input.content, 'company');
 
 <div class=`${block} card`>
-  <if(primaryImage && primaryImage.id)>
-    <!-- @todo Determine how to modify image size options -->
-    <cms-image-element
-      block=block
-      obj=primaryImage
-      link-class=`${block}__image-link`
-      options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-      link-to=input.content
-    />
-  </if>
-  <else>
-    <cms-link-element block=block class=`${block}__image-link ${block}__image-link--placeholder` to=input.content>
-      <div class=`${block}__image-placeholder`>
-      </div>
-    </cms-link-element>
-  </else>
+  <endeavor-content-block-primary-image
+    content=input.content
+    modifiers=['card']
+    options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+  />
   <div class="card-body">
     <cms-content-short-name tag="h4" block=block obj=input.content link=true />
     <endeavor-content-company-name block=block company=company />

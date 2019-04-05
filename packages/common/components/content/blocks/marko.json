@@ -1,5 +1,16 @@
 {
   "tags": {
+    "endeavor-content-block-primary-image": {
+      "template": "./primary-image.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@modifiers": "array",
+      "@options": "object",
+      "@width": "number",
+      "@height": "number"
+    },
     "endeavor-content-block-attribution": {
       "template": "./attribution.marko",
       "@content": {
