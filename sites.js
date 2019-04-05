@@ -516,8 +516,23 @@ module.exports = {
     groupKey: 'cim',
     tenantKey: 'ebm_cim',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/data-center', label: 'Data Center' },
+      { href: '/standards', label: 'Standards' },
+      { href: '/cable', label: 'Cable' },
+      { href: '/connectivity', label: 'Connectivity' },
+      { href: '/ip-security-av', label: 'IP Security & AV' },
+      { href: '/wireless-5g', label: 'Wireless/5G' },
+      { href: '/design-install', label: 'Design Install' },
+      { href: '/testing', label: 'Testing' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/videos', label: 'Videos' },
+      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/white-papers', label: 'White Papers' },
+      { href: '/magazine', label: 'Magazine' },
+    ],
     ads: {
       units: {
         BS: {
@@ -684,8 +699,23 @@ module.exports = {
     groupKey: 'ils',
     tenantKey: 'ebm_ils',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/cutting', label: 'Cutting' },
+      { href: '/welding', label: 'Welding' },
+      { href: '/micromachining', label: 'Micromachining' },
+      { href: '/marking-engraving', label: 'Marking & Engraving' },
+      { href: '/surface-treatment', label: 'Surface Treatment' },
+      { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
+      { href: '/drilling', label: 'Drilling' },
+      { href: '/safety', label: 'Safety' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'White Papers' },
+      { href: '/magazine', label: 'Magazine' },
+    ],
     ads: {
       units: {
         BS: {
@@ -880,8 +910,10 @@ module.exports = {
     groupKey: 'rdh',
     tenantKey: 'ebm_rdh',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+    ],
+    secondaryNavItems: [
+    ],
     ads: {
       units: {
         BS: {
