@@ -1,5 +1,10 @@
 module.exports = {
-  logo: 'http://base.imgix.net/files/base/pennwell/de/logo.png',
+  logo: {
+    src: 'https://base.imgix.net/files/base/pennwell/de/logo.png?h=40',
+    srcset: [
+      'https://base.imgix.net/files/base/pennwell/de/logo.png?h=80 2x',
+    ],
+  },
   primaryNavItems: [
     { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
     { href: '/practice', label: 'Practice' },
@@ -19,7 +24,12 @@ module.exports = {
     units: {
       BS: {
         path: '/21687441225/DE/DE_BS',
-        size: [[970, 250], [970, 90], [728, 90], [320, 50], [300, 50]],
+        size: [[970, 250], [970, 90], [728, 90], [320, 50], [300, 50], [300, 100]],
+        sizeMapping: [
+          { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
+          { viewport: [750, 0], size: [728, 90] },
+          { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+        ],
       },
       MR: {
         path: '/21687441225/DE/DE_MR',

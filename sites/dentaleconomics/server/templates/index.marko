@@ -1,5 +1,51 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const section = getAsObject(data, 'section');
+
 <document>
+  <@head>
+    <cms-page-metadata for="website-section" ...section />
+    <cms-ad-gam-head />
+  </@head>
   <cms-page-container for="home" class="container-fluid-max">
-    <h1>Homepage</h1>
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+    <endeavor-content-query-hero
+      section-id=section.id
+      limit=7
+      requires-image=true
+    />
+
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56179 header="Tactical" /> -->
+      </div>
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56208 header="Training & Careers" /> -->
+      </div>
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56221 header="On The Street" /> -->
+      </div>
+    </div>
+
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56341 header="Investigations" /> -->
+      </div>
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56374 header="Command/HQ" /> -->
+      </div>
+      <div class="col-lg-4 mb-5">
+        <!-- <endeavor-content-query-section-list section-id=56401 header="Honoring the Fallen" /> -->
+      </div>
+    </div>
+
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+    <endeavor-content-query-load-more
+      skip=7
+      section-id=section.id
+    />
+
   </cms-page-container>
 </document>
