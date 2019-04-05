@@ -11,6 +11,23 @@
       "@width": "number",
       "@height": "number"
     },
+    "endeavor-content-block-element-group": {
+      "template": "./element-group.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@modifiers": "array",
+      "@teaser": {
+        "type": "boolean",
+        "default-value": false
+      }
+    },
     "endeavor-content-block-attribution": {
       "template": "./attribution.marko",
       "@content": {
@@ -39,46 +56,17 @@
         "required": true
       }
     },
-    "endeavor-content-block-list-a": {
-      "template": "./list-a.marko",
-      "@nodes": {
-        "type": "array",
-        "required": true
-      }
+    "endeavor-content-query-related": {
+      "template": "./query-related.marko"
     },
-    "endeavor-content-block-list-item-a": {
-      "template": "./list-item-a.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      },
-      "@teaser": {
-        "type": "boolean",
-        "default-value": true
-      }
+    "endeavor-content-query-load-more": {
+      "template": "./query-load-more.marko"
     },
-    "endeavor-content-block-list-item-b": {
-      "template": "./list-item-b.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      }
+    "endeavor-content-query-hero": {
+      "template": "./query-hero.marko"
     },
-    "endeavor-content-block-card-a": {
-      "template": "./card-a.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      }
-    },
-    "endeavor-content-query-related-a": {
-      "template": "./query-related-a.marko"
-    },
-    "endeavor-content-query-load-more-a": {
-      "template": "./query-load-more-a.marko"
-    },
-    "endeavor-content-query-hero-a": {
-      "template": "./query-hero-a.marko"
+    "endeavor-content-query-section-list": {
+      "template": "./query-section-list.marko"
     }
   }
 }

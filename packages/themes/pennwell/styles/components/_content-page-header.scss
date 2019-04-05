@@ -2,7 +2,7 @@
   padding-top: map-get($spacers, 3);
   padding-bottom: map-get($spacers, 3);
   &__content-name {
-    font-family: $site-font-family-serif;
+    font-family: $theme-font-family-serif;
   }
   &__content-teaser {
     font-style: italic;

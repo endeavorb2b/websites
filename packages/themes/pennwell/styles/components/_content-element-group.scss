@@ -1,7 +1,8 @@
-.content-list-item-b {
+.content-element-group {
   display: flex;
+  flex-direction: column;
   &__content-short-name {
-    font-family: $site-font-family-serif;
+    font-family: $theme-font-family-serif;
   }
   &__website-section-name {
     font-weight: 500;
@@ -13,13 +14,10 @@
   &__content-published {
     text-transform: uppercase;
   }
-  &__wrapper {
+  &__row {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    .element-row {
-      margin-top: auto;
-      font-size: $font-size-sm;
-    }
+    justify-content: space-between;
+    margin-top: auto;
+    text-transform: uppercase;
   }
 }

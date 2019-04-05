@@ -1,7 +1,7 @@
-$site-font-family-sans-serif: "Roboto", sans-serif !default;
-$site-font-family-serif: "Roboto Slab", serif !default;
-$site-box-shadow-lg: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2) !default;
-$site-box-shadow-sm: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$theme-font-family-sans-serif: "Roboto", sans-serif !default;
+$theme-font-family-serif: "Roboto Slab", serif !default;
+$theme-box-shadow-lg: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2) !default;
+$theme-box-shadow-sm: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 
 @import "bootstrap";
 @import "components";
@@ -18,11 +18,6 @@ $site-box-shadow-sm: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0
   background-color: $light;
 }
 
-.element-row {
-  display: flex;
-  justify-content: space-between;
-}
-
 .load-more-header {
   margin-bottom: map-get($spacers, 5);
   text-align: center;
@@ -30,7 +25,7 @@ $site-box-shadow-sm: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0
 }
 
 .home-page {
-  .content-query-load-more-a {
+  .content-query-load-more {
     padding-top: map-get($spacers, 4);
   }
 }

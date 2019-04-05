@@ -6,12 +6,12 @@
     h4,
     h5,
     h6 {
-      font-family: $site-font-family-serif;
+      font-family: $theme-font-family-serif;
     }
     img {
       margin-bottom: map-get($spacers, 1);
       border-radius: $border-radius;
-      box-shadow: $site-box-shadow-sm;
+      box-shadow: $theme-box-shadow-sm;
     }
     .caption {
       color: $info;

@@ -3,7 +3,7 @@
   &__content-link {
     display: block;
     border-radius: $border-radius;
-    box-shadow: $site-box-shadow-sm;
+    box-shadow: $theme-box-shadow-sm;
     &--placeholder {
       background-color: $dark;
     }
@@ -37,7 +37,7 @@
         @extend .embed-responsive;
         @extend .embed-responsive-16by9;
         width: auto;
-        box-shadow: $site-box-shadow-lg;
+        box-shadow: $theme-box-shadow-lg;
       }
       &__asset-image {
         @extend .embed-responsive-item;

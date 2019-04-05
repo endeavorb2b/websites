@@ -1,4 +1,4 @@
-.content-query-load-more-a {
+.content-query-load-more {
   &__col {
     margin-bottom: map-get($spacers, 5);
     @include make-col-ready();
@@ -7,6 +7,9 @@
     }
     @include media-breakpoint-up(lg) {
       @include make-col(4);
+    }
+    .card {
+      min-height: 100%;
     }
   }
   &__col-ad {
@@ -28,5 +31,12 @@
     @include media-breakpoint-up(xl) {
       @include make-col(8);
     }
+    .list-group-item {
+      display: flex;
+    }
+  }
+  .card {
+    border: 0;
+    box-shadow: $theme-box-shadow-sm;
   }
 }

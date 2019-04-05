@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 import { asArray } from '@base-cms/utils';
 
 $ const queryFragment = gql`
-  fragment ContentBlockQueryLoadMoreAFragment on Content {
+  fragment ContentBlockQueryLoadMoreFragment on Content {
     id
     type
     shortName
@@ -29,7 +29,7 @@ $ const queryFragment = gql`
   }
 `;
 
-$ const block = 'content-query-load-more-a';
+$ const block = 'content-query-load-more';
 $ const params = {
   ...input,
   limit: 15,
@@ -45,7 +45,14 @@ $ const params = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <endeavor-content-block-card-a content=content />
+              <div class="card">
+                <endeavor-content-block-primary-image
+                  content=content
+                  modifiers=['card']
+                  options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                />
+                <endeavor-content-block-element-group class="card-body" teaser=true content=content />
+              </div>
             </div>
             <if(index === 3)>
               <div class=`${block}__col`>
@@ -57,14 +64,27 @@ $ const params = {
       </if>
 
       <if(listNodes.length)>
-        <!-- @todo Should each row/col be it's own block? -->
         <div class="row">
           <div class=`${block}__col-ad`>
             <endeavor-gam-ad-unit alias="HP" modifiers=["in-card"]  />
           </div>
 
           <div class=`${block}__col-list`>
-            <endeavor-content-block-list-a nodes=listNodes />
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <for|content| of=listNodes>
+                  <li class="list-group-item">
+                    <endeavor-content-block-primary-image
+                      content=content
+                      modifiers=['list']
+                      width=192
+                      options={ w: 192, fit: 'clip', dpr: 2 }
+                    />
+                    <endeavor-content-block-element-group teaser=true content=content />
+                  </li>
+                </for>
+              </ul>
+            </div>
           </div>
         </div>
       </if>
