@@ -40,6 +40,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@teaser": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-list-item-b": {
@@ -61,6 +65,9 @@
     },
     "endeavor-content-query-load-more-a": {
       "template": "./query-load-more-a.marko"
+    },
+    "endeavor-content-query-hero-a": {
+      "template": "./query-hero-a.marko"
     }
   }
 }

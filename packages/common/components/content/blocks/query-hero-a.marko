@@ -1,0 +1,61 @@
+import gql from 'graphql-tag';
+import { asArray, asObject } from '@base-cms/utils';
+
+$ const queryFragment = gql`
+  fragment ContentBlockQueryHeroAFragment on Content {
+    id
+    type
+    shortName
+    teaser(input: { maxLength: null })
+    canonicalPath
+    published
+    company {
+      id
+      type
+      name
+      canonicalPath
+    }
+    primarySection {
+      id
+      name
+      fullName
+      canonicalPath
+    }
+    primaryImage {
+      id
+      src
+      alt
+    }
+  }
+`;
+
+$ const block = 'content-query-hero-a';
+$ const params = {
+  ...input,
+  queryFragment,
+};
+
+<cms-query-website-scheduled-content|{ nodes }| ...params>
+  $ const heroNode = asObject(nodes[0]);
+  $ const listNodes = asArray(nodes.slice(1))
+  <if(heroNode || listNodes.length)>
+    <div class="row">
+      <if(heroNode)>
+        <div class=`${block}__col-card`>
+          <endeavor-content-block-card-a content=heroNode />
+        </div>
+      </if>
+      <if(listNodes.length)>
+        <div class=`${block}__col-list`>
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <for|content| of=listNodes>
+                <endeavor-content-block-list-item-a content=content teaser=false />
+              </for>
+            </ul>
+          </div>
+        </div>
+      </if>
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

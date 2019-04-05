@@ -7,7 +7,9 @@ $ const primarySection = getAsObject(input.content, 'primarySection');
 <li class=`${block} list-group-item`>
   <cms-content-short-name tag="h5" block=block obj=input.content link=true />
   <endeavor-content-company-name block=block company=company />
-  <cms-content-teaser tag="p" block=block obj=input.content />
+  <if(input.teaser)>
+    <cms-content-teaser tag="p" block=block obj=input.content />
+  </if>
   <div class="element-row">
     <cms-website-section-name block=block obj=primarySection link=true />
     <cms-content-published block=block obj=input.content />
