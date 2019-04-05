@@ -46,11 +46,11 @@
     padding-bottom: 0;
   }
   .card-footer {
-    font-size: $font-size-sm;
-    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    border: 0;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
     background-color: $white;
+    border: 0;
   }
 }

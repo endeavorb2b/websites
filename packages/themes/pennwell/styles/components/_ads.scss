@@ -7,9 +7,9 @@
     margin-bottom: map-get($spacers, 4);
   }
   &--in-card {
-    min-height: 100%;
     display: flex;
     justify-content: center;
+    min-height: 100%;
     > div {
       margin-top: auto;
       margin-bottom: auto;
