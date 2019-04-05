@@ -1,0 +1,70 @@
+import gql from 'graphql-tag';
+import { asArray, asObject } from '@base-cms/utils';
+
+$ const queryFragment = gql`
+  fragment ContentBlockQueryHeroFragment on Content {
+    id
+    type
+    shortName
+    teaser(input: { maxLength: null })
+    canonicalPath
+    published
+    company {
+      id
+      type
+      name
+      canonicalPath
+    }
+    primarySection {
+      id
+      name
+      fullName
+      canonicalPath
+    }
+    primaryImage {
+      id
+      src
+      alt
+    }
+  }
+`;
+
+$ const block = 'content-query-hero';
+$ const params = {
+  ...input,
+  queryFragment,
+};
+
+<cms-query-website-scheduled-content|{ nodes }| ...params>
+  $ const heroNode = asObject(nodes[0]);
+  $ const listNodes = asArray(nodes.slice(1))
+  <if(nodes.length)>
+    <div class=block>
+      <div class="row">
+        <if(heroNode.id)>
+          <div class=`${block}__main`>
+            <div class="card">
+              <endeavor-content-block-primary-image
+                content=heroNode
+                modifiers=['card']
+                options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+              />
+              <endeavor-content-block-element-group class="card-body" teaser=true content=heroNode />
+            </div>
+          </div>
+        </if>
+        <if(listNodes.length)>
+          <div class=`${block}__list`>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <for|content| of=listNodes>
+                  <endeavor-content-block-element-group tag="li" class="list-group-item" content=content />
+                </for>
+              </ul>
+            </div>
+          </div>
+        </if>
+      </div>
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

@@ -1,0 +1,23 @@
+.content-element-group {
+  display: flex;
+  flex-direction: column;
+  &__content-short-name {
+    font-family: $theme-font-family-serif;
+  }
+  &__website-section-name {
+    font-weight: 500;
+    text-transform: uppercase;
+    a {
+      color: $dark;
+    }
+  }
+  &__content-published {
+    text-transform: uppercase;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    text-transform: uppercase;
+  }
+}

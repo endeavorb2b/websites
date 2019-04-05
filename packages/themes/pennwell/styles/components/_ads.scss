@@ -1,0 +1,21 @@
+.ad-container {
+  text-align: center;
+  &--content-page-top {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &--content-page-right {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &--home-page-inline {
+    margin-bottom: map-get($spacers, 5);
+  }
+  &--in-card {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    > div {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}

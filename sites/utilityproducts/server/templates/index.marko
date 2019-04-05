@@ -8,46 +8,44 @@ $ const section = getAsObject(data, 'section');
     <cms-ad-gam-head />
   </@head>
   <cms-page-container for="home" class="container-fluid-max">
-    <gam-ad alias="BS" class="text-center mb-5" />
-    <content-hero-a
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+    <endeavor-content-query-hero
       section-id=section.id
       limit=7
       requires-image=true
     />
 
     <div class="row">
-      <div class="col-4">
-        <content-section-list section-id=30003 header="Transmission & Distribution" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30003 header="Transmission & Distribution" />
       </div>
-      <div class="col-4">
-        <content-section-list section-id=30004 header="Vehicles & Accessories" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30004 header="Vehicles & Accessories" />
       </div>
-      <div class="col-4">
-        <content-section-list section-id=30005 header="Tools & Supplies" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30005 header="Tools & Supplies" />
       </div>
     </div>
 
-    <gam-ad alias="BS" class="text-center my-5" />
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
 
     <div class="row">
-      <div class="col-4">
-        <content-section-list section-id=30006 header="Safety" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30006 header="Safety" />
       </div>
-      <div class="col-4">
-        <content-section-list section-id=30007 header="Line Construction & Maintenance" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30007 header="Line Construction & Maintenance" />
       </div>
-      <div class="col-4">
-        <content-section-list section-id=30008 header="Test & Mesurement" />
+      <div class="col-lg-4 mb-5">
+        <endeavor-content-query-section-list section-id=30008 header="Test & Mesurement" />
       </div>
     </div>
 
-    <gam-ad alias="BS" class="text-center my-5" />
+    <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+    <endeavor-content-query-load-more
+      skip=7
+      section-id=section.id
+    />
 
-    <div class="pt-4">
-      <content-sub-page-a
-        skip=7
-        section-id=section.id
-      />
-    </div>
   </cms-page-container>
 </document>

@@ -1,0 +1,15 @@
+.content-attribution {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  &__prefix {
+    margin-right: map-get($spacers, 1);
+    font-weight: 500;
+    &::after {
+      margin-left: map-get($spacers, 1);
+      content: "\2014";
+    }
+  }
+  div:last-child {
+    margin-bottom: map-get($spacers, 2);
+  }
+}

@@ -1,0 +1,27 @@
+$ const { site, config } = out.global;
+
+<nav class="navbar navbar--site-a">
+  <div class="d-flex flex-column-reverse">
+    <ul class="navbar-nav navbar-nav--primary">
+      <for|item| of=site.getAsArray('primaryNavItems')>
+        <li class="nav-item">
+          <a class="nav-link" href=item.href>${item.label}</a>
+        </li>
+      </for>
+    </ul>
+
+    <div class="d-lg-flex">
+      <a class="navbar-brand" href="/">
+        <img alt=config.siteName() src=site.get('logo.src') srcset=site.get('logo.srcset').join(',')>
+      </a>
+      <ul class="navbar-nav navbar-nav--secondary">
+        <for|item| of=site.getAsArray('secondaryNavItems')>
+          <li class="nav-item">
+            <a class="nav-link" href=item.href>${item.label}</a>
+          </li>
+        </for>
+      </ul>
+    </div>
+  </div>
+  <cms-browser-component name="NavbarToggleButton" props={ targets: ['.navbar-nav--primary', '.navbar-nav--secondary'], toggleClass: 'd-flex' } />
+</nav>

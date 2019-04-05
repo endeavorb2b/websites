@@ -47,6 +47,7 @@ module.exports = (app) => {
               node {
                 id
                 name
+                type
                 canonicalPath
               }
             }
@@ -56,6 +57,7 @@ module.exports = (app) => {
               node {
                 id
                 name
+                type
                 canonicalPath
               }
             }
@@ -65,6 +67,7 @@ module.exports = (app) => {
               node {
                 id
                 name
+                type
                 canonicalPath
               }
             }

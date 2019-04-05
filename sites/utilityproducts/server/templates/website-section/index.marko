@@ -7,14 +7,15 @@ $ const section = getAsObject(data, 'section');
   <@head>
     <cms-ad-gam-head />
   </@head>
-  <gam-ad alias="BS" class="text-center mb-5" />
-  <content-hero-a
+  <endeavor-gam-ad-unit alias="BS" modifiers=['home-page-inline'] />
+
+  <endeavor-content-query-hero
     section-id=section.id
     limit=7
     requires-image=true
   />
-  <div class="mb-4"></div>
-  <content-sub-page-a
+
+  <endeavor-content-query-load-more
     skip=7
     section-id=section.id
   />

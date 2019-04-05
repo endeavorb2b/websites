@@ -1,0 +1,148 @@
+{
+  "tags": {
+    "endeavor-content-authors": {
+      "template": "./authors.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Author"
+      },
+      "@class": "string",
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
+    },
+    "endeavor-content-contributors": {
+      "template": "./contributors.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Contributor"
+      },
+      "@class": "string",
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
+    },
+    "endeavor-content-photographers": {
+      "template": "./photographers.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Photographer"
+      },
+      "@class": "string",
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
+    },
+    "endeavor-content-source": {
+      "template": "./source.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Source"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
+    },
+    "endeavor-content-byline": {
+      "template": "./byline.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "By"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
+    },
+    "endeavor-content-company-name": {
+      "template": "./company-name.marko",
+      "@company": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string",
+        "required": true
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "From"
+      },
+      "@class": "string",
+      "@tag": {
+        "type": "string",
+        "required": true,
+        "default-value": "div"
+      }
+    }
+  }
+}

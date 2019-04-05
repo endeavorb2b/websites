@@ -1,0 +1,10 @@
+.load-more-button {
+  padding-bottom: map-get($spacers, 3);
+  text-align: center;
+  .btn {
+    margin-bottom: map-get($spacers, 5);
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}

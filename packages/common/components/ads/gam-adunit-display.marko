@@ -1,0 +1,10 @@
+$ const block = 'ad-container';
+$ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
+$ const classNames = [block, ...modifiers, input.class];
+
+<if(input.id)>
+  <cms-ad-gam-display
+    id=input.id
+    class=classNames
+  />
+</if>

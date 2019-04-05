@@ -52,10 +52,10 @@ services:
     environment:
       <<: *env
 
-  evaluation-engineering:
+  evaluationengineering:
     <<: *node
     <<: *site-cmd
-    working_dir: /root/sites/evaluation-engineering
+    working_dir: /root/sites/evaluationengineering
     environment:
       <<: *env
       PORT: 80

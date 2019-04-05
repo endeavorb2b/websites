@@ -1,0 +1,15 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-breadcrumbs';
+$ const primarySection = getAsObject(input.content, 'primarySection');
+
+<nav class=block aria-label="breadcrumb">
+  <cms-website-section-hierarchy|{ section }| tag="ol" class="breadcrumb" block=block obj=primarySection>
+    <@before>
+      <li class="breadcrumb-item">
+        <a href="/" title="Home">Home</a>
+      </li>
+    </@before>
+    <cms-website-section-name tag="li" class="breadcrumb-item" block=block obj=section link=true />
+  </cms-website-section-hierarchy>
+</nav>

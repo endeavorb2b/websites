@@ -2,119 +2,45 @@ import { getAsObject, get } from '@base-cms/object-path';
 
 $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
+$ const section = getAsObject(content, 'primarySection');
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-header': { ...site.get('ad.units.BS') },
-  'gpt-ad-rail': { ...site.get('ad.units.MR') },
+  'gpt-ad-top': { ...site.get('ad.units.BS') },
+  'gpt-ad-right': { ...site.get('ad.units.MR') },
 };
 
 <layout content=content>
   <@head>
-    <cms-ad-gam-head
-      slots=adSlots
-    />
+    <cms-ad-gam-head slots=adSlots />
   </@head>
-  <cms-ad-gam-display id="gpt-ad-header" class="text-center mb-4" />
+  <endeavor-gam-ad-unit-display id="gpt-ad-top" modifiers=["content-page-top"] />
 
   <cms-page-container for="content" data=content>
-
     <div class="container-fluid">
-      <div class="row content-header">
+      <div class="row">
         <div class="col">
-          <div class="card border-0">
-            <div class="card-body px-0">
-              <nav aria-label="breadcrumb">
-                <cms-website-section-hierarchy|{ section }| tag="ol" class="breadcrumb" block=block obj=content.primarySection>
-                  <@before>
-                    <li class="breadcrumb-item">
-                      <a href="/" title="Home">Home</a>
-                    </li>
-                  </@before>
-                  <cms-website-section-name tag="li" class="breadcrumb-item" block=block obj=section link=true />
-                </cms-website-section-hierarchy>
-              </nav>
-
-              <cms-content-name tag="h1" class="mb-2" block=block obj=content />
-              <cms-content-teaser tag="p" block=block obj=content />
-
-              <div class="content-authorable">
-                <cms-content-byline tag="div" class="small" block=block obj=content>
-                  <@before><span class="prefix">By</span></@before>
-                </cms-content-byline>
-
-                <cms-content-authors|{ contact }| tag="div" class="small" block=block obj=content>
-                  <@before|{ length }|>
-                    <span class="prefix">
-                      Author<if(length > 1)>s</if>
-                    </span>
-                  </@before>
-                  <cms-content-name tag="span" block=block obj=contact link=true />
-                </cms-content-authors>
-                <cms-content-contributors|{ contact }| tag="div" class="small" block=block obj=content>
-                  <@before|{ length }|>
-                    <span class="prefix">
-                      Contributor<if(length > 1)>s</if>
-                    </span>
-                  </@before>
-                  <cms-content-name tag="span" block=block obj=contact link=true />
-                </cms-content-contributors>
-                <cms-content-photographers|{ contact }| tag="div" class="small" block=block obj=content>
-                  <@before|{ length }|>
-                    <span class="prefix">
-                      Photographer<if(length > 1)>s</if>
-                    </span>
-                  </@before>
-                  <cms-content-name tag="span" block=block obj=contact link=true />
-                </cms-content-photographers>
-
-                <cms-content-source tag="div" class="small" block=block obj=content>
-                  <@before><span class="prefix">Source</span></@before>
-                </cms-content-source>
-
-                <cms-content-name tag="div" class="small" block=block obj=content.company link=true>
-                  <@before><span class="prefix">From</span></@before>
-                </cms-content-name>
-              </div>
-
-              <cms-content-published tag="small" block=block obj=content />
-            </div>
-          </div>
+          <endeavor-content-block-page-header content=content />
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-8">
-          <div class="card border-0">
-            <div class="card-body p-0">
-              <cms-content-body tag="div" block=block obj=content />
-            </div>
-          </div>
+          <endeavor-content-block-page-body content=content />
         </div>
+
         <aside class="col-lg-4">
-          <div class="card mb-5 border-0">
-            <div class="card-body px-1 py-0 d-flex justify-content-center">
-              <cms-ad-gam-display id="gpt-ad-rail" />
-            </div>
-          </div>
-
-          <content-related-a content-id=content.id />
-
-          <content-related-b
-            exclude-content-ids=[content.id]
-            section-id=get(content, 'primarySection.id')
-          />
+          <endeavor-gam-ad-unit-display id="gpt-ad-right" modifiers=["content-page-right"] />
+          <endeavor-content-query-related exclude-content-ids=[content.id] section-id=section.id />
         </aside>
       </div>
     </div>
-
   </cms-page-container>
 
-  $ const section = getAsObject(content, 'primarySection');
   <if(section.id)>
-    <div class="text-center">
-      <h2 class="text-uppercase mb-5">More in ${section.name}</h2>
-    </div>
-    <content-sub-page-a
+    <endeavor-load-more-header>
+      <h2>More in ${section.name}</h2>
+    </endeavor-load-more-header>
+    <endeavor-content-query-load-more
       skip=5
       exclude-content-ids=[content.id]
       section-id=section.id

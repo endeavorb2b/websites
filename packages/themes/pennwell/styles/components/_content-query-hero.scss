@@ -1,0 +1,26 @@
+.content-query-hero {
+  &__main {
+    margin-bottom: map-get($spacers, 5);
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col(7);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-col(8);
+    }
+  }
+  &__list {
+    margin-bottom: map-get($spacers, 5);
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col(5);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-col(4);
+    }
+  }
+  .card {
+    border: 0;
+    box-shadow: $theme-box-shadow-sm;
+  }
+}

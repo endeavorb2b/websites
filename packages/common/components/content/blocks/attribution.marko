@@ -1,0 +1,13 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-attribution';
+$ const company = getAsObject(input.content, 'company');
+
+<div class=block>
+  <endeavor-content-byline block=block content=input.content />
+  <endeavor-content-authors block=block content=input.content />
+  <endeavor-content-contributors block=block content=input.content />
+  <endeavor-content-photographers block=block content=input.content />
+  <endeavor-content-source block=block content=input.content />
+  <endeavor-content-company-name block=block company=company />
+</div>

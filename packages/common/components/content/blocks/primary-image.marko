@@ -1,0 +1,27 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-primary-image';
+$ const linkElement = `${block}__link`;
+$ const primaryImage = getAsObject(input.content, 'primaryImage');
+
+$ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
+$ const classNames = [block, ...modifiers];
+
+<div class=classNames>
+  <if(primaryImage && primaryImage.id)>
+    <cms-image-element
+      block=block
+      height=input.height
+      link-to=input.content
+      obj=primaryImage
+      options=input.options
+      width=input.width
+    />
+  </if>
+  <else>
+    <cms-link-element block=block to=input.content modifiers=["placeholder"]>
+      <div class=`${block}__placeholder`>
+      </div>
+    </cms-link-element>
+  </else>
+</div>

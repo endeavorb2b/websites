@@ -1,0 +1,21 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-element-group';
+$ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
+$ const classNames = [block, ...modifiers, input.class];
+
+$ const primaryImage = getAsObject(input.content, 'primaryImage');
+$ const primarySection = getAsObject(input.content, 'primarySection');
+$ const company = getAsObject(input.content, 'company');
+
+<${input.tag} class=classNames>
+  <cms-content-short-name tag="h5" block=block obj=input.content link=true />
+  <endeavor-content-company-name block=block company=company />
+  <if(input.teaser)>
+    <cms-content-teaser tag="p" block=block obj=input.content />
+  </if>
+  <small class=`${block}__row`>
+    <cms-website-section-name block=block obj=primarySection link=true />
+    <cms-content-published block=block obj=input.content />
+  </small>
+</>

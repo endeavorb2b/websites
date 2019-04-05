@@ -1,0 +1,17 @@
+.content-query-section-list {
+  min-height: 100%;
+  margin-bottom: map-get($spacers, 4);
+  border: 0;
+  box-shadow: $theme-box-shadow-sm;
+  .card-header {
+    margin-bottom: map-get($spacers, 5);
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $dark;
+    border-bottom: 2px solid $primary;
+  }
+  .card-body {
+    flex: none;
+  }
+}

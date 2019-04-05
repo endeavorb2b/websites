@@ -1,0 +1,15 @@
+$ const prefixClass = `${input.block}__prefix`;
+
+<cms-content-name
+  tag=input.tag
+  class=input.class
+  block=input.block
+  obj=input.company
+  link=true
+>
+  <@before>
+    <span class=prefixClass>
+      ${input.prefix}
+    </span>
+  </@before>
+</cms-content-name>
