@@ -11,14 +11,14 @@ $ const company = getAsObject(input.content, 'company');
     <cms-image-element
       block=block
       obj=primaryImage
-      link-class="content-card-a__image-link"
+      link-class=`${block}__image-link`
       options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
       link-to=input.content
     />
   </if>
   <else>
-    <cms-link-element block=block class="content-card-a__image-link content-card-a__image-link--placeholder" to=input.content>
-      <div class="content-card-a__image-placeholder">
+    <cms-link-element block=block class=`${block}__image-link ${block}__image-link--placeholder` to=input.content>
+      <div class=`${block}__image-placeholder`>
       </div>
     </cms-link-element>
   </else>
