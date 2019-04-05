@@ -6,7 +6,17 @@
         "type": "string",
         "required": true
       },
-      "@class": "string"
+      "@class": "string",
+      "@modifiers": "array"
+    },
+    "endeavor-gam-ad-unit-display": {
+      "template": "./gam-adunit-display.marko",
+      "@id": {
+        "type": "string",
+        "required": true
+      },
+      "@class": "string",
+      "@modifiers": "array"
     }
   }
 }
