@@ -14,10 +14,10 @@
     text-transform: uppercase;
   }
   &__image-link {
-    margin-left: -2.25rem;
-    margin-right: map-get($spacers, 3);
     margin-top: auto;
+    margin-right: map-get($spacers, 3);
     margin-bottom: auto;
+    margin-left: -2.25rem;
     border-radius: $border-radius;
     box-shadow: $site-box-shadow-sm;
     &--placeholder {
