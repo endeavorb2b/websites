@@ -20,6 +20,11 @@ module.exports = {
     { href: '/job-listings', label: 'Job Listings' },
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
+  homeSections: [
+    { id: 30016, label: 'Macro/Op-Ed' },
+    { id: 30017, label: 'Practice' },
+    { id: 30018, label: 'Science & Tech' },
+  ],
   ads: {
     units: {
       BS: {

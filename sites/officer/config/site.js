@@ -21,6 +21,14 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/contact-us', label: 'Contact Us' },
   ],
+  homeSections: [
+    { id: 56179, name: 'Tactical' },
+    { id: 56208, name: 'Training & Careers' },
+    { id: 56221, name: 'On The Street' },
+    { id: 56341, name: 'Investigations' },
+    { id: 56374, name: 'Command/HQ' },
+    { id: 56401, name: 'Honoring the Fallen' },
+  ],
   ad: {
     units: {
       BS: { path: '/21687441225/Officer/Officer_BS', size: [[970, 250], [970, 90]] },
