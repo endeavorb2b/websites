@@ -19,6 +19,14 @@ module.exports = {
     { href: '/white-papers', label: 'White Papers' },
     { href: '/events', label: 'Events' },
   ],
+  homeSections: [
+    { id: 30003, name: 'Transmission & Distribution' },
+    { id: 30004, name: 'Vehicles & Accessories' },
+    { id: 30005, name: 'Tools & Supplies' },
+    { id: 30006, name: 'Safety' },
+    { id: 30007, name: 'Line Construction & Maintenance' },
+    { id: 30008, name: 'Test & Mesurement' },
+  ],
   ad: {
     units: {
       BS: {

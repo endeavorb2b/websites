@@ -17,6 +17,14 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
+  homeSections: [
+    { id: 60895, name: 'Applications' },
+    { id: 59814, name: 'Instrumentation' },
+    { id: 60924, name: 'Testing' },
+    { id: 60913, name: 'Industries' },
+    { id: 60955, name: 'Whitepapers' },
+    { id: 59826, name: 'Special Reports' },
+  ],
   ad: {
     units: {
       BS: { path: '/21687441225/EE/ee970x250', size: [[970, 250], [970, 90]] },
