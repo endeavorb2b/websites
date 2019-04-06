@@ -440,9 +440,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: '/advertise', label: 'Advertise'},
-      { href: 'https://formdesigner.ecn5.com/GetForm?tokenuid=12d55674-b05c-4726-864f-83b3402778a1&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25', label: 'Newsletters' },
-      { href: 'https://laserfocusworld.com', label: 'Laser Focus World'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -483,12 +483,10 @@ module.exports = {
       { href: '/diamond-reviews', label: 'Diamond Reviews' },
     ],
     secondaryNavItems: [
-      { href: '/news-products', label: 'News/Products' },
-      { href: 'http://broadbandtechreport.brightcovegallery.com/', label: 'Videos' },
-      { href: '/special-reports', label: 'Special Reports' },
-      { href: '/whitepapers', label: 'Whitepapers' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: 'https://formdesigner.ecn5.com/GetForm?tokenuid=7e167702-3ad8-4566-92bf-3221b22b0d75&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25', label: 'Newsletters' },
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -528,10 +526,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: '/videos', label: 'Videos' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: '/white-papers', label: 'White Papers' },
       { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -545,34 +542,6 @@ module.exports = {
         },
         HP: {
           path: '/21687441225/CIM/CIM_HP',
-          size: [300, 600],
-        },
-      },
-    },
-  },
-  dentalacademyofce: {
-    name: 'Dental Academy of Continuing Education',
-    domain: 'dentalacademyofce.com',
-    logo: 'http://base.imgix.net/files/base/pennwell/dace/logo.png',
-    project: 'PennWell Corporation',
-    accountKey: 'ebm',
-    groupKey: 'dace',
-    tenantKey: 'ebm_dace',
-    replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
-    ads: {
-      units: {
-        BS: {
-          path: '/21687441225/DACE/DACE_BS',
-          size: [[970, 250], [970, 90], [728, 90], [300, 50]],
-        },
-        MR: {
-          path: '/21687441225/DACE/DACE_MR',
-          size: [300, 250],
-        },
-        HP: {
-          path: '/21687441225/DACE/DACE_HP',
           size: [300, 600],
         },
       },
@@ -596,10 +565,10 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
-      { href: '/white-papers', label: 'White Papers' },
+      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/job-listings', label: 'Job Listings' },
+      { href: '/about-us', label: 'About Us' },
+      { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
     ],
     ads: {
@@ -640,10 +609,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: '/products/free-samples', label: 'Free Samples' },
-      { href: '/blogs', label: 'Blogs' },
+      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -671,8 +639,21 @@ module.exports = {
     groupKey: 'ias',
     tenantKey: 'ebm_ias',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/commercial', label: 'Commercial' },
+      { href: '/military', label: 'Military' },
+      { href: '/avionics', label: 'Avionics' },
+      { href: '/atc-atm', label: 'ATC/ATM' },
+      { href: '/helicopter', label: 'Helicopter' },
+      { href: '/satcom', label: 'SATCOM' },
+      { href: '/unmanned', label: 'Unmanned' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -710,11 +691,10 @@ module.exports = {
       { href: '/safety', label: 'Safety' },
     ],
     secondaryNavItems: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
+      { href: '/subscribe', label: 'Subscribe'},
       { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -742,8 +722,20 @@ module.exports = {
     groupKey: 'leds',
     tenantKey: 'ebm_leds',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/leds-ssl-design', label: 'LEDs & SSL Design' },
+      { href: '/manufacturing-services-testing', label: 'Manufacturing Services & Testing' },
+      { href: '/architectural-lighting', label: 'Architectural Lighting' },
+      { href: '/smart-lighting-iot', label: 'Smart Lighting & IoT' },
+      { href: '/specialty-ssl', label: 'Specialty SSL' },
+      { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -770,8 +762,21 @@ module.exports = {
     groupKey: 'lfw',
     tenantKey: 'ebm_lfw',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/home', label: 'Home' },
+      { href: '/detectors-imaging', label: 'Detectors & Imaging' },
+      { href: '/lasers-sources', label: 'Lasers & Sources' },
+      { href: '/optics', label: 'Optics' },
+      { href: '/fiber-optics', label: 'Fiber Optics' },
+      { href: '/software-accessories', label: 'Software & Accessories' },
+      { href: '/test-measurement', label: 'Test & Measurement' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -798,8 +803,22 @@ module.exports = {
     groupKey: 'lw',
     tenantKey: 'ebm_lw',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/network-design', label: 'Network Design' },
+      { href: '/fttx', label: 'FTTX' },
+      { href: '/sdn-nfv', label: 'SDN/NFV' },
+      { href: '/data-center', label: 'Data Center' },
+      { href: '/test', label: 'Test' },
+      { href: '/optical-tech', label: 'Optical Tech' },
+      { href: '/business', label: 'Business' },
+      { href: '/education', label: 'Education' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -826,8 +845,22 @@ module.exports = {
     groupKey: 'mae',
     tenantKey: 'ebm_mae',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/computers', label: 'Computers' },
+      { href: '/cyber', label: 'Cyber' },
+      { href: '/unmanned', label: 'Unmanned' },
+      { href: '/sensors', label: 'Sensors' },
+      { href: '/rf-analog', label: 'RF/Analog' },
+      { href: '/power', label: 'Power' },
+      { href: '/communications', label: 'Communications' },
+      { href: '/test', label: 'Test' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -854,8 +887,24 @@ module.exports = {
     groupKey: 'os',
     tenantKey: 'ebm_os',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/regional-reports', label: 'Regional Reports' },
+      { href: '/drilling-completion', label: 'Drilling & Completion' },
+      { href: '/field-development', label: 'Field Development' },
+      { href: '/subsea', label: 'Subsea' },
+      { href: '/geosciences', label: 'Geosciences' },
+      { href: '/pipelines', label: 'Pipelines' },
+      { href: '/production', label: 'Production' },
+      { href: '/rigs-vessels', label: 'Rigs/Vessels' },
+      { href: '/deepwater', label: 'Deepwater' },
+      { href: '/business-briefs', label: 'Business Briefs' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -882,8 +931,19 @@ module.exports = {
     groupKey: 'ogj',
     tenantKey: 'ebm_ogj',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/general-interest', label: 'General Interest' },
+      { href: '/exploration-development', label: 'Exploration & Development' },
+      { href: '/drilling-production', label: 'Drilling & Production' },
+      { href: '/refining-processing', label: 'Refining & Processing' },
+      { href: '/pipelines-transportation', label: 'Pipelines & Transportation' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -913,6 +973,10 @@ module.exports = {
     primaryNavItems: [
     ],
     secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -952,9 +1016,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: '/editors-picks', label: 'Editor\'s Picks' },
+      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/job-listings', label: 'Job Listings' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -1020,9 +1084,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
@@ -1050,8 +1114,21 @@ module.exports = {
     groupKey: 'vsd',
     tenantKey: 'ebm_vsd',
     replicaSet: 'aerilon',
-    primaryNavItems: [],
-    secondaryNavItems: [],
+    primaryNavItems: [
+      { href: '/factory', label: 'Factory' },
+      { href: '/non-factory', label: 'Non-Factory' },
+      { href: '/cameras', label: 'Cameras' },
+      { href: '/boards-software', label: 'Boards & Software' },
+      { href: '/embedded', label: 'Embedded' },
+      { href: '/unmanned', label: 'Unmanned' },
+      { href: '/nextgen', label: 'NextGen' },
+    ],
+    secondaryNavItems: [
+      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
+    ],
     ads: {
       units: {
         BS: {
@@ -1085,11 +1162,9 @@ module.exports = {
     ],
     secondaryNavItems: [
       { href: '/subscribe', label: 'Subscribe'},
-      { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
-      { href: '/whitepapers', label: 'Whitepapers' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: '/events', label: 'Events' },
-      { href: '/video', label: 'Video' },
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/about-us', label: 'About Us' },
     ],
     ads: {
       units: {
