@@ -135,3 +135,17 @@ services:
     ports:
       - "12156:80"
       - "35156:35156"
+
+  cablinginstall:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/cablinginstall
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12157
+      LIVERELOAD_PORT: 35157
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/cim}
+    ports:
+      - "12157:80"
+      - "35157:35157"

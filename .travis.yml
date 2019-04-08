@@ -38,3 +38,7 @@ jobs:
     - stage: deploy
       name: Deploy Broadband Technology Report
       script: scripts/deploy.js broadbandtechreport
+
+    - stage: deploy
+      name: Deploy Cabling Installation & Maintenance
+      script: scripts/deploy.js cablinginstall
