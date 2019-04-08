@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Bio Optics World',
+  siteName: 'Offshore Magazine',
   locale: 'en_US',
   images: {
     lazyload: true,
