@@ -1,8 +1,7 @@
-$blue: #005ea0 !default;
-$primary: $blue !default;
-$secondary: #f00 !default;
-$light: #e9ecef !default;
-$dark: #343a40 !default;
-$info: #669ec6 !default;
+$primary: #005ea0 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
 
-$body-bg: $light !default;
+$body-bg: #f8f9fa !default;
