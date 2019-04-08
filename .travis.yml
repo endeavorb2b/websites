@@ -16,51 +16,51 @@ jobs:
       script: scripts/deploy-notify.sh
 
     - stage: deploy
-      name: Deploy Officer
+      name: Officer
       script: scripts/deploy.js officer
 
     - stage: deploy
-      name: Deploy Evaluation Engineering
+      name: Evaluation Engineering
       script: scripts/deploy.js evaluationengineering
 
     - stage: deploy
-      name: Deploy Utility Products
+      name: Utility Products
       script: scripts/deploy.js utilityproducts
 
     - stage: deploy
-      name: Deploy Dental Economics
+      name: Dental Economics
       script: scripts/deploy.js dentaleconomics
 
     - stage: deploy
-      name: Deploy BioOptics World
+      name: BioOptics World
       script: scripts/deploy.js bioopticsworld
 
     - stage: deploy
-      name: Deploy Broadband Technology Report
+      name: Broadband Technology Report
       script: scripts/deploy.js broadbandtechreport
 
     - stage: deploy
-      name: Deploy Cabling Installation & Maintenance
+      name: Cabling Installation & Maintenance
       script: scripts/deploy.js cablinginstall
 
     - stage: deploy
-      name: Deploy DentistryIQ
+      name: DentistryIQ
       script: scripts/deploy.js dentistryiq
 
     - stage: deploy
-      name: Deploy Intelligent Aerospace
+      name: Intelligent Aerospace
       script: scripts/deploy.js intelligent-aerospace
 
     - stage: deploy
-      name: Deploy Industrial Laser Solutions
+      name: Industrial Laser Solutions
       script: scripts/deploy.js industrial-lasers
 
     - stage: deploy
-      name: Deploy LEDs Magazine
+      name: LEDs Magazine
       script: scripts/deploy.js ledsmagazine
 
     - stage: deploy
-      name: Deploy Laser Focus World
+      name: Laser Focus World
       script: scripts/deploy.js laserfocusworld
 
     - stage: deploy
@@ -78,3 +78,7 @@ jobs:
     - stage: deploy
       name: Offshore Oil & Gas Journal
       script: scripts/deploy.js ogj
+
+    - stage: deploy
+      name: Registered Dental Hygienist
+      script: scripts/deploy.js rdhmag

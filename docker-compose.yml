@@ -275,3 +275,17 @@ services:
     ports:
       - "12166:80"
       - "35166:35166"
+
+  rdhmag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/rdhmag
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12167
+      LIVERELOAD_PORT: 35167
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/rdh}
+    ports:
+      - "12167:80"
+      - "35167:35167"
