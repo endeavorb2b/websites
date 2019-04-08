@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Bio Optics World',
+  siteName: 'Vision Systems Design',
   locale: 'en_US',
   images: {
     lazyload: true,

@@ -1,16 +1,18 @@
 module.exports = {
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=40',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=80 2x',
     ],
   },
   primaryNavItems: [
-    { href: '/bioscience', label: 'Bioscience' },
-    { href: '/biomedicine', label: 'Biomedicine' },
-    { href: '/bioimaging', label: 'Bioimaging' },
-    { href: '/biophotonics-techniques', label: 'Biophotonics Techniques' },
-    { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
+    { href: '/factory', label: 'Factory' },
+    { href: '/non-factory', label: 'Non-Factory' },
+    { href: '/cameras', label: 'Cameras' },
+    { href: '/boards-software', label: 'Boards & Software' },
+    { href: '/embedded', label: 'Embedded' },
+    { href: '/unmanned', label: 'Unmanned' },
+    { href: '/nextgen', label: 'NextGen' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
@@ -19,14 +21,17 @@ module.exports = {
     { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [
-    { alias: 'bioscience', name: 'Bioscience' },
-    { alias: 'biomedicine', name: 'Biomedicine' },
-    { alias: 'bioimaging', name: 'Bioimaging' },
+    { alias: 'factory', name: 'Factory' },
+    { alias: 'non-factory', name: 'Non-Factory' },
+    { alias: 'cameras', name: 'Cameras' },
+    { alias: 'boards-software', name: 'Boards & Software' },
+    { alias: 'embedded', name: 'Embedded' },
+    { alias: 'unmanned', name: 'Unmanned' },
   ],
   ads: {
     units: {
       BS: {
-        path: '/21687441225/BOW/BOW_BS',
+        path: '/21687441225/VSD/VSD_BS',
         size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
         sizeMapping: [
           { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
@@ -35,11 +40,11 @@ module.exports = {
         ],
       },
       MR: {
-        path: '/21687441225/BOW/BOW_MR',
+        path: '/21687441225/VSD/VSD_MR',
         size: [300, 250],
       },
       HP: {
-        path: '/21687441225/BOW/BOW_HP',
+        path: '/21687441225/VSD/VSD_HP',
         size: [300, 600],
       },
     },
