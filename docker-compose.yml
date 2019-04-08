@@ -163,3 +163,17 @@ services:
     ports:
       - "12158:80"
       - "35158:35158"
+
+  intelligent-aerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/intelligent-aerospace
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12159
+      LIVERELOAD_PORT: 35159
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ias}
+    ports:
+      - "12159:80"
+      - "35159:35159"

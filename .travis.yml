@@ -46,3 +46,7 @@ jobs:
     - stage: deploy
       name: Deploy DentistryIQ
       script: scripts/deploy.js dentistryiq
+
+    - stage: deploy
+      name: Deploy Intelligent Aerospace
+      script: scripts/deploy.js intelligent-aerospace
