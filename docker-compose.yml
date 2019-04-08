@@ -149,3 +149,17 @@ services:
     ports:
       - "12157:80"
       - "35157:35157"
+
+  dentistryiq:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentistryiq
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12158
+      LIVERELOAD_PORT: 35158
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/diq}
+    ports:
+      - "12158:80"
+      - "35158:35158"

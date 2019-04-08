@@ -42,3 +42,7 @@ jobs:
     - stage: deploy
       name: Deploy Cabling Installation & Maintenance
       script: scripts/deploy.js cablinginstall
+
+    - stage: deploy
+      name: Deploy DentistryIQ
+      script: scripts/deploy.js dentistryiq
