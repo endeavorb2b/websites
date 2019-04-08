@@ -80,6 +80,10 @@ jobs:
       script: scripts/deploy.js ogj
 
     - stage: deploy
+      name: Plastics Machinery Magazine
+      script: scripts/deploy.js plasticsmachinerymagazine
+
+    - stage: deploy
       name: Registered Dental Hygienist
       script: scripts/deploy.js rdhmag
 
