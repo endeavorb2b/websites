@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Bio Optics World',
+  siteName: 'Registered Dental Hygienist',
   locale: 'en_US',
   images: {
     lazyload: true,

@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/rdh/logo.png?h=40',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/rdh/logo.png?h=80 2x',
     ],
   },
   primaryNavItems: [
@@ -26,7 +26,7 @@ module.exports = {
   ads: {
     units: {
       BS: {
-        path: '/21687441225/BOW/BOW_BS',
+        path: '/21687441225/RDH/RDH_BS',
         size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
         sizeMapping: [
           { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
@@ -35,11 +35,11 @@ module.exports = {
         ],
       },
       MR: {
-        path: '/21687441225/BOW/BOW_MR',
+        path: '/21687441225/RDH/RDH_MR',
         size: [300, 250],
       },
       HP: {
-        path: '/21687441225/BOW/BOW_HP',
+        path: '/21687441225/RDH/RDH_HP',
         size: [300, 600],
       },
     },
