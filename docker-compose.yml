@@ -219,3 +219,17 @@ services:
     ports:
       - "12162:80"
       - "35162:35162"
+
+  lightwaveonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/lightwaveonline
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12163
+      LIVERELOAD_PORT: 35163
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/lw}
+    ports:
+      - "12163:80"
+      - "35163:35163"

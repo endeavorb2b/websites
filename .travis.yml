@@ -62,3 +62,7 @@ jobs:
     - stage: deploy
       name: Deploy Laser Focus World
       script: scripts/deploy.js laserfocusworld
+
+    - stage: deploy
+      name: Lightwave
+      script: scripts/deploy.js lightwaveonline
