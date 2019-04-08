@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'http://base.imgix.net/files/base/pennwell/bow/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=40',
     srcset: [
-      'http://base.imgix.net/files/base/pennwell/bow/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=80 2x',
     ],
   },
   primaryNavItems: [
