@@ -177,3 +177,17 @@ services:
     ports:
       - "12159:80"
       - "35159:35159"
+
+  industrial-lasers:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/industrial-lasers
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12160
+      LIVERELOAD_PORT: 35160
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ias}
+    ports:
+      - "12160:80"
+      - "35160:35160"

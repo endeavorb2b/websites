@@ -50,3 +50,7 @@ jobs:
     - stage: deploy
       name: Deploy Intelligent Aerospace
       script: scripts/deploy.js intelligent-aerospace
+
+    - stage: deploy
+      name: Deploy Industrial Laser Solutions
+      script: scripts/deploy.js industrial-lasers
