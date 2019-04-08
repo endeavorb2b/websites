@@ -205,3 +205,17 @@ services:
     ports:
       - "12161:80"
       - "35161:35161"
+
+  laserfocusworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/laserfocusworld
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12162
+      LIVERELOAD_PORT: 35162
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/lfw}
+    ports:
+      - "12162:80"
+      - "35162:35162"

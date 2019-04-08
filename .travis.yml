@@ -58,3 +58,7 @@ jobs:
     - stage: deploy
       name: Deploy LEDs Magazine
       script: scripts/deploy.js ledsmagazine
+
+    - stage: deploy
+      name: Deploy Laser Focus World
+      script: scripts/deploy.js laserfocusworld
