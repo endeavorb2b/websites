@@ -187,7 +187,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12160
       LIVERELOAD_PORT: 35160
-      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ias}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ils}
     ports:
       - "12160:80"
       - "35160:35160"
