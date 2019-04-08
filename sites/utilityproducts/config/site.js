@@ -15,9 +15,9 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
+    { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: '/white-papers', label: 'White Papers' },
-    { href: '/events', label: 'Events' },
+    { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [
     { alias: 'transmission-distribution', name: 'Transmission & Distribution' },
