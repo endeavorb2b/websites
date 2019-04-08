@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Broadband Technology Report',
+  siteName: 'Cabling Installation & Maintenance',
   locale: 'en_US',
   images: {
     lazyload: true,
