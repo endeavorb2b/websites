@@ -1,0 +1,27 @@
+@import "variables";
+@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+
+// Override navbar--site-a to use secondary colors
+.navbar {
+  &--site-a {
+    border-bottom: 3px solid $secondary;
+    .navbar-nav {
+      &--primary {
+        .nav-item {
+          a {
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Override section list to use secondary colors
+.content-query-section-list {
+  .card-header {
+    border-bottom: 2px solid $secondary;
+  }
+}

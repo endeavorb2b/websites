@@ -121,3 +121,17 @@ services:
     ports:
       - "12155:80"
       - "35155:35155"
+
+  broadbandtechreport:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/broadbandtechreport
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12156
+      LIVERELOAD_PORT: 35156
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/btr}
+    ports:
+      - "12156:80"
+      - "35156:35156"
