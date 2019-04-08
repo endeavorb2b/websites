@@ -90,3 +90,7 @@ jobs:
     - stage: deploy
       name: Strategies Unlimited
       script: scripts/deploy.js strategies-u
+
+    - stage: deploy
+      name: Vision Systems Design
+      script: scripts/deploy.js vision-systems

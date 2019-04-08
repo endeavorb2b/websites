@@ -317,3 +317,17 @@ services:
     ports:
       - "12169:80"
       - "35169:35169"
+
+  vision-systems:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/vision-systems
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12170
+      LIVERELOAD_PORT: 35170
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/vsd}
+    ports:
+      - "12170:80"
+      - "35170:35170"
