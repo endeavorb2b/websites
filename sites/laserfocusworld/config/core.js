@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Bio Optics World',
+  siteName: 'Laser Focus World',
   locale: 'en_US',
   images: {
     lazyload: true,
