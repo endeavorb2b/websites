@@ -34,3 +34,7 @@ jobs:
     - stage: deploy
       name: Deploy BioOptics World
       script: scripts/deploy.js bioopticsworld
+
+    - stage: deploy
+      name: Deploy Broadband Technology Report
+      script: scripts/deploy.js broadbandtechreport
