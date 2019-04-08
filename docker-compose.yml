@@ -261,3 +261,17 @@ services:
     ports:
       - "12165:80"
       - "35165:35165"
+
+  ogj:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ogj
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12166
+      LIVERELOAD_PORT: 35166
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ogj}
+    ports:
+      - "12166:80"
+      - "35166:35166"
