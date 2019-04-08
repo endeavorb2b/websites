@@ -82,3 +82,7 @@ jobs:
     - stage: deploy
       name: Registered Dental Hygienist
       script: scripts/deploy.js rdhmag
+
+    - stage: deploy
+      name: Perio-Implant Advisory
+      script: scripts/deploy.js perioimplantadvisory

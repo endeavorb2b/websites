@@ -289,3 +289,17 @@ services:
     ports:
       - "12167:80"
       - "35167:35167"
+
+  perioimplantadvisory:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/perioimplantadvisory
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12168
+      LIVERELOAD_PORT: 35168
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/pia}
+    ports:
+      - "12168:80"
+      - "35168:35168"
