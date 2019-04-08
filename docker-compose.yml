@@ -303,3 +303,17 @@ services:
     ports:
       - "12168:80"
       - "35168:35168"
+
+  strategies-u:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/strategies-u
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12169
+      LIVERELOAD_PORT: 35169
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/su}
+    ports:
+      - "12169:80"
+      - "35169:35169"

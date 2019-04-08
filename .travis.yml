@@ -86,3 +86,7 @@ jobs:
     - stage: deploy
       name: Perio-Implant Advisory
       script: scripts/deploy.js perioimplantadvisory
+
+    - stage: deploy
+      name: Strategies Unlimited
+      script: scripts/deploy.js strategies-u
