@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/evaluation-engineering",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -12,7 +12,7 @@
     "@base-cms/object-path": "^0.6.0",
     "@base-cms/web-cli": "~0.6.8",
     "@endeavorb2b/base-website-common": "^0.3.10",
-    "@endeavorb2b/base-website-themes": "^0.3.10",
+    "@endeavorb2b/base-website-themes": "^0.3.11",
     "bootstrap": "4.3.1",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1"
