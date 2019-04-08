@@ -107,3 +107,17 @@ services:
     ports:
       - "12154:80"
       - "35154:35154"
+
+  bioopticsworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/bioopticsworld
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12155
+      LIVERELOAD_PORT: 35155
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/bow}
+    ports:
+      - "12155:80"
+      - "35155:35155"

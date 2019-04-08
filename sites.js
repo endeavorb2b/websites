@@ -425,12 +425,13 @@ module.exports = {
   bioopticsworld: {
     name: 'Bio Optics World',
     domain: 'bioopticsworld.com',
-    logo: 'http://base.imgix.net/files/base/pennwell/bow/logo.png',
     project: 'PennWell Corporation',
     accountKey: 'ebm',
     groupKey: 'bow',
     tenantKey: 'ebm_bow',
     replicaSet: 'aerilon',
+
+    logo: 'http://base.imgix.net/files/base/pennwell/bow/logo.png',
     primaryNavItems: [
       { href: '/bioscience', label: 'Bioscience' },
       { href: '/biomedicine', label: 'Biomedicine' },
@@ -439,7 +440,7 @@ module.exports = {
       { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
     ],
     secondaryNavItems: [
-      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/about-us', label: 'About Us' },
@@ -649,7 +650,7 @@ module.exports = {
       { href: '/unmanned', label: 'Unmanned' },
     ],
     secondaryNavItems: [
-      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/about-us', label: 'About Us' },
@@ -731,7 +732,7 @@ module.exports = {
       { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
     ],
     secondaryNavItems: [
-      { href: '/subscribe', label: 'Subscribe'},
+      { href: '/subscribe', label: 'Subscribe' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/about-us', label: 'About Us' },
