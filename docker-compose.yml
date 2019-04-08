@@ -233,3 +233,17 @@ services:
     ports:
       - "12163:80"
       - "35163:35163"
+
+  militaryaerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/militaryaerospace
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12164
+      LIVERELOAD_PORT: 35164
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/mae}
+    ports:
+      - "12164:80"
+      - "35164:35164"

@@ -66,3 +66,7 @@ jobs:
     - stage: deploy
       name: Lightwave
       script: scripts/deploy.js lightwaveonline
+
+    - stage: deploy
+      name: Military & Aerospace Electronics
+      script: scripts/deploy.js militaryaerospace
