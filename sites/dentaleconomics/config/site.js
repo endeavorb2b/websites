@@ -21,9 +21,9 @@ module.exports = {
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
   homeSections: [
-    { id: 30016, label: 'Macro/Op-Ed' },
-    { id: 30017, label: 'Practice' },
-    { id: 30018, label: 'Science & Tech' },
+    { alias: 'macro-op-ed', label: 'Macro/Op-Ed' },
+    { alias: 'practice', label: 'Practice' },
+    { alias: 'science-tech', label: 'Science & Tech' },
   ],
   ads: {
     units: {

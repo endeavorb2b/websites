@@ -24,12 +24,12 @@ module.exports = {
     { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [
-    { id: 30222, name: 'In the Network' },
-    { id: 30229, name: 'In the Home' },
-    { id: 30233, name: 'Mobile' },
-    { id: 30243, name: 'Internet' },
-    { id: 30244, name: 'Voice' },
-    { id: 30245, name: 'Business Services' },
+    { alias: 'in-the-network', name: 'In the Network' },
+    { alias: 'in-the-home', name: 'In the Home' },
+    { alias: 'mobile', name: 'Mobile' },
+    { alias: 'internet', name: 'Internet' },
+    { alias: 'voice', name: 'Voice' },
+    { alias: 'business-services', name: 'Business Services' },
   ],
   ad: {
     units: {
