@@ -30,3 +30,7 @@ jobs:
     - stage: deploy
       name: Deploy Dental Economics
       script: scripts/deploy.js dentaleconomics
+
+    - stage: deploy
+      name: Deploy BioOptics World
+      script: scripts/deploy.js bioopticsworld

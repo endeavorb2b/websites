@@ -1,0 +1,37 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const section = getAsObject(data, 'section');
+$ const { site } = out.global;
+$ const sections = site.getAsArray('homeSections');
+
+<document>
+  <@head>
+    <cms-page-metadata for="website-section" ...section />
+    <cms-ad-gam-head />
+  </@head>
+  <cms-page-container for="home" class="container-fluid-max">
+    <endeavor-gam-ad-unit alias="BS" modifiers=["top-of-page"] />
+    <endeavor-content-query-hero
+      section-id=section.id
+      limit=7
+      requires-image=true
+    />
+
+    <if(sections.length)>
+      <div class="row">
+        <for|sectionItem| of=sections>
+          <div class="col-lg-4 mb-5">
+            <endeavor-content-query-section-list section-id=sectionItem.id header=sectionItem.name />
+          </div>
+        </for>
+      </div>
+    </if>
+
+    <endeavor-gam-ad-unit alias="BS" modifiers=["home-page-inline"] />
+    <endeavor-content-query-load-more
+      skip=7
+      section-id=section.id
+    />
+
+  </cms-page-container>
+</document>
