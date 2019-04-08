@@ -16,25 +16,85 @@ jobs:
       script: scripts/deploy-notify.sh
 
     - stage: deploy
-      name: Deploy Officer
+      name: Officer
       script: scripts/deploy.js officer
 
     - stage: deploy
-      name: Deploy Evaluation Engineering
+      name: Evaluation Engineering
       script: scripts/deploy.js evaluationengineering
 
     - stage: deploy
-      name: Deploy Utility Products
+      name: Utility Products
       script: scripts/deploy.js utilityproducts
 
     - stage: deploy
-      name: Deploy Dental Economics
+      name: Dental Economics
       script: scripts/deploy.js dentaleconomics
 
     - stage: deploy
-      name: Deploy BioOptics World
+      name: BioOptics World
       script: scripts/deploy.js bioopticsworld
 
     - stage: deploy
-      name: Deploy Broadband Technology Report
+      name: Broadband Technology Report
       script: scripts/deploy.js broadbandtechreport
+
+    - stage: deploy
+      name: Cabling Installation & Maintenance
+      script: scripts/deploy.js cablinginstall
+
+    - stage: deploy
+      name: DentistryIQ
+      script: scripts/deploy.js dentistryiq
+
+    - stage: deploy
+      name: Intelligent Aerospace
+      script: scripts/deploy.js intelligent-aerospace
+
+    - stage: deploy
+      name: Industrial Laser Solutions
+      script: scripts/deploy.js industrial-lasers
+
+    - stage: deploy
+      name: LEDs Magazine
+      script: scripts/deploy.js ledsmagazine
+
+    - stage: deploy
+      name: Laser Focus World
+      script: scripts/deploy.js laserfocusworld
+
+    - stage: deploy
+      name: Lightwave
+      script: scripts/deploy.js lightwaveonline
+
+    - stage: deploy
+      name: Military & Aerospace Electronics
+      script: scripts/deploy.js militaryaerospace
+
+    - stage: deploy
+      name: Offshore Magazine
+      script: scripts/deploy.js offshore-mag
+
+    - stage: deploy
+      name: Offshore Oil & Gas Journal
+      script: scripts/deploy.js ogj
+
+    - stage: deploy
+      name: Registered Dental Hygienist
+      script: scripts/deploy.js rdhmag
+
+    - stage: deploy
+      name: Perio-Implant Advisory
+      script: scripts/deploy.js perioimplantadvisory
+
+    - stage: deploy
+      name: Strategies Unlimited
+      script: scripts/deploy.js strategies-u
+
+    - stage: deploy
+      name: Vision Systems Design
+      script: scripts/deploy.js vision-systems
+
+    - stage: deploy
+      name: WaterWorld
+      script: scripts/deploy.js waterworld

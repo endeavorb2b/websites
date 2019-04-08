@@ -135,3 +135,213 @@ services:
     ports:
       - "12156:80"
       - "35156:35156"
+
+  cablinginstall:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/cablinginstall
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12157
+      LIVERELOAD_PORT: 35157
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/cim}
+    ports:
+      - "12157:80"
+      - "35157:35157"
+
+  dentistryiq:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/dentistryiq
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12158
+      LIVERELOAD_PORT: 35158
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/diq}
+    ports:
+      - "12158:80"
+      - "35158:35158"
+
+  intelligent-aerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/intelligent-aerospace
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12159
+      LIVERELOAD_PORT: 35159
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ias}
+    ports:
+      - "12159:80"
+      - "35159:35159"
+
+  industrial-lasers:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/industrial-lasers
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12160
+      LIVERELOAD_PORT: 35160
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ils}
+    ports:
+      - "12160:80"
+      - "35160:35160"
+
+  ledsmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ledsmagazine
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12161
+      LIVERELOAD_PORT: 35161
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/leds}
+    ports:
+      - "12161:80"
+      - "35161:35161"
+
+  laserfocusworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/laserfocusworld
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12162
+      LIVERELOAD_PORT: 35162
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/lfw}
+    ports:
+      - "12162:80"
+      - "35162:35162"
+
+  lightwaveonline:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/lightwaveonline
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12163
+      LIVERELOAD_PORT: 35163
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/lw}
+    ports:
+      - "12163:80"
+      - "35163:35163"
+
+  militaryaerospace:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/militaryaerospace
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12164
+      LIVERELOAD_PORT: 35164
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/mae}
+    ports:
+      - "12164:80"
+      - "35164:35164"
+
+  offshore-mag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/offshore-mag
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12165
+      LIVERELOAD_PORT: 35165
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/os}
+    ports:
+      - "12165:80"
+      - "35165:35165"
+
+  ogj:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ogj
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12166
+      LIVERELOAD_PORT: 35166
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ogj}
+    ports:
+      - "12166:80"
+      - "35166:35166"
+
+  rdhmag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/rdhmag
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12167
+      LIVERELOAD_PORT: 35167
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/rdh}
+    ports:
+      - "12167:80"
+      - "35167:35167"
+
+  perioimplantadvisory:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/perioimplantadvisory
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12168
+      LIVERELOAD_PORT: 35168
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/pia}
+    ports:
+      - "12168:80"
+      - "35168:35168"
+
+  strategies-u:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/strategies-u
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12169
+      LIVERELOAD_PORT: 35169
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/su}
+    ports:
+      - "12169:80"
+      - "35169:35169"
+
+  vision-systems:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/vision-systems
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12170
+      LIVERELOAD_PORT: 35170
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/vsd}
+    ports:
+      - "12170:80"
+      - "35170:35170"
+
+  waterworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/waterworld
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12171
+      LIVERELOAD_PORT: 35171
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ww}
+    ports:
+      - "12171:80"
+      - "35171:35171"

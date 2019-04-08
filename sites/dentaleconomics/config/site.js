@@ -14,10 +14,10 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
-    { href: '/white-papers', label: 'White Papers' },
+    { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: '/job-listings', label: 'Job Listings' },
+    { href: '/page/about-us', label: 'About Us' },
+    { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
   homeSections: [

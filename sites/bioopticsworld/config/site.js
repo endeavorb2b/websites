@@ -16,7 +16,7 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: '/about-us', label: 'About Us' },
+    { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [
     { alias: 'bioscience', name: 'Bioscience' },
