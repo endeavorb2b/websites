@@ -54,3 +54,7 @@ jobs:
     - stage: deploy
       name: Deploy Industrial Laser Solutions
       script: scripts/deploy.js industrial-lasers
+
+    - stage: deploy
+      name: Deploy LEDs Magazine
+      script: scripts/deploy.js ledsmagazine

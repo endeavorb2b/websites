@@ -191,3 +191,17 @@ services:
     ports:
       - "12160:80"
       - "35160:35160"
+
+  ledsmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/ledsmagazine
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12161
+      LIVERELOAD_PORT: 35161
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/leds}
+    ports:
+      - "12161:80"
+      - "35161:35161"
