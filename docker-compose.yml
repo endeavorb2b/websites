@@ -331,3 +331,17 @@ services:
     ports:
       - "12170:80"
       - "35170:35170"
+
+  waterworld:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/waterworld
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12171
+      LIVERELOAD_PORT: 35171
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/ww}
+    ports:
+      - "12171:80"
+      - "35171:35171"
