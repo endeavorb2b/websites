@@ -20,12 +20,12 @@ module.exports = {
     { href: '/events', label: 'Events' },
   ],
   homeSections: [
-    { id: 30003, name: 'Transmission & Distribution' },
-    { id: 30004, name: 'Vehicles & Accessories' },
-    { id: 30005, name: 'Tools & Supplies' },
-    { id: 30006, name: 'Safety' },
-    { id: 30007, name: 'Line Construction & Maintenance' },
-    { id: 30008, name: 'Test & Mesurement' },
+    { alias: 'transmission-distribution', name: 'Transmission & Distribution' },
+    { alias: 'vehicles-accessories', name: 'Vehicles & Accessories' },
+    { alias: 'tools-supplies', name: 'Tools & Supplies' },
+    { alias: 'safety', name: 'Safety' },
+    { alias: 'line-construction-maintenance', name: 'Line Construction & Maintenance' },
+    { alias: 'test-measurement', name: 'Test & Mesurement' },
   ],
   ad: {
     units: {

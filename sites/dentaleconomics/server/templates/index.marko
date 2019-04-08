@@ -21,7 +21,7 @@ $ const sections = site.getAsArray('homeSections');
       <div class="row">
         <for|sectionItem| of=sections>
           <div class="col-lg-4 mb-5">
-            <endeavor-content-query-section-list section-id=sectionItem.id header=sectionItem.name />
+            <endeavor-content-query-section-list section-alias=sectionItem.alias header=sectionItem.name />
           </div>
         </for>
       </div>

@@ -22,12 +22,12 @@ module.exports = {
     { href: '/contact-us', label: 'Contact Us' },
   ],
   homeSections: [
-    { id: 56179, name: 'Tactical' },
-    { id: 56208, name: 'Training & Careers' },
-    { id: 56221, name: 'On The Street' },
-    { id: 56341, name: 'Investigations' },
-    { id: 56374, name: 'Command/HQ' },
-    { id: 56401, name: 'Honoring the Fallen' },
+    { href: 'tactical', name: 'Tactical' },
+    { href: 'training-careers', name: 'Training & Careers' },
+    { href: 'on-the-street', name: 'On The Street' },
+    { href: 'investigations', name: 'Investigations' },
+    { href: 'command-hq', name: 'Command/HQ' },
+    { href: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
   ad: {
     units: {

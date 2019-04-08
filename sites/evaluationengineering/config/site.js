@@ -18,12 +18,12 @@ module.exports = {
     { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [
-    { id: 60895, name: 'Applications' },
-    { id: 59814, name: 'Instrumentation' },
-    { id: 60924, name: 'Testing' },
-    { id: 60913, name: 'Industries' },
-    { id: 60955, name: 'Whitepapers' },
-    { id: 59826, name: 'Special Reports' },
+    { alias: 'applications', name: 'Applications' },
+    { alias: 'instrumentation', name: 'Instrumentation' },
+    { alias: 'testing', name: 'Testing' },
+    { alias: 'industries', name: 'Industries' },
+    { alias: 'whitepapers', name: 'Whitepapers' },
+    { alias: 'special-reports', name: 'Special Reports' },
   ],
   ad: {
     units: {

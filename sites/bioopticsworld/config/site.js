@@ -19,9 +19,9 @@ module.exports = {
     { href: '/about-us', label: 'About Us' },
   ],
   homeSections: [
-    { id: 30198, name: 'Bioscience' },
-    { id: 30201, name: 'Biomedicine' },
-    { id: 30203, name: 'Bioimaging' },
+    { alias: 'bioscience', name: 'Bioscience' },
+    { alias: 'biomedicine', name: 'Biomedicine' },
+    { alias: 'bioimaging', name: 'Bioimaging' },
   ],
   ads: {
     units: {
