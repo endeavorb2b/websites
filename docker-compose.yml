@@ -247,3 +247,17 @@ services:
     ports:
       - "12164:80"
       - "35164:35164"
+
+  offshore-mag:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/offshore-mag
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12165
+      LIVERELOAD_PORT: 35165
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/os}
+    ports:
+      - "12165:80"
+      - "35165:35165"

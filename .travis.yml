@@ -70,3 +70,7 @@ jobs:
     - stage: deploy
       name: Military & Aerospace Electronics
       script: scripts/deploy.js militaryaerospace
+
+    - stage: deploy
+      name: Offshore Magazine
+      script: scripts/deploy.js offshore-mag
