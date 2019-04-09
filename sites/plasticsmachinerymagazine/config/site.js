@@ -12,7 +12,7 @@ module.exports = {
     { href: '/compounding', label: 'Compounding' },
     { href: '/injection-molding', label: 'Injection Molding' },
     { href: '/extrusion', label: 'Extrusion' },
-    { href: '/recyling', label: 'Recycling' },
+    { href: '/recycling', label: 'Recycling' },
     { href: '/molds-tooling', label: 'Molds & Tooling' },
     { href: '/rotomolding', label: 'Rotomolding' },
   ],
