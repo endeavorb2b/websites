@@ -5,6 +5,8 @@ const loadMore = require('./load-more');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
+  app.set('trust proxy', 'loopback, linklocal, uniquelocal');
+
   // Homepage
   home(app);
 
