@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/broadbandtechreport",
-  "version": "0.3.18",
+  "version": "0.3.19",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -11,8 +11,8 @@
     "@base-cms/marko-web": "~0.6.10",
     "@base-cms/object-path": "^0.6.0",
     "@base-cms/web-cli": "~0.6.10",
-    "@endeavorb2b/base-website-common": "^0.3.13",
-    "@endeavorb2b/base-website-themes": "^0.3.14",
+    "@endeavorb2b/base-website-common": "^0.3.19",
+    "@endeavorb2b/base-website-themes": "^0.3.19",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1"
   }
