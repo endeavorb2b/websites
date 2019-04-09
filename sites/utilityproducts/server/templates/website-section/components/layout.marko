@@ -1,10 +1,12 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const section = getAsObject(input, 'section');
+$ const { ip } = out.global.req;
 
 <document>
   <@head>
     <cms-page-metadata for="website-section" ...section />
+    <script>window.client_ip = '${ip}'</script>
     <${input.head} />
   </@head>
   <cms-page-container for="website-section" class="container-fluid-max" data=section>
