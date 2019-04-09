@@ -345,3 +345,17 @@ services:
     ports:
       - "12171:80"
       - "35171:35171"
+
+  plasticsmachinerymagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/plasticsmachinerymagazine
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12172
+      LIVERELOAD_PORT: 35172
+      GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.base-cms.io/ebm/pmm}
+    ports:
+      - "12172:80"
+      - "35172:35172"

@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+    src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
     srcset: [
-      'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+      'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
     ],
   },
   primaryNavItems: [
@@ -25,6 +25,7 @@ module.exports = {
     { alias: 'whitepapers', name: 'Whitepapers' },
     { alias: 'special-reports', name: 'Special Reports' },
   ],
+  gtmContainer: 'GTM-NLCH94B',
   ad: {
     units: {
       BS: { path: '/21687441225/EE/ee970x250', size: [[970, 250], [970, 90]] },

@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'https://cdn.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
+    src: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
     srcset: [
-      'https://cdn.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png 2x',
+      'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png 2x',
     ],
   },
   primaryNavItems: [
@@ -29,6 +29,7 @@ module.exports = {
     { href: 'command-hq', name: 'Command/HQ' },
     { href: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
+  gtmContainer: 'GTM-TZNC8W8',
   ad: {
     units: {
       BS: { path: '/21687441225/Officer/Officer_BS', size: [[970, 250], [970, 90]] },
