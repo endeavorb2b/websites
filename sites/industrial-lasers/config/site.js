@@ -29,6 +29,7 @@ module.exports = {
     { alias: 'surface-treatment', name: 'Surface Treatment' },
     { alias: 'additive-manufacturing', name: 'Additive Manufacturing' },
   ],
+  gtmContainer: 'GTM-P8Q22J8',
   ads: {
     units: {
       BS: {

@@ -29,6 +29,7 @@ module.exports = {
     { alias: 'test', name: 'Test' },
     { alias: 'optical-tech', name: 'Optical Tech' },
   ],
+  gtmContainer: 'GTM-M3B7WXJ',
   ads: {
     units: {
       BS: {

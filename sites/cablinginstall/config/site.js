@@ -29,6 +29,7 @@ module.exports = {
     { alias: 'ip-security-av', name: 'IP Security & AV' },
     { alias: 'wireless-5g', name: 'Wireless/5G' },
   ],
+  gtmContainer: 'GTM-T4G6938',
   ad: {
     units: {
       BS: {

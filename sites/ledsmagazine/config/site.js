@@ -27,6 +27,7 @@ module.exports = {
     { alias: 'specialty-ssl', name: 'Specialty SSL' },
     { alias: 'horticultural-lighting', name: 'Horticultural Lighting' },
   ],
+  gtmContainer: 'GTM-T29NVLB',
   ads: {
     units: {
       BS: {

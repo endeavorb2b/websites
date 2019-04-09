@@ -31,6 +31,7 @@ module.exports = {
     { alias: 'geosciences', name: 'Geosciences' },
     { alias: 'pipelines', name: 'Pipelines' },
   ],
+  gtmContainer: 'GTM-PQK8MQK',
   ads: {
     units: {
       BS: {

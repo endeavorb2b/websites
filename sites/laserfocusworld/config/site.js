@@ -27,6 +27,7 @@ module.exports = {
     { alias: 'software-accessories', name: 'Software & Accessories' },
     { alias: 'test-measurement', name: 'Test & Measurement' },
   ],
+  gtmContainer: 'GTM-M7H8VJG',
   ads: {
     units: {
       BS: {

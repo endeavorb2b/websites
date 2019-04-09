@@ -28,6 +28,7 @@ module.exports = {
     { alias: 'embedded', name: 'Embedded' },
     { alias: 'unmanned', name: 'Unmanned' },
   ],
+  gtmContainer: 'GTM-PZFPXQK',
   ads: {
     units: {
       BS: {

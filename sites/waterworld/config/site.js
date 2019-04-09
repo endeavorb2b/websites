@@ -21,6 +21,7 @@ module.exports = {
     { alias: 'industrial', name: 'Industrial' },
     { alias: 'international', name: 'International' },
   ],
+  gtmContainer: 'GTM-MXBGH3V',
   ads: {
     units: {
       BS: {
