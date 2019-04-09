@@ -29,7 +29,7 @@ module.exports = {
     { alias: 'compounding', name: 'Compounding' },
     { alias: 'injection-molding', name: 'Injection Molding' },
     { alias: 'extrusion', name: 'Extrusion' },
-    { alias: 'recyling', name: 'Recycling' },
+    { alias: 'recycling', name: 'Recycling' },
     { alias: 'molds-tooling', name: 'Molds & Tooling' },
     { alias: 'rotomolding', name: 'Rotomolding' },
   ],
