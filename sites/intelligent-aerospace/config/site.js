@@ -28,6 +28,7 @@ module.exports = {
     { alias: 'helicopter', name: 'Helicopter' },
     { alias: 'satcom', name: 'SATCOM' },
   ],
+  gtmContainer: 'GTM-T5KLFDK',
   ads: {
     units: {
       BS: {

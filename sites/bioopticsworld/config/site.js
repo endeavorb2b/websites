@@ -23,6 +23,7 @@ module.exports = {
     { alias: 'biomedicine', name: 'Biomedicine' },
     { alias: 'bioimaging', name: 'Bioimaging' },
   ],
+  gtmContainer: 'GTM-M24RV9Q',
   ads: {
     units: {
       BS: {

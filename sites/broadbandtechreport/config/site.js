@@ -31,6 +31,7 @@ module.exports = {
     { alias: 'voice', name: 'Voice' },
     { alias: 'business-services', name: 'Business Services' },
   ],
+  gtmContainer: 'GTM-T3RWG44',
   ad: {
     units: {
       BS: {

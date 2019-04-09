@@ -13,6 +13,7 @@ module.exports = {
     { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [],
+  gtmContainer: 'GTM-56MD64K',
   ads: {
     units: {
       BS: {

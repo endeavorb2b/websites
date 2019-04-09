@@ -23,6 +23,7 @@ module.exports = {
     { alias: 'exploration-development', name: 'Exploration & Development' },
     { alias: 'drilling-production', name: 'Drilling & Production' },
   ],
+  gtmContainer: 'GTM-N253PL7',
   ads: {
     units: {
       BS: {

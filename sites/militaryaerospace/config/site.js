@@ -29,6 +29,7 @@ module.exports = {
     { alias: 'rf-analog', name: 'RF/Analog' },
     { alias: 'power', name: 'Power' },
   ],
+  gtmContainer: 'GTM-M94ZBBC',
   ads: {
     units: {
       BS: {

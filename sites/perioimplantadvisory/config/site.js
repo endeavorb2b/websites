@@ -29,6 +29,7 @@ module.exports = {
     { alias: 'oral-systemic', name: 'Oral-Systemic' },
     { alias: 'restorative', name: 'Restorative' },
   ],
+  gtmContainer: 'GTM-WVXHH29',
   ads: {
     units: {
       BS: {

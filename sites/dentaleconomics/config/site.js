@@ -25,6 +25,7 @@ module.exports = {
     { alias: 'practice', label: 'Practice' },
     { alias: 'science-tech', label: 'Science & Tech' },
   ],
+  gtmContainer: 'GTM-5QGXLHV',
   ads: {
     units: {
       BS: {
