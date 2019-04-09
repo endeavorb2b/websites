@@ -33,6 +33,7 @@ module.exports = {
     { alias: 'molds-tooling', name: 'Molds & Tooling' },
     { alias: 'rotomolding', name: 'Rotomolding' },
   ],
+  googleTagManagerID: 'GTM-KBM372Z',
   ads: {
     units: {
       BS: {
