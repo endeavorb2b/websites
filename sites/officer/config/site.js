@@ -29,6 +29,7 @@ module.exports = {
     { href: 'command-hq', name: 'Command/HQ' },
     { href: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
+  gtmContainer: 'GTM-TZNC8W8',
   ad: {
     units: {
       BS: { path: '/21687441225/Officer/Officer_BS', size: [[970, 250], [970, 90]] },
