@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "@base-cms/object-path": "^0.6.0",
-    "@base-cms/utils": "^0.6.0"
+    "@base-cms/utils": "^0.6.0",
+    "helmet": "^3.16.0"
   },
   "peerDependencies": {
     "@base-cms/marko-web": "~0.6.10"
