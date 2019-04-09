@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+    src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
     srcset: [
-      'https://cdn.evaluationengineering.com/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+      'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
     ],
   },
   primaryNavItems: [

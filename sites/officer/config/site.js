@@ -1,8 +1,8 @@
 module.exports = {
   logo: {
-    src: 'https://cdn.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
+    src: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
     srcset: [
-      'https://cdn.officer.com/files/base/cygnus/ofcr/image/static/logo/site_logo.png 2x',
+      'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png 2x',
     ],
   },
   primaryNavItems: [
