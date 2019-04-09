@@ -17,5 +17,8 @@
   "devDependencies": {
     "@base-cms/web-cli": "~0.6.10",
     "lerna": "^3.13.1"
+  },
+  "dependencies": {
+    "helmet": "^3.16.0"
   }
 }
