@@ -651,10 +651,10 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.6.10", "@base-cms/marko-web@~0.6.10":
-  version "0.6.10"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.6.10.tgz#6b8e221d2a2ea3e94792a08614212803c3edccae"
-  integrity sha512-wtKMSejSVpuYSPERfPTiU8/5/LG/UQRrxYToB7nrIRj7dG05bdTFvf7wFK6G4ozuqlZlWLZMVbC9GHpzyZ4+0g==
+"@base-cms/marko-web@^0.6.11", "@base-cms/marko-web@~0.6.11":
+  version "0.6.11"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.6.11.tgz#d04b5fd3cc58afd7fbd8494fc8fc4aa272ed6dbb"
+  integrity sha512-S+5FugXPoU98B80MEYyWDVBk/roeRN8LzdZ8FDwnROf21RdRUeaG+jz1XI18tGOlcJD5O6Nrv5QJgEvFfwrpWQ==
   dependencies:
     "@base-cms/express-apollo" "^0.6.0"
     "@base-cms/image" "^0.6.0"
@@ -663,6 +663,7 @@
     "@base-cms/web-common" "^0.6.10"
     "@godaddy/terminus" "^4.1.0"
     express "^4.16.4"
+    express-http-proxy "^1.5.1"
     http-errors "^1.7.2"
     jquery "^3.3.1"
     marko "^4.15.2"
@@ -682,10 +683,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.6.0.tgz#4797b962576902223ffb1dc5fee7b24801cf9088"
   integrity sha512-bqBMnvhADjZ6pTNRuzX1pnISuHbdB0oG85It1a3MrG2SQ4DL/AWzdBpkbBgffr8Aspshk/a589BPNKnM2xTdhw==
 
-"@base-cms/web-cli@~0.6.10":
-  version "0.6.10"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.6.10.tgz#52f0986e3d80698d235a32b49e42f94e03d9cff9"
-  integrity sha512-lF3PtoIH4x/+1BpzE4kg/6H3fEBGDUBMjICfTSRTEPTSa+NhA96aPVKWxKzhlc8zj+vKimisEEhU0SbFscxc9A==
+"@base-cms/web-cli@~0.6.11":
+  version "0.6.11"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.6.11.tgz#89d93fdd379d931a8c431642ab119b7fe171fe9f"
+  integrity sha512-DUNCKe3Jn7gYQy4rpslR4IymVJaOfwqVdcp2HGhj9fTRTu1fhj064/rLfla5HpxyWQgyZoVrnf8gAjPg/+0zHA==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -693,7 +694,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.6.0"
-    "@base-cms/marko-web" "^0.6.10"
+    "@base-cms/marko-web" "^0.6.11"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -3457,7 +3458,7 @@ debug@3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@3.X, debug@^3.1.0:
+debug@3.X, debug@^3.0.1, debug@^3.1.0:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
@@ -3932,7 +3933,7 @@ es6-iterator@^2.0.1, es6-iterator@~2.0.3:
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
 
-es6-promise@^4.0.3:
+es6-promise@^4.0.3, es6-promise@^4.1.1:
   version "4.2.6"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.6.tgz#b685edd8258886365ea62b57d30de28fadcd974f"
   integrity sha512-aRVgGdnmW2OiySVPUC9e6m+plolMAJKjZnQlCwNSuK5yQ0JN61DZSO1X1Ufd1foqWRAlig0rhduTCHe7sVtK5Q==
@@ -4246,6 +4247,15 @@ expect-ct@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/expect-ct/-/expect-ct-0.1.1.tgz#de84476a2dbcb85000d5903737e9bc8a5ba7b897"
   integrity sha512-ngXzTfoRGG7fYens3/RMb6yYoVLvLMfmsSllP/mZPxNHgFq41TmPSLF/nLY7fwoclI2vElvAmILFWGUYqdjfCg==
+
+express-http-proxy@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/express-http-proxy/-/express-http-proxy-1.5.1.tgz#cbf45695c759693c9c5f946117462d25b57e77a8"
+  integrity sha512-k1RdysZWZ8wdPnsLa4iyrrYyUFih/sYKkn6WfkU/q5A8eUdh3l+oXhrRuQmEYEsZmiexVvpiOCkogl03jYfcbg==
+  dependencies:
+    debug "^3.0.1"
+    es6-promise "^4.1.1"
+    raw-body "^2.3.0"
 
 express@^4.16.4:
   version "4.16.4"
@@ -8580,7 +8590,7 @@ raptor-util@^3.2.0:
   resolved "https://registry.yarnpkg.com/raptor-util/-/raptor-util-3.2.0.tgz#23b0c803c8f1ac8a1cae67d9a6388b49161c9758"
   integrity sha1-I7DIA8jxrIocrmfZpjiLSRYcl1g=
 
-raw-body@2.3.3:
+raw-body@2.3.3, raw-body@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
   integrity sha512-9esiElv1BrZoI3rCDuOuKCBRbuApGGaDPQfjSflGxdy4oyzqghxu6klEkkVIvBje+FF0BX9coEv8KqW6X/7njw==

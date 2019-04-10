@@ -15,7 +15,7 @@
     "test": "node_modules/.bin/lerna run test"
   },
   "devDependencies": {
-    "@base-cms/web-cli": "~0.6.10",
+    "@base-cms/web-cli": "~0.6.11",
     "lerna": "^3.13.1"
   }
 }
