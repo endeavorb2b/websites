@@ -13,7 +13,7 @@
     "@base-cms/web-cli": "~0.7.0",
     "@endeavorb2b/base-website-common": "^0.3.19",
     "@endeavorb2b/base-website-themes": "^0.3.19",
-    "graphql": "^14.1.1",
+    "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1"
   }
 }
