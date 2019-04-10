@@ -25,7 +25,7 @@ module.exports = {
     { alias: 'tools-supplies', name: 'Tools & Supplies' },
     { alias: 'safety', name: 'Safety' },
     { alias: 'line-construction-maintenance', name: 'Line Construction & Maintenance' },
-    { alias: 'test-measurement', name: 'Test & Mesurement' },
+    { alias: 'test-measurement', name: 'Test & Measurement' },
   ],
   gtmContainer: 'GTM-PSGKX8S',
   ad: {
