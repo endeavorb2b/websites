@@ -6,9 +6,9 @@ $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-top': getAdUnit(site, { name: 'LB1', section }),
-  'gpt-ad-right1': getAdUnit(site, { name: 'CONTENT1', section }),
-  'gpt-ad-right2': getAdUnit(site, { name: 'CONTENT2', section }),
+  'gpt-ad-top': getAdUnit(site, { name: 'BS', section }),
+  'gpt-ad-right1': getAdUnit(site, { name: 'MR', section }),
+  'gpt-ad-right2': getAdUnit(site, { name: 'MR', section }),
 };
 
 <layout content=content>
@@ -49,6 +49,13 @@ $ const adSlots = {
       exclude-content-ids=[content.id]
       section-id=section.id
       section=section
-    />
+    >
+      <@ad-unit-card>
+        <endeavor-gam-ad-unit-website-section name="MR" section=section modifiers=["in-card"] />
+      </@ad-unit-card>
+      <@ad-unit-list>
+        <endeavor-gam-ad-unit-website-section name="HP" section=section modifiers=["in-card"] />
+      </@ad-unit-list>
+    </endeavor-content-query-load-more>
   </if>
 </layout>

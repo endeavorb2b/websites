@@ -5,8 +5,8 @@ $ const section = getAsObject(data, 'section');
 $ const { site } = out.global;
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'LB1', section }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'LB1', section }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'BS', section }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'BS', section }),
 };
 
 <document>
@@ -37,7 +37,14 @@ $ const adSlots = {
       skip=7
       section-id=section.id
       section=section
-    />
+    >
+      <@ad-unit-card>
+        <endeavor-gam-ad-unit-website-section name="MR" section=section modifiers=["in-card"] />
+      </@ad-unit-card>
+      <@ad-unit-list>
+        <endeavor-gam-ad-unit-website-section name="HP" section=section modifiers=["in-card"] />
+      </@ad-unit-list>
+    </endeavor-content-query-load-more>
 
   </cms-page-container>
 </document>
