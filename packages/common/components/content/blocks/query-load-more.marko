@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
-import { asArray } from '@base-cms/utils';
+import { getAsObject } from '@base-cms/object-path';
+import { asArray, asObject } from '@base-cms/utils';
 
 $ const queryFragment = gql`
   fragment ContentBlockQueryLoadMoreFragment on Content {
@@ -35,6 +36,21 @@ $ const params = {
   limit: 15,
   queryFragment,
 };
+$ const section = asObject(input.section);
+$ const adCardInput = {
+  section,
+  name: 'CONTENT1',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.card'),
+};
+$ const adListInput = {
+  section,
+  name: 'CONTENT1',
+  size: [300, 600],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.list'),
+};
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
   $ const cardNodes = asArray(nodes.slice(0, 11));
@@ -56,7 +72,7 @@ $ const params = {
             </div>
             <if(index === 3)>
               <div class=`${block}__col`>
-                <endeavor-gam-ad-unit alias="MR" modifiers=["in-card"] />
+                <endeavor-gam-ad-unit-website-section ...adCardInput/>
               </div>
             </if>
           </for>
@@ -66,7 +82,7 @@ $ const params = {
       <if(listNodes.length)>
         <div class="row">
           <div class=`${block}__col-ad`>
-            <endeavor-gam-ad-unit alias="HP" modifiers=["in-card"]  />
+            <endeavor-gam-ad-unit-website-section ...adListInput />
           </div>
 
           <div class=`${block}__col-list`>

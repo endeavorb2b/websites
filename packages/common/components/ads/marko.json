@@ -1,19 +1,21 @@
 {
   "tags": {
-    "endeavor-gam-ad-unit": {
-      "template": "./gam-adunit.marko",
-      "@alias": {
-        "type": "string",
-        "required": true
+    "endeavor-gam-ad-unit-website-section": {
+      "template": "./gam-adunit-website-section.marko",
+      "@section": {
+        "type": "object"
+      },
+      "@name": {
+        "type": "string"
       },
       "@class": "string",
-      "@modifiers": "array"
+      "@modifiers": "array",
+      "@size": "array"
     },
     "endeavor-gam-ad-unit-display": {
       "template": "./gam-adunit-display.marko",
       "@id": {
-        "type": "string",
-        "required": true
+        "type": "string"
       },
       "@class": "string",
       "@modifiers": "array"

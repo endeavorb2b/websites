@@ -1,4 +1,7 @@
+const ads = require('./ads');
+
 module.exports = {
+  ads,
   logo: {
     src: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
     srcset: [
@@ -22,19 +25,12 @@ module.exports = {
     { href: '/contact-us', label: 'Contact Us' },
   ],
   homeSections: [
-    { href: 'tactical', name: 'Tactical' },
-    { href: 'training-careers', name: 'Training & Careers' },
-    { href: 'on-the-street', name: 'On The Street' },
-    { href: 'investigations', name: 'Investigations' },
-    { href: 'command-hq', name: 'Command/HQ' },
-    { href: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
+    { alias: 'tactical', name: 'Tactical' },
+    { alias: 'training-careers', name: 'Training & Careers' },
+    { alias: 'on-the-street', name: 'On The Street' },
+    { alias: 'investigations', name: 'Investigations' },
+    { alias: 'command-hq', name: 'Command/HQ' },
+    { alias: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
   gtmContainer: 'GTM-TZNC8W8',
-  ad: {
-    units: {
-      BS: { path: '/21687441225/Officer/Officer_BS', size: [[970, 250], [970, 90]] },
-      MR: { path: '/21687441225/Officer/Officer_MR', size: [300, 250] },
-      HP: { path: '/21687441225/Officer/Officer_HP', size: [300, 600] },
-    },
-  },
 };

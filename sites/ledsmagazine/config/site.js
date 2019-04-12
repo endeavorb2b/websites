@@ -1,4 +1,7 @@
+const ads = require('./ads');
+
 module.exports = {
+  ads,
   logo: {
     src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=40',
     srcset: [
@@ -28,25 +31,25 @@ module.exports = {
     { alias: 'horticultural-lighting', name: 'Horticultural Lighting' },
   ],
   gtmContainer: 'GTM-T29NVLB',
-  ads: {
-    units: {
-      BS: {
-        path: '/21687441225/LEDS/LEDS_BS',
-        size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
-        sizeMapping: [
-          { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
-          { viewport: [750, 0], size: [728, 90] },
-          { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
-        ],
-      },
-      MR: {
-        path: '/21687441225/LEDS/LEDS_MR',
-        size: [300, 250],
-      },
-      HP: {
-        path: '/21687441225/LEDS/LEDS_HP',
-        size: [300, 600],
-      },
-    },
-  },
+  // ads: {
+  //   units: {
+  //     BS: {
+  //       path: '/21687441225/LEDS/LEDS_BS',
+  //       size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
+  //       sizeMapping: [
+  //         { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
+  //         { viewport: [750, 0], size: [728, 90] },
+  //         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
+  //       ],
+  //     },
+  //     MR: {
+  //       path: '/21687441225/LEDS/LEDS_MR',
+  //       size: [300, 250],
+  //     },
+  //     HP: {
+  //       path: '/21687441225/LEDS/LEDS_HP',
+  //       size: [300, 600],
+  //     },
+  //   },
+  // },
 };

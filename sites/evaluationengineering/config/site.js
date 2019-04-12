@@ -1,4 +1,7 @@
+const ads = require('./ads');
+
 module.exports = {
+  ads,
   logo: {
     src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
     srcset: [
@@ -26,11 +29,4 @@ module.exports = {
     { alias: 'special-reports', name: 'Special Reports' },
   ],
   gtmContainer: 'GTM-NLCH94B',
-  ad: {
-    units: {
-      BS: { path: '/21687441225/EE/ee970x250', size: [[970, 250], [970, 90]] },
-      MR: { path: '/21687441225/EE/ee-mr', size: [300, 250] },
-      HP: { path: '/21687441225/EE/ee-hp', size: [300, 600] },
-    },
-  },
 };
