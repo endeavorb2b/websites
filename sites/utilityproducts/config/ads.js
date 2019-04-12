@@ -17,6 +17,7 @@ const path = unit => `/21687441225/UP/${unit}`;
 module.exports = {
   default: {
     LB1: { ...LB, path: path('DEFAULT/LB1') },
+    LB2: { ...LB, path: path('DEFAULT/LB2') },
     CONTENT1: { ...CONTENT, path: path('DEFAULT/CONTENT1') },
     CONTENT2: { ...CONTENT, path: path('DEFAULT/CONTENT2') },
     CONTENT3: { ...CONTENT, path: path('DEFAULT/CONTENT3') },
