@@ -60,9 +60,7 @@
       "template": "./query-related.marko"
     },
     "endeavor-content-query-load-more": {
-      "template": "./query-load-more.marko",
-      "<ad-unit-card>": {},
-      "<ad-unit-list>": {}
+      "template": "./query-load-more.marko"
     },
     "endeavor-content-query-hero": {
       "template": "./query-hero.marko"

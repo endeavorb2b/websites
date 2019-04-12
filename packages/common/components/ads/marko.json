@@ -3,12 +3,10 @@
     "endeavor-gam-ad-unit-website-section": {
       "template": "./gam-adunit-website-section.marko",
       "@section": {
-        "type": "object",
-        "required": true
+        "type": "object"
       },
       "@name": {
-        "type": "string",
-        "required": true
+        "type": "string"
       },
       "@class": "string",
       "@modifiers": "array",
@@ -17,8 +15,7 @@
     "endeavor-gam-ad-unit-display": {
       "template": "./gam-adunit-display.marko",
       "@id": {
-        "type": "string",
-        "required": true
+        "type": "string"
       },
       "@class": "string",
       "@modifiers": "array"

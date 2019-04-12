@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import { getAsObject } from '@base-cms/object-path';
 import { asArray, asObject } from '@base-cms/utils';
 
 $ const queryFragment = gql`
@@ -36,6 +37,20 @@ $ const params = {
   queryFragment,
 };
 $ const section = asObject(input.section);
+$ const adCardInput = {
+  section,
+  name: 'CONTENT1',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.card'),
+};
+$ const adListInput = {
+  section,
+  name: 'CONTENT1',
+  size: [300, 600],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.list'),
+};
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
   $ const cardNodes = asArray(nodes.slice(0, 11));
@@ -57,17 +72,7 @@ $ const section = asObject(input.section);
             </div>
             <if(index === 3)>
               <div class=`${block}__col`>
-                <if(input.adUnitCard)>
-                  <${input.adUnitCard} />
-                </if>
-                <else>
-                  <endeavor-gam-ad-unit-website-section
-                    name="CONTENT1"
-                    section=section
-                    size=[300, 250]
-                    modifiers=["in-card"]
-                  />
-                </else>
+                <endeavor-gam-ad-unit-website-section ...adCardInput/>
               </div>
             </if>
           </for>
@@ -77,17 +82,7 @@ $ const section = asObject(input.section);
       <if(listNodes.length)>
         <div class="row">
           <div class=`${block}__col-ad`>
-            <if(input.adUnitList)>
-              <${input.adUnitList} />
-            </if>
-            <else>
-              <endeavor-gam-ad-unit-website-section
-                name="CONTENT1"
-                section=section
-                size=[300, 600]
-                modifiers=["in-card"]
-              />
-            </else>
+            <endeavor-gam-ad-unit-website-section ...adListInput />
           </div>
 
           <div class=`${block}__col-list`>
