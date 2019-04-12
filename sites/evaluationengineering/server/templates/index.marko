@@ -1,16 +1,21 @@
 import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/adunit-website-section';
 
 $ const section = getAsObject(data, 'section');
 $ const { site } = out.global;
 $ const sections = site.getAsArray('homeSections');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'LB1', section }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'LB1', section }),
+};
 
 <document>
   <@head>
     <cms-page-metadata for="website-section" ...section />
-    <cms-ad-gam-head />
+    <cms-ad-gam-head slots=adSlots />
   </@head>
   <cms-page-container for="home" class="container-fluid-max">
-    <endeavor-gam-ad-unit alias="BS" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
     <endeavor-content-query-hero
       section-id=section.id
       limit=7
@@ -27,10 +32,11 @@ $ const sections = site.getAsArray('homeSections');
       </div>
     </if>
 
-    <endeavor-gam-ad-unit alias="BS" modifiers=["home-page-inline"] />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["home-page-inline"] />
     <endeavor-content-query-load-more
       skip=7
       section-id=section.id
+      section=section
     />
 
   </cms-page-container>
