@@ -3,4 +3,6 @@
 
 User-agent: *
 Disallow: /
-Disallow: /load-more
+
+Sitemap: https://www.officer.com/sitemap.xml
+Sitemap: https://www.officer.com/sitemap-google-news.xml

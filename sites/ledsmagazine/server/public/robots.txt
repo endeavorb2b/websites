@@ -3,4 +3,6 @@
 
 User-agent: *
 Disallow: /
-Disallow: /load-more
+
+Sitemap: https://www.ledsmagazine.com/sitemap.xml
+Sitemap: https://www.ledsmagazine.com/sitemap-google-news.xml

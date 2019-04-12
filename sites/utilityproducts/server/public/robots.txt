@@ -3,4 +3,6 @@
 
 User-agent: *
 Disallow: /
-Disallow: /load-more
+
+Sitemap: https://www.utilityproducts.com/sitemap.xml
+Sitemap: https://www.utilityproducts.com/sitemap-google-news.xml
