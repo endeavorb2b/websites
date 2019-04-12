@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.ogj.com/sitemap.xml
 Sitemap: https://www.ogj.com/sitemap-google-news.xml

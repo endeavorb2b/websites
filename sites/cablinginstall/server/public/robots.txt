@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.cablinginstall.com/sitemap.xml
 Sitemap: https://www.cablinginstall.com/sitemap-google-news.xml

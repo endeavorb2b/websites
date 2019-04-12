@@ -15,6 +15,7 @@ siteDirectories.forEach((k) => {
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.${domain}/sitemap.xml
 Sitemap: https://www.${domain}/sitemap-google-news.xml`;

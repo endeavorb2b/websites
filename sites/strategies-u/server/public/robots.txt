@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.strategies-u.com/sitemap.xml
 Sitemap: https://www.strategies-u.com/sitemap-google-news.xml

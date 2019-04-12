@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.dentaleconomics.com/sitemap.xml
 Sitemap: https://www.dentaleconomics.com/sitemap-google-news.xml

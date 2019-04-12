@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.dentistryiq.com/sitemap.xml
 Sitemap: https://www.dentistryiq.com/sitemap-google-news.xml

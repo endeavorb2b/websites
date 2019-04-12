@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /
+Disallow: /load-more
 
 Sitemap: https://www.lightwaveonline.com/sitemap.xml
 Sitemap: https://www.lightwaveonline.com/sitemap-google-news.xml
