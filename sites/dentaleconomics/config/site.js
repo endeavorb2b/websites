@@ -24,9 +24,9 @@ module.exports = {
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
   homeSections: [
-    { alias: 'macro-op-ed', label: 'Macro/Op-Ed' },
-    { alias: 'practice', label: 'Practice' },
-    { alias: 'science-tech', label: 'Science & Tech' },
+    { alias: 'macro-op-ed', name: 'Macro/Op-Ed' },
+    { alias: 'practice', name: 'Practice' },
+    { alias: 'science-tech', name: 'Science & Tech' },
   ],
   gtmContainer: 'GTM-5QGXLHV',
   // ads: {
