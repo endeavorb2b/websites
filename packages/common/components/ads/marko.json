@@ -1,13 +1,18 @@
 {
   "tags": {
-    "endeavor-gam-ad-unit": {
-      "template": "./gam-adunit.marko",
-      "@alias": {
+    "endeavor-gam-ad-unit-website-section": {
+      "template": "./gam-adunit-website-section.marko",
+      "@section": {
+        "type": "object",
+        "required": true
+      },
+      "@name": {
         "type": "string",
         "required": true
       },
       "@class": "string",
-      "@modifiers": "array"
+      "@modifiers": "array",
+      "@size": "array"
     },
     "endeavor-gam-ad-unit-display": {
       "template": "./gam-adunit-display.marko",

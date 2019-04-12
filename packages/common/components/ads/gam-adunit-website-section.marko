@@ -1,12 +1,16 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+import getAdUnit from '../../utils/gam/adunit-website-section';
+
 $ const { site } = out.global;
+$ const { name, section, size } = input;
+$ const adunit = getAdUnit(site, { name, section, size });
+$ const shouldDisplay = adunit.path && adunit.size;
+
 $ const block = 'ad-container';
-$ const path = `ad.units.${input.alias}`;
-$ const adunit = site.getAsObject(path);
-$ const display = input.alias && adunit.path && adunit.size;
 $ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
 $ const classNames = [block, ...modifiers, input.class];
 
-<if(display)>
+<if(shouldDisplay)>
   <cms-ad-gam-define-display
     ad-unit-path=adunit.path
     size=adunit.size
