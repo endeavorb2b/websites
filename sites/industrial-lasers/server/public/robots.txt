@@ -4,3 +4,6 @@
 User-agent: *
 Disallow: /
 Disallow: /load-more
+
+Sitemap: https://www.industrial-lasers.com/sitemap.xml
+Sitemap: https://www.industrial-lasers.com/sitemap-google-news.xml

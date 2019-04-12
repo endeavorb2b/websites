@@ -4,3 +4,6 @@
 User-agent: *
 Disallow: /
 Disallow: /load-more
+
+Sitemap: https://www.waterworld.com/sitemap.xml
+Sitemap: https://www.waterworld.com/sitemap-google-news.xml
