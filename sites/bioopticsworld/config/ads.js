@@ -12,7 +12,7 @@ const CONTENT = {
 const RESKIN = {};
 const WA = {};
 
-const path = unit => `/21687441225/OGJ/${unit}`;
+const path = unit => `/21687441225/BOW/${unit}`;
 
 module.exports = {
   default: {
