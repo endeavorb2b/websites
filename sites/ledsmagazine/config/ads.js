@@ -12,7 +12,7 @@ const CONTENT = {
 const RESKIN = {};
 const WA = {};
 
-const path = unit => `/21687441225/LED/${unit}`;
+const path = unit => `/21687441225/LEDS/${unit}`;
 
 module.exports = {
   default: {
