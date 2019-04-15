@@ -1,3 +1,4 @@
+const search = require('@endeavorb2b/base-website-themes/pennwell/templates/search');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
@@ -16,6 +17,10 @@ module.exports = (app) => {
 
   // Content Types
   contentTypes(app);
+
+  // Search
+  app.get('/search', (_, res) => { res.marko(search); });
+  app.get('/search*', (_, res) => { res.redirect('/search'); });
 
   // Website Sections
   websiteSections(app);
