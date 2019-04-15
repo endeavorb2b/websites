@@ -7,6 +7,11 @@
     <cms-ad-gam-init />
     <${input.head} />
   </@head>
-  <endeavor-navbar-site-a />
+  <if(input.navbar)>
+    <${input.navbar} />
+  </if>
+  <else>
+    <endeavor-navbar-site-a />
+  </else>
   <${input.renderBody} />
 </cms-document>

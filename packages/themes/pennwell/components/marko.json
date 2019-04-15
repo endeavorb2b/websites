@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "theme-pennwell-document": {
+      "template": "./document.marko"
+    }
+  }
+}
