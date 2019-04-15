@@ -1,9 +1,8 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
-import queryFragment from '../../api/fragments/website-scheduled-content';
 
 $ const section = getAsObject(data, 'section');
 
-<layout section=section>
+<theme-pennwell-website-section-layout section=section>
   <@head>
     <cms-ad-gam-head />
   </@head>
@@ -11,12 +10,12 @@ $ const section = getAsObject(data, 'section');
 
   <endeavor-content-query-hero
     section-id=section.id
-    limit=7
+    limit=5
     requires-image=true
   />
 
   <endeavor-content-query-load-more
-    skip=7
+    skip=5
     section-id=section.id
     section=section
     ads={
@@ -24,4 +23,4 @@ $ const section = getAsObject(data, 'section');
       card: { name: "HP" },
     }
   />
-</layout>
+</theme-pennwell-website-section-layout>

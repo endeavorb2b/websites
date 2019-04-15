@@ -11,7 +11,7 @@ $ const adSlots = {
   'gpt-ad-right2': getAdUnit(site, { name: 'MR', section }),
 };
 
-<layout content=content>
+<theme-pennwell-content-layout content=content>
   <@head>
     <cms-ad-gam-head slots=adSlots />
   </@head>
@@ -42,7 +42,7 @@ $ const adSlots = {
 
   <if(section.id)>
     <endeavor-load-more-header>
-      <h2>More in ${section.name}</h2>
+      <h4>More in ${section.name}</h4>
     </endeavor-load-more-header>
     <endeavor-content-query-load-more
       skip=5
@@ -55,4 +55,4 @@ $ const adSlots = {
       }
     />
   </if>
-</layout>
+</theme-pennwell-content-layout>
