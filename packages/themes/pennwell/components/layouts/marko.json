@@ -1,0 +1,16 @@
+{
+  "tags": {
+    "theme-pennwell-content-layout": {
+      "template": "./content.marko"
+    },
+    "theme-pennwell-dynamic-page-layout": {
+      "template": "./dynamic-page.marko"
+    },
+    "theme-pennwell-home-layout": {
+      "template": "./home.marko"
+    },
+    "theme-pennwell-website-section-layout": {
+      "template": "./website-section.marko"
+    }
+  }
+}

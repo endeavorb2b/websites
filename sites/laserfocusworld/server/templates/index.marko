@@ -9,9 +9,8 @@ $ const adSlots = {
   'gpt-ad-lb2': getAdUnit(site, { name: 'LB1', section }),
 };
 
-<theme-pennwell-document>
+<theme-pennwell-home-layout section=section>
   <@head>
-    <cms-page-metadata for="website-section" ...section />
     <cms-ad-gam-head slots=adSlots />
   </@head>
   <cms-page-container for="home" class="container-fluid-max">
@@ -40,4 +39,4 @@ $ const adSlots = {
     />
 
   </cms-page-container>
-</theme-pennwell-document>
+</theme-pennwell-home-layout>

@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./layouts/marko.json"
+  ],
   "tags": {
     "theme-pennwell-document": {
       "template": "./document.marko"
