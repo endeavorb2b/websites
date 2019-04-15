@@ -1,0 +1,5 @@
+$ const { engine, apiKey } = input;
+
+<if(engine === 'google' && apiKey)>
+  <cms-browser-component name="SearchIntegrationGoogle" props={ apiKey } />
+</if>

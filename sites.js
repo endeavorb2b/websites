@@ -1,4 +1,14 @@
 module.exports = {
+  // Test
+  test: {
+    name: 'Test Site',
+    domain: 'test.com',
+    project: 'Test Project',
+    accountKey: 'test',
+    groupKey: 'test',
+    tenantKey: 'test_test',
+    replicaSet: 'aerilon',
+  },
   // AC Business Media
   dmnews: {
     name: 'DM News',

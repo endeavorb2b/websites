@@ -4,5 +4,10 @@
     "./content/marko.json",
     "./load-more/marko.json",
     "./navbars/marko.json"
-  ]
+  ],
+  "tags": {
+    "endeavor-search": {
+      "template": "./search.marko"
+    }
+  }
 }
