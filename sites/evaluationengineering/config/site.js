@@ -29,4 +29,8 @@ module.exports = {
     { alias: 'special-reports', name: 'Special Reports' },
   ],
   gtmContainer: 'GTM-NLCH94B',
+  search: {
+    engine: 'google',
+    apiKey: 'API_KEY',
+  },
 };

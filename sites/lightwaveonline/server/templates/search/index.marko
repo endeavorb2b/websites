@@ -1,0 +1,29 @@
+$ const { site, config } = out.global;
+$ const { engine, apiKey, domain } = site.getAsObject('search');
+$ const adSlots = {
+  'gpt-ad-top': { ...site.get('ad.units.BS') },
+};
+
+<layout>
+  <@head>
+    <cms-ad-gam-head slots=adSlots />
+  </@head>
+  <endeavor-gam-ad-unit-display id="gpt-ad-top" modifiers=["top-of-page"] />
+
+  <cms-page-container for="search">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1>Search ${config.get('siteName')}</h1>
+          <hr>
+          <if(engine === 'google')>
+            <endeavor-search-google apiKey=apiKey />
+          </if>
+          <else-if(engine === 'bing')>
+            <endeavor-search-bing apiKey=apiKey domain=domain />
+          </else-if>
+        </div>
+      </div>
+    </div>
+  </cms-page-container>
+</layout>

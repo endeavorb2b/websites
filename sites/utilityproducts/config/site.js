@@ -31,4 +31,8 @@ module.exports = {
     { alias: 'test-measurement', name: 'Test & Measurement' },
   ],
   gtmContainer: 'GTM-PSGKX8S',
+  search: {
+    engine: 'google',
+    apiKey: 'API_KEY',
+  },
 };

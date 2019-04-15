@@ -41,12 +41,7 @@ module.exports = {
     },
   },
   search: {
-    // Google
     engine: 'google',
     apiKey: '017383739850048358259:p0nyaiybgnq',
-    // Bing (FCP)
-    // engine: 'bing',
-    // apiKey: '2682f90e71ea403b9cbf6fa7740bf006',
-    // domain: 'officer.com',
   },
 };

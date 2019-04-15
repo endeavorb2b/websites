@@ -50,4 +50,8 @@ module.exports = {
   //     },
   //   },
   // },
+  search: {
+    engine: 'google',
+    apiKey: 'API_KEY',
+  },
 };
