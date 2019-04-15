@@ -33,4 +33,20 @@ module.exports = {
     { alias: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
   gtmContainer: 'GTM-TZNC8W8',
+  ad: {
+    units: {
+      BS: { path: '/21687441225/Officer/Officer_BS', size: [[970, 250], [970, 90]] },
+      MR: { path: '/21687441225/Officer/Officer_MR', size: [300, 250] },
+      HP: { path: '/21687441225/Officer/Officer_HP', size: [300, 600] },
+    },
+  },
+  search: {
+    // Google
+    engine: 'google',
+    apiKey: '017383739850048358259:p0nyaiybgnq',
+    // Bing (FCP)
+    // engine: 'bing',
+    // apiKey: '2682f90e71ea403b9cbf6fa7740bf006',
+    // domain: 'officer.com',
+  },
 };
