@@ -1,12 +1,16 @@
 .content-breadcrumbs {
-  margin-bottom: map-get($spacers, 3);
-  font-size: $font-size-sm;
+  font-family: $theme-content-sans-serif-font;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: normal;
   &__website-section-hierarchy {
-    background-color: $light;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: $white;
   }
   a {
-    color: $dark;
+    color: $primary;
   }
 }

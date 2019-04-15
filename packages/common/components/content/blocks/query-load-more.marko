@@ -7,7 +7,6 @@ $ const queryFragment = gql`
     id
     type
     shortName
-    teaser
     canonicalPath
     published
     company {
@@ -27,13 +26,25 @@ $ const queryFragment = gql`
       src
       alt
     }
+    ... on Authorable {
+      authors {
+        edges {
+          node {
+            id
+            name
+            type
+            canonicalPath
+          }
+        }
+      }
+    }
   }
 `;
 
 $ const block = 'content-query-load-more';
 $ const params = {
   ...input,
-  limit: 15,
+  limit: 14,
   queryFragment,
 };
 $ const section = asObject(input.section);
@@ -53,8 +64,8 @@ $ const adListInput = {
 };
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
-  $ const cardNodes = asArray(nodes.slice(0, 11));
-  $ const listNodes = asArray(nodes.slice(11));
+  $ const cardNodes = asArray(nodes.slice(0, 10));
+  $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
     <div class=block>
       <if(cardNodes.length)>
@@ -65,12 +76,12 @@ $ const adListInput = {
                 <endeavor-content-block-primary-image
                   content=content
                   modifiers=['card']
-                  options={ w: 640, h: 360, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  options={ w: 630, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
                 />
-                <endeavor-content-block-element-group class="card-body" teaser=true content=content />
+                <endeavor-content-block-element-group class="card-body" content=content />
               </div>
             </div>
-            <if(index === 3)>
+            <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
                 <endeavor-gam-ad-unit-website-section ...adCardInput/>
               </div>
@@ -93,10 +104,10 @@ $ const adListInput = {
                     <endeavor-content-block-primary-image
                       content=content
                       modifiers=['list']
-                      width=192
-                      options={ w: 192, fit: 'clip', dpr: 2 }
+
+                      options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
                     />
-                    <endeavor-content-block-element-group teaser=true content=content />
+                    <endeavor-content-block-element-group content=content />
                   </li>
                 </for>
               </ul>

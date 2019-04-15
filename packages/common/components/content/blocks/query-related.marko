@@ -19,6 +19,18 @@ $ const queryFragment = gql`
       canonicalPath
     }
     published
+    ... on Authorable {
+      authors {
+        edges {
+          node {
+            id
+            name
+            type
+            canonicalPath
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -36,7 +48,7 @@ $ const header = input.header || 'You May Also Like';
       <div class="card-header">${header}</div>
       <ul class="list-group list-group-flush">
         <for|content| of=nodes>
-          <endeavor-content-block-element-group tag="li" class="list-group-item" content=content />
+          <endeavor-content-block-element-group tag="li" class="list-group-item" modifiers=['related-list'] content=content />
         </for>
       </ul>
     </div>
