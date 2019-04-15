@@ -33,6 +33,6 @@ module.exports = {
   gtmContainer: 'GTM-PSGKX8S',
   search: {
     engine: 'google',
-    apiKey: 'API_KEY',
+    apiKey: '003355913687346718228:mb2grfhfx08',
   },
 };
