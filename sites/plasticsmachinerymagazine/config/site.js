@@ -39,6 +39,6 @@ module.exports = {
   gtmContainer: 'GTM-KBM372Z',
   search: {
     engine: 'google',
-    apiKey: 'API_KEY',
+    apiKey: '017383739850048358259:alxsug09xai',
   },
 };

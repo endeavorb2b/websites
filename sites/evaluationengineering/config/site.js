@@ -30,7 +30,8 @@ module.exports = {
   ],
   gtmContainer: 'GTM-NLCH94B',
   search: {
-    engine: 'google',
-    apiKey: 'API_KEY',
+    engine: 'bing',
+    apiKey: '2682f90e71ea403b9cbf6fa7740bf006',
+    domain: 'evaluationengineering.com',
   },
 };
