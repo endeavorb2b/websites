@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "endeavor-search-bing": {
+      "template": "./bing.marko"
+    },
+    "endeavor-search-google": {
+      "template": "./google.marko"
+    }
+  }
+}
