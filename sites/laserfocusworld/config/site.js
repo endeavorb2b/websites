@@ -52,4 +52,8 @@ module.exports = {
   //     },
   //   },
   // },
+  search: {
+    engine: 'google',
+    apiKey: '003355913687346718228:9fw7nfvu5hw',
+  },
 };

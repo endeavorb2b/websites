@@ -33,4 +33,8 @@ module.exports = {
     { alias: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
   ],
   gtmContainer: 'GTM-TZNC8W8',
+  search: {
+    engine: 'google',
+    apiKey: '017383739850048358259:p0nyaiybgnq',
+  },
 };
