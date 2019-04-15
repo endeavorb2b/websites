@@ -15,6 +15,10 @@
         "required": true,
         "default-value": "Author"
       },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@class": "string",
       "@itemClass": "string",
       "@tag": {
@@ -40,6 +44,10 @@
         "type": "string",
         "required": true,
         "default-value": "Contributor"
+      },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
       },
       "@class": "string",
       "@itemClass": "string",
@@ -67,6 +75,10 @@
         "required": true,
         "default-value": "Photographer"
       },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@class": "string",
       "@itemClass": "string",
       "@tag": {
@@ -93,6 +105,10 @@
         "required": true,
         "default-value": "Source"
       },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@class": "string",
       "@tag": {
         "type": "string",
@@ -115,6 +131,10 @@
         "required": true,
         "default-value": "By"
       },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@class": "string",
       "@tag": {
         "type": "string",
@@ -136,6 +156,10 @@
         "type": "string",
         "required": true,
         "default-value": "From"
+      },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
       },
       "@class": "string",
       "@tag": {

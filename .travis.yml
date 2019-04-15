@@ -17,6 +17,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Utility Products
+      script: scripts/deploy.js utilityproducts
+      install: skip
+
+    - stage: deploy
       name: Officer
       script: scripts/deploy.js officer
       install: skip
@@ -24,11 +29,6 @@ jobs:
     - stage: deploy
       name: Evaluation Engineering
       script: scripts/deploy.js evaluationengineering
-      install: skip
-
-    - stage: deploy
-      name: Utility Products
-      script: scripts/deploy.js utilityproducts
       install: skip
 
     - stage: deploy

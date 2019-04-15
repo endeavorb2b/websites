@@ -3,9 +3,11 @@
     @extend .sticky-top;
     @extend .navbar-dark;
     @extend .navbar-expand-lg;
-    background-color: $dark;
-    border-bottom: 3px solid $primary;
+    font-family: $theme-content-sans-serif-font;
+    background-color: $primary;
+    border-bottom: 2px solid $black;
     box-shadow: $box-shadow;
+    opacity: .98;
     .navbar-brand {
       padding-bottom: 0;
       img {
@@ -27,7 +29,7 @@
           display: flex;
         }
         .nav-item {
-          font-size: .9rem;
+          font-size: 1rem;
           @include media-breakpoint-down("md") {
             text-align: left;
           }
@@ -39,7 +41,8 @@
             padding-bottom: map-get($spacers, 1);
             color: $white;
             &:hover {
-              color: $primary;
+              color: $white;
+              text-decoration: underline;
             }
           }
           &:first-child {

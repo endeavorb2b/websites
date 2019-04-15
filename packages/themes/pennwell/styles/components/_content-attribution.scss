@@ -1,6 +1,5 @@
 .content-attribution {
-  font-size: $font-size-sm;
-  text-transform: uppercase;
+  font-family: $theme-content-sans-serif-font;
   &__prefix {
     margin-right: map-get($spacers, 1);
     font-weight: 500;
@@ -8,6 +7,9 @@
       margin-left: map-get($spacers, 1);
       content: "\2014";
     }
+  }
+  &__content-name {
+    margin-right: map-get($spacers, 2);
   }
   div:last-child {
     margin-bottom: map-get($spacers, 2);

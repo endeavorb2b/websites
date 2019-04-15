@@ -8,9 +8,6 @@
     @include media-breakpoint-up(lg) {
       @include make-col(4);
     }
-    .card {
-      min-height: 100%;
-    }
   }
   &__col-ad {
     margin-bottom: map-get($spacers, 5);
@@ -36,6 +33,7 @@
     }
   }
   .card {
+    min-height: 100%;
     border: 0;
     box-shadow: $theme-box-shadow-sm;
   }

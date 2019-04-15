@@ -8,8 +8,10 @@ $ const prefixClass = `${input.block}__prefix`;
   link=true
 >
   <@before>
-    <span class=prefixClass>
-      ${input.prefix}
-    </span>
+    <if(input.usePrefix)>
+      <span class=prefixClass>
+        ${input.prefix}
+      </span>
+    </if>
   </@before>
 </cms-content-name>

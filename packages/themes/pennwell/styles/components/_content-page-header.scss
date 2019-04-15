@@ -1,14 +1,20 @@
 .content-page-header {
-  padding-top: map-get($spacers, 3);
-  padding-bottom: map-get($spacers, 3);
+  padding: map-get($spacers, 3);
+  margin-bottom: map-get($spacers, 2);
   &__content-name {
-    font-family: $theme-font-family-serif;
+    font-family: $theme-content-title-font;
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1.25;
   }
   &__content-teaser {
-    font-style: italic;
+    font-family: $theme-content-sans-serif-font;
+    font-size: 24px;
+    line-height: 1.22;
+    color: rgba(0, 0, 0, .54);
+    letter-spacing: normal;
   }
   &__content-published {
-    font-size: $font-size-sm;
-    text-transform: uppercase;
+    font-family: $theme-content-sans-serif-font;
   }
 }

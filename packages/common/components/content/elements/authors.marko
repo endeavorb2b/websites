@@ -7,9 +7,11 @@ $ const prefixClass = `${input.block}__prefix`;
   obj=input.content
 >
   <@before|{ length }|>
-    <span class=prefixClass>
-      ${input.prefix}<if(length > 1)>s</if>
-    </span>
+    <if(input.usePrefix)>
+      <span class=prefixClass>
+        ${input.prefix}<if(length > 1)>s</if>
+      </span>
+    </if>
   </@before>
   <cms-content-name
     tag=input.itemTag
