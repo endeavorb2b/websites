@@ -1,6 +1,6 @@
 const { startServer } = require('@base-cms/marko-web');
 const onStart = require('@endeavorb2b/base-website-common/on-start');
-const errorTemplate = require('./server/templates/error');
+const errorTemplate = require('@endeavorb2b/base-website-themes/pennwell/templates/error');
 const routes = require('./server/routes');
 const siteConfig = require('./config/site');
 const coreConfig = require('./config/core');
