@@ -34,7 +34,7 @@ $ const adSlots = {
           <!-- Displaying ad unit 2 before 1 is intentional -->
           <endeavor-gam-ad-unit-display id="gpt-ad-right2" modifiers=["content-page-right"] />
           <endeavor-gam-ad-unit-display id="gpt-ad-right1" modifiers=["content-page-right"] />
-          <endeavor-content-query-related exclude-content-ids=[content.id] section-id=section.id />
+          <endeavor-content-query-related limit=5 exclude-content-ids=[content.id] section-id=section.id />
         </aside>
       </div>
     </div>
@@ -42,7 +42,7 @@ $ const adSlots = {
 
   <if(section.id)>
     <endeavor-load-more-header>
-      <h2>More in ${section.name}</h2>
+      <h4>More in ${section.name}</h4>
     </endeavor-load-more-header>
     <endeavor-content-query-load-more
       skip=5
