@@ -2,7 +2,7 @@
   font-family: $theme-content-sans-serif-font;
   &__prefix {
     margin-right: map-get($spacers, 1);
-    font-weight: 500;
+    font-weight: 600;
     &::after {
       margin-left: map-get($spacers, 1);
       content: "\2014";
