@@ -7,7 +7,11 @@ $ const section = getAsObject(input, 'section');
     <cms-page-metadata for="website-section" ...section />
     <${input.head} />
   </@head>
-  <cms-page-container for="website-section" class="container-fluid-max" data=section>
-    <${input.renderBody} />
-  </cms-page-container>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="website-section" data=section>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
 </theme-pennwell-document>
