@@ -3,16 +3,13 @@ import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/adunit-website
 
 $ const { site } = out.global;
 $ const page = getAsObject(data, 'page');
-$ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'BS' }),
-};
 
 <theme-pennwell-dynamic-page-layout page=page>
   <@head>
-    <cms-ad-gam-head slots=adSlots />
+    <cms-ad-gam-head />
   </@head>
-  <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
-  <cms-page-container for="dynamic-page" data=page>
-    $!{page.body}
-  </cms-page-container>
+  <@above-container>
+    <endeavor-gam-ad-unit-website-section name="BS" modifiers=["top-of-page"] />
+  </@above-container>
+  $!{page.body}
 </theme-pennwell-dynamic-page-layout>
