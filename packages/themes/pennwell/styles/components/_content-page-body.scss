@@ -1,61 +1,25 @@
 .content-page-body {
   &__content-body {
+    @include content-body();
     padding-right: map-get($spacers, 3);
     padding-left: map-get($spacers, 3);
-    font-family: $theme-content-serif-font;
-    font-size: 1.3125rem;
-    font-style: normal;
-    line-height: 1.58;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    .caption,
+    .credit {
       font-family: $theme-content-sans-serif-font;
-      font-weight: 600;
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-    h3 {
-      margin-top: 53px;
-      font-size: 34px;
-      line-height: 1.15;
-    }
-    h4 {
-      margin-top: 39px;
-      font-size: 26px;
-      line-height: 1.22;
-    }
-    h5 {
-      margin-top: 25px;
-      font-size: 24px;
-      line-height: 1.29;
-    }
-    h6 {
-      margin-top: 11px;
-      font-size: 21px;
-    }
-    strong,
-    b {
-      font-weight: 700;
-    }
-    img {
-      margin-bottom: map-get($spacers, 1);
-      border-radius: $border-radius;
-      box-shadow: $theme-box-shadow-sm;
-    }
-    .caption {
-      font-family: $theme-content-sans-serif-font;
-      color: rgba(0, 0, 0, .54);
+      font-size: $font-size-base;
       letter-spacing: normal;
     }
-    p:empty {
-      display: none;
+    .caption {
+      color: $gray;
     }
-    &:first-child {
-      margin-top: 0;
+    .credit {
+      margin-left: map-get($spacers, 1);
+      font-style: italic;
+      color: $black;
+      &::before {
+        margin-right: map-get($spacers, 1);
+        content: "Credit \2014";
+      }
     }
   }
 }

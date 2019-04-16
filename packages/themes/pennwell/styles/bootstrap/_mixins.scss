@@ -1,3 +1,100 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 // Add custom mixins here...
+
+@mixin theme-heading($size) {
+  font-family: $theme-content-sans-serif-font;
+  font-weight: 600;
+  @if $size == h1 {
+    font-size: 34px;
+    line-height: 40px;
+  } @else if $size == h2 {
+    font-size: 34px;
+    line-height: 40px;
+  } @else if $size == h3 {
+    font-size: 34px;
+    line-height: 40px;
+  } @else if $size == h4 {
+    font-size: 26px;
+    line-height: 32px;
+  } @else if $size == h5 {
+    font-size: 24px;
+    line-height: 30px;
+  } @else {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+
+@mixin theme-list-text() {
+  font-family: $theme-content-sans-serif-font;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin content-body() {
+  font-family: $theme-content-serif-font;
+  font-size: 21px;
+  font-style: normal;
+  line-height: 33px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h1 {
+    @include content-body-heading(h1);
+  }
+  h2 {
+    @include content-body-heading(h2);
+  }
+  h3 {
+    @include content-body-heading(h3);
+  }
+  h4 {
+    @include content-body-heading(h4);
+  }
+  h5 {
+    @include content-body-heading(h5);
+  }
+  h6 {
+    @include content-body-heading(h6);
+  }
+  strong,
+  b {
+    font-weight: 700;
+  }
+  img {
+    margin-bottom: map-get($spacers, 1);
+    border-radius: $border-radius;
+    box-shadow: $theme-box-shadow-sm;
+  }
+  p:empty {
+    display: none;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin content-body-heading($size) {
+  @include theme-heading($size);
+  @if $size == h1 {
+    margin-top: 53px;
+  } @else if $size == h2 {
+    margin-top: 53px;
+  } @else if $size == h3 {
+    margin-top: 53px;
+  } @else if $size == h4 {
+    margin-top: 39px;
+  } @else if $size == h5 {
+    margin-top: 25px;
+  } @else {
+    margin-top: 11px;
+  }
+}

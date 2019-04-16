@@ -6,9 +6,6 @@
     "theme-pennwell-dynamic-page-layout": {
       "template": "./dynamic-page.marko"
     },
-    "theme-pennwell-home-layout": {
-      "template": "./home.marko"
-    },
     "theme-pennwell-website-section-layout": {
       "template": "./website-section.marko"
     },

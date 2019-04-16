@@ -3,6 +3,7 @@
     "./ads/marko.json",
     "./content/marko.json",
     "./load-more/marko.json",
-    "./navbars/marko.json"
+    "./navbars/marko.json",
+    "./search/marko.json"
   ]
 }

@@ -8,6 +8,10 @@ $ const content = getAsObject(input, 'content');
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
-    <${input.renderBody} />
+    <${input.aboveContainer} />
+    <cms-page-container for="content" data=content>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
   </div>
 </theme-pennwell-document>

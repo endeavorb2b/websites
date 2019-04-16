@@ -1,7 +1,7 @@
 {
   "tags": {
-    "endeavor-gam-ad-unit-website-section": {
-      "template": "./gam-adunit-website-section.marko",
+    "endeavor-gam-ad-unit-define-display": {
+      "template": "./gam-adunit-define-display.marko",
       "@section": {
         "type": "object"
       },

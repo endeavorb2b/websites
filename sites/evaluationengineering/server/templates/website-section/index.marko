@@ -6,7 +6,10 @@ $ const section = getAsObject(data, 'section');
   <@head>
     <cms-ad-gam-head />
   </@head>
-  <endeavor-gam-ad-unit-website-section name="BS" section=section modifiers=["top-of-page"] />
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="BS" section=section modifiers=["top-of-page"] />
+  </@above-container>
 
   <endeavor-content-query-hero
     section-id=section.id
@@ -14,13 +17,15 @@ $ const section = getAsObject(data, 'section');
     requires-image=true
   />
 
-  <endeavor-content-query-load-more
-    skip=5
-    section-id=section.id
-    section=section
-    ads={
-      list: { name: "MR" },
-      card: { name: "HP" },
-    }
-  />
+  <@below-container>
+    <endeavor-content-query-load-more
+      skip=5
+      section-id=section.id
+      section=section
+      ads={
+        list: { name: "MR" },
+        card: { name: "HP" },
+      }
+    />
+  </@below-container>
 </theme-pennwell-website-section-layout>

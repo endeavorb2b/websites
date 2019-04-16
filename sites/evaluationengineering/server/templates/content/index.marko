@@ -1,12 +1,12 @@
 import { getAsObject, get } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/adunit-website-section';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 
 $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-top': getAdUnit(site, { name: 'BS', section }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'BS', section }),
   'gpt-ad-right1': getAdUnit(site, { name: 'MR', section }),
   'gpt-ad-right2': getAdUnit(site, { name: 'MR', section }),
 };
@@ -15,44 +15,47 @@ $ const adSlots = {
   <@head>
     <cms-ad-gam-head slots=adSlots />
   </@head>
-  <endeavor-gam-ad-unit-display id="gpt-ad-top" modifiers=["top-of-page"] />
 
-  <cms-page-container for="content" data=content>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <endeavor-content-block-page-header content=content />
-        </div>
-      </div>
+  <@above-container>
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
 
-      <div class="row">
-        <div class="col-lg-8">
-          <endeavor-content-block-page-body content=content />
-        </div>
-
-        <aside class="col-lg-4">
-          <!-- Displaying ad unit 2 before 1 is intentional -->
-          <endeavor-gam-ad-unit-display id="gpt-ad-right2" modifiers=["content-page-right"] />
-          <endeavor-gam-ad-unit-display id="gpt-ad-right1" modifiers=["content-page-right"] />
-          <endeavor-content-query-related exclude-content-ids=[content.id] section-id=section.id />
-        </aside>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <endeavor-content-block-page-header content=content />
       </div>
     </div>
-  </cms-page-container>
 
-  <if(section.id)>
-    <endeavor-load-more-header>
-      <h4>More in ${section.name}</h4>
-    </endeavor-load-more-header>
-    <endeavor-content-query-load-more
-      skip=5
-      exclude-content-ids=[content.id]
-      section-id=section.id
-      section=section
-      ads={
-        list: { name: "MR" },
-        card: { name: "HP" },
-      }
-    />
-  </if>
+    <div class="row">
+      <div class="col-lg-8">
+        <endeavor-content-block-page-body content=content />
+      </div>
+
+      <aside class="col-lg-4">
+        <!-- Displaying ad unit 2 before 1 is intentional -->
+        <endeavor-gam-ad-unit-display id="gpt-ad-right2" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-right1" modifiers=["content-page-right"] />
+        <endeavor-content-query-related exclude-content-ids=[content.id] section-id=section.id />
+      </aside>
+    </div>
+  </div>
+
+  <@below-container>
+    <if(section.id)>
+      <endeavor-load-more-header>
+        More in ${section.name}
+      </endeavor-load-more-header>
+      <endeavor-content-query-load-more
+        skip=5
+        exclude-content-ids=[content.id]
+        section-id=section.id
+        section=section
+        ads={
+          list: { name: "MR" },
+          card: { name: "HP" },
+        }
+      />
+    </if>
+  </@below-container>
 </theme-pennwell-content-layout>

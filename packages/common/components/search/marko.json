@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-search-in-page": {
+      "template": "./in-page.marko"
+    }
+  }
+}

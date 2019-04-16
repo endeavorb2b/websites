@@ -7,10 +7,7 @@
   &__content-short-name {
     min-height: 48px;
     max-height: 48px;
-    font-family: $theme-content-sans-serif-font;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 24px;
+    @include theme-heading(h6);
     @include media-breakpoint-down(sm) {
       min-height: initial;
     }
@@ -23,14 +20,12 @@
     }
   }
   &__website-section-name {
+    @include theme-list-text();
     margin-bottom: 6px;
-    font-family: $theme-content-sans-serif-font;
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, .54);
+    color: $gray;
     letter-spacing: normal;
     a {
-      color: rgba(0, 0, 0, .54);
+      color: $gray;
     }
   }
   &__content-teaser {
@@ -41,13 +36,19 @@
     font-style: normal;
     line-height: 25px;
   }
-  // @todo the font sizes, line heights and colors should be consolidated.
   &__content-published {
+    @include theme-list-text();
     margin-top: auto;
-    font-family: $theme-content-sans-serif-font;
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, .54);
+    color: $gray;
+
+  }
+  &__content-name {
+    &--company-name {
+      @include theme-list-text();
+    }
+    &--contact-name {
+      @include theme-list-text();
+    }
   }
   &__content-authors {
     .content-element-group {
@@ -60,20 +61,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
-    font-family: $theme-content-sans-serif-font;
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, .54);
   }
 
   &--hero-card {
     #{ $self } {
       &__content-short-name {
+        @include theme-heading(h4);
         min-height: initial;
         max-height: 64px;
-        font-size: 26px;
-        line-height: 32px;
-
         /* stylelint-disable-next-line selector-max-compound-selectors */
         a {
           display: block;
