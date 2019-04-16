@@ -7,7 +7,7 @@ $ const page = getAsObject(input, 'page');
     <cms-page-metadata for="dynamic-page" ...page />
     <${input.head} />
   </@head>
-  <cms-page-container for="dynamic-page" class="container-fluid-max" data=page>
+  <div class="container-fluid-max">
     <${input.renderBody} />
-  </cms-page-container>
+  </div>
 </theme-pennwell-document>
