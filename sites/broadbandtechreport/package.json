@@ -6,5 +6,14 @@
     "dev": "basecms-website dev index.js",
     "build": "basecms-website build",
     "lint": "basecms-website lint"
+  },
+  "dependencies": {
+    "@base-cms/marko-web": "~0.7.4",
+    "@base-cms/object-path": "^0.7.0",
+    "@base-cms/web-cli": "~0.7.4",
+    "@endeavorb2b/base-website-common": "^0.4.2",
+    "@endeavorb2b/base-website-themes": "^0.4.2",
+    "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1"
   }
 }
