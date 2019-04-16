@@ -1,3 +1,4 @@
+const search = require('@endeavorb2b/base-website-themes/pennwell/templates/search');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
@@ -5,8 +6,6 @@ const loadMore = require('./load-more');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
-  app.set('trust proxy', 'loopback, linklocal, uniquelocal');
-
   // Homepage
   home(app);
 
@@ -18,6 +17,9 @@ module.exports = (app) => {
 
   // Content Types
   contentTypes(app);
+
+  // Search
+  app.get('/search', (_, res) => { res.marko(search); });
 
   // Website Sections
   websiteSections(app);

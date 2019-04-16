@@ -37,4 +37,8 @@ module.exports = {
     { alias: 'rotomolding', name: 'Rotomolding' },
   ],
   gtmContainer: 'GTM-KBM372Z',
+  search: {
+    engine: 'google',
+    apiKey: '017383739850048358259:alxsug09xai',
+  },
 };

@@ -1,0 +1,19 @@
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/adunit-website-section';
+
+$ const { config, site } = out.global;
+$ const title = `Search ${config.get('siteName')}`;
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'LB1' }),
+};
+
+<theme-pennwell-document>
+  <@head>
+    <cms-page-title value=title />
+    <cms-page-description content=title />
+    <cms-ad-gam-head slots=adSlots />
+    <${input.head} />
+  </@head>
+  <cms-page-container for="search" class="container-fluid-max">
+    <${input.renderBody} />
+  </cms-page-container>
+</theme-pennwell-document>
