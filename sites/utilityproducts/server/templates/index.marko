@@ -6,7 +6,10 @@ $ const { site } = out.global;
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'LB1', section }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'LB2', section }),
+  'gpt-ad-content1': getAdUnit(site, { name: 'CONTENT1', section, size: [300, 250] }),
+  'gpt-ad-content2': getAdUnit(site, { name: 'CONTENT2', section, size: [300, 250] }),
+  'gpt-ad-content3': getAdUnit(site, { name: 'CONTENT3', section, size: [300, 600] }),
+  'gpt-ad-content4': getAdUnit(site, { name: 'CONTENT4', section, size: [300, 250] }),
 };
 
 <theme-pennwell-website-section-layout section=section>
@@ -24,17 +27,61 @@ $ const adSlots = {
     requires-image=true
   />
 
-  <if(sections.length)>
-    <div class="row">
-      <for|sectionItem| of=sections>
-        <div class="col-lg-4 mb-5">
-          <endeavor-content-query-section-list section-alias=sectionItem.alias header=sectionItem.name />
-        </div>
-      </for>
+  <div class="row">
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="transmission-distribution" header="Transmission & Distribution" />
     </div>
-  </if>
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="vehicles-accessories" header="Vehicles & Accessories" />
+    </div>
+    <div class="col-lg-4 mb-4 d-flex flex-column justify-content-around">
+      <endeavor-gam-ad-unit-display id="gpt-ad-content1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-content2" />
+    </div>
+  </div>
 
-  <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["home-page-inline"] />
+  <div class="row">
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="tools-supplies" header="Tools & Supplies" />
+    </div>
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="safety" header="Safety" />
+    </div>
+    <div class="col-lg-4 mb-4">
+      <div class="content-query-section-list card h-100">
+        <div class="card-header">
+          Current Issue
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="test-measurement" header="Test & Measurement" />
+    </div>
+    <div class="col-lg-4 mb-4">
+      <endeavor-content-query-section-list section-alias="line-construction-maintenance" header="Line Construction & Maintenance" />
+    </div>
+    <div class="col-lg-4 mb-4">
+      <endeavor-gam-ad-unit-display id="gpt-ad-content3" modifiers=["in-card"] />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 mb-4">
+      <div class="content-query-section-list card h-100">
+        <div class="card-header">
+          Videos
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+      <endeavor-gam-ad-unit-display id="gpt-ad-content4" modifiers=["in-card"] />
+    </div>
+  </div>
+
+  <hr class="mb-5">
 
   <@below-container>
     <endeavor-content-query-load-more
