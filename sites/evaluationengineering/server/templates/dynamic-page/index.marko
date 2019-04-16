@@ -1,5 +1,5 @@
 import { getAsObject } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/adunit-website-section';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 
 $ const { site } = out.global;
 $ const page = getAsObject(data, 'page');
@@ -9,7 +9,7 @@ $ const page = getAsObject(data, 'page');
     <cms-ad-gam-head />
   </@head>
   <@above-container>
-    <endeavor-gam-ad-unit-website-section name="BS" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
   $!{page.body}
 </theme-pennwell-dynamic-page-layout>
