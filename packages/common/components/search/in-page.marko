@@ -1,0 +1,9 @@
+$ const { site } = out.global;
+$ const { engine, apiKey, domain } = site.getAsObject('search');
+
+<if(engine === 'google')>
+  <cms-browser-component name="SearchIntegrationGoogle" props={ apiKey } />
+</if>
+<else-if(engine === 'bing')>
+  <cms-browser-component name="SearchIntegrationBing" props={ apiKey, domain } />
+</else-if>
