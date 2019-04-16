@@ -12,10 +12,10 @@ $ const { engine, apiKey, domain } = site.getAsObject('search');
           <h1>Search ${config.get('siteName')}</h1>
           <hr>
           <if(engine === 'google')>
-            <endeavor-search-google apiKey=apiKey />
+            <cms-browser-component name="SearchIntegrationGoogle" props={ apiKey } />
           </if>
           <else-if(engine === 'bing')>
-            <endeavor-search-bing apiKey=apiKey domain=domain />
+            <cms-browser-component name="SearchIntegrationBing" props={ apiKey, domain } />
           </else-if>
         </div>
       </div>
