@@ -6,5 +6,8 @@
     "dev": "basecms-website dev index.js",
     "build": "basecms-website build",
     "lint": "basecms-website lint"
+  },
+  "dependencies": {
+    "bootstrap": "4.3.1"
   }
 }

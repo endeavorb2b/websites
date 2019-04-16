@@ -5,6 +5,7 @@
   "author": "Jacob Bare <jacob@limit0.io>",
   "license": "MIT",
   "private": true,
+  "root": true,
   "workspaces": [
     "packages/*",
     "sites/*"

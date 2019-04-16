@@ -1,3 +1,5 @@
+const { join } = require('path');
+
 module.exports = {
   extends: 'airbnb-base',
   plugins: [
@@ -9,5 +11,11 @@ module.exports = {
         extensions: ['.js', '.marko'],
       },
     },
+  },
+  rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      { packageDir: [ __dirname, join(__dirname, '../..') ] }
+    ],
   },
 };
