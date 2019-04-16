@@ -9,29 +9,34 @@ $ const adSlots = {
   'gpt-ad-lb2': getAdUnit(site, { name: 'BS', section }),
 };
 
-<theme-pennwell-home-layout section=section>
+<theme-pennwell-website-section-layout section=section>
   <@head>
     <cms-ad-gam-head slots=adSlots />
   </@head>
-  <cms-page-container for="home" class="container-fluid-max">
+
+  <@above-container>
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
-    <endeavor-content-query-hero
-      section-id=section.id
-      limit=5
-      requires-image=true
-    />
+  </@above-container>
 
-    <if(sections.length)>
-      <div class="row">
-        <for|sectionItem| of=sections>
-          <div class="col-lg-4 mb-5">
-            <endeavor-content-query-section-list section-alias=sectionItem.alias header=sectionItem.name />
-          </div>
-        </for>
-      </div>
-    </if>
+  <endeavor-content-query-hero
+    section-id=section.id
+    limit=5
+    requires-image=true
+  />
 
-    <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["home-page-inline"] />
+  <if(sections.length)>
+    <div class="row">
+      <for|sectionItem| of=sections>
+        <div class="col-lg-4 mb-5">
+          <endeavor-content-query-section-list section-alias=sectionItem.alias header=sectionItem.name />
+        </div>
+      </for>
+    </div>
+  </if>
+
+  <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["home-page-inline"] />
+
+  <@below-container>
     <endeavor-content-query-load-more
       skip=5
       section-id=section.id
@@ -40,8 +45,7 @@ $ const adSlots = {
         list: { name: "MR" },
         card: { name: "HP" },
       }
-    >
-    </endeavor-content-query-load-more>
+    />
+  </@below-container>
 
-  </cms-page-container>
-</theme-pennwell-home-layout>
+</theme-pennwell-website-section-layout>
