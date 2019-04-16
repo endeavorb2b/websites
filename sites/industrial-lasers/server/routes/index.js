@@ -20,7 +20,6 @@ module.exports = (app) => {
 
   // Search
   app.get('/search', (_, res) => { res.marko(search); });
-  app.get('/search*', (_, res) => { res.redirect('/search'); });
 
   // Website Sections
   websiteSections(app);
