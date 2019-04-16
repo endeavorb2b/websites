@@ -7,7 +7,7 @@
   },
   "peerDependencies": {
     "@base-cms/marko-web": "~0.7.2",
-    "@endeavorb2b/base-website-common": "^0.3.9"
+    "@endeavorb2b/base-website-common": "^0.4.2"
   },
   "devDependencies": {
     "@base-cms/marko-web": "~0.7.2",
