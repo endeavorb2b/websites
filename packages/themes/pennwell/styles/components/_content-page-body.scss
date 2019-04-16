@@ -49,10 +49,23 @@
       border-radius: $border-radius;
       box-shadow: $theme-box-shadow-sm;
     }
-    .caption {
+    .caption,
+    .credit {
       font-family: $theme-content-sans-serif-font;
-      color: $gray;
+      font-size: $font-size-base;
       letter-spacing: normal;
+    }
+    .caption {
+      color: $gray;
+    }
+    .credit {
+      margin-left: map-get($spacers, 1);
+      font-style: italic;
+      color: $black;
+      &::before {
+        margin-right: map-get($spacers, 1);
+        content: "Credit \2014";
+      }
     }
     p:empty {
       display: none;
@@ -60,5 +73,6 @@
     &:first-child {
       margin-top: 0;
     }
+
   }
 }

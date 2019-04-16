@@ -5,6 +5,7 @@
     font-weight: 600;
     &::after {
       margin-left: map-get($spacers, 1);
+      font-weight: 400;
       content: "\2014";
     }
   }
