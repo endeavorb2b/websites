@@ -1,0 +1,17 @@
+$ const { site } = out.global;
+$ const description = site.get('magazines.description');
+
+<theme-pennwell-document>
+  <@head>
+    <cms-page-title value="Magazines" />
+    <cms-page-description content=description />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="magazine">
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+</theme-pennwell-document>
