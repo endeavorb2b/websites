@@ -55,4 +55,13 @@ img {
   &.lazyload:not([src]) {
     visibility: hidden;
   }
+  // stylelint-disable-next-line selector-no-qualifying-type
+  &.lazyloaded {
+    opacity: 1;
+    transition: opacity 250ms;
+  }
+}
+
+.lazyloading {
+  opacity: 0;
 }
