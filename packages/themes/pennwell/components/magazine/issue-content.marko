@@ -1,0 +1,9 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(input, 'issue');
+
+<endeavor-load-more-header>
+  More in ${issue.name}
+</endeavor-load-more-header>
+
+<endeavor-content-query-load-more-issue-content issue-id=issue.id />

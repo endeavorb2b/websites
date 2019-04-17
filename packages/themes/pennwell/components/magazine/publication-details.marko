@@ -1,0 +1,10 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const publication = getAsObject(input, 'publication');
+
+<div class="row">
+  <cms-image-element obj=publication.coverImage width=160 class="col-3 text-center" />
+  <div class="col">${publication.description}</div>
+</div>
+
+<hr>
