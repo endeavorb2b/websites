@@ -3,7 +3,7 @@
   &__content-link {
     display: block;
     border-radius: $border-radius;
-    box-shadow: $theme-box-shadow-sm;
+    box-shadow: $theme-box-shadow-lg;
     &--placeholder {
       background-color: $primary;
     }
@@ -44,7 +44,6 @@
         @extend .embed-responsive;
         @extend .embed-responsive-21by9;
         width: auto;
-        box-shadow: $theme-box-shadow-lg;
       }
       &__asset-image {
         @extend .embed-responsive-item;
