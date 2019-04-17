@@ -33,6 +33,9 @@
     font-size: 18px;
     font-style: normal;
     line-height: 25px;
+    a {
+      text-decoration: none;
+    }
   }
   &__content-published {
     @include theme-list-text();

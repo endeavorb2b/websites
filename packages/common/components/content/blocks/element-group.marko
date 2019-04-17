@@ -12,7 +12,7 @@ $ const company = getAsObject(input.content, 'company');
   <cms-website-section-name block=block obj=primarySection link=true />
   <cms-content-short-name tag="h5" block=block obj=input.content link=true />
   <if(input.withTeaser)>
-    <cms-content-teaser tag="p" block=block obj=input.content />
+    <cms-content-teaser tag="p" block=block obj=input.content link=true />
   </if>
   <small class=`${block}__row`>
     <if(company.id)>
