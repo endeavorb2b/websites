@@ -2,8 +2,6 @@
   $self: &;
   display: flex;
   flex-direction: column;
-  padding-top: map-get($spacers, 3);
-  padding-bottom: map-get($spacers, 3);
   &__content-short-name {
     min-height: 48px;
     max-height: 48px;
