@@ -1,6 +1,8 @@
 import gql from 'graphql-tag';
 import { asArray } from '@base-cms/utils';
+import { getAsObject } from '@base-cms/object-path';
 
+$ const publication = getAsObject(input, 'publication');
 $ const queryFragment = gql`
   fragment MagazineActiveIssuesQueryFragment on MagazineIssue {
     id
@@ -12,28 +14,43 @@ $ const queryFragment = gql`
     }
   }
 `;
+$ const chunk = (array, size) => {
+  const chunked = [];
+  let index = 0;
+  while (index < array.length) {
+    chunked.push(array.slice(index, size + index));
+    index += size;
+  }
+  return chunked;
+};
 
 $ const block = 'magazine-active-issues';
 $ const params = {
-  name: true,
-  loadMore: true,
+  publicationId: publication.id,
   limit: 12,
   ...input,
   queryFragment,
 };
 
+<endeavor-load-more-header>
+  ${publication.name} Archives
+</endeavor-load-more-header>
+
 <cms-query-magazine-active-issues|{ nodes, pageInfo }| ...params>
-  <div class="row">
-    <for|issue| of=nodes>
-      <div class="col col-md-6 col-lg-4 col-xl-3 text-center">
-        <endeavor-magazine-issue-card issue=issue />
+  <div class="content-query-load-more">
+    $ const chunks = chunk(nodes, 4);
+    <for|chunk| of=chunks>
+      <div class="card-deck mb-5">
+        <for|issue| of=chunk>
+          <endeavor-magazine-issue-card issue=issue />
+        </for>
       </div>
     </for>
-    <endeavor-load-more-button
-      label="Load More Content"
-      block-name=block
-      params=params
-      page-info=pageInfo
-    />
   </div>
+  <endeavor-load-more-button
+    label="Load More Issues"
+    block-name=block
+    params=params
+    page-info=pageInfo
+  />
 </cms-query-magazine-active-issues>

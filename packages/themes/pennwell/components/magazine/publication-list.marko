@@ -1,6 +1,7 @@
 import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
 import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
 
+<div class="row">
 <cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
   <for|publication| of=nodes>
     <div class="col col-md-6">
@@ -39,3 +40,4 @@ import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/f
     </div>
   </for>
 </cms-query-magazine-publications>
+</div>
