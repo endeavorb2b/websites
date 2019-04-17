@@ -60,6 +60,9 @@
         "required": true
       }
     },
+    "endeavor-content-block-list-group-card": {
+      "template": "./list-group-card.marko"
+    },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"
     },

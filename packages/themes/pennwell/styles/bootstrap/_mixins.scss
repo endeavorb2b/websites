@@ -26,6 +26,20 @@
   }
 }
 
+@mixin theme-card() {
+  border: 0;
+  box-shadow: $theme-box-shadow-sm;
+}
+
+@mixin theme-card-header() {
+  font-family: $theme-content-sans-serif-font;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: $primary;
+  border-bottom: 2px solid $black;
+}
+
 @mixin theme-list-text() {
   font-family: $theme-content-sans-serif-font;
   font-size: 14px;
