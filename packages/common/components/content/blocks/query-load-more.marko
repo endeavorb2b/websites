@@ -72,14 +72,7 @@ $ const adListInput = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <div class="card">
-                <endeavor-content-block-primary-image
-                  content=content
-                  modifiers=['card']
-                  options={ w: 630, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                />
-                <endeavor-content-block-element-group class="card-body" content=content />
-              </div>
+              <endeavor-content-block-card content=content />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
