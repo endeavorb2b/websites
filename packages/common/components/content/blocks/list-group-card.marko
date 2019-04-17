@@ -10,6 +10,12 @@ $ const nodes = asArray(input.nodes);
         ${input.header}
       </div>
     </if>
-    <endeavor-content-block-list-group nodes=nodes />
+    <endeavor-content-block-list-group
+      lazyload=input.lazyload
+      modifiers=input.modifiers
+      nodes=nodes
+      with-image=input.withImage
+      with-teaser=input.withTeaser
+    />
   </div>
 </if>

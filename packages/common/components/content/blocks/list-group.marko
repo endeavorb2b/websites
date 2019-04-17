@@ -7,14 +7,15 @@ $ const nodes = asArray(input.nodes);
   <ul class=`${block} list-group list-group-flush`>
     <for|content| of=nodes>
       <li class=`${block}__item list-group-item`>
-        <if(input.withImage)>
-          <endeavor-content-block-primary-image
-            content=content
-            modifiers=['list']
-            options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-          />
-        </if>
-        <endeavor-content-block-element-group content=content />
+        <endeavor-content-block-item
+          content=content
+          image-modifiers=['list']
+          image-options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+          lazyload=input.lazyload
+          modifiers=input.modifiers
+          with-image=input.withImage
+          with-teaser=input.withTeaser
+        />
       </li>
     </for>
   </ul>

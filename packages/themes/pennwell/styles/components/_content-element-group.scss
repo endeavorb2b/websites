@@ -61,11 +61,22 @@
     margin-top: auto;
   }
 
+  &--flexible {
+    #{ $self } {
+      &__content-short-name {
+        min-height: initial;
+      }
+    }
+  }
+
+  &--condensed {
+    padding: map-get($spacers, 2);
+  }
+
   &--hero-card {
     #{ $self } {
       &__content-short-name {
         @include theme-heading(h4);
-        min-height: initial;
         max-height: 64px;
         /* stylelint-disable-next-line selector-max-compound-selectors */
         a {
@@ -74,17 +85,5 @@
         }
       }
     }
-  }
-  &--hero-list,
-  &--related-list,
-  &--condensed-list {
-    #{ $self } {
-      &__content-short-name {
-        min-height: initial;
-      }
-    }
-  }
-  &--condensed-list {
-    padding: map-get($spacers, 2);
   }
 }

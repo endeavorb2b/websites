@@ -27,7 +27,7 @@
         "default-value": "div"
       },
       "@modifiers": "array",
-      "@teaser": {
+      "@with-teaser": {
         "type": "boolean",
         "default-value": false
       }
@@ -60,8 +60,80 @@
         "required": true
       }
     },
+    "endeavor-content-block-item": {
+      "template": "./item.marko",
+      "@content": "object",
+      "@group-class": "string",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array",
+      "@image-modifiers": "array",
+      "@image-options": "object"
+    },
+    "endeavor-content-block-card": {
+      "template": "./card.marko",
+      "@content": "object",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-card-body": {
+      "template": "./card-body.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
     "endeavor-content-block-list-group-card": {
-      "template": "./list-group-card.marko"
+      "template": "./list-group-card.marko",
+      "@nodes": "array",
+      "@header": "string",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
     },
     "endeavor-content-block-list-group": {
       "template": "./list-group.marko",
@@ -69,7 +141,16 @@
       "@with-image": {
         "type": "boolean",
         "default-value": true
-      }
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
     },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"

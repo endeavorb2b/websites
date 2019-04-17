@@ -19,8 +19,4 @@
       @include make-col(4);
     }
   }
-  .card {
-    border: 0;
-    box-shadow: $theme-box-shadow-sm;
-  }
 }
