@@ -1,0 +1,22 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(data, 'issue');
+
+<theme-pennwell-magazine-issue-layout issue=issue>
+  <@head>
+    <cms-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="LB1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-magazine-nav target=issue />
+
+  <theme-pennwell-magazine-issue-details issue=issue />
+
+  <@below-container>
+    <theme-pennwell-magazine-issue-content issue=issue />
+  </@below-container>
+
+</theme-pennwell-magazine-issue-layout>
