@@ -1,0 +1,25 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const magazines = { canonicalPath: '/magazine' };
+$ const target = getAsObject(input, 'target');
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="text-uppercase breadcrumb-item small">
+      <if(target.id)>
+        <cms-link-element to=magazines>Magazines</cms-link-element>
+      </if>
+      <else>
+        <span>Magazines</span>
+      </else>
+    </li>
+    <if(target.id)>
+      <if(target.publication)>
+        <li class="text-uppercase breadcrumb-item small">
+          <cms-link-element to=target.publication>${target.publication.name}</cms-link-element>
+        </li>
+      </if>
+      <li class="text-uppercase breadcrumb-item small">${target.name}</li>
+    </if>
+  </ol>
+</nav>

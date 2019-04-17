@@ -2,6 +2,9 @@
   "tags": {
     "endeavor-magazine-query-latest-issue": {
       "template": "./query-latest-issue.marko"
+    },
+    "endeavor-magazine-block-query-active-issues": {
+      "template": "./query-active-issues.marko"
     }
   }
 }

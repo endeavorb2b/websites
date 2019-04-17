@@ -5,6 +5,7 @@
     "./load-more/marko.json",
     "./magazine/marko.json",
     "./navbars/marko.json",
+    "./magazine/marko.json",
     "./search/marko.json"
   ]
 }
