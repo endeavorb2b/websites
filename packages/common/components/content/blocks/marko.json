@@ -63,6 +63,9 @@
     "endeavor-content-block-list-group-card": {
       "template": "./list-group-card.marko"
     },
+    "endeavor-content-block-list-group": {
+      "template": "./list-group.marko"
+    },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"
     },

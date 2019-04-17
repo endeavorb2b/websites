@@ -4,8 +4,4 @@
   &__header {
     @include theme-card-header();
   }
-
-  &__item {
-    display: flex;
-  }
 }
