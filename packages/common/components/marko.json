@@ -6,6 +6,7 @@
     "./magazine/marko.json",
     "./navbars/marko.json",
     "./magazine/marko.json",
+    "./subscribe/marko.json",
     "./search/marko.json"
   ]
 }

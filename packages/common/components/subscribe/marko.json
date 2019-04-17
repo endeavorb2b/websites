@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-subscribe-magazine": {
+      "template": "./magazine.marko"
+    }
+  }
+}

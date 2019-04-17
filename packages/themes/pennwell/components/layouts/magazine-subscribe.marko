@@ -1,0 +1,18 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const publication = getAsObject(input, 'publication');
+$ const { site } = out.global;
+
+<theme-pennwell-document>
+  <@head>
+    <cms-page-title value=`Subscribe to ${publication.name}` />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="magazine-publication" data=publication>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+</theme-pennwell-document>

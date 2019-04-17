@@ -23,6 +23,9 @@
     },
     "theme-pennwell-magazine-publication-layout": {
       "template": "./magazine-publication.marko"
+    },
+    "theme-pennwell-magazine-subscribe-layout": {
+      "template": "./magazine-subscribe.marko"
     }
   }
 }
