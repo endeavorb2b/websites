@@ -1,0 +1,84 @@
+import gql from 'graphql-tag';
+import { getAsObject } from '@base-cms/object-path';
+import { asArray, asObject } from '@base-cms/utils';
+
+$ const queryFragment = gql`
+  fragment ContentBlockQueryFeedListFragment on Content {
+    id
+    type
+    shortName
+    canonicalPath
+    published
+    company {
+      id
+      type
+      name
+      canonicalPath
+    }
+    primarySection {
+      id
+      name
+      fullName
+      canonicalPath
+    }
+    primaryImage {
+      id
+      src
+      alt
+    }
+    ... on Authorable {
+      authors {
+        edges {
+          node {
+            id
+            name
+            type
+            canonicalPath
+          }
+        }
+      }
+    }
+  }
+`;
+
+$ const block = 'content-query-feed-list';
+$ const params = {
+  limit: 10,
+  ...input,
+  queryFragment,
+};
+$ const section = asObject(input.section);
+
+<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
+  $ const listNodes = asArray(nodes);
+  <if(listNodes.length)>
+    <div class=block>
+
+      <if(listNodes.length)>
+
+        <div class="card">
+          <if(input.header)>
+            <div class="card-header">
+              ${input.header}
+            </div>
+          </if>
+          <ul class="list-group list-group-flush">
+            <for|content| of=listNodes>
+              <li class="list-group-item">
+                <endeavor-content-block-primary-image
+                  content=content
+                  modifiers=['list']
+
+                  options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                />
+                <endeavor-content-block-element-group content=content />
+              </li>
+            </for>
+          </ul>
+        </div>
+
+      </if>
+
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

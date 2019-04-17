@@ -67,6 +67,12 @@
     },
     "endeavor-content-query-section-list": {
       "template": "./query-section-list.marko"
+    },
+    "endeavor-content-query-horiz-section-list": {
+      "template": "./query-horiz-section-list.marko"
+    },
+    "endeavor-content-query-feed-list": {
+      "template": "./query-feed-list.marko"
     }
   }
 }
