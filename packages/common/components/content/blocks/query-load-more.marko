@@ -97,21 +97,7 @@ $ const adListInput = {
           </div>
 
           <div class=`${block}__col-list`>
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <for|content| of=listNodes>
-                  <li class="list-group-item">
-                    <endeavor-content-block-primary-image
-                      content=content
-                      modifiers=['list']
-
-                      options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                    />
-                    <endeavor-content-block-element-group content=content />
-                  </li>
-                </for>
-              </ul>
-            </div>
+            <endeavor-content-block-list-group-card nodes=listNodes />
           </div>
         </div>
       </if>

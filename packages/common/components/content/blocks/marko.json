@@ -78,8 +78,8 @@
     "endeavor-content-query-horiz-section-list": {
       "template": "./query-horiz-section-list.marko"
     },
-    "endeavor-content-query-feed-list": {
-      "template": "./query-feed-list.marko"
+    "endeavor-content-query-feed": {
+      "template": "./query-feed.marko"
     }
   }
 }
