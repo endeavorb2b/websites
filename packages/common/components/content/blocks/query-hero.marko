@@ -6,7 +6,7 @@ $ const queryFragment = gql`
     id
     type
     shortName
-    teaser(input: { maxLength: null })
+    teaser(input: { maxLength: 500, useFallback: false, truncatedSuffix: "" })
     canonicalPath
     published
     company {

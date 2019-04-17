@@ -42,9 +42,9 @@ $ const queryFragment = gql`
 
 $ const block = 'content-query-section-list';
 $ const params = {
-  ...input,
   limit: 4,
   requiresImage: true,
+  ...input,
   queryFragment,
 };
 
