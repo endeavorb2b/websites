@@ -58,4 +58,18 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:sdje-2o3phk',
   },
+  magazines: {
+    ils: {
+      name: 'Industrial Laser Solutions',
+      subscribeUrl: 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=ILSD&promoCode=WS702',
+    },
+    ilscn: {
+      name: 'Industrial Laser Solutions China',
+      subscribeUrl: 'http://www.industrysourcing.com/Big5/china/Subscription.asp?magazine_code=ILS',
+    },
+    ilsjp: {
+      name: 'Industrial Laser Solutions Japan',
+      subscribeUrl: 'http://www.ils-japan.jp/subscription.html',
+    },
+  },
 };

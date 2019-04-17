@@ -56,4 +56,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:m_5jkc8w8fq',
   },
+  magazines: {
+    name: 'LEDs Magazine',
+    subscribeUrl: 'https://eforms.kmpsgroup.com/PaidForms/paidform.aspx?formid=94&promoCode-NW2019PD=&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019PD&utm_content=2019-02-25',
+  },
 };

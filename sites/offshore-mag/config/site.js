@@ -60,4 +60,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:jon24h47vcu',
   },
+  magazines: {
+    name: 'Offshore',
+    subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=84e20b11-0e4c-4b5b-9fbb-a86d1fff43c2&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
+  },
 };

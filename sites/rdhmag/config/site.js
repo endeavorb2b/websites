@@ -55,4 +55,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:uz62nndii_e',
   },
+  magazines: {
+    name: 'Registered Dential Hygienist',
+    subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
+  },
 };

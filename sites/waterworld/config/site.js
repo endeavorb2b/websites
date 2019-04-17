@@ -55,4 +55,30 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:anjajr3pydu',
   },
+  magazines: {
+    ww: {
+      name: 'WaterWorld',
+      subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=251e2ac3-4c6a-495d-a7d8-5178dc76acd5&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
+    },
+    iww: {
+      name: 'Industrial WaterWorld',
+      subscribeUrl: 'https://formdesigner.ecn5.com/GetForm?tokenuid=0aaf9d77-861e-46ba-905b-43ad58b691cc&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
+    },
+    wwi: {
+      name: 'Water & Wastewater International',
+      subscribeUrl: 'about:blank',
+    },
+    uwi: {
+      name: 'Urban Water Management',
+      subscribeUrl: 'about:blank',
+    },
+    mb: {
+      name: 'Membranes',
+      subscribeUrl: 'about:blank',
+    },
+    wum: {
+      name: 'Water Utility Management',
+      subscribeUrl: 'about:blank',
+    },
+  },
 };

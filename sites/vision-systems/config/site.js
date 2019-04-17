@@ -57,4 +57,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:etkxb9ohz_w',
   },
+  magazines: {
+    name: 'Vision Systems Design',
+    subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=b388925c-aedf-4e46-82ea-590a0c59355a&promoCode=NW9401&cmpid=website_sub_vsd_nw9401_apr-3-2018',
+  },
 };

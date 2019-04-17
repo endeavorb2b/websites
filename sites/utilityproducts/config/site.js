@@ -56,4 +56,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:mb2grfhfx08',
   },
+  magazines: {
+    name: 'Utility Products',
+    subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=a9514072-dfbd-488d-8148-b0477928fed8&promoCode=NW8301&cmpid=website_sub_up_nw8301_mar-14-2018',
+  },
 };

@@ -55,4 +55,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:tlips421iqi',
   },
+  magazines: {
+    name: 'BioOptics World',
+    subscribeUrl: 'https://formdesigner.ecn5.com/GetForm?tokenuid=12d55674-b05c-4726-864f-83b3402778a1&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+  },
 };

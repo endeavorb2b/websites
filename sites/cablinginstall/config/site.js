@@ -58,4 +58,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:l9lnow_qnxy',
   },
+  magazines: {
+    name: 'Cabling Installation & Maintenance',
+    subscribeUrl: 'https://formdesigner.ecn5.com/GetForm?tokenuid=18dc6325-f595-42d0-9231-6742e592190b&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=%20NW2019&utm_content=2019-02-25',
+  },
 };

@@ -5,7 +5,7 @@ module.exports = (app) => {
   //   res.marko(subscribe);
   // });
 
-  app.get('/subscribe/print', (req, res) => {
+  app.get('/subscribe/print/:key(ils|ilscn|ilsjp)', (req, res) => {
     const { key } = req.params;
     res.marko(subscribeMagazine, { key });
   });

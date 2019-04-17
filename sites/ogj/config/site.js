@@ -55,4 +55,8 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:t6qdcjgnqpk',
   },
+  magazines: {
+    name: 'Oil & Gas Journal',
+    subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=2455740f-950f-4ec5-b983-7088b8e2d84d&promoCode=NE9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=NE9WEB&utm_content=2019-02-26',
+  },
 };
