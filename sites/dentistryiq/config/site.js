@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/diq/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/dentistry-iq' },
+    { provider: 'twitter', href: 'https://twitter.com/dentistryiq' },
+    { provider: 'facebook', href: 'https://www.facebook.com/DentistryIQ' },
+  ],
   primaryNavItems: [
     { href: '/practice-management', label: 'Practice Management' },
     { href: '/assistants', label: 'Assistants' },

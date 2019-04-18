@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/de/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/dental-economics?trk=biz-brand-tree-co-name' },
+    { provider: 'twitter', href: 'https://twitter.com/dentalmagazine' },
+    { provider: 'facebook', href: 'https://www.facebook.com/DentalEconomics' },
+  ],
   primaryNavItems: [
     { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
     { href: '/practice', label: 'Practice' },

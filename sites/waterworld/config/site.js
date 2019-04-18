@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/grp/home?gid=1965670' },
+    { provider: 'twitter', href: 'https://twitter.com/WaterWorld' },
+    { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
+  ],
   primaryNavItems: [
     { href: '/municipal', label: 'Municipal' },
     { href: '/industrial', label: 'Industrial' },

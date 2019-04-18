@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/Laser-Focus-World-2896249' },
+    { provider: 'twitter', href: 'https://twitter.com/LaserFocusWorld' },
+    { provider: 'facebook', href: 'https://www.facebook.com/pages/Laser-Focus-World/126899915297' },
+  ],
   primaryNavItems: [
     { href: '/detectors-imaging', label: 'Detectors & Imaging' },
     { href: '/lasers-sources', label: 'Lasers & Sources' },

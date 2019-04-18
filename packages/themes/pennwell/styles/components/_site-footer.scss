@@ -1,0 +1,72 @@
+// Without access to change body to flex col and utilize flex-shrink, abs pos the footer
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.container-fluid-max {
+  flex-shrink: 0!important;
+}
+
+.site-footer {
+  &--site-a {
+    @extend .navbar-dark;
+    font-family: $theme-content-sans-serif-font;
+    background-color: $primary;
+    box-shadow: $box-shadow;
+    opacity: .98;
+
+    .footer-brand {
+      margin-bottom: map-get($spacers, 3);
+      display: inline-block;
+      img {
+        filter: sepia(1) grayscale(1);
+        height: 80px;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      margin: map-get($spacers, 3) 0;
+      justify-content: center;
+
+      .icon {
+        margin: 0 map-get($spacers, 3);
+        svg {
+          width: 40px;
+          fill: $white;
+        }
+      }
+      .icon:hover svg {
+        background-color: $white;
+        border-radius: 5px;
+      }
+      // https://simpleicons.org
+      .icon.facebook:hover svg {
+        fill: map-get($brand-colors, facebook);
+      }
+      .icon.linkedin:hover svg {
+        fill: map-get($brand-colors, linkedin);
+      }
+      .icon.twitter:hover svg {
+        fill: map-get($brand-colors, twitter);;
+        background-color: transparent;
+      }
+    }
+
+    .navbar-nav {
+      margin: auto 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .nav-item {
+        margin: 0 map-get($spacers, 3);
+      }
+    }
+
+  }
+}

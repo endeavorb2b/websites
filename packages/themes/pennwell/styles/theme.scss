@@ -25,6 +25,7 @@ $spacers: (
   block: $block-spacer
 ) !default;
 
+@import "variables";
 @import "bootstrap";
 
 $theme-site-nav-primary-bg-color: $primary !default;
