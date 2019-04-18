@@ -1,17 +1,11 @@
 const queryFragment = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/website-section-page');
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const section = require('../templates/website-section');
-const index = require('../templates/index');
-const index3 = require('../templates/index3');
+const indexAlt = require('../templates/index-alt');
 
 module.exports = (app) => {
   app.get('/:alias(transmission-distribution)', withWebsiteSection({
-    template: index,
-    queryFragment,
-  }));
-
-  app.get('/:alias(vehicles-accessories)', withWebsiteSection({
-    template: index3,
+    template: indexAlt,
     queryFragment,
   }));
 

@@ -5,7 +5,7 @@
     @extend .navbar-expand-lg;
     font-family: $theme-content-sans-serif-font;
     background-color: $primary;
-    box-shadow: $box-shadow;
+    box-shadow: $theme-box-shadow-lg;
     opacity: .98;
     .navbar-brand {
       padding-bottom: 0;

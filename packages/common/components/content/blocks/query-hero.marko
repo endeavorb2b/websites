@@ -56,25 +56,12 @@ $ const params = {
       <div class="row">
         <if(heroNode.id)>
           <div class=`${block}__main`>
-            <div class="card">
-              <endeavor-content-block-primary-image
-                content=heroNode
-                modifiers=['card']
-                options={ w: 630, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-              />
-              <endeavor-content-block-element-group class="card-body" modifiers=['hero-card'] teaser=true content=heroNode />
-            </div>
+            <endeavor-content-block-card modifiers=["hero-card", "flexible"] content=heroNode lazyload=false with-teaser=true />
           </div>
         </if>
         <if(listNodes.length)>
           <div class=`${block}__list`>
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <for|content| of=listNodes>
-                  <endeavor-content-block-element-group tag="li" class="list-group-item" modifiers=['hero-list'] content=content />
-                </for>
-              </ul>
-            </div>
+            <endeavor-content-block-vertical-list modifiers=["flexible"] nodes=listNodes />
           </div>
         </if>
       </div>

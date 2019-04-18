@@ -1,6 +1,6 @@
 .content-query-hero {
   &__main {
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
       @include make-col(7);
@@ -10,7 +10,7 @@
     }
   }
   &__list {
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
       @include make-col(5);
@@ -20,7 +20,6 @@
     }
   }
   .card {
-    border: 0;
-    box-shadow: $theme-box-shadow-sm;
+    min-height: 100%;
   }
 }

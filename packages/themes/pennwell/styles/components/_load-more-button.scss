@@ -2,7 +2,7 @@
   padding-bottom: map-get($spacers, 3);
   text-align: center;
   .btn {
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
     color: $white;
     background-color: $primary;
     border-color: $primary;

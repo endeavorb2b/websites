@@ -6,6 +6,10 @@
         "type": "object",
         "required": true
       },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@modifiers": "array",
       "@options": "object",
       "@width": "number",
@@ -23,7 +27,7 @@
         "default-value": "div"
       },
       "@modifiers": "array",
-      "@teaser": {
+      "@with-teaser": {
         "type": "boolean",
         "default-value": false
       }
@@ -56,6 +60,104 @@
         "required": true
       }
     },
+    "endeavor-content-block-item": {
+      "template": "./item.marko",
+      "@content": "object",
+      "@group-class": "string",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array",
+      "@image-modifiers": "array",
+      "@image-options": "object"
+    },
+    "endeavor-content-block-card": {
+      "template": "./card.marko",
+      "@content": "object",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-card-body": {
+      "template": "./card-body.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-list-group-card": {
+      "template": "./list-group-card.marko",
+      "@nodes": "array",
+      "@header": "string",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-list-group": {
+      "template": "./list-group.marko",
+      "@nodes": "array",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-teaser": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-vertical-list": {
+      "template": "./vertical-list.marko"
+    },
+    "endeavor-content-block-horizontal-list": {
+      "template": "./horizontal-list.marko"
+    },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"
     },
@@ -68,11 +170,8 @@
     "endeavor-content-query-section-list": {
       "template": "./query-section-list.marko"
     },
-    "endeavor-content-query-horiz-section-list": {
-      "template": "./query-horiz-section-list.marko"
-    },
-    "endeavor-content-query-feed-list": {
-      "template": "./query-feed-list.marko"
+    "endeavor-content-query-feed": {
+      "template": "./query-feed.marko"
     }
   }
 }

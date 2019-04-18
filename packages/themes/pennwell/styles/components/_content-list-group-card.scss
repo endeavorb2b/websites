@@ -1,0 +1,7 @@
+.content-list-group-card {
+  @include theme-card();
+
+  &__header {
+    @include theme-card-header();
+  }
+}

@@ -1,14 +1,13 @@
 .ad-container {
   text-align: center;
   &--top-of-page {
-    margin-top: -#{map-get($spacers, 4)};
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
   }
   &--content-page-right {
-    margin-bottom: map-get($spacers, 4);
+    margin-bottom: map-get($spacers, block);
   }
   &--home-page-inline {
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
   }
   &--in-card {
     display: flex;
@@ -17,6 +16,23 @@
     > div {
       margin-top: auto;
       margin-bottom: auto;
+    }
+  }
+  iframe {
+    box-shadow: $theme-ads-box-shadow;
+  }
+}
+
+.ad-rail {
+  padding-top: map-get($spacers, block);
+  padding-bottom: map-get($spacers, block);
+
+  .ad-container {
+    &:not(:first-child) {
+      margin-bottom: map-get($spacers, 5);
+    }
+    &:not(:last-child) {
+      margin-bottom: map-get($spacers, 5);
     }
   }
 }

@@ -44,7 +44,7 @@ $ const queryFragment = gql`
 $ const block = 'content-query-load-more';
 $ const params = {
   ...input,
-  limit: 14,
+  limit: 15,
   queryFragment,
 };
 $ const section = asObject(input.section);
@@ -72,14 +72,7 @@ $ const adListInput = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <div class="card">
-                <endeavor-content-block-primary-image
-                  content=content
-                  modifiers=['card']
-                  options={ w: 630, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                />
-                <endeavor-content-block-element-group class="card-body" content=content />
-              </div>
+              <endeavor-content-block-card content=content />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
@@ -97,21 +90,7 @@ $ const adListInput = {
           </div>
 
           <div class=`${block}__col-list`>
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <for|content| of=listNodes>
-                  <li class="list-group-item">
-                    <endeavor-content-block-primary-image
-                      content=content
-                      modifiers=['list']
-
-                      options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                    />
-                    <endeavor-content-block-element-group content=content />
-                  </li>
-                </for>
-              </ul>
-            </div>
+            <endeavor-content-block-list-group-card header=input.header nodes=listNodes />
           </div>
         </div>
       </if>

@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-magazine-query-latest-issue": {
+      "template": "./query-latest-issue.marko"
+    }
+  }
+}

@@ -3,6 +3,11 @@
     @include content-body();
     padding-right: map-get($spacers, 3);
     padding-left: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, block);
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+      padding-left: 0;
+    }
     .caption,
     .credit {
       font-family: $theme-content-sans-serif-font;
