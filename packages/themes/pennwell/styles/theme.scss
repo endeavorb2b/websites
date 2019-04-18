@@ -42,14 +42,6 @@ $theme-site-nav-secondary-bg-color: $primary !default;
   padding-top: map-get($spacers, block);
 }
 
-.load-more-header {
-  @include theme-heading(h4);
-  margin-bottom: map-get($spacers, 3);
-  font-family: $theme-content-sans-serif-font;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 img {
   // stylelint-disable-next-line selector-no-qualifying-type
   &.lazyload:not([src]) {
