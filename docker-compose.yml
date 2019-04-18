@@ -62,6 +62,7 @@ services:
       EXPOSED_PORT: 12151
       LIVERELOAD_PORT: 35151
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ee.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ee.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ee.graphql.base-cms.io}
     ports:
       - "12151:80"
@@ -77,6 +78,7 @@ services:
       EXPOSED_PORT: 12152
       LIVERELOAD_PORT: 35152
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ofcr.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ofcr.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ofcr.graphql.base-cms.io}
     ports:
       - "12152:80"
@@ -92,6 +94,7 @@ services:
       EXPOSED_PORT: 12153
       LIVERELOAD_PORT: 35153
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-up.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-up.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-up.graphql.base-cms.io}
     ports:
       - "12153:80"
@@ -107,6 +110,7 @@ services:
       EXPOSED_PORT: 12154
       LIVERELOAD_PORT: 35154
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-de.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-de.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-de.graphql.base-cms.io}
     ports:
       - "12154:80"
@@ -122,6 +126,7 @@ services:
       EXPOSED_PORT: 12155
       LIVERELOAD_PORT: 35155
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-bow.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-bow.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-bow.graphql.base-cms.io}
     ports:
       - "12155:80"
@@ -137,6 +142,7 @@ services:
       EXPOSED_PORT: 12156
       LIVERELOAD_PORT: 35156
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-btr.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-btr.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-btr.graphql.base-cms.io}
     ports:
       - "12156:80"
@@ -152,6 +158,7 @@ services:
       EXPOSED_PORT: 12157
       LIVERELOAD_PORT: 35157
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-cim.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-cim.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-cim.graphql.base-cms.io}
     ports:
       - "12157:80"
@@ -167,6 +174,7 @@ services:
       EXPOSED_PORT: 12158
       LIVERELOAD_PORT: 35158
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-diq.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-diq.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-diq.graphql.base-cms.io}
     ports:
       - "12158:80"
@@ -182,6 +190,7 @@ services:
       EXPOSED_PORT: 12159
       LIVERELOAD_PORT: 35159
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ias.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ias.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ias.graphql.base-cms.io}
     ports:
       - "12159:80"
@@ -197,6 +206,7 @@ services:
       EXPOSED_PORT: 12160
       LIVERELOAD_PORT: 35160
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ils.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ils.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ils.graphql.base-cms.io}
     ports:
       - "12160:80"
@@ -212,6 +222,7 @@ services:
       EXPOSED_PORT: 12161
       LIVERELOAD_PORT: 35161
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-leds.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-leds.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-leds.graphql.base-cms.io}
     ports:
       - "12161:80"
@@ -227,6 +238,7 @@ services:
       EXPOSED_PORT: 12162
       LIVERELOAD_PORT: 35162
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-lfw.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-lfw.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-lfw.graphql.base-cms.io}
     ports:
       - "12162:80"
@@ -242,6 +254,7 @@ services:
       EXPOSED_PORT: 12163
       LIVERELOAD_PORT: 35163
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-lw.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-lw.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-lw.graphql.base-cms.io}
     ports:
       - "12163:80"
@@ -257,6 +270,7 @@ services:
       EXPOSED_PORT: 12164
       LIVERELOAD_PORT: 35164
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-mae.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-mae.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-mae.graphql.base-cms.io}
     ports:
       - "12164:80"
@@ -272,6 +286,7 @@ services:
       EXPOSED_PORT: 12165
       LIVERELOAD_PORT: 35165
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-os.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-os.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-os.graphql.base-cms.io}
     ports:
       - "12165:80"
@@ -287,6 +302,7 @@ services:
       EXPOSED_PORT: 12166
       LIVERELOAD_PORT: 35166
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ogj.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ogj.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ogj.graphql.base-cms.io}
     ports:
       - "12166:80"
@@ -302,6 +318,7 @@ services:
       EXPOSED_PORT: 12167
       LIVERELOAD_PORT: 35167
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-rdh.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-rdh.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-rdh.graphql.base-cms.io}
     ports:
       - "12167:80"
@@ -317,6 +334,7 @@ services:
       EXPOSED_PORT: 12168
       LIVERELOAD_PORT: 35168
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-pia.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-pia.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-pia.graphql.base-cms.io}
     ports:
       - "12168:80"
@@ -332,6 +350,7 @@ services:
       EXPOSED_PORT: 12169
       LIVERELOAD_PORT: 35169
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-su.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-su.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-su.graphql.base-cms.io}
     ports:
       - "12169:80"
@@ -347,6 +366,7 @@ services:
       EXPOSED_PORT: 12170
       LIVERELOAD_PORT: 35170
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-vsd.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-vsd.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-vsd.graphql.base-cms.io}
     ports:
       - "12170:80"
@@ -362,6 +382,7 @@ services:
       EXPOSED_PORT: 12171
       LIVERELOAD_PORT: 35171
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ww.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-ww.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ww.graphql.base-cms.io}
     ports:
       - "12171:80"
@@ -377,6 +398,7 @@ services:
       EXPOSED_PORT: 12172
       LIVERELOAD_PORT: 35172
       SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-pmm.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://ebm-pmm.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-pmm.graphql.base-cms.io}
     ports:
       - "12172:80"
