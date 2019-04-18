@@ -26,6 +26,10 @@ $spacers: (
 ) !default;
 
 @import "bootstrap";
+
+$theme-site-nav-primary-bg-color: $primary !default;
+$theme-site-nav-secondary-bg-color: $primary !default;
+
 @import "components";
 @import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 @import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
