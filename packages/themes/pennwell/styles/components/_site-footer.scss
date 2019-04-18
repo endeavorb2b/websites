@@ -1,58 +1,78 @@
 .site-footer {
-  &--site-a {
-    @extend .navbar-dark;
-    font-family: $theme-content-sans-serif-font;
-    background-color: $primary;
-    box-shadow: $box-shadow;
-    opacity: .98;
+  @extend .navbar-dark;
+  padding-top: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 4);
+  margin-top: auto;
+  font-family: $theme-content-sans-serif-font;
+  background-color: $primary;
+  box-shadow: $box-shadow;
+  opacity: .98;
 
-    .footer-brand {
-      display: inline-block;
-      margin-bottom: map-get($spacers, 3);
-      img {
-        height: 80px;
-        filter: sepia(1) grayscale(1);
-      }
+  &__container {
+    @include make-container();
+    text-align: center;
+  }
+
+  &__brand {
+    display: inline-block;
+    img {
+      height: 80px;
+      filter: sepia(1) grayscale(1);
     }
+  }
 
-    .social-icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: map-get($spacers, 3) 0;
+  &__social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: map-get($spacers, 3);
+  }
 
-      .icon {
-        margin: 0 map-get($spacers, 3);
-        svg {
-          width: 40px;
-          fill: $white;
-        }
-      }
-      .icon:hover svg {
+  &__social-icon {
+    $transition: fill ease 250ms, background-color ease 250ms;
+    margin: 0 map-get($spacers, 3);
+    svg {
+      width: 40px;
+      border-radius: $border-radius;
+      fill: $white;
+      transition: $transition;
+    }
+    &--facebook {
+      &:hover svg {
         background-color: $white;
-        border-radius: 5px;
-      }
-      // https://simpleicons.org
-      .icon.facebook:hover svg {
         fill: map-get($brand-colors, facebook);
       }
-      .icon.linkedin:hover svg {
+    }
+    &--linkedin {
+      &:hover svg {
+        background-color: $white;
         fill: map-get($brand-colors, linkedin);
       }
-      .icon.twitter:hover svg {
-        background-color: transparent;
+    }
+    &--twitter {
+      &:hover svg {
         fill: map-get($brand-colors, twitter);
       }
     }
+  }
 
-    .navbar-nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: auto 0;
-      .nav-item {
-        margin: 0 map-get($spacers, 3);
-      }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: map-get($spacers, 3);
+  }
+
+  &__link {
+    margin: 0 map-get($spacers, 3);
+    a {
+      padding: 0;
     }
+  }
+
+  &__copyright {
+    margin-top: map-get($spacers, 3);
+    color: $light;
+    font-size: $font-size-sm;
   }
 }
