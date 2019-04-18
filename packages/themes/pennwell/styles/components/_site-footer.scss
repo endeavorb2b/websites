@@ -1,16 +1,3 @@
-// Without access to change body to flex col and utilize flex-shrink, abs pos the footer
-html {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.container-fluid-max {
-  flex-shrink: 0!important;
-}
-
 .site-footer {
   &--site-a {
     @extend .navbar-dark;

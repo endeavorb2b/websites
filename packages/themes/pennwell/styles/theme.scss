@@ -33,6 +33,16 @@ $theme-site-nav-secondary-bg-color: $primary !default;
 
 @import "components";
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .container-fluid-max {
   @include make-container();
   @include media-breakpoint-up("xl", $grid-breakpoints) {
