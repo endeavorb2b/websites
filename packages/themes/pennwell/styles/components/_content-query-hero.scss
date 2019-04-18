@@ -19,4 +19,7 @@
       @include make-col(4);
     }
   }
+  .card {
+    min-height: 100%;
+  }
 }

@@ -1,6 +1,6 @@
 .content-vertical-list {
+  min-height: 100%;
   @include theme-card();
-  margin-bottom: map-get($spacers, block);
 
   &__header {
     @include theme-card-header();
