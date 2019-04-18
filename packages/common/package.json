@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": true,
   "dependencies": {
     "@base-cms/object-path": "^0.7.0",
