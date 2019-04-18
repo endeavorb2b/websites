@@ -3,6 +3,7 @@
   $self: &;
   display: flex;
   flex-direction: column;
+  width: 100%;
   &__content-short-name {
     min-height: 48px;
     max-height: 48px;
@@ -42,7 +43,11 @@
     font-style: normal;
     line-height: 25px;
     a {
+      color: $black;
       text-decoration: none;
+      &:hover {
+        color: $black;
+      }
     }
     @include media-breakpoint-down(sm) {
       font-size: 16px;
