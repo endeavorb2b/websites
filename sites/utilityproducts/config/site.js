@@ -40,5 +40,4 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:mb2grfhfx08',
   },
-  // company: 'Endeavor Business Media, LLC',
 };
