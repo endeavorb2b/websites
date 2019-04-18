@@ -47,13 +47,13 @@ body {
       }
       // https://simpleicons.org
       .icon.facebook:hover svg {
-        fill: #3B5998;
+        fill: map-get($brand-colors, facebook);
       }
       .icon.linkedin:hover svg {
-        fill: #0077B5;
+        fill: map-get($brand-colors, linkedin);
       }
       .icon.twitter:hover svg {
-        fill: #1DA1F2;
+        fill: map-get($brand-colors, twitter);;
         background-color: transparent;
       }
     }

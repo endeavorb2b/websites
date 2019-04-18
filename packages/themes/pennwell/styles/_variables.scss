@@ -1,0 +1,27 @@
+$facebook:      #3b5999 !default;
+$twitter:       #1da1f2 !default;
+$googleplus:    #dd4b39 !default;
+$instagram:     #e4405f !default;
+$pinterest:     #bd081c !default;
+$youtube:       #cd201f !default;
+$slack:         #3aaf85 !default;
+$dribbble:      #ea4c89 !default;
+$github:        #222222 !default;
+$linkedin:      #0077B5 !default;
+
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    "facebook":     $facebook,
+    "twitter":      $twitter,
+    "googleplus":   $googleplus,
+    "instagram":    $instagram,
+    "pinterest":    $pinterest,
+    "youtube":      $youtube,
+    "slack":        $slack,
+    "dribbble":     $dribbble,
+    "linkedin":     $linkedin,
+    "github":       $github
+  ),
+  $brand-colors
+);
