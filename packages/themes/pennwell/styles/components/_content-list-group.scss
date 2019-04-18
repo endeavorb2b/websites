@@ -1,5 +1,6 @@
 .content-list-group {
   &__item {
     display: flex;
+    @include theme-item();
   }
 }

@@ -8,13 +8,18 @@
     @include theme-heading(h6);
     @include media-breakpoint-down(sm) {
       min-height: initial;
+      max-height: 60px;
     }
+
     a {
       display: block;
       max-height: 48px;
       overflow: hidden;
       color: $black;
       text-overflow: ellipsis;
+      @include media-breakpoint-down(sm) {
+        max-height: 60px;
+      }
     }
   }
   &__website-section-name {
@@ -72,19 +77,21 @@
     }
   }
 
-  &--condensed {
-    padding: map-get($spacers, 2);
-  }
-
   &--hero-card {
     #{ $self } {
       &__content-short-name {
         @include theme-heading(h4);
+        @include media-breakpoint-down(sm) {
+          max-height: 56px;
+        }
         max-height: 64px;
         /* stylelint-disable-next-line selector-max-compound-selectors */
         a {
           display: block;
           max-height: 64px;
+          @include media-breakpoint-down(sm) {
+            max-height: 56px;
+          }
         }
       }
     }

@@ -18,27 +18,27 @@
     opacity: .2;
   }
   &--list {
-    width: 196px;
-    height: 84px;
+    $width: 176px;
+    $height: 99px;
     margin-top: auto;
-    margin-right: .75rem;
+    margin-right: $list-group-item-padding-y;
     margin-bottom: auto;
-    margin-left: -1.75rem;
+    margin-left: -#{$list-group-item-padding-x - $list-group-item-padding-y};
     #{ $self } {
-      &__placeholder {
-        width: 196px;
-        height: 84px;
+      &__content-link {
+        width: $width;
+        height: $height;
       }
-      &__asset-image {
-        width: 196px;
-        height: 84px;
+      &__placeholder {
+        width: $width;
+        height: $height;
       }
     }
   }
   &--card {
-    margin-top: -.8rem;
-    margin-right: .8rem;
-    margin-left: .8rem;
+    margin-top: $list-group-item-padding-y;
+    margin-right: $list-group-item-padding-y;
+    margin-left: $list-group-item-padding-y;
     #{ $self } {
       &__content-link {
         @extend .embed-responsive;

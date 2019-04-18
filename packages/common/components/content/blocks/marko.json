@@ -152,6 +152,9 @@
       },
       "@modifiers": "array"
     },
+    "endeavor-content-block-vertical-list": {
+      "template": "./vertical-list.marko"
+    },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"
     },

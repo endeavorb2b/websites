@@ -28,7 +28,7 @@ $ const adSlots = {
   />
 
   <div class="row">
-    <div class="col-lg-8 mb-5">
+    <div class="col-lg-8">
       <endeavor-content-query-feed
         header="Featured"
         limit=12
@@ -36,24 +36,24 @@ $ const adSlots = {
         section-id=section.id
       />
     </div>
-    <div class="col-lg-4 mb-5">
-      <endeavor-gam-ad-unit-display id="gpt-ad-content1" class="mt-4 mb-5" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-content2" class="mb-5" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-content3" class="mb-5" />
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-content1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-content2" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-content3" />
       <endeavor-gam-ad-unit-display id="gpt-ad-content4" />
     </div>
   </div>
 
-  <div class="row mb-5">
-    <div class="col-lg-4 mb-4">
+  <div class="row">
+    <div class="col-lg-4">
       <endeavor-content-query-section-list requires-image=true section-alias="videos" header="Videos" />
     </div>
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-4">
       <endeavor-content-query-section-list requires-image=false section-alias="white-papers" header="White Papers" />
     </div>
-    <div class="col-lg-4 mb-4">
-      <div class="content-query-section-list card h-100">
-        <div class="card-header">
+    <div class="col-lg-4">
+      <div class="content-vertical-list card h-50">
+        <div class="content-vertical-list__header card-header">
           Current Issue
         </div>
         <div class="card-body"></div>

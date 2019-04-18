@@ -1,0 +1,12 @@
+.content-vertical-list {
+  @include theme-card();
+  margin-bottom: map-get($spacers, block);
+
+  &__header {
+    @include theme-card-header();
+  }
+
+  .card-body {
+    @include theme-item();
+  }
+}

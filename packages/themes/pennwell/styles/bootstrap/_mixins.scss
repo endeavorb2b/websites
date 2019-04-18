@@ -3,32 +3,67 @@
 // Add custom mixins here...
 
 @mixin theme-heading($size) {
+  $large-font-size: 34px;
+  $large-line-height: 40px;
+  $large-font-size-sm: 30px;
+  $large-line-height-sm: 36px;
+
   font-family: $theme-content-sans-serif-font;
   font-weight: 600;
   @if $size == h1 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: $large-font-size;
+    line-height: $large-line-height;
+    @include media-breakpoint-down(sm) {
+      font-size: $large-font-size-sm;
+      line-height: $large-line-height-sm;
+    }
   } @else if $size == h2 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: $large-font-size;
+    line-height: $large-line-height;
+    @include media-breakpoint-down(sm) {
+      font-size: $large-font-size-sm;
+      line-height: $large-line-height-sm;
+    }
   } @else if $size == h3 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: $large-font-size;
+    line-height: $large-line-height;
+    @include media-breakpoint-down(sm) {
+      font-size: $large-font-size-sm;
+      line-height: $large-line-height-sm;
+    }
   } @else if $size == h4 {
     font-size: 26px;
     line-height: 32px;
+    @include media-breakpoint-down(sm) {
+      font-size: 22px;
+      line-height: 28px;
+    }
   } @else if $size == h5 {
     font-size: 24px;
     line-height: 30px;
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   } @else {
     font-size: 19px;
     line-height: 24px;
+    @include media-breakpoint-down(sm) {
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 }
 
+@mixin theme-item() {
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+}
+
 @mixin theme-card() {
-  border: 0;
-  box-shadow: $theme-box-shadow-sm;
+  background-color: $white;
+  border: none;
+  border-radius: $theme-card-border-radius;
+  box-shadow: $theme-card-box-shadow;
 }
 
 @mixin theme-card-header() {
@@ -46,11 +81,29 @@
   line-height: 20px;
 }
 
+@mixin theme-content-body-paragraph() {
+  margin-top: 29px;
+  margin-bottom: 0;
+  @include media-breakpoint-down(sm) {
+    margin-top: 21px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:empty {
+    display: none;
+  }
+}
+
 @mixin content-body() {
   font-family: $theme-content-serif-font;
-  font-size: 21px;
+  font-size: 19px;
   font-style: normal;
   line-height: 33px;
+  @include media-breakpoint-down(sm) {
+    font-size: 17px;
+    line-height: 27px;
+  }
   h1,
   h2,
   h3,
@@ -88,8 +141,11 @@
     border-radius: $border-radius;
     box-shadow: $theme-box-shadow-sm;
   }
-  p:empty {
-    display: none;
+  p,
+  ul,
+  table,
+  ol {
+    @include theme-content-body-paragraph();
   }
   &:first-child {
     margin-top: 0;
@@ -97,17 +153,34 @@
 }
 
 @mixin content-body-heading($size) {
+  $large-margin: 53px;
+  $large-margin-sm: 48px;
   @include theme-heading($size);
   @if $size == h1 {
-    margin-top: 53px;
+    margin-top: $large-margin;
+    @include media-breakpoint-down(sm) {
+      margin-top: $large-margin-sm;
+    }
   } @else if $size == h2 {
-    margin-top: 53px;
+    margin-top: $large-margin;
+    @include media-breakpoint-down(sm) {
+      margin-top: $large-margin-sm;
+    }
   } @else if $size == h3 {
-    margin-top: 53px;
+    margin-top: $large-margin;
+    @include media-breakpoint-down(sm) {
+      margin-top: $large-margin-sm;
+    }
   } @else if $size == h4 {
     margin-top: 39px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 31px;
+    }
   } @else if $size == h5 {
     margin-top: 25px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 17px;
+    }
   } @else {
     margin-top: 11px;
   }

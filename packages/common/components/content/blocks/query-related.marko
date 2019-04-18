@@ -40,17 +40,12 @@ $ const params = {
   ...input,
   queryFragment,
 };
-$ const header = input.header || 'You May Also Like';
+$ const header = input.header || 'Related Content';
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class=`${block} card`>
-      <div class="card-header">${header}</div>
-      <ul class="list-group list-group-flush">
-        <for|content| of=nodes>
-          <endeavor-content-block-element-group tag="li" class="list-group-item" modifiers=['related-list'] content=content />
-        </for>
-      </ul>
+    <div class=block>
+      <endeavor-content-block-vertical-list modifiers=["flexible"] header=header nodes=nodes />
     </div>
   </if>
 </cms-query-website-scheduled-content>

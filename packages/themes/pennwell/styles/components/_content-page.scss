@@ -1,6 +1,5 @@
 .content-page {
-  margin-top: -#{map-get($spacers, 4)};
-  margin-bottom: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, block);
   .container-fluid {
     background-color: $white;
     border-radius: $border-radius;
