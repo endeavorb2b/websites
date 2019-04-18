@@ -31,7 +31,6 @@ $theme-site-nav-primary-bg-color: $primary !default;
 $theme-site-nav-secondary-bg-color: $primary !default;
 
 @import "components";
-@import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
 
 .container-fluid-max {
   @include make-container();
