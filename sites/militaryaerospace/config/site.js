@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/PennWell-Aerospace-Defense-Media-Group-2448878' },
+    { provider: 'twitter', href: 'https://twitter.com/MilAero' },
+    { provider: 'facebook', href: 'https://www.facebook.com/pages/Military-Aerospace-Electronics/174732214480' },
+  ],
   primaryNavItems: [
     { href: '/computers', label: 'Computers' },
     { href: '/cyber', label: 'Cyber' },

@@ -25,6 +25,7 @@ $spacers: (
   block: $block-spacer
 ) !default;
 
+@import "variables";
 @import "bootstrap";
 @import "components";
 @import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";

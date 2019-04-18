@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/vision-systems-design' },
+    { provider: 'twitter', href: 'https://twitter.com/Vision_Systems' },
+    { provider: 'facebook', href: 'https://www.facebook.com/VisionSystemsDesign?ref=hl' },
+  ],
   primaryNavItems: [
     { href: '/factory', label: 'Factory' },
     { href: '/non-factory', label: 'Non-Factory' },

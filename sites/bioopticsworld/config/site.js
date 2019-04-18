@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/biooptics-world/' },
+    { provider: 'twitter', href: 'https://twitter.com/BioOptics' },
+    { provider: 'facebook', href: 'https://www.facebook.com/pages/BioOptics-World/131802223749' },
+  ],
   primaryNavItems: [
     { href: '/bioscience', label: 'Bioscience' },
     { href: '/biomedicine', label: 'Biomedicine' },

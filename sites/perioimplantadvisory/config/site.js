@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/pia/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/surgical-restorative-resource?trk=other_brands_name' },
+    { provider: 'twitter', href: 'https://twitter.com/PI_Advisory' },
+    { provider: 'facebook', href: 'https://www.facebook.com/SurgicalRR' },
+  ],
   primaryNavItems: [
     { href: '/clinical-tips-from-the-editor', label: 'Clinical Tips from the Editor' },
     { href: '/complications', label: 'Complications' },

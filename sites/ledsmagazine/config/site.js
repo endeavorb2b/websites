@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/leds-magazine/' },
+    { provider: 'twitter', href: 'https://twitter.com/ledsmagazine' },
+    { provider: 'facebook', href: 'https://www.facebook.com/LEDsMagazine?fref=ts' },
+  ],
   primaryNavItems: [
     { href: '/leds-ssl-design', label: 'LEDs & SSL Design' },
     { href: '/manufacturing-services-testing', label: 'Manufacturing Services & Testing' },

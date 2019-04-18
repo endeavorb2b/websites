@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/utility-products?trk=other_brands_logo' },
+    { provider: 'twitter', href: 'http://twitter.com/UtilityProducts' },
+    { provider: 'facebook', href: 'http://www.facebook.com/pages/Utility-Products-Magazine/133739816672957' },
+  ],
   primaryNavItems: [
     { href: '/transmission-distribution', label: 'Transmission & Distribution' },
     { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },
@@ -35,4 +40,5 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:mb2grfhfx08',
   },
+  // company: 'Endeavor Business Media, LLC',
 };

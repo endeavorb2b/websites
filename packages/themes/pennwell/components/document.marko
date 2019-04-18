@@ -7,11 +7,20 @@
     <cms-ad-gam-init />
     <${input.head} />
   </@head>
+
   <if(input.navbar)>
     <${input.navbar} />
   </if>
   <else>
     <endeavor-navbar-site-a />
   </else>
+
   <${input.renderBody} />
+
+  <if(input.footer)>
+    <${input.footer} />
+  </if>
+  <else>
+    <theme-pennwell-site-footer />
+  </else>
 </cms-document>
