@@ -7,6 +7,12 @@ module.exports = {
     srcset: [
       'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80 2x',
     ],
+    footer: {
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=160 2x',
+      ],
+    },
   },
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/utility-products?trk=other_brands_logo' },
