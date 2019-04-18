@@ -7,19 +7,19 @@
     opacity: .98;
 
     .footer-brand {
-      margin-bottom: map-get($spacers, 3);
       display: inline-block;
+      margin-bottom: map-get($spacers, 3);
       img {
-        filter: sepia(1) grayscale(1);
         height: 80px;
+        filter: sepia(1) grayscale(1);
       }
     }
 
     .social-icons {
       display: flex;
       flex-direction: row;
-      margin: map-get($spacers, 3) 0;
       justify-content: center;
+      margin: map-get($spacers, 3) 0;
 
       .icon {
         margin: 0 map-get($spacers, 3);
@@ -40,20 +40,19 @@
         fill: map-get($brand-colors, linkedin);
       }
       .icon.twitter:hover svg {
-        fill: map-get($brand-colors, twitter);;
         background-color: transparent;
+        fill: map-get($brand-colors, twitter);
       }
     }
 
     .navbar-nav {
-      margin: auto 0;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin: auto 0;
       .nav-item {
         margin: 0 map-get($spacers, 3);
       }
     }
-
   }
 }
