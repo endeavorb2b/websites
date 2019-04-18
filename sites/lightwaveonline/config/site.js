@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/lw/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/4000932' },
+    { provider: 'twitter', href: 'https://twitter.com/lightwaveonline' },
+    { provider: 'facebook', href: 'https://www.facebook.com/LightwaveOnline' },
+  ],
   primaryNavItems: [
     { href: '/network-design', label: 'Network Design' },
     { href: '/fttx', label: 'FTTX' },

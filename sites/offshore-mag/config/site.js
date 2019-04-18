@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/os/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/offshore-magazine' },
+    { provider: 'twitter', href: 'https://twitter.com/offshoremgzn' },
+    { provider: 'facebook', href: 'https://www.facebook.com/offshoremagazine' },
+  ],
   primaryNavItems: [
     { href: '/regional-reports', label: 'Regional Reports' },
     { href: '/drilling-completion', label: 'Drilling & Completion' },

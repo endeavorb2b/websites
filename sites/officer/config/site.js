@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/groups/3287176/profile' },
+    { provider: 'twitter', href: 'https://twitter.com/officercom' },
+    { provider: 'facebook', href: 'https://www.facebook.com/officercom' },
+  ],
   primaryNavItems: [
     { href: '/tactical', label: 'Tactical' },
     { href: '/training-careers', label: 'Training & Careers' },

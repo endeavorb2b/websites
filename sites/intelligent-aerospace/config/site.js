@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/ias/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/intelligent-aerospace' },
+    { provider: 'twitter', href: 'https://twitter.com/intelligentaero' },
+    { provider: 'facebook', href: 'https://www.facebook.com/intelligentaerospace/' },
+  ],
   primaryNavItems: [
     { href: '/commercial', label: 'Commercial' },
     { href: '/military', label: 'Military' },

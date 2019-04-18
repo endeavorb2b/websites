@@ -8,6 +8,10 @@ module.exports = {
       'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/plastics-machinery-magazine' },
+    { provider: 'twitter', href: 'https://twitter.com/PlasticsMM' },
+  ],
   primaryNavItems: [
     { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
     { href: '/blow-molding', label: 'Blow Molding' },

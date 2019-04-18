@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/rdh/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/4000114/' },
+    { provider: 'twitter', href: 'https://twitter.com/RDHmag' },
+    { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine' },
+  ],
   primaryNavItems: [
     { href: '/bioscience', label: 'Bioscience' },
     { href: '/biomedicine', label: 'Biomedicine' },

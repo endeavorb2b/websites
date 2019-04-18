@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/btr/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/3998846' },
+    { provider: 'twitter', href: 'http://twitter.com/BTReport' },
+    { provider: 'facebook', href: 'https://www.facebook.com/BTReport' },
+  ],
   primaryNavItems: [
     { href: '/in-the-network', label: 'In the Network' },
     { href: '/in-the-home', label: 'In the Home' },
