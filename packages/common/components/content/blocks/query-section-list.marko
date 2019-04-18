@@ -5,6 +5,7 @@ $ const queryFragment = gql`
     id
     type
     shortName
+    teaser(input: { maxLength: 500, useFallback: false, truncatedSuffix: "" })
     canonicalPath
     published
     company {
@@ -40,6 +41,7 @@ $ const queryFragment = gql`
 `;
 
 $ const block = 'content-query-section-list';
+$ const mod = input.horizontal ? 'horizontal' : 'vertical';
 $ const params = {
   limit: 4,
   requiresImage: true,
@@ -49,8 +51,13 @@ $ const params = {
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class=block>
-      <endeavor-content-block-vertical-list header=input.header with-card=true nodes=nodes />
+    <div class=[block, `${block}--${mod}`]>
+      <if(input.horizontal)>
+        <endeavor-content-block-horizontal-list modifiers=["flexible"] header=input.header with-teaser=true nodes=nodes />
+      </if>
+      <else>
+        <endeavor-content-block-vertical-list header=input.header with-card=true nodes=nodes />
+      </else>
     </div>
   </if>
 </cms-query-website-scheduled-content>

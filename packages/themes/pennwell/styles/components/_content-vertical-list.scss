@@ -9,4 +9,17 @@
   .card-body {
     @include theme-item();
   }
+
+  .content-element-group {
+    &__content-short-name {
+      @include media-breakpoint-down(lg) {
+        min-height: initial;
+      }
+      a {
+        @include media-breakpoint-down(lg) {
+          min-height: initial;
+        }
+      }
+    }
+  }
 }

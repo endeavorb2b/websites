@@ -28,41 +28,39 @@ $ const adSlots = {
   />
 
   <div class="row">
-    <div class="col-lg-8 mb-5">
-
-      <endeavor-content-query-horiz-section-list section-alias="transmission-distribution" header="Transmission & Distribution" />
-      <endeavor-content-query-horiz-section-list section-alias="vehicles-accessories" header="Vehicles & Accessories" />
-
+    <div class="col-lg-8">
+      <div class="mb-block">
+        <endeavor-content-query-section-list horizontal=true section-alias="transmission-distribution" header="Transmission & Distribution" />
+      </div>
+      <div class="mb-block">
+        <endeavor-content-query-section-list horizontal=true section-alias="vehicles-accessories" header="Vehicles & Accessories" />
+      </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list limit=4 section-alias="tools-supplies" header="Tools & Supplies" />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list limit=4 section-alias="safety" header="Safety" />
         </div>
       </div>
     </div>
-    <div class="col-lg-4 mb-5">
-      <endeavor-gam-ad-unit-display id="gpt-ad-content1" class="mt-4 mb-5" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-content2" class="mb-5" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-content3" class="mb-5" />
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-content1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-content2" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-content3" />
       <endeavor-gam-ad-unit-display id="gpt-ad-content4" />
     </div>
   </div>
 
-   <div class="row mb-5">
-    <div class="col-lg-4 mb-4">
+   <div class="row">
+    <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list section-alias="test-measurement" header="Test & Measurement" />
     </div>
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list section-alias="line-construction-maintenance" header="Line Construction & Maintenance" />
     </div>
-    <div class="col-lg-4 mb-4">
-      <div class="content-query-section-list card h-100">
-        <div class="card-header">
-          Current Issue
-        </div>
-      </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue />
     </div>
   </div>
 

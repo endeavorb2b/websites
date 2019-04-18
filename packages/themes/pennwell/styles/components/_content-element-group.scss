@@ -1,10 +1,12 @@
 .content-element-group {
+  $element-margin: 6px;
   $self: &;
   display: flex;
   flex-direction: column;
   &__content-short-name {
     min-height: 48px;
     max-height: 48px;
+    margin-bottom: $element-margin;
     @include theme-heading(h6);
     @include media-breakpoint-down(sm) {
       min-height: initial;
@@ -24,7 +26,7 @@
   }
   &__website-section-name {
     @include theme-list-text();
-    margin-bottom: 6px;
+    margin-bottom: $element-margin;
     color: $gray;
     letter-spacing: normal;
     a {
@@ -33,6 +35,7 @@
   }
   &__content-teaser {
     max-height: 50px;
+    margin-bottom: $element-margin;
     overflow: hidden;
     font-family: $theme-content-serif-font;
     font-size: 18px;
@@ -40,6 +43,10 @@
     line-height: 25px;
     a {
       text-decoration: none;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      line-height: 23px;
     }
   }
   &__content-published {

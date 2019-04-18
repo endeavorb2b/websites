@@ -155,6 +155,9 @@
     "endeavor-content-block-vertical-list": {
       "template": "./vertical-list.marko"
     },
+    "endeavor-content-block-horizontal-list": {
+      "template": "./horizontal-list.marko"
+    },
     "endeavor-content-query-related": {
       "template": "./query-related.marko"
     },
@@ -166,9 +169,6 @@
     },
     "endeavor-content-query-section-list": {
       "template": "./query-section-list.marko"
-    },
-    "endeavor-content-query-horiz-section-list": {
-      "template": "./query-horiz-section-list.marko"
     },
     "endeavor-content-query-feed": {
       "template": "./query-feed.marko"
