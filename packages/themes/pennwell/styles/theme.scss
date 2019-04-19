@@ -31,6 +31,9 @@ $spacers: (
 $theme-site-nav-primary-bg-color: $primary !default;
 $theme-site-nav-secondary-bg-color: $primary !default;
 
+$theme-site-footer-primary-bg-color: $primary !default;
+$theme-site-footer-secondary-bg-color: $primary !default;
+
 @import "components";
 
 html {

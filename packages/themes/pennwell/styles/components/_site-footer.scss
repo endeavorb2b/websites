@@ -1,27 +1,31 @@
 .site-footer {
+  $drop-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
   @extend .navbar-dark;
-  padding-top: map-get($spacers, 4);
-  padding-bottom: map-get($spacers, 4);
   margin-top: auto;
   font-family: $theme-content-sans-serif-font;
-  background-color: $primary;
-  box-shadow: $box-shadow;
+  box-shadow: $theme-box-shadow-lg;
   opacity: .98;
 
   &__container {
     @include make-container();
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
     text-align: center;
+
+    &--brand {
+      background-color: $theme-site-footer-primary-bg-color;
+    }
+
+    &--links {
+      background-color: $theme-site-footer-secondary-bg-color;
+    }
   }
 
   &__brand {
     display: inline-block;
     img {
-      height: 80px;
-      filter: brightness(0) invert(1);
-      transition: filter ease 250ms;
-    }
-    &:hover img {
-      filter: initial;
+      height: 50px;
+      filter: brightness(0) invert(1) drop-shadow($drop-shadow);
     }
   }
 
@@ -29,13 +33,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, 3);
   }
 
   &__social-icon {
     margin: 0 map-get($spacers, 3);
     svg {
       width: 40px;
+      filter: drop-shadow($drop-shadow);
       border-radius: $border-radius;
       transition: fill ease 250ms, background-color ease 250ms;
       fill: $white;
@@ -63,7 +68,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, 3);
   }
 
   &__link {
@@ -74,7 +79,6 @@
   }
 
   &__copyright {
-    margin-top: map-get($spacers, 3);
     font-size: $font-size-sm;
     color: $light;
     opacity: .5;

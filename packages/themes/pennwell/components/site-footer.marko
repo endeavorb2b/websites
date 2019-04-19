@@ -19,11 +19,12 @@ $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
 $ const socialLinks = site.getAsArray('socialMediaLinks');
 
 <footer class="site-footer">
-  <div class="site-footer__container">
-
+  <div class="site-footer__container site-footer__container--brand">
     <a class="site-footer__brand" href="/">
       <img alt=config.siteName() src=logo.src srcset=srcset.join(',')>
     </a>
+  </div>
+  <div class="site-footer__container site-footer__container--links">
 
     <if(socialLinks.length)>
       <div class="site-footer__social-icons">
