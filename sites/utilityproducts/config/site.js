@@ -3,10 +3,16 @@ const ads = require('./ads');
 module.exports = {
   ads,
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=35',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=70 2x',
     ],
+    footer: {
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=100 2x',
+      ],
+    },
   },
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/utility-products?trk=other_brands_logo' },
@@ -40,5 +46,4 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:mb2grfhfx08',
   },
-  // company: 'Endeavor Business Media, LLC',
 };

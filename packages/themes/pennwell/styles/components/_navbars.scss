@@ -1,6 +1,6 @@
 .navbar {
   &--site-a {
-    @extend .sticky-top;
+    @extend .fixed-top;
     @extend .navbar-dark;
     @extend .navbar-expand-lg;
     font-family: $theme-content-sans-serif-font;
@@ -21,18 +21,18 @@
     .navbar-nav {
       &--primary {
         margin-top: map-get($spacers, 2);
-        @include media-breakpoint-down("md") {
+        @include media-breakpoint-down(md) {
           display: none;
         }
-        @include media-breakpoint-up("lg") {
+        @include media-breakpoint-up(lg) {
           display: flex;
         }
         .nav-item {
           font-size: 1rem;
-          @include media-breakpoint-down("md") {
+          @include media-breakpoint-down(md) {
             text-align: left;
           }
-          @include media-breakpoint-up("lg") {
+          @include media-breakpoint-up(lg) {
             text-align: center;
           }
           a {
@@ -54,10 +54,10 @@
 
       &--secondary {
         margin-top: auto;
-        @include media-breakpoint-down("md") {
+        @include media-breakpoint-down(md) {
           display: none;
         }
-        @include media-breakpoint-up("lg") {
+        @include media-breakpoint-up(lg) {
           display: flex;
         }
         a {
