@@ -3,14 +3,14 @@ const ads = require('./ads');
 module.exports = {
   ads,
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=35',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=70 2x',
     ],
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80',
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=160 2x',
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=100 2x',
       ],
     },
   },
