@@ -51,5 +51,7 @@ body {
   @include media-breakpoint-up("xl", $grid-breakpoints) {
     max-width: map-get($grid-breakpoints, "xl");
   }
-  padding-top: map-get($spacers, block);
+  flex-shrink: 0;
+  padding-top: 96px;
+  margin-top: map-get($spacers, 4);
 }
