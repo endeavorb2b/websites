@@ -19,8 +19,10 @@ $ const section = getAsObject(data, 'section');
 
   <@below-container>
     <endeavor-content-query-load-more
-      skip=5
-      section-id=section.id
+      query={
+        skip: 5,
+        sectionId: section.id,
+      }
       section=section
       ads={
         list: { name: "MR" },

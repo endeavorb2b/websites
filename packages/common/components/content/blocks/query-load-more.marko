@@ -41,12 +41,18 @@ $ const queryFragment = gql`
   }
 `;
 
+$ const pageNumber = input.pageNumber || 1;
 $ const block = 'content-query-load-more';
-$ const params = {
-  ...input,
+$ const query = {
+  ...input.query,
   limit: 15,
   queryFragment,
 };
+
+$ const loadMore = {
+  ...input.loadMore,
+};
+
 $ const section = asObject(input.section);
 $ const adCardInput = {
   section,
@@ -63,7 +69,7 @@ $ const adListInput = {
   ...getAsObject(input, 'ads.list'),
 };
 
-<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
+<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const cardNodes = asArray(nodes.slice(0, 10));
   $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
@@ -95,11 +101,28 @@ $ const adListInput = {
         </div>
       </if>
     </div>
+    $ const { endCursor, hasNextPage } = pageInfo;
+    $ delete query.skip;
+    $ delete query.queryFragment;
+    $ delete query.renderBody;
+    $ query.after = endCursor;
+    $ const provide = {
+      ...input,
+      query,
+      ads: {
+        card: adCardInput,
+        list: adListInput,
+      },
+    };
+
     <endeavor-load-more-button
-      label="Load More Content"
+      append-to=".container-fluid-max"
       block-name=block
-      params=params
-      page-info=pageInfo
+      label="Load More Content"
+      max-pages=loadMore.maxPages
+      page-number=pageNumber
+      provide=provide
+      show=hasNextPage
     />
   </if>
 </cms-query-website-scheduled-content>

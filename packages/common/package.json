@@ -3,12 +3,12 @@
   "version": "0.4.4",
   "private": true,
   "dependencies": {
-    "@base-cms/object-path": "^0.7.0",
-    "@base-cms/utils": "^0.7.0",
+    "@base-cms/object-path": "^0.8.0",
+    "@base-cms/utils": "^0.8.0",
     "helmet": "^3.16.0"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "^0.7.0"
+    "@base-cms/marko-web": "^0.8.0"
   },
   "devDependencies": {
     "eslint": "^5.15.1",

@@ -58,8 +58,13 @@ $ const adSlots = {
 
   <@below-container>
     <endeavor-content-query-load-more
-      skip=17
-      section-id=section.id
+      query={
+        skip: 17,
+        sectionId: section.id,
+      }
+      load-more={
+        maxPages: 0,
+      }
       section=section
     />
   </@below-container>
