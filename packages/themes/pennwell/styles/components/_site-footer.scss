@@ -18,6 +18,10 @@
     img {
       height: 80px;
       filter: sepia(1) grayscale(1);
+      transition: filter ease 250ms;
+    }
+    &:hover img {
+      filter: initial;
     }
   }
 
@@ -29,13 +33,12 @@
   }
 
   &__social-icon {
-    $transition: fill ease 250ms, background-color ease 250ms;
     margin: 0 map-get($spacers, 3);
     svg {
       width: 40px;
       border-radius: $border-radius;
+      transition: fill ease 250ms, background-color ease 250ms;
       fill: $white;
-      transition: $transition;
     }
     &--facebook {
       &:hover svg {
@@ -72,7 +75,8 @@
 
   &__copyright {
     margin-top: map-get($spacers, 3);
-    color: $light;
     font-size: $font-size-sm;
+    color: $light;
+    opacity: .5;
   }
 }
