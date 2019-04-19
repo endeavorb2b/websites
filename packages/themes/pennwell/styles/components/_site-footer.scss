@@ -17,7 +17,7 @@
     display: inline-block;
     img {
       height: 80px;
-      filter: sepia(1) grayscale(1);
+      filter: brightness(0) invert(1);
       transition: filter ease 250ms;
     }
     &:hover img {
