@@ -47,9 +47,11 @@ $ const adSlots = {
         More in ${section.name}
       </endeavor-load-more-header>
       <endeavor-content-query-load-more
-        skip=5
-        exclude-content-ids=[content.id]
-        section-id=section.id
+        query={
+          skip: 5,
+          excludeContentIds: [content.id],
+          sectionId: section.id,
+        }
         section=section
       />
     </if>
