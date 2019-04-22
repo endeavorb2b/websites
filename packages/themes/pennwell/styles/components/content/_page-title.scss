@@ -4,7 +4,7 @@
 
   &__header {
     @include theme-card-header();
-    @include theme-heading(h1);
+    @include theme-heading(h2);
   }
 
   .card-body {

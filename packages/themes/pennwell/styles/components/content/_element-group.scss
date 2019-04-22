@@ -54,7 +54,9 @@
       line-height: 23px;
     }
   }
-  &__content-published {
+  &__content-published,
+  &__content-starts,
+  &__content-ends {
     @include theme-list-text();
     margin-top: auto;
     color: $gray;
