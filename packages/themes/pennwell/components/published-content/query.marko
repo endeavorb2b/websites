@@ -19,6 +19,20 @@ $ const query = {
   queryFragment,
 };
 
+$ const getProps = (layout) => {
+  switch (layout) {
+    case 'webinar':
+      return { companyPrefix: 'Sponsored by: ', withCompanyImage: true, withStarts: true };
+    case 'event':
+      return { withStarts: true, withEnds: true };
+    case 'whitepaper':
+      return { companyPrefix: 'Sponsored by: ', withCompanyImage: true };
+    default:
+      return {};
+  };
+};
+
+$ const listProps = getProps(layout);
 
 <cms-query-all-published-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
@@ -29,6 +43,14 @@ $ const query = {
     <endeavor-content-block-card-grid nodes=nodes cols=3 />
   </if>
   <else>
+    <div class=['content-query-section-list', 'content-query-section-list--vertical']>
+      <endeavor-content-block-vertical-list
+        header=input.header
+        nodes=nodes
+        withImage=true
+        ...listProps
+      />
+    </div>
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
 </cms-query-all-published-content>

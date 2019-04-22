@@ -34,6 +34,10 @@
       "@with-teaser": {
         "type": "boolean",
         "default-value": false
+      },
+      "@company-prefix": {
+        "type": "string",
+        "default-value": null
       }
     },
     "endeavor-content-block-attribution": {
@@ -75,6 +79,11 @@
       "@with-company-image": {
         "type": "boolean",
         "default-value": false
+      },
+      },
+      "@company-prefix": {
+        "type": "string",
+        "default-value": null
       },
       "@with-teaser": {
         "type": "boolean",
@@ -153,6 +162,11 @@
       "@with-company-image": {
         "type": "boolean",
         "default-value": false
+      },
+      },
+      "@company-prefix": {
+        "type": "string",
+        "default-value": null
       },
       "@with-teaser": {
         "type": "boolean",

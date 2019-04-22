@@ -7,6 +7,7 @@ $ const classNames = [block, ...modifiers, input.class];
 $ const primaryImage = getAsObject(input.content, 'primaryImage');
 $ const primarySection = getAsObject(input.content, 'primarySection');
 $ const company = getAsObject(input.content, 'company');
+$ const companyPrefix = input.companyPrefix;
 
 <${input.tag} class=classNames>
   <cms-website-section-name block=block obj=primarySection link=true />
@@ -16,7 +17,12 @@ $ const company = getAsObject(input.content, 'company');
   </if>
   <small class=`${block}__row`>
     <if(company.id)>
-      <endeavor-content-company-name use-prefix=false block=block company=company />
+      <if(companyPrefix)>
+        <endeavor-content-company-name prefix=companyPrefix block=block company=company />
+      </if>
+      <else>
+        <endeavor-content-company-name use-prefix=false block=block company=company />
+      </else>
     </if>
     <else>
       <endeavor-content-authors use-prefix=false block=block content=input.content />
