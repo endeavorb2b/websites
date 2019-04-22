@@ -13,7 +13,8 @@ module.exports = (config, {
   const defaultAdUnit = config.getAsObject(`ads.default.${name}`);
   const foundAdUnit = aliases.map(alias => config.get(`ads.${alias}.${name}`)).filter(v => v)[0];
 
-  const adunit = getAsObject(foundAdUnit || defaultAdUnit);
+  // Ensure ad unit is duplicated so property re-assignment doesn't "stick."
+  const adunit = { ...getAsObject(foundAdUnit || defaultAdUnit) };
   if (isArray(size)) adunit.size = size;
   if (isArray(sizeMapping)) adunit.sizeMapping = sizeMapping;
   return adunit;

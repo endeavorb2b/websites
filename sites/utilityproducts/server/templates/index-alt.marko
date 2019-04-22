@@ -5,11 +5,11 @@ $ const section = getAsObject(data, 'section');
 $ const { site } = out.global;
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'LB1', section }),
-  'gpt-ad-content1': getAdUnit(site, { name: 'CONTENT1', section, size: [300, 250] }),
-  'gpt-ad-content2': getAdUnit(site, { name: 'CONTENT2', section, size: [300, 250] }),
-  'gpt-ad-content3': getAdUnit(site, { name: 'CONTENT3', section, size: [300, 600] }),
-  'gpt-ad-content4': getAdUnit(site, { name: 'CONTENT4', section, size: [300, 250] }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail-flex', section, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail1', section, size: [300, 250] }),
+  'gpt-ad-rail3': getAdUnit(site, { name: 'rail2', section, size: [300, 600] }),
+  'gpt-ad-rail4': getAdUnit(site, { name: 'load-more', section, size: [300, 250] }),
 };
 
 <theme-pennwell-website-section-layout section=section>
@@ -45,8 +45,8 @@ $ const adSlots = {
       </div>
     </div>
     <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-display id="gpt-ad-content1" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-content2" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       <endeavor-gam-ad-unit-display id="gpt-ad-content3" />
       <endeavor-gam-ad-unit-display id="gpt-ad-content4" />
     </div>
