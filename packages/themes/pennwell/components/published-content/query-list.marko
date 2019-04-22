@@ -3,9 +3,12 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ input.query = getAsObject(input, 'query');
 $ const params = {
-  limit: 4,
-  requiresImage: true,
   ...input,
+  query: {
+    requiresImage: true,
+    limit: 4,
+    ...input.query,
+  },
   layout: 'list',
 };
 
