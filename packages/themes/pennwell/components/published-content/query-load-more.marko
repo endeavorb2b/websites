@@ -1,0 +1,18 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ input.query = getAsObject(input, 'query');
+$ input.pageNumber = input.pageNumber || 1;
+$ const block = 'published-content-query-load-more';
+
+<theme-pennwell-published-content-query|{ nodes, loadMore }| ...input>
+  $ const { endCursor, hasNextPage, provide } = loadMore;
+  <div class=block />
+  <endeavor-load-more-button
+    append-to=`.${block}`
+    block-name=block
+    label="Load More Content"
+    page-number=input.query.pageNumber
+    provide=provide
+    show=hasNextPage
+  />
+</theme-pennwell-published-content-query>

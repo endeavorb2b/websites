@@ -1,0 +1,34 @@
+import { getAsArray, getAsObject } from '@base-cms/object-path';
+import queryFragment from '../../api/fragments/all-published-content';
+
+$ const pageNumber = input.pageNumber || 1;
+$ input.query = getAsObject(input, 'query');
+$ const contentTypes = getAsArray(input.query, 'contentTypes');
+$ const { beginningAfter, beginningBefore } = input.query;
+$ const { endingAfter, endingBefore } = input.query;
+
+$ const query = {
+  contentTypes,
+  beginningAfter,
+  beginningBefore,
+  endingAfter,
+  endingBefore,
+  limit: 9,
+  ...input.query,
+  queryFragment,
+};
+
+$ console.log('query.query', query);
+
+<cms-query-all-published-content|{ nodes, pageInfo }| ...query>
+  $ const { endCursor, hasNextPage } = pageInfo;
+  $ query.after = endCursor;
+  $ const loadMore = { endCursor, hasNextPage, provide: { query } };
+  <if(input.layout === "list")>
+    <theme-pennwell-published-content-layout-list nodes=nodes />
+  </if>
+  <else>
+    <theme-pennwell-published-content-layout-grid nodes=nodes />
+  </else>
+  <${input.renderBody} nodes=nodes load-more=loadMore />
+</cms-query-all-published-content>
