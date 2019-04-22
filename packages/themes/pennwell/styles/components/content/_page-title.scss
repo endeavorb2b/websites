@@ -1,4 +1,5 @@
 .content-page-title {
+  margin-bottom: map-get($spacers, block);
   @include theme-card();
 
   &__header {
