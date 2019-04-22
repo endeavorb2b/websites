@@ -24,4 +24,25 @@ module.exports = {
     reskin: { ...RESKIN, path: path('default/reskin') },
     wa: { ...WA, path: path('default/wa') },
   },
+  municipal: {
+    lb1: { ...LB, path: path('municipal/lb1') },
+    lb2: { ...LB, path: path('municipal/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/load-more') },
+  },
+  industrial: {
+    lb1: { ...LB, path: path('industrial/lb1') },
+    lb2: { ...LB, path: path('industrial/lb2') },
+    rail1: { ...CONTENT, path: path('industrial/rail1') },
+    rail2: { ...CONTENT, path: path('industrial/rail2') },
+    'load-more': { ...CONTENT, path: path('industrial/load-more') },
+  },
+  international: {
+    lb1: { ...LB, path: path('international/lb1') },
+    lb2: { ...LB, path: path('international/lb2') },
+    rail1: { ...CONTENT, path: path('international/rail1') },
+    rail2: { ...CONTENT, path: path('international/rail2') },
+    'load-more': { ...CONTENT, path: path('international/load-more') },
+  },
 };
