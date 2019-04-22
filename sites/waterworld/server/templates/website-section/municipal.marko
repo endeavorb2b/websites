@@ -1,15 +1,14 @@
 import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 
-$ const section = getAsObject(data, 'section');
 $ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail-flex', section, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail1', section, size: [300, 250] }),
-  'gpt-ad-rail3': getAdUnit(site, { name: 'rail2', section, size: [300, 600] }),
-  'gpt-ad-rail4': getAdUnit(site, { name: 'load-more', section, size: [300, 250] }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', section }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', section, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', section, size: [300, 600] }),
 };
 
 <theme-pennwell-website-section-layout section=section>
@@ -54,8 +53,10 @@ $ const adSlots = {
 
   <@below-container>
     <endeavor-content-query-load-more
-      skip=15
-      section-id=section.id
+      query={
+        skip: 12,
+        sectionId: section.id,
+      }
       section=section
     />
   </@below-container>
