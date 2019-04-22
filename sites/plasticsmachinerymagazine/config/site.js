@@ -2,11 +2,19 @@ const ads = require('./ads');
 
 module.exports = {
   ads,
-  logo: {
-    src: 'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png',
-    srcset: [
-      'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png 2x',
-    ],
+  logos: {
+    navbar: {
+      src: 'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png',
+      srcset: [
+        'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png 2x',
+      ],
+    },
+    footer: {
+      src: 'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png',
+      srcset: [
+        'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png 2x',
+      ],
+    },
   },
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/plastics-machinery-magazine' },
@@ -29,17 +37,22 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/contact-us', label: 'Contact Us' },
   ],
-  homeSections: [
-    { alias: 'additive-manufacturing', name: 'Additive Manufacturing' },
-    { alias: 'blow-molding', name: 'Blow Molding' },
-    { alias: 'thermoforming', name: 'Thermoforming' },
-    { alias: 'compounding', name: 'Compounding' },
-    { alias: 'injection-molding', name: 'Injection Molding' },
-    { alias: 'extrusion', name: 'Extrusion' },
-    { alias: 'recycling', name: 'Recycling' },
-    { alias: 'molds-tooling', name: 'Molds & Tooling' },
-    { alias: 'rotomolding', name: 'Rotomolding' },
-  ],
+  menuItems: {
+    resources: [
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    userTools: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+    ],
+  },
   gtmContainer: 'GTM-KBM372Z',
   search: {
     engine: 'google',
