@@ -1,14 +1,20 @@
-$ const { config } = out.global;
-$ const query = { contentTypes: ["Video"], limit: 9 };
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+
+$ const { site, config } = out.global;
+$ const query = { contentTypes: ["Video"], limit: 10 };
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'BS' }),
+  'gpt-ad-right1': getAdUnit(site, { name: 'MR' }),
+};
 
 <theme-pennwell-published-content-layout>
   <@head>
     <cms-page-title value="Videos" />
-    <cms-ad-gam-head />
+    <cms-ad-gam-head slots=adSlots />
   </@head>
 
   <@above-container>
-    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <endeavor-content-block-page-title
@@ -20,6 +26,9 @@ $ const query = { contentTypes: ["Video"], limit: 9 };
     <div class="published-content-query-load-more">
       <theme-pennwell-published-content-query-load-more
         query=query
+        ads={
+          card: { name: "MR" },
+        }
       />
     </div>
   </@below-container>
