@@ -1,11 +1,10 @@
 <template>
   <button
     v-on:click="toggle"
-    v-bind:class="{ expanded: isExpanded }"
-    class="navbar-toggler"
+    v-bind:class="blockName"
     type="button"
   >
-    <span class="navbar-toggler-icon"></span>
+    <span v-bind:class="iconClass"></span>
   </button>
 </template>
 
@@ -19,15 +18,27 @@ export default {
       type: String,
       required: true,
     },
+    expanded: {
+      type: Boolean,
+      default: false,
+    }
   },
-  data() {
-    return {
-      isExpanded: false,
-    };
+  data: () => ({
+    blockName: 'site-navbar-toggler',
+  }),
+  computed: {
+    iconClass() {
+      const element = `${this.blockName}__icon`;
+      const modifier = `${this.blockName}__icon--expanded`;
+      const obj = {
+        [element]: true,
+      };
+      if (this.expanded) obj[modifier] = true;
+      return obj;
+    },
   },
   methods: {
     toggle() {
-      this.isExpanded = !this.isExpanded;
       const elementList = document.querySelectorAll(this.targets.join(','));
       elementList.forEach((element) => {
         element.classList.toggle(this.toggleClass);

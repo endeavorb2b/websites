@@ -9,9 +9,7 @@ $ const nav = 'site-navbar-items';
 
   <nav class=`${bem(navbar, 'secondary')} navbar`>
     <div class="site-navbar-container">
-      <div class="site-navbar-toggler">
-        <span class="site-navbar-toggler__icon"></span>
-      </div>
+      <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
 
       <a class=`${bem(navbar, 'brand')} navbar-brand` href="/">
         <img class=bem(navbar, 'logo') alt=config.siteName() src=site.get('logo.src') srcset=site.get('logo.srcset').join(',')>
@@ -42,6 +40,16 @@ $ const nav = 'site-navbar-items';
       </ul>
     </div>
   </nav>
+
+  <aside class="site-navbar-menu">
+    <div class=bem('site-navbar-menu', 'wrapper')>
+      <div class=bem('site-navbar-menu', 'contents')>
+        <div class="d-flex flex-row justify-content-end">
+          <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open', expanded: true } />
+        </div>
+      </div>
+    </div>
+  </aside>
 </header>
 
 <!-- <nav class="navbar navbar--site-a">

@@ -21,6 +21,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin-right: .75rem;
+    margin-left: .75rem;
     font-size: 1rem;
   }
   &__logo {
@@ -41,18 +42,25 @@
   padding-left: 0;
 }
 
-
 .site-navbar-toggler {
-  padding: .25rem .75rem;
-  padding-left: 0;
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+
+  &:focus {
+    outline: none;
+  }
 
   &__icon {
     display: inline-block;
     width: 1em;
     height: 1em;
+    line-height: 1em;
     vertical-align: middle;
     content: "";
     background: no-repeat 50%;
@@ -62,6 +70,9 @@
       background-image: $navbar-light-toggler-icon-bg;
     }
     background-size: 100% 100%;
+    &--expanded {
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHYSURBVGhD7dfdSpRRGIbhsbQziEzLStvqIMQkLNCQtJAQiUBFPQ6329dIIiJEJTqY1AzRSvAIKu1PvR91wcvHcnScXLOE94YL9HN+1sOozJQ8z/M8z/O8LHuMJwdfVl0dJnF7/7uEacQf/MWALlSRRkxhFxtoQ5LCCD2xaMxTnCaNmEZ4LPmGWzjz9Otkh4jGDKKSNOIl7OPIV7QiSXpVfsMeoJIxF/AK9v6iEUleDVs/fsEeRGOGUK6LmIG9n3xB8hGhPsTGPEOsciNuoqY9QmzMc9g04jXs7WQdNR8R6kVxzD+EMRrxBvbnktWI0EPExozgrbkWaMQNZFk3imNi1pDtiNBxYzSiBeeiHsRGbOLcjNAf9jvEhuxgGNlXbkSQ/RiNmEXx4HrbsV24pjH6b5Zd9ZiDPays4joeYOvwWqAxo8imBszDHlLCiNB9/IS9TTZjjhrxGddQrAuxMWOoWZewAHsoWUEzjkpjfsDep2ZjNOI97GFEI5pwXPcQGzOOZGnEB9hDyCecZESoE7ExE0jSC9gnl2VcRaV1IDbmLs68y/iI8MRLaMRpK47RR2B9nk9SGLOIK7pQZe34Dn161Of5pGnM/xgRugO9O/A8z/M8z/OyqlTaA3mN7FdoPXLZAAAAAElFTkSuQmCC");
+    }
   }
 }
 
@@ -144,81 +155,45 @@
   }
 }
 
+.site-navbar-menu {
+  $self: &;
+  $wrapper-width: 350px;
+  $wrapper-max-width: 75vw;
+  $border-width: 4px;
+  $transition-speed: 125ms;
+  $transition-type: ease-in-out;
 
-// .navbar {
-//   &--site-a {
-//     @extend .fixed-top;
-//     @extend .navbar-dark;
-//     @extend .navbar-expand-lg;
-//     font-family: $theme-content-sans-serif-font;
-//     background-color: $primary;
-//     box-shadow: $theme-box-shadow-lg;
-//     opacity: .98;
-//     .navbar-brand {
-//       padding-bottom: 0;
-//       img {
-//         height: 35px;
-//       }
-//     }
-//     .nav-item {
-//       font-size: .8rem;
-//       text-transform: uppercase;
-//       letter-spacing: 1px;
-//     }
-//     .navbar-nav {
-//       &--primary {
-//         margin-top: map-get($spacers, 2);
-//         @include media-breakpoint-down(md) {
-//           display: none;
-//         }
-//         @include media-breakpoint-up(lg) {
-//           display: flex;
-//         }
-//         .nav-item {
-//           font-size: 1rem;
-//           @include media-breakpoint-down(md) {
-//             text-align: left;
-//           }
-//           @include media-breakpoint-up(lg) {
-//             text-align: center;
-//           }
-//           a {
-//             padding-top: map-get($spacers, 1);
-//             padding-bottom: map-get($spacers, 1);
-//             color: $white;
-//             &:hover {
-//               color: $white;
-//               text-decoration: underline;
-//             }
-//           }
-//           &:first-child {
-//             a {
-//               padding-left: 0;
-//             }
-//           }
-//         }
-//       }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
 
-//       &--secondary {
-//         margin-top: auto;
-//         @include media-breakpoint-down(md) {
-//           display: none;
-//         }
-//         @include media-breakpoint-up(lg) {
-//           display: flex;
-//         }
-//         a {
-//           padding-bottom: 0;
-//         }
-//       }
-//     }
-//     .navbar-toggler {
-//       position: absolute;
-//       top: map-get($spacers, 2);
-//       right: map-get($spacers, 3);
-//       &:focus {
-//         outline: none;
-//       }
-//     }
-//   }
-// }
+  &--open {
+    left: 0;
+
+    #{ $self } {
+      &__wrapper {
+        width: $wrapper-width;
+        border-right: $border-width solid $theme-site-nav-primary-bg-color;
+        box-shadow: $theme-site-nav-menu-box-shadow;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 0;
+    max-width: $wrapper-max-width;
+    height: 100%;
+
+    overflow-y: scroll;
+    background-color: $white;
+
+    transition: width $transition-speed $transition-type;
+  }
+
+  &__contents {
+    width: 100%;
+    padding: 1rem;
+  }
+}
