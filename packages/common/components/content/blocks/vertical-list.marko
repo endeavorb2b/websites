@@ -21,10 +21,6 @@ $ const listNodes = nodes.slice(withCard ? 1 : 0);
         <endeavor-content-block-card-body modifiers=input.modifiers content=content />
       </for>
     </if>
-    <endeavor-content-block-list-group
-      modifiers=input.modifiers
-      with-image=withImage
-      nodes=listNodes
-    />
+    <endeavor-content-block-list-group modifiers=input.modifiers with-image=withImage nodes=listNodes />
   </div>
 </if>

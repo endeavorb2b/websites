@@ -25,10 +25,6 @@ fragment AllPublishedContentQueryFragment on Content {
       id
       name
       canonicalPath
-      primaryImage {
-        id
-        src
-      }
     }
   }
   ... on ContentWebinar {
@@ -37,10 +33,6 @@ fragment AllPublishedContentQueryFragment on Content {
       id
       name
       canonicalPath
-      primaryImage {
-        id
-        src
-      }
     }
   }
   ... on ContentEvent {
@@ -50,10 +42,6 @@ fragment AllPublishedContentQueryFragment on Content {
       id
       name
       canonicalPath
-      primaryImage {
-        id
-        src
-      }
     }
   }
 }
