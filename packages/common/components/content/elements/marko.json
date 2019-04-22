@@ -1,5 +1,11 @@
 {
   "tags": {
+    "endeavor-content-starts": {
+      "template": "./starts.marko"
+    },
+    "endeavor-content-ends": {
+      "template": "./ends.marko"
+    },
     "endeavor-content-authors": {
       "template": "./authors.marko",
       "@content": {
