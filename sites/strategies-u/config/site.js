@@ -16,6 +16,22 @@ module.exports = {
     { href: '/page/about-us', label: 'About Us' },
   ],
   homeSections: [],
+  menuItems: {
+    resources: [
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    userTools: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+    ],
+  },
   gtmContainer: 'GTM-56MD64K',
   // ads: {
   //   units: {

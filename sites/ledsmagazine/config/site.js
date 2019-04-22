@@ -35,6 +35,22 @@ module.exports = {
     { alias: 'specialty-ssl', name: 'Specialty SSL' },
     { alias: 'horticultural-lighting', name: 'Horticultural Lighting' },
   ],
+  menuItems: {
+    resources: [
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    userTools: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+    ],
+  },
   gtmContainer: 'GTM-T29NVLB',
   // ads: {
   //   units: {
