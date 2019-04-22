@@ -2,11 +2,19 @@ const ads = require('./ads');
 
 module.exports = {
   ads,
-  logo: {
-    src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
-    srcset: [
-      'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
-    ],
+  logos: {
+    navbar: {
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+      srcset: [
+        'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+      ],
+    },
+    footer: {
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+      srcset: [
+        'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+      ],
+    },
   },
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/groups/2192877/profile' },
