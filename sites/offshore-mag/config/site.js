@@ -31,14 +31,6 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'regional-reports', name: 'Regional Reports' },
-    { alias: 'drilling-completion', name: 'Drilling & Completion' },
-    { alias: 'field-development', name: 'Field Development' },
-    { alias: 'subsea', name: 'Subsea' },
-    { alias: 'geosciences', name: 'Geosciences' },
-    { alias: 'pipelines', name: 'Pipelines' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
@@ -56,27 +48,6 @@ module.exports = {
     ],
   },
   gtmContainer: 'GTM-PQK8MQK',
-  // ads: {
-  //   units: {
-  //     BS: {
-  //       path: '/21687441225/OS/OS_BS',
-  //       size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
-  //       sizeMapping: [
-  //         { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
-  //         { viewport: [750, 0], size: [728, 90] },
-  //         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
-  //       ],
-  //     },
-  //     MR: {
-  //       path: '/21687441225/OS/OS_MR',
-  //       size: [300, 250],
-  //     },
-  //     HP: {
-  //       path: '/21687441225/OS/OS_HP',
-  //       size: [300, 600],
-  //     },
-  //   },
-  // },
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:jon24h47vcu',

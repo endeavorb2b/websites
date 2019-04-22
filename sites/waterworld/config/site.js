@@ -48,11 +48,6 @@ module.exports = {
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
     ],
   },
-  homeSections: [
-    { alias: 'municipal', name: 'Municipal' },
-    { alias: 'industrial', name: 'Industrial' },
-    { alias: 'international', name: 'International' },
-  ],
   gtmContainer: 'GTM-MXBGH3V',
   search: {
     engine: 'google',

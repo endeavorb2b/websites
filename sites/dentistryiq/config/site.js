@@ -29,35 +29,23 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'practice-management', name: 'Practice Management' },
-    { alias: 'assistants', name: 'Assistants' },
-    { alias: 'clinical', name: 'Clinical' },
-    { alias: 'front-office', name: 'Front Office' },
-    { alias: 'dental-hygiene', name: 'Dental Hygiene' },
-    { alias: 'industry', name: 'Industry' },
-  ],
-  // ads: {
-  //   units: {
-  //     BS: {
-  //       path: '/21687441225/DIQ/DIQ_BS',
-  //       size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
-  //       sizeMapping: [
-  //         { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
-  //         { viewport: [750, 0], size: [728, 90] },
-  //         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
-  //       ],
-  //     },
-  //     MR: {
-  //       path: '/21687441225/DIQ/DIQ_MR',
-  //       size: [300, 250],
-  //     },
-  //     HP: {
-  //       path: '/21687441225/DIQ/DIQ_HP',
-  //       size: [300, 600],
-  //     },
-  //   },
-  // },
+  menuItems: {
+    resources: [
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    userTools: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+    ],
+  },
+  gtmContainer: 'GTM-MNNGJ32',
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:prps-rbhnq0',

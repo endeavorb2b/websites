@@ -29,14 +29,6 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'data-center', name: 'Data Center' },
-    { alias: 'standards', name: 'Standards' },
-    { alias: 'cable', name: 'Cable' },
-    { alias: 'connectivity', name: 'Connectivity' },
-    { alias: 'ip-security-av', name: 'IP Security & AV' },
-    { alias: 'wireless-5g', name: 'Wireless/5G' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },

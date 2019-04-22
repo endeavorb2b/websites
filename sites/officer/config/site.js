@@ -29,14 +29,6 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/contact-us', label: 'Contact Us' },
   ],
-  homeSections: [
-    { alias: 'tactical', name: 'Tactical' },
-    { alias: 'training-careers', name: 'Training & Careers' },
-    { alias: 'on-the-street', name: 'On The Street' },
-    { alias: 'investigations', name: 'Investigations' },
-    { alias: 'command-hq', name: 'Command/HQ' },
-    { alias: 'features/honoring-the-fallen', name: 'Honoring the Fallen' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },

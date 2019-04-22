@@ -25,14 +25,6 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'applications', name: 'Applications' },
-    { alias: 'instrumentation', name: 'Instrumentation' },
-    { alias: 'testing', name: 'Testing' },
-    { alias: 'industries', name: 'Industries' },
-    { alias: 'whitepapers', name: 'Whitepapers' },
-    { alias: 'special-reports', name: 'Special Reports' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },

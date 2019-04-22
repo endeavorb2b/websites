@@ -31,14 +31,6 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'in-the-network', name: 'In the Network' },
-    { alias: 'in-the-home', name: 'In the Home' },
-    { alias: 'mobile', name: 'Mobile' },
-    { alias: 'internet', name: 'Internet' },
-    { alias: 'voice', name: 'Voice' },
-    { alias: 'business-services', name: 'Business Services' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },

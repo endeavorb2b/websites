@@ -27,14 +27,6 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'leds-ssl-design', name: 'LEDs & SSL Design' },
-    { alias: 'manufacturing-services-testing', name: 'Manufacturing Services & Testing' },
-    { alias: 'architectural-lighting', name: 'Architectural Lighting' },
-    { alias: 'smart-lighting-iot', name: 'Smart Lighting & IoT' },
-    { alias: 'specialty-ssl', name: 'Specialty SSL' },
-    { alias: 'horticultural-lighting', name: 'Horticultural Lighting' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
@@ -52,27 +44,6 @@ module.exports = {
     ],
   },
   gtmContainer: 'GTM-T29NVLB',
-  // ads: {
-  //   units: {
-  //     BS: {
-  //       path: '/21687441225/LEDS/LEDS_BS',
-  //       size: [[970, 250], [970, 90], [728, 90], [300, 50], [320, 50], [300, 100]],
-  //       sizeMapping: [
-  //         { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
-  //         { viewport: [750, 0], size: [728, 90] },
-  //         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
-  //       ],
-  //     },
-  //     MR: {
-  //       path: '/21687441225/LEDS/LEDS_MR',
-  //       size: [300, 250],
-  //     },
-  //     HP: {
-  //       path: '/21687441225/LEDS/LEDS_HP',
-  //       size: [300, 600],
-  //     },
-  //   },
-  // },
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:m_5jkc8w8fq',

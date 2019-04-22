@@ -26,11 +26,6 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'bioscience', name: 'Bioscience' },
-    { alias: 'biomedicine', name: 'Biomedicine' },
-    { alias: 'bioimaging', name: 'Bioimaging' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },

@@ -29,17 +29,6 @@ module.exports = {
     { href: '/advertise', label: 'Advertise' },
     { href: '/contact-us', label: 'Contact Us' },
   ],
-  homeSections: [
-    { alias: 'additive-manufacturing', name: 'Additive Manufacturing' },
-    { alias: 'blow-molding', name: 'Blow Molding' },
-    { alias: 'thermoforming', name: 'Thermoforming' },
-    { alias: 'compounding', name: 'Compounding' },
-    { alias: 'injection-molding', name: 'Injection Molding' },
-    { alias: 'extrusion', name: 'Extrusion' },
-    { alias: 'recycling', name: 'Recycling' },
-    { alias: 'molds-tooling', name: 'Molds & Tooling' },
-    { alias: 'rotomolding', name: 'Rotomolding' },
-  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
