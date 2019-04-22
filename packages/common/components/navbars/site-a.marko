@@ -13,7 +13,7 @@ $ const menu = 'site-navbar-menu';
       <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
 
       <a class=`${bem(navbar, 'brand')} navbar-brand` href="/">
-        <img class=bem(navbar, 'logo') alt=config.siteName() src=site.get('logo.src') srcset=site.get('logo.srcset').join(',')>
+        <img class=bem(navbar, 'logo') alt=config.siteName() src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
       </a>
       <ul class="navbar-nav site-navbar-items site-navbar-items--secondary">
         <for|item| of=site.getAsArray('secondaryNavItems')>

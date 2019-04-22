@@ -2,11 +2,13 @@ const ads = require('./ads');
 
 module.exports = {
   ads,
-  logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=30',
-    srcset: [
-      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=60 2x',
-    ],
+  logos: {
+    navbar: {
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=30',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=60 2x',
+      ],
+    },
     footer: {
       src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
       srcset: [
