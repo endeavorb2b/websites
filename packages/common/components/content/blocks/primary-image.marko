@@ -2,7 +2,7 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const block = 'content-primary-image';
 $ const linkElement = `${block}__link`;
-$ const primaryImage = input.withCompanyImage ? getAsObject(input.content, 'company.primaryImage') : getAsObject(input.content, 'primaryImage');
+$ const primaryImage = getAsObject(input.content, 'primaryImage');
 
 $ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
 $ const classNames = [block, ...modifiers];

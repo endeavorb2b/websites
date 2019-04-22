@@ -13,11 +13,7 @@
       "@modifiers": "array",
       "@options": "object",
       "@width": "number",
-      "@height": "number",
-      "@with-company-image": {
-        "type": "boolean",
-        "default-value": false
-      }
+      "@height": "number"
     },
     "endeavor-content-block-element-group": {
       "template": "./element-group.marko",
@@ -34,18 +30,6 @@
       "@with-teaser": {
         "type": "boolean",
         "default-value": false
-      },
-      "@with-starts": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-ends": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@company-prefix": {
-        "type": "string",
-        "default-value": null
       }
     },
     "endeavor-content-block-attribution": {
@@ -91,22 +75,6 @@
       "@with-image": {
         "type": "boolean",
         "default-value": true
-      },
-      "@with-company-image": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-starts": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-ends": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@company-prefix": {
-        "type": "string",
-        "default-value": null
       },
       "@with-teaser": {
         "type": "boolean",
@@ -181,22 +149,6 @@
       "@with-image": {
         "type": "boolean",
         "default-value": true
-      },
-      "@with-company-image": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-starts": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-ends": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@company-prefix": {
-        "type": "string",
-        "default-value": null
       },
       "@with-teaser": {
         "type": "boolean",

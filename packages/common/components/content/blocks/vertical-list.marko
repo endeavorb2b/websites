@@ -5,10 +5,6 @@ $ const nodes = asArray(input.nodes);
 
 $ const withCard = input.withCard === true ? true : false;
 $ const withImage = input.withImage === true ? true : false;
-$ const withCompanyImage = input.withCompanyImage === true ? true : false;
-$ const withStarts = input.withStarts === true ? true : false;
-$ const withEnds = input.withEnds === true ? true : false;
-$ const companyPrefix = input.companyPrefix;
 
 $ const cardNodes = withCard ? nodes.slice(0, 1) : [];
 $ const listNodes = nodes.slice(withCard ? 1 : 0);
@@ -28,10 +24,6 @@ $ const listNodes = nodes.slice(withCard ? 1 : 0);
     <endeavor-content-block-list-group
       modifiers=input.modifiers
       with-image=withImage
-      with-company-image=withCompanyImage
-      with-starts=withStarts
-      with-ends=withEnds
-      company-prefix=companyPrefix
       nodes=listNodes
     />
   </div>
