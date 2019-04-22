@@ -43,14 +43,12 @@ $ const listProps = getProps(layout);
     <endeavor-content-block-card-grid nodes=nodes cols=3 />
   </if>
   <else>
-    <div class=['content-query-section-list', 'content-query-section-list--vertical']>
-      <endeavor-content-block-vertical-list
-        header=input.header
-        nodes=nodes
-        withImage=true
-        ...listProps
-      />
-    </div>
+    <endeavor-content-block-vertical-list
+      header=input.header
+      nodes=nodes
+      withImage=true
+      ...listProps
+    />
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
 </cms-query-all-published-content>
