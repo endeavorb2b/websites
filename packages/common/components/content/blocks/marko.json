@@ -35,6 +35,14 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-starts": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-ends": {
+        "type": "boolean",
+        "default-value": false
+      },
       "@company-prefix": {
         "type": "string",
         "default-value": null
@@ -80,6 +88,13 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-starts": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-ends": {
+        "type": "boolean",
+        "default-value": false
       },
       "@company-prefix": {
         "type": "string",
@@ -163,6 +178,13 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-starts": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-ends": {
+        "type": "boolean",
+        "default-value": false
       },
       "@company-prefix": {
         "type": "string",

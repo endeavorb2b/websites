@@ -27,6 +27,16 @@ $ const companyPrefix = input.companyPrefix;
     <else>
       <endeavor-content-authors use-prefix=false block=block content=input.content />
     </else>
-    <cms-content-published block=block obj=input.content />
+    <if(input.withStarts && input.content.starts)>
+      <span class=`${block}__dates`>
+        Starts <endeavor-content-starts tag="date" block=block obj=input.content />
+        <if(input.withEnds && input.content.ends)>
+          , Ends <endeavor-content-ends tag="date" block=block obj=input.content />
+        </if>
+      </span>
+    </if>
+    <else>
+      <cms-content-published block=block obj=input.content />
+    </else>
   </small>
 </>
