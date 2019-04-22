@@ -1,0 +1,12 @@
+import gql from 'graphql-tag';
+import { getAsObject } from '@base-cms/object-path';
+
+$ input.query = getAsObject(input, 'query');
+$ const params = {
+  limit: 4,
+  requiresImage: true,
+  ...input,
+  layout: 'list',
+};
+
+<theme-pennwell-published-content-query|{ nodes }| ...params />

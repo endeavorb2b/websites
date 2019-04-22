@@ -7,8 +7,9 @@ $ const contentTypes = getAsArray(input.query, 'contentTypes');
 $ const { beginningAfter, beginningBefore } = input.query;
 $ const { endingAfter, endingBefore } = input.query;
 $ const layout = input.layout || 'grid';
-$ const block = 'published-content-query';
 $ const ads = getAsObject(input, 'ads');
+$ input.withImage = input.withImage === false ? false : true;
+$ input.withCard = input.withCard === true ? true : false;
 
 $ const query = {
   contentTypes,
@@ -34,6 +35,7 @@ $ const adCardInput = {
   $ delete query.queryFragment;
   $ const loadMore = { endCursor, hasNextPage, provide: { layout, query, ads } };
   <if(layout === "grid")>
+    $ const block = 'published-content-query';
     <div class=block>
       <div class="row">
         <for|content, index| of=nodes>
@@ -53,7 +55,8 @@ $ const adCardInput = {
     <endeavor-content-block-vertical-list
       header=input.header
       nodes=nodes
-      withImage=true
+      with-image=input.withImage
+      with-card=input.withCard
     />
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
