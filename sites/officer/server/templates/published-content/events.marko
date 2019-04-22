@@ -1,0 +1,35 @@
+$ const { config } = out.global;
+$ const query = {
+  contentTypes: ["Event"],
+  limit: 9,
+  sort: {
+    field: 'startDate',
+    order: 'desc',
+  },
+};
+
+<theme-pennwell-published-content-layout>
+  <@head>
+    <cms-page-title value="Events" />
+    <cms-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-block-page-title
+    header="Events"
+    body=`The latest events from ${config.siteName()}`
+  />
+
+  <@below-container>
+    <div class="mt-3"></div>
+    <theme-pennwell-published-content-query-load-more
+      query=query
+      layout="event"
+    />
+    <div class="mb-3"></div>
+  </@below-container>
+
+</theme-pennwell-published-content-layout>

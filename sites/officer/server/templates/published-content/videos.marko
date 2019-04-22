@@ -1,0 +1,25 @@
+$ const { config } = out.global;
+$ const query = { contentTypes: ["Video"], limit: 9 };
+
+<theme-pennwell-published-content-layout>
+  <@head>
+    <cms-page-title value="Videos" />
+    <cms-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-block-page-title
+    header="Videos"
+    body=`The latest videos from ${config.siteName()}`
+  />
+
+  <@below-container>
+    <div class="mt-3"></div>
+    <theme-pennwell-published-content-query-load-more query=query />
+    <div class="mb-3"></div>
+  </@below-container>
+
+</theme-pennwell-published-content-layout>
