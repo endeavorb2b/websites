@@ -2,11 +2,13 @@ const ads = require('./ads');
 
 module.exports = {
   ads,
-  logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=35',
-    srcset: [
-      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=70 2x',
-    ],
+  logos: {
+    navbar: {
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=30',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=60 2x',
+      ],
+    },
     footer: {
       src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
       srcset: [
@@ -33,14 +35,22 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
-  homeSections: [
-    { alias: 'transmission-distribution', name: 'Transmission & Distribution' },
-    { alias: 'vehicles-accessories', name: 'Vehicles & Accessories' },
-    { alias: 'tools-supplies', name: 'Tools & Supplies' },
-    { alias: 'safety', name: 'Safety' },
-    { alias: 'line-construction-maintenance', name: 'Line Construction & Maintenance' },
-    { alias: 'test-measurement', name: 'Test & Measurement' },
-  ],
+  menuItems: {
+    resources: [
+      { href: '/magazine', label: 'Magazine' },
+      { href: '/videos', label: 'Videos' },
+      { href: '/white-papers', label: 'Whitepapers' },
+      { href: '/webcasts', label: 'Webcasts' },
+    ],
+    userTools: [
+      { href: '/subscribe', label: 'Subscribe' },
+      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+    ],
+  },
   gtmContainer: 'GTM-PSGKX8S',
   search: {
     engine: 'google',

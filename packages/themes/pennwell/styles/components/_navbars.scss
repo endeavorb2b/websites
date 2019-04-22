@@ -1,77 +1,247 @@
-.navbar {
-  &--site-a {
-    @extend .fixed-top;
-    @extend .navbar-dark;
-    @extend .navbar-expand-lg;
-    font-family: $theme-content-sans-serif-font;
-    background-color: $primary;
-    box-shadow: $theme-box-shadow-lg;
-    opacity: .98;
-    .navbar-brand {
-      padding-bottom: 0;
-      img {
-        height: 35px;
-      }
-    }
-    .nav-item {
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .navbar-nav {
-      &--primary {
-        margin-top: map-get($spacers, 2);
-        @include media-breakpoint-down(md) {
-          display: none;
-        }
-        @include media-breakpoint-up(lg) {
-          display: flex;
-        }
-        .nav-item {
-          font-size: 1rem;
-          @include media-breakpoint-down(md) {
-            text-align: left;
-          }
-          @include media-breakpoint-up(lg) {
-            text-align: center;
-          }
-          a {
-            padding-top: map-get($spacers, 1);
-            padding-bottom: map-get($spacers, 1);
-            color: $white;
-            &:hover {
-              color: $white;
-              text-decoration: underline;
-            }
-          }
-          &:first-child {
-            a {
-              padding-left: 0;
-            }
-          }
-        }
-      }
+.site-navbar {
+  @extend .fixed-top;
+  font-family: $theme-content-sans-serif-font;
+  box-shadow: $theme-box-shadow-lg;
+  opacity: .98;
+  &__primary {
+    @include theme-navbar-type($theme-site-nav-primary-type);
+    @extend .navbar-expand;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: $theme-site-nav-primary-bg-color;
+  }
+  &__secondary {
+    @include theme-navbar-type($theme-site-nav-secondary-type);
+    @extend .navbar-expand;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: $theme-site-nav-secondary-bg-color;
+  }
+  &__brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: .75rem;
+    margin-left: .75rem;
+    font-size: 1rem;
+  }
+  &__logo {
+    height: 30px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .35));
+  }
+}
 
-      &--secondary {
-        margin-top: auto;
-        @include media-breakpoint-down(md) {
-          display: none;
-        }
-        @include media-breakpoint-up(lg) {
-          display: flex;
-        }
-        a {
-          padding-bottom: 0;
-        }
+.site-navbar-container {
+  @include make-container();
+  @include media-breakpoint-up("xl", $grid-breakpoints) {
+    max-width: map-get($grid-breakpoints, "xl");
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.site-navbar-toggler {
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat 50%;
+    @if $theme-site-nav-secondary-type == dark  {
+      background-image: $navbar-dark-toggler-icon-bg;
+    } @else {
+      background-image: $navbar-light-toggler-icon-bg;
+    }
+    background-size: 100% 100%;
+    &--expanded {
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHYSURBVGhD7dfdSpRRGIbhsbQziEzLStvqIMQkLNCQtJAQiUBFPQ6329dIIiJEJTqY1AzRSvAIKu1PvR91wcvHcnScXLOE94YL9HN+1sOozJQ8z/M8z/O8LHuMJwdfVl0dJnF7/7uEacQf/MWALlSRRkxhFxtoQ5LCCD2xaMxTnCaNmEZ4LPmGWzjz9Otkh4jGDKKSNOIl7OPIV7QiSXpVfsMeoJIxF/AK9v6iEUleDVs/fsEeRGOGUK6LmIG9n3xB8hGhPsTGPEOsciNuoqY9QmzMc9g04jXs7WQdNR8R6kVxzD+EMRrxBvbnktWI0EPExozgrbkWaMQNZFk3imNi1pDtiNBxYzSiBeeiHsRGbOLcjNAf9jvEhuxgGNlXbkSQ/RiNmEXx4HrbsV24pjH6b5Zd9ZiDPays4joeYOvwWqAxo8imBszDHlLCiNB9/IS9TTZjjhrxGddQrAuxMWOoWZewAHsoWUEzjkpjfsDep2ZjNOI97GFEI5pwXPcQGzOOZGnEB9hDyCecZESoE7ExE0jSC9gnl2VcRaV1IDbmLs68y/iI8MRLaMRpK47RR2B9nk9SGLOIK7pQZe34Dn161Of5pGnM/xgRugO9O/A8z/M8z/OyqlTaA3mN7FdoPXLZAAAAAElFTkSuQmCC");
+      @if $theme-site-nav-secondary-type == dark  {
+        filter: invert(1);
       }
     }
-    .navbar-toggler {
-      position: absolute;
-      top: map-get($spacers, 2);
-      right: map-get($spacers, 3);
-      &:focus {
-        outline: none;
+  }
+}
+
+.site-navbar-items {
+  $self: &;
+  text-transform: uppercase;
+  &--primary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
+      font-size: .8rem;
+    }
+    @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+      height: 4px;
+    }
+
+    .nav-item {
+      @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+        display: none;
       }
+      text-align: center;
+      &:first-child a {
+        padding-left: 0;
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
+      a {
+        transition: color ease 300ms, text-decoration ease 300ms;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &--secondary {
+    .nav-item {
+      @media (max-width: map-get($theme-site-nav-secondary-breakpoints, hide)) {
+        display: none;
+      }
+      a {
+        transition: color ease 300ms, text-decoration ease 300ms;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      &:first-child a {
+        padding-left: 0;
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
+    }
+    #{ $self } {
+      &__item {
+        font-size: .8rem;
+      }
+    }
+  }
+  &--tertiary {
+    padding-right: .25rem;
+    margin-left: auto;
+  }
+  &__link {
+    &--search {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      content: "";
+      background: no-repeat 50%;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGcSURBVEhLzdW/K4VRHMfx62cRZZFSKClZbDIYsFDKQDGwUZQsNgMZGJSyGCSL2PxKNmQifwBlIIlBZPOrGPD+nDp1u93HOce9Nz71Gr7nnu859zn3uc8T+0+pQDdGMYA2FCJtaccJPvGV4BUrqMSvk49l2EU/cIQ1bOEc9rMX9CA4WdiBFnnHDEqQmHrsQ/N0xf0IyjjUrKNp1sAP0ZeahZ1fB6+U4Qlq7NWAR7TZNtSzqwGfjEENx6byTxX0O+oIyzXgyh600ZCpwnII9Q6aypELaHKDqcIyB/Xq5nHmAZpca6qwTEC9C6Zy5BSa3GqqsCxCvVOmcmQVmjxtqrBcQr0dpnKkC5p8j2INeKYT6ntEgQZcyYY9Pj3HfFKKW6hnUgO+aYIePWpcgp57UanBGTRXf/TgJ3of9AfUAlfQ66EaedBijZjHGzTHWkcOgqI77xrxCyVzk1Brs1wERcc2jAM8wy52B70yWqCr3ETKm8WnCMnuqmSbbSClzaIStZnG056oY8xI4jfTa2MEGYs205VkdBMbvXn/IrHYN4zwfoRi3rt3AAAAAElFTkSuQmCC");
+      background-size: 100% 100%;
+      @if $theme-site-nav-secondary-type == dark  {
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+.site-navbar-menu {
+  $self: &;
+  $wrapper-width: 350px;
+  $wrapper-max-width: 75vw;
+  $border-width: 4px;
+  $transition-speed: 125ms;
+  $transition-type: ease-in-out;
+
+  position: fixed;
+  top: 90px;
+  bottom: 0;
+  z-index: 100;
+  opacity: .98;
+
+  @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
+    top: 85px;
+  }
+  @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+    top: 54px;
+  }
+
+  &--open {
+    #{ $self } {
+      &__wrapper {
+        width: $wrapper-width;
+        box-shadow: $theme-site-nav-menu-box-shadow;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 0;
+    max-width: $wrapper-max-width;
+    height: 100%;
+
+    overflow-y: scroll;
+    background-color: $white;
+
+    transition: width $transition-speed $transition-type;
+  }
+
+  &__contents {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__card {
+    border: none;
+    border-radius: 0;
+  }
+
+  &__card-header {
+    padding: .5rem 1rem;
+    font-weight: 600;
+    color: $black;
+    letter-spacing: normal;
+    background-color: $gray-100;
+    border-radius: 0;
+    &:first-child {
+      border-radius: 0;
+    }
+  }
+
+  &__list-group-item {
+    @include theme-item();
+    padding: .5rem 1rem;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $theme-site-nav-menu-hover-color;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__card-footer {
+    background-color: $gray-100;
+    &:last-child {
+      border-radius: 0;
     }
   }
 }

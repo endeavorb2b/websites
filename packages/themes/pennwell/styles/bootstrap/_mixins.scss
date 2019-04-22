@@ -55,6 +55,14 @@
   }
 }
 
+@mixin theme-navbar-type($type) {
+  @if $type == dark {
+    @extend .navbar-dark;
+  } @else {
+    @extend .navbar-light;
+  }
+}
+
 @mixin theme-item() {
   padding: $list-group-item-padding-y $list-group-item-padding-x;
 }

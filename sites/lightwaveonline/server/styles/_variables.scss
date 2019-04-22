@@ -1,5 +1,10 @@
-$primary: #907e7e !default;
+$primary: #000 !default;
 $secondary: #495057; // equivalent to default gray-700
 $light: #e9ecef !default; // equivalent to default gray-200
 $dark: #212529 !default; // equivalent to default gray-900
 $info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-nav-secondary-bg-color: #fff;
+$theme-site-nav-primary-bg-color: $primary;
+$theme-site-nav-menu-hover-color: lighten($theme-site-nav-primary-bg-color, 80%);
+$theme-site-nav-secondary-type: light;
