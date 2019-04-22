@@ -55,6 +55,7 @@ $theme-site-nav-secondary-breakpoints: map-merge(
   $theme-site-nav-secondary-breakpoints
 );
 
+$theme-site-nav-menu-hover-color: lighten($theme-site-nav-primary-bg-color, 60%) !default;
 $theme-site-nav-menu-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
 
 $theme-site-footer-primary-bg-color: $primary !default;

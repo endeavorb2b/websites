@@ -212,6 +212,7 @@
   }
 
   &__card-header {
+    padding: .5rem 1rem;
     font-weight: 600;
     color: $black;
     letter-spacing: normal;
@@ -224,10 +225,11 @@
 
   &__list-group-item {
     @include theme-item();
+    padding: .5rem 1rem;
     font-size: 14px;
 
     &:hover {
-      background-color: lighten($theme-site-nav-primary-bg-color, 60%);
+      background-color: $theme-site-nav-menu-hover-color;
     }
 
     &:last-child {
