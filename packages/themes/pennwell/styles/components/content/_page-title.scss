@@ -1,0 +1,24 @@
+.content-page-title {
+  @include theme-card();
+
+  &__header {
+    @include theme-card-header();
+  }
+
+  .card-body {
+    @include theme-item();
+  }
+
+  .content-element-group {
+    &__content-short-name {
+      @include media-breakpoint-down(lg) {
+        min-height: initial;
+      }
+      a {
+        @include media-breakpoint-down(lg) {
+          min-height: initial;
+        }
+      }
+    }
+  }
+}
