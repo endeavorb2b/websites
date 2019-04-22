@@ -50,7 +50,7 @@ $theme-site-nav-secondary-bg-color: $dark !default;
 $theme-site-nav-secondary-breakpoints: () !default;
 $theme-site-nav-secondary-breakpoints: map-merge(
   (
-    hide: map-get($grid-breakpoints, sm),
+    hide: map-get($grid-breakpoints, md),
   ),
   $theme-site-nav-secondary-breakpoints
 );
@@ -76,9 +76,9 @@ body {
     max-width: map-get($grid-breakpoints, "xl");
   }
   flex-shrink: 0;
-  padding-top: 96px;
+  padding-top: 90px;
   margin-top: map-get($spacers, 4);
   @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
-    padding-top: 59px;
+    padding-top: 54px;
   }
 }
