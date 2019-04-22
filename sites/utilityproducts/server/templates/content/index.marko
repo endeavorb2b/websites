@@ -6,9 +6,10 @@ $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'LB1', section }),
-  'gpt-ad-right1': getAdUnit(site, { name: 'CONTENT1', section }),
-  'gpt-ad-right2': getAdUnit(site, { name: 'CONTENT2', section }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', section }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', section }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', section }),
 };
 
 <theme-pennwell-content-layout content=content>
@@ -33,9 +34,8 @@ $ const adSlots = {
       </div>
 
       <aside class="col-lg-4">
-        <!-- Displaying ad unit 2 before 1 is intentional -->
-        <endeavor-gam-ad-unit-display id="gpt-ad-right2" modifiers=["content-page-right"] />
-        <endeavor-gam-ad-unit-display id="gpt-ad-right1" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
         <endeavor-content-query-related exclude-content-ids=[content.id] section-id=section.id />
       </aside>
     </div>
