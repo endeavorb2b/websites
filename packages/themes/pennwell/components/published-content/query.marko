@@ -1,0 +1,63 @@
+import { getAsArray, getAsObject } from '@base-cms/object-path';
+import queryFragment from '../../api/fragments/all-published-content';
+
+$ const pageNumber = input.pageNumber || 1;
+$ input.query = getAsObject(input, 'query');
+$ const contentTypes = getAsArray(input.query, 'contentTypes');
+$ const { beginningAfter, beginningBefore } = input.query;
+$ const { endingAfter, endingBefore } = input.query;
+$ const layout = input.layout || 'grid';
+$ const ads = getAsObject(input, 'ads');
+$ input.withImage = input.withImage === false ? false : true;
+$ input.withCard = input.withCard === true ? true : false;
+
+$ const query = {
+  contentTypes,
+  beginningAfter,
+  beginningBefore,
+  endingAfter,
+  endingBefore,
+  limit: 9,
+  ...input.query,
+  queryFragment,
+};
+
+$ const adCardInput = {
+  name: 'load-more',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.card'),
+};
+
+<cms-query-all-published-content|{ nodes, pageInfo }| ...query>
+  $ const { endCursor, hasNextPage } = pageInfo;
+  $ query.after = endCursor;
+  $ delete query.queryFragment;
+  $ const loadMore = { endCursor, hasNextPage, provide: { layout, query, ads } };
+  <if(layout === "grid")>
+    $ const block = 'published-content-query';
+    <div class=block>
+      <div class="row">
+        <for|content, index| of=nodes>
+          <div class=`${block}__col`>
+            <endeavor-content-block-card content=content />
+          </div>
+          <if(index === 1 || index === 6)>
+            <div class=`${block}__col`>
+              <endeavor-gam-ad-unit-define-display ...adCardInput/>
+            </div>
+          </if>
+        </for>
+      </div>
+    </div>
+  </if>
+  <else>
+    <endeavor-content-block-vertical-list
+      header=input.header
+      nodes=nodes
+      with-image=input.withImage
+      with-card=input.withCard
+    />
+  </else>
+  <${input.renderBody} nodes=nodes load-more=loadMore />
+</cms-query-all-published-content>

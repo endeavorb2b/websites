@@ -2,6 +2,7 @@ const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
 const loadMore = require('./load-more');
+const publishedContent = require('./published-content');
 const search = require('./search');
 const websiteSections = require('./website-section');
 
@@ -17,6 +18,9 @@ module.exports = (app) => {
 
   // Content Types
   contentTypes(app);
+
+  // Published content pages
+  publishedContent(app);
 
   // Search
   search(app);

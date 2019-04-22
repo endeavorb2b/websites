@@ -46,6 +46,14 @@
         "required": true
       }
     },
+    "endeavor-content-block-page-title": {
+      "template": "./page-title.marko",
+      "@header": {
+        "type": "string",
+        "required": true
+      },
+      "@body": "string"
+    },
     "endeavor-content-block-page-header": {
       "template": "./page-header.marko",
       "@content": {

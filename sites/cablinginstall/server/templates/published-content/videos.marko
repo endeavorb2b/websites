@@ -1,0 +1,33 @@
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+
+$ const { site, config } = out.global;
+$ const query = { contentTypes: ["Video"], limit: 10 };
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1' }),
+  'gpt-ad-right1': getAdUnit(site, { name: 'rail1' }),
+};
+
+<theme-pennwell-published-content-layout>
+  <@head>
+    <cms-page-title value="Videos" />
+    <cms-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-block-page-title
+    header="Videos"
+    body=`The latest videos from ${config.siteName()}`
+  />
+
+  <@below-container>
+    <div class="published-content-query-load-more">
+      <theme-pennwell-published-content-query-load-more
+        query=query
+      />
+    </div>
+  </@below-container>
+
+</theme-pennwell-published-content-layout>

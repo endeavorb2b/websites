@@ -4,6 +4,7 @@ $ const block = 'content-vertical-list';
 $ const nodes = asArray(input.nodes);
 
 $ const withCard = input.withCard === true ? true : false;
+$ const withImage = input.withImage === true ? true : false;
 
 $ const cardNodes = withCard ? nodes.slice(0, 1) : [];
 $ const listNodes = nodes.slice(withCard ? 1 : 0);
@@ -20,6 +21,6 @@ $ const listNodes = nodes.slice(withCard ? 1 : 0);
         <endeavor-content-block-card-body modifiers=input.modifiers content=content />
       </for>
     </if>
-    <endeavor-content-block-list-group modifiers=input.modifiers with-image=false nodes=listNodes />
+    <endeavor-content-block-list-group modifiers=input.modifiers with-image=withImage nodes=listNodes />
   </div>
 </if>

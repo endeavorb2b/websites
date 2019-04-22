@@ -8,6 +8,15 @@
     },
     "theme-pennwell-site-footer": {
       "template": "./site-footer.marko"
+    },
+    "theme-pennwell-published-content-query": {
+      "template": "./published-content/query.marko"
+    },
+    "theme-pennwell-published-content-query-list": {
+      "template": "./published-content/query-list.marko"
+    },
+    "theme-pennwell-published-content-query-load-more": {
+      "template": "./published-content/query-load-more.marko"
     }
   }
 }

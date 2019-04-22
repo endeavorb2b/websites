@@ -1,0 +1,28 @@
+$ const { config } = out.global;
+$ const query = { contentTypes: ["Whitepaper"], limit: 9 };
+
+<theme-pennwell-published-content-layout>
+  <@head>
+    <cms-page-title value="White Papers" />
+    <cms-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="LB1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-block-page-title
+    header="White Papers"
+    body=`The latest white papers from ${config.siteName()}`
+  />
+
+  <@below-container>
+    <div class="published-content-query-load-more">
+      <theme-pennwell-published-content-query-load-more
+        query=query
+        layout="whitepaper"
+      />
+    </div>
+  </@below-container>
+
+</theme-pennwell-published-content-layout>

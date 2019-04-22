@@ -33,7 +33,10 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: '/page/about-us', label: 'About Us' },
+    { href: '/white-papers', label: 'White Papers' },
+    { href: '/events', label: 'Events' },
+    { href: '/webinars', label: 'Webinars' },
+    { href: '/search', label: 'Search' },
   ],
   menuItems: {
     resources: [

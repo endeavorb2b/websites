@@ -9,18 +9,16 @@ $ const primarySection = getAsObject(input.content, 'primarySection');
 $ const company = getAsObject(input.content, 'company');
 
 <${input.tag} class=classNames>
-  <cms-website-section-name block=block obj=primarySection link=true />
-  <cms-content-short-name tag="h5" block=block obj=input.content link=true />
-  <if(input.withTeaser)>
-    <cms-content-teaser tag="p" block=block obj=input.content link=true />
+  <if(input.content.type === 'webinar')>
+    <element-group-webinar ...input />
   </if>
-  <small class=`${block}__row`>
-    <if(company.id)>
-      <endeavor-content-company-name use-prefix=false block=block company=company />
-    </if>
-    <else>
-      <endeavor-content-authors use-prefix=false block=block content=input.content />
-    </else>
-    <cms-content-published block=block obj=input.content />
-  </small>
+  <else-if(input.content.type === 'whitepaper')>
+    <element-group-whitepaper ...input />
+  </else-if>
+  <else-if(input.content.type === 'event')>
+    <element-group-event ...input />
+  </else-if>
+  <else>
+    <element-group-default ...input />
+  </else>
 </>
