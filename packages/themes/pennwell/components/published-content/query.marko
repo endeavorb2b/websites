@@ -7,6 +7,8 @@ $ const contentTypes = getAsArray(input.query, 'contentTypes');
 $ const { beginningAfter, beginningBefore } = input.query;
 $ const { endingAfter, endingBefore } = input.query;
 $ const layout = input.layout || 'grid';
+$ const block = 'published-content-query';
+$ const ads = getAsObject(input, 'ads');
 
 $ const query = {
   contentTypes,
@@ -19,35 +21,39 @@ $ const query = {
   queryFragment,
 };
 
-$ const getProps = (layout) => {
-  switch (layout) {
-    case 'webinar':
-      return { companyPrefix: 'Sponsored by: ', withCompanyImage: true, withStarts: true };
-    case 'event':
-      return { withStarts: true, withEnds: true };
-    case 'whitepaper':
-      return { companyPrefix: 'Sponsored by: ', withCompanyImage: true };
-    default:
-      return {};
-  };
+$ const adCardInput = {
+  name: 'CONTENT1',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.card'),
 };
-
-$ const listProps = getProps(layout);
 
 <cms-query-all-published-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ query.after = endCursor;
   $ delete query.queryFragment;
-  $ const loadMore = { endCursor, hasNextPage, provide: { layout, query } };
+  $ const loadMore = { endCursor, hasNextPage, provide: { layout, query, ads } };
   <if(layout === "grid")>
-    <endeavor-content-block-card-grid nodes=nodes cols=3 />
+    <div class=block>
+      <div class="row">
+        <for|content, index| of=nodes>
+          <div class=`${block}__col`>
+            <endeavor-content-block-card content=content />
+          </div>
+          <if(index === 1 || index === 6)>
+            <div class=`${block}__col`>
+              <endeavor-gam-ad-unit-define-display ...adCardInput/>
+            </div>
+          </if>
+        </for>
+      </div>
+    </div>
   </if>
   <else>
     <endeavor-content-block-vertical-list
       header=input.header
       nodes=nodes
       withImage=true
-      ...listProps
     />
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
