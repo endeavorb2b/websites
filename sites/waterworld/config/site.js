@@ -3,9 +3,9 @@ const ads = require('./ads');
 module.exports = {
   ads,
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=25',
+    src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=30',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=70 2x',
+      'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=60 2x',
     ],
     footer: {
       src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=50',
@@ -23,6 +23,8 @@ module.exports = {
     { href: '/municipal', label: 'Municipal' },
     { href: '/industrial', label: 'Industrial' },
     { href: '/international', label: 'International' },
+    { href: '/municpal/technologies', label: 'Technologies' },
+    { href: '/', label: 'Thought Leaders' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },

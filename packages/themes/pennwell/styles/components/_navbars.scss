@@ -1,77 +1,205 @@
-.navbar {
-  &--site-a {
-    @extend .fixed-top;
-    @extend .navbar-dark;
-    @extend .navbar-expand-lg;
-    font-family: $theme-content-sans-serif-font;
-    background-color: $primary;
-    box-shadow: $theme-box-shadow-lg;
-    opacity: .98;
-    .navbar-brand {
-      padding-bottom: 0;
-      img {
-        height: 35px;
-      }
-    }
-    .nav-item {
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .navbar-nav {
-      &--primary {
-        margin-top: map-get($spacers, 2);
-        @include media-breakpoint-down(md) {
-          display: none;
-        }
-        @include media-breakpoint-up(lg) {
-          display: flex;
-        }
-        .nav-item {
-          font-size: 1rem;
-          @include media-breakpoint-down(md) {
-            text-align: left;
-          }
-          @include media-breakpoint-up(lg) {
-            text-align: center;
-          }
-          a {
-            padding-top: map-get($spacers, 1);
-            padding-bottom: map-get($spacers, 1);
-            color: $white;
-            &:hover {
-              color: $white;
-              text-decoration: underline;
-            }
-          }
-          &:first-child {
-            a {
-              padding-left: 0;
-            }
-          }
-        }
-      }
+.site-navbar {
+  @extend .fixed-top;
+  font-family: $theme-content-sans-serif-font;
+  box-shadow: $theme-box-shadow-lg;
+  opacity: .98;
+  &__primary {
+    @include theme-navbar-type($theme-site-nav-primary-type);
+    @extend .navbar-expand;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: $theme-site-nav-primary-bg-color;
+  }
+  &__secondary {
+    @include theme-navbar-type($theme-site-nav-secondary-type);
+    @extend .navbar-expand;
+    background-color: $theme-site-nav-secondary-bg-color;
+  }
+  &__brand {
+    margin-right: .75rem;
+    font-size: 1rem;
+  }
+  &__logo {
+    height: 30px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .35));
+  }
+}
 
-      &--secondary {
-        margin-top: auto;
-        @include media-breakpoint-down(md) {
-          display: none;
-        }
-        @include media-breakpoint-up(lg) {
-          display: flex;
-        }
-        a {
-          padding-bottom: 0;
-        }
-      }
+.site-navbar-container {
+  @include make-container();
+  @include media-breakpoint-up("xl", $grid-breakpoints) {
+    max-width: map-get($grid-breakpoints, "xl");
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+.site-navbar-toggler {
+  padding: .25rem .75rem;
+  padding-left: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+
+  &__icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat 50%;
+    @if $theme-site-nav-secondary-type == dark  {
+      background-image: $navbar-dark-toggler-icon-bg;
+    } @else {
+      background-image: $navbar-light-toggler-icon-bg;
     }
-    .navbar-toggler {
-      position: absolute;
-      top: map-get($spacers, 2);
-      right: map-get($spacers, 3);
-      &:focus {
-        outline: none;
+    background-size: 100% 100%;
+  }
+}
+
+.site-navbar-items {
+  $self: &;
+  text-transform: uppercase;
+  &--primary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
+      font-size: .8rem;
+    }
+    @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+      height: 3px;
+    }
+
+    .nav-item {
+      @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+        display: none;
+      }
+      text-align: center;
+      &:first-child a {
+        padding-left: 0;
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
+      a {
+        transition: color ease 300ms, text-decoration ease 300ms;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
   }
+  &--secondary {
+    .nav-item {
+      @media (max-width: map-get($theme-site-nav-secondary-breakpoints, hide)) {
+        display: none;
+      }
+      a {
+        transition: color ease 300ms, text-decoration ease 300ms;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      &:first-child a {
+        padding-left: 0;
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
+    }
+    #{ $self } {
+      &__item {
+        font-size: .8rem;
+      }
+    }
+  }
+  // &__link {
+  //   padding-right: $navbar-nav-link-padding-x + $navbar-nav-link-padding-x;
+  //   padding-left: 0;
+  // }
 }
+
+
+// .navbar {
+//   &--site-a {
+//     @extend .fixed-top;
+//     @extend .navbar-dark;
+//     @extend .navbar-expand-lg;
+//     font-family: $theme-content-sans-serif-font;
+//     background-color: $primary;
+//     box-shadow: $theme-box-shadow-lg;
+//     opacity: .98;
+//     .navbar-brand {
+//       padding-bottom: 0;
+//       img {
+//         height: 35px;
+//       }
+//     }
+//     .nav-item {
+//       font-size: .8rem;
+//       text-transform: uppercase;
+//       letter-spacing: 1px;
+//     }
+//     .navbar-nav {
+//       &--primary {
+//         margin-top: map-get($spacers, 2);
+//         @include media-breakpoint-down(md) {
+//           display: none;
+//         }
+//         @include media-breakpoint-up(lg) {
+//           display: flex;
+//         }
+//         .nav-item {
+//           font-size: 1rem;
+//           @include media-breakpoint-down(md) {
+//             text-align: left;
+//           }
+//           @include media-breakpoint-up(lg) {
+//             text-align: center;
+//           }
+//           a {
+//             padding-top: map-get($spacers, 1);
+//             padding-bottom: map-get($spacers, 1);
+//             color: $white;
+//             &:hover {
+//               color: $white;
+//               text-decoration: underline;
+//             }
+//           }
+//           &:first-child {
+//             a {
+//               padding-left: 0;
+//             }
+//           }
+//         }
+//       }
+
+//       &--secondary {
+//         margin-top: auto;
+//         @include media-breakpoint-down(md) {
+//           display: none;
+//         }
+//         @include media-breakpoint-up(lg) {
+//           display: flex;
+//         }
+//         a {
+//           padding-bottom: 0;
+//         }
+//       }
+//     }
+//     .navbar-toggler {
+//       position: absolute;
+//       top: map-get($spacers, 2);
+//       right: map-get($spacers, 3);
+//       &:focus {
+//         outline: none;
+//       }
+//     }
+//   }
+// }
