@@ -1,9 +1,0 @@
-import { getAsArray } from '@base-cms/object-path';
-
-$ const nodes = getAsArray(input, 'nodes');
-$ const block = 'content-query-section-list';
-$ const mod = input.horizontal ? 'horizontal' : 'vertical';
-
-<div class=[block, `${block}--${mod}`]>
-  <endeavor-content-block-vertical-list header=input.header nodes=nodes />
-</div>
