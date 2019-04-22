@@ -6,6 +6,7 @@ $ input.query = getAsObject(input, 'query');
 $ const contentTypes = getAsArray(input.query, 'contentTypes');
 $ const { beginningAfter, beginningBefore } = input.query;
 $ const { endingAfter, endingBefore } = input.query;
+$ const layout = input.layout || 'grid';
 
 $ const query = {
   contentTypes,
@@ -18,17 +19,16 @@ $ const query = {
   queryFragment,
 };
 
-$ console.log('query.query', query);
 
 <cms-query-all-published-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ query.after = endCursor;
-  $ const loadMore = { endCursor, hasNextPage, provide: { query } };
-  <if(input.layout === "list")>
-    <theme-pennwell-published-content-layout-list nodes=nodes />
+  $ delete query.queryFragment;
+  $ const loadMore = { endCursor, hasNextPage, provide: { layout, query } };
+  <if(layout === "grid")>
+    <endeavor-content-block-card-grid nodes=nodes cols=3 />
   </if>
   <else>
-    <theme-pennwell-published-content-layout-grid nodes=nodes />
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
 </cms-query-all-published-content>

@@ -152,6 +152,14 @@
       },
       "@modifiers": "array"
     },
+    "endeavor-content-block-card-grid": {
+      "template": "./card-grid.marko",
+      "@nodes": "array",
+      "@cols": {
+        "type": "number",
+        "default-value": 3
+      }
+    },
     "endeavor-content-block-vertical-list": {
       "template": "./vertical-list.marko"
     },
