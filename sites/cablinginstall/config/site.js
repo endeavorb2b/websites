@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/cim/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/3962332' },
+    { provider: 'twitter', href: 'http://twitter.com/CABLINGMAG' },
+    { provider: 'facebook', href: 'http://www.facebook.com/pages/Cabling-Installation-and-Maintenance/298118662118' },
+  ],
   primaryNavItems: [
     { href: '/data-center', label: 'Data Center' },
     { href: '/standards', label: 'Standards' },

@@ -1,0 +1,86 @@
+.site-footer {
+  $drop-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  @extend .navbar-dark;
+  margin-top: auto;
+  font-family: $theme-content-sans-serif-font;
+  box-shadow: $theme-box-shadow-lg;
+  opacity: .98;
+
+  &__container {
+    @include make-container();
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
+    text-align: center;
+
+    &--brand {
+      background-color: $theme-site-footer-primary-bg-color;
+    }
+
+    &--links {
+      background-color: $theme-site-footer-secondary-bg-color;
+    }
+  }
+
+  &__brand {
+    display: inline-block;
+    img {
+      height: 50px;
+      filter: brightness(0) invert(1) drop-shadow($drop-shadow);
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: map-get($spacers, 3);
+  }
+
+  &__social-icon {
+    margin: 0 map-get($spacers, 3);
+    svg {
+      width: 40px;
+      filter: drop-shadow($drop-shadow);
+      border-radius: $border-radius;
+      transition: fill ease 250ms, background-color ease 250ms;
+      fill: $white;
+    }
+    &--facebook {
+      &:hover svg {
+        background-color: $white;
+        fill: map-get($brand-colors, facebook);
+      }
+    }
+    &--linkedin {
+      &:hover svg {
+        background-color: $white;
+        fill: map-get($brand-colors, linkedin);
+      }
+    }
+    &--twitter {
+      &:hover svg {
+        fill: map-get($brand-colors, twitter);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: map-get($spacers, 3);
+  }
+
+  &__link {
+    margin: 0 map-get($spacers, 3);
+    a {
+      padding: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-sm;
+    color: $light;
+    opacity: .5;
+  }
+}

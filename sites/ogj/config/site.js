@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/oil-&-gas-journal' },
+    { provider: 'twitter', href: 'http://twitter.com/ogjonline' },
+    { provider: 'facebook', href: 'http://www.facebook.com/ogjonline' },
+  ],
   primaryNavItems: [
     { href: '/general-interest', label: 'General Interest' },
     { href: '/exploration-development', label: 'Exploration & Development' },

@@ -8,6 +8,11 @@ module.exports = {
       'https://base.imgix.net/files/base/pennwell/ils/logo.png?h=80 2x',
     ],
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/4000113' },
+    { provider: 'twitter', href: 'https://twitter.com/ILS_for_Mfg' },
+    { provider: 'facebook', href: 'https://www.facebook.com/industriallasersolutionsformanufacturing' },
+  ],
   primaryNavItems: [
     { href: '/cutting', label: 'Cutting' },
     { href: '/welding', label: 'Welding' },

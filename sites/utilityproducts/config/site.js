@@ -3,11 +3,22 @@ const ads = require('./ads');
 module.exports = {
   ads,
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=35',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/up/logo.png?h=70 2x',
     ],
+    footer: {
+      src: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/up/logo.png?h=100 2x',
+      ],
+    },
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/company/utility-products?trk=other_brands_logo' },
+    { provider: 'twitter', href: 'http://twitter.com/UtilityProducts' },
+    { provider: 'facebook', href: 'http://www.facebook.com/pages/Utility-Products-Magazine/133739816672957' },
+  ],
   primaryNavItems: [
     { href: '/transmission-distribution', label: 'Transmission & Distribution' },
     { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },

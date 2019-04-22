@@ -3,11 +3,22 @@ const ads = require('./ads');
 module.exports = {
   ads,
   logo: {
-    src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=40',
+    src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=25',
     srcset: [
-      'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=80 2x',
+      'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=70 2x',
     ],
+    footer: {
+      src: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=50',
+      srcset: [
+        'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=100 2x',
+      ],
+    },
   },
+  socialMediaLinks: [
+    { provider: 'linkedin', href: 'https://www.linkedin.com/grp/home?gid=1965670' },
+    { provider: 'twitter', href: 'https://twitter.com/WaterWorld' },
+    { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
+  ],
   primaryNavItems: [
     { href: '/municipal', label: 'Municipal' },
     { href: '/industrial', label: 'Industrial' },

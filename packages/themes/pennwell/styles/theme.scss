@@ -25,39 +25,33 @@ $spacers: (
   block: $block-spacer
 ) !default;
 
+@import "variables";
 @import "bootstrap";
+
+$theme-site-nav-primary-bg-color: $primary !default;
+$theme-site-nav-secondary-bg-color: $primary !default;
+
+$theme-site-footer-primary-bg-color: $primary !default;
+$theme-site-footer-secondary-bg-color: $primary !default;
+
 @import "components";
-@import "../../node_modules/@endeavorb2b/base-website-common/styles/embedded-media";
-@import "../../node_modules/@endeavorb2b/base-website-common/components/navbars/site-a";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .container-fluid-max {
   @include make-container();
   @include media-breakpoint-up("xl", $grid-breakpoints) {
     max-width: map-get($grid-breakpoints, "xl");
   }
-  padding-top: map-get($spacers, block);
-}
-
-.load-more-header {
-  @include theme-heading(h4);
-  margin-bottom: map-get($spacers, 3);
-  font-family: $theme-content-sans-serif-font;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-img {
-  // stylelint-disable-next-line selector-no-qualifying-type
-  &.lazyload:not([src]) {
-    visibility: hidden;
-  }
-  // stylelint-disable-next-line selector-no-qualifying-type
-  &.lazyloaded {
-    opacity: 1;
-    transition: opacity 250ms;
-  }
-}
-
-.lazyloading {
-  opacity: 0;
+  flex-shrink: 0;
+  padding-top: 96px;
+  margin-top: map-get($spacers, 4);
 }
