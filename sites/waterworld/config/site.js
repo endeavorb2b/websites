@@ -23,7 +23,7 @@ module.exports = {
     { href: '/municipal', label: 'Municipal' },
     { href: '/industrial', label: 'Industrial' },
     { href: '/international', label: 'International' },
-    { href: '/municpal/technologies', label: 'Technologies' },
+    { href: '/municipal/technologies', label: 'Technologies' },
     { href: '/', label: 'Thought Leaders' },
   ],
   secondaryNavItems: [
