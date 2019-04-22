@@ -78,6 +78,9 @@ body {
   flex-shrink: 0;
   padding-top: 90px;
   margin-top: map-get($spacers, 4);
+  @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
+    padding-top: 85px;
+  }
   @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
     padding-top: 54px;
   }
