@@ -54,27 +54,6 @@ module.exports = {
     ],
   },
   gtmContainer: 'GTM-T4G6938',
-  // ad: {
-  //   units: {
-  //     BS: {
-  //       path: '/21687441225/CIM/CIM_BS',
-  //       size: [[970, 250], [970, 90], [728, 90], [320, 50], [300, 50], [300, 100]],
-  //       sizeMapping: [
-  //         { viewport: [980, 0], size: [[970, 250], [970, 90], [728, 90]] },
-  //         { viewport: [750, 0], size: [728, 90] },
-  //         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
-  //       ],
-  //     },
-  //     MR: {
-  //       path: '/21687441225/CIM/CIM_MR',
-  //       size: [300, 250],
-  //     },
-  //     HP: {
-  //       path: '/21687441225/CIM/CIM_HP',
-  //       size: [300, 600],
-  //     },
-  //   },
-  // },
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:l9lnow_qnxy',
