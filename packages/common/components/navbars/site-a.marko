@@ -4,6 +4,7 @@ $ const { site, config } = out.global;
 
 $ const navbar = 'site-navbar';
 $ const nav = 'site-navbar-items';
+$ const menu = 'site-navbar-menu';
 
 <header class=navbar>
 
@@ -41,39 +42,29 @@ $ const nav = 'site-navbar-items';
     </div>
   </nav>
 
-  <aside class="site-navbar-menu">
-    <div class=bem('site-navbar-menu', 'wrapper')>
-      <div class=bem('site-navbar-menu', 'contents')>
-        <div class="d-flex flex-row justify-content-end">
-          <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open', expanded: true } />
-        </div>
-      </div>
-    </div>
-  </aside>
 </header>
 
-<!-- <nav class="navbar navbar--site-a">
-  <div class="d-flex flex-column-reverse">
-    <ul class="navbar-nav navbar-nav--primary">
-      <for|item| of=site.getAsArray('primaryNavItems')>
-        <li class="nav-item">
-          <a class="nav-link" href=item.href>${item.label}</a>
-        </li>
-      </for>
-    </ul>
+<aside class=menu>
+  <div class=bem(menu, 'wrapper')>
+    <div class=bem(menu, 'contents')>
+      <div class=`${bem(menu, 'card')} card`>
 
-    <div class="d-lg-flex">
-      <a class="navbar-brand" href="/">
-        <img alt=config.siteName() src=site.get('logo.src') srcset=site.get('logo.srcset').join(',')>
-      </a>
-      <ul class="navbar-nav navbar-nav--secondary">
-        <for|item| of=site.getAsArray('secondaryNavItems')>
-          <li class="nav-item">
-            <a class="nav-link" href=item.href>${item.label}</a>
-          </li>
-        </for>
-      </ul>
+        <div class=`${bem(menu, 'card-header')} card-header`>Topics</div>
+        <div class=`${bem(menu, 'list-group')} list-group list-group-flush`>
+          <for|item| of=site.getAsArray('primaryNavItems')>
+            <a class=`${bem(menu, 'list-group-item')} list-group-item list-group-item-action` href=item.href>${item.label}</a>
+          </for>
+        </div>
+
+        <div class=`${bem(menu, 'card-header')} card-header`>Resources</div>
+        <div class=`${bem(menu, 'list-group')} list-group list-group-flush`>
+          <for|item| of=site.getAsArray('secondaryNavItems')>
+            <a class=`${bem(menu, 'list-group-item')} list-group-item list-group-item-action` href=item.href>${item.label}</a>
+          </for>
+        </div>
+
+        <div class=`${bem(menu, 'card-footer')} card-footer`></div>
+      </div>
     </div>
   </div>
-  <cms-browser-component name="NavbarToggleButton" props={ targets: ['.navbar-nav--primary', '.navbar-nav--secondary'], toggleClass: 'd-flex' } />
-</nav> -->
+</aside>

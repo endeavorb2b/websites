@@ -17,14 +17,11 @@ export default {
     toggleClass: {
       type: String,
       required: true,
-    },
-    expanded: {
-      type: Boolean,
-      default: false,
     }
   },
   data: () => ({
     blockName: 'site-navbar-toggler',
+    expanded: false,
   }),
   computed: {
     iconClass() {
@@ -39,6 +36,7 @@ export default {
   },
   methods: {
     toggle() {
+      this.expanded = !this.expanded;
       const elementList = document.querySelectorAll(this.targets.join(','));
       elementList.forEach((element) => {
         element.classList.toggle(this.toggleClass);
