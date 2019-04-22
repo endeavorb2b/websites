@@ -1,0 +1,16 @@
+import bem from '../../../utils/bem-class';
+
+$ const { site } = out.global;
+$ const { block } = input;
+$ const items = site.getAsArray(input.for);
+
+<if(items.length)>
+  <div class=`${bem(block, 'card-header')} card-header`>
+    ${input.header}
+  </div>
+  <div class=`${bem(block, 'list-group')} list-group list-group-flush`>
+    <for|item| of=items>
+      <a class=`${bem(block, 'list-group-item')} list-group-item list-group-item-action` href=item.href>${item.label}</a>
+    </for>
+  </div>
+</if>

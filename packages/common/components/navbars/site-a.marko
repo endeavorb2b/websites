@@ -48,21 +48,9 @@ $ const menu = 'site-navbar-menu';
   <div class=bem(menu, 'wrapper')>
     <div class=bem(menu, 'contents')>
       <div class=`${bem(menu, 'card')} card`>
-
-        <div class=`${bem(menu, 'card-header')} card-header`>Topics</div>
-        <div class=`${bem(menu, 'list-group')} list-group list-group-flush`>
-          <for|item| of=site.getAsArray('primaryNavItems')>
-            <a class=`${bem(menu, 'list-group-item')} list-group-item list-group-item-action` href=item.href>${item.label}</a>
-          </for>
-        </div>
-
-        <div class=`${bem(menu, 'card-header')} card-header`>Resources</div>
-        <div class=`${bem(menu, 'list-group')} list-group list-group-flush`>
-          <for|item| of=site.getAsArray('secondaryNavItems')>
-            <a class=`${bem(menu, 'list-group-item')} list-group-item list-group-item-action` href=item.href>${item.label}</a>
-          </for>
-        </div>
-
+        <menu-card block=menu for="primaryNavItems" header="Topics" />
+        <menu-card block=menu for="menuItems.resources" header="Resources" />
+        <menu-card block=menu for="menuItems.userTools" header="User Tools" />
         <div class=`${bem(menu, 'card-footer')} card-footer`></div>
       </div>
     </div>
