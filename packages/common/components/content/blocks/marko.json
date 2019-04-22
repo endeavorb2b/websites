@@ -13,7 +13,11 @@
       "@modifiers": "array",
       "@options": "object",
       "@width": "number",
-      "@height": "number"
+      "@height": "number",
+      "@with-company-image": {
+        "type": "boolean",
+        "default-value": false
+      }
     },
     "endeavor-content-block-element-group": {
       "template": "./element-group.marko",
@@ -67,6 +71,10 @@
       "@with-image": {
         "type": "boolean",
         "default-value": true
+      },
+      "@with-company-image": {
+        "type": "boolean",
+        "default-value": false
       },
       "@with-teaser": {
         "type": "boolean",
@@ -141,6 +149,10 @@
       "@with-image": {
         "type": "boolean",
         "default-value": true
+      },
+      "@with-company-image": {
+        "type": "boolean",
+        "default-value": false
       },
       "@with-teaser": {
         "type": "boolean",
