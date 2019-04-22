@@ -1,0 +1,14 @@
+import { getAsObject } from '@base-cms/object-path';
+
+<theme-pennwell-document>
+  <@head>
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="published-content">
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+</theme-pennwell-document>

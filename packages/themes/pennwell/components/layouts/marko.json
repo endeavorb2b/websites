@@ -11,6 +11,9 @@
     },
     "theme-pennwell-search-layout": {
       "template": "./search.marko"
+    },
+    "theme-pennwell-published-content-layout": {
+      "template": "./published-content.marko"
     }
   }
 }
