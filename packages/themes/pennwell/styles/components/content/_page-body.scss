@@ -1,7 +1,6 @@
 .content-page-body {
   &__content-body,
-  &__primary-image,
-  &__primary-embed {
+  &__primary-media {
     @include content-body();
     padding-right: map-get($spacers, 3);
     padding-left: map-get($spacers, 3);

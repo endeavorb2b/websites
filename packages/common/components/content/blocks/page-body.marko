@@ -2,27 +2,31 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const { site } = out.global;
 $ const block = 'content-page-body';
+
 $ const content = getAsObject(input, 'content');
-$ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true);
+$ const primaryImage = getAsObject(content, 'primaryImage');
+
+$ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true) && primaryImage.src;
+$ const displayMedia = displayPrimaryImage || content.embedCode;
 
 <div class=block>
-  <if(content.embedCode)>
-    <div class=`${block}__primary-embed`>
-      <div class=`${block}__primary-embed-item`>
-        $!{content.embedCode}
-      </div>
+  <if(displayMedia)>
+    <div class=`${block}__primary-media`>
+      <if(content.embedCode)>
+        <div class=`${block}__primary-embed-item`>
+          $!{content.embedCode}
+        </div>
+      </if>
+      <else-if(displayPrimaryImage)>
+        <!-- @todo Add support for responsive images / size variance based on context -->
+        <endeavor-content-block-primary-image
+          content=input.content
+          lazyload=false
+          modifiers=['content-body']
+          options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+        />
+      </else-if>
     </div>
   </if>
-  <else-if(displayPrimaryImage)>
-    <!-- @todo Add support for responsive images / size variance based on context -->
-    <div class=`${block}__primary-image`>
-      <endeavor-content-block-primary-image
-        content=input.content
-        lazyload=false
-        modifiers=['content-body']
-        options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-      />
-    </div>
-  </else-if>
   <cms-content-body tag="div" block=block obj=input.content />
 </div>
