@@ -1,0 +1,22 @@
+.magazine-publication-list {
+  &__col {
+    margin-bottom: map-get($spacers, block);
+    @include make-col-ready();
+  }
+  &__col-issue {
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+  &__col-details {
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+    }
+  }
+
+  &__buttons {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: map-get($spacers, 3);
+  }
+}

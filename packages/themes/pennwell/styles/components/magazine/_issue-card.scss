@@ -1,0 +1,53 @@
+.issue-card {
+  $element-margin: 6px;
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__image-wrap {
+    margin-top: map-get($spacers, block);
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    border-radius: $border-radius;
+    box-shadow: $theme-box-shadow-lg;
+  }
+
+  &__name {
+    min-height: 48px;
+    max-height: 48px;
+    margin-bottom: $element-margin;
+    text-align: center;
+    @include theme-heading(h6);
+    @include media-breakpoint-down(sm) {
+      min-height: initial;
+      max-height: 60px;
+    }
+
+    a {
+      display: block;
+      max-height: 48px;
+      overflow: hidden;
+      color: $black;
+      text-overflow: ellipsis;
+      @include media-breakpoint-down(sm) {
+        max-height: 60px;
+      }
+    }
+  }
+
+  &__magazine-issue-mail-date {
+    @include theme-list-text();
+    margin-top: auto;
+    color: $gray;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+}
