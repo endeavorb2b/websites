@@ -1,5 +1,8 @@
 .site-footer {
   $drop-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  $spacer-lg: map-get($spacers, 3);
+  $spacer-sm: map-get($spacers, 2);
+
   @extend .navbar-dark;
   margin-top: auto;
   font-family: $theme-content-sans-serif-font;
@@ -8,9 +11,14 @@
 
   &__container {
     @include make-container();
-    padding-top: map-get($spacers, 3);
-    padding-bottom: map-get($spacers, 3);
+    padding-top: $spacer-lg;
+    padding-bottom: $spacer-lg;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: $spacer-sm;
+      padding-bottom: $spacer-sm;
+    }
 
     &--brand {
       background-color: $theme-site-footer-primary-bg-color;
@@ -26,6 +34,9 @@
     img {
       height: 50px;
       filter: brightness(0) invert(1) drop-shadow($drop-shadow);
+      @include media-breakpoint-down(sm) {
+        height: 30px;
+      }
     }
   }
 
@@ -33,17 +44,27 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: $spacer-lg;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $spacer-sm;
+    }
   }
 
   &__social-icon {
-    margin: 0 map-get($spacers, 3);
+    margin: 0 $spacer-lg;
+    @include media-breakpoint-down(sm) {
+      margin: 0 $spacer-sm;
+    }
     svg {
       width: 40px;
       filter: drop-shadow($drop-shadow);
       border-radius: $border-radius;
       transition: fill ease 250ms, background-color ease 250ms;
       fill: $white;
+      @include media-breakpoint-down(sm) {
+        width: 25px;
+        margin: 0 $spacer-sm;
+      }
     }
     &--facebook {
       &:hover svg {
@@ -68,11 +89,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: $spacer-lg;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $spacer-sm;
+      font-size: $font-size-sm;
+    }
   }
 
   &__link {
-    margin: 0 map-get($spacers, 3);
+    margin: 0 $spacer-lg;
+    @include media-breakpoint-down(sm) {
+      margin: 0 $spacer-sm;
+    }
     a {
       padding: 0;
     }
