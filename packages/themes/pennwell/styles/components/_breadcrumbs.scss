@@ -1,15 +1,9 @@
-.magazine-nav {
-  padding: 1rem;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-.magazine-breadcrumbs {
+.breadcrumbs {
   font-family: $theme-content-sans-serif-font;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: normal;
-
-  &__magazine-hierarchy {
+  .breadcrumb {
     padding-right: 0;
     padding-left: 0;
     margin-bottom: 0;
