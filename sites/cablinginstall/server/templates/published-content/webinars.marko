@@ -1,16 +1,18 @@
+import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
+
 $ const { config } = out.global;
 $ const query = {
-  contentTypes: ["Webinar"],
+  contentTypes: ['Webinar'],
   limit: 9,
   sort: {
     field: 'startDate',
     order: 'desc',
   },
 };
+$ const page = pageDetails('Webcasts', config);
 
-<theme-pennwell-published-content-layout>
+<theme-pennwell-published-content-layout page=page>
   <@head>
-    <cms-page-title value="Webcasts" />
     <cms-ad-gam-head />
   </@head>
 
@@ -18,10 +20,7 @@ $ const query = {
     <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-content-block-page-title
-    header="Webcasts"
-    body=`The latest webcasts from ${config.siteName()}`
-  />
+  <endeavor-content-block-page-title header=page.title body=page.description />
 
   <@below-container>
     <div class="published-content-query-load-more">
