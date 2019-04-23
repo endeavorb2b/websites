@@ -71,6 +71,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container-fluid-max {
