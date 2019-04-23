@@ -33,7 +33,7 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
+    // { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -63,8 +63,5 @@ module.exports = {
       '/subscribe/print/de': 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=DE&promoCode=NW88NR',
       '/subscribe/print/rdh': 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
     },
-  },
-  magazines: {
-    description: '',
   },
 };

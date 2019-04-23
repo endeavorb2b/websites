@@ -58,4 +58,10 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:wpucddduxta',
   },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=7dfc6aa1-081c-4a51-afd3-b20f808a5182&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+  },
+  magazines: {
+    description: '',
+  },
 };

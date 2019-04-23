@@ -32,7 +32,7 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
+    // { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -62,8 +62,5 @@ module.exports = {
     publications: {
       '/subscribe/print/mae': 'https://formdesigner.ecn5.com/GetForm?tokenuid=046345a9-19bb-4e6d-b034-e69baa602f10&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
     },
-  },
-  magazines: {
-    description: '',
   },
 };

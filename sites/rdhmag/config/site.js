@@ -62,6 +62,6 @@ module.exports = {
     },
   },
   magazines: {
-    description: '',
+    description: 'RDH is published monthly for dental hygienists committed to ongoing professional growth. Reporting on topics such as hygiene practice management, evidence-based periodontics, infection control, oral pathology, new product evaluations and continuing education, RDH covers crucial issues that affect hygienists every day.',
   },
 };

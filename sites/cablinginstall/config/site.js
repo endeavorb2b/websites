@@ -65,6 +65,6 @@ module.exports = {
     },
   },
   magazines: {
-    description: '',
+    description: 'Cabling Installation & Maintenance is the leading source of practical, hands-on information for professionals who design, install and manage the physical-layer infrastructure in data centers and networks for the communications systems of today and tomorrow.',
   },
 };
