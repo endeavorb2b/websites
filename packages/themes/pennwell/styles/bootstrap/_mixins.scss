@@ -90,13 +90,9 @@
 }
 
 @mixin theme-content-body-paragraph() {
-  margin-top: 29px;
-  margin-bottom: 0;
+  margin-bottom: 29px;
   @include media-breakpoint-down(sm) {
-    margin-top: 21px;
-  }
-  &:first-child {
-    margin-top: 0;
+    margin-bottom: 21px;
   }
   &:empty {
     display: none;
@@ -111,16 +107,6 @@
   @include media-breakpoint-down(sm) {
     font-size: 17px;
     line-height: 27px;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
-      margin-top: 0;
-    }
   }
   h1 {
     @include content-body-heading(h1);
@@ -144,20 +130,17 @@
   b {
     font-weight: 700;
   }
-  img {
-    margin-bottom: map-get($spacers, 1);
+  [data-embed-type="image"] img {
     border-radius: $border-radius;
-    box-shadow: $theme-box-shadow-sm;
+    box-shadow: $theme-box-shadow-lg;
   }
   p,
   ul,
   table,
   [data-oembed-type="video"],
+  [data-embed-type="image"],
   ol {
     @include theme-content-body-paragraph();
-  }
-  &:first-child {
-    margin-top: 0;
   }
 }
 
@@ -166,31 +149,31 @@
   $large-margin-sm: 48px;
   @include theme-heading($size);
   @if $size == h1 {
-    margin-top: $large-margin;
+    margin-bottom: $large-margin;
     @include media-breakpoint-down(sm) {
-      margin-top: $large-margin-sm;
+      margin-bottom: $large-margin-sm;
     }
   } @else if $size == h2 {
-    margin-top: $large-margin;
+    margin-bottom: $large-margin;
     @include media-breakpoint-down(sm) {
-      margin-top: $large-margin-sm;
+      margin-bottom: $large-margin-sm;
     }
   } @else if $size == h3 {
-    margin-top: $large-margin;
+    margin-bottom: $large-margin;
     @include media-breakpoint-down(sm) {
-      margin-top: $large-margin-sm;
+      margin-bottom: $large-margin-sm;
     }
   } @else if $size == h4 {
-    margin-top: 39px;
+    margin-bottom: 39px;
     @include media-breakpoint-down(sm) {
-      margin-top: 31px;
+      margin-bottom: 31px;
     }
   } @else if $size == h5 {
-    margin-top: 25px;
+    margin-bottom: 25px;
     @include media-breakpoint-down(sm) {
-      margin-top: 17px;
+      margin-bottom: 17px;
     }
   } @else {
-    margin-top: 11px;
+    margin-bottom: 11px;
   }
 }

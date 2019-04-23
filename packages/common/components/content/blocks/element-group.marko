@@ -4,10 +4,6 @@ $ const block = 'content-element-group';
 $ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
 $ const classNames = [block, ...modifiers, input.class];
 
-$ const primaryImage = getAsObject(input.content, 'primaryImage');
-$ const primarySection = getAsObject(input.content, 'primarySection');
-$ const company = getAsObject(input.content, 'company');
-
 <${input.tag} class=classNames>
   <if(input.content.type === 'webinar')>
     <element-group-webinar ...input />

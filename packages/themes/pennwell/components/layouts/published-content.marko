@@ -1,7 +1,11 @@
 import { getAsObject } from '@base-cms/object-path';
 
+$ const page = getAsObject(input, 'page');
+
 <theme-pennwell-document>
   <@head>
+    <cms-page-title value=page.title />
+    <cms-page-description content=page.description />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">

@@ -1,9 +1,11 @@
-$ const { config } = out.global;
-$ const query = { contentTypes: ["Whitepaper"], limit: 9 };
+import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
 
-<theme-pennwell-published-content-layout>
+$ const { config } = out.global;
+$ const query = { contentTypes: ['Whitepaper'], limit: 9 };
+$ const page = pageDetails('White Papers', config);
+
+<theme-pennwell-published-content-layout page=page>
   <@head>
-    <cms-page-title value="White Papers" />
     <cms-ad-gam-head />
   </@head>
 
@@ -11,10 +13,7 @@ $ const query = { contentTypes: ["Whitepaper"], limit: 9 };
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-content-block-page-title
-    header="White Papers"
-    body=`The latest white papers from ${config.siteName()}`
-  />
+  <endeavor-content-block-page-title header=page.title body=page.description />
 
   <@below-container>
     <div class="published-content-query-load-more">

@@ -1,9 +1,14 @@
+import { getAsObject } from '@base-cms/object-path';
+
 $ const block = 'content-page-header';
+$ const content = getAsObject(input, 'content');
 
 <div class=block>
   <endeavor-content-block-breadcrumbs content=input.content />
   <cms-content-name tag="h1" block=block obj=input.content />
   <cms-content-teaser tag="p" block=block obj=input.content />
-  <endeavor-content-block-attribution content=input.content />
-  <cms-content-published block=block obj=input.content />
+  <if(content.type !== 'contact')>
+    <endeavor-content-block-attribution content=input.content />
+    <cms-content-published block=block obj=input.content />
+  </if>
 </div>

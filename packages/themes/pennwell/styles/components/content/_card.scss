@@ -1,5 +1,6 @@
 .content-card {
   @include theme-card();
+  min-height: 100%;
   .card-body {
     @include theme-item();
   }

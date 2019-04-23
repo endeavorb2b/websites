@@ -14,10 +14,8 @@ $ const company = getAsObject(input.content, 'company');
   <if(company.id)>
     <endeavor-content-company-name prefix="Sponsored By: " block=block company=company />
   </if>
-  <else>
-    <span class=`${block}__company` />
-  </else>
-  <span class=`${block}__dates`>
-    <endeavor-content-starts block=block obj=input.content /> &mdash; <endeavor-content-ends block=block obj=input.content />
+  <span class=`${block}__content-event-dates`>
+    <endeavor-content-starts block=block obj=input.content />
+    <endeavor-content-ends block=block obj=input.content />
   </span>
 </small>
