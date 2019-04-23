@@ -1,0 +1,24 @@
+import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
+import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
+
+$ const block = 'magazine-publication-list';
+
+<cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
+  <for|publication| of=nodes>
+    <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=latestIssueFragment>
+      <div class="row">
+        <div class=`${block}__col ${block}__col-issue`>
+          <endeavor-magazine-issue-card name=false issue=node />
+        </div>
+        <div class=`${block}__col ${block}__col-details`>
+          <p class=`${block}__lead lead`>${publication.description}</p>
+          <div class=`${block}__buttons`>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node.publication path="subscribeUrl">Subscribe</cms-link-element>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node path="digitalEditionUrl">Digital Edition</cms-link-element>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node.publication>Archive</cms-link-element>
+          </div>
+        </div>
+      </div>
+    </cms-query-magazine-latest-issue>
+  </for>
+</cms-query-magazine-publications>

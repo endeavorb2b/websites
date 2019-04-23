@@ -1,0 +1,83 @@
+import gql from 'graphql-tag';
+import { asArray } from '@base-cms/utils';
+import { getAsObject } from '@base-cms/object-path';
+
+$ const pageNumber = input.pageNumber || 1;
+$ const { publicationId } = getAsObject(input, 'query');
+$ const header = input.header || 'More from this publication';
+$ const queryFragment = gql`
+  fragment MagazineActiveIssuesQueryFragment on MagazineIssue {
+    id
+    name
+    canonicalPath
+    coverImage {
+      id
+      src
+    }
+    mailDate
+  }
+`;
+
+$ const block = 'magazine-active-issues';
+$ const query = {
+  publicationId,
+  limit: 10,
+  ...input.query,
+  queryFragment,
+};
+
+$ const loadMore = {
+  ...input.loadMore,
+};
+
+$ const adCardInput = {
+  name: 'load-more',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.card'),
+};
+
+<if(pageNumber === 1)>
+  <endeavor-load-more-header>
+    ${header}
+  </endeavor-load-more-header>
+</if>
+
+<cms-query-magazine-active-issues|{ nodes, pageInfo }| ...query>
+  $ const { endCursor, hasNextPage } = pageInfo;
+  $ delete query.skip;
+  $ delete query.queryFragment;
+  $ delete query.renderBody;
+  $ query.after = endCursor;
+  $ const provide = {
+    query,
+    header,
+    pageNumber,
+    ads: input.ads,
+  };
+
+  <div class=block>
+    <div class="row">
+      <for|issue, index| of=nodes>
+        <div class=`${block}__col`>
+          <endeavor-magazine-issue-card issue=issue />
+        </div>
+        <if(index === 1 || index === 6)>
+          <div class=`${block}__col`>
+            <endeavor-gam-ad-unit-define-display ...adCardInput/>
+          </div>
+        </if>
+      </for>
+    </div>
+  </div>
+
+  <endeavor-load-more-button
+    append-to=".container-fluid-max"
+    block-name=block
+    label="Load More Content"
+    max-pages=loadMore.maxPages
+    page-number=pageNumber
+    provide=provide
+    show=hasNextPage
+  />
+</cms-query-magazine-active-issues>

@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "endeavor-magazine-nav": {
+      "template": "./nav.marko"
+    },
+    "endeavor-magazine-issue-card": {
+      "template": "./issue-card.marko"
+    }
+  }
+}
