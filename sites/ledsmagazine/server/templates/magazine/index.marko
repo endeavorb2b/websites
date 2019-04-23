@@ -4,13 +4,15 @@
   </@head>
 
   <@above-container>
-    <endeavor-gam-ad-unit-define-display name="LB1" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <endeavor-magazine-nav />
 
   <p class="lead">_MAGAZINE_DESCRIPTION_</p>
 
-  <theme-pennwell-magazine-publication-list />
+  <@below-container>
+    <theme-pennwell-magazine-publication-list />
+  </@below-container>
 
 </theme-pennwell-magazine-layout>
