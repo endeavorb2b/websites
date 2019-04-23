@@ -1,10 +1,16 @@
 import { getAsObject, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 
+$ const { site } = out.global;
 $ const publication = getAsObject(data, 'publication');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'BS' }),
+  'load-more': getAdUnit(site, { name: 'HP' }),
+};
 
 <theme-pennwell-magazine-publication-layout publication=publication>
   <@head>
-    <cms-ad-gam-head />
+    <cms-ad-gam-head slots=adSlots />
   </@head>
 
   <@above-container>
@@ -15,7 +21,13 @@ $ const publication = getAsObject(data, 'publication');
   <theme-pennwell-magazine-publication-details publication=publication />
 
   <@below-container>
-    <endeavor-magazine-block-query-active-issues publication=publication />
+    <endeavor-magazine-block-query-active-issues
+      query={ publicationId: publication.id }
+      header=`${publication.name} Archives`
+      ads={
+        card: { name: "HP" },
+      }
+    />
   </@below-container>
 
 </theme-pennwell-magazine-publication-layout>
