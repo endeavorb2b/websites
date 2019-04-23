@@ -58,4 +58,22 @@
       }
     }
   }
+  &--content-body {
+    #{ $self } {
+      &__content-link {
+        @extend .embed-responsive;
+        @extend .embed-responsive-21by9;
+        width: auto;
+      }
+      &__asset-image {
+        @extend .embed-responsive-item;
+        max-width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+      }
+      &__placeholder {
+        display: none;
+      }
+    }
+  }
 }

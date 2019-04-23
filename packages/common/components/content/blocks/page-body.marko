@@ -1,5 +1,18 @@
+$ const { site } = out.global;
 $ const block = 'content-page-body';
+$ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true);
 
 <div class=block>
+  <if(displayPrimaryImage)>
+    <!-- @todo Add support for responsive images / size variance based on context -->
+    <div class=`${block}__primary-image`>
+      <endeavor-content-block-primary-image
+        content=input.content
+        lazyload=false
+        modifiers=['content-body']
+        options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+      />
+    </div>
+  </if>
   <cms-content-body tag="div" block=block obj=input.content />
 </div>
