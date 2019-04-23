@@ -60,4 +60,10 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:yhsbqmtzmqw',
   },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=7e167702-3ad8-4566-92bf-3221b22b0d75',
+  },
+  magazines: {
+    description: '',
+  },
 };

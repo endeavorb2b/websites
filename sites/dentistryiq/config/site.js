@@ -58,14 +58,13 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:prps-rbhnq0',
   },
+  subscriptions: {
+    publications: {
+      '/subscribe/print/de': 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=DE&promoCode=NW88NR',
+      '/subscribe/print/rdh': 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
+    },
+  },
   magazines: {
-    de: {
-      name: 'Dental Economics',
-      subscribeUrl: 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=DE&promoCode=NW88NR',
-    },
-    rdh: {
-      name: 'Registered Dental Hygienist',
-      subscribeUrl: 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
-    },
+    description: '',
   },
 };
