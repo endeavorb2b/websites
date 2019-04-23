@@ -20,6 +20,7 @@
     min-height: 48px;
     max-height: 48px;
     margin-bottom: $element-margin;
+    text-align: center;
     @include theme-heading(h6);
     @include media-breakpoint-down(sm) {
       min-height: initial;

@@ -7,9 +7,6 @@
     @include media-breakpoint-up(md) {
       @include make-col(4);
     }
-    .issue-card__name {
-      text-align: center;
-    }
   }
   &__col-details {
     @include media-breakpoint-up(md) {
