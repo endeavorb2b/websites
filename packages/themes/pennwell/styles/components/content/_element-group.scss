@@ -55,12 +55,17 @@
     }
   }
   &__content-published,
-  &__content-starts,
-  &__content-ends {
+  &__content-event-dates {
     @include theme-list-text();
     margin-top: auto;
     color: $gray;
-
+  }
+  &__content-ends {
+    &::before {
+      margin-right: map-get($spacers, 1);
+      margin-left: map-get($spacers, 1);
+      content: "\2014";
+    }
   }
   &__content-name {
     &--company-name {
