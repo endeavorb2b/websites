@@ -37,6 +37,12 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
+  footerNavItems: [
+    { href: '/page/about-us', label: 'About Us' },
+    { href: '/contact-us', label: 'Contact Us' },
+    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+  ],
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
@@ -49,8 +55,8 @@ module.exports = {
       { href: '/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions' },
+      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
   },
   gtmContainer: 'GTM-M3B7WXJ',
