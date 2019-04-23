@@ -45,14 +45,12 @@ $ const menu = 'site-navbar-menu';
 </header>
 
 <aside class=menu>
-  <div class=bem(menu, 'wrapper')>
-    <div class=bem(menu, 'contents')>
-      <div class=`${bem(menu, 'card')} card`>
-        <menu-card block=menu for="primaryNavItems" header="Topics" />
-        <menu-card block=menu for="menuItems.resources" header="Resources" />
-        <menu-card block=menu for="menuItems.userTools" header="User Tools" />
-        <div class=`${bem(menu, 'card-footer')} card-footer`></div>
-      </div>
+  <div class=bem(menu, 'contents')>
+    <div class=`${bem(menu, 'card')} card`>
+      <menu-card block=menu for="primaryNavItems" header="Topics" />
+      <menu-card block=menu for="menuItems.resources" header="Resources" />
+      <menu-card block=menu for="menuItems.userTools" header="User Tools" />
+      <div class=`${bem(menu, 'card-footer')} card-footer`></div>
     </div>
   </div>
 </aside>

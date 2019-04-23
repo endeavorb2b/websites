@@ -161,17 +161,28 @@
 
 .site-navbar-menu {
   $self: &;
-  $wrapper-width: 350px;
+  $wrapper-width: 264px;
   $wrapper-max-width: 75vw;
-  $border-width: 4px;
-  $transition-speed: 125ms;
-  $transition-type: ease-in-out;
 
   position: fixed;
   top: 90px;
   bottom: 0;
   z-index: 100;
+
+  width: $wrapper-width;
+  max-width: $wrapper-max-width;
+
+  overflow-x: auto;
+  overflow-y: scroll;
+
+  will-change: visibility;
+  visibility: hidden;
+
+  background-color: $white;
+
   opacity: .98;
+  transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear .25s;
+  transform: translateX(-#{$wrapper-width});
 
   @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
     top: 85px;
@@ -181,24 +192,10 @@
   }
 
   &--open {
-    #{ $self } {
-      &__wrapper {
-        width: $wrapper-width;
-        box-shadow: $theme-site-nav-menu-box-shadow;
-      }
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-    width: 0;
-    max-width: $wrapper-max-width;
-    height: 100%;
-
-    overflow-y: scroll;
-    background-color: $white;
-
-    transition: width $transition-speed $transition-type;
+    visibility: visible;
+    box-shadow: $theme-site-nav-menu-box-shadow;
+    transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0s;
+    transform: translateX(0);
   }
 
   &__contents {
