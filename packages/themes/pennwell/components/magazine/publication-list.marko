@@ -1,43 +1,24 @@
 import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
 import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
 
-<div class="row">
+$ const block = 'magazine-publication-list';
+
 <cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
   <for|publication| of=nodes>
-    <div class="col col-md-6">
-      <div class="card">
-        <span class="card-header">${publication.name}</span>
-        <div class="card-body row">
-
-          <cms-query-magazine-latest-issue|{ node }|
-            publication-id=publication.id
-            query-fragment=latestIssueFragment
-          >
-            <endeavor-magazine-issue-card name=false issue=node />
-
-            <div class="col-6">
-              <cms-link-element collapse=false to=node.publication path="subscribeUrl"
-                class="btn btn-sm btn-block btn-primary"
-              >
-                Subscribe
-              </cms-link-element>
-              <cms-link-element collapse=false to=node path="digitalEditionUrl"
-                class="btn btn-sm btn-block btn-primary"
-              >
-                Digital Edition
-              </cms-link-element>
-              <cms-link-element collapse=false to=node.publication
-                class="btn btn-sm btn-block btn-primary"
-              >
-                Archive
-              </cms-link-element>
-            </div>
-          </cms-query-magazine-latest-issue>
-
-          <p class="mt-3">${publication.description}</p>
+    <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=latestIssueFragment>
+      <div class="row">
+        <div class=`${block}__col ${block}__col-issue`>
+          <endeavor-magazine-issue-card name=false issue=node />
+        </div>
+        <div class=`${block}__col ${block}__col-details`>
+          <p class=`${block}__lead lead`>${publication.description}</p>
+          <div class=`${block}__buttons`>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node.publication path="subscribeUrl">Subscribe</cms-link-element>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node path="digitalEditionUrl">Digital Edition</cms-link-element>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" to=node.publication>Archive</cms-link-element>
+          </div>
         </div>
       </div>
-    </div>
+    </cms-query-magazine-latest-issue>
   </for>
 </cms-query-magazine-publications>
-</div>
