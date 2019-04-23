@@ -8,7 +8,7 @@ const magazineIssues = require('@endeavorb2b/base-website-common/components/maga
 const blocks = {
   'content-query-load-more': contentLoadMore,
   'published-content-query-load-more': publishedLoadMore,
-  'magazine-issue-content': magazineIssueContent,
+  'magazine-query-issue-content': magazineIssueContent,
   'magazine-active-issues': magazineIssues,
 };
 
