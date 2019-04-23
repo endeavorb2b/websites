@@ -1,8 +1,7 @@
 import { get, getAsObject } from '@base-cms/object-path';
 
 $ const { site } = out.global;
-$ const key = get(data, 'key');
-$ const publication = key ? site.getAsObject(`magazines.${key}`) : site.getAsObject('magazines');
+$ const publication = getAsObject(data, 'publication');
 
 <theme-pennwell-magazine-subscribe-layout publication=publication>
   <@head>

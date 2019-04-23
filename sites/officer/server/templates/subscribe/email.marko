@@ -1,9 +1,6 @@
 import { get, getAsObject } from '@base-cms/object-path';
 
-$ const { site } = out.global;
-$ const publication = getAsObject(data, 'publication');
-
-<theme-pennwell-magazine-subscribe-layout publication=publication>
+<theme-pennwell-magazine-subscribe-layout>
   <@head>
     <cms-ad-gam-head />
   </@head>
@@ -12,6 +9,6 @@ $ const publication = getAsObject(data, 'publication');
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-subscribe-magazine publication=publication />
+  <endeavor-subscribe-email />
 
 </theme-pennwell-magazine-subscribe-layout>
