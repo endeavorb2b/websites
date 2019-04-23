@@ -13,18 +13,21 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
   <if(displayMedia)>
     <div class=`${block}__primary-media`>
       <if(content.embedCode)>
-        <div class=`${block}__primary-embed-item`>
+        <div class=`${block}__primary-video`>
           $!{content.embedCode}
         </div>
       </if>
       <else-if(displayPrimaryImage)>
-        <!-- @todo Add support for responsive images / size variance based on context -->
-        <endeavor-content-block-primary-image
-          content=input.content
-          lazyload=false
-          modifiers=['content-body']
-          options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-        />
+        <div class=`${block}__primary-image`>
+          <!-- @todo Add support for responsive images / size variance based on context -->
+          <cms-image-element
+            block=block
+            modifiers=['primary-image']
+            lazyload=false
+            obj=primaryImage
+            options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+          />
+        </div>
       </else-if>
     </div>
   </if>
