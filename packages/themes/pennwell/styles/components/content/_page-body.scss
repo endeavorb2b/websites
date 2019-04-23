@@ -1,6 +1,7 @@
 .content-page-body {
   &__content-body,
-  &__primary-image {
+  &__primary-image,
+  &__primary-embed {
     @include content-body();
     padding-right: map-get($spacers, 3);
     padding-left: map-get($spacers, 3);
@@ -27,5 +28,10 @@
         content: "Credit \2014";
       }
     }
+  }
+
+  &__primary-embed-item {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
   }
 }
