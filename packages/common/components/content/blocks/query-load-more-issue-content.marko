@@ -1,7 +1,10 @@
 import gql from 'graphql-tag';
+import { asArray } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
-import { asArray, asObject } from '@base-cms/utils';
 
+$ const pageNumber = input.pageNumber || 1;
+$ const { issueId } = getAsObject(input, 'query');
+$ const header = input.header || 'More from this issue';
 $ const queryFragment = gql`
   fragment ContentBlockQueryMagazineIssueScheduledContentFragment on Content {
     id
@@ -41,29 +44,50 @@ $ const queryFragment = gql`
   }
 `;
 
-$ const block = 'content-query-load-more';
-$ const params = {
-  ...input,
-  limit: 14,
+$ const block = 'magazine-query-issue-content';
+$ const query = {
+  issueId,
+  limit: 10,
+  ...input.query,
   queryFragment,
 };
-$ const issue = asObject(input.issue);
+
+$ const loadMore = {
+  ...input.loadMore,
+};
+
 $ const adCardInput = {
-  issue,
-  name: 'CONTENT1',
+  name: 'load-more',
   size: [300, 250],
   modifiers: ['in-card'],
   ...getAsObject(input, 'ads.card'),
 };
 $ const adListInput = {
-  issue,
-  name: 'CONTENT1',
+  name: 'load-more',
   size: [300, 600],
   modifiers: ['in-card'],
   ...getAsObject(input, 'ads.list'),
 };
 
-<cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...params>
+<if(pageNumber === 1)>
+  <endeavor-load-more-header>
+    ${header}
+  </endeavor-load-more-header>
+</if>
+
+<cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...query>
+  $ const { endCursor, hasNextPage } = pageInfo;
+  $ delete query.skip;
+  $ delete query.queryFragment;
+  $ delete query.renderBody;
+  $ query.after = endCursor;
+  $ const provide = {
+    query,
+    header,
+    pageNumber,
+    ads: input.ads,
+  };
+
   $ const cardNodes = asArray(nodes.slice(0, 10));
   $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
@@ -72,14 +96,7 @@ $ const adListInput = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <div class="card">
-                <endeavor-content-block-primary-image
-                  content=content
-                  modifiers=['card']
-                  options={ w: 630, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                />
-                <endeavor-content-block-element-group class="card-body" content=content />
-              </div>
+              <endeavor-content-block-card content=content />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
@@ -97,30 +114,20 @@ $ const adListInput = {
           </div>
 
           <div class=`${block}__col-list`>
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <for|content| of=listNodes>
-                  <li class="list-group-item">
-                    <endeavor-content-block-primary-image
-                      content=content
-                      modifiers=['list']
-
-                      options={ w: 196, h: 84, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                    />
-                    <endeavor-content-block-element-group content=content />
-                  </li>
-                </for>
-              </ul>
-            </div>
+            <endeavor-content-block-list-group-card header=input.header nodes=listNodes />
           </div>
         </div>
       </if>
     </div>
+
     <endeavor-load-more-button
+      append-to=".container-fluid-max"
+      block-name=block
       label="Load More Content"
-      block-name="magazine-issue-content"
-      params=params
-      page-info=pageInfo
+      max-pages=loadMore.maxPages
+      page-number=pageNumber
+      provide=provide
+      show=hasNextPage
     />
   </if>
 </cms-query-magazine-scheduled-content>

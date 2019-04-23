@@ -5,7 +5,6 @@ import { getAsObject } from '@base-cms/object-path';
 $ const pageNumber = input.pageNumber || 1;
 $ const { publicationId } = getAsObject(input, 'query');
 $ const header = input.header || 'More from this publication';
-$ const publication = getAsObject(input, 'publication');
 $ const queryFragment = gql`
   fragment MagazineActiveIssuesQueryFragment on MagazineIssue {
     id
