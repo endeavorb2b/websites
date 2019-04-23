@@ -1,0 +1,34 @@
+import { getAsObject } from '@base-cms/object-path';
+import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
+import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
+
+$ const block = 'subscribe-publication-list';
+
+<${input.renderBody} />
+
+<h2>Newsletters</h2>
+<p class="lead">Stay up-to-date on industry news and events, new product launches and more. Select from our list of targeted newsletter offerings to stay informed on the topics that matter to you and your business.</p>
+<a href="/subscribe/email" class="btn btn-sm mt-3 btn-primary">Subscribe / Manage Preferences</a>
+<hr>
+
+<h2>Magazines</h2>
+<cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
+  <for|publication| of=nodes>
+    <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=latestIssueFragment>
+      <div class="row">
+        <div class=`${block}__col ${block}__col-issue`>
+          <cms-image-element
+            obj=node.coverImage
+            class=`${block}__image`
+          />
+        </div>
+        <div class=`${block}__col ${block}__col-details`>
+          <p class=`${block}__lead lead`>${publication.description}</p>
+          <div class=`${block}__buttons`>
+            <cms-link-element block=block class="btn btn-sm btn-block btn-primary" collapse=false to=node.publication path="subscribeUrl">Subscribe</cms-link-element>
+          </div>
+        </div>
+      </div>
+    </cms-query-magazine-latest-issue>
+  </for>
+</cms-query-magazine-publications>
