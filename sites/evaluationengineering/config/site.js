@@ -55,8 +55,13 @@ module.exports = {
     apiKey: '2682f90e71ea403b9cbf6fa7740bf006',
     domain: 'evaluationengineering.com',
   },
+  subscriptions: {
+    newsletters: 'https://www.evaluationengineering.com/subscribe/email',
+    publications: {
+      '/subscribe/print/ee': 'https://endeavor.dragonforms.com/ee_new',
+    },
+  },
   magazines: {
-    name: 'Evaluation Engineering',
-    subscribeUrl: 'https://endeavor.dragonforms.com/ee_new',
+    description: '',
   },
 };
