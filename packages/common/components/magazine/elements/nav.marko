@@ -3,23 +3,30 @@ import { getAsObject } from '@base-cms/object-path';
 $ const magazines = { canonicalPath: '/magazine' };
 $ const target = getAsObject(input, 'target');
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="text-uppercase breadcrumb-item small">
+$ const block = 'magazine-breadcrumbs';
+
+<div class="magazine-nav">
+  <nav class=block aria-label="breadcrumb">
+    <ol class=`${block}__magazine-hierarchy breadcrumb`>
+      <li class="breadcrumb-item">
+        <a href="/" title="Home">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <if(target.id)>
+          <a href="/magazine" title="Magazines">Magazines</a>
+        </if>
+        <else>
+          <span>Magazines</span>
+        </else>
+      </li>
       <if(target.id)>
-        <cms-link-element to=magazines>Magazines</cms-link-element>
+        <if(target.publication)>
+          <li class="breadcrumb-item">
+            <cms-link-element to=target.publication>${target.publication.name}</cms-link-element>
+          </li>
+        </if>
+        <li class="breadcrumb-item">${target.name}</li>
       </if>
-      <else>
-        <span>Magazines</span>
-      </else>
-    </li>
-    <if(target.id)>
-      <if(target.publication)>
-        <li class="text-uppercase breadcrumb-item small">
-          <cms-link-element to=target.publication>${target.publication.name}</cms-link-element>
-        </li>
-      </if>
-      <li class="text-uppercase breadcrumb-item small">${target.name}</li>
-    </if>
-  </ol>
-</nav>
+    </ol>
+  </nav>
+</div>

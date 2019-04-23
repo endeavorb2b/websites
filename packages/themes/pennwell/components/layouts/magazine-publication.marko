@@ -10,8 +10,14 @@ $ const { site } = out.global;
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <cms-page-container for="magazine-publication" data=publication>
-      <${input.renderBody} />
+    <cms-page-container for="magazine-publication" class="magazine-page" data=publication>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <${input.renderBody} />
+          </div>
+        </div>
+      </div>
     </cms-page-container>
     <${input.belowContainer} />
   </div>
