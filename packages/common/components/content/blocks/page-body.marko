@@ -9,7 +9,7 @@ $ const primaryImage = getAsObject(content, 'primaryImage');
 $ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true) && primaryImage.src;
 $ const displayMedia = displayPrimaryImage || content.embedCode;
 
-<div class=block>
+<div class=`${block} page-wrapper__contents`>
   <if(displayMedia)>
     <div class=`${block}__primary-media`>
       <if(content.embedCode)>

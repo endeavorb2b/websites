@@ -3,7 +3,7 @@ import { getAsObject } from '@base-cms/object-path';
 $ const block = 'content-page-header';
 $ const content = getAsObject(input, 'content');
 
-<div class=block>
+<div class=`${block} page-wrapper__header`>
   <endeavor-content-block-breadcrumbs content=input.content />
   <cms-content-name tag="h1" block=block obj=input.content />
   <cms-content-teaser tag="p" block=block obj=input.content />

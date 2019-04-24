@@ -1,9 +1,4 @@
 .content-page-header {
-  padding: map-get($spacers, 3);
-  margin-bottom: map-get($spacers, 2);
-  @include media-breakpoint-down(sm) {
-    padding: 0;
-  }
   &__content-name {
     font-family: $theme-content-title-font;
     font-size: 40px;
