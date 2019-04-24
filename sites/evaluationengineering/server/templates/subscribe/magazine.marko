@@ -3,7 +3,7 @@ import { get, getAsObject } from '@base-cms/object-path';
 $ const { site } = out.global;
 $ const publication = getAsObject(data, 'publication');
 
-<theme-pennwell-magazine-subscribe-layout publication=publication>
+<theme-pennwell-subscribe-layout publication=publication>
   <@head>
     <cms-ad-gam-head />
   </@head>
@@ -14,4 +14,4 @@ $ const publication = getAsObject(data, 'publication');
 
   <endeavor-subscribe-magazine publication=publication />
 
-</theme-pennwell-magazine-subscribe-layout>
+</theme-pennwell-subscribe-layout>
