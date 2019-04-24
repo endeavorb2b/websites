@@ -142,6 +142,9 @@
   ol {
     @include theme-content-body-paragraph();
   }
+  br {
+    display: none;
+  }
 }
 
 @mixin content-body-heading($size) {
