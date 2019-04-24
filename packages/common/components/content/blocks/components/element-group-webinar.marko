@@ -12,7 +12,7 @@ $ const company = getAsObject(input.content, 'company');
 </if>
 <small class=`${block}__row`>
   <if(company.id)>
-    <endeavor-content-company-name prefix="Sponsored By: " block=block company=company />
+    <endeavor-content-company-name use-prefix=false block=block company=company />
   </if>
   <else>
     <endeavor-content-authors use-prefix=false block=block content=input.content />
