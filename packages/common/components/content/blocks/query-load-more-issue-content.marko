@@ -1,49 +1,11 @@
-import gql from 'graphql-tag';
+
+import queryFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-issue-content';
 import { asArray } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
 
 $ const pageNumber = input.pageNumber || 1;
 $ const { issueId } = getAsObject(input, 'query');
 $ const header = input.header || 'More from this issue';
-$ const queryFragment = gql`
-  fragment ContentBlockQueryMagazineIssueScheduledContentFragment on Content {
-    id
-    type
-    shortName
-    canonicalPath
-    published
-    company {
-      id
-      type
-      name
-      canonicalPath
-    }
-    primarySection {
-      id
-      name
-      fullName
-      canonicalPath
-    }
-    primaryImage {
-      id
-      src
-      alt
-    }
-    ... on Authorable {
-      authors {
-        edges {
-          node {
-            id
-            name
-            type
-            canonicalPath
-          }
-        }
-      }
-    }
-  }
-`;
-
 $ const block = 'magazine-query-issue-content';
 $ const query = {
   issueId,
