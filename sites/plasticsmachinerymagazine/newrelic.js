@@ -1,5 +1,3 @@
-require('newrelic');
-
 /**
  * New Relic agent configuration.
  *
