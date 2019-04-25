@@ -55,4 +55,13 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:uz62nndii_e',
   },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=bd881530-bb9e-44c5-9129-818b03b42d05&promoCode=WENL2019&utm_source=eNL_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-15',
+    publications: {
+      '/subscribe/print/rdh': 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
+    },
+  },
+  magazines: {
+    description: 'RDH is published monthly for dental hygienists committed to ongoing professional growth. Reporting on topics such as hygiene practice management, evidence-based periodontics, infection control, oral pathology, new product evaluations and continuing education, RDH covers crucial issues that affect hygienists every day.',
+  },
 };

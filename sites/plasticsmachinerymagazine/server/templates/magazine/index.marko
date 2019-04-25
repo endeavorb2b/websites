@@ -1,3 +1,5 @@
+$ const { site } = out.global;
+
 <theme-pennwell-magazine-layout>
   <@head>
     <cms-ad-gam-head />
@@ -9,7 +11,7 @@
 
   <endeavor-magazine-nav />
 
-  <p class="lead">_MAGAZINE_DESCRIPTION_</p>
+  <p class="lead">${site.get('magazines.description')}</p>
 
   <@below-container>
     <theme-pennwell-magazine-publication-list />

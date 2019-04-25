@@ -60,4 +60,13 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:jon24h47vcu',
   },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=af1370c4-4e46-4de5-bdbd-4732ebf8443c',
+    publications: {
+      '/subscribe/print/os': 'http://formdesigner.ecn5.com/GetForm?tokenuid=84e20b11-0e4c-4b5b-9fbb-a86d1fff43c2&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
+    },
+  },
+  magazines: {
+    description: 'Offshore magazine covers the global trends and technologies for offshore oil and gas operations. Offshore covers the latest news, market trends, and products relative to oil and gas E&P operations. Each monthly issue contains current topics, special reports, in-depth interviews with industry executives, maps of the hottest offshore E&P areas and posters of important offshore technologies.',
+  },
 };

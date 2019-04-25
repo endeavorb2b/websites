@@ -1,3 +1,5 @@
+$ const { site } = out.global;
+
 <theme-pennwell-magazine-layout>
   <@head>
     <cms-ad-gam-head />
@@ -8,7 +10,8 @@
   </@above-container>
 
   <endeavor-magazine-nav />
-  <p class="lead">Law Enforcement Technology (LET) and Law Enforcement Product News (LEPN) are the leading magazine publications for the police and law enforcement community.</p>
+
+  <p class="lead">${site.get('magazines.description')}</p>
 
   <@below-container>
     <theme-pennwell-magazine-publication-list />
