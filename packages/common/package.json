@@ -5,7 +5,9 @@
   "dependencies": {
     "@base-cms/object-path": "^0.8.0",
     "@base-cms/utils": "^0.8.0",
-    "helmet": "^3.16.0"
+    "@newrelic/native-metrics": "^4.1.0",
+    "helmet": "^3.16.0",
+    "newrelic": "^5.7.0"
   },
   "peerDependencies": {
     "@base-cms/marko-web": "^0.8.0"
