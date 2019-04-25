@@ -1,0 +1,16 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const block = 'content-element-group';
+$ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
+$ const classNames = [block, ...modifiers, input.class];
+
+$ const issue = getAsObject(input, 'issue');
+
+<div class=block>
+  <cms-website-section-name block=block obj=issue.publication link=true />
+  <cms-content-name block=block obj=issue link=true />
+  <small class=`${block}__row`>
+    <cms-link-element to=issue.publication path="subscribeUrl">Subscribe</cms-link-element>
+    <cms-date-element obj=issue block=block field="mailDate" />
+  </small>
+</div>
