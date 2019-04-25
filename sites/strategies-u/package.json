@@ -13,7 +13,9 @@
     "@base-cms/web-cli": "~0.8.0",
     "@endeavorb2b/base-website-common": "^0.5.2",
     "@endeavorb2b/base-website-themes": "^0.5.2",
+    "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.10.1",
+    "newrelic": "^5.7.0"
   }
 }
