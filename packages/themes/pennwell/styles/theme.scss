@@ -38,6 +38,8 @@ $spacers: (
 @import "variables";
 @import "bootstrap";
 
+$theme-placeholder-image-color: $primary !default;
+
 $theme-site-nav-primary-type: dark !default;
 $theme-site-nav-primary-bg-color: $primary !default;
 $theme-site-nav-primary-breakpoints: () !default;
