@@ -23,6 +23,7 @@ const { TRAVIS_TAG } = process.env;
 
 const version = `v${lerna.version}`;
 const site = process.argv[2];
+const namespace = process.argv[3];
 const sitePath = join('sites', site, 'package.json');
 const image = `endeavorb2b/website-${site}`;
 
@@ -99,7 +100,7 @@ const build = async () => {
 
 const deploy = async () => {
   log(`Deploying ${image}:${version} on Kubernertes`);
-  const { status } = await spawnSync('bash', ['scripts/deploy-k8s.sh', site, version], { stdio: 'inherit' });
+  const { status } = await spawnSync('bash', ['scripts/deploy-k8s.sh', site, version, namespace], { stdio: 'inherit' });
   if (status !== 0) error('Image deploy failed!');
 };
 
