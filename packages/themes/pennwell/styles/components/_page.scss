@@ -5,21 +5,15 @@
   box-shadow: $theme-box-shadow-sm;
 
   &__header {
-    padding: map-get($spacers, 3);
-    margin-bottom: map-get($spacers, 2);
-    @include media-breakpoint-down(sm) {
-      padding: 0;
-    }
+    @include theme-page-header-spacing();
   }
 
   &__contents {
     @include content-body();
-    padding-right: map-get($spacers, 3);
-    padding-left: map-get($spacers, 3);
-    margin-bottom: map-get($spacers, block);
-    @include media-breakpoint-down(sm) {
-      padding-right: 0;
-      padding-left: 0;
-    }
+    @include theme-page-body-spacing();
+  }
+
+  &__body {
+    @include theme-page-body-spacing();
   }
 }
