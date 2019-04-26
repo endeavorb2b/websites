@@ -1,0 +1,28 @@
+$theme-placeholder-image-color: $primary !default;
+
+$theme-site-nav-primary-type: dark !default;
+$theme-site-nav-primary-bg-color: $primary !default;
+$theme-site-nav-primary-breakpoints: () !default;
+$theme-site-nav-primary-breakpoints: map-merge(
+  (
+    small-text: map-get($grid-breakpoints, xl),
+    hide: map-get($grid-breakpoints, lg),
+  ),
+  $theme-site-nav-primary-breakpoints
+);
+
+$theme-site-nav-secondary-type: dark !default;
+$theme-site-nav-secondary-bg-color: $dark !default;
+$theme-site-nav-secondary-breakpoints: () !default;
+$theme-site-nav-secondary-breakpoints: map-merge(
+  (
+    hide: map-get($grid-breakpoints, md),
+  ),
+  $theme-site-nav-secondary-breakpoints
+);
+
+$theme-site-nav-menu-hover-color: lighten($theme-site-nav-primary-bg-color, 60%) !default;
+$theme-site-nav-menu-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
+
+$theme-site-footer-primary-bg-color: $primary !default;
+$theme-site-footer-secondary-bg-color: $primary !default;
