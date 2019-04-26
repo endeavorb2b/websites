@@ -55,6 +55,97 @@
   }
 }
 
+@mixin theme-max-lines($line-height, $line-height-sm, $num: 2, $text-overflow: ellipsis) {
+  display: block;
+  max-height: $line-height * $num;
+  overflow: hidden;
+  text-overflow: $text-overflow;
+  @include media-breakpoint-down(sm) {
+    max-height: $line-height-sm * $num;
+  }
+}
+
+@mixin theme-title-text() {
+  font-family: $theme-content-title-font;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@mixin theme-teaser-text() {
+  font-family: $theme-content-sans-serif-font;
+  font-size: 24px;
+  line-height: 34px;
+  color: $gray;
+  letter-spacing: normal;
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@mixin theme-deck-text() {
+  font-family: $theme-content-sans-serif-font;
+  font-size: 20px;
+  line-height: 28px;
+  color: $gray;
+  letter-spacing: normal;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@mixin theme-body-text() {
+  font-family: $theme-content-serif-font;
+  font-size: 19px;
+  font-style: normal;
+  line-height: 33px;
+  @include media-breakpoint-down(sm) {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+@mixin theme-description-text() {
+  font-family: $theme-content-serif-font;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 25px;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+@mixin theme-small-text() {
+  font-family: $theme-content-sans-serif-font;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin theme-page-body-spacing() {
+  padding-right: map-get($spacers, 3);
+  padding-left: map-get($spacers, 3);
+  margin-bottom: map-get($spacers, block);
+  @include media-breakpoint-down(sm) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin theme-page-header-spacing() {
+  padding: map-get($spacers, 3);
+  margin-bottom: map-get($spacers, 2);
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+}
+
 @mixin theme-navbar-type($type) {
   @if $type == dark {
     @extend .navbar-dark;
@@ -100,14 +191,7 @@
 }
 
 @mixin content-body() {
-  font-family: $theme-content-serif-font;
-  font-size: 19px;
-  font-style: normal;
-  line-height: 33px;
-  @include media-breakpoint-down(sm) {
-    font-size: 17px;
-    line-height: 27px;
-  }
+  @include theme-body-text();
   h1 {
     @include content-body-heading(h1);
   }
