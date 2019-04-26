@@ -1,5 +1,5 @@
 import { getAsArray, getAsObject } from '@base-cms/object-path';
-import queryFragment from '../../api/fragments/all-published-content';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const pageNumber = input.pageNumber || 1;
 $ input.query = getAsObject(input, 'query');
@@ -19,7 +19,7 @@ $ const query = {
   endingBefore,
   limit: 9,
   ...input.query,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 
 $ const adCardInput = {
