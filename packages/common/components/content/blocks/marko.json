@@ -69,7 +69,6 @@
     "endeavor-content-block-item": {
       "template": "./item.marko",
       "@content": "object",
-      "@group-class": "string",
       "@with-image": {
         "type": "boolean",
         "default-value": true
@@ -78,11 +77,20 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-type": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@position": {
+        "type": "string",
+        "default-value": "left"
+      },
       "@lazyload": {
         "type": "boolean",
         "default-value": true
       },
-      "@modifiers": "array",
+      "@image-width": "number",
+      "@image-height": "number",
       "@image-modifiers": "array",
       "@image-options": "object"
     },

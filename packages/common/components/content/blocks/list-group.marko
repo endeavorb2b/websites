@@ -9,12 +9,13 @@ $ const nodes = asArray(input.nodes);
       <li class=`${block}__item list-group-item`>
         <endeavor-content-block-item
           content=content
-          image-modifiers=['list']
+          position="left"
           image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
           lazyload=input.lazyload
-          modifiers=input.modifiers
           with-image=input.withImage
           with-teaser=input.withTeaser
+          image-width=176
+          image-height=99
         />
       </li>
     </for>
