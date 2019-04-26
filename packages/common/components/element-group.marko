@@ -1,4 +1,4 @@
-import { getAsArray } from '@base-cms/object-path';
+import { getAsArray, get } from '@base-cms/object-path';
 import bem from '../utils/bem-class';
 
 $ const block = 'element-group';
@@ -12,8 +12,10 @@ $ const {
   footerLeft,
   footerRight,
 } = input;
-$ const titleTag = title.tag || 'h5';
-$ const descriptionTag = description.tag || 'p';
+$ const titleTag = get(title, 'tag', 'h5');
+$ const descriptionTag = get(description, 'tag', 'p');
+$ const renderTitle = get(title, 'renderBody');
+$ const renderDescription = get(description, 'renderBody');
 
 <div class=block>
   <if(headerLeft || headerRight)>
@@ -30,14 +32,14 @@ $ const descriptionTag = description.tag || 'p';
       </if>
     </div>
   </if>
-  <if(title.renderBody)>
+  <if(renderTitle)>
     <${titleTag} class=bem(block, "title", getAsArray(title, "modifiers"))>
-      <${title.renderBody} block=block />
+      <${renderTitle} block=block />
     </>
   </if>
-  <if(description.renderBody)>
+  <if(renderDescription)>
     <${descriptionTag} class=bem(block, "description", getAsArray(description, "modifiers"))>
-      <${description.renderBody} block=block />
+      <${renderDescription} block=block />
     </>
   </if>
   <if(footerLeft || footerRight)>
