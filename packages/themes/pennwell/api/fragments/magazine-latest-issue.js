@@ -6,11 +6,11 @@ fragment MagazineLatestIssueQueryFragment on MagazineIssue {
   id
   name
   canonicalPath
+  mailed
   coverImage {
     id
     src
   }
-  mailDate
   digitalEditionUrl
   publication {
     id
