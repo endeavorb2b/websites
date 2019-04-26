@@ -1,5 +1,4 @@
-
-import queryFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-issue-content';
+import contentListFragment from '../../../api/fragments/content-list';
 import { asArray } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
 
@@ -11,7 +10,7 @@ $ const query = {
   issueId,
   limit: 10,
   ...input.query,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 
 $ const loadMore = {
