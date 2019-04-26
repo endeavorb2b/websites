@@ -13,6 +13,26 @@
   "tags": {
     "endeavor-element-group": {
       "template": "./element-group"
+    },
+    "endeavor-image-element": {
+      "template": "./image-element",
+      "@modifiers": "array",
+      "@position": {
+        "type": "string",
+        "default-value": "left"
+      },
+      "@image": {
+        "type": "object",
+        "required": true
+      },
+      "@link-to": "object",
+      "@height": "number",
+      "@width": "number",
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@options": "object"
     }
   }
 }
