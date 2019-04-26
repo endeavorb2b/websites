@@ -15,21 +15,19 @@
       "@width": "number",
       "@height": "number"
     },
-    "endeavor-content-block-element-group": {
+    "endeavor-content-element-group": {
       "template": "./element-group.marko",
       "@content": {
         "type": "object",
         "required": true
       },
-      "@class": "string",
-      "@tag": {
-        "type": "string",
-        "default-value": "div"
-      },
-      "@modifiers": "array",
       "@with-teaser": {
         "type": "boolean",
         "default-value": false
+      },
+      "@with-type": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-attribution": {
