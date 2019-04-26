@@ -8,9 +8,9 @@
     "lint": "basecms-website lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "~0.8.1",
+    "@base-cms/marko-web": "~0.8.4",
     "@base-cms/object-path": "^0.8.0",
-    "@base-cms/web-cli": "~0.8.1",
+    "@base-cms/web-cli": "~0.8.4",
     "@endeavorb2b/base-website-common": "^0.5.3",
     "@endeavorb2b/base-website-themes": "^0.5.3",
     "@newrelic/native-metrics": "^4.1.0",
