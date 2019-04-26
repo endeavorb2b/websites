@@ -28,7 +28,8 @@
       "@with-type": {
         "type": "boolean",
         "default-value": true
-      }
+      },
+      "@title-modifiers": "array"
     },
     "endeavor-content-block-attribution": {
       "template": "./attribution.marko",
@@ -92,7 +93,8 @@
       "@image-width": "number",
       "@image-height": "number",
       "@image-modifiers": "array",
-      "@image-options": "object"
+      "@image-options": "object",
+      "@title-modifiers": "array"
     },
     "endeavor-content-block-card": {
       "template": "./card.marko",
@@ -109,7 +111,8 @@
         "type": "boolean",
         "default-value": true
       },
-      "@modifiers": "array"
+      "@modifiers": "array",
+      "@title-modifiers": "array"
     },
     "endeavor-content-block-card-body": {
       "template": "./card-body.marko",
@@ -129,7 +132,8 @@
         "type": "boolean",
         "default-value": true
       },
-      "@modifiers": "array"
+      "@modifiers": "array",
+      "@title-modifiers": "array"
     },
     "endeavor-content-block-list-group-card": {
       "template": "./list-group-card.marko",

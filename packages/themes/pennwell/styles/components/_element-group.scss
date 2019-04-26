@@ -47,6 +47,15 @@
       @include theme-max-lines($line-height: 24px, $line-height-sm: 20px);
       color: $black;
     }
+
+    &--large {
+      @include theme-heading(h5);
+
+      a {
+        @include theme-max-lines($line-height: 30px, $line-height-sm: 26px);
+        color: $black;
+      }
+    }
   }
 
   &__description {

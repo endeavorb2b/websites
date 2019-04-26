@@ -11,7 +11,7 @@ $ const company = getAsObject(content, 'company');
       <cms-text-element tag="span" block=block obj=content field="typeTitled" />
     </if>
   </@header-left>
-  <@title tag="h5" modifiers=['large']>
+  <@title tag="h5" modifiers=input.titleModifiers>
     <cms-content-short-name tag=null obj=content link=true />
   </@title>
   <if(input.withTeaser)>
