@@ -100,7 +100,8 @@
     }
   }
 
-  &__content-starts + &__content-ends {
+  &__content-starts + &__content-ends,
+  &__website-section-name + &__content-type-titled {
     &::before {
       margin-right: map-get($spacers, 1);
       margin-left: map-get($spacers, 1);

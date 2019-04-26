@@ -5,14 +5,12 @@ $ const primarySection = getAsObject(content, 'primarySection');
 $ const company = getAsObject(content, 'company');
 
 <endeavor-element-group>
-  <@header-left>
-    <cms-website-section-name obj=primarySection link=true />
+  <@header-left|{ block }|>
+    <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+    <if(input.withType)>
+      <cms-text-element tag="span" block=block obj=content field="typeTitled" />
+    </if>
   </@header-left>
-  <if(input.withType)>
-    <@header-right>
-      <cms-text-element obj=content field="typeTitled" />
-    </@header-right>
-  </if>
   <@title tag="h5" modifiers=['large']>
     <cms-content-short-name tag=null obj=content link=true />
   </@title>
