@@ -9,5 +9,10 @@
     "./social/marko.json",
     "./subscribe/marko.json",
     "./search/marko.json"
-  ]
+  ],
+  "tags": {
+    "endeavor-element-group": {
+      "template": "./element-group"
+    }
+  }
 }

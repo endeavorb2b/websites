@@ -1,0 +1,57 @@
+import { getAsArray } from '@base-cms/object-path';
+import bem from '../utils/bem-class';
+
+$ const block = 'element-group';
+$ const {
+  header,
+  headerLeft,
+  headerRight,
+  title,
+  description,
+  footer,
+  footerLeft,
+  footerRight,
+} = input;
+$ const titleTag = title.tag || 'h5';
+$ const descriptionTag = description.tag || 'p';
+
+<div class=block>
+  <if(headerLeft || headerRight)>
+    <div class=bem(block, "header", getAsArray(header, "modifiers"))>
+      <if(headerLeft)>
+        <div class=bem(block, "header-left")>
+          <${headerLeft} block=block />
+        </div>
+      </if>
+      <if(headerRight)>
+        <div class=bem(block, "header-right")>
+          <${headerRight} block=block />
+        </div>
+      </if>
+    </div>
+  </if>
+  <if(title.renderBody)>
+    <${titleTag} class=bem(block, "title", getAsArray(title, "modifiers"))>
+      <${title.renderBody} block=block />
+    </>
+  </if>
+  <if(description.renderBody)>
+    <${descriptionTag} class=bem(block, "description", getAsArray(description, "modifiers"))>
+      <${description.renderBody} block=block />
+    </>
+  </if>
+  <if(footerLeft || footerRight)>
+    <div class=bem(block, "footer", getAsArray(footer, "modifiers"))>
+      <if(footerLeft)>
+        <div class=bem(block, "footer-left")>
+          <${footerLeft} block=block />
+        </div>
+      </if>
+      <if(footerRight)>
+        <div class=bem(block, "footer-right")>
+          <${footerRight} block=block />
+        </div>
+      </if>
+    </div>
+  </if>
+</div>
