@@ -5,7 +5,55 @@
       "@target": "object"
     },
     "endeavor-magazine-query-latest-issue": {
-      "template": "./query-latest-issue.marko"
+      "template": "./query-latest-issue.marko",
+      "@header": "string",
+      "@publicationId": {
+        "type": "string",
+        "required": true
+      },
+      "@vertical": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@content": {
+        "type": "number",
+        "default-value": 3
+      }
+    },
+    "endeavor-magazine-query-latest-issues": {
+      "template": "./query-latest-issues.marko",
+      "@header": "string",
+      "@vertical": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@content": {
+        "type": "number",
+        "default-value": 1
+      }
+    },
+    "endeavor-magazine-issue-block": {
+      "template": "./issue.marko",
+      "@issue": {
+        "type": "object",
+        "required": true
+      },
+      "@vertical": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@content": {
+        "type": "number",
+        "default-value": 0
+      }
+    },
+    "endeavor-magazine-issue-element-group": {
+      "template": "./issue-element-group.marko",
+      "@issue": {
+        "type": "object",
+        "required": true
+      },
+      "@modifiers": "array"
     },
     "endeavor-magazine-block-query-active-issues": {
       "template": "./query-active-issues.marko"

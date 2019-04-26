@@ -1,0 +1,7 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const { site } = out.global;
+$ const publication = getAsObject(input, 'publication');
+
+<h1>Subscribe to ${publication.name}</h1>
+<iframe src=site.get(`subscriptions.publications.${publication.subscribeUrl}`) width="100%" height="700px" frameborder=0 scrolling="auto" />

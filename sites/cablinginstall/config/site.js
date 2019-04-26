@@ -64,4 +64,13 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:l9lnow_qnxy',
   },
+  subscriptions: {
+    newsletters: 'http://formdesigner.ecn5.com/GetForm?tokenuid=850e3208-3d2c-4dbe-93a4-6fe98d795854&pubcode=cimenl&step=form&promoCode=ENL09012016SB&cmpid=website_ENL_CIM_subbutton_sept2016',
+    publications: {
+      '/subscribe/print/cim': 'https://formdesigner.ecn5.com/GetForm?tokenuid=18dc6325-f595-42d0-9231-6742e592190b&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=%20NW2019&utm_content=2019-02-25',
+    },
+  },
+  magazines: {
+    description: 'Cabling Installation & Maintenance is the leading source of practical, hands-on information for professionals who design, install and manage the physical-layer infrastructure in data centers and networks for the communications systems of today and tomorrow.',
+  },
 };

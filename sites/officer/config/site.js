@@ -64,4 +64,14 @@ module.exports = {
     engine: 'google',
     apiKey: '017383739850048358259:p0nyaiybgnq',
   },
+  subscriptions: {
+    newsletters: 'https://www.officer.com/subscribe/email',
+    publications: {
+      '/subscribe/print/let': 'https://cygnus.omeda.com/cgi-win/let.cgi?login',
+      '/subscribe/print/lepn': 'https://cygnus.omeda.com/cgi-win/lepn.cgi?login',
+    },
+  },
+  magazines: {
+    description: 'Law Enforcement Technology (LET) and Law Enforcement Product News (LEPN) are the leading magazine publications for the police and law enforcement community.',
+  },
 };

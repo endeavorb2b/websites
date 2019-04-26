@@ -1,0 +1,21 @@
+import { get, getAsObject } from '@base-cms/object-path';
+
+$ const { config } = out.global;
+
+<theme-pennwell-subscribe-layout>
+  <@head>
+    <cms-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-subscribe-index>
+    <h1>Information at Your Fingertips.</h1>
+    <p>${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.</p>
+    <endeavor-social-links block="site-subscribe" />
+    <hr>
+  </endeavor-subscribe-index>
+
+</theme-pennwell-subscribe-layout>

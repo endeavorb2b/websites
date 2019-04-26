@@ -6,6 +6,7 @@ x-node-defaults: &node
   image: node:10.15
   entrypoint: ["node"]
   working_dir: /root
+  restart: always
   volumes:
     - .:/root:cached
     - ./node_modules:/root/node_modules:delegated
@@ -14,6 +15,8 @@ x-node-defaults: &node
 x-env-defaults: &env
   YARN_CACHE_FOLDER: /.yarn-cache
   NODE_ENV: development
+  NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
+  NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY}
 
 x-site-command: &site-cmd
   entrypoint: ["node_modules/.bin/basecms-website"]

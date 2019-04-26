@@ -1,0 +1,13 @@
+{
+  "tags": {
+    "endeavor-subscribe-index": {
+      "template": "./index.marko"
+    },
+    "endeavor-subscribe-email": {
+      "template": "./email.marko"
+    },
+    "endeavor-subscribe-magazine": {
+      "template": "./magazine.marko"
+    }
+  }
+}

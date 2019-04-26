@@ -1,3 +1,5 @@
+$ const { site } = out.global;
+
 <theme-pennwell-magazine-layout>
   <@head>
     <cms-ad-gam-head />
@@ -9,7 +11,7 @@
 
   <endeavor-magazine-block-breadcrumbs />
 
-  <p class="lead">BioOptics World, presented by Laser Focus World, tracks technologies, applications, and business trends related to the use of optical technologies and instrumentation in the life sciences.</p>
+  <p class="lead">${site.get('magazines.description')}</p>
 
   <@below-container>
     <theme-pennwell-magazine-publication-list />
