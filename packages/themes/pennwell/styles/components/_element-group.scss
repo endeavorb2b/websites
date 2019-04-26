@@ -1,19 +1,18 @@
 .element-group {
-  $element-margin: 6px;
   $self: &;
 
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   width: 100%;
-  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  padding: $theme-element-group-padding-y $theme-element-group-padding-x;
 
   &__header {
     @include theme-small-text();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: $element-margin;
+    margin-bottom: $theme-element-group-margin;
     color: $gray;
     letter-spacing: normal;
     a {
@@ -38,7 +37,7 @@
   }
 
   &__title {
-    margin-bottom: $element-margin;
+    margin-bottom: $theme-element-group-margin;
     @include theme-heading(h6);
     &:empty {
       display: none;
@@ -52,7 +51,7 @@
 
   &__description {
     @include theme-description-text();
-    margin-bottom: $element-margin;
+    margin-bottom: $theme-element-group-margin;
     &:empty {
       display: none;
     }
