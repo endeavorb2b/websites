@@ -1,4 +1,7 @@
 .content-page-body {
+  &__primary-media {
+    margin-bottom: map-get($spacers, block);
+  }
   &__primary-video {
     @extend .embed-responsive;
     @extend .embed-responsive-16by9;
