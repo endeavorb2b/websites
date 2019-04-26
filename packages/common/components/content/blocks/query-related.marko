@@ -1,44 +1,10 @@
-import gql from 'graphql-tag';
-
-$ const queryFragment = gql`
-  fragment ContentBlockQueryRelatedFragment on Content {
-    id
-    type
-    shortName
-    canonicalPath
-    primarySection {
-      id
-      canonicalPath
-      name
-      fullName
-    }
-    company {
-      id
-      type
-      name
-      canonicalPath
-    }
-    published
-    ... on Authorable {
-      authors {
-        edges {
-          node {
-            id
-            name
-            type
-            canonicalPath
-          }
-        }
-      }
-    }
-  }
-`;
+import contentListFragment from '../../../api/fragments/content-list';
 
 $ const block = 'content-query-related';
 $ const params = {
   limit: 5,
   ...input,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 $ const header = input.header || 'Related Content';
 
