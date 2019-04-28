@@ -57,7 +57,13 @@ $ const adListInput = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <endeavor-content-block-card content=content />
+              <endeavor-content-block-item
+                content=content
+                image-modifiers=["fluid", "21by9"]
+                image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                image-position="top"
+                modifiers=["card"]
+              />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
@@ -75,7 +81,17 @@ $ const adListInput = {
           </div>
 
           <div class=`${block}__col-list`>
-            <endeavor-content-block-list-group-card header=input.header nodes=listNodes />
+            <endeavor-item-list flush=true card=true items=listNodes>
+              <@item|{ item }|>
+                <endeavor-content-block-item
+                  content=item
+                  image-position="left"
+                  image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-width=176
+                  image-height=99
+                />
+              </@item>
+            </endeavor-item-list>
           </div>
         </div>
       </if>

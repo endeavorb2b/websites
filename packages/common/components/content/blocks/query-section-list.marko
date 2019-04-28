@@ -1,7 +1,6 @@
 import contentListFragment from '../../../api/fragments/content-list';
 
 $ const block = 'content-query-section-list';
-$ const mod = input.horizontal ? 'horizontal' : 'vertical';
 $ const params = {
   limit: 4,
   requiresImage: true,
@@ -11,13 +10,23 @@ $ const params = {
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
-    <div class=[block, `${block}--${mod}`]>
-      <if(input.horizontal)>
-        <endeavor-content-block-horizontal-list modifiers=["flexible"] header=input.header with-teaser=true nodes=nodes />
-      </if>
-      <else>
-        <endeavor-content-block-vertical-list header=input.header with-card=true nodes=nodes />
-      </else>
+    <div class=block>
+      <endeavor-item-list flush=true card=true items=nodes>
+        <if(input.header)>
+          <@header>
+            ${input.header}
+          </@header>
+        </if>
+        <@item|{ item }|>
+          <endeavor-content-block-item
+            content=item
+            image-position="left"
+            image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+            image-width=176
+            image-height=99
+          />
+        </@item>
+      </endeavor-item-list>
     </div>
   </if>
 </cms-query-website-scheduled-content>

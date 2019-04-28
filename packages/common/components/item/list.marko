@@ -1,0 +1,26 @@
+import { getAsArray, getAsObject, get } from '@base-cms/object-path';
+import bem from '../../utils/bem-class';
+
+$ const block = 'item-list';
+$ const modifiers = getAsArray(input, 'modifiers');
+$ if (input.flush) modifiers.push('flush');
+$ if (input.card) modifiers.push('card');
+$ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
+$ const items = getAsArray(input, 'items');
+$ const header = getAsObject(input, 'header');
+
+<if(items.length)>
+  <${input.tag} class=classNames>
+    <if(header.renderBody)>
+      <${header.tag} class=bem(block, "item", ["header", ...getAsArray("header", "modifiers")])>
+        <${header.renderBody} />
+      </>
+    </if>
+    <for|node| of=items>
+      $ const itemTag = get(input, 'item.tag');
+      <${itemTag} class=bem(block, "item", getAsArray('input.item', "modifiers"))>
+        <${input.item.renderBody} item=node />
+      </>
+    </for>
+  </>
+</if>

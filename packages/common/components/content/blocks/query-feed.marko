@@ -12,7 +12,22 @@ $ const params = {
   $ const listNodes = asArray(nodes);
   <if(listNodes.length)>
     <div class=block>
-      <endeavor-content-block-list-group-card header=input.header nodes=listNodes />
+      <endeavor-item-list flush=true card=true items=listNodes>
+        <if(input.header)>
+          <@header>
+            ${input.header}
+          </@header>
+        </if>
+        <@item|{ item }|>
+          <endeavor-content-block-item
+            content=item
+            image-position="left"
+            image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+            image-width=176
+            image-height=99
+          />
+        </@item>
+      </endeavor-item-list>
     </div>
   </if>
 </cms-query-website-scheduled-content>

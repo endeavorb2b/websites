@@ -1,4 +1,6 @@
 .content-query-hero {
+  @include make-row();
+
   &__main {
     margin-bottom: map-get($spacers, block);
     @include make-col-ready();
@@ -9,6 +11,7 @@
       @include make-col(8);
     }
   }
+
   &__list {
     margin-bottom: map-get($spacers, block);
     @include make-col-ready();
@@ -18,8 +21,5 @@
     @include media-breakpoint-up(xl) {
       @include make-col(4);
     }
-  }
-  .card {
-    min-height: 100%;
   }
 }

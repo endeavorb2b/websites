@@ -1,23 +1,52 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
+$ const primarySection = getAsObject(content, 'primarySection');
+$ const company = getAsObject(content, 'company');
 
-<if(input.withImage)>
-  <!-- @todo Add support for responsive images / size variance based on context -->
-  <endeavor-image-element
+<endeavor-item modifiers=input.modifiers>
+  <@image
+    display=input.withImage
     image=content.primaryImage
     link-to=content
-    lazyload=input.lazyload
+    height=input.imageHeight
+    lazyload=input.imageLazyload
     modifiers=input.imageModifiers
     options=input.imageOptions
-    position=input.position
+    position=input.imagePosition
     width=input.imageWidth
-    height=input.imageHeight
   />
-</if>
-<endeavor-content-element-group
-  content=input.content
-  with-teaser=input.withTeaser
-  with-type=input.withType
-  title-modifiers=input.titleModifiers
-/>
+  <@header-left|{ block }|>
+    <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+    <if(input.withType)>
+      <cms-text-element tag="span" block=block obj=content field="typeTitled" />
+    </if>
+  </@header-left>
+  <@title tag="h5" modifiers=input.titleModifiers>
+    <cms-content-short-name tag=null obj=content link=true />
+  </@title>
+  <if(input.withTeaser)>
+    <@description tag="p">
+      <cms-content-teaser tag=null obj=content link=true />
+    </@description>
+  </if>
+  <@footer-left|{ block }|>
+    <if(company.id)>
+      <endeavor-content-company-name use-prefix=false company=company />
+    </if>
+    <else>
+      <endeavor-content-authors block=block use-prefix=false content=content />
+    </else>
+  </@footer-left>
+  <@footer-right|{ block }|>
+    <if(content.type === 'event')>
+      <span class=`${block}__content-event-dates`>
+        <endeavor-content-starts block=block obj=content />
+        <endeavor-content-ends block=block obj=content />
+      </span>
+    </if>
+    <else>
+      <cms-content-published obj=content />
+    </else>
+  </@footer-right>
+</endeavor-item>

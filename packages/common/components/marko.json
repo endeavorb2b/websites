@@ -12,6 +12,88 @@
     "./search/marko.json"
   ],
   "tags": {
+    "endeavor-item": {
+      "template": "./item/item",
+      "<image>": {
+        "@display": {
+          "type": "boolean",
+          "default-value": true
+        },
+        "@image": "object",
+        "@link-to": "object",
+        "@height": "number",
+        "@lazyload": {
+          "type": "boolean",
+          "default-value": true
+        },
+        "@modifiers": "array",
+        "@options": "object",
+        "@position": {
+          "type": "string",
+          "default-value": "left"
+        },
+        "@width": "number"
+      },
+      "<header-left>": {},
+      "<header-right>": {},
+      "<title>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "div"
+        },
+        "@modifiers": "array"
+      },
+      "@description <description>[]": {
+        "@tag": {
+          "type": "string",
+          "default-value": "p"
+        },
+        "@modifiers": "array"
+      },
+      "<footer-left>": {},
+      "<footer-right>": {},
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@header-modifiers": "array",
+      "@footer-modifiers": "array",
+      "@modifiers": "array",
+      "@flush": {
+        "type": "boolean",
+        "default-value": false
+      }
+    },
+    "endeavor-item-list": {
+      "template": "./item/list",
+      "<item>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array"
+      },
+      "<header>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        }
+      },
+      "@items": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "ul"
+      },
+      "@flush": {
+        "type": "string",
+        "default-value": false
+      },
+      "@card": {
+        "type": "string",
+        "default-value": false
+      },
+      "@modifiers": "array"
+    },
     "endeavor-element-group": {
       "template": "./element-group",
       "<header-left>": {},

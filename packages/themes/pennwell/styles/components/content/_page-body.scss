@@ -3,17 +3,22 @@
     margin-bottom: map-get($spacers, block);
   }
   &__primary-video {
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
+    @include theme-embed-responsive(16, 9);
+
+    iframe,
+    embed,
+    object,
+    video {
+      @include theme-embed-responsive-item();
+    }
   }
 
   &__primary-image {
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
+    @include theme-embed-responsive(16, 9);
     border-radius: $border-radius;
     box-shadow: $theme-box-shadow-lg;
     img {
-      @extend .embed-responsive-item;
+      @include theme-embed-responsive-item();
       border-radius: $border-radius;
     }
   }
