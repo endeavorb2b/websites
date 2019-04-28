@@ -64,9 +64,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12151
       LIVERELOAD_PORT: 35151
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ee.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ee.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ee.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
+      TENANT_KEY: ebm_ee
     ports:
       - "12151:80"
       - "35151:35151"
@@ -80,9 +81,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12152
       LIVERELOAD_PORT: 35152
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ofcr.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ofcr.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ofcr.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
+      TENANT_KEY: cygnus_ofcr
     ports:
       - "12152:80"
       - "35152:35152"
@@ -96,9 +98,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12153
       LIVERELOAD_PORT: 35153
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-up.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-up.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-up.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_up
     ports:
       - "12153:80"
       - "35153:35153"
@@ -112,9 +115,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12154
       LIVERELOAD_PORT: 35154
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-de.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-de.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-de.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_de
     ports:
       - "12154:80"
       - "35154:35154"
@@ -128,9 +132,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12155
       LIVERELOAD_PORT: 35155
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-bow.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-bow.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-bow.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_bow
     ports:
       - "12155:80"
       - "35155:35155"
@@ -144,9 +149,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12156
       LIVERELOAD_PORT: 35156
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-btr.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-btr.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-btr.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_btr
     ports:
       - "12156:80"
       - "35156:35156"
@@ -160,9 +166,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12157
       LIVERELOAD_PORT: 35157
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-cim.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-cim.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-cim.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_cim
     ports:
       - "12157:80"
       - "35157:35157"
@@ -176,9 +183,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12158
       LIVERELOAD_PORT: 35158
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-diq.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-diq.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-diq.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_diq
     ports:
       - "12158:80"
       - "35158:35158"
@@ -192,9 +200,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12159
       LIVERELOAD_PORT: 35159
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ias.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ias.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ias.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_ias
     ports:
       - "12159:80"
       - "35159:35159"
@@ -208,9 +217,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12160
       LIVERELOAD_PORT: 35160
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ils.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ils.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ils.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_ils
     ports:
       - "12160:80"
       - "35160:35160"
@@ -224,9 +234,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12161
       LIVERELOAD_PORT: 35161
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-leds.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-leds.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-leds.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilons.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilons.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilons.graphql.base-cms.io}
+      TENANT_KEY: ebm_leds
     ports:
       - "12161:80"
       - "35161:35161"
@@ -240,9 +251,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12162
       LIVERELOAD_PORT: 35162
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-lfw.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-lfw.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-lfw.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_lfw
     ports:
       - "12162:80"
       - "35162:35162"
@@ -256,9 +268,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12163
       LIVERELOAD_PORT: 35163
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-lw.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-lw.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-lw.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_lw
     ports:
       - "12163:80"
       - "35163:35163"
@@ -272,9 +285,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12164
       LIVERELOAD_PORT: 35164
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-mae.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-mae.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-mae.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_mae
     ports:
       - "12164:80"
       - "35164:35164"
@@ -288,9 +302,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12165
       LIVERELOAD_PORT: 35165
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-os.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-os.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-os.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_os
     ports:
       - "12165:80"
       - "35165:35165"
@@ -304,9 +319,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12166
       LIVERELOAD_PORT: 35166
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ogj.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ogj.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ogj.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_ogj
     ports:
       - "12166:80"
       - "35166:35166"
@@ -320,9 +336,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12167
       LIVERELOAD_PORT: 35167
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-rdh.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-rdh.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-rdh.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_rdh
     ports:
       - "12167:80"
       - "35167:35167"
@@ -336,9 +353,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12168
       LIVERELOAD_PORT: 35168
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-pia.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-pia.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-pia.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_pia
     ports:
       - "12168:80"
       - "35168:35168"
@@ -352,9 +370,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12169
       LIVERELOAD_PORT: 35169
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-su.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-su.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-su.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_su
     ports:
       - "12169:80"
       - "35169:35169"
@@ -368,9 +387,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12170
       LIVERELOAD_PORT: 35170
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-vsd.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-vsd.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-vsd.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_vsd
     ports:
       - "12170:80"
       - "35170:35170"
@@ -384,9 +404,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12171
       LIVERELOAD_PORT: 35171
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-ww.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-ww.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-ww.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: ebm_ww
     ports:
       - "12171:80"
       - "35171:35171"
@@ -400,9 +421,10 @@ services:
       PORT: 80
       EXPOSED_PORT: 12172
       LIVERELOAD_PORT: 35172
-      SITEMAPS_URI: ${SITEMAPS_URI-https://ebm-pmm.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://ebm-pmm.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://ebm-pmm.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
+      TENANT_KEY: ebm_pmm
     ports:
       - "12172:80"
       - "35172:35172"

@@ -18,110 +18,110 @@ jobs:
 
     - stage: deploy
       name: Utility Products
-      script: scripts/deploy.js utilityproducts
+      script: scripts/deploy.js utilityproducts aerilon
       install: skip
 
     - stage: deploy
       name: Officer
-      script: scripts/deploy.js officer
+      script: scripts/deploy.js officer picon
       install: skip
 
     - stage: deploy
       name: Evaluation Engineering
-      script: scripts/deploy.js evaluationengineering
+      script: scripts/deploy.js evaluationengineering picon
       install: skip
 
     - stage: deploy
       name: Dental Economics
-      script: scripts/deploy.js dentaleconomics
+      script: scripts/deploy.js dentaleconomics aerilon
       install: skip
 
     - stage: deploy
       name: BioOptics World
-      script: scripts/deploy.js bioopticsworld
+      script: scripts/deploy.js bioopticsworld aerilon
       install: skip
 
     - stage: deploy
       name: Broadband Technology Report
-      script: scripts/deploy.js broadbandtechreport
+      script: scripts/deploy.js broadbandtechreport aerilon
       install: skip
 
     - stage: deploy
       name: Cabling Installation & Maintenance
-      script: scripts/deploy.js cablinginstall
+      script: scripts/deploy.js cablinginstall aerilon
       install: skip
 
     - stage: deploy
       name: DentistryIQ
-      script: scripts/deploy.js dentistryiq
+      script: scripts/deploy.js dentistryiq aerilon
       install: skip
 
     - stage: deploy
       name: Intelligent Aerospace
-      script: scripts/deploy.js intelligent-aerospace
+      script: scripts/deploy.js intelligent-aerospace aerilon
       install: skip
 
     - stage: deploy
       name: Industrial Laser Solutions
-      script: scripts/deploy.js industrial-lasers
+      script: scripts/deploy.js industrial-lasers aerilon
       install: skip
 
     - stage: deploy
       name: LEDs Magazine
-      script: scripts/deploy.js ledsmagazine
+      script: scripts/deploy.js ledsmagazine aerilon
       install: skip
 
     - stage: deploy
       name: Laser Focus World
-      script: scripts/deploy.js laserfocusworld
+      script: scripts/deploy.js laserfocusworld aerilon
       install: skip
 
     - stage: deploy
       name: Lightwave
-      script: scripts/deploy.js lightwaveonline
+      script: scripts/deploy.js lightwaveonline aerilon
       install: skip
 
     - stage: deploy
       name: Military & Aerospace Electronics
-      script: scripts/deploy.js militaryaerospace
+      script: scripts/deploy.js militaryaerospace aerilon
       install: skip
 
     - stage: deploy
       name: Offshore Magazine
-      script: scripts/deploy.js offshore-mag
+      script: scripts/deploy.js offshore-mag aerilon
       install: skip
 
     - stage: deploy
       name: Offshore Oil & Gas Journal
-      script: scripts/deploy.js ogj
+      script: scripts/deploy.js ogj aerilon
       install: skip
 
     - stage: deploy
       name: Plastics Machinery Magazine
-      script: scripts/deploy.js plasticsmachinerymagazine
+      script: scripts/deploy.js plasticsmachinerymagazine picon
       install: skip
 
     - stage: deploy
       name: Registered Dental Hygienist
-      script: scripts/deploy.js rdhmag
+      script: scripts/deploy.js rdhmag aerilon
       install: skip
 
     - stage: deploy
       name: Perio-Implant Advisory
-      script: scripts/deploy.js perioimplantadvisory
+      script: scripts/deploy.js perioimplantadvisory aerilon
       install: skip
 
     - stage: deploy
       name: Strategies Unlimited
-      script: scripts/deploy.js strategies-u
+      script: scripts/deploy.js strategies-u aerilon
       install: skip
 
     - stage: deploy
       name: Vision Systems Design
-      script: scripts/deploy.js vision-systems
+      script: scripts/deploy.js vision-systems aerilon
       install: skip
 
     - stage: deploy
       name: WaterWorld
-      script: scripts/deploy.js waterworld
+      script: scripts/deploy.js waterworld aerilon
       install: skip
