@@ -1,20 +1,5 @@
 {
   "tags": {
-    "endeavor-content-block-primary-image": {
-      "template": "./primary-image.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      },
-      "@lazyload": {
-        "type": "boolean",
-        "default-value": true
-      },
-      "@modifiers": "array",
-      "@options": "object",
-      "@width": "number",
-      "@height": "number"
-    },
     "endeavor-content-element-group": {
       "template": "./element-group.marko",
       "@content": {
