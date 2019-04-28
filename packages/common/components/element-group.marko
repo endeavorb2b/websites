@@ -7,19 +7,17 @@ $ const {
   headerLeft,
   headerRight,
   title,
-  description,
   footer,
   footerLeft,
   footerRight,
 } = input;
+$ const description = getAsArray(input, 'description');
 $ const titleTag = get(title, 'tag', 'h5');
-$ const descriptionTag = get(description, 'tag', 'p');
 $ const renderTitle = get(title, 'renderBody');
-$ const renderDescription = get(description, 'renderBody');
 
 <div class=block>
   <if(headerLeft || headerRight)>
-    <div class=bem(block, "header", getAsArray(header, "modifiers"))>
+    <div class=bem(block, "header", getAsArray(input, "headerModifiers"))>
       <if(headerLeft)>
         <div class=bem(block, "header-left")>
           <${headerLeft} block=block />
@@ -37,13 +35,16 @@ $ const renderDescription = get(description, 'renderBody');
       <${renderTitle} block=block />
     </>
   </if>
-  <if(renderDescription)>
-    <${descriptionTag} class=bem(block, "description", getAsArray(description, "modifiers"))>
-      <${renderDescription} block=block />
-    </>
+  <if(description.length)>
+    <for|desc| of=description>
+      $ const descriptionTag = get(desc, 'tag', 'p');
+      <${descriptionTag} class=bem(block, "description", getAsArray(desc, "modifiers"))>
+        <${desc.renderBody} block=block />
+      </>
+    </for>
   </if>
   <if(footerLeft || footerRight)>
-    <div class=bem(block, "footer", getAsArray(footer, "modifiers"))>
+    <div class=bem(block, "footer", getAsArray(input, "footerModifiers"))>
       <if(footerLeft)>
         <div class=bem(block, "footer-left")>
           <${footerLeft} block=block />

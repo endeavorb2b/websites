@@ -12,7 +12,27 @@
   ],
   "tags": {
     "endeavor-element-group": {
-      "template": "./element-group"
+      "template": "./element-group",
+      "<header-left>": {},
+      "<header-right>": {},
+      "<title>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "div"
+        },
+        "@modifiers": "array"
+      },
+      "@description <description>[]": {
+        "@tag": {
+          "type": "string",
+          "default-value": "p"
+        },
+        "@modifiers": "array"
+      },
+      "<footer-left>": {},
+      "<footer-right>": {},
+      "@header-modifiers": "array",
+      "@footer-modifiers": "array"
     },
     "endeavor-image-element": {
       "template": "./image-element",
