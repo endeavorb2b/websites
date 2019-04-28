@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/broadbandtechreport",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -8,12 +8,14 @@
     "lint": "basecms-website lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "~0.8.0",
-    "@base-cms/object-path": "^0.8.0",
-    "@base-cms/web-cli": "~0.8.0",
-    "@endeavorb2b/base-website-common": "^0.5.2",
-    "@endeavorb2b/base-website-themes": "^0.5.2",
+    "@base-cms/marko-web": "~0.9.0",
+    "@base-cms/object-path": "^0.9.0",
+    "@base-cms/web-cli": "~0.9.0",
+    "@endeavorb2b/base-website-common": "^0.6.0",
+    "@endeavorb2b/base-website-themes": "^0.6.0",
+    "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.10.1",
+    "newrelic": "^5.7.0"
   }
 }

@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  &__content-short-name {
+  &__content-short-name,
+  &__magazine-issue-name {
     min-height: 48px;
     max-height: 48px;
     margin-bottom: $element-margin;
@@ -25,7 +26,8 @@
       }
     }
   }
-  &__website-section-name {
+  &__website-section-name,
+  &__magazine-publication-name {
     @include theme-list-text();
     margin-bottom: $element-margin;
     color: $gray;
@@ -55,6 +57,7 @@
     }
   }
   &__content-published,
+  &__magazine-issue-mail-date,
   &__content-event-dates {
     @include theme-list-text();
     margin-top: auto;

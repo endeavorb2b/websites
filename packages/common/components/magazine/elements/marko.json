@@ -5,6 +5,25 @@
     },
     "endeavor-magazine-issue-card": {
       "template": "./issue-card.marko"
+    },
+    "endeavor-magazine-issue-image": {
+      "template": "./issue-image.marko",
+      "@issue": {
+        "type": "object",
+        "required": true
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@modifiers": "array",
+      "@options": "object",
+      "@width": "number",
+      "@height": "number",
+      "@with-link": {
+        "type": "boolean",
+        "default-value": true
+      }
     }
   }
 }

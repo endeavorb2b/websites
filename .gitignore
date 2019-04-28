@@ -82,4 +82,4 @@ typings/
 .marko-devtools
 
 .bash_history
-/sites/copy.js
+.node-gyp

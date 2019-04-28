@@ -33,7 +33,7 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
+    // { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -57,5 +57,8 @@ module.exports = {
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:u8wtuvfsr0c',
+  },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=a56c9d44-88f6-452a-9f61-92d48166c3a9',
   },
 };

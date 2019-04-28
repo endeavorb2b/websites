@@ -58,4 +58,15 @@ module.exports = {
     engine: 'google',
     apiKey: '003355913687346718228:sdje-2o3phk',
   },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=4e648177-9864-4c3e-ba00-e0e0af798879&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+    publications: {
+      '/subscribe/print/ils': 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=ILSD&promoCode=WS702',
+      '/subscribe/print/ilscn': 'http://www.industrysourcing.com/Big5/china/Subscription.asp?magazine_code=ILS',
+      '/subscribe/print/ilsjp': 'http://www.ils-japan.jp/subscription.html',
+    },
+  },
+  magazines: {
+    description: 'Lasers for Manufacturing Industrial Laser Solutions has one focus, industrial laser materials processing. We are devoted exclusively to global coverage of industrial laser applications, technology, and the people and companies who participate in this, the largest commercial portion of the global laser market. Our uniquely qualified international editorial staff has accumulated experience in this technology field exceeding 100 years.',
+  },
 };

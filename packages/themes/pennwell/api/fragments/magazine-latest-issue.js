@@ -10,9 +10,11 @@ fragment MagazineLatestIssueQueryFragment on MagazineIssue {
     id
     src
   }
+  mailDate
   digitalEditionUrl
   publication {
     id
+    name
     canonicalPath
     subscribeUrl
   }

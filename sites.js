@@ -115,16 +115,16 @@ module.exports = {
   },
 
   // Carey Media
-  thepitchkc: {
-    name: 'The Pitch',
-    domain: 'thepitchkc.com',
-    project: 'Carey Media',
-    accountKey: 'careymedia',
-    groupKey: 'kcp',
-    tenantKey: 'scomm_kcp',
-    replicaSet: 'caprica',
-    logo: 'https://cdn.thepitchkc.com/files/base/scomm/kcp/image/static/logo/kcp-large-red.png',
-  },
+  // thepitchkc: {
+  //   name: 'The Pitch',
+  //   domain: 'thepitchkc.com',
+  //   project: 'Carey Media',
+  //   accountKey: 'careymedia',
+  //   groupKey: 'kcp',
+  //   tenantKey: 'scomm_kcp',
+  //   replicaSet: 'caprica',
+  //   logo: 'https://cdn.thepitchkc.com/files/base/scomm/kcp/image/static/logo/kcp-large-red.png',
+  // },
 
   // Cygnus Business Media
   aviationpros: {

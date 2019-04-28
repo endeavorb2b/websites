@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-social-links": {
+      "template": "./links.marko"
+    }
+  }
+}

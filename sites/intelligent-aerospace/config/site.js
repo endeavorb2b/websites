@@ -32,7 +32,7 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
+    // { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -56,5 +56,11 @@ module.exports = {
   search: {
     engine: 'google',
     apiKey: '003355913687346718228:idbh6wzoxxo',
+  },
+  subscriptions: {
+    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=b1ced73d-8b7a-4c39-a91a-97767a23667d&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+    publications: {
+      '/subscribe/print/mae': 'https://formdesigner.ecn5.com/GetForm?tokenuid=046345a9-19bb-4e6d-b034-e69baa602f10&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
+    },
   },
 };

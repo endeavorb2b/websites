@@ -58,4 +58,13 @@ module.exports = {
     engine: 'google',
     apiKey: '017383739850048358259:alxsug09xai',
   },
+  subscriptions: {
+    newsletters: 'https://www.plasticsmachinerymagazine.com/subscribe/email',
+    publications: {
+      '/subscribe/print/pmm': 'https://endeavor.dragonforms.com/init.do?omedasite=pmm_new',
+    },
+  },
+  magazines: {
+    description: '',
+  },
 };

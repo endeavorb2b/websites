@@ -1,14 +1,14 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
-    "@base-cms/object-path": "^0.8.0",
-    "@base-cms/utils": "^0.8.0",
+    "@base-cms/object-path": "^0.9.0",
+    "@base-cms/utils": "^0.9.0",
     "helmet": "^3.16.0"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "^0.8.0"
+    "@base-cms/marko-web": "^0.9.0"
   },
   "devDependencies": {
     "eslint": "^5.15.1",
