@@ -83,3 +83,4 @@ typings/
 
 .bash_history
 .node-gyp
+/sites/copy.js
