@@ -65,6 +65,11 @@
       @include theme-embed-responsive(4, 3);
     }
   }
+  &--3by4 {
+    a {
+      @include theme-embed-responsive(3, 4);
+    }
+  }
   &--1by1 {
     a {
       @include theme-embed-responsive(1, 1);
