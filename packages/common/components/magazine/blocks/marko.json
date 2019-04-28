@@ -47,14 +47,6 @@
         "default-value": 0
       }
     },
-    "endeavor-magazine-issue-element-group": {
-      "template": "./issue-element-group.marko",
-      "@issue": {
-        "type": "object",
-        "required": true
-      },
-      "@modifiers": "array"
-    },
     "endeavor-magazine-block-query-active-issues": {
       "template": "./query-active-issues.marko"
     }
