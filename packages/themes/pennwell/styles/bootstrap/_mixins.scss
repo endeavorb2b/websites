@@ -65,7 +65,7 @@
   }
 }
 
-@mixin theme-title-text() {
+@mixin theme-page-title-text() {
   font-family: $theme-content-title-font;
   font-size: 40px;
   font-weight: 400;
@@ -76,7 +76,7 @@
   }
 }
 
-@mixin theme-teaser-text() {
+@mixin theme-page-deck-text() {
   font-family: $theme-content-sans-serif-font;
   font-size: 24px;
   line-height: 34px;
@@ -88,7 +88,7 @@
   }
 }
 
-@mixin theme-deck-text() {
+@mixin theme-page-description-text() {
   font-family: $theme-content-sans-serif-font;
   font-size: 20px;
   line-height: 28px;
@@ -100,7 +100,7 @@
   }
 }
 
-@mixin theme-body-text() {
+@mixin theme-page-body-text() {
   font-family: $theme-content-serif-font;
   font-size: 19px;
   font-style: normal;
@@ -217,7 +217,7 @@
 }
 
 @mixin content-body() {
-  @include theme-body-text();
+  @include theme-page-body-text();
   h1 {
     @include content-body-heading(h1);
   }

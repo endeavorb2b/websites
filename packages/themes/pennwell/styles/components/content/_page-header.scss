@@ -1,10 +1,4 @@
 .content-page-header {
-  &__content-name {
-    @include theme-title-text();
-  }
-  &__content-teaser {
-    @include theme-teaser-text();
-  }
   &__content-published {
     font-family: $theme-content-sans-serif-font;
   }

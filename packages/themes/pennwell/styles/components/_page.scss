@@ -8,6 +8,18 @@
     @include theme-page-header-spacing();
   }
 
+  &__title {
+    @include theme-page-title-text();
+  }
+
+  &__deck {
+    @include theme-page-deck-text();
+  }
+
+  &__description {
+    @include theme-page-description-text();
+  }
+
   &__contents {
     @include content-body();
     @include theme-page-body-spacing();
