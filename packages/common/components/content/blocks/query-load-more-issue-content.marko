@@ -4,7 +4,6 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const pageNumber = input.pageNumber || 1;
 $ const { issueId } = getAsObject(input, 'query');
-$ const header = input.header || 'More from this issue';
 $ const block = 'magazine-query-issue-content';
 $ const query = {
   issueId,
@@ -30,12 +29,6 @@ $ const adListInput = {
   ...getAsObject(input, 'ads.list'),
 };
 
-<if(pageNumber === 1)>
-  <endeavor-load-more-header>
-    ${header}
-  </endeavor-load-more-header>
-</if>
-
 <cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ delete query.skip;
@@ -44,7 +37,6 @@ $ const adListInput = {
   $ query.after = endCursor;
   $ const provide = {
     query,
-    header,
     pageNumber,
     ads: input.ads,
   };
