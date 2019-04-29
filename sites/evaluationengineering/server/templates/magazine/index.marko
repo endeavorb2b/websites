@@ -1,4 +1,5 @@
 $ const { site } = out.global;
+$ const description = site.get('magazines.description');
 
 <theme-pennwell-magazine-layout>
   <@head>
@@ -9,12 +10,21 @@ $ const { site } = out.global;
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-magazine-block-breadcrumbs />
-
-  <p class="lead">${site.get('magazines.description')}</p>
-
-  <@below-container>
-    <theme-pennwell-magazine-publication-list />
-  </@below-container>
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-magazine-block-breadcrumbs />
+          <h1 class="page-wrapper__title">Magazines</h1>
+          <if(description)>
+            <p class="page-wrapper__description">${description}</p>
+          </if>
+        </div>
+        <div class="page-wrapper__body">
+          <theme-pennwell-magazine-publication-list />
+        </div>
+      </div>
+    </div>
+  </div>
 
 </theme-pennwell-magazine-layout>
