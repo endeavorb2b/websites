@@ -10,46 +10,48 @@ $ const { publicationId, asCard, contentCount } = input;
         ${input.header}
       </endeavor-item-list-header>
     </if>
-    <endeavor-item-list-node|{ item: issue }| node=issueNode>
-      <if(asCard)>
-        <endeavor-magazine-issue-item
-          issue=issue
-          image-modifiers=["fluid", "3by4"]
-          image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
-          image-position="top"
-          modifiers=["card"]
-        />
-      </if>
-      <else>
-        <endeavor-magazine-issue-item
-          image-options={ w: 150 }
-          image-position="right"
-          image-width=100
-          image-min-height=100
-          issue=issue
-        />
-      </else>
-    </endeavor-item-list-node>
-    <if(!asCard && contentCount > 0)>
-      <cms-query-magazine-scheduled-content|{ nodes, pageInfo }|
-        issue-id=issueNode.id
-        limit=contentCount
-        query-fragment=contentListFragment
-      >
-        <if(nodes.length)>
-          <for|contentNode| of=nodes>
-            <endeavor-item-list-node|{ item: content }| node=contentNode>
-              <endeavor-content-block-item
-                content=content
-                image-position="right"
-                image-options={ w: 150, h: 150, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                image-width=100
-                image-height=100
-              />
-            </endeavor-item-list-node>
-          </for>
+    <if(issueNode)>
+      <endeavor-item-list-node|{ item: issue }| node=issueNode>
+        <if(asCard)>
+          <endeavor-magazine-issue-item
+            issue=issue
+            image-modifiers=["fluid", "3by4"]
+            image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+            image-position="top"
+            modifiers=["card"]
+          />
         </if>
-      </cms-query-magazine-scheduled-content>
+        <else>
+          <endeavor-magazine-issue-item
+            image-options={ w: 150 }
+            image-position="right"
+            image-width=100
+            image-min-height=100
+            issue=issue
+          />
+        </else>
+      </endeavor-item-list-node>
+      <if(!asCard && contentCount > 0)>
+        <cms-query-magazine-scheduled-content|{ nodes, pageInfo }|
+          issue-id=issueNode.id
+          limit=contentCount
+          query-fragment=contentListFragment
+        >
+          <if(nodes.length)>
+            <for|contentNode| of=nodes>
+              <endeavor-item-list-node|{ item: content }| node=contentNode>
+                <endeavor-content-block-item
+                  content=content
+                  image-position="right"
+                  image-options={ w: 150, h: 150, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-width=100
+                  image-height=100
+                />
+              </endeavor-item-list-node>
+            </for>
+          </if>
+        </cms-query-magazine-scheduled-content>
+      </if>
     </if>
   </endeavor-item-list-wrapper>
 </cms-query-magazine-latest-issue>
