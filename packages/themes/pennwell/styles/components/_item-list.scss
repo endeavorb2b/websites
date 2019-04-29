@@ -17,14 +17,15 @@
     border: $list-group-border-width solid $list-group-border-color;
 
     &:first-child {
-      @include border-top-radius($list-group-border-radius);
+      @include border-top-radius($theme-card-border-radius);
     }
 
     &:last-child {
       margin-bottom: 0;
-      @include border-bottom-radius($list-group-border-radius);
+      @include border-bottom-radius($theme-card-border-radius);
     }
 
+    // @todo headers still have issues with borders
     &--header {
       @include theme-card-header();
       padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
@@ -33,19 +34,16 @@
       &:empty {
         display: none;
       }
+
+      &:last-child {
+        @include border-bottom-radius(0);
+      }
     }
   }
 
   &--card {
     @include theme-card();
     min-height: 100%;
-    #{ $self } {
-      &__item {
-        &:last-child {
-          border-bottom: 0;
-        }
-      }
-    }
   }
 
   &--flush {
@@ -58,12 +56,8 @@
           border-top: 0;
         }
 
-        &:only-child {
-          border-bottom: 0;
-        }
-
         &:last-child {
-          margin-bottom: -$list-group-border-width;
+          border-bottom: 0;
         }
       }
     }
