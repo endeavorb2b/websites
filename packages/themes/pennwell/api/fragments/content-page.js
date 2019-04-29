@@ -29,6 +29,10 @@ fragment ContentPageFragment on Content {
     src
     alt
   }
+  gating {
+    surveyType
+    surveyId
+  }
   ... on ContentVideo {
     embedCode
   }
@@ -38,12 +42,6 @@ fragment ContentPageFragment on Content {
   }
   ... on Media {
     fileSrc
-  }
-  ... on ContentWhitepaper {
-    gating {
-      surveyType
-      surveyId
-    }
   }
   ... on Authorable {
     authors {
