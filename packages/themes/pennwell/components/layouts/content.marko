@@ -1,10 +1,13 @@
 import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
 
+$ const { site } = out.global;
 $ const content = getAsObject(input, 'content');
 
 <theme-pennwell-document>
   <@head>
     <cms-page-metadata for="content" ...content />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('content', content) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
