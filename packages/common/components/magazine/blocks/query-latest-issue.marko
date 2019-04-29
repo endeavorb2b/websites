@@ -1,9 +1,9 @@
-import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
+import issueListFragment from '../../../api/fragments/magazine-issue-list';
 
 $ const block = 'content-vertical-list';
 $ const { publicationId, vertical, content } = input;
 
-<cms-query-magazine-latest-issue|{ node }| publicationId=publicationId queryFragment=latestIssueFragment>
+<cms-query-magazine-latest-issue|{ node }| publicationId=publicationId queryFragment=issueListFragment>
   <div class=`${block} card`>
     <if(input.header)>
       <div class=`${block}__header card-header`>${input.header}</div>

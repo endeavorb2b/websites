@@ -1,5 +1,5 @@
 import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
-import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
+import issueListFragment from '../../../api/fragments/magazine-issue-list';
 
 $ const block = 'content-vertical-list';
 
@@ -10,7 +10,7 @@ $ const block = 'content-vertical-list';
     </if>
     <ul class="list-group list-group-flush">
       <for|publication| of=nodes>
-        <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=latestIssueFragment>
+        <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=issueListFragment>
           <endeavor-magazine-issue-block issue=node ...input />
         </cms-query-magazine-latest-issue>
       </for>

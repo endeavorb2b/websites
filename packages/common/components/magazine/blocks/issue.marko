@@ -1,5 +1,4 @@
-import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
-import queryFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-issue-content';
+import contentListFragment from '../../../api/fragments/content-list';
 
 $ const { issue, vertical, content } = input;
 $ const block = 'magazine-current-issue';
@@ -22,7 +21,7 @@ $ const modifiers = vertical ? ['vertical'] : ['horizontal'];
 </li>
 
 <if(content > 0)>
-  $ const query = { issueId: issue.id, limit: content, queryFragment };
+  $ const query = { issueId: issue.id, limit: content, queryFragment: contentListFragment };
   <cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...query>
     <for|content| of=nodes>
       <li class="content-list-group__item list-group-item">
