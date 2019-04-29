@@ -33,6 +33,8 @@
           "default-value": "left"
         },
         "@width": "number",
+        "@min-height": "number",
+        "@min-width": "number",
         "@use-placeholder": {
           "type": "boolean",
           "default-value": true

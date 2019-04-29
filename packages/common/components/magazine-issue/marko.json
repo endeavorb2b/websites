@@ -56,6 +56,8 @@
         "type": "boolean",
         "default-value": true
       },
+      "@image-min-height": "number",
+      "@image-min-width": "number",
       "@title-modifiers": "array",
       "@modifiers": "array"
     }

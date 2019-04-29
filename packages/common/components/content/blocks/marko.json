@@ -68,6 +68,8 @@
       "@image-height": "number",
       "@image-modifiers": "array",
       "@image-options": "object",
+      "@image-min-height": "number",
+      "@image-min-width": "number",
       "@title-modifiers": "array",
       "@modifiers": "array"
     },

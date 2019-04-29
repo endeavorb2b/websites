@@ -12,6 +12,8 @@ $ const classNames = [element, ...modifiers.map(mod => `${element}--${mod}`)];
 $ const placeholderStyle = [];
 $ if (input.width) placeholderStyle.push(`width: ${input.width}px;`);
 $ if (input.height) placeholderStyle.push(`height: ${input.height}px;`);
+$ if (input.minHeight) placeholderStyle.push(`min-height: ${input.minHeight}px;`);
+$ if (input.minWidth) placeholderStyle.push(`min-width: ${input.minWidth}px;`);
 
 
 <if(hasImage || input.usePlaceholder)>
