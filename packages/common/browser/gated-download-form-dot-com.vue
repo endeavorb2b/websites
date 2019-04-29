@@ -28,7 +28,7 @@ export default {
   data: () => ({ canDownload: false }),
   mounted() {
     window.addEventListener('message', (e) => {
-      if (e.data.includes('type:whitepaper-registration')) {
+      if (e.data.indexOf('type:whitepaper-registration') !== -1) {
         this.canDownload = true;
       }
     }, false);
