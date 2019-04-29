@@ -11,5 +11,24 @@ $ const page = getAsObject(data, 'page');
   <@above-container>
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
-  $!{page.body}
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">${page.name}</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="page-wrapper__contents">
+          $!{page.body}
+        </div>
+      </div>
+    </div>
+  </div>
 </theme-pennwell-dynamic-page-layout>
