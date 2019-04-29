@@ -2,7 +2,7 @@
   <div class="button-wrapper" v-if="canDownload">
     <a v-bind:href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
   </div>
-  <iframe v-else v-bind:src="formUrl" frameborder="0" width="100%" height="550"></iframe>
+  <iframe v-else v-bind:src="formUrl" frameborder="0" width="100%" v-bind:height="height"></iframe>
 </template>
 
 <script>
@@ -20,6 +20,10 @@ export default {
       type: String,
       required: true,
     },
+    height: {
+      type: String,
+      default: '550',
+    }
   },
   data: () => ({ canDownload: false }),
   mounted() {
