@@ -5,7 +5,7 @@ $ const { fileSrc: target } = getAsObject(input, 'content');
 
 <if(surveyId)>
   <if(surveyType === 'app_form_com')>
-    <cms-browser-component name="DownloadGateFormDotCom" props={ surveyId, target } />
+    <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
   </if>
 </if>
 <else>
