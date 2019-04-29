@@ -15,6 +15,37 @@
         "default-value": false
       },
       "@modifiers": "array"
+    },
+    "endeavor-magazine-issue-item": {
+      "template": "./item.marko",
+      "@issue": "object",
+      "@with-image": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-description": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-publication-description": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@image-lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@flush": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@image-position": "string",
+      "@image-width": "number",
+      "@image-height": "number",
+      "@image-modifiers": "array",
+      "@image-options": "object",
+      "@title-modifiers": "array",
+      "@modifiers": "array"
     }
   }
 }
