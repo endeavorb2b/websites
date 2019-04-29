@@ -55,6 +55,10 @@
         "type": "boolean",
         "default-value": true
       },
+      "@flush": {
+        "type": "boolean",
+        "default-value": false
+      },
       "@image-position": "string",
       "@image-width": "number",
       "@image-height": "number",
