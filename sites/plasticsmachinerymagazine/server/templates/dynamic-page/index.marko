@@ -24,6 +24,9 @@ $ const page = getAsObject(data, 'page');
               <li class="breadcrumb-item">${page.name}</li>
             </ol>
           </nav>
+          <div class="page-wrapper__title">
+            ${page.name}
+          </div>
         </div>
         <div class="page-wrapper__contents">
           $!{page.body}
