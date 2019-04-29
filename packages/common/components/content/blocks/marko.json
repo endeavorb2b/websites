@@ -98,8 +98,8 @@
         "default-value": "Download"
       }
     },
-    "endeavor-content-block-gated-download": {
-      "template": "./gated-download.marko",
+    "endeavor-content-block-download": {
+      "template": "./download.marko",
       "@content": {
         "type": "object",
         "required": true
