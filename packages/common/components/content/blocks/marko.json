@@ -183,6 +183,22 @@
     },
     "endeavor-content-query-feed": {
       "template": "./query-feed.marko"
+    },
+    "endeavor-content-block-download-button": {
+      "template": "./download-button.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@target": {
+        "type": "string",
+        "default-value": "_blank"
+      },
+      "@label": {
+        "type": "string",
+        "default-value": "Download"
+      },
+      "@class": "string"
     }
   }
 }

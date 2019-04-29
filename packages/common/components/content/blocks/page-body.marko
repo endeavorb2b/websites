@@ -32,4 +32,7 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
     </div>
   </if>
   <cms-content-body tag="div" block=block obj=input.content />
+  <if(input.content.type === "whitepaper")>
+    <endeavor-content-block-download-button content=input.content />
+  </if>
 </div>
