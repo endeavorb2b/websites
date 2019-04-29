@@ -11,40 +11,13 @@
         "type": "string",
         "required": true
       },
-      "@vertical": {
+      "@as-card": {
         "type": "boolean",
         "default-value": false
       },
-      "@content": {
+      "@content-count": {
         "type": "number",
         "default-value": 3
-      }
-    },
-    "endeavor-magazine-query-latest-issues": {
-      "template": "./query-latest-issues.marko",
-      "@header": "string",
-      "@vertical": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@content": {
-        "type": "number",
-        "default-value": 1
-      }
-    },
-    "endeavor-magazine-issue-block": {
-      "template": "./issue.marko",
-      "@issue": {
-        "type": "object",
-        "required": true
-      },
-      "@vertical": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@content": {
-        "type": "number",
-        "default-value": 0
       }
     },
     "endeavor-magazine-block-query-active-issues": {
