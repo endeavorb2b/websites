@@ -1,8 +1,11 @@
 .dynamic-page {
-  @include content-body();
-  padding: map-get($spacers, 4);
-  margin-top: -#{map-get($spacers, 4)};
-  background-color: $white;
-  border-radius: $border-radius;
-  box-shadow: $theme-box-shadow-sm;
+  margin-bottom: map-get($spacers, block);
+
+  .page-wrapper {
+    &__contents {
+      h1:first-child {
+        @include theme-page-title-text();
+      }
+    }
+  }
 }
