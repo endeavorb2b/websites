@@ -36,6 +36,7 @@ $ const adCardInput = {
   $ const loadMore = { endCursor, hasNextPage, provide: { layout, query, ads } };
   <if(layout === "grid")>
     $ const block = 'published-content-query';
+    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <div class=block>
       <div class="row">
         <for|content, index| of=nodes>
@@ -58,6 +59,7 @@ $ const adCardInput = {
     </div>
   </if>
   <else>
+    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <endeavor-item-list flush=true card=true items=nodes>
       <if(input.header)>
         <@header>
@@ -76,5 +78,5 @@ $ const adCardInput = {
       </@item>
     </endeavor-item-list>
   </else>
-  <${input.renderBody} nodes=nodes load-more=loadMore />
+  <${input.renderBody} nodes=nodes load-more=loadMore page-number=pageNumber />
 </cms-query-all-published-content>

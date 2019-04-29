@@ -44,6 +44,7 @@ $ const adListInput = {
   $ const cardNodes = asArray(nodes.slice(0, 10));
   $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
+    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <div class=block>
       <if(cardNodes.length)>
         <div class="row">
