@@ -1,0 +1,13 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const { surveyId, surveyType } = getAsObject(input, 'content.gating');
+$ const { fileSrc: target } = getAsObject(input, 'content');
+
+<if(surveyId)>
+  <if(surveyType === 'app_form_com')>
+    <cms-browser-component name="DownloadGateFormDotCom" props={ surveyId, target } />
+  </if>
+</if>
+<else>
+  <endeavor-content-block-download-button content=input.content />
+</else>

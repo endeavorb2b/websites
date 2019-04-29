@@ -97,6 +97,13 @@
         "type": "string",
         "default-value": "Download"
       }
+    },
+    "endeavor-content-block-gated-download": {
+      "template": "./gated-download.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
     }
   }
 }

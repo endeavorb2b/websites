@@ -39,6 +39,12 @@ fragment ContentPageFragment on Content {
   ... on Media {
     fileSrc
   }
+  ... on ContentWhitepaper {
+    gating {
+      surveyType
+      surveyId
+    }
+  }
   ... on Authorable {
     authors {
       edges {
