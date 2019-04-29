@@ -1,11 +1,11 @@
 import publicationFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication';
-import latestIssueFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-latest-issue';
+import issueListFragment from '@endeavorb2b/base-website-common/api/fragments/magazine-issue-list';
 
 <cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
   <if(nodes.length)>
     <endeavor-item-list-wrapper flush=true card=false>
       <for|publication| of=nodes>
-        <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=latestIssueFragment>
+        <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=issueListFragment>
           <endeavor-item-list-node|{ item: issue }| node=node>
             <endeavor-magazine-issue-item
               flush=true
