@@ -52,6 +52,10 @@
       "@image-height": "number",
       "@image-modifiers": "array",
       "@image-options": "object",
+      "@image-use-placeholder": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@title-modifiers": "array",
       "@modifiers": "array"
     }

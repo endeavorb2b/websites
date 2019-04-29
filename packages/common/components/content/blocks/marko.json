@@ -59,6 +59,10 @@
         "type": "boolean",
         "default-value": false
       },
+      "@image-use-placeholder": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@image-position": "string",
       "@image-width": "number",
       "@image-height": "number",

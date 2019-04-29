@@ -32,7 +32,11 @@
           "type": "string",
           "default-value": "left"
         },
-        "@width": "number"
+        "@width": "number",
+        "@use-placeholder": {
+          "type": "boolean",
+          "default-value": true
+        }
       },
       "<header-left>": {},
       "<header-right>": {},

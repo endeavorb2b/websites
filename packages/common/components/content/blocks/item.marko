@@ -7,13 +7,14 @@ $ const company = getAsObject(content, 'company');
 <endeavor-item modifiers=input.modifiers flush=input.flush>
   <@image
     display=input.withImage
-    image=content.primaryImage
-    link-to=content
     height=input.imageHeight
+    image=content.primaryImage
     lazyload=input.imageLazyload
+    link-to=content
     modifiers=input.imageModifiers
     options=input.imageOptions
     position=input.imagePosition
+    use-placeholder=input.imageUsePlaceholder
     width=input.imageWidth
   />
   <@header-left|{ block }|>

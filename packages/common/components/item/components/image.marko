@@ -13,21 +13,24 @@ $ const placeholderStyle = [];
 $ if (input.width) placeholderStyle.push(`width: ${input.width}px;`);
 $ if (input.height) placeholderStyle.push(`height: ${input.height}px;`);
 
-<div class=classNames>
-  <if(hasImage)>
-    <cms-image-element
-      block=block
-      height=input.height
-      lazyload=input.lazyload
-      link-to=input.linkTo
-      obj=image
-      options=input.options
-      width=input.width
-    />
-  </if>
-  <else>
-    <cms-link-element block=block to=input.linkTo modifiers=["image-placeholder"]>
-      <div class=`${block}__image-placeholder` style=placeholderStyle></div>
-    </cms-link-element>
-  </else>
-</div>
+
+<if(hasImage || input.usePlaceholder)>
+  <div class=classNames>
+    <if(hasImage)>
+      <cms-image-element
+        block=block
+        height=input.height
+        lazyload=input.lazyload
+        link-to=input.linkTo
+        obj=image
+        options=input.options
+        width=input.width
+      />
+    </if>
+    <else>
+      <cms-link-element block=block to=input.linkTo modifiers=["image-placeholder"]>
+        <div class=`${block}__image-placeholder` style=placeholderStyle></div>
+      </cms-link-element>
+    </else>
+  </div>
+</if>

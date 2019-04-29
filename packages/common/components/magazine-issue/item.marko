@@ -6,13 +6,14 @@ $ const publication = getAsObject(issue, 'publication');
 <endeavor-item  modifiers=input.modifiers flush=input.flush>
   <@image
     display=input.withImage
-    image=issue.coverImage
-    link-to=issue
     height=input.imageHeight
+    image=issue.coverImage
     lazyload=input.imageLazyload
+    link-to=issue
     modifiers=input.imageModifiers
     options=input.imageOptions
     position=input.imagePosition
+    use-placeholder=input.imageUsePlaceholder
     width=input.imageWidth
   />
   <if(input.withHeader)>
