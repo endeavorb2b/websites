@@ -1,21 +1,5 @@
 {
   "tags": {
-    "endeavor-magazine-issue-element-group": {
-      "template": "./element-group.marko",
-      "@issue": {
-        "type": "object",
-        "required": true
-      },
-      "@with-description": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@with-publication-description": {
-        "type": "boolean",
-        "default-value": false
-      },
-      "@modifiers": "array"
-    },
     "endeavor-magazine-issue-item": {
       "template": "./item.marko",
       "@issue": "object",
