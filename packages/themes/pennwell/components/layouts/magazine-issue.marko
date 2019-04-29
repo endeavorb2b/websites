@@ -1,7 +1,6 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const issue = getAsObject(input, 'issue');
-$ const { site } = out.global;
 
 <theme-pennwell-document>
   <@head>
@@ -10,14 +9,8 @@ $ const { site } = out.global;
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <cms-page-container for="magazine-issue" class="magazine-page" data=issue>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <${input.renderBody} />
-          </div>
-        </div>
-      </div>
+    <cms-page-container for="magazine-issue" data=issue>
+      <${input.renderBody} />
     </cms-page-container>
     <${input.belowContainer} />
   </div>

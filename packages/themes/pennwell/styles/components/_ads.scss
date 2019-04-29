@@ -28,11 +28,9 @@
   padding-bottom: map-get($spacers, block);
 
   .ad-container {
-    &:not(:first-child) {
-      margin-bottom: map-get($spacers, 5);
-    }
-    &:not(:last-child) {
-      margin-bottom: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, block);
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

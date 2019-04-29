@@ -13,7 +13,19 @@ $ const page = pageDetails('Videos', config);
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-content-block-page-title header=page.title body=page.description />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-published-content-breadcrumbs title=page.title />
+          <h1 class="page-wrapper__title">${page.title}</h1>
+          <if(page.description)>
+            <p class="page-wrapper__description">${page.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <@below-container>
     <div class="published-content-query-load-more">

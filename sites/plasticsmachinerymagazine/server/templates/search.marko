@@ -9,6 +9,24 @@ $ const { config } = out.global;
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <h1>Search ${config.siteName()}</h1>
-  <endeavor-search-in-page />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">Search</li>
+            </ol>
+          </nav>
+          <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-search-in-page />
+        </div>
+      </div>
+    </div>
+  </div>
 </theme-pennwell-search-layout>

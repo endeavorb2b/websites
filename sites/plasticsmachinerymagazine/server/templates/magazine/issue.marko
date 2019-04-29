@@ -1,30 +1,49 @@
 import { getAsObject } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 
-$ const { site } = out.global;
 $ const issue = getAsObject(data, 'issue');
-$ const loadMoreAds = { list: { name: "MR" }, card: { name: "HP" } };
-$ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'BS' }),
-  'load-more': getAdUnit(site, { name: 'HP' }),
-};
+$ const publication = getAsObject(issue, 'publication');
 
 <theme-pennwell-magazine-issue-layout issue=issue>
   <@head>
-    <cms-ad-gam-head slots=adSlots />
+    <cms-ad-gam-head />
   </@head>
 
   <@above-container>
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-magazine-nav target=issue />
-  <theme-pennwell-magazine-issue-details issue=issue />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-magazine-block-breadcrumbs target=issue />
+          <h1 class="page-wrapper__title">${issue.name}</h1>
+          <p class="page-wrapper__description">${publication.name}</p>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-magazine-issue-item
+            flush=true
+            image-options={ w: 250 }
+            image-position="left"
+            image-use-placeholder=false
+            image-width=200
+            issue=issue
+            with-description=true
+            with-header=false
+            with-publication-description=true
+            with-title=false
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 
   <@below-container>
-    <theme-pennwell-magazine-issue-content
+    <endeavor-load-more-header>
+      Content for the ${issue.name} Issue
+    </endeavor-load-more-header>
+    <endeavor-content-query-load-more-issue-content
       query={ issueId: issue.id }
-      header=`More In ${issue.name}`
       ads={
         card: { name: "HP" },
         list: { name: "MR" },

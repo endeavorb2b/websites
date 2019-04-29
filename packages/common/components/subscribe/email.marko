@@ -1,6 +1,5 @@
 import { getAsObject } from '@base-cms/object-path';
 
-$ const { site, config } = out.global;
+$ const { site } = out.global;
 
-<h1>Subscribe to ${config.siteName()} Newsletters</h1>
 <iframe src=site.get('subscriptions.newsletters') width="100%" height="700px" frameborder=0 scrolling="auto" />

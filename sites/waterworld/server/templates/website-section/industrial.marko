@@ -44,10 +44,17 @@ $ const adSlots = {
       <endeavor-content-query-section-list requires-image=true section-alias="industrial/water-reuse" header="Water Reuse" />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list requires-image=true section-alias="videos" header="Videos" />
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: true,
+          contentTypes: ["Video"],
+          limit: 4,
+        }
+        header="Videos"
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issues header="Current Issue" />
+      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="Current Issue" />
     </div>
   </div>
 

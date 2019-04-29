@@ -9,6 +9,30 @@ import { get, getAsObject } from '@base-cms/object-path';
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-subscribe-email />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="/subscribe" title="Home">Subscribe</a>
+              </li>
+              <li class="breadcrumb-item">
+                Newsletters
+              </li>
+            </ol>
+          </nav>
+          <h1 class="page-wrapper__title">Newsletters</h1>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-subscribe-email />
+        </div>
+      </div>
+    </div>
+  </div>
 
 </theme-pennwell-subscribe-layout>

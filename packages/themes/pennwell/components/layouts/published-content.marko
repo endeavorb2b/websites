@@ -10,7 +10,9 @@ $ const page = getAsObject(input, 'page');
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <${input.renderBody} />
+    <cms-page-container for="published-content">
+      <${input.renderBody} />
+    </cms-page-container>
     <${input.belowContainer} />
   </div>
 </theme-pennwell-document>

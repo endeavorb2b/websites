@@ -1,9 +1,9 @@
 import { getAsObject } from '@base-cms/object-path';
 
-$ const block = 'content-breadcrumbs';
+$ const block = 'breadcrumb';
 $ const primarySection = getAsObject(input.content, 'primarySection');
 
-<nav class=block aria-label="breadcrumb">
+<nav class="breadcrumbs" aria-label="breadcrumb">
   <cms-website-section-hierarchy|{ section }| tag="ol" class="breadcrumb" block=block obj=primarySection>
     <if(primarySection.alias !== 'home')>
       <@before>

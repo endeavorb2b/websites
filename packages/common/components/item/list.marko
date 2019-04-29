@@ -1,0 +1,31 @@
+import { getAsArray, getAsObject, get } from '@base-cms/object-path';
+import bem from '../../utils/bem-class';
+
+$ const items = getAsArray(input, 'items');
+$ const headerInput = getAsObject(input, 'header');
+
+<if(items.length)>
+  <endeavor-item-list-wrapper
+    card=input.card
+    flush=input.flush
+    modifiers=input.modifiers
+    tag=input.tag
+  >
+    <if(headerInput.renderBody)>
+      <endeavor-item-list-header tag=headerInput.tag modifiers=headerInput.modifiers>
+        <${headerInput.renderBody} />
+      </endeavor-item-list-header>
+    </if>
+
+    <for|node| of=items>
+      $ const itemInput = getAsObject(input, 'item');
+      <endeavor-item-list-node|{ item }|
+        tag=itemInput.tag
+        modifiers=itemInput.modifiers
+        node=node
+      >
+        <${itemInput.renderBody} item=item />
+      </endeavor-item-list-node>
+    </for>
+  </endeavor-item-list-wrapper>
+</if>

@@ -12,6 +12,30 @@ $ const publication = getAsObject(data, 'publication');
     <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-subscribe-magazine publication=publication />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="/subscribe" title="Home">Subscribe</a>
+              </li>
+              <li class="breadcrumb-item">
+                ${publication.name}
+              </li>
+            </ol>
+          </nav>
+          <h1 class="page-wrapper__title">${publication.name}</h1>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-subscribe-magazine publication=publication />
+        </div>
+      </div>
+    </div>
+  </div>
 
 </theme-pennwell-subscribe-layout>

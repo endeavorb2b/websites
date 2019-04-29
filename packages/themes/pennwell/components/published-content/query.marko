@@ -1,5 +1,5 @@
 import { getAsArray, getAsObject } from '@base-cms/object-path';
-import queryFragment from '../../api/fragments/all-published-content';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const pageNumber = input.pageNumber || 1;
 $ input.query = getAsObject(input, 'query');
@@ -19,7 +19,7 @@ $ const query = {
   endingBefore,
   limit: 9,
   ...input.query,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 
 $ const adCardInput = {
@@ -40,7 +40,13 @@ $ const adCardInput = {
       <div class="row">
         <for|content, index| of=nodes>
           <div class=`${block}__col`>
-            <endeavor-content-block-card content=content />
+            <endeavor-content-block-item
+              content=content
+              image-modifiers=["fluid", "21by9"]
+              image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+              image-position="top"
+              modifiers=["card"]
+            />
           </div>
           <if(index === 1 || index === 6)>
             <div class=`${block}__col`>
@@ -52,12 +58,23 @@ $ const adCardInput = {
     </div>
   </if>
   <else>
-    <endeavor-content-block-vertical-list
-      header=input.header
-      nodes=nodes
-      with-image=input.withImage
-      with-card=input.withCard
-    />
+    <endeavor-item-list flush=true card=true items=nodes>
+      <if(input.header)>
+        <@header>
+          ${input.header}
+        </@header>
+      </if>
+      <@item|{ item }|>
+        <endeavor-content-block-item
+          content=item
+          image-position="left"
+          image-options={ w: 150, h: 150, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+          image-width=100
+          image-height=100
+          with-image=input.withImage
+        />
+      </@item>
+    </endeavor-item-list>
   </else>
   <${input.renderBody} nodes=nodes load-more=loadMore />
 </cms-query-all-published-content>

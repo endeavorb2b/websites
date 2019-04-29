@@ -4,6 +4,8 @@ $ const defaultLogo = site.getAsObject('logos.navbar');
 $ const logo = footerLogo.src ? footerLogo : defaultLogo;
 $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
 
+$ const footerItems = site.getAsArray('footerNavItems');
+
 <footer class="site-footer">
   <div class="site-footer__container site-footer__container--brand">
     <a class="site-footer__brand" href="/">
@@ -14,20 +16,15 @@ $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
 
     <endeavor-social-links block="site-footer" />
 
-    <ul class="navbar-nav site-footer__links">
-      <li class="nav-item site-footer__link">
-        <a class="nav-link" href="/page/about-us">About Us</a>
-      </li>
-      <li class="nav-item site-footer__link">
-        <a class="nav-link" href="/contact-us">Contact Us</a>
-      </li>
-      <li class="nav-item site-footer__link">
-        <a class="nav-link" target="_blank" href="https://www.endeavorbusinessmedia.com/privacy-policy">Privacy Policy</a>
-      </li>
-      <li class="nav-item site-footer__link">
-        <a class="nav-link" target="_blank" href="https://www.endeavorbusinessmedia.com/endeavor-terms">Terms &amp; Conditions</a>
-      </li>
-    </ul>
+    <if(footerItems.length)>
+      <ul class="navbar-nav site-footer__links">
+        <for|item| of=footerItems>
+          <li class="nav-item site-footer__link">
+            <a class="nav-link" href=item.href target=item.target>${item.label}</a>
+          </li>
+        </for>
+      </ul>
+    </if>
 
     <div class="site-footer__copyright">
       &copy; ${new Date().getFullYear()} ${site.get('company', 'Endeavor Business Media, LLC')}. All rights reserved.

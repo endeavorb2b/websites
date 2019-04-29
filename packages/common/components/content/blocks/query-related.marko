@@ -1,51 +1,32 @@
-import gql from 'graphql-tag';
-
-$ const queryFragment = gql`
-  fragment ContentBlockQueryRelatedFragment on Content {
-    id
-    type
-    shortName
-    canonicalPath
-    primarySection {
-      id
-      canonicalPath
-      name
-      fullName
-    }
-    company {
-      id
-      type
-      name
-      canonicalPath
-    }
-    published
-    ... on Authorable {
-      authors {
-        edges {
-          node {
-            id
-            name
-            type
-            canonicalPath
-          }
-        }
-      }
-    }
-  }
-`;
+import contentListFragment from '../../../api/fragments/content-list';
 
 $ const block = 'content-query-related';
 $ const params = {
   limit: 5,
   ...input,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 $ const header = input.header || 'Related Content';
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
     <div class=block>
-      <endeavor-content-block-vertical-list modifiers=["flexible"] header=header nodes=nodes />
+      <endeavor-item-list flush=true card=true items=nodes>
+        <if(header)>
+          <@header>
+            ${header}
+          </@header>
+        </if>
+        <@item|{ item }|>
+          <endeavor-content-block-item
+            content=item
+            image-position="right"
+            image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+            image-width=75
+            image-height=75
+          />
+        </@item>
+      </endeavor-item-list>
     </div>
   </if>
 </cms-query-website-scheduled-content>

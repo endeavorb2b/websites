@@ -1,0 +1,12 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const block = 'item-list';
+$ const modifiers = getAsArray(input, 'modifiers');
+$ if (input.flush) modifiers.push('flush');
+$ if (input.card) modifiers.push('card');
+$ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
+
+
+<${input.tag} class=classNames>
+  <${input.renderBody} block=block />
+</>

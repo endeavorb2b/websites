@@ -1,17 +1,15 @@
-
-import queryFragment from '@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-issue-content';
+import contentListFragment from '../../../api/fragments/content-list';
 import { asArray } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
 
 $ const pageNumber = input.pageNumber || 1;
 $ const { issueId } = getAsObject(input, 'query');
-$ const header = input.header || 'More from this issue';
 $ const block = 'magazine-query-issue-content';
 $ const query = {
   issueId,
   limit: 10,
   ...input.query,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 
 $ const loadMore = {
@@ -31,12 +29,6 @@ $ const adListInput = {
   ...getAsObject(input, 'ads.list'),
 };
 
-<if(pageNumber === 1)>
-  <endeavor-load-more-header>
-    ${header}
-  </endeavor-load-more-header>
-</if>
-
 <cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ delete query.skip;
@@ -45,7 +37,6 @@ $ const adListInput = {
   $ query.after = endCursor;
   $ const provide = {
     query,
-    header,
     pageNumber,
     ads: input.ads,
   };
@@ -58,7 +49,13 @@ $ const adListInput = {
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <endeavor-content-block-card content=content />
+              <endeavor-content-block-item
+                content=content
+                image-modifiers=["fluid", "21by9"]
+                image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                image-position="top"
+                modifiers=["card"]
+              />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
@@ -76,7 +73,17 @@ $ const adListInput = {
           </div>
 
           <div class=`${block}__col-list`>
-            <endeavor-content-block-list-group-card header=input.header nodes=listNodes />
+            <endeavor-item-list flush=true card=true items=listNodes>
+              <@item|{ item }|>
+                <endeavor-content-block-item
+                  content=item
+                  image-position="left"
+                  image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-width=176
+                  image-height=99
+                />
+              </@item>
+            </endeavor-item-list>
           </div>
         </div>
       </if>
