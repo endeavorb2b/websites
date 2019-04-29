@@ -1,10 +1,10 @@
-import { getAsArray } from '@base-cms/object-path';
+import { getAsArray, getAsObject } from '@base-cms/object-path';
 import bem from '../../utils/bem-class';
 
 $ const classNames = bem('item-list', 'item', getAsArray(input, 'modifiers'));
 
 <if(input.renderBody)>
   <${input.tag} class=classNames>
-    <${input.renderBody} item=input.node />
+    <${input.renderBody} item=getAsObject(input, "node") />
   </>
 </if>

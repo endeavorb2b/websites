@@ -95,13 +95,37 @@
       "@modifiers": "array"
     },
     "endeavor-item-list-wrapper": {
-      "template": "./item/list-wrapper"
+      "template": "./item/list-wrapper",
+      "@card": {
+        "type": "string",
+        "default-value": false
+      },
+      "@flush": {
+        "type": "string",
+        "default-value": false
+      },
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "ul"
+      }
     },
     "endeavor-item-list-header": {
-      "template": "./item/list-header"
+      "template": "./item/list-header",
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      }
     },
     "endeavor-item-list-node": {
-      "template": "./item/list-node"
+      "template": "./item/list-node",
+      "@modifiers": "array",
+      "@node": "object",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      }
     },
     "endeavor-element-group": {
       "template": "./element-group",
