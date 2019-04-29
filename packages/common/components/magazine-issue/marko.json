@@ -23,6 +23,14 @@
         "type": "boolean",
         "default-value": true
       },
+      "@with-header": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-title": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@with-description": {
         "type": "boolean",
         "default-value": false
