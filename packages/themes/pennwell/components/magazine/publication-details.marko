@@ -1,9 +1,0 @@
-import { getAsObject } from '@base-cms/object-path';
-
-$ const publication = getAsObject(input, 'publication');
-$ const block = 'magazine-publication-details';
-
-<p class=`${block} lead`>
-  <cms-image-element obj=publication.coverImage options={ w: 320 } class=`${block}__logo` />
-  ${publication.description}
-</p>
