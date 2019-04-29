@@ -36,6 +36,9 @@ fragment ContentPageFragment on Content {
     source
     byline
   }
+  ... on Media {
+    fileSrc
+  }
   ... on Authorable {
     authors {
       edges {
