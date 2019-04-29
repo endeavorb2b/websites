@@ -197,8 +197,7 @@
       "@label": {
         "type": "string",
         "default-value": "Download"
-      },
-      "@class": "string"
+      }
     }
   }
 }
