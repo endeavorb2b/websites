@@ -3,13 +3,14 @@
     "./ads/marko.json",
     "./content/marko.json",
     "./load-more/marko.json",
-    "./magazine/marko.json",
     "./magazine-issue/marko.json",
-    "./navbars/marko.json",
     "./magazine/marko.json",
+    "./magazine/marko.json",
+    "./navbars/marko.json",
+    "./published-content/marko.json",
+    "./search/marko.json",
     "./social/marko.json",
-    "./subscribe/marko.json",
-    "./search/marko.json"
+    "./subscribe/marko.json"
   ],
   "tags": {
     "endeavor-item": {
