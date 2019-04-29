@@ -29,6 +29,10 @@ fragment ContentPageFragment on Content {
     src
     alt
   }
+  gating {
+    surveyType
+    surveyId
+  }
   ... on ContentVideo {
     embedCode
   }
