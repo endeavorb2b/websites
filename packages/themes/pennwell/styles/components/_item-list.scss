@@ -58,6 +58,10 @@
           border-top: 0;
         }
 
+        &:only-child {
+          border-bottom: 0;
+        }
+
         &:last-child {
           margin-bottom: -$list-group-border-width;
         }
