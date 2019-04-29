@@ -94,6 +94,15 @@
       },
       "@modifiers": "array"
     },
+    "endeavor-item-list-wrapper": {
+      "template": "./item/list-wrapper"
+    },
+    "endeavor-item-list-header": {
+      "template": "./item/list-header"
+    },
+    "endeavor-item-list-node": {
+      "template": "./item/list-node"
+    },
     "endeavor-element-group": {
       "template": "./element-group",
       "<header-left>": {},
