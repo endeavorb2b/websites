@@ -218,6 +218,33 @@
   }
 }
 
+@mixin theme-media-caption() {
+  @include theme-media-common-footer();
+  font-weight: 600;
+  color: $gray;
+}
+
+@mixin theme-media-credit() {
+  @include theme-media-common-footer();
+  font-style: italic;
+  color: $black;
+  &::before {
+    margin-right: map-get($spacers, 1);
+    content: "Credit \2014";
+  }
+}
+
+@mixin theme-media-common-footer() {
+  display: inline-block;
+  padding: map-get($spacers, 1) $border-radius;
+  margin: 0;
+  font-family: $theme-content-sans-serif-font;
+  font-size: $font-size-base;
+  line-height: $line-height-sm;
+  text-align: left;
+  letter-spacing: normal;
+}
+
 @mixin content-body() {
   @include theme-page-body-text();
   h1 {
