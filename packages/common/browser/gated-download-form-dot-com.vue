@@ -22,7 +22,7 @@ export default {
     },
     height: {
       type: String,
-      default: '550',
+      default: '1000',
     },
     width: {
       type: String,
@@ -32,7 +32,7 @@ export default {
   data: () => ({ canDownload: false }),
   mounted() {
     window.addEventListener('message', (e) => {
-      if (e.data.indexOf('type:whitepaper-registration') !== -1) {
+      if (typeof e.data === 'string' && e.data.indexOf('type:whitepaper-registration') !== -1) {
         this.canDownload = true;
       }
     }, false);
