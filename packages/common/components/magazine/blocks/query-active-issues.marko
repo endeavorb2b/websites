@@ -38,6 +38,7 @@ $ const adCardInput = {
 
   <div class=block>
     <div class="row">
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
       <for|issue, index| of=nodes>
         <div class=`${block}__col`>
           <endeavor-magazine-issue-item

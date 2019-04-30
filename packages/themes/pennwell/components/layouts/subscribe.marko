@@ -1,6 +1,11 @@
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+
 <theme-pennwell-document>
   <@head>
     <cms-page-title value="Subscribe" />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('subscribe') />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
