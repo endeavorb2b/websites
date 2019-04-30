@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/dentistryiq",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -11,8 +11,8 @@
     "@base-cms/marko-web": "~0.9.1",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/web-cli": "~0.9.1",
-    "@endeavorb2b/base-website-common": "^0.7.3",
-    "@endeavorb2b/base-website-themes": "^0.7.3",
+    "@endeavorb2b/base-website-common": "^0.7.4",
+    "@endeavorb2b/base-website-themes": "^0.7.4",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
