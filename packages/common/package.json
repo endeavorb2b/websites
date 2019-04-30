@@ -8,7 +8,7 @@
     "helmet": "^3.16.0"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "^0.9.3",
+    "@base-cms/marko-web": "^0.9.4",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1"
   },
