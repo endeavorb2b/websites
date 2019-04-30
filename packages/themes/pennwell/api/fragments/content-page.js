@@ -29,12 +29,19 @@ fragment ContentPageFragment on Content {
     src
     alt
   }
+  gating {
+    surveyType
+    surveyId
+  }
   ... on ContentVideo {
     embedCode
   }
   ... on ContentNews {
     source
     byline
+  }
+  ... on Media {
+    fileSrc
   }
   ... on Authorable {
     authors {

@@ -1,46 +1,24 @@
 .content-page-body {
-  &__content-body,
   &__primary-media {
-    @include content-body();
-    padding-right: map-get($spacers, 3);
-    padding-left: map-get($spacers, 3);
     margin-bottom: map-get($spacers, block);
-    @include media-breakpoint-down(sm) {
-      padding-right: 0;
-      padding-left: 0;
-    }
-    .caption,
-    .credit {
-      font-family: $theme-content-sans-serif-font;
-      font-size: $font-size-base;
-      letter-spacing: normal;
-    }
-    .caption {
-      color: $gray;
-    }
-    .credit {
-      margin-left: map-get($spacers, 1);
-      font-style: italic;
-      color: $black;
-      &::before {
-        margin-right: map-get($spacers, 1);
-        content: "Credit \2014";
-      }
-    }
   }
-
   &__primary-video {
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
+    @include theme-embed-responsive(16, 9);
+
+    iframe,
+    embed,
+    object,
+    video {
+      @include theme-embed-responsive-item();
+    }
   }
 
   &__primary-image {
-    @extend .embed-responsive;
-    @extend .embed-responsive-21by9;
+    @include theme-embed-responsive(16, 9);
     border-radius: $border-radius;
     box-shadow: $theme-box-shadow-lg;
     img {
-      @extend .embed-responsive-item;
+      @include theme-embed-responsive-item();
       border-radius: $border-radius;
     }
   }

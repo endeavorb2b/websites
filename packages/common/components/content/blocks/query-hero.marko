@@ -1,51 +1,11 @@
-import gql from 'graphql-tag';
+import contentListFragment from '../../../api/fragments/content-list';
 import { asArray, asObject } from '@base-cms/utils';
-
-$ const queryFragment = gql`
-  fragment ContentBlockQueryHeroFragment on Content {
-    id
-    type
-    shortName
-    teaser(input: { maxLength: 500, useFallback: false, truncatedSuffix: "" })
-    canonicalPath
-    published
-    company {
-      id
-      type
-      name
-      canonicalPath
-    }
-    primarySection {
-      id
-      name
-      fullName
-      canonicalPath
-    }
-    primaryImage {
-      id
-      src
-      alt
-    }
-    ... on Authorable {
-      authors {
-        edges {
-          node {
-            id
-            name
-            type
-            canonicalPath
-          }
-        }
-      }
-    }
-  }
-`;
 
 $ const block = 'content-query-hero';
 $ const params = {
   limit: 5,
   ...input,
-  queryFragment,
+  queryFragment: contentListFragment,
 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
@@ -53,18 +13,35 @@ $ const params = {
   $ const listNodes = asArray(nodes.slice(1))
   <if(nodes.length)>
     <div class=block>
-      <div class="row">
-        <if(heroNode.id)>
-          <div class=`${block}__main`>
-            <endeavor-content-block-card modifiers=["hero-card", "flexible"] content=heroNode lazyload=false with-teaser=true />
-          </div>
-        </if>
-        <if(listNodes.length)>
-          <div class=`${block}__list`>
-            <endeavor-content-block-vertical-list modifiers=["flexible"] nodes=listNodes />
-          </div>
-        </if>
-      </div>
+      <if(heroNode.id)>
+        <div class=`${block}__main`>
+          <endeavor-content-block-item
+            content=heroNode
+            image-lazyload=false
+            image-modifiers=["fluid", "21by9"]
+            image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+            image-position="top"
+            modifiers=["card"]
+            title-modifiers=["large"]
+            with-teaser=true
+          />
+        </div>
+      </if>
+      <if(listNodes.length)>
+        <div class=`${block}__list`>
+          <endeavor-item-list flush=true card=true items=listNodes>
+            <@item|{ item }|>
+              <endeavor-content-block-item
+                content=item
+                image-position="right"
+                image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                image-width=75
+                image-height=75
+              />
+            </@item>
+          </endeavor-item-list>
+        </div>
+      </if>
     </div>
   </if>
 </cms-query-website-scheduled-content>

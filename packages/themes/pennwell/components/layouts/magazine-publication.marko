@@ -1,23 +1,19 @@
 import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
 
-$ const publication = getAsObject(input, 'publication');
 $ const { site } = out.global;
+$ const publication = getAsObject(input, 'publication');
 
 <theme-pennwell-document>
   <@head>
     <cms-page-metadata for="magazine-publication" ...publication />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('publication-issue', publication) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <cms-page-container for="magazine-publication" class="magazine-page" data=publication>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <${input.renderBody} />
-          </div>
-        </div>
-      </div>
+    <cms-page-container for="magazine-publication" data=publication>
+      <${input.renderBody} />
     </cms-page-container>
     <${input.belowContainer} />
   </div>

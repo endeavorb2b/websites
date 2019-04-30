@@ -9,7 +9,7 @@ $ const primaryImage = getAsObject(content, 'primaryImage');
 $ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true) && primaryImage.src;
 $ const displayMedia = displayPrimaryImage || content.embedCode;
 
-<div class=block>
+<div class=`${block} page-wrapper__contents`>
   <if(displayMedia)>
     <div class=`${block}__primary-media`>
       <if(content.embedCode)>
@@ -25,11 +25,14 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
             modifiers=['primary-image']
             lazyload=false
             obj=primaryImage
-            options={ w: 756, h: 324, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+            options={ w: 720, h: 405, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
           />
         </div>
       </else-if>
     </div>
   </if>
-  <cms-content-body tag="div" block=block obj=input.content />
+  <cms-content-body tag="div" block=block obj=content />
+  <if(content.type === "whitepaper")>
+    <endeavor-content-block-download content=content />
+  </if>
 </div>

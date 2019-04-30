@@ -1,0 +1,38 @@
+.page-wrapper {
+  @include make-container();
+  padding-bottom: .75rem;
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $theme-box-shadow-sm;
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
+  }
+
+  &__header {
+    @include theme-page-header-spacing();
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include theme-page-title-text();
+  }
+
+  &__deck {
+    @include theme-page-deck-text();
+  }
+
+  &__description {
+    @include theme-page-description-text();
+  }
+
+  &__contents {
+    @include content-body();
+    @include theme-page-body-spacing();
+  }
+
+  &__body {
+    @include theme-page-body-spacing();
+  }
+}

@@ -1,16 +1,21 @@
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
 import { getAsObject } from '@base-cms/object-path';
 
+$ const { site } = out.global;
 $ const page = getAsObject(input, 'page');
 
 <theme-pennwell-document>
   <@head>
     <cms-page-title value=page.title />
     <cms-page-description content=page.description />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('published-content', page) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <${input.renderBody} />
+    <cms-page-container for="published-content">
+      <${input.renderBody} />
+    </cms-page-container>
     <${input.belowContainer} />
   </div>
 </theme-pennwell-document>

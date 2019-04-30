@@ -1,22 +1,9 @@
 import gql from 'graphql-tag';
-import { asArray } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
+import queryFragment from '../../../api/fragments/magazine-issue-list';
 
 $ const pageNumber = input.pageNumber || 1;
 $ const { publicationId } = getAsObject(input, 'query');
-$ const header = input.header || 'More from this publication';
-$ const queryFragment = gql`
-  fragment MagazineActiveIssuesQueryFragment on MagazineIssue {
-    id
-    name
-    canonicalPath
-    coverImage {
-      id
-      src
-    }
-    mailDate
-  }
-`;
 
 $ const block = 'magazine-active-issues';
 $ const query = {
@@ -37,12 +24,6 @@ $ const adCardInput = {
   ...getAsObject(input, 'ads.card'),
 };
 
-<if(pageNumber === 1)>
-  <endeavor-load-more-header>
-    ${header}
-  </endeavor-load-more-header>
-</if>
-
 <cms-query-magazine-active-issues|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ delete query.skip;
@@ -51,16 +32,22 @@ $ const adCardInput = {
   $ query.after = endCursor;
   $ const provide = {
     query,
-    header,
     pageNumber,
     ads: input.ads,
   };
 
   <div class=block>
     <div class="row">
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
       <for|issue, index| of=nodes>
         <div class=`${block}__col`>
-          <endeavor-magazine-issue-card issue=issue />
+          <endeavor-magazine-issue-item
+            issue=issue
+            image-modifiers=["fluid", "3by4"]
+            image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+            image-position="top"
+            modifiers=["card"]
+          />
         </div>
         <if(index === 1 || index === 6)>
           <div class=`${block}__col`>
@@ -74,7 +61,7 @@ $ const adCardInput = {
   <endeavor-load-more-button
     append-to=".container-fluid-max"
     block-name=block
-    label="Load More Content"
+    label="Load More Issues"
     max-pages=loadMore.maxPages
     page-number=pageNumber
     provide=provide

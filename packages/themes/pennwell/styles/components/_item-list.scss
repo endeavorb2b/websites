@@ -1,0 +1,65 @@
+.item-list {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 0;
+  margin-bottom: 0;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: -$list-group-border-width;
+    color: $list-group-color;
+    background-color: $list-group-bg;
+    border: $list-group-border-width solid $list-group-border-color;
+
+    &:first-child {
+      @include border-top-radius($theme-card-border-radius);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      @include border-bottom-radius($theme-card-border-radius);
+    }
+
+    // @todo headers still have issues with borders
+    &--header {
+      @include theme-card-header();
+      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+      margin-bottom: 0;
+
+      &:empty {
+        display: none;
+      }
+
+      &:last-child {
+        @include border-bottom-radius(0);
+      }
+    }
+  }
+
+  &--card {
+    @include theme-card();
+    min-height: 100%;
+  }
+
+  &--flush {
+    #{ $self } {
+      &__item {
+        border-right: 0;
+        border-left: 0;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
 $ const { site } = out.global;
 $ const description = site.get('magazines.description');
 
@@ -5,18 +7,13 @@ $ const description = site.get('magazines.description');
   <@head>
     <cms-page-title value="Magazines" />
     <cms-page-description content=description />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('magazine') />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
     <${input.aboveContainer} />
-    <cms-page-container for="magazine" class="magazine-page">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <${input.renderBody} />
-          </div>
-        </div>
-      </div>
+    <cms-page-container for="magazine">
+      <${input.renderBody} />
     </cms-page-container>
     <${input.belowContainer} />
   </div>

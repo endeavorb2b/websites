@@ -1,29 +1,40 @@
-import { getAsObject, get } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import { getAsObject } from '@base-cms/object-path';
 
-$ const { site } = out.global;
 $ const publication = getAsObject(data, 'publication');
-$ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1' }),
-  'load-more': getAdUnit(site, { name: 'load-more' }),
-};
 
 <theme-pennwell-magazine-publication-layout publication=publication>
   <@head>
-    <cms-ad-gam-head slots=adSlots />
+    <cms-ad-gam-head />
   </@head>
 
   <@above-container>
     <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-magazine-nav target=publication />
-  <theme-pennwell-magazine-publication-details publication=publication />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-magazine-block-breadcrumbs target=publication />
+          <h1 class="page-wrapper__title">
+            ${publication.name}
+          </h1>
+          <if(publication.description)>
+            <p class="page-wrapper__description">
+              ${publication.description}
+            </p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <@below-container>
+    <endeavor-load-more-header>
+      Recent Issues
+    </endeavor-load-more-header>
     <endeavor-magazine-block-query-active-issues
       query={ publicationId: publication.id }
-      header=`${publication.name} Archives`
     />
   </@below-container>
 

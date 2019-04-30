@@ -1,0 +1,38 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const { block } = input;
+$ const element = `${block}__image`;
+$ const modifiers = getAsArray(input, 'modifiers');
+
+$ const image = getAsObject(input, 'image');
+$ const hasImage = image && image.src;
+$ if (!hasImage) modifiers.push('placeholder');
+$ const classNames = [element, ...modifiers.map(mod => `${element}--${mod}`)];
+
+$ const placeholderStyle = [];
+$ if (input.width) placeholderStyle.push(`width: ${input.width}px;`);
+$ if (input.height) placeholderStyle.push(`height: ${input.height}px;`);
+$ if (input.minHeight) placeholderStyle.push(`min-height: ${input.minHeight}px;`);
+$ if (input.minWidth) placeholderStyle.push(`min-width: ${input.minWidth}px;`);
+
+
+<if(hasImage || input.usePlaceholder)>
+  <div class=classNames>
+    <if(hasImage)>
+      <cms-image-element
+        block=block
+        height=input.height
+        lazyload=input.lazyload
+        link-to=input.linkTo
+        obj=image
+        options=input.options
+        width=input.width
+      />
+    </if>
+    <else>
+      <cms-link-element block=block to=input.linkTo modifiers=["image-placeholder"]>
+        <div class=`${block}__image-placeholder` style=placeholderStyle></div>
+      </cms-link-element>
+    </else>
+  </div>
+</if>

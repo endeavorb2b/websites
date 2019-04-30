@@ -2,12 +2,11 @@
 [data-embed-type] {
   display: inline-block;
   width: 100%;
-  padding: 0 0 .5rem;
-  margin: 0;
+  font-family: $theme-content-sans-serif-font;
+  font-size: $font-size-base;
+  line-height: $line-height-sm;
   color: #888;
   background: transparent;
-  border-right-width: 0;
-  border-left-width: 0;
 }
 
 p [data-embed-type] {
@@ -45,20 +44,24 @@ p [data-embed-type] {
 [data-embed-type] .caption,
 [data-embed-type] .credit {
   display: inline-block;
-  padding: 0;
+  padding: map-get($spacers, 1)  $border-radius;
   margin: 0;
-  font-size: .9rem;
-  line-height: 1.5;
   text-align: left;
+  letter-spacing: normal;
 }
 
 [data-embed-type] .caption {
   font-weight: 600;
+  color: $gray;
 }
 
 [data-embed-type] .credit {
-  margin-top: .25rem;
   font-style: italic;
+  color: $black;
+  &::before {
+    margin-right: map-get($spacers, 1);
+    content: "Credit \2014";
+  }
 }
 
 [data-embed-invalid] {

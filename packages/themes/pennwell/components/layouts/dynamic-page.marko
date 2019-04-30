@@ -1,10 +1,13 @@
 import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
 
+$ const { site } = out.global;
 $ const page = getAsObject(input, 'page');
 
 <theme-pennwell-document>
   <@head>
     <cms-page-metadata for="dynamic-page" ...page />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('dynamic-page', page) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
