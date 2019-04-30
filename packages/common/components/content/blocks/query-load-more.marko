@@ -16,14 +16,14 @@ $ const loadMore = {
 
 $ const section = asObject(input.section);
 $ const adCardInput = {
-  section,
+  section: { hierarchy: section.hierarchy },
   name: 'load-more',
   size: [300, 250],
   modifiers: ['in-card'],
   ...getAsObject(input, 'ads.card'),
 };
 $ const adListInput = {
-  section,
+  section: { hierarchy: section.hierarchy },
   name: 'load-more',
   size: [300, 600],
   modifiers: ['in-card'],
@@ -84,6 +84,7 @@ $ const adListInput = {
     $ delete query.queryFragment;
     $ delete query.renderBody;
     $ query.after = endCursor;
+    $ delete input.section;
     $ const provide = {
       ...input,
       query,
