@@ -22,7 +22,7 @@ export default {
     },
     height: {
       type: String,
-      default: '550',
+      default: '1000',
     },
     width: {
       type: String,
