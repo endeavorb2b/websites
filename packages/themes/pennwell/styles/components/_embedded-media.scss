@@ -41,27 +41,12 @@ p [data-embed-type] {
   max-width: 100%;
 }
 
-[data-embed-type] .caption,
-[data-embed-type] .credit {
-  display: inline-block;
-  padding: map-get($spacers, 1)  $border-radius;
-  margin: 0;
-  text-align: left;
-  letter-spacing: normal;
-}
-
 [data-embed-type] .caption {
-  font-weight: 600;
-  color: $gray;
+  @include theme-media-caption();
 }
 
 [data-embed-type] .credit {
-  font-style: italic;
-  color: $black;
-  &::before {
-    margin-right: map-get($spacers, 1);
-    content: "Credit \2014";
-  }
+  @include theme-media-credit();
 }
 
 [data-embed-invalid] {

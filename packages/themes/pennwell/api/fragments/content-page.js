@@ -28,6 +28,8 @@ fragment ContentPageFragment on Content {
     id
     src
     alt
+    caption
+    credit
   }
   gating {
     surveyType
