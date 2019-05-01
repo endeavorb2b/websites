@@ -26,7 +26,7 @@ module.exports = {
     { href: '/industrial', label: 'Industrial' },
     { href: '/international', label: 'International' },
     { href: '/municipal/technologies', label: 'Technologies' },
-    { href: '/', label: 'Thought Leaders' },
+    { href: '/', label: 'Global Thought Leaders' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
