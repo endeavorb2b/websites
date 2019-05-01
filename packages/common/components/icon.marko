@@ -1,3 +1,8 @@
-$ const href = `#${input.name}`;
+import { getAsArray } from '@base-cms/object-path';
 
-<svg class=`icon icon--${input.name}`><use href=href xlink:href=href /></svg>
+$ const href = `#icon-${input.name}`;
+$ const block = 'icon';
+$ const modifiers = getAsArray(input, 'modifiers');
+$ const classNames = [block, `${block}--${input.name}`, ...modifiers.map(mod => `${block}--${mod}`)];
+
+<svg class=classNames><use href=href xlink:href=href /></svg>
