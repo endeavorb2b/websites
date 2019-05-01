@@ -13,6 +13,12 @@
     "./subscribe/marko.json"
   ],
   "tags": {
+    "endeavor-icon": {
+      "template": "./icon"
+    },
+    "endeavor-load-icons": {
+      "template": "./load-icons"
+    },
     "endeavor-item": {
       "template": "./item/item",
       "<image>": {
