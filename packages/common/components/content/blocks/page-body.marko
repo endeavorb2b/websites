@@ -28,6 +28,12 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
             options={ w: 720, h: 405, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
           />
         </div>
+        <if(primaryImage.caption)>
+          <span class="caption">${primaryImage.caption}</span>
+        </if>
+        <if(primaryImage.credit)>
+          <span class="credit">${primaryImage.credit}</span>
+        </if>
       </else-if>
     </div>
   </if>

@@ -37,10 +37,8 @@ export default {
   methods: {
     toggle() {
       this.expanded = !this.expanded;
-      const elementList = document.querySelectorAll(this.targets.join(','));
-      elementList.forEach((element) => {
-        element.classList.toggle(this.toggleClass);
-      });
+      const elements = document.querySelectorAll(this.targets.join(','));
+      Array.prototype.forEach.call(elements, el => el.classList.toggle(this.toggleClass));
     },
   },
 };

@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { getAsArray } from '@base-cms/object-path';
 
 export default {
   props: {
@@ -73,7 +72,7 @@ export default {
         const res = await fetch(url, { headers });
         const json = await res.json();
 
-        this.pages = getAsArray(json, 'webPages.value');
+        this.pages = json && json.webPages && json.webPages.value ? json.webPages.value : [];
 
       } catch (e) {
         console.error(e);
