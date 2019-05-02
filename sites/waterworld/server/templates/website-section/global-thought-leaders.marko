@@ -1,6 +1,6 @@
 import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
-import { video, whitepaper, company } from '../../api/fragments/global-thought-leaders';
+import queryFragment from '../../api/fragments/global-thought-leaders';
 
 $ const { site } = out.global;
 $ const page = {
@@ -39,7 +39,7 @@ $ const section = getAsObject(data, 'section');
             section-id=section.id
             limit=2
             include-content-types=["Video"]
-            query-fragment=video
+            query-fragment=queryFragment
           >
             <div class="row">
             <for|content| of=nodes>
@@ -72,7 +72,7 @@ $ const section = getAsObject(data, 'section');
             section-id=section.id
             limit=2
             include-content-types=["Whitepaper"]
-            query-fragment=whitepaper
+            query-fragment=queryFragment
           >
             <div class="row">
             <for|content| of=nodes>
@@ -105,7 +105,7 @@ $ const section = getAsObject(data, 'section');
         section-id=section.id
         limit=16
         include-content-types=["Company"]
-        query-fragment=company
+        query-fragment=queryFragment
         requires-image=true
       >
         <for|content| of=nodes>
