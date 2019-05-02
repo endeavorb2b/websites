@@ -1,4 +1,4 @@
-import { getAsObject } from '@base-cms/object-path';
+import { get, getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import queryFragment from '../../api/fragments/global-thought-leaders';
 
@@ -46,14 +46,14 @@ $ const section = getAsObject(data, 'section');
               <div class="col">
                 <endeavor-item>
                   <@image
-                    image=content.company.primaryImage
+                    image=get(content, "company.primaryImage")
                     link-to=content.company
                     modifiers=["centercap"]
                     options=imageOpts
                     use-placeholder=true
                     position="top"
                   />
-                  <@header-left>Watch ${content.company.name}'s Video</@header-left>
+                  <@header-left>Watch ${get(content, "company.name")}'s Video</@header-left>
                   <@description tag="div">
                     <!-- @todo Bring in primary-video styling for item? -->
                     <div class="content-page-body__primary-video mt-3">
@@ -78,7 +78,7 @@ $ const section = getAsObject(data, 'section');
             <for|content| of=nodes>
               <div class="col">
                 <endeavor-item>
-                  <@header-left>Download ${content.company.name}'s Whitepaper</@header-left>
+                  <@header-left>Download ${get(content, "company.name")}'s Whitepaper</@header-left>
                   <@title>${content.name}</@title>
                   <@description>
                     $!{content.body}
