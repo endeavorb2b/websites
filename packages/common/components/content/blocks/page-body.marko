@@ -41,4 +41,7 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
   <if(content.type === "whitepaper")>
     <endeavor-content-block-download content=content />
   </if>
+  <if(content.type === "webinar")>
+    <endeavor-content-block-webinar-button content=content />
+  </if>
 </div>
