@@ -42,6 +42,9 @@ fragment ContentPageFragment on Content {
     source
     byline
   }
+  ... on ContentWebinar {
+    linkUrl
+  }
   ... on Media {
     fileSrc
   }

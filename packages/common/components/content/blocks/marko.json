@@ -99,6 +99,21 @@
         "default-value": "Download"
       }
     },
+    "endeavor-content-block-webinar-button": {
+      "template": "./webinar-button.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@target": {
+        "type": "string",
+        "default-value": "_blank"
+      },
+      "@label": {
+        "type": "string",
+        "default-value": "Register/View"
+      }
+    },
     "endeavor-content-block-download": {
       "template": "./download.marko",
       "@content": {
