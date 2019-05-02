@@ -10,7 +10,14 @@ $ const items = site.getAsArray(input.for);
   </div>
   <div class=`${bem(block, 'list-group')} list-group list-group-flush`>
     <for|item| of=items>
-      <a class=`${bem(block, 'list-group-item')} list-group-item list-group-item-action` href=item.href target=item.target >${item.label}</a>
+      <endeavor-link
+        class=`${bem(block, 'list-group-item')} list-group-item list-group-item-action`
+        href=item.href
+        target=item.target
+        title=item.title
+      >
+        ${item.label}
+      </endeavor-link>
     </for>
   </div>
 </if>

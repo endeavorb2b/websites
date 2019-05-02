@@ -3,13 +3,14 @@ $ const footerLogo = site.getAsObject('logos.footer');
 $ const defaultLogo = site.getAsObject('logos.navbar');
 $ const logo = footerLogo.src ? footerLogo : defaultLogo;
 $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
+$ const siteName = config.siteName();
 
 $ const footerItems = site.getAsArray('footerNavItems');
 
 <footer class="site-footer">
   <div class="site-footer__container site-footer__container--brand">
-    <a class="site-footer__brand" href="/">
-      <img class="lazyload" alt=config.siteName() data-src=logo.src data-srcset=srcset.join(',')>
+    <a class="site-footer__brand" href="/" title=`${siteName} Homepage`>
+      <img class="lazyload" alt=siteName data-src=logo.src data-srcset=srcset.join(',')>
     </a>
   </div>
   <div class="site-footer__container site-footer__container--links">
@@ -20,7 +21,9 @@ $ const footerItems = site.getAsArray('footerNavItems');
       <ul class="navbar-nav site-footer__links">
         <for|item| of=footerItems>
           <li class="nav-item site-footer__link">
-            <a class="nav-link" href=item.href target=item.target>${item.label}</a>
+            <endeavor-link class="nav-link" href=item.href target=item.target title=item.title>
+              ${item.label}
+            </endeavor-link>
           </li>
         </for>
       </ul>
