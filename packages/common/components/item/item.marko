@@ -26,10 +26,12 @@ $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
 <${input.tag} class=classNames>
   <if(image.display)>
     <image
+      alt=image.alt
       block=block
       height=image.height
       image=image.image
       lazyload=image.lazyload
+      link-attrs=image.linkAttrs
       link-to=image.linkTo
       min-height=image.minHeight
       min-width=image.minWidth

@@ -5,6 +5,7 @@ $ const { site, config } = out.global;
 $ const navbar = 'site-navbar';
 $ const nav = 'site-navbar-items';
 $ const menu = 'site-navbar-menu';
+$ const siteName = config.siteName();
 
 <header class=navbar>
 
@@ -12,8 +13,8 @@ $ const menu = 'site-navbar-menu';
     <div class="site-navbar-container">
       <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
 
-      <a class=`${bem(navbar, 'brand')} navbar-brand` href="/">
-        <img class=bem(navbar, 'logo') alt=config.siteName() src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
+      <a class=`${bem(navbar, 'brand')} navbar-brand` title=`${siteName} Homepage` href="/">
+        <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
       </a>
       <ul class="navbar-nav site-navbar-items site-navbar-items--secondary">
         <for|item| of=site.getAsArray('secondaryNavItems')>
@@ -24,7 +25,7 @@ $ const menu = 'site-navbar-menu';
       </ul>
       <ul class="navbar-nav site-navbar-items site-navbar-items--tertiary">
         <li class=`${bem(nav, 'item')} nav-item`>
-          <a class=`${bem(nav, 'link', ['search'])} nav-link` href="/search">
+          <a class=`${bem(nav, 'link', ['search'])} nav-link` title=`Search ${siteName}` href="/search">
             <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
           </a>
         </li>

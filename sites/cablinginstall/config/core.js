@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Cabling Installation & Maintenance',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

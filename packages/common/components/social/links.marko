@@ -21,9 +21,14 @@ $ const icons = {
     <for|item| of=socialLinks>
       $ const icon = icons[item.provider];
       <if(icon)>
-        <a class=`${block}__social-icon ${block}__social-icon--${item.provider}` href=item.href target="_blank">
+        <endeavor-link
+          class=`${block}__social-icon ${block}__social-icon--${item.provider}`
+          href=item.href
+          target="_blank"
+          title=`Visit us on ${item.provider}`
+        >
           $!{icon}
-        </a>
+        </endeavor-link>
       </if>
     </for>
   </div>

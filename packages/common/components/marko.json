@@ -19,14 +19,19 @@
     "endeavor-load-icons": {
       "template": "./load-icons"
     },
+    "endeavor-link": {
+      "template": "./link"
+    },
     "endeavor-item": {
       "template": "./item/item",
       "<image>": {
+        "@alt": "string",
         "@display": {
           "type": "boolean",
           "default-value": true
         },
         "@image": "object",
+        "@link-attrs": "object",
         "@link-to": "object",
         "@height": "number",
         "@lazyload": {
