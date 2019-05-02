@@ -55,6 +55,7 @@
         "type": "boolean",
         "default-value": true
       },
+      "@image-link-attrs": "string",
       "@image-position": "string",
       "@image-width": "number",
       "@image-height": "number",

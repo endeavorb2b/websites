@@ -2,13 +2,17 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const issue = getAsObject(input, 'issue');
 $ const publication = getAsObject(issue, 'publication');
+$ const title = `${publication.name} ${issue.name}`;
+$ const imageLinkAttrs = { title, ...input.imageLinkAttrs };
 
 <endeavor-item  modifiers=input.modifiers flush=input.flush>
   <@image
+    alt=title
     display=input.withImage
     height=input.imageHeight
     image=issue.coverImage
     lazyload=input.imageLazyload
+    link-attrs=imageLinkAttrs
     link-to=issue
     min-height=input.imageMinHeight
     min-width=input.imageMinWidth

@@ -20,9 +20,11 @@ $ if (input.minWidth) placeholderStyle.push(`min-width: ${input.minWidth}px;`);
   <div class=classNames>
     <if(hasImage)>
       <cms-image-element
+        alt=input.alt
         block=block
         height=input.height
         lazyload=input.lazyload
+        link-attrs=input.linkAttrs
         link-to=input.linkTo
         obj=image
         options=input.options
@@ -30,7 +32,7 @@ $ if (input.minWidth) placeholderStyle.push(`min-width: ${input.minWidth}px;`);
       />
     </if>
     <else>
-      <cms-link-element block=block to=input.linkTo modifiers=["image-placeholder"]>
+      <cms-link-element block=block to=input.linkTo modifiers=["image-placeholder"] attrs=input.linkAttrs>
         <div class=`${block}__image-placeholder` style=placeholderStyle></div>
       </cms-link-element>
     </else>
