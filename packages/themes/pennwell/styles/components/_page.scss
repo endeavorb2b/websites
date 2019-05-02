@@ -39,4 +39,10 @@
   &__body {
     @include theme-page-body-spacing();
   }
+
+  &__col {
+    &--nopad {
+      padding: 0;
+    }
+  }
 }

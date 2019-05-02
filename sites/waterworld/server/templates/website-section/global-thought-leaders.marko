@@ -43,7 +43,7 @@ $ const section = getAsObject(data, 'section');
           >
             <div class="row">
             <for|content| of=nodes>
-              <div class="col">
+              <div class="col page-wrapper__col page-wrapper__col--nopad">
                 <endeavor-item>
                   <@image
                     image=get(content, "company.primaryImage")
@@ -76,7 +76,7 @@ $ const section = getAsObject(data, 'section');
           >
             <div class="row">
             <for|content| of=nodes>
-              <div class="col">
+              <div class="col page-wrapper__col page-wrapper__col--nopad">
                 <endeavor-item>
                   <@header-left>Download ${get(content, "company.name")}'s Whitepaper</@header-left>
                   <@title>${content.name}</@title>
@@ -103,7 +103,7 @@ $ const section = getAsObject(data, 'section');
     <div class="row">
       <cms-query-website-scheduled-content|{ nodes }|
         section-id=section.id
-        limit=16
+        limit=21
         include-content-types=["Company"]
         query-fragment=queryFragment
         requires-image=true
