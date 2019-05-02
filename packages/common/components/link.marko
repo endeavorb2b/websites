@@ -1,0 +1,7 @@
+$ const rel = input.target === '_blank' ? 'noopener noreferrer' : null;
+$ const { renderBody } = input;
+$ delete input.renderBody;
+
+<a rel=rel ...input>
+  <${renderBody} />
+</a>

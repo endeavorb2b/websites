@@ -19,6 +19,9 @@
     "endeavor-load-icons": {
       "template": "./load-icons"
     },
+    "endeavor-link": {
+      "template": "./link"
+    },
     "endeavor-item": {
       "template": "./item/item",
       "<image>": {
