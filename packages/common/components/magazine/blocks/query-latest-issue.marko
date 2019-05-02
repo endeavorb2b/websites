@@ -31,7 +31,7 @@ $ const { publicationId, asCard, contentCount } = input;
           />
         </else>
       </endeavor-item-list-node>
-      <if(!asCard && contentCount > 0)>
+      <if(contentCount > 0)>
         <cms-query-magazine-scheduled-content|{ nodes, pageInfo }|
           issue-id=issueNode.id
           limit=contentCount
