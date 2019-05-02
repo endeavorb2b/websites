@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Dental Economics',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Utility Products',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

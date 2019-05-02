@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Military & Aerospace Electronics',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

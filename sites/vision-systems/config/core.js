@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Vision Systems Design',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

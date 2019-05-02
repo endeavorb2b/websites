@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Bio Optics World',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

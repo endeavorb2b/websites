@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'LEDs Magazine',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

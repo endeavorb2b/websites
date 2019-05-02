@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Intelligent Aerospace',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

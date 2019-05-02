@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Broadband Technology Report',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },

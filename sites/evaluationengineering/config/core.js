@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Evaluation Engineering',
-  locale: 'en_US',
+  locale: 'en',
   images: {
     lazyload: true,
   },
