@@ -236,6 +236,16 @@
     }
   }
 
+  &__image--center {
+    text-align: center;
+  }
+
+  &__image--mh-100 {
+    a {
+      min-height: 100px;
+    }
+  }
+
   // Content styles
   &__content-name {
     &--contact-name {
