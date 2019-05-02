@@ -1,0 +1,17 @@
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+
+<if(input.icons && input.icons.length)>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="position: absolute; width: 0; height: 0; visibility: hidden;"
+    aria-hidden="true"
+  >
+    <for|icon| of=input.icons>
+      $ const file = resolve(__dirname, `../icons/${icon}.svg`);
+      $ const svg = readFileSync(file, 'utf8').toString();
+      $!{svg}
+    </for>
+  </svg>
+</if>

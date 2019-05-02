@@ -5,6 +5,5 @@ module.exports = {
       && !/packages\/common\/browser/.test(file)
       && !/\.vue\.js/.test(file)
     ),
-    debug: true,
   },
 };
