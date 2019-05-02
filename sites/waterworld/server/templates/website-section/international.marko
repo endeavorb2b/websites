@@ -27,25 +27,29 @@ $ const adSlots = {
   />
 
   <div class="row">
-    <div class="col-lg-8">
-      <div class="row">
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="international/desalination" header="Desalination" />
-        </div>
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="international/potable-water" header="Potable Water" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="international/utilities" header="Utilities" />
-        </div>
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="international/wastewater" header="Wastewater" />
-        </div>
-      </div>
-
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list requires-image=true section-alias="international/desalination" header="Desalination" limit=7 />
     </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue publication-id="5cc1f22175a2547f1b0041a7" header="Water World International" as-card=true content-count=2 />
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=4 section-alias="international/potable-water" header="Potable Water" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=4 section-alias="international/utilities" header="Utilities" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=4 section-alias="international/wastewater" header="Wastewater" />
+    </div>
+
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
@@ -55,7 +59,7 @@ $ const adSlots = {
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 5,
         sectionId: section.id,
       }
       section=section

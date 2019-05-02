@@ -28,10 +28,10 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list requires-image=true section-alias="industrial/process-water" header="Process Water" />
+      <endeavor-content-query-section-list requires-image=true section-alias="industrial/process-water" header="Process Water" limit=7 />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list requires-image=true section-alias="industrial/wastewater" header="Wastewater" />
+      <endeavor-magazine-query-latest-issue publication-id="5cc1f22975a2547f1b0041aa" header="Industrial Water World" as-card=true content-count=2 />
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -40,6 +40,9 @@ $ const adSlots = {
   </div>
 
   <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list requires-image=true section-alias="industrial/wastewater" header="Wastewater" />
+    </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list requires-image=true section-alias="industrial/water-reuse" header="Water Reuse" />
     </div>
@@ -53,15 +56,12 @@ $ const adSlots = {
         header="Videos"
       />
     </div>
-    <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="Current Issue" />
-    </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 5,
         sectionId: section.id,
       }
       section=section
