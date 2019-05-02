@@ -4,11 +4,13 @@
     v-bind:class="blockName"
     type="button"
   >
-    <span v-bind:class="iconClass"></span>
+    <icon v-bind:name="iconName" v-bind:modifiers="['site-navbar']" />
   </button>
 </template>
 
 <script>
+import Icon from './icon.vue';
+
 export default {
   props: {
     targets: {
@@ -19,19 +21,17 @@ export default {
       required: true,
     }
   },
+  components: {
+    Icon,
+  },
   data: () => ({
     blockName: 'site-navbar-toggler',
     expanded: false,
   }),
   computed: {
-    iconClass() {
-      const element = `${this.blockName}__icon`;
-      const modifier = `${this.blockName}__icon--expanded`;
-      const obj = {
-        [element]: true,
-      };
-      if (this.expanded) obj[modifier] = true;
-      return obj;
+    iconName() {
+      if (this.expanded) return 'cross';
+      return 'menu';
     },
   },
   methods: {
