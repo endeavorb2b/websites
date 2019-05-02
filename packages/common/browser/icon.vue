@@ -21,7 +21,7 @@ export default {
     },
     classNames() {
       const { blockName, name, modifiers } = this;
-      return [blockName, `${blockName}--${name}`, ...modifiers.map(mod => `${blockName}--${mod}`)].join(' ');
+      return [blockName, `${blockName}--${name}`, ...modifiers.map(mod => `${blockName}--${mod}`)];
     },
   },
 };
