@@ -94,6 +94,10 @@
         "type": "string",
         "default-value": "_blank"
       },
+      "@title": {
+        "type": "string",
+        "default-value": "Download this document"
+      },
       "@label": {
         "type": "string",
         "default-value": "Download"
@@ -108,6 +112,10 @@
       "@target": {
         "type": "string",
         "default-value": "_blank"
+      },
+      "@title": {
+        "type": "string",
+        "default-value": "Register/View this webinar"
       },
       "@label": {
         "type": "string",

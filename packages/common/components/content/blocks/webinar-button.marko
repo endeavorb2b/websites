@@ -1,4 +1,9 @@
-$ const attrs = { ...input };
-<cms-link-element class="btn btn-primary btn-lg" to=input.content path="linkUrl" attrs=attrs>
+import { get } from '@base-cms/object-path';
+<endeavor-link
+  class="btn btn-primary btn-lg"
+  href=`${get(input, 'content.linkUrl')}`
+  target=input.target
+  title=input.title
+>
   ${input.label}
-</cms-link-element>
+</endeavor-link>
