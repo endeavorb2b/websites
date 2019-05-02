@@ -24,7 +24,9 @@ $ const menu = 'site-navbar-menu';
       </ul>
       <ul class="navbar-nav site-navbar-items site-navbar-items--tertiary">
         <li class=`${bem(nav, 'item')} nav-item`>
-          <a class=`${bem(nav, 'link', ['search'])} nav-link` href="/search"></a>
+          <a class=`${bem(nav, 'link', ['search'])} nav-link` href="/search">
+            <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
+          </a>
         </li>
       </ul>
     </div>
