@@ -3,6 +3,7 @@
     v-on:click="toggle"
     v-bind:class="blockName"
     type="button"
+    aria-label="Website Navigation Menu"
   >
     <icon v-bind:name="iconName" v-bind:modifiers="['site-navbar']" />
   </button>
