@@ -11,6 +11,8 @@ fragment GlobalThoughtLeadersContentFragment on Content {
     primaryImage {
       id
       src
+      alt
+      isLogo
     }
   }
   ... on ContentVideo {
@@ -22,6 +24,8 @@ fragment GlobalThoughtLeadersContentFragment on Content {
       primaryImage {
         id
         src
+        alt
+        isLogo
       }
     }
   }
