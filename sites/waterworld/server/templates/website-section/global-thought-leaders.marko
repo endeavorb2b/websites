@@ -33,18 +33,25 @@ $ const section = getAsObject(data, 'section');
             <p class="page-wrapper__description">${page.description}</p>
           </if>
         </div>
-        <div class="page-wrapper__contents">
-          <hr>
-          <h5>Featured Videos</h5>
-          <cms-query-website-scheduled-content|{ nodes }|
-            section-id=section.id
-            limit=2
-            include-content-types=["Video"]
-            query-fragment=queryFragment
-          >
-            <div class="row">
-            <for|content| of=nodes>
-              <div class="col page-wrapper__col page-wrapper__col--nopad">
+        <div class="row">
+          <div class="col">
+            <div class="page-wrapper__contents">
+              <hr>
+              <h4>Featured Videos</h4>
+            </div>
+          </div>
+        </div>
+
+        <cms-query-website-scheduled-content|{ nodes }|
+          section-id=section.id
+          limit=2
+          include-content-types=["Video"]
+          query-fragment=queryFragment
+        >
+          <div class="row">
+          <for|content| of=nodes>
+            <div class="col">
+              <div class="page-wrapper__content">
                 <endeavor-item>
                   <@image
                     image=get(content, "company.primaryImage")
@@ -63,21 +70,30 @@ $ const section = getAsObject(data, 'section');
                   </@description>
                 </endeavor-item>
               </div>
-            </for>
             </div>
-          </cms-query-website-scheduled-content>
+          </for>
+          </div>
+        </cms-query-website-scheduled-content>
 
-          <hr>
-          <h5>Featured Whitepapers</h5>
-          <cms-query-website-scheduled-content|{ nodes }|
-            section-id=section.id
-            limit=2
-            include-content-types=["Whitepaper"]
-            query-fragment=queryFragment
-          >
-            <div class="row">
-            <for|content| of=nodes>
-              <div class="col page-wrapper__col page-wrapper__col--nopad">
+        <div class="row">
+          <div class="col">
+            <div class="page-wrapper__contents">
+              <hr>
+              <h4>Featured Whitepapers</h4>
+            </div>
+          </div>
+        </div>
+
+        <cms-query-website-scheduled-content|{ nodes }|
+          section-id=section.id
+          limit=2
+          include-content-types=["Whitepaper"]
+          query-fragment=queryFragment
+        >
+          <div class="row">
+          <for|content| of=nodes>
+            <div class="col">
+              <div class="page-wrapper__content">
                 <endeavor-item>
                   <@header-left>Download ${get(content, "company.name")}'s Whitepaper</@header-left>
                   <@title>${content.name}</@title>
@@ -89,22 +105,31 @@ $ const section = getAsObject(data, 'section');
                   </@footer-left>
                 </endeavor-item>
               </div>
-            </for>
             </div>
-          </cms-query-website-scheduled-content>
+          </for>
+          </div>
+        </cms-query-website-scheduled-content>
 
-          <hr>
-          <h5>All Global Thought Leaders</h5>
-          <cms-query-website-scheduled-content|{ nodes }|
-            section-id=section.id
-            limit=21
-            include-content-types=["Company"]
-            query-fragment=queryFragment
-            requires-image=true
-          >
-            <div class="row">
-              <for|content| of=nodes>
-                <div class="col page-wrapper__col page-wrapper__col--nopad">
+        <div class="row">
+          <div class="col">
+            <div class="page-wrapper__contents">
+              <hr>
+              <h4>All Global Thought Leaders</h4>
+            </div>
+          </div>
+        </div>
+
+        <cms-query-website-scheduled-content|{ nodes }|
+          section-id=section.id
+          limit=21
+          include-content-types=["Company"]
+          query-fragment=queryFragment
+          requires-image=true
+        >
+          <div class="row">
+            <for|content| of=nodes>
+              <div class="col">
+                <div class="page-wrapper__content">
                   <endeavor-item>
                     <@image
                       image=content.primaryImage
@@ -116,11 +141,11 @@ $ const section = getAsObject(data, 'section');
                     />
                   </endeavor-item>
                 </div>
-              </for>
-            </div>
-          </cms-query-website-scheduled-content>
+              </div>
+            </for>
+          </div>
+        </cms-query-website-scheduled-content>
 
-        </div>
       </div>
     </div>
   </div>

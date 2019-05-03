@@ -27,6 +27,10 @@
     @include theme-page-description-text();
   }
 
+  &__content {
+    @include content-body();
+  }
+
   &__contents {
     @include content-body();
     @include theme-page-body-spacing();
@@ -34,11 +38,5 @@
 
   &__body {
     @include theme-page-body-spacing();
-  }
-
-  &__col {
-    &--nopad {
-      padding: 0;
-    }
   }
 }
