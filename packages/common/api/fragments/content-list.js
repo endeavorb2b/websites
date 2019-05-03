@@ -26,6 +26,7 @@ fragment ContentListFragment on Content {
     id
     src
     alt
+    isLogo
   }
   ... on Authorable {
     authors {

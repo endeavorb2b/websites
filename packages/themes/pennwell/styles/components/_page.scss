@@ -27,6 +27,10 @@
     @include theme-page-description-text();
   }
 
+  &__content {
+    @include content-body();
+  }
+
   &__contents {
     @include content-body();
     @include theme-page-body-spacing();

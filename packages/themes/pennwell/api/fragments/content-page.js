@@ -30,6 +30,7 @@ fragment ContentPageFragment on Content {
     alt
     caption
     credit
+    isLogo
   }
   gating {
     surveyType
