@@ -8,9 +8,10 @@ $ const page = {
   description: 'Certain companies in the water and wastewater industry are veritable trailblazers, forging ahead and sharing their expertise with others in an effort to help them stay current with new trends and technologies and do their jobs more efficiently. Our new Global Thought Leader Series will feature a collection of white papers and related videos from these innovators, giving you free and easy access to a bank of useful knowledge.',
 };
 $ const imageOpts = {
-  fit: 'clip',
-  h: 100,
-  minH: 100,
+  fit: 'fillmax',
+  fillColor: 'fff',
+  h: 180,
+  w: 320,
 };
 $ const section = getAsObject(data, 'section');
 
@@ -91,39 +92,37 @@ $ const section = getAsObject(data, 'section');
             </for>
             </div>
           </cms-query-website-scheduled-content>
+
+          <hr>
+          <h5>All Global Thought Leaders</h5>
+          <cms-query-website-scheduled-content|{ nodes }|
+            section-id=section.id
+            limit=21
+            include-content-types=["Company"]
+            query-fragment=queryFragment
+            requires-image=true
+          >
+            <div class="row">
+              <for|content| of=nodes>
+                <div class="col page-wrapper__col page-wrapper__col--nopad">
+                  <endeavor-item>
+                    <@image
+                      image=content.primaryImage
+                      link-to=content
+                      modifiers=["centercap"]
+                      options=imageOpts
+                      use-placeholder=true
+                      position="top"
+                    />
+                  </endeavor-item>
+                </div>
+              </for>
+            </div>
+          </cms-query-website-scheduled-content>
+
         </div>
       </div>
     </div>
   </div>
-
-  <@below-container>
-    <endeavor-load-more-header>
-      All Global Thought Leaders
-    </endeavor-load-more-header>
-    <div class="row">
-      <cms-query-website-scheduled-content|{ nodes }|
-        section-id=section.id
-        limit=21
-        include-content-types=["Company"]
-        query-fragment=queryFragment
-        requires-image=true
-      >
-        <for|content| of=nodes>
-          <div class="col">
-            <endeavor-item>
-              <@image
-                image=content.primaryImage
-                link-to=content
-                modifiers=["centercap"]
-                options=imageOpts
-                use-placeholder=true
-                position="top"
-              />
-            </endeavor-item>
-            </div>
-        </for>
-      </cms-query-website-scheduled-content>
-    </div>
-  </@below-container>
 
 </theme-pennwell-website-section-layout>
