@@ -8,10 +8,6 @@
     padding-bottom: 0;
   }
 
-  &--mb {
-    margin-bottom: map-get($spacers, block);
-  }
-
   &__header {
     @include theme-page-header-spacing();
     :last-child {
