@@ -167,6 +167,35 @@
         "required": true,
         "default-value": "div"
       }
+    },
+    "endeavor-content-sponsors": {
+      "template": "./sponsors.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@block": {
+        "type": "string"
+      },
+      "@prefix": {
+        "type": "string",
+        "required": true,
+        "default-value": "Sponsor"
+      },
+      "@use-prefix": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@class": "string",
+      "@itemClass": "string",
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@itemTag": {
+        "type": "string",
+        "default-value": "span"
+      }
     }
   }
 }
