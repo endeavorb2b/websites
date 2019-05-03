@@ -33,118 +33,107 @@ $ const section = getAsObject(data, 'section');
             <p class="page-wrapper__description">${page.description}</p>
           </if>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="page-wrapper__contents">
-              <hr>
-              <h4>Featured Videos</h4>
-            </div>
-          </div>
+
+        <div class="page-wrapper__contents">
+          <hr>
+          <h4>Featured Videos</h4>
         </div>
 
-        <cms-query-website-scheduled-content|{ nodes }|
-          section-id=section.id
-          limit=2
-          include-content-types=["Video"]
-          query-fragment=queryFragment
-        >
-          <div class="row">
-          <for|content| of=nodes>
-            <div class="col">
-              <div class="page-wrapper__content">
-                <endeavor-item>
-                  <@image
-                    image=get(content, "company.primaryImage")
-                    link-to=content.company
-                    modifiers=["centercap"]
-                    options=imageOpts
-                    use-placeholder=true
-                    position="top"
-                  />
-                  <@header-left>Watch ${get(content, "company.name")}'s Video</@header-left>
-                  <@description tag="div">
-                    <!-- @todo Bring in primary-video styling for item? -->
-                    <div class="content-page-body__primary-video">
-                      $!{content.embedCode}
-                    </div>
-                  </@description>
-                </endeavor-item>
-              </div>
-            </div>
-          </for>
-          </div>
-        </cms-query-website-scheduled-content>
-
-        <div class="row">
-          <div class="col">
-            <div class="page-wrapper__contents">
-              <hr>
-              <h4>Featured Whitepapers</h4>
-            </div>
-          </div>
-        </div>
-
-        <cms-query-website-scheduled-content|{ nodes }|
-          section-id=section.id
-          limit=2
-          include-content-types=["Whitepaper"]
-          query-fragment=queryFragment
-        >
-          <div class="row">
-          <for|content| of=nodes>
-            <div class="col">
-              <div class="page-wrapper__content">
-                <endeavor-item>
-                  <@header-left>Download ${get(content, "company.name")}'s Whitepaper</@header-left>
-                  <@title>${content.name}</@title>
-                  <@description>
-                    $!{content.body}
-                  </@description>
-                  <@footer-left>
-                    <cms-link-element to=content>Download now!</cms-link-element>
-                  </@footer-left>
-                </endeavor-item>
-              </div>
-            </div>
-          </for>
-          </div>
-        </cms-query-website-scheduled-content>
-
-        <div class="row">
-          <div class="col">
-            <div class="page-wrapper__contents">
-              <hr>
-              <h4>All Global Thought Leaders</h4>
-            </div>
-          </div>
-        </div>
-
-        <cms-query-website-scheduled-content|{ nodes }|
-          section-id=section.id
-          limit=21
-          include-content-types=["Company"]
-          query-fragment=queryFragment
-          requires-image=true
-        >
-          <div class="row">
+        <div class="page-wrapper__content">
+          <cms-query-website-scheduled-content|{ nodes }|
+            section-id=section.id
+            limit=2
+            include-content-types=["Video"]
+            query-fragment=queryFragment
+          >
+            <div class="row">
             <for|content| of=nodes>
               <div class="col">
-                <div class="page-wrapper__content">
                   <endeavor-item>
                     <@image
-                      image=content.primaryImage
-                      link-to=content
+                      image=get(content, "company.primaryImage")
+                      link-to=content.company
                       modifiers=["centercap"]
                       options=imageOpts
                       use-placeholder=true
                       position="top"
                     />
+                    <@header-left>Watch ${get(content, "company.name")}'s Video</@header-left>
+                    <@description tag="div">
+                      <!-- @todo Bring in primary-video styling for item? -->
+                      <div class="content-page-body__primary-video">
+                        $!{content.embedCode}
+                      </div>
+                    </@description>
                   </endeavor-item>
                 </div>
-              </div>
             </for>
-          </div>
-        </cms-query-website-scheduled-content>
+            </div>
+          </cms-query-website-scheduled-content>
+        </div>
+
+        <div class="page-wrapper__contents">
+          <hr>
+          <h4>Featured Whitepapers</h4>
+        </div>
+
+        <div class="page-wrapper__content">
+          <cms-query-website-scheduled-content|{ nodes }|
+            section-id=section.id
+            limit=2
+            include-content-types=["Whitepaper"]
+            query-fragment=queryFragment
+          >
+            <div class="row">
+            <for|content| of=nodes>
+              <div class="col">
+                  <endeavor-item>
+                    <@header-left>Download ${get(content, "company.name")}'s Whitepaper</@header-left>
+                    <@title>${content.name}</@title>
+                    <@description>
+                      $!{content.body}
+                    </@description>
+                    <@footer-left>
+                      <cms-link-element to=content>Download now!</cms-link-element>
+                    </@footer-left>
+                  </endeavor-item>
+                </div>
+            </for>
+            </div>
+          </cms-query-website-scheduled-content>
+        </div>
+
+        <div class="page-wrapper__contents">
+          <hr>
+          <h4>All Global Thought Leaders</h4>
+        </div>
+
+        <div class="page-wrapper__content">
+          <cms-query-website-scheduled-content|{ nodes }|
+            section-id=section.id
+            limit=21
+            include-content-types=["Company"]
+            query-fragment=queryFragment
+            requires-image=true
+          >
+            <div class="row">
+              <for|content| of=nodes>
+                <div class="col">
+                    <endeavor-item>
+                      <@image
+                        image=content.primaryImage
+                        link-to=content
+                        modifiers=["centercap"]
+                        options=imageOpts
+                        use-placeholder=true
+                        position="top"
+                      />
+                    </endeavor-item>
+                  </div>
+              </for>
+            </div>
+          </cms-query-website-scheduled-content>
+        </div>
 
       </div>
     </div>
