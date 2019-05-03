@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-themes",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "private": true,
   "dependencies": {
     "bootstrap": "4.3.1"
@@ -12,7 +12,7 @@
     "graphql-tag": "^2.10.0"
   },
   "devDependencies": {
-    "@endeavorb2b/base-website-common": "^0.7.10",
+    "@endeavorb2b/base-website-common": "^0.7.11",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.3.0"
   }
