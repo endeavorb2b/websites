@@ -30,6 +30,7 @@ fragment ContentPageFragment on Content {
     alt
     caption
     credit
+    isLogo
   }
   gating {
     surveyType
@@ -44,6 +45,15 @@ fragment ContentPageFragment on Content {
   }
   ... on ContentWebinar {
     linkUrl
+    sponsors {
+      edges {
+        node {
+          id
+          name
+          canonicalPath
+        }
+      }
+    }
   }
   ... on Media {
     fileSrc

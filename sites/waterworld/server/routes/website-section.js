@@ -4,8 +4,14 @@ const section = require('../templates/website-section');
 const municipalTemplate = require('../templates/website-section/municipal');
 const industrialTemplate = require('../templates/website-section/industrial');
 const internationalTemplate = require('../templates/website-section/international');
+const globalTemplate = require('../templates/website-section/global-thought-leaders');
 
 module.exports = (app) => {
+  app.get('/:alias(global-thought-leaders)', withWebsiteSection({
+    template: globalTemplate,
+    queryFragment,
+  }));
+
   app.get('/:alias(municipal)', withWebsiteSection({
     template: municipalTemplate,
     queryFragment,

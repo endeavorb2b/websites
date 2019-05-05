@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.7.9",
+  "version": "0.7.11",
   "private": true,
   "dependencies": {
     "@base-cms/object-path": "^0.9.0",
@@ -8,7 +8,7 @@
     "helmet": "^3.16.0"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "^0.9.4",
+    "@base-cms/marko-web": "~0.9.8",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1"
   },

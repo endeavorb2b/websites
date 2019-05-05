@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/dentaleconomics",
-  "version": "0.7.9",
+  "version": "0.7.11",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -8,11 +8,11 @@
     "lint": "basecms-website lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "~0.9.4",
+    "@base-cms/marko-web": "~0.9.8",
     "@base-cms/object-path": "^0.9.0",
-    "@base-cms/web-cli": "~0.9.4",
-    "@endeavorb2b/base-website-common": "^0.7.9",
-    "@endeavorb2b/base-website-themes": "^0.7.9",
+    "@base-cms/web-cli": "~0.9.8",
+    "@endeavorb2b/base-website-common": "^0.7.11",
+    "@endeavorb2b/base-website-themes": "^0.7.11",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
