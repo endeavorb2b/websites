@@ -4,10 +4,8 @@ $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Event'],
   limit: 9,
-  sort: {
-    field: 'startDate',
-    order: 'desc',
-  },
+  sortField: 'startDate',
+  sortOrder: 'desc',
 };
 $ const page = pageDetails('Events', config);
 
@@ -17,7 +15,7 @@ $ const page = pageDetails('Events', config);
   </@head>
 
   <@above-container>
-    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <div class="page-wrapper">
