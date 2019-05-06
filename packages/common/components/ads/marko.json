@@ -1,6 +1,6 @@
 {
   "tags": {
-    "endeavor-gam-ad-head": {
+    "endeavor-ad-gam-head": {
       "template": "./gam-ad-head",
       "@enable-single-request": {
         "type": "boolean",
