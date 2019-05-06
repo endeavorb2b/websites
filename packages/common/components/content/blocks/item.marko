@@ -30,6 +30,21 @@ $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
   <@title tag="h5" modifiers=input.titleModifiers>
     <cms-content-short-name tag=null obj=content link=true />
   </@title>
+  <if(input.withContactTitle)>
+    <@description tag="p">
+      <cms-text-element obj=content field="title" />
+    </@description>
+  </if>
+  <if(input.withContactPhone)>
+    <@description tag="p">
+      <cms-text-element obj=content field="phone" />
+    </@description>
+  </if>
+  <if(input.withContactEmail)>
+    <@description tag="p">
+      <cms-text-element obj=content field="email" />
+    </@description>
+  </if>
   <if(input.withTeaser)>
     <@description tag="p">
       <cms-content-teaser tag=null obj=content link=true />

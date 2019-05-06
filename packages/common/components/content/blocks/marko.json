@@ -39,6 +39,18 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-contact-title": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-contact-phone": {
+        "type": "boolean",
+        "default-value": false
+      },
+      "@with-contact-email": {
+        "type": "boolean",
+        "default-value": false
+      },
       "@with-type": {
         "type": "boolean",
         "default-value": true
