@@ -31,6 +31,21 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/load-more') },
   },
+
+  'municipal/drinking-water': {
+    lb1: { ...LB, path: path('municipal/drinking-water/lb1') },
+    lb2: { ...LB, path: path('municipal/drinking-water/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/drinking-water/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/drinking-water/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/drinking-water/load-more') },
+  },
+  'municipal/environmental': {
+    lb1: { ...LB, path: path('municipal/environmental/lb1') },
+    lb2: { ...LB, path: path('municipal/environmental/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/environmental/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/environmental/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/environmental/load-more') },
+  },
   'municipal/technologies/aeration': {
     lb1: { ...LB, path: path('municipal/technologies/aeration/lb1') },
     lb2: { ...LB, path: path('municipal/technologies/aeration/lb2') },
@@ -72,6 +87,27 @@ module.exports = {
     rail1: { ...CONTENT, path: path('municipal/technologies/valves/rail1') },
     rail2: { ...CONTENT, path: path('municipal/technologies/valves/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/technologies/valves/load-more') },
+  },
+  'municipal/urban-stormwater': {
+    lb1: { ...LB, path: path('municipal/urban-stormwater/lb1') },
+    lb2: { ...LB, path: path('municipal/urban-stormwater/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/urban-stormwater/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/urban-stormwater/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/urban-stormwater/load-more') },
+  },
+  'municipal/wastewater': {
+    lb1: { ...LB, path: path('municipal/environwastewatermental/lb1') },
+    lb2: { ...LB, path: path('municipal/wastewater/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/wastewater/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/wastewater/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/wastewater/load-more') },
+  },
+  'municipal/water-utility-management': {
+    lb1: { ...LB, path: path('municipal/water-utility-management/lb1') },
+    lb2: { ...LB, path: path('municipal/water-utility-management/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/water-utility-management/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/water-utility-management/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/water-utility-management/load-more') },
   },
   industrial: {
     lb1: { ...LB, path: path('industrial/lb1') },
