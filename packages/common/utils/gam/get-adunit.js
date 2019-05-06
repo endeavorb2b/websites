@@ -8,7 +8,7 @@ module.exports = (config, {
   size,
   sizeMapping,
 }) => {
-  const aliases = getAsArray(section, 'hierarchy').map(s => s.alias);
+  const aliases = getAsArray(section, 'hierarchy').map(s => s.alias).reverse();
 
   const defaultAdUnit = config.getAsObject(`ads.default.${name}`);
   const foundAdUnit = aliases.map(alias => config.get(`ads.${alias}.${name}`)).filter(v => v)[0];
