@@ -1,5 +1,22 @@
 {
   "tags": {
+    "endeavor-ad-gam-head": {
+      "template": "./gam-ad-head",
+      "@enable-single-request": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@collapse-empty-divs": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@targeting-include-uri": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@slots": "object",
+      "@targeting": "object"
+    },
     "endeavor-gam-ad-unit-define-display": {
       "template": "./gam-adunit-define-display.marko",
       "@section": {
