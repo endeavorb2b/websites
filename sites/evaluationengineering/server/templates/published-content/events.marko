@@ -4,10 +4,8 @@ $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Event'],
   limit: 9,
-  sort: {
-    field: 'startDate',
-    order: 'desc',
-  },
+  sortField: 'startDate',
+  sortOrder: 'desc',
 };
 $ const page = pageDetails('Events', config);
 

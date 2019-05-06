@@ -4,10 +4,8 @@ $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Webinar'],
   limit: 9,
-  sort: {
-    field: 'startDate',
-    order: 'desc',
-  },
+  sortField: 'startDate',
+  sortOrder: 'desc',
 };
 $ const page = pageDetails('Webcasts', config);
 
