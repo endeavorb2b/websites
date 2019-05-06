@@ -23,15 +23,14 @@ $ const adSlots = {
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
-    requires-image=true
   />
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list requires-image=true section-alias="municipal/drinking-water" header="Drinking Water" limit=7 />
+      <endeavor-content-query-section-list section-alias="municipal/drinking-water" header="Drinking Water" />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="WaterWorld" as-card=true content-count=2 />
+      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="WaterWorld" as-card=true content-count=0 />
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -61,7 +60,6 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
-          requiresImage: true,
           contentTypes: ["Video"],
           limit: 4,
         }
