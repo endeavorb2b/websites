@@ -8,10 +8,13 @@ $ const query = {
   limit: 100,
   queryFragment: contentListFragment,
 };
+$ const sendTo = site.get('contactUs.to', 'developer@southcomm.com');
+$ const sitekey = site.get('contactUs.recaptcha.publicKey');
 
 <theme-pennwell-website-section-layout section=section>
   <@head>
     <cms-ad-gam-head />
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
   </@head>
 
   <@above-container>
@@ -35,6 +38,8 @@ $ const query = {
           </div>
         </div>
         <div class="page-wrapper__body">
+          <div class="row">
+            <div class="col-lg-8">
           <cms-query-website-scheduled-content|{ nodes }| ...query>
             <endeavor-item-list flush=true card=false items=nodes>
               <@item|{ item }|>
@@ -49,6 +54,11 @@ $ const query = {
               </@item>
             </endeavor-item-list>
           </cms-query-website-scheduled-content>
+            </div>
+            <div class="col-lg-4">
+              <cms-browser-component name="ContactUsForm" props={ sendTo, sitekey } />
+            </div>
+          </div>
         </div>
       </div>
     </div>

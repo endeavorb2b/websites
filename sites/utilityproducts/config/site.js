@@ -72,4 +72,10 @@ module.exports = {
   magazines: {
     description: 'Utility Products serves readers who work in electric, cable and telecom utilities, as well as contractors, manufacturers, suppliers and other service companies who support these utilities. ',
   },
+  contactUs: {
+    recaptcha: {
+      publicKey: '6LdqFKIUAAAAAHROJzlAXHyFV0Ta6pFiCzNXCUrN',
+      secretKey: '6LdqFKIUAAAAADqg-s9zun0UIirKDt7l-_sND470',
+    },
+  },
 };
