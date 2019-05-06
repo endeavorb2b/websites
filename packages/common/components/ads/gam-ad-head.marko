@@ -1,0 +1,8 @@
+import { get, getAsObject } from '@base-cms/object-path';
+
+$ if (input.targetingIncludeUri) {
+  input.targeting = getAsObject(input, 'targeting');
+  input.targeting.uri = get(out, 'global.req.url');
+}
+
+<cms-ad-gam-head ...input />
