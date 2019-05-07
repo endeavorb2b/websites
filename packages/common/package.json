@@ -5,7 +5,11 @@
   "dependencies": {
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
-    "helmet": "^3.16.0"
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "helmet": "^3.16.0",
+    "node-fetch": "^2.5.0",
+    "vue-recaptcha": "^1.1.1"
   },
   "peerDependencies": {
     "@base-cms/marko-web": "~0.9.8",

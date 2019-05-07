@@ -40,6 +40,11 @@ fragment ContentListFragment on Content {
       }
     }
   }
+  ... on ContentContact {
+    title
+    phone
+    email
+  }
   ... on ContentWebinar {
     starts
   }
