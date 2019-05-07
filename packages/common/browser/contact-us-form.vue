@@ -19,11 +19,11 @@
         <textarea :class="bem('field')" id="cuf__comments" name="comments" v-model="comments" required="required" />
       </div>
       <hr>
-      <p v-if="submitted" :class="bem('text', ['success'])">Thanks! Your comments have been received.</p>
-      <p v-else-if="loading" :class="bem('text', ['loading'])">Hold up, we're processing your submission...</p>
-      <p v-else-if="error" :class="bem('text', ['danger'])">Oh snap! There was a problem with your submission: {{ error }}</p>
-      <div :class="bem('row')" v-else>
-        <vue-recaptcha ref="recaptcha" @verify="onVerify" @expired="onExpired" :sitekey="sitekey">
+      <div :class="bem('row')">
+        <p v-if="submitted" :class="bem('text', ['success'])">Thanks! Your comments have been received.</p>
+        <p v-else-if="loading" :class="bem('text', ['loading'])">Hold up, we're processing your submission...</p>
+        <p v-else-if="error" :class="bem('text', ['danger'])">Oh snap! There was a problem with your submission: {{ error }}</p>
+        <vue-recaptcha v-if="!submitted" ref="recaptcha" @verify="onVerify" @expired="onExpired" :sitekey="sitekey">
           <button type="submit" :class="bem('submit')" :disabled="disabled">Submit</button>
         </vue-recaptcha>
       </div>
@@ -56,24 +56,20 @@ const submit = async (payload, instance) => {
 
 export default {
   props: {
-    sendTo: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       default: 'Drop us a line!',
     },
     sitekey: {
       type: String,
-      required: true,
-    }
+      default: '6LeZOaIUAAAAANDsX4PCYCYQeYfqdoabuev5chYk',
+    },
   },
   data: () => ({
     name: null,
     phone: null,
     email: null,
-    comments: null
+    comments: null,
     error: null,
     loading: false,
     submitted: false,
