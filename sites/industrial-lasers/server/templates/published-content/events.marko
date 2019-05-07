@@ -1,11 +1,17 @@
 import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
 
+$ const startOfDay = new Date();
+$ startOfDay.setHours(0,0,0,0);
+$ const endOfDay = new Date(startOfDay.getTime());
+$ endOfDay.setHours(23,59,59,999);
 $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Event'],
   limit: 9,
   sortField: 'startDate',
-  sortOrder: 'desc',
+  sortOrder: 'asc',
+  beginningAfter: startOfDay.valueOf(),
+  endingAfter: endOfDay.valueOf(),
 };
 $ const page = pageDetails('Events', config);
 
