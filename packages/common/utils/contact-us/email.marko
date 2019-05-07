@@ -11,48 +11,67 @@ $ const defaults = {
 };
 
 <!doctype html>
-html
-  head
+<html>
+  <head>
     <style type="text/css">$!{styles}</style>
-    title -- ${subject}
-  body
-    table
-      tbody
-        tr
-          td bgcolor=site.get('contactUs.branding.bgColor', defaults.bgColor)
-            img src=site.get('contactUs.branding.logo', defaults.logo) alt=site.get('contactUs.branding.title')
-        tr
-          td.subject
-            p -- ${site.get('contactUs.branding.title', defaults.title)} Notification
-        tr
-          td
-            p style="font-family:Arial; font-size:12px;"
-              -- This e-mail is being sent to you because a user filled out the contact us form on ${domain}.
+    <title>${subject}</title>
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td bgcolor=site.get('contactUs.branding.bgColor', defaults.bgColor)>
+            <img src=site.get('contactUs.branding.logo', defaults.logo) alt=site.get('contactUs.branding.title') />
+          </td>
+        </tr>
+        <tr>
+          <td class="subject">
+            <p>${site.get('contactUs.branding.title', defaults.title)} Notification</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="font-family:Arial; font-size:12px;">
+              This e-mail is being sent to you because a user filled out the contact us form on ${domain}.
+            </p>
 
-            table
-              tbody
-                  tr
-                    td nowrap
-                      b -- Name
-                    td -- ${input.name}
-                  tr
-                    td nowrap
-                      b -- Phone
-                    td -- ${input.phone}
-                  tr
-                    td nowrap
-                      b -- Email
-                    td -- ${input.email}
-                  tr
-                    td nowrap
-                      b -- Comments
-                    td -- ${input.comments}
+            <table>
+              <tbody>
+                <tr>
+                  <td nowrap><b>Name</b></td>
+                  <td>${input.name}</td>
+                </tr>
+                <tr>
+                  <td nowrap><b>Phone</b></td>
+                  <td>${input.phone}</td>
+                </tr>
+                <tr>
+                  <td nowrap><b>Email</b></td>
+                  <td>${input.email}</td>
+                </tr>
+                <tr>
+                  <td nowrap><b>Comments</b></td>
+                  <td>${input.comments}</td>
+                </tr>
 
-            p style="font-family:Arial; font-size:12px;" -- &nbsp;
-            p style="font-family:Arial; font-size:12px;" -- &nbsp;
-        tr
-          td.footer
-            small
-              -- This is an automated message from ${site.get('contactUs.branding.title', defaults.title)}. Please do not reply directly to this email &mdash; direct any inquiries to
-              a href=`mailto:${site.get('contactUs.support.email', defaults.supportEmail)}`
-                --  ${site.get('contactUs.support.name', defaults.supportName)}
+                <p style="font-family:Arial; font-size:12px;">&nbsp;</p>
+                <p style="font-family:Arial; font-size:12px;">&nbsp;</p>
+
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer">
+            <small>
+              This is an automated message from ${site.get('contactUs.branding.title', defaults.title)}. Please do not reply directly to this email &mdash; direct any inquiries to
+              <a href=`mailto:${site.get('contactUs.support.email', defaults.supportEmail)}`>
+                ${site.get('contactUs.support.name', defaults.supportName)}
+              </a>
+            </small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
