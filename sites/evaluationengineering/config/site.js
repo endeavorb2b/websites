@@ -70,4 +70,10 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#d71920',
+      logo: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+    },
+  },
 };

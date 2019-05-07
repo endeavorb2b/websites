@@ -70,4 +70,10 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#212529',
+      logo: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=50',
+    },
+  },
 };

@@ -19,7 +19,7 @@ $ const siteName = config.siteName();
       <ul class="navbar-nav site-navbar-items site-navbar-items--secondary">
         <for|item| of=site.getAsArray('secondaryNavItems')>
           <li class=`${bem(nav, 'item')} nav-item`>
-            <a class=`${bem(nav, 'link')} nav-link` href=item.href>${item.label}</a>
+            <endeavor-link class=`${bem(nav, 'link')} nav-link` target=item.target href=item.href>${item.label}</endeavor-link>
           </li>
         </for>
       </ul>
@@ -38,7 +38,7 @@ $ const siteName = config.siteName();
       <ul class="navbar-nav site-navbar-items site-navbar-items--primary">
         <for|item| of=site.getAsArray('primaryNavItems')>
           <li class=`${bem(nav, 'item')} nav-item`>
-            <a class=`${bem(nav, 'link')} nav-link` href=item.href>${item.label}</a>
+            <endeavor-link class=`${bem(nav, 'link')} nav-link` target=item.target href=item.href>${item.label}</endeavor-link>
           </li>
         </for>
       </ul>

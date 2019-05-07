@@ -70,4 +70,10 @@ module.exports = {
       '/subscribe/print/rdh': 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
     },
   },
+  contactUs: {
+    branding: {
+      bgColor: '#0f4069',
+      logo: 'https://base.imgix.net/files/base/pennwell/diq/logo.png?h=50',
+    },
+  },
 };

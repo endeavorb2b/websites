@@ -71,4 +71,10 @@ module.exports = {
   magazines: {
     description: 'BioOptics World magzaine has merged with its sister publication, Laser Focus World, with coverage on optical technologies and instrumentation for the lLife Sciences.',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#445b51',
+      logo: 'https://base.imgix.net/files/base/pennwell/bow/logo.png?h=50',
+    },
+  },
 };

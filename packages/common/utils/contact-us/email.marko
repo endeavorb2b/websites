@@ -1,12 +1,12 @@
 $ const styles = 'table {width: 630px;margin: 0 auto;} .danger { color: red } body{font-family: sans-serif; color: #333; margin: 0;}h1{font-family: monospace; line-height: 58px; text-align:center; margin: 0;}.subject, .footer{text-align:center; border-top: 1px solid #EEE; padding: 1em;}.footer{font-family: monospace; color: #CCC;}';
 $ const baseLogo = 'https://s3.amazonaws.com/media.cygnus.com/base.png';
 $ const { domain, subject } = input;
-$ const { site } = out.global;
+$ const { site, config } = out.global;
 $ const defaults = {
-  title: 'BaseCMS',
+  title: config.get('siteName'),
   bgColor: '#FFF',
   logo: 'https://s3.amazonaws.com/media.cygnus.com/base.png',
-  supportName: 'BaseCMS Support',
+  supportName: `${config.get('siteName')} Support`,
   supportEmail: 'base@endeavorb2b.com',
 };
 

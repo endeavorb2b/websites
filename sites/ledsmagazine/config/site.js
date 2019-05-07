@@ -76,4 +76,10 @@ module.exports = {
   magazines: {
     description: 'LEDs Magazine is the leading information resource for the global LED community, serving tens of thousands of readers that specify, design and manufacture LED-based products for a wide range of end-use applications, particularly solid-state lighting. It offers well-written, unbiased and informative editorial content that is highly valued by readers and advertisers alike. LEDs Magazine provides news and product information on a daily basis in combination with in-depth technical articles, analysis, and case studies',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#1371b8',
+      logo: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=50',
+    },
+  },
 };
