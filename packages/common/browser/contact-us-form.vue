@@ -92,7 +92,7 @@ export default {
     },
   },
   computed: {
-    disabled: function() {
+    disabled() {
       return !(this.name && this.phone && this.email && this.comments && !this.loading);
     },
   },
