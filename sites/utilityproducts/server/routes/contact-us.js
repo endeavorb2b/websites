@@ -1,7 +1,7 @@
-const { jsonParser, submissionHandler } = require('@endeavorb2b/base-website-common/utils/contact-us');
+const submissionHandler = require('@endeavorb2b/base-website-common/utils/contact-us');
 const template = require('../templates/contact-us');
 
 module.exports = (app) => {
   app.get('/contact-us', (_, res) => { res.marko(template); });
-  app.post('/contact-us', jsonParser, submissionHandler);
+  submissionHandler(app);
 };

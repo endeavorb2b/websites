@@ -53,9 +53,8 @@ const validateRecaptcha = async ({ token: response }) => {
 
 const validatePayload = (payload = {}) => ['name', 'phone', 'email', 'comments'].every(k => payload[k]);
 
-module.exports = {
-  jsonParser: bodyParser.json(),
-  submissionHandler: asyncRoute(async (req, res) => {
+module.exports = (app) => {
+  app.post('/contact-us', bodyParser.json(), asyncRoute(async (req, res) => {
     const payload = req.body;
 
     if (!await validateRecaptcha(payload)) throw exception('Unable to validate recaptcha');
@@ -68,5 +67,5 @@ module.exports = {
       error(e);
       throw exception(e);
     }
-  }),
+  }));
 };
