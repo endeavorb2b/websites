@@ -36,6 +36,7 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
+    { href: '/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
