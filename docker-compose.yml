@@ -17,8 +17,8 @@ x-env-defaults: &env
   NODE_ENV: development
   NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
   NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY-(unset)}
-  RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY}
-  SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+  RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY-(unset)}
+  SENDGRID_API_KEY: ${SENDGRID_API_KEY-(unset)}
 
 x-site-command: &site-cmd
   entrypoint: ["node_modules/.bin/basecms-website"]
