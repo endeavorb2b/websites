@@ -6,8 +6,7 @@ $ const query = {
   limit: 9,
   sortField: 'startDate',
   sortOrder: 'asc',
-  beginningAfter: (new Date()).setHours(0,0,0,0).valueOf(),
-  endingAfter: (new Date()).setHours(23,59,59,999).valueOf(),
+  endingAfter: (new Date()).valueOf(),
 };
 $ const page = pageDetails('Events', config);
 
