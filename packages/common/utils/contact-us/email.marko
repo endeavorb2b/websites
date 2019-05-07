@@ -1,0 +1,58 @@
+$ const styles = 'table {width: 630px;margin: 0 auto;} .danger { color: red } body{font-family: sans-serif; color: #333; margin: 0;}h1{font-family: monospace; line-height: 58px; text-align:center; margin: 0;}.subject, .footer{text-align:center; border-top: 1px solid #EEE; padding: 1em;}.footer{font-family: monospace; color: #CCC;}';
+$ const baseLogo = 'https://s3.amazonaws.com/media.cygnus.com/base.png';
+$ const { domain, subject } = input;
+$ const { site } = out.global;
+$ const defaults = {
+  title: 'BaseCMS',
+  bgColor: '#FFF',
+  logo: 'https://s3.amazonaws.com/media.cygnus.com/base.png',
+  supportName: 'BaseCMS Support',
+  supportEmail: 'base@endeavorb2b.com',
+};
+
+<!doctype html>
+html
+  head
+    <style type="text/css">$!{styles}</style>
+    title -- ${subject}
+  body
+    table
+      tbody
+        tr
+          td bgcolor=site.get('contactUs.branding.bgColor', defaults.bgColor)
+            img src=site.get('contactUs.branding.logo', defaults.logo) alt=site.get('contactUs.branding.title')
+        tr
+          td.subject
+            p -- ${site.get('contactUs.branding.title', defaults.title)} Notification
+        tr
+          td
+            p style="font-family:Arial; font-size:12px;"
+              -- This e-mail is being sent to you because a user filled out the contact us form on ${domain}.
+
+            table
+              tbody
+                  tr
+                    td nowrap
+                      b -- Name
+                    td -- ${input.name}
+                  tr
+                    td nowrap
+                      b -- Phone
+                    td -- ${input.phone}
+                  tr
+                    td nowrap
+                      b -- Email
+                    td -- ${input.email}
+                  tr
+                    td nowrap
+                      b -- Comments
+                    td -- ${input.comments}
+
+            p style="font-family:Arial; font-size:12px;" -- &nbsp;
+            p style="font-family:Arial; font-size:12px;" -- &nbsp;
+        tr
+          td.footer
+            small
+              -- This is an automated message from ${site.get('contactUs.branding.title', defaults.title)}. Please do not reply directly to this email &mdash; direct any inquiries to
+              a href=`mailto:${site.get('contactUs.support.email', defaults.supportEmail)}`
+                --  ${site.get('contactUs.support.name', defaults.supportName)}
