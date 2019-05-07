@@ -37,7 +37,7 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: 'https://buyersguide.cablinginstall.com/', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://cablingawards.secure-platform.com/a', label: 'Awards', target: '_blank' },
-    { href: '/advertise', label: 'Advertise' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -57,7 +57,7 @@ module.exports = {
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },

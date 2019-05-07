@@ -37,7 +37,7 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '#', label: 'BTR America Latina' },
     { href: '#', label: 'Diamond Tech Reviews' },
-    { href: '/advertise', label: 'Advertise' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [

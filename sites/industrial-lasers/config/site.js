@@ -36,7 +36,7 @@ module.exports = {
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: 'https://buyersguide.industrial-lasers.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
-    { href: '/advertise', label: 'Advertise' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -55,7 +55,7 @@ module.exports = {
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
