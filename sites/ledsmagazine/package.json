@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/ledsmagazine",
-  "version": "0.7.16",
+  "version": "0.7.17",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
