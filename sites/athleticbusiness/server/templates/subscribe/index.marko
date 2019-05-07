@@ -1,0 +1,47 @@
+import { get, getAsObject } from '@base-cms/object-path';
+
+$ const { config } = out.global;
+$ const description = `${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`;
+$ const newsletterDescription = 'Stay up-to-date on industry news and events, new product launches and more. Select from our list of targeted newsletter offerings to stay informed on the topics that matter to you and your business.';
+
+<theme-pennwell-subscribe-layout>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">Subscribe</li>
+            </ol>
+          </nav>
+          <h1 class="page-wrapper__title">Information at Your Fingertips</h1>
+          <p class="page-wrapper__description">${description}</p>
+        </div>
+        <div class="page-wrapper__contents">
+          <endeavor-social-links block="site-subscribe" />
+          <hr>
+          <h5>Newsletters</h5>
+          <p>${newsletterDescription}</p>
+          <p><strong><a href="/subscribe/email">Subscribe / Manage Preferences</a></strong></p>
+          <hr>
+          <h5>Magazines</h5>
+        </div>
+        <div class="page-wrapper__body">
+          <theme-pennwell-magazine-publication-list />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</theme-pennwell-subscribe-layout>

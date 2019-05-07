@@ -430,3 +430,20 @@ services:
     ports:
       - "12172:80"
       - "35172:35172"
+
+  athleticbusiness:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/athleticbusiness
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12173
+      LIVERELOAD_PORT: 35173
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: abm_ab
+    ports:
+      - "12173:80"
+      - "35173:35173"

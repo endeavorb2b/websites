@@ -1,0 +1,39 @@
+import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
+
+$ const { config } = out.global;
+$ const query = { contentTypes: ['Whitepaper'], limit: 9 };
+$ const page = pageDetails('White Papers', config);
+
+<theme-pennwell-published-content-layout page=page>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-published-content-breadcrumbs title=page.title />
+          <h1 class="page-wrapper__title">${page.title}</h1>
+          <if(page.description)>
+            <p class="page-wrapper__description">${page.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <@below-container>
+    <div class="published-content-query-load-more">
+      <theme-pennwell-published-content-query-load-more
+        query=query
+        layout="whitepaper"
+      />
+    </div>
+  </@below-container>
+
+</theme-pennwell-published-content-layout>
