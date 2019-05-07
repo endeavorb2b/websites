@@ -73,4 +73,14 @@ module.exports = {
   magazines: {
     description: 'Utility Products serves readers who work in electric, cable and telecom utilities, as well as contractors, manufacturers, suppliers and other service companies who support these utilities. ',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#494232',
+      logo: 'https://base.imgix.net/files/base/pennwell/up/logo.png?h=50',
+      title: 'Utility Products',
+    },
+    support: {
+      name: 'Utility Products Support',
+    },
+  },
 };
