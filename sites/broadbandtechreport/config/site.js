@@ -31,12 +31,13 @@ module.exports = {
     { href: '/business-services', label: 'Business Services' },
     { href: '/back-office', label: 'Back Office' },
     { href: '/metrics', label: 'Metrics' },
-    { href: '/diamond-reviews', label: 'Diamond Reviews' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    // { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: '#', label: 'BTR America Latina' },
+    { href: '#', label: 'Diamond Tech Reviews' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -47,14 +48,15 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '#', label: 'BTR America Latina' },
+      { href: '#', label: 'Diamond Tech Reviews' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },

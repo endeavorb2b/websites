@@ -30,9 +30,14 @@ module.exports = {
     { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
   ],
   secondaryNavItems: [
+    { href: 'https://buyersguide.ledsmagazine.com/index.html', label: 'LED & Lighting Industry Guide', target: '_blank' },
+    { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
+    { href: 'http://horticulturelightingconference.com', label: 'Horticultural Conference', target: '_blank' },
+    { href: 'https://www.strategies-u.com/index.html', label: 'Market Research', target: '_blank' },
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -50,7 +55,7 @@ module.exports = {
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
