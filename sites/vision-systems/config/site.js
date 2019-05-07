@@ -34,8 +34,8 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide' },
-    { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards' },
+    { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
+    { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -50,8 +50,8 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
-      { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide' },
-      { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards' },
+      { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
+      { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
