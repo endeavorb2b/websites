@@ -39,17 +39,39 @@
         "type": "boolean",
         "default-value": false
       },
-      "@with-contact-title": {
+      "@with-type": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@image-lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@flush": {
         "type": "boolean",
         "default-value": false
       },
-      "@with-contact-phone": {
+      "@image-use-placeholder": {
         "type": "boolean",
-        "default-value": false
+        "default-value": true
       },
-      "@with-contact-email": {
+      "@image-link-attrs": "string",
+      "@image-position": "string",
+      "@image-width": "number",
+      "@image-height": "number",
+      "@image-modifiers": "array",
+      "@image-options": "object",
+      "@image-min-height": "number",
+      "@image-min-width": "number",
+      "@title-modifiers": "array",
+      "@modifiers": "array"
+    },
+    "endeavor-content-block-contact-item": {
+      "template": "./contact-item.marko",
+      "@content": "object",
+      "@with-image": {
         "type": "boolean",
-        "default-value": false
+        "default-value": true
       },
       "@with-type": {
         "type": "boolean",
