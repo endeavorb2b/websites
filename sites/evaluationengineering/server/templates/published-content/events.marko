@@ -5,7 +5,8 @@ $ const query = {
   contentTypes: ['Event'],
   limit: 9,
   sortField: 'startDate',
-  sortOrder: 'desc',
+  sortOrder: 'asc',
+  endingAfter: (new Date()).valueOf(),
 };
 $ const page = pageDetails('Events', config);
 

@@ -39,7 +39,7 @@ module.exports = {
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
     { href: '/subscribe', label: 'Subscribe' },
-    // { href: '/contact-us', label: 'Contact Us' },
+    { href: '/contact-us', label: 'Contact Us' },
     { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
     { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
   ],
@@ -54,7 +54,7 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
-      // { href: '/contact-us', label: 'Contact Us' },
+      { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
       { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
     ],
