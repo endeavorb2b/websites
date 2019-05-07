@@ -41,16 +41,13 @@ $ const query = {
           <cms-query-website-scheduled-content|{ nodes }| ...query>
             <endeavor-item-list flush=true card=false items=nodes>
               <@item|{ item }|>
-                <endeavor-content-block-item
+                <endeavor-content-block-contact-item
                   content=item
                   flush=true
                   image-position="left"
                   image-options={ w: 240 }
                   image-width=150
                   image-use-placeholder=false
-                  with-contact-title=true
-                  with-contact-phone=true
-                  with-contact-email=true
                 />
               </@item>
             </endeavor-item-list>
