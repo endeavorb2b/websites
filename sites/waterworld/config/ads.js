@@ -109,6 +109,13 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/water-utility-management/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/water-utility-management/load-more') },
   },
+  'municipal/technologies': {
+    lb1: { ...LB, path: path('municipal/technologies/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/load-more') },
+  },
   industrial: {
     lb1: { ...LB, path: path('industrial/lb1') },
     lb2: { ...LB, path: path('industrial/lb2') },
@@ -116,11 +123,32 @@ module.exports = {
     rail2: { ...CONTENT, path: path('industrial/rail2') },
     'load-more': { ...CONTENT, path: path('industrial/load-more') },
   },
+  'industrial/wastewater': {
+    lb1: { ...LB, path: path('industrial/wastewater/lb1') },
+    lb2: { ...LB, path: path('industrial/wastewater/lb2') },
+    rail1: { ...CONTENT, path: path('industrial/wastewater/rail1') },
+    rail2: { ...CONTENT, path: path('industrial/wastewater/rail2') },
+    'load-more': { ...CONTENT, path: path('industrial/wastewater/load-more') },
+  },
+  'industrial/process-water': {
+    lb1: { ...LB, path: path('industrial/process-water/lb1') },
+    lb2: { ...LB, path: path('industrial/process-water/lb2') },
+    rail1: { ...CONTENT, path: path('industrial/process-water/rail1') },
+    rail2: { ...CONTENT, path: path('industrial/process-water/rail2') },
+    'load-more': { ...CONTENT, path: path('industrial/process-water/load-more') },
+  },
   international: {
     lb1: { ...LB, path: path('international/lb1') },
     lb2: { ...LB, path: path('international/lb2') },
     rail1: { ...CONTENT, path: path('international/rail1') },
     rail2: { ...CONTENT, path: path('international/rail2') },
     'load-more': { ...CONTENT, path: path('international/load-more') },
+  },
+  'international/wastewater': {
+    lb1: { ...LB, path: path('international/wastewater/lb1') },
+    lb2: { ...LB, path: path('international/wastewater/lb2') },
+    rail1: { ...CONTENT, path: path('international/wastewater/rail1') },
+    rail2: { ...CONTENT, path: path('international/wastewater/rail2') },
+    'load-more': { ...CONTENT, path: path('international/wastewater/load-more') },
   },
 };
