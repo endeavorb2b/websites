@@ -35,6 +35,9 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: 'https://buyersguide.lightwaveonline.com/index.html', label: 'Buyer\'s Guide' },
+    { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -49,6 +52,8 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://buyersguide.lightwaveonline.com/index.html', label: 'Buyer\'s Guide' },
+      { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
