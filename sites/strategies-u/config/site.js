@@ -61,4 +61,10 @@ module.exports = {
   magazines: {
     description: 'Strategies Unlimited offers comprehensive coverage of high-brightness LEDs and LED lighting and laser market sectors.',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#0b5392',
+      logo: 'https://base.imgix.net/files/base/pennwell/su/logo.png?h=50',
+    },
+  },
 };

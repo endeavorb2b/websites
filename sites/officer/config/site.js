@@ -74,4 +74,10 @@ module.exports = {
   magazines: {
     description: 'Law Enforcement Technology (LET) and Law Enforcement Product News (LEPN) are the leading magazine publications for the police and law enforcement community.',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#005ea0',
+      logo: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
+    },
+  },
 };

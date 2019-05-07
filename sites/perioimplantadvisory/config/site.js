@@ -67,4 +67,10 @@ module.exports = {
   subscriptions: {
     newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=a56c9d44-88f6-452a-9f61-92d48166c3a9',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#000',
+      logo: 'https://base.imgix.net/files/base/pennwell/pia/logo.png?h=50',
+    },
+  },
 };

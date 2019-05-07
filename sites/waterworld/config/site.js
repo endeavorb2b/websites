@@ -73,4 +73,10 @@ module.exports = {
   magazines: {
     description: 'WaterWorld serves professionals in the North American municipal water/wastewater industry. WaterWorld delivers monthly news and information about products and services, technology, applications, legislation and regulations to help you successfully plan, design, operate and maintain your water/wastewater systems. Editorial topics include: drinking water treatment, wastewater treatment, filtration, disinfection, membrane systems, biosolids and sludge treatment, water reuse, pipe maintenance and repairs, trenchless technology, meter reading, valves, pumps, stormwater management, odor control, computers and automation technology, corrosion control, and so much more!',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#0072bc',
+      logo: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=50',
+    },
+  },
 };

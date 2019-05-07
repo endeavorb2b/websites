@@ -73,4 +73,10 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#b41f24',
+      logo: 'https://base.imgix.net/files/base/ebm/pmm/image/static/logo/site_logo.png',
+    },
+  },
 };

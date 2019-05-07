@@ -76,4 +76,10 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#164f77',
+      logo: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=50',
+    },
+  },
 };

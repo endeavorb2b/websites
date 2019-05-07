@@ -74,4 +74,10 @@ module.exports = {
   magazines: {
     description: '',
   },
+  contactUs: {
+    branding: {
+      bgColor: '#254497',
+      logo: 'https://base.imgix.net/files/base/pennwell/btr/logo.png?h=50',
+    },
+  },
 };
