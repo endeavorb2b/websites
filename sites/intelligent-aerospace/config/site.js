@@ -32,7 +32,6 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: 'https://buyersguide.mae.pennnet.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://militaryawards.secure-platform.com/a', label: 'Awards', target: '_blank' },
@@ -47,7 +46,6 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
