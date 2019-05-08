@@ -19,6 +19,8 @@ const getPlacementId = (name, site) => site.get(`nativeX.placements.${name}.id`)
 
 const getEnabled = site => site.get('nativeX.enabled', true);
 
+const isInitable = site => getURI(site) && getEnabled(site);
+
 const isEnabled = (placementName, site) => {
   const enabled = getEnabled(site);
   const uri = getURI(site);
@@ -32,6 +34,7 @@ const useNativeX = (name, index, site) => isEnabled(name, site) && hasIndex(inde
 
 module.exports = {
   isEnabled,
+  isInitable,
   getPlacementId,
   useNativeX,
   retrieve,
