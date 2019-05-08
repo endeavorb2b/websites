@@ -26,9 +26,14 @@ const isEnabled = (placementName, site) => {
   return uri && id && enabled;
 };
 
+const hasIndex = index => typeof index !== 'undefined' && index !== null && index >= 0;
+
+const useNativeX = (name, index, site) => isEnabled(name, site) && hasIndex(index);
+
 module.exports = {
   isEnabled,
   getPlacementId,
+  useNativeX,
   retrieve,
   getURI,
 };
