@@ -1,0 +1,44 @@
+import { getAsObject } from '@base-cms/object-path';
+import bem from '../../../utils/bem-class';
+
+$ const block = 'content-addressable';
+$ const content = getAsObject(input, 'content');
+$ const { header } = input;
+$ const fields = [
+  { field: 'address1', label: 'Address' },
+  { field: 'address2' },
+  { field: 'city', label: 'City' },
+  { field: 'state', label: 'State' },
+  { field: 'zip', label: 'Zip Code' },
+  { field: 'country', label: 'Country' },
+  { field: 'location', label: 'Coordinates' },
+];
+$ const hasFields = fields.some(({ field: k }) => content[k]);
+
+<if(hasFields)>
+  <div class=block>
+    <if(header)>
+      <div class=bem(block, "header")>
+        <${header} block=block />
+      </div>
+    </if>
+    <div class=bem(block, "list")>
+      <for|{ field, label }| of=fields>
+        <cms-text-element
+          obj=content
+          field=field
+          block=bem(block, "item")
+          link=(field === "website")
+          link-path=field
+          link-attrs={ target: '_blank' }
+        >
+          <if(label)>
+            <@before>
+              <b>${label}: </b>
+            </@before>
+          </if>
+        </cms-text-element>
+      </for>
+    </div>
+  </div>
+</if>
