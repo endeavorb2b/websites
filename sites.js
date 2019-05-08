@@ -3,7 +3,7 @@ module.exports = {
   athleticbusiness: {
     name: 'Athletic Business',
     domain: 'athleticbusiness.com',
-    project: 'AC Business Media',
+    project: 'AB Media',
     accountKey: 'abm',
     groupKey: 'ab',
     tenantKey: 'abm_ab',
