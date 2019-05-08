@@ -32,7 +32,7 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: WaterWorld
+      name: AthleticBusiness
       script: scripts/deploy.js athleticbusiness aerilon
       install: skip
 
