@@ -17,14 +17,14 @@ $ const headerInput = getAsObject(input, 'header');
       </endeavor-item-list-header>
     </if>
 
-    <for|node| of=items>
+    <for|node, index| of=items>
       $ const itemInput = getAsObject(input, 'item');
       <endeavor-item-list-node|{ item }|
         tag=itemInput.tag
         modifiers=itemInput.modifiers
         node=node
       >
-        <${itemInput.renderBody} item=item />
+        <${itemInput.renderBody} item=item index=index />
       </endeavor-item-list-node>
     </for>
   </endeavor-item-list-wrapper>
