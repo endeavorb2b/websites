@@ -6,6 +6,7 @@
     "./load-more/marko.json",
     "./magazine-issue/marko.json",
     "./magazine/marko.json",
+    "./native-x/marko.json",
     "./navbars/marko.json",
     "./published-content/marko.json",
     "./search/marko.json",

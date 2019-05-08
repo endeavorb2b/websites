@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "endeavor-nativex-placement": {
+      "template": "./placement.marko"
+    }
+  }
+}

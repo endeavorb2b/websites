@@ -1,0 +1,36 @@
+import { retrieve, isEnabled, getPlacementId, getURI } from '../../services/native-x';
+
+$ const { site } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+
+$ const args = {
+  uri: getURI(site),
+  placementId: getPlacementId(input.name, site),
+  opts: {
+    fv: input.fallbackVars,
+  },
+};
+
+<if(isEnabled(input.name, site))>
+  <await(retrieve(args))>
+    <@then|html|>
+      <if(input.renderBody)>
+        <${input.renderBody} html=html />
+      </if>
+      <else>
+        $!{html}
+      </else>
+    </@then>
+    <@catch|err|>
+      <if(input.onError)>
+        <${input.onError} err=err />
+      </if>
+      <else>
+        <pre>An unexpected error occurred: ${err.message}</pre>
+        <if(isDevelopment)>
+          <pre>${err.stack}</pre>
+        </if>
+      </else>
+    </@catch>
+  </await>
+</if>
