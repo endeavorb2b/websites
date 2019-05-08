@@ -46,6 +46,13 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/environmental/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/environmental/load-more') },
   },
+  'municipal/technologies': {
+    lb1: { ...LB, path: path('municipal/technologies/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/load-more') },
+  },
   'municipal/technologies/aeration': {
     lb1: { ...LB, path: path('municipal/technologies/aeration/lb1') },
     lb2: { ...LB, path: path('municipal/technologies/aeration/lb2') },
@@ -81,6 +88,13 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/technologies/pipes/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/technologies/pipes/load-more') },
   },
+  'municipal/technologies/pumps': {
+    lb1: { ...LB, path: path('municipal/technologies/pumps/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/pumps/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/pumps/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/pumps/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/pumps/load-more') },
+  },
   'municipal/technologies/valves': {
     lb1: { ...LB, path: path('municipal/technologies/valves/lb1') },
     lb2: { ...LB, path: path('municipal/technologies/valves/lb2') },
@@ -108,13 +122,6 @@ module.exports = {
     rail1: { ...CONTENT, path: path('municipal/water-utility-management/rail1') },
     rail2: { ...CONTENT, path: path('municipal/water-utility-management/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/water-utility-management/load-more') },
-  },
-  'municipal/technologies': {
-    lb1: { ...LB, path: path('municipal/technologies/lb1') },
-    lb2: { ...LB, path: path('municipal/technologies/lb2') },
-    rail1: { ...CONTENT, path: path('municipal/technologies/rail1') },
-    rail2: { ...CONTENT, path: path('municipal/technologies/rail2') },
-    'load-more': { ...CONTENT, path: path('municipal/technologies/load-more') },
   },
   industrial: {
     lb1: { ...LB, path: path('industrial/lb1') },
