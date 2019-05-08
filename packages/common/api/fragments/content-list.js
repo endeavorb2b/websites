@@ -43,7 +43,7 @@ fragment ContentListFragment on Content {
   ... on ContentContact {
     title
     phone
-    email
+    publicEmail
   }
   ... on ContentWebinar {
     starts
