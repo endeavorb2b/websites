@@ -1,12 +1,16 @@
-import contentListFragment from '../../../api/fragments/content-list';
 import { asArray, asObject } from '@base-cms/utils';
+import { getAsObject } from '@base-cms/object-path';
+import contentListFragment from '../../../api/fragments/content-list';
+import { useNativeX } from '../../../services/native-x';
 
+$ const { site } = out.global;
 $ const block = 'content-query-hero';
 $ const params = {
   limit: 5,
   ...input,
   queryFragment: contentListFragment,
 };
+$ const nativeX = getAsObject(input, 'nativeX');
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   $ const heroNode = asObject(nodes[0]);
@@ -30,14 +34,29 @@ $ const params = {
       <if(listNodes.length)>
         <div class=`${block}__list`>
           <endeavor-item-list flush=true card=true items=listNodes>
-            <@item|{ item }|>
-              <endeavor-content-block-item
-                content=item
-                image-position="right"
-                image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                image-width=75
-                image-height=75
-              />
+            <@item|{ item, index }|>
+              <if(useNativeX(nativeX.placement, nativeX.index, site) && index === nativeX.index)>
+                $ const section = getAsObject(item, 'primarySection');
+                $ const image = getAsObject(item, 'primaryImage');
+                <endeavor-nativex-placement
+                  name=nativeX.placement
+                  fallback-vars={
+                    url: item.canonicalPath,
+                    content: { title: item.shortName, type: item.typeTitled, published: item.publishedDate },
+                    image: { src: image.src, alt: image.alt },
+                    section: { name: section.name },
+                  }
+                />
+              </if>
+              <else>
+                <endeavor-content-block-item
+                  content=item
+                  image-position="right"
+                  image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-width=75
+                  image-height=75
+                />
+              </else>
             </@item>
           </endeavor-item-list>
         </div>
