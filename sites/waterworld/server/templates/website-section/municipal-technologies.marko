@@ -1,0 +1,80 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const sections = site.getAsArray('homeSections');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', section }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', section, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', section, size: [300, 600] }),
+};
+
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-query-hero
+    section-id=section.id
+    limit=5
+  />
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/amr-ami" header="AMR/AMI" />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/aeration" header="Aeration" />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/disinfection" header="Disinfection" />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/filtration" header="Filtration" />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 mb-block">
+      <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/flow-level-pressure-measurement" header="Flow / Level / Pressure Measurement" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/lab-sampling-analytical" header="Lab / Sampling / Analytical" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/pipes" header="Pipes" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/pumps" header="Pumps" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list limit=3 section-alias="municipal/technologies/valves" header="Valves" />
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-content-query-load-more
+      query={
+        skip: 5,
+        sectionId: section.id,
+      }
+      section=section
+    />
+  </@below-container>
+
+</theme-pennwell-website-section-layout>
