@@ -8,6 +8,7 @@ $ const section = getAsObject(input, 'section');
   <@head>
     <cms-page-metadata for="website-section" ...section />
     <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('website-section', section) />
+    <endeavor-nativex-init />
     <link rel="alternate" type="application/rss+xml" title=`RSS Feed for ${section.name}` href=`/rss/${section.alias}.xml` />
     <${input.head} />
   </@head>
