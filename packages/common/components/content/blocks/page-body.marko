@@ -55,5 +55,6 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
     <if(content.type === "webinar")>
       <endeavor-content-block-webinar-button content=content />
     </if>
+    <cms-browser-component name="ShareContent" props={ content } />
   </div>
 </div>

@@ -5,6 +5,7 @@ $ const content = getAsObject(input, 'content');
 <div class="page-wrapper__header">
   <endeavor-breadcrumbs-website-section section=content.primarySection />
   <cms-content-name tag="h1" class="page-wrapper__title" obj=input.content />
+  <cms-browser-component name="ShareContent" props={ content: input.content, inline: false } />
   <cms-content-teaser tag="p" class="page-wrapper__deck" obj=input.content />
   <if(content.type !== 'contact')>
     <endeavor-content-block-attribution content=input.content />

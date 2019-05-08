@@ -1,0 +1,111 @@
+.share-content {
+  $spacer-lg: map-get($spacers, 3);
+  $spacer-sm: map-get($spacers, 2); // 0.5rem
+
+  &__container {
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity .3s 0s;
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &--inline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      small {
+        line-height: 50px;
+      }
+    }
+
+    &--floating {
+      // do breakpoint stuff for mobile
+      position: fixed;
+      z-index: 100;
+      flex-direction: column;
+      width: 3em;
+      padding: map-get($spacers, 2); // 0.5rem
+      background: $white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: $theme-box-shadow-sm;
+      transform: translateX(-200%);
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    border-radius: $border-radius;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      padding: 3px;
+      border-radius: $border-radius;
+      transition: fill ease 250ms, background-color ease 250ms;
+    }
+
+    &--floating {
+      display: block;
+      margin-bottom: map-get($spacers, 1); // 0.25rem
+    }
+    &--inline {
+      svg {
+        width: 50px;
+        height: 50px;
+        padding: map-get($spacers, 2);
+      }
+    }
+
+    &--facebook {
+      fill: map-get($brand-colors, facebook);
+      &:hover svg {
+        background-color: map-get($brand-colors, facebook);
+        fill: $white;
+      }
+    }
+    &--twitter {
+      fill: map-get($brand-colors, twitter);
+      &:hover svg {
+        background-color: map-get($brand-colors, twitter);
+        fill: $white;
+      }
+    }
+    &--linkedin {
+      fill: map-get($brand-colors, linkedin);
+      &:hover svg {
+        background-color: map-get($brand-colors, linkedin);
+        fill: $white;
+      }
+    }
+    &--pinterest {
+      fill: map-get($brand-colors, pinterest);
+      &:hover svg {
+        background-color: map-get($brand-colors, pinterest);
+        fill: $white;
+      }
+    }
+    &--whatsapp {
+      fill: map-get($brand-colors, whatsapp);
+      &:hover svg {
+        background-color: map-get($brand-colors, whatsapp);
+        fill: $white;
+      }
+    }
+    &--slack {
+      fill: map-get($brand-colors, slack);
+      &:hover svg {
+        background-color: map-get($brand-colors, slack);
+        fill: $white;
+      }
+    }
+    &--reddit {
+      fill: map-get($brand-colors, reddit);
+      &:hover svg {
+        background-color: map-get($brand-colors, reddit);
+        fill: $white;
+      }
+    }
+  }
+}
