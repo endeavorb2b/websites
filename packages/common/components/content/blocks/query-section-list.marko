@@ -1,4 +1,6 @@
+import { getAsObject } from '@base-cms/object-path';
 import contentListFragment from '../../../api/fragments/content-list';
+import { useNativeX } from '../../../services/native-x';
 
 $ const block = 'content-query-section-list';
 $ const params = {
@@ -7,6 +9,7 @@ $ const params = {
   ...input,
   queryFragment: contentListFragment,
 };
+$ const nativeX = getAsObject(input, 'nativeX');
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -17,14 +20,29 @@ $ const params = {
             ${input.header}
           </@header>
         </if>
-        <@item|{ item }|>
-          <endeavor-content-block-item
-            content=item
-            image-position="left"
-            image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-            image-width=176
-            image-height=99
-          />
+        <@item|{ item, index }|>
+          <if(useNativeX(nativeX.placement, nativeX.index, site) && index === nativeX.index)>
+            $ const section = getAsObject(item, 'primarySection');
+            $ const image = getAsObject(item, 'primaryImage');
+            <endeavor-nativex-placement
+              name=nativeX.placement
+              fallback-vars={
+                url: item.canonicalPath,
+                content: { title: item.shortName, type: item.typeTitled, published: item.publishedDate },
+                image: { src: image.src, alt: image.alt },
+                section: { name: section.name },
+              }
+            />
+          </if>
+          <else>
+            <endeavor-content-block-item
+              content=item
+              image-position="left"
+              image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+              image-width=176
+              image-height=99
+            />
+          </else>
         </@item>
       </endeavor-item-list>
     </div>
