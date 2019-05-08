@@ -1,4 +1,15 @@
 module.exports = {
+  // AB Media
+  athleticbusiness: {
+    name: 'Athletic Business',
+    domain: 'athleticbusiness.com',
+    project: 'AB Media',
+    accountKey: 'abm',
+    groupKey: 'ab',
+    tenantKey: 'abm_ab',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/abm/ab/logo.png',
+  },
   // AC Business Media
   dmnews: {
     name: 'DM News',
