@@ -31,7 +31,7 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'Videos' },
+    { href: '/videos', label: 'WaterWorldTV' },
     { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -45,7 +45,7 @@ module.exports = {
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
+      { href: '/videos', label: 'WaterWorldTV' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
     ],
