@@ -32,6 +32,14 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('dental-hygiene/load-more') },
     reskin: { ...RESKIN, path: path('dental-hygiene/reskin') },
   },
+  'dental-hygiene/student-hygiene': {
+    lb1: { ...LB, path: path('dental-hygiene/student-hygiene/lb1') },
+    lb2: { ...LB, path: path('dental-hygiene/student-hygiene/lb2') },
+    rail1: { ...CONTENT, path: path('dental-hygiene/student-hygiene/rail1') },
+    rail2: { ...CONTENT, path: path('dental-hygiene/student-hygiene/rail2') },
+    'load-more': { ...CONTENT, path: path('dental-hygiene/student-hygiene/load-more') },
+    reskin: { ...RESKIN, path: path('dental-hygiene/student-hygiene/reskin') },
+  },
   clinical: {
     lb1: { ...LB, path: path('clinical/lb1') },
     lb2: { ...LB, path: path('clinical/lb2') },
@@ -55,6 +63,14 @@ module.exports = {
     rail2: { ...CONTENT, path: path('clinical/orthodontics/rail2') },
     'load-more': { ...CONTENT, path: path('clinical/orthodontics/load-more') },
     reskin: { ...RESKIN, path: path('clinical/orthodontics/reskin') },
+  },
+  'clinical/prosthodontics-and-labratory': {
+    lb1: { ...LB, path: path('clinical/prosthodontics-and-labratory/lb1') },
+    lb2: { ...LB, path: path('clinical/prosthodontics-and-labratory/lb2') },
+    rail1: { ...CONTENT, path: path('clinical/prosthodontics-and-labratory/rail1') },
+    rail2: { ...CONTENT, path: path('clinical/prosthodontics-and-labratory/rail2') },
+    'load-more': { ...CONTENT, path: path('clinical/prosthodontics-and-labratory/load-more') },
+    reskin: { ...RESKIN, path: path('clinical/prosthodontics-and-labratory/reskin') },
   },
   products: {
     lb1: { ...LB, path: path('products/lb1') },
