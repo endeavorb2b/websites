@@ -31,6 +31,10 @@
     },
     "endeavor-breadcrumbs-search": {
       "template": "./search.marko"
+    },
+    "endeavor-breadcrumbs-subscribe": {
+      "template": "./subscribe.marko",
+      "@value": "string"
     }
   }
 }
