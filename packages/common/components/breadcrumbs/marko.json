@@ -1,8 +1,12 @@
 {
   "tags": {
     "endeavor-breadcrumbs": {
-      "template": "./breadcrumbs.marko",
+      "template": "./index.marko",
       "@items <item>[]": {}
+    },
+    "endeavor-breadcrumbs-website-section": {
+      "template": "./website-section.marko",
+      "@section": "object"
     }
   }
 }
