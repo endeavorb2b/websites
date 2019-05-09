@@ -1,0 +1,17 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const section = getAsObject(input, 'section');
+$ const children = getAsArray(section, 'hierarchy');
+
+<endeavor-breadcrumbs>
+  <@item>
+    <endeavor-link href="/" title="Home">Home</endeavor-link>
+  </@item>
+  <for|child| of=children>
+    <if(section.alias !== 'home')>
+      <@item>
+        <endeavor-link title=child.name href=child.alias>${child.name}</endeavor-link>
+      </@item>
+    </if>
+  </for>
+</endeavor-breadcrumbs>

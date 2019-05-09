@@ -1,9 +1,5 @@
 {
   "tags": {
-    "endeavor-magazine-block-breadcrumbs": {
-      "template": "./breadcrumbs.marko",
-      "@target": "object"
-    },
     "endeavor-magazine-query-latest-issue": {
       "template": "./query-latest-issue.marko",
       "@header": "string",

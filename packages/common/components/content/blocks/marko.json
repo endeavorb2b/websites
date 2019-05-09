@@ -7,13 +7,6 @@
         "required": true
       }
     },
-    "endeavor-content-block-breadcrumbs": {
-      "template": "./breadcrumbs.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      }
-    },
     "endeavor-content-block-page-header": {
       "template": "./page-header.marko",
       "@content": {
@@ -41,7 +34,7 @@
       },
       "@with-type": {
         "type": "boolean",
-        "default-value": true
+        "default-value": false
       },
       "@image-lazyload": {
         "type": "boolean",
