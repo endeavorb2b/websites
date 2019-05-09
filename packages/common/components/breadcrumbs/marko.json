@@ -7,6 +7,10 @@
     "endeavor-breadcrumbs-website-section": {
       "template": "./website-section.marko",
       "@section": "object"
+    },
+    "endeavor-breadcrumbs-magazine": {
+      "template": "./magazine.marko",
+      "@target": "object"
     }
   }
 }

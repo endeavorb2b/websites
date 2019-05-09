@@ -1,0 +1,27 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const target = getAsObject(input, 'target');
+
+<endeavor-breadcrumbs>
+  <@item>
+    <endeavor-link href="/" title="Home">Home</endeavor-link>
+  </@item>
+  <@item>
+    <if(target.id)>
+      <endeavor-link href="/magazine" title="Magazines">Magazines</endeavor-link>
+    </if>
+    <else>
+      Magazines
+    </else>
+  </@item>
+  <if(target.id)>
+    <if(target.publication)>
+      <@item>
+        <cms-link-element to=target.publication>${target.publication.name}</cms-link-element>
+      </@item>
+    </if>
+    <@item>
+      ${target.name}
+    </@item>
+  </if>
+</endeavor-breadcrumbs>
