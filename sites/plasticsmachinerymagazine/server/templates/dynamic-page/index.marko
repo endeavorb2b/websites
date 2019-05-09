@@ -16,12 +16,7 @@ $ const page = getAsObject(data, 'page');
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
-          <endeavor-breadcrumbs>
-            <@item>
-              <endeavor-link href="/" title="Home">Home</endeavor-link>
-            </@item>
-            <@item>${page.name}</@item>
-          </endeavor-breadcrumbs>
+          <endeavor-breadcrumbs-dynamic-page name=page.name />
           <div class="page-wrapper__title">
             ${page.name}
           </div>
