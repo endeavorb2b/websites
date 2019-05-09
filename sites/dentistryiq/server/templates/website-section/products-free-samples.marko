@@ -1,0 +1,57 @@
+import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', section }),
+};
+
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/" title="Home">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="/products" title="Products">Products</a>
+              </li>
+              <li class="breadcrumb-item">${section.name}</li>
+            </ol>
+          </nav>
+          <div class="page-wrapper__title">
+            ${section.name}
+          </div>
+          <div class="page-wrapper__description">
+            ${section.description}
+          </div>
+        </div>
+        <div class="page-wrapper__contents">
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+          <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+        </div>
+      </div>
+    </div>
+  </div>
+</theme-pennwell-website-section-layout>
