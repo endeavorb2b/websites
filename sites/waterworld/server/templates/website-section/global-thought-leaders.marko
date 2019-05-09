@@ -27,7 +27,10 @@ $ const section = getAsObject(data, 'section');
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
-          <endeavor-published-content-breadcrumbs title=page.title />
+          <endeavor-breadcrumbs>
+            <@item><endeavor-link href="/" title="Home">Home</endeavor-link></@item>
+            <@item>${page.title}</@item>
+          </endeavor-breadcrumbs>
           <h1 class="page-wrapper__title">${page.title}</h1>
           <if(page.description)>
             <p class="page-wrapper__description">${page.description}</p>
