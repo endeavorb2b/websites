@@ -11,6 +11,20 @@
     "endeavor-breadcrumbs-magazine": {
       "template": "./magazine.marko",
       "@target": "object"
+    },
+    "endeavor-breadcrumbs-dynamic-page": {
+      "template": "./dynamic-page.marko",
+      "@name": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "endeavor-breadcrumbs-published-content": {
+      "template": "./published-content.marko",
+      "@title": {
+        "type": "string",
+        "required": true
+      }
     }
   }
 }
