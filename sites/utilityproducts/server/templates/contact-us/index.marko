@@ -23,14 +23,12 @@ $ const query = {
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
-          <nav class="breadcrumbs" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="/" title="Home">Home</a>
-              </li>
-              <li class="breadcrumb-item">Contact Us</li>
-            </ol>
-          </nav>
+          <endeavor-breadcrumbs>
+            <@item>
+              <endeavor-link href="/" title="Home">Home</endeavor-link>
+            </@item>
+            <@item>Contact Us</@item>
+          </endeavor-breadcrumbs>
           <div class="page-wrapper__title">
             Contact Us
           </div>
