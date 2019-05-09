@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/dentistryiq",
-  "version": "0.7.18",
+  "version": "0.7.19",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
