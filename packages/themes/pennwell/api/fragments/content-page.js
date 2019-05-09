@@ -62,21 +62,25 @@ fragment ContentPageFragment on Content {
     state
     zip
     country
-    location {
-      latitude
-      longitude
-    }
   }
   ... on Contactable {
     phone
     tollfree
     fax
     website
-    firstName
-    lastName
     title
     mobile
     publicEmail
+  }
+  ... on ContentCompany {
+    email
+  # }
+  # ... on SocialLinkable {
+    socialLinks {
+      provider
+      url
+      label
+    }
   }
   ... on Media {
     fileSrc

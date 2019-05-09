@@ -38,11 +38,11 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
     </div>
   </if>
 
-  <endeavor-content-block-addressable content=content />
-  <endeavor-content-block-contactable content=content />
+  <endeavor-content-block-contact-details content=content />
+
+  <cms-content-body tag="div" block=block obj=content />
 
   <div class=`${block}__footer`>
-    <cms-content-body tag="div" block=block obj=content />
     <if(content.type === "whitepaper")>
       <endeavor-content-block-download content=content />
     </if>
