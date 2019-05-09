@@ -80,6 +80,10 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('products/load-more') },
     reskin: { ...RESKIN, path: path('products/reskin') },
   },
+  'products/free-samples': {
+    lb1: { ...LB, path: path('products/free-samples/lb1') },
+    lb2: { ...LB, path: path('products/free-samples/lb2') },
+  },
   'practice-management': {
     lb1: { ...LB, path: path('practice-management/lb1') },
     lb2: { ...LB, path: path('practice-management/lb2') },
