@@ -3,7 +3,7 @@ import { getAsObject } from '@base-cms/object-path';
 $ const content = getAsObject(input, 'content');
 
 <div class="page-wrapper__header">
-  <endeavor-content-block-breadcrumbs content=input.content />
+  <endeavor-breadcrumbs-website-section section=content.primarySection />
   <cms-content-name tag="h1" class="page-wrapper__title" obj=input.content />
   <cms-content-teaser tag="p" class="page-wrapper__deck" obj=input.content />
   <if(content.type !== 'contact')>
