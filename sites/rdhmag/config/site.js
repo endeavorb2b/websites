@@ -22,17 +22,19 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/RDHMagazine' },
   ],
   primaryNavItems: [
-    { href: '/bioscience', label: 'Bioscience' },
-    { href: '/biomedicine', label: 'Biomedicine' },
-    { href: '/bioimaging', label: 'Bioimaging' },
-    { href: '/biophotonics-techniques', label: 'Biophotonics Techniques' },
-    { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
+    { href: '/ergonomics', label: 'Ergonomics' },
+    { href: '/infection-control', label: 'Infection Control' },
+    { href: '/patient-care', label: 'Patient Care' },
+    { href: '/pathology', label: 'Pathology' },
+    { href: '/career-profession', label: 'Career & Profession' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
+    { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+    { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
@@ -46,6 +48,8 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+      { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
