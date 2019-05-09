@@ -1,0 +1,8 @@
+{
+  "tags": {
+    "endeavor-breadcrumbs": {
+      "template": "./breadcrumbs.marko",
+      "@items <item>[]": {}
+    }
+  }
+}

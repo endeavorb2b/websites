@@ -1,10 +1,10 @@
 {
   "taglib-imports": [
     "./ads/marko.json",
+    "./breadcrumbs/marko.json",
     "./content/marko.json",
     "./load-more/marko.json",
     "./magazine-issue/marko.json",
-    "./magazine/marko.json",
     "./magazine/marko.json",
     "./navbars/marko.json",
     "./published-content/marko.json",
