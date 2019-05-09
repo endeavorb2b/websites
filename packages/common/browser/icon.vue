@@ -11,7 +11,7 @@ export default {
     },
     modifiers: {
       type: Array,
-      default: [],
+      default: () => ([]),
     },
   },
   data: () => ({ blockName: 'icon' }),

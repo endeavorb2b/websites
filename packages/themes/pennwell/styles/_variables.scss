@@ -43,6 +43,8 @@ $slack:         #3aaf85 !default;
 $dribbble:      #ea4c89 !default;
 $github:        #222 !default;
 $linkedin:      #0077b5 !default;
+$reddit:        #ff4500 !default;
+$whatsapp:      #25d366 !default;
 
 $brand-colors: () !default;
 $brand-colors: map-merge(
@@ -56,6 +58,8 @@ $brand-colors: map-merge(
     "slack":        $slack,
     "dribbble":     $dribbble,
     "linkedin":     $linkedin,
+    "reddit":       $reddit,
+    "whatsapp":     $whatsapp,
     "github":       $github
   ),
   $brand-colors
