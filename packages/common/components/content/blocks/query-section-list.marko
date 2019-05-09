@@ -10,6 +10,7 @@ $ const params = {
   queryFragment: contentListFragment,
 };
 $ const nativeX = getAsObject(input, 'nativeX');
+$ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -21,7 +22,7 @@ $ const nativeX = getAsObject(input, 'nativeX');
           </@header>
         </if>
         <@item|{ item, index }|>
-          <if(useNativeX(nativeX.placement, nativeX.index, site) && index === nativeX.index)>
+          <if(nativeXEnabled && index === nativeX.index)>
             $ const section = getAsObject(item, 'primarySection');
             $ const image = getAsObject(item, 'primaryImage');
             <endeavor-nativex-placement
