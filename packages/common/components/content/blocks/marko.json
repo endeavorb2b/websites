@@ -41,7 +41,7 @@
       },
       "@with-type": {
         "type": "boolean",
-        "default-value": true
+        "default-value": false
       },
       "@image-lazyload": {
         "type": "boolean",
