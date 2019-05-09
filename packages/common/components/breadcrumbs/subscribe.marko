@@ -1,0 +1,18 @@
+<endeavor-breadcrumbs>
+  <@item>
+    <endeavor-link href="/" title="Home">Home</endeavor-link>
+  </@item>
+  <@item>
+    <if(input.value)>
+      <endeavor-link href="/subscribe" title="Subscribe">Subscribe</endeavor-link>
+    </if>
+    <else>
+      Subscribe
+    </else>
+  </@item>
+  <if(input.value)>
+    <@item>
+      ${input.value}
+    </@item>
+  </if>
+</endeavor-breadcrumbs>

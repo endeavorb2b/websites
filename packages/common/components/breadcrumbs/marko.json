@@ -1,0 +1,40 @@
+{
+  "tags": {
+    "endeavor-breadcrumbs": {
+      "template": "./index.marko",
+      "@items <item>[]": {}
+    },
+    "endeavor-breadcrumbs-website-section": {
+      "template": "./website-section.marko",
+      "@section": "object"
+    },
+    "endeavor-breadcrumbs-magazine": {
+      "template": "./magazine.marko",
+      "@target": "object"
+    },
+    "endeavor-breadcrumbs-dynamic-page": {
+      "template": "./dynamic-page.marko",
+      "@name": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "endeavor-breadcrumbs-published-content": {
+      "template": "./published-content.marko",
+      "@title": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "endeavor-breadcrumbs-contact-us": {
+      "template": "./contact-us.marko"
+    },
+    "endeavor-breadcrumbs-search": {
+      "template": "./search.marko"
+    },
+    "endeavor-breadcrumbs-subscribe": {
+      "template": "./subscribe.marko",
+      "@value": "string"
+    }
+  }
+}
