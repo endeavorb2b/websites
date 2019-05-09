@@ -29,7 +29,6 @@ module.exports = {
     { href: '/surface-treatment', label: 'Surface Treatment' },
     { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
     { href: '/drilling', label: 'Drilling' },
-    { href: '/safety', label: 'Safety' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },

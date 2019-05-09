@@ -2,6 +2,7 @@ const queryFragment = require('@endeavorb2b/base-website-themes/pennwell/api/fra
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const section = require('../templates/website-section');
 const municipalTemplate = require('../templates/website-section/municipal');
+const technologiesTemplate = require('../templates/website-section/municipal-technologies');
 const industrialTemplate = require('../templates/website-section/industrial');
 const internationalTemplate = require('../templates/website-section/international');
 const globalTemplate = require('../templates/website-section/global-thought-leaders');
@@ -14,6 +15,11 @@ module.exports = (app) => {
 
   app.get('/:alias(municipal)', withWebsiteSection({
     template: municipalTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(municipal/technologies)', withWebsiteSection({
+    template: technologiesTemplate,
     queryFragment,
   }));
 

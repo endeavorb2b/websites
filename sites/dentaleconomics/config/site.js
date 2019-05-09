@@ -33,7 +33,7 @@ module.exports = {
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
-    { href: 'https://www.dentalacademyofce.com', label: 'Earn CE' },
+    { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
   footerNavItems: [
@@ -48,6 +48,8 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+      { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
