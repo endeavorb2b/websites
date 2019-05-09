@@ -25,6 +25,9 @@
         "type": "string",
         "required": true
       }
+    },
+    "endeavor-breadcrumbs-contact-us": {
+      "template": "./contact-us.marko"
     }
   }
 }
