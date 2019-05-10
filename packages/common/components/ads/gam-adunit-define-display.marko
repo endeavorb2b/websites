@@ -4,7 +4,7 @@ import getAdUnit from '../../utils/gam/get-adunit';
 $ const { site } = out.global;
 $ const { name, aliases, size } = input;
 $ const adunit = getAdUnit(site, { name, aliases, size });
-$ const shouldDisplay = adunit.path && adunit.size;
+$ const shouldDisplay = adunit.path && (adunit.size || adunit.outOfPage);
 
 $ const block = 'ad-container';
 $ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
@@ -16,5 +16,6 @@ $ const classNames = [block, ...modifiers, input.class];
     size=adunit.size
     size-mapping=adunit.sizeMapping
     class=classNames
+    out-of-page=( adunit.outOfPage || false )
   />
 </if>
