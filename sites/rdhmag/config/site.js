@@ -48,6 +48,7 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '/page/submission-guidelines', label: 'Submission Guidelines' },
       { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
     ],
