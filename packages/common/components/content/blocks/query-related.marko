@@ -30,17 +30,11 @@ $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0
         </if>
         <@item|{ item, index }|>
           <if(nativeXEnabled && index === nativeX.index)>
-            $ const primarySection = getAsObject(item, 'primarySection');
-            $ const image = getAsObject(item, 'primaryImage');
-            <endeavor-nativex-placement
-              name=nativeX.placement
+            <endeavor-content-nativex-item
+              placement=nativeX.placement
               aliases=nativeX.aliases
-              fallback-vars={
-                url: item.canonicalPath,
-                content: { title: item.shortName, type: item.typeTitled, published: item.publishedDate },
-                image: { src: buildImgixUrl(image.src, imageOptions, undefined, image.isLogo), alt: image.alt },
-                section: { name: primarySection.name },
-              }
+              content=item
+              image-options=imageOptions
             />
           </if>
           <else>

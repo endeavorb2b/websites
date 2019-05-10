@@ -49,17 +49,11 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
               <if(nativeXEnabled && index === nativeX.index)>
-                $ const primarySection = getAsObject(content, 'primarySection');
-                $ const image = getAsObject(content, 'primaryImage');
-                <endeavor-nativex-placement
-                  name=nativeX.placement
+                <endeavor-content-nativex-item
+                  placement=nativeX.placement
                   aliases=nativeX.aliases
-                  fallback-vars={
-                    url: content.canonicalPath,
-                    content: { title: content.shortName, type: content.typeTitled, published: content.publishedDate },
-                    image: { src: buildImgixUrl(image.src, imageOptions, undefined, image.isLogo), alt: image.alt },
-                    section: { name: primarySection.name },
-                  }
+                  content=content
+                  image-options=imageOptions
                 />
               </if>
               <else>
