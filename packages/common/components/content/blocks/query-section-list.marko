@@ -12,7 +12,11 @@ $ const params = {
   queryFragment: contentListFragment,
 };
 $ const nativeX = getAsObject(input, 'nativeX');
-$ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
+$ const nativeXEnabled = useNativeX(site, {
+  name: nativeX.placement,
+  index: nativeX.index,
+  aliases: nativeX.aliases,
+});
 $ const imageOptions = { w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
@@ -26,15 +30,16 @@ $ const imageOptions = { w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.
         </if>
         <@item|{ item, index }|>
           <if(nativeXEnabled && index === nativeX.index)>
-            $ const section = getAsObject(item, 'primarySection');
+            $ const primarySection = getAsObject(item, 'primarySection');
             $ const image = getAsObject(item, 'primaryImage');
             <endeavor-nativex-placement
               name=nativeX.placement
+              aliases=nativeX.aliases
               fallback-vars={
                 url: item.canonicalPath,
                 content: { title: item.shortName, type: item.typeTitled, published: item.publishedDate },
                 image: { src: buildImgixUrl(image.src, imageOptions, undefined, image.isLogo), alt: image.alt },
-                section: { name: section.name },
+                section: { name: primarySection.name },
               }
             />
           </if>
