@@ -51,7 +51,7 @@ module.exports = {
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
+      { href: 'https://www.dentistryiq.com/page/advertise', label: 'Advertise', target: '_blank' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
