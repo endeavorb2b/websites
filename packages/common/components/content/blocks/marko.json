@@ -59,6 +59,9 @@
       "@title-modifiers": "array",
       "@modifiers": "array"
     },
+    "endeavor-content-nativex-item": {
+      "template": "./nativex-item.marko"
+    },
     "endeavor-content-block-contact-item": {
       "template": "./contact-item.marko",
       "@content": "object",

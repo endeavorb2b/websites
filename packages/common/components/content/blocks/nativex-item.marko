@@ -1,0 +1,17 @@
+import { getAsObject } from '@base-cms/object-path';
+import { buildImgixUrl } from '@base-cms/image';
+
+$ const content = getAsObject(input, 'content');
+$ const primarySection = getAsObject(content, 'primarySection');
+$ const image = getAsObject(content, 'primaryImage');
+
+<endeavor-nativex-placement
+  name=input.placement
+  aliases=input.aliases
+  fallback-vars={
+    url: content.canonicalPath,
+    content: { title: content.shortName, type: content.typeTitled, published: content.publishedDate },
+    image: { src: buildImgixUrl(image.src, input.imageOptions, undefined, image.isLogo), alt: image.alt },
+    section: { name: primarySection.name },
+  }
+/>
