@@ -19,9 +19,7 @@
     },
     "endeavor-gam-ad-unit-define-display": {
       "template": "./gam-adunit-define-display.marko",
-      "@section": {
-        "type": "object"
-      },
+      "@aliases": "array",
       "@name": {
         "type": "string"
       },

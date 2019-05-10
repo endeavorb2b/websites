@@ -1,5 +1,9 @@
+import { getAsObject } from '@base-cms/object-path';
+import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
+import { useNativeX } from '../../../services/native-x';
 
+$ const { site } = out.global;
 $ const block = 'content-query-section-list';
 $ const params = {
   limit: 4,
@@ -7,6 +11,13 @@ $ const params = {
   ...input,
   queryFragment: contentListFragment,
 };
+$ const nativeX = getAsObject(input, 'nativeX');
+$ const nativeXEnabled = useNativeX(site, {
+  name: nativeX.placement,
+  index: nativeX.index,
+  aliases: nativeX.aliases,
+});
+$ const imageOptions = { w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -17,14 +28,24 @@ $ const params = {
             ${input.header}
           </@header>
         </if>
-        <@item|{ item }|>
-          <endeavor-content-block-item
-            content=item
-            image-position="left"
-            image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-            image-width=176
-            image-height=99
-          />
+        <@item|{ item, index }|>
+          <if(nativeXEnabled && index === nativeX.index)>
+            <endeavor-content-nativex-item
+              placement=nativeX.placement
+              aliases=nativeX.aliases
+              content=item
+              image-options=imageOptions
+            />
+          </if>
+          <else>
+            <endeavor-content-block-item
+              content=item
+              image-position="left"
+              image-options=imageOptions
+              image-width=176
+              image-height=99
+            />
+          </else>
         </@item>
       </endeavor-item-list>
     </div>

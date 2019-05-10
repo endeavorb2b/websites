@@ -1,6 +1,6 @@
 import contentListFragment from '../../../api/fragments/content-list';
 import { asArray } from '@base-cms/utils';
-import { getAsObject } from '@base-cms/object-path';
+import { getAsObject, getAsArray } from '@base-cms/object-path';
 
 $ const pageNumber = input.pageNumber || 1;
 $ const { issueId } = getAsObject(input, 'query');
@@ -16,6 +16,7 @@ $ const loadMore = {
   ...input.loadMore,
 };
 
+$ const adAliases = getAsArray(input, 'ads.aliases');
 $ const adCardInput = {
   name: 'load-more',
   size: [300, 250],
@@ -38,7 +39,11 @@ $ const adListInput = {
   $ const provide = {
     query,
     pageNumber,
-    ads: input.ads,
+    ads: {
+      aliases: adAliases,
+      card: adCardInput,
+      list: adListInput,
+    },
   };
 
   $ const cardNodes = asArray(nodes.slice(0, 10));
@@ -60,7 +65,7 @@ $ const adListInput = {
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
-                <endeavor-gam-ad-unit-define-display ...adCardInput/>
+                <endeavor-gam-ad-unit-define-display ...adCardInput aliases=adAliases />
               </div>
             </if>
           </for>
@@ -70,7 +75,7 @@ $ const adListInput = {
       <if(listNodes.length)>
         <div class="row">
           <div class=`${block}__col-ad`>
-            <endeavor-gam-ad-unit-define-display ...adListInput />
+            <endeavor-gam-ad-unit-define-display ...adListInput aliases=adAliases />
           </div>
 
           <div class=`${block}__col-list`>

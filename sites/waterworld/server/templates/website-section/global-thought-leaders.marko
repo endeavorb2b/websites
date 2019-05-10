@@ -1,5 +1,6 @@
 import { get, getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
 import queryFragment from '../../api/fragments/global-thought-leaders';
 
 $ const { site } = out.global;
@@ -14,13 +15,14 @@ $ const imageOpts = {
   w: 320,
 };
 $ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
 
 <theme-pennwell-website-section-layout section=section>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
   <@above-container>
-    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="lb1" aliases=aliases modifiers=["top-of-page"] />
   </@above-container>
 
   <div class="page-wrapper">

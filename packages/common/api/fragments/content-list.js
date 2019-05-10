@@ -10,6 +10,7 @@ fragment ContentListFragment on Content {
   teaser(input: { maxLength: 500, useFallback: false, truncatedSuffix: "" })
   canonicalPath
   published
+  publishedDate(input: { format: "MMM Do, YYYY" })
   company {
     id
     type

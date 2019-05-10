@@ -2,8 +2,8 @@ import { getAsObject, getAsArray } from '@base-cms/object-path';
 import getAdUnit from '../../utils/gam/get-adunit';
 
 $ const { site } = out.global;
-$ const { name, section, size } = input;
-$ const adunit = getAdUnit(site, { name, section, size });
+$ const { name, aliases, size } = input;
+$ const adunit = getAdUnit(site, { name, aliases, size });
 $ const shouldDisplay = adunit.path && adunit.size;
 
 $ const block = 'ad-container';
