@@ -1,0 +1,74 @@
+import { getAsArray, getAsObject } from '@base-cms/object-path';
+import bem from '../../../utils/bem-class';
+
+$ const block = 'content-contact-details';
+$ const content = getAsObject(input, 'content');
+$ const { header } = input;
+$ const addressFields = ['address1', 'address2', 'city', 'state', 'zip', 'country'];
+$ const showAddress = addressFields.some(k => content[k]);
+$ if (content.email) content.emailLink = `mailto:${content.email}`;
+$ if (content.publicEmail) content.publicEmailLink = `mailto:${content.publicEmail}`;
+$ const socialLinks = getAsArray(content, 'socialLinks');
+
+<div class=block>
+  <if(header)>
+    <div class=bem(block, "header")>
+      <${header} block=block />
+    </div>
+  </if>
+  <if(showAddress)>
+    <div class=bem(block, "section")>
+      <address class=bem(block, "address")>
+        <cms-text-element obj=content field="address1" />
+        <cms-text-element obj=content field="address2" />
+        <cms-text-element obj=content field="cityStateZip" />
+        <cms-text-element obj=content field="country" />
+      </address>
+    </div>
+  </if>
+
+  <div class=bem(block, "section")>
+    <cms-text-element obj=content field="title" />
+    <cms-text-element obj=content field="email" link=true link-path="emailLink" />
+    <cms-text-element obj=content field="publicEmail" link=true link-path="publicEmailLink" />
+    <cms-text-element obj=content field="website" link=true link-path="website" link-attrs={ target: '_blank' } />
+    <if(socialLinks.length)>
+      <div class=bem(block, "social-links")>
+        <for|item| of=socialLinks>
+          <if(item.url && item.provider)>
+            <endeavor-link href=item.url target="_blank">
+              <endeavor-icon name=item.provider.toLowerCase() block=block />
+            </endeavor-link>
+          </if>
+        </for>
+      </div>
+    </if>
+  </div>
+
+  <div class=bem(block, "section")>
+    <if(content.phone)>
+      <div class=bem(block, "field")>
+        <span class=bem(block, "label")>Phone:</span>
+        <cms-text-element tag="tel" obj=content field="phone" />
+      </div>
+    </if>
+    <if(content.mobile)>
+      <div class=bem(block, "field")>
+        <span class=bem(block, "label")>Mobile:</span>
+        <cms-text-element tag="tel" obj=content field="mobile" />
+      </div>
+    </if>
+    <if(content.tollfree)>
+      <div class=bem(block, "field")>
+        <span class=bem(block, "label")>Toll Free:</span>
+        <cms-text-element tag="tel" obj=content field="tollfree" />
+      </div>
+    </if>
+    <if(content.fax)>
+      <div class=bem(block, "field")>
+        <span class=bem(block, "label")>Fax:</span>
+        <cms-text-element tag="tel" obj=content field="fax" />
+      </div>
+    </if>
+  </div>
+</div>

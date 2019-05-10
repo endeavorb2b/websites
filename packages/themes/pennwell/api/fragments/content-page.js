@@ -55,6 +55,31 @@ fragment ContentPageFragment on Content {
       }
     }
   }
+  ... on Addressable {
+    address1
+    address2
+    cityStateZip
+    country
+  }
+  ... on Contactable {
+    phone
+    tollfree
+    fax
+    website
+    title
+    mobile
+    publicEmail
+  }
+  ... on ContentCompany {
+    email
+  }
+  ... on SocialLinkable {
+    socialLinks {
+      provider
+      url
+      label
+    }
+  }
   ... on Media {
     fileSrc
   }

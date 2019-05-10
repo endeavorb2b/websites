@@ -619,28 +619,28 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@base-cms/express-apollo@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/express-apollo/-/express-apollo-0.9.0.tgz#de43d9fd63df7cd47883dfa558a78cf76ce84091"
-  integrity sha512-8zWsbE5GcO6BYUnsmIKrl2tWY0k6w5pA/USavVne/qnl24kGqmv9yvPCB7WnvD+bzHr9EysOfoj5yw1+H4rImA==
+"@base-cms/express-apollo@^0.9.12":
+  version "0.9.12"
+  resolved "https://registry.yarnpkg.com/@base-cms/express-apollo/-/express-apollo-0.9.12.tgz#be8241845059a927db220d6f14318caba20066ef"
+  integrity sha512-VAZUYP61FMOb2QN0gUSjveZ5C3FH/6nl7bbFWmgyC2+fOYFkPjIisHI4iVbUMeWgClDqd2KMIAe9D7HKoNI9GQ==
   dependencies:
-    "@base-cms/graphql-fragment-types" "^0.9.0"
+    "@base-cms/graphql-fragment-types" "^0.9.12"
     apollo-cache-inmemory "^1.4.3"
     apollo-client "^2.4.13"
     apollo-link-http "^1.5.11"
     node-fetch "^2.3.0"
 
-"@base-cms/graphql-fragment-types@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/graphql-fragment-types/-/graphql-fragment-types-0.9.0.tgz#69584a7b87c801ec7377816d8466e4e0fdb05b39"
-  integrity sha512-qtYTo3j4jVCf9g5fnNnfDk0VQ1SJqgrjJb0f4WALOPVJ4a/IvoZ4SYAd3SlWAZA/JLZXUjRvu871HhmG3lIBJQ==
+"@base-cms/graphql-fragment-types@^0.9.12":
+  version "0.9.12"
+  resolved "https://registry.yarnpkg.com/@base-cms/graphql-fragment-types/-/graphql-fragment-types-0.9.12.tgz#61cf16f62107c35198640961ac88a14a3eba89c5"
+  integrity sha512-AD9V5e4SPT2n1566zBs2UaMEhcy075nTxMRjLacXfQBk4qHeujqAXhJstKNyL8NzaJe9C24cBCFlwINAiM4T2g==
   dependencies:
     isomorphic-unfetch "^3.0.0"
 
-"@base-cms/image@^0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-0.9.8.tgz#8dbc564ea39d4ea32d78a215c768f7ba53bdba70"
-  integrity sha512-LwkpGNm1G3/IWz4Uhjo9z7aw1BlnNYK9YmQbVomVUIyKS0OhVwrkq6a/lmZRqfjAAJO0dQbEJXhqz46zjqVw5w==
+"@base-cms/image@^0.9.13":
+  version "0.9.13"
+  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-0.9.13.tgz#0a9435371a1a0b2f1edd4015c9e9a4b225fa011b"
+  integrity sha512-MgXZAO4j3077eVGDkH2iojqj06LDwMzYJTPu2dq7DIg+kELi157DVDrjCxdf+dix/DpC+/z+S6bwBSS+n3nmCQ==
   dependencies:
     "@base-cms/inflector" "^0.9.0"
 
@@ -651,13 +651,13 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.8", "@base-cms/marko-web@~0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.8.tgz#70de7591cc840dae1b4da223f95b8d3641dc3c00"
-  integrity sha512-XZlmVA+rDfs3bY+9KKbHZgi5DCYgvcKE3pUc7kPbVbnLbi8okeD58aUP4I6BaPkGZAefMpN3GTY+B2xBJNpGzg==
+"@base-cms/marko-web@^0.9.13", "@base-cms/marko-web@~0.9.13":
+  version "0.9.13"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.13.tgz#abbc07d977db4fc04a38d83c1b6f7caeba6f9765"
+  integrity sha512-hBF299XgdWL1jdfLnhMnYeg1ijZ0zaWsgvNmzXVe8zOx4tvtWmSMZgJVT1+DAahnHFfwRzsKAVpx+2Xrk7LHUw==
   dependencies:
-    "@base-cms/express-apollo" "^0.9.0"
-    "@base-cms/image" "^0.9.8"
+    "@base-cms/express-apollo" "^0.9.12"
+    "@base-cms/image" "^0.9.13"
     "@base-cms/object-path" "^0.9.0"
     "@base-cms/tenant-context" "^0.9.1"
     "@base-cms/utils" "^0.9.0"
@@ -690,18 +690,18 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.0.tgz#a54bfbd119aaf310ff4cbd0e3ae253f4ecfa8b27"
   integrity sha512-g7+XxYSqtBclVj0FgbRiai70DR+px8oun1jPiOw3hOIUOvlDx1fc7VRsKKWmD+V40t6xYFyJX5qSfTYxqvJvOQ==
 
-"@base-cms/web-cli@~0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.8.tgz#32fdf0e64c1c3796b2d61d039221f155bfcf36c1"
-  integrity sha512-rUY77FmE8rf61phjNUKW81j8hwGHH3TGsFFfrfa/drsKLhq53P1BJRfLodH8VmzhOYzyj+DCsBxSXxzCfJPBJA==
+"@base-cms/web-cli@~0.9.13":
+  version "0.9.13"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.13.tgz#60116b111f1aad7304082055a6aca994aabf81db"
+  integrity sha512-uAa/74BVLfuwACLHMLPFWNBzoCDVkzbvot4Bc+irl87E964Mjrz+n2/Mrd4HICH9FWw0LxQZueMh0iXs5f2LMA==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
     "@babel/preset-env" "^7.4.2"
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
-    "@base-cms/express-apollo" "^0.9.0"
-    "@base-cms/marko-web" "^0.9.8"
+    "@base-cms/express-apollo" "^0.9.12"
+    "@base-cms/marko-web" "^0.9.13"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
