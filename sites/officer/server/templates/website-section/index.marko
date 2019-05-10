@@ -1,6 +1,7 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
 
 $ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
 
 <theme-pennwell-website-section-layout section=section>
   <@head>
@@ -8,7 +9,7 @@ $ const section = getAsObject(data, 'section');
   </@head>
 
   <@above-container>
-    <endeavor-gam-ad-unit-define-display name="BS" section=section modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="BS" aliases=aliases modifiers=["top-of-page"] />
   </@above-container>
 
   <endeavor-content-query-hero
@@ -23,8 +24,8 @@ $ const section = getAsObject(data, 'section');
         skip: 5,
         sectionId: section.id,
       }
-      section=section
       ads={
+        aliases,
         list: { name: "MR" },
         card: { name: "HP" },
       }
