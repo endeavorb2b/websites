@@ -12,7 +12,7 @@
     "vue-recaptcha": "^1.1.1"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "~0.9.8",
+    "@base-cms/marko-web": "~0.9.13",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1"
   },
