@@ -1,15 +1,17 @@
 import { getAsObject, get } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
 
 $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
+$ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', section }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', section }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', section }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', section }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
 
 <theme-pennwell-content-layout content=content>
@@ -38,7 +40,7 @@ $ const adSlots = {
         <endeavor-content-query-related
           exclude-content-ids=[content.id]
           section-id=section.id
-          native-x={ placement: 'listA', index: 4 }
+          native-x={ placement: 'list1', aliases, index: 4 }
         />
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
       </aside>
@@ -56,8 +58,8 @@ $ const adSlots = {
           excludeContentIds: [content.id],
           sectionId: section.id,
         }
-        section=section
-        native-x={ placement: 'card', index: 0 }
+        ads={ aliases }
+        native-x={ placement: 'card', aliases, index: 0 }
       />
     </if>
   </@below-container>
