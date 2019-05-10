@@ -69,11 +69,9 @@ fragment ContentPageFragment on Content {
     title
     mobile
     publicEmail
-    publicEmailLink
   }
   ... on ContentCompany {
     email
-    emailLink
   }
   ... on SocialLinkable {
     socialLinks {
