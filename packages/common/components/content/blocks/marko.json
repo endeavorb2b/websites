@@ -7,13 +7,6 @@
         "required": true
       }
     },
-    "endeavor-content-block-breadcrumbs": {
-      "template": "./breadcrumbs.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      }
-    },
     "endeavor-content-block-contact-details": {
       "template": "./contact-details.marko",
       "@content": {
