@@ -9,7 +9,7 @@ $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600]  }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
 <theme-pennwell-website-section-layout section=section>
@@ -52,5 +52,7 @@ $ const adSlots = {
       }
       ads={ aliases }
     />
+    <endeavor-gam-ad-unit-define-display name="wa" out-of-page=true aliases=aliases />
+    <endeavor-gam-ad-unit-define-display name="reskin" out-of-page=true aliases=aliases />
   </@below-container>
 </theme-pennwell-website-section-layout>
