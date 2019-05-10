@@ -5,9 +5,7 @@ $ const block = 'content-contact-details';
 $ const content = getAsObject(input, 'content');
 $ const { header } = input;
 $ const addressFields = ['address1', 'address2', 'city', 'state', 'zip', 'country'];
-$ const showAddress = addressFields.some(({ field: k }) => content[k]);
-$ if (content.email) content.emailLink = `mailto:${content.email}`;
-$ if (content.publicEmail) content.publicEmailLink = `mailto:${content.publicEmail}`;
+$ const showAddress = addressFields.some(k => content[k]);
 $ const socialLinks = getAsArray(content, 'socialLinks');
 
 <div class=block>
@@ -16,26 +14,16 @@ $ const socialLinks = getAsArray(content, 'socialLinks');
       <${header} block=block />
     </div>
   </if>
-  <!-- <if(showAddress)> -->
-  <div class=bem(block, "section")>
-    <address class=bem(block, "address")>
-      <cms-text-element tag="div" obj=content field="address1" />
-      <cms-text-element tag="div" obj=content field="address2" />
-      <div class=bem(block, "address__combined")>
-        <cms-text-element tag="span" obj=content field="city" />
-        <cms-text-element tag="span" obj=content field="state">
-          <@before>, </@before>
-        </cms-text-element>
-        <cms-text-element tag="span" obj=content field="zip">
-          <@before> </@before>
-        </cms-text-element>
-        <cms-text-element tag="span" obj=content field="country">
-          <@before> </@before>
-        </cms-text-element>
-      </div>
-    </address>
-  </div>
-  <!-- </if> -->
+  <if(showAddress)>
+    <div class=bem(block, "section")>
+      <address class=bem(block, "address")>
+        <cms-text-element obj=content field="address1" />
+        <cms-text-element obj=content field="address2" />
+        <cms-text-element obj=content field="cityStateZip" />
+        <cms-text-element obj=content field="country" />
+      </address>
+    </div>
+  </if>
 
   <div class=bem(block, "section")>
     <cms-text-element obj=content field="title" />

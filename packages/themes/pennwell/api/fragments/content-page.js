@@ -58,9 +58,7 @@ fragment ContentPageFragment on Content {
   ... on Addressable {
     address1
     address2
-    city
-    state
-    zip
+    cityStateZip
     country
   }
   ... on Contactable {
@@ -71,11 +69,13 @@ fragment ContentPageFragment on Content {
     title
     mobile
     publicEmail
+    publicEmailLink
   }
   ... on ContentCompany {
     email
-  # }
-  # ... on SocialLinkable {
+    emailLink
+  }
+  ... on SocialLinkable {
     socialLinks {
       provider
       url
