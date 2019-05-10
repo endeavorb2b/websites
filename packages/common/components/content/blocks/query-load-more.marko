@@ -1,5 +1,6 @@
 import { getAsObject } from '@base-cms/object-path';
 import { asArray, asObject } from '@base-cms/utils';
+import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
 import { useNativeX } from '../../../services/native-x';
 
@@ -33,6 +34,7 @@ $ const adListInput = {
 };
 $ const nativeX = getAsObject(input, 'nativeX');
 $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
+$ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const cardNodes = asArray(nodes.slice(0, 10));
@@ -52,7 +54,7 @@ $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
                   fallback-vars={
                     url: content.canonicalPath,
                     content: { title: content.shortName, type: content.typeTitled, published: content.publishedDate },
-                    image: { src: image.src, alt: image.alt },
+                    image: { src: buildImgixUrl(image.src, imageOptions, undefined, image.isLogo), alt: image.alt },
                     section: { name: section.name },
                   }
                 />
@@ -61,7 +63,7 @@ $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
                 <endeavor-content-block-item
                   content=content
                   image-modifiers=["fluid", "21by9"]
-                  image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                  image-options=imageOptions
                   image-position="top"
                   modifiers=["card"]
                 />

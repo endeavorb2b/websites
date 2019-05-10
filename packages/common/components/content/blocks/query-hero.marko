@@ -1,5 +1,6 @@
 import { asArray, asObject } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
+import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
 import { useNativeX } from '../../../services/native-x';
 
@@ -12,6 +13,7 @@ $ const params = {
 };
 $ const nativeX = getAsObject(input, 'nativeX');
 $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
+$ const listImageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   $ const heroNode = asObject(nodes[0]);
@@ -44,7 +46,7 @@ $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
                   fallback-vars={
                     url: item.canonicalPath,
                     content: { title: item.shortName, type: item.typeTitled, published: item.publishedDate },
-                    image: { src: image.src, alt: image.alt },
+                    image: { src: buildImgixUrl(image.src, listImageOptions, undefined, image.isLogo), alt: image.alt },
                     section: { name: section.name },
                   }
                 />
@@ -53,7 +55,7 @@ $ const nativeXEnabled = useNativeX(nativeX.placement, nativeX.index, site);
                 <endeavor-content-block-item
                   content=item
                   image-position="right"
-                  image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-options=listImageOptions
                   image-width=75
                   image-height=75
                 />
