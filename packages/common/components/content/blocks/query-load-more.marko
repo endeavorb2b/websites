@@ -1,4 +1,4 @@
-import { getAsObject } from '@base-cms/object-path';
+import { getAsObject, getAsArray } from '@base-cms/object-path';
 import { asArray, asObject } from '@base-cms/utils';
 import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
@@ -17,16 +17,14 @@ $ const loadMore = {
   ...input.loadMore,
 };
 
-$ const section = asObject(input.section);
+$ const adAliases = getAsArray(input, 'ads.aliases');
 $ const adCardInput = {
-  section: { hierarchy: section.hierarchy },
   name: 'load-more',
   size: [300, 250],
   modifiers: ['in-card'],
   ...getAsObject(input, 'ads.card'),
 };
 $ const adListInput = {
-  section: { hierarchy: section.hierarchy },
   name: 'load-more',
   size: [300, 600],
   modifiers: ['in-card'],
@@ -71,7 +69,7 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>
-                <endeavor-gam-ad-unit-define-display ...adCardInput/>
+                <endeavor-gam-ad-unit-define-display ...adCardInput aliases=adAliases />
               </div>
             </if>
           </for>
@@ -81,7 +79,7 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
       <if(listNodes.length)>
         <div class="row">
           <div class=`${block}__col-ad`>
-            <endeavor-gam-ad-unit-define-display ...adListInput />
+            <endeavor-gam-ad-unit-define-display ...adListInput aliases=adAliases />
           </div>
 
           <div class=`${block}__col-list`>
@@ -105,11 +103,11 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
     $ delete query.queryFragment;
     $ delete query.renderBody;
     $ query.after = endCursor;
-    $ delete input.section;
     $ const provide = {
       ...input,
       query,
       ads: {
+        aliases: adAliases,
         card: adCardInput,
         list: adListInput,
       },
