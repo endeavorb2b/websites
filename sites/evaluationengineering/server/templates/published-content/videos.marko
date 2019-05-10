@@ -1,6 +1,6 @@
 import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
 
-$ const { site, config } = out.global;
+$ const { config } = out.global;
 $ const query = { contentTypes: ['Video'], limit: 10 };
 $ const page = pageDetails('Videos', config);
 
@@ -36,6 +36,8 @@ $ const page = pageDetails('Videos', config);
         }
       />
     </div>
+    <endeavor-gam-ad-unit-define-display name="wa" out-of-page=true />
+    <endeavor-gam-ad-unit-define-display name="reskin" out-of-page=true />
   </@below-container>
 
 </theme-pennwell-published-content-layout>
