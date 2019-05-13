@@ -9,23 +9,23 @@ $ const siteName = config.siteName();
 
 <header class=navbar>
 
-  <nav class=`${bem(navbar, 'secondary')} navbar`>
+  <nav class=bem(navbar, 'secondary')>
     <div class="site-navbar-container">
       <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
 
-      <a class=`${bem(navbar, 'brand')} navbar-brand` title=`${siteName} Homepage` href="/">
+      <a class=bem(navbar, 'brand') title=`${siteName} Homepage` href="/">
         <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
       </a>
-      <ul class="navbar-nav site-navbar-items site-navbar-items--secondary">
+      <ul class="site-navbar-items site-navbar-items--secondary">
         <for|item| of=site.getAsArray('secondaryNavItems')>
-          <li class=`${bem(nav, 'item')} nav-item`>
-            <endeavor-link class=`${bem(nav, 'link')} nav-link` target=item.target href=item.href>${item.label}</endeavor-link>
+          <li class=bem(nav, 'item')>
+            <endeavor-link class=bem(nav, 'link') target=item.target href=item.href>${item.label}</endeavor-link>
           </li>
         </for>
       </ul>
-      <ul class="navbar-nav site-navbar-items site-navbar-items--tertiary">
-        <li class=`${bem(nav, 'item')} nav-item`>
-          <a class=`${bem(nav, 'link', ['search'])} nav-link` title=`Search ${siteName}` href="/search">
+      <ul class="site-navbar-items site-navbar-items--tertiary">
+        <li class=bem(nav, 'item')>
+          <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
             <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
           </a>
         </li>
@@ -33,12 +33,12 @@ $ const siteName = config.siteName();
     </div>
   </nav>
 
-  <nav class=`${bem(navbar, 'primary')} navbar`>
+  <nav class=bem(navbar, 'primary')>
     <div class="site-navbar-container">
-      <ul class="navbar-nav site-navbar-items site-navbar-items--primary">
+      <ul class="site-navbar-items site-navbar-items--primary">
         <for|item| of=site.getAsArray('primaryNavItems')>
-          <li class=`${bem(nav, 'item')} nav-item`>
-            <endeavor-link class=`${bem(nav, 'link')} nav-link` target=item.target href=item.href>${item.label}</endeavor-link>
+          <li class=bem(nav, 'item')>
+            <endeavor-link class=bem(nav, 'link') target=item.target href=item.href>${item.label}</endeavor-link>
           </li>
         </for>
       </ul>
