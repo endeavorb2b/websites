@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "private": true,
   "dependencies": {
     "@base-cms/image": "^0.9.16",
