@@ -236,9 +236,9 @@ services:
       PORT: 80
       EXPOSED_PORT: 12161
       LIVERELOAD_PORT: 35161
-      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilons.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://aerilons.rss.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilons.graphql.base-cms.io}
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_leds
     ports:
       - "12161:80"

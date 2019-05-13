@@ -4,9 +4,9 @@ module.exports = {
   ads,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=30',
+      src: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=60 2x',
+        'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=120 2x',
       ],
     },
     footer: {

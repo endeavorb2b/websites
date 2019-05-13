@@ -1,5 +1,4 @@
 import { getAsObject } from '@base-cms/object-path';
-
 $ const { site } = out.global;
 $ const page = getAsObject(data, 'page');
 
@@ -26,4 +25,9 @@ $ const page = getAsObject(data, 'page');
       </div>
     </div>
   </div>
+
+  <@below-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+  </@below-container>
 </theme-pennwell-dynamic-page-layout>

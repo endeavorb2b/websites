@@ -9,6 +9,7 @@ $ const shouldDisplay = adunit.path && adunit.size;
 $ const block = 'ad-container';
 $ const modifiers = Array.isArray(input.modifiers) ? input.modifiers.map(mod => `${block}--${mod}`) : [];
 $ const classNames = [block, ...modifiers, input.class];
+$ const inc = Math.floor(Math.random() * 1000);
 
 <if(shouldDisplay)>
   <cms-ad-gam-define-display
@@ -16,5 +17,6 @@ $ const classNames = [block, ...modifiers, input.class];
     size=adunit.size
     size-mapping=adunit.sizeMapping
     class=classNames
+    inc=inc
   />
 </if>

@@ -21,12 +21,15 @@ body {
     max-width: map-get($grid-breakpoints, "xl");
   }
   flex-shrink: 0;
-  padding-top: 90px;
+  padding-top: 120px;
   margin-top: map-get($spacers, 4);
   @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
-    padding-top: 85px;
+    padding-top: 117px;
   }
   @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
+    padding-top: 84px;
+  }
+  @media (max-width: map-get($theme-site-nav-secondary-breakpoints, hide)) {
     padding-top: 54px;
   }
 }
