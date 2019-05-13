@@ -10,9 +10,9 @@ module.exports = {
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=50',
+      src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=100 2x',
+        'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=120 2x',
       ],
     },
   },
@@ -80,7 +80,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#1371b8',
-      logo: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=50',
+      logo: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=60',
     },
   },
 };
