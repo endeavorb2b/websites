@@ -39,8 +39,8 @@ const display = (payload) => {
   const adContainer = $('<div />').addClass('reveal-ad').addClass(`reveal-ad--${options.boxShadow}-shadow`);
   adContainer.html($('<a/>', { href, title: alt, target: '_blank' }).append($('<img />', { src, alt })));
 
-  const revealBackground = $('<a/>', { href, target: '_blank' }).addClass('reveal-background').css({ backgroundColor, backgroundImage });
-  $('body').prepend(revealBackground);
+  const revealBackground = $('<a/>', { href, target: '_blank' }).addClass('reveal-background').css({ backgroundImage });
+  $('body').css({ backgroundColor }).prepend(revealBackground);
 
   revealBackground.show();
   $('.container-fluid-max > .ad-container').before(adContainer);
