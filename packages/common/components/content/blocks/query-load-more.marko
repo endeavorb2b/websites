@@ -8,8 +8,8 @@ $ const { site } = out.global;
 $ const pageNumber = input.pageNumber || 1;
 $ const block = 'content-query-load-more';
 $ const query = {
-  ...input.query,
   limit: 15,
+  ...input.query,
   queryFragment: contentListFragment,
 };
 
