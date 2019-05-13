@@ -30,15 +30,12 @@ module.exports = {
     { href: '/horticultural-lighting', label: 'Horticultural Lighting' },
   ],
   secondaryNavItems: [
-    { href: 'https://buyersguide.ledsmagazine.com/index.html', label: 'LED & Lighting Industry Guide', target: '_blank' },
+    { href: 'https://buyersguide.ledsmagazine.com/index.html', label: 'Industry Guide', target: '_blank' },
     { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
     { href: 'http://horticulturelightingconference.com', label: 'Horticultural Conference', target: '_blank' },
-    { href: 'https://www.strategies-u.com/index.html', label: 'Market Research', target: '_blank' },
+    { href: 'https://www.strategies-u.com/index.html', label: 'Research', target: '_blank' },
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'Videos' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
@@ -52,6 +49,10 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://buyersguide.ledsmagazine.com/index.html', label: 'Industry Guide', target: '_blank' },
+      { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
+      { href: 'http://horticulturelightingconference.com', label: 'Horticultural Conference', target: '_blank' },
+      { href: 'https://www.strategies-u.com/index.html', label: 'Research', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
