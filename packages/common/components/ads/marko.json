@@ -25,11 +25,7 @@
       },
       "@class": "string",
       "@modifiers": "array",
-      "@size": "array",
-      "@out-of-page": {
-        "type": "boolean",
-        "default-value": false
-      }
+      "@size": "array"
     },
     "endeavor-gam-ad-unit-out-of-page": {
       "template": "./gam-adunit-out-of-page.marko",
