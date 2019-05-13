@@ -21,19 +21,19 @@
     }
 
     &--brand {
-      background-color: $theme-site-footer-primary-bg-color;
+      background-color: $theme-site-nav-secondary-bg-color;
     }
 
     &--links {
-      background-color: $theme-site-footer-secondary-bg-color;
+      background-color: $theme-site-nav-primary-bg-color;
     }
   }
 
   &__brand {
     display: inline-block;
     img {
-      height: 50px;
-      filter: brightness(0) invert(1) drop-shadow($drop-shadow);
+      height: 60px;
+      filter: drop-shadow($drop-shadow);
       @include media-breakpoint-down(sm) {
         height: 30px;
       }
