@@ -7,3 +7,6 @@ $info: #6c757d !default; // equivalent to default gray-600
 $theme-site-nav-secondary-bg-color: #fff;
 $theme-site-nav-primary-bg-color: #254497;
 $theme-site-nav-secondary-type: light;
+$theme-site-nav-secondary-breakpoints: (
+  hide: 960px
+);

@@ -156,6 +156,31 @@
   }
 }
 
+@mixin theme-navbar-display() {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+}
+
+@mixin theme-navbar-link-color($type) {
+  @if $type == dark {
+    color: $navbar-dark-color;
+  } @else {
+    color: $navbar-light-color;
+  }
+}
+
+@mixin theme-navbar-link-hover-color($type) {
+  @if $type == dark {
+    color: $navbar-dark-hover-color;
+  } @else {
+    color: $navbar-light-hover-color;
+  }
+}
+
 @mixin theme-embed-responsive($ratio-x, $ratio-y) {
   position: relative;
   display: block;

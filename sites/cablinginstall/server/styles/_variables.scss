@@ -8,3 +8,6 @@ $theme-site-nav-secondary-bg-color: #fff;
 $theme-site-nav-primary-bg-color: #ee2e30;
 $theme-site-nav-menu-hover-color: lighten($theme-site-nav-primary-bg-color, 40%);
 $theme-site-nav-secondary-type: light;
+$theme-site-nav-secondary-breakpoints: (
+  hide: 920px
+);
