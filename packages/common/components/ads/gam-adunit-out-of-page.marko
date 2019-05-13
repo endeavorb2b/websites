@@ -5,7 +5,7 @@ $ const { site } = out.global;
 $ const { name, aliases } = input;
 $ const adunit = getAdUnit(site, { name, aliases });
 $ const shouldDisplay = adunit.path;
-$ const inc = Math.floor(Math.random() * Math.floor(1000));
+$ const inc = Math.floor(Math.random() * 1000);
 
 <if(shouldDisplay)>
   <cms-ad-gam-out-of-page
