@@ -9,8 +9,8 @@ const LB = {
 const CONTENT = {
   size: [[300, 250], [300, 600]],
 };
-const RESKIN = { outOfPage: true };
-const WA = { outOfPage: true };
+const RESKIN = {};
+const WA = {};
 
 const path = unit => `/21687441225/ILS/${unit}`;
 

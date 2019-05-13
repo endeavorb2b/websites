@@ -4,7 +4,7 @@ import getAdUnit from '../../utils/gam/get-adunit';
 $ const { site } = out.global;
 $ const { name, aliases } = input;
 $ const adunit = getAdUnit(site, { name, aliases });
-$ const shouldDisplay = adunit.path && adunit.outOfPage;
+$ const shouldDisplay = adunit.path;
 $ const inc = Math.floor(Math.random() * Math.floor(1000));
 
 <if(shouldDisplay)>
