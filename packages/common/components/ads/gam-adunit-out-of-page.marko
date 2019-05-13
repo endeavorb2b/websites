@@ -1,0 +1,15 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+import getAdUnit from '../../utils/gam/get-adunit';
+
+$ const { site } = out.global;
+$ const { name, aliases } = input;
+$ const adunit = getAdUnit(site, { name, aliases });
+$ const shouldDisplay = adunit.path && adunit.outOfPage;
+$ const inc = Math.floor(Math.random() * Math.floor(1000));
+
+<if(shouldDisplay)>
+  <cms-ad-gam-out-of-page
+    ad-unit-path=adunit.path
+    inc=inc
+  />
+</if>
