@@ -1,4 +1,5 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
 
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
@@ -30,5 +31,7 @@ $ const aliases = hierarchyAliases(section);
         card: { name: "HP" },
       }
     />
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
   </@below-container>
 </theme-pennwell-website-section-layout>

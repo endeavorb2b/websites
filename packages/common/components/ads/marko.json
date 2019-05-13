@@ -27,6 +27,11 @@
       "@modifiers": "array",
       "@size": "array"
     },
+    "endeavor-gam-ad-unit-out-of-page": {
+      "template": "./gam-adunit-out-of-page.marko",
+      "@aliases": "array",
+      "@name": "string"
+    },
     "endeavor-gam-ad-unit-display": {
       "template": "./gam-adunit-display.marko",
       "@id": {
