@@ -5,18 +5,16 @@
 <script>
 import $ from '@base-cms/marko-web/browser/jquery';
 
-const isJson = (str) => {
+const parseJson = (str) => {
   try {
-    JSON.parse(str);
-    return true;
+    return JSON.parse(str);
   } catch (e) {
-    return false;
+    return {};
   }
 };
 
 const defaults = {
   backgroundColor: 'transparent',
-  boxShadow: 'no', // light, dark
 };
 
 /**
@@ -34,12 +32,17 @@ const display = (payload) => {
   const options = { ...defaults, ...payload };
   const { adClickUrl: href, backgroundColor, backgroundImagePath } = options;
   const { adImagePath: src, adTitle: alt } = options;
-  const backgroundImage = `url(" ${backgroundImagePath}")`;
+  const backgroundImage = `url("${backgroundImagePath}")`;
 
-  const adContainer = $('<div />').addClass('reveal-ad').addClass(`reveal-ad--${options.boxShadow}-shadow`);
-  adContainer.html($('<a/>', { href, title: alt, target: '_blank' }).append($('<img />', { src, alt })));
+  const title = alt;
+  const target = '_blank';
+  const rel = 'noopener noreferrer';
 
-  const revealBackground = $('<a/>', { href, target: '_blank' }).addClass('reveal-background').css({ backgroundImage });
+  const adContainer = $('<div>').addClass('reveal-ad');
+  if (options.boxShadow) adContainer.addClass(`reveal-ad--${options.boxShadow}-shadow`);
+  adContainer.html($('<a>', { href, title, target, rel }).append($('<img>', { src, alt })));
+
+  const revealBackground = $('<a>', { href, target, rel }).addClass('reveal-ad-background').css({ backgroundImage });
   $('body').css({ backgroundColor }).prepend(revealBackground);
 
   revealBackground.show();
@@ -48,20 +51,22 @@ const display = (payload) => {
 };
 
 const listener = function (e) {
-  const payload = isJson(e.data) ? JSON.parse(e.data) : {};
+  const payload = parseJson(e.data);
   if (['adImagePath', 'adTitle', 'backgroundImagePath', 'adClickUrl'].every(k => payload[k])) {
     display(payload);
-    this.fired = true;
     removeListener();
   }
 };
 
+const addListener = () => window.addEventListener('message', listener, false);
 const removeListener = () => window.removeEventListener('message', listener, false);
 
 export default {
-  data: () => ({ fired: false }),
   created() {
-    window.addEventListener('message', listener, false);
+    addListener();
+  },
+  beforeDestroy() {
+    removeListener();
   },
 };
 </script>
