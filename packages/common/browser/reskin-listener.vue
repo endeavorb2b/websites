@@ -17,17 +17,6 @@ const defaults = {
   backgroundColor: 'transparent',
 };
 
-/**
- * Required:
- * adImagePath
- * adTitle
- * backgroundImagePath
- * adClickUrl
- *
- * Optional
- * backgroundColor
- * boxShadow
- */
 const display = (payload) => {
   const options = { ...defaults, ...payload };
   const { adClickUrl: href, backgroundColor, backgroundImagePath } = options;
