@@ -35,7 +35,7 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/videos', label: 'Videos' },
     { href: '/btr-america-latina', label: 'BTR America Latina' },
-    // { href: '#', label: 'Diamond Tech Reviews' },
+    { href: 'https://diamondtechreviews.secure-platform.com/a', label: 'Diamond Tech Reviews' },
     { href: '/page/advertise', label: 'Advertise' },
     { href: '/page/about-us', label: 'About Us' },
   ],
@@ -51,8 +51,8 @@ module.exports = {
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
       { href: '/btr-america-latina', label: 'BTR America Latina' },
+      { href: 'https://diamondtechreviews.secure-platform.com/a', label: 'Diamond Tech Reviews' },
       { href: '/on-topic', label: 'On Topic' },
-      // { href: '#', label: 'Diamond Tech Reviews' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
@@ -79,5 +79,6 @@ module.exports = {
       bgColor: '#254497',
       logo: 'https://base.imgix.net/files/base/pennwell/btr/logo.png?h=60',
     },
+    to: 'juliac@pennwell.com',
   },
 };

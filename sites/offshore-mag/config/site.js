@@ -80,5 +80,6 @@ module.exports = {
       bgColor: '#094e85',
       logo: 'https://base.imgix.net/files/base/pennwell/os/logo.png?h=60',
     },
+    to: 'pwestervelt@pennwell.com',
   },
 };

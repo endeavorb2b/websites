@@ -71,5 +71,6 @@ module.exports = {
       bgColor: '#000',
       logo: 'https://base.imgix.net/files/base/pennwell/pia/logo.png?h=60',
     },
+    to: 'zacharyk@pennwell.com',
   },
 };
