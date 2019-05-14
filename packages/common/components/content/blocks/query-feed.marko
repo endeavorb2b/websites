@@ -10,6 +10,7 @@ $ const params = {
   limit: 10,
   ...input,
   queryFragment: contentListFragment,
+  queryName: 'QueryFeed',
 };
 $ const nativeX = getAsObject(input, 'nativeX');
 $ const nativeXEnabled = useNativeX(site, {

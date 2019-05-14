@@ -9,6 +9,7 @@ $ const params = {
   limit: 5,
   ...input,
   queryFragment: contentListFragment,
+  queryName: 'QueryRelated',
 };
 $ const header = input.header || 'Related Content';
 $ const nativeX = getAsObject(input, 'nativeX');
