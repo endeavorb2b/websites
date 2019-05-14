@@ -10,7 +10,7 @@ $ const children = getAsArray(section, 'hierarchy');
   <for|child| of=children>
     <if(section.alias !== 'home')>
       <@item>
-        <endeavor-link title=child.name href=child.alias>${child.name}</endeavor-link>
+        <endeavor-link title=child.name href=`/${child.alias}`>${child.name}</endeavor-link>
       </@item>
     </if>
   </for>
