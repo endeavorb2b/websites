@@ -82,5 +82,6 @@ module.exports = {
       bgColor: '#1371b8',
       logo: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=60',
     },
+    to: 'juliac@pennwell.com',
   },
 };
