@@ -33,8 +33,6 @@ const display = (payload) => {
 
   const revealBackground = $('<a>', { href, target, rel }).addClass('reveal-ad-background').css({ backgroundImage });
   $('body').css({ backgroundColor }).prepend(revealBackground);
-
-  revealBackground.show();
   $('.container-fluid-max > .ad-container').before(adContainer);
   $('.container-fluid-max').append(adContainer.clone());
 };
