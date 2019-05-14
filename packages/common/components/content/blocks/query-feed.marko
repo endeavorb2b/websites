@@ -17,7 +17,7 @@ $ const nativeXEnabled = useNativeX(site, {
   index: nativeX.index,
   aliases: nativeX.aliases,
 });
-$ const imageOptions = { w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
+$ const imageOptions = { w: 150, h: 150, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...params>
   $ const listNodes = asArray(nodes);
@@ -43,8 +43,8 @@ $ const imageOptions = { w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.
               content=item
               image-position="left"
               image-options=imageOptions
-              image-width=176
-              image-height=99
+              image-width=100
+              image-height=100
             />
           </else>
         </@item>
