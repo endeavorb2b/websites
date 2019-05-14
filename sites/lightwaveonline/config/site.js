@@ -24,12 +24,12 @@ module.exports = {
   primaryNavItems: [
     { href: '/network-design', label: 'Network Design' },
     { href: '/fttx', label: 'FTTX' },
-    { href: '/sdn-nfv', label: 'SDN/NFV' },
+    { href: '/network-automation', label: 'Network Automation' },
     { href: '/data-center', label: 'Data Center' },
+    { href: '/5g-mobile', label: '5G Mobile' },
     { href: '/test', label: 'Test' },
     { href: '/optical-tech', label: 'Optical Tech' },
     { href: '/business', label: 'Business' },
-    { href: '/education', label: 'Education' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
@@ -50,6 +50,7 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '/on-topic', label: 'On Topic' },
       { href: 'https://buyersguide.lightwaveonline.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
       { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews', target: '_blank' },
     ],
