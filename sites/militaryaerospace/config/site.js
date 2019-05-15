@@ -23,7 +23,7 @@ module.exports = {
   ],
   primaryNavItems: [
     { href: '/computers', label: 'Computers' },
-    { href: '/cyber', label: 'Cyber' },
+    { href: '/trusted-computing', label: 'Trusted Computing' },
     { href: '/unmanned', label: 'Unmanned' },
     { href: '/sensors', label: 'Sensors' },
     { href: '/rf-analog', label: 'RF/Analog' },
