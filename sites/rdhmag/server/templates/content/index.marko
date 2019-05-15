@@ -40,6 +40,7 @@ $ const adSlots = {
         <endeavor-content-query-related
           exclude-content-ids=[content.id]
           section-id=section.id
+          native-x={ placement: 'list1', aliases, index: 4 }
         />
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
       </aside>
@@ -59,6 +60,7 @@ $ const adSlots = {
           sectionId: section.id,
         }
         ads={ aliases }
+        native-x={ placement: 'card', aliases, index: 0 }
       />
     </if>
 

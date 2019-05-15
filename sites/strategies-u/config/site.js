@@ -16,11 +16,18 @@ module.exports = {
       ],
     },
   },
-  primaryNavItems: [],
+  primaryNavItems: [
+    { href: '/reports', label: 'Reports' },
+    { href: '/page/custom-research', label: 'Custom Research' },
+    { href: '/page/surveys', label: 'Surveys' },
+    { href: '/analysts', label: 'Analysts' },
+    { href: '/blogs', label: 'Blogs' },
+    { href: '/press-releases', label: 'Press Releases' },
+  ],
   secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: '/page/events-conferences', label: 'Events & Conferences' },
+    { href: '/contact-us', label: 'Contact Us' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -31,13 +38,10 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
+      { href: '/page/events-conferences', label: 'Events & Conferences' },
     ],
     userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },

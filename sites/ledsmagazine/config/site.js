@@ -1,7 +1,9 @@
 const ads = require('./ads');
+const nativeX = require('./native-x');
 
 module.exports = {
   ads,
+  nativeX,
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/pennwell/leds/logo.png?h=60',
