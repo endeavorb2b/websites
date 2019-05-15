@@ -47,13 +47,13 @@
 
   &__title {
     margin-bottom: $theme-element-group-margin;
-    @include theme-heading(h6);
+    @include theme-heading(list);
     &:empty {
       display: none;
     }
 
     a {
-      @include theme-max-lines($line-height: 24px, $line-height-sm: 20px);
+      @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
       color: $black;
     }
 
