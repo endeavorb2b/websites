@@ -32,7 +32,6 @@ module.exports = {
     { href: '/boards-software', label: 'Boards & Software' },
     { href: '/embedded', label: 'Embedded' },
     { href: '/unmanned', label: 'Unmanned' },
-    { href: '/nextgen', label: 'NextGen' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },

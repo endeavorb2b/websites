@@ -7,11 +7,6 @@ module.exports = {
       list1: { id: '5cdc118ff41dfb000116d9f6' },
       card: { id: '5cdc1185f41dfb000116d8c0' },
     },
-    nextgen: {
-      list2: { id: '5cdc1270f41dfb000116f9dd' },
-      list1: { id: '5cdc1277399378000128b2a6' },
-      card: { id: '5cdc126a399378000128b0eb' },
-    },
     unmanned: {
       list2: { id: '5cdc1258399378000128ae18' },
       list1: { id: '5cdc1261399378000128af7d' },
