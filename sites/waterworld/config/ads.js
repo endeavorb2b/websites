@@ -74,12 +74,12 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/technologies/disinfection/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/technologies/disinfection/load-more') },
   },
-  'municipal/technologies/lab-sampling': {
-    lb1: { ...LB, path: path('municipal/technologies/lab-sampling/lb1') },
-    lb2: { ...LB, path: path('municipal/technologies/lab-sampling/lb2') },
-    rail1: { ...CONTENT, path: path('municipal/technologies/lab-sampling/rail1') },
-    rail2: { ...CONTENT, path: path('municipal/technologies/lab-sampling/rail2') },
-    'load-more': { ...CONTENT, path: path('municipal/technologies/lab-sampling/load-more') },
+  'municipal/technologies/lab-sampling-analytical': {
+    lb1: { ...LB, path: path('municipal/technologies/lab-sampling-analytical/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/lab-sampling-analytical/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/lab-sampling-analytical/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/lab-sampling-analytical/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/lab-sampling-analytical/load-more') },
   },
   'municipal/technologies/pipes': {
     lb1: { ...LB, path: path('municipal/technologies/pipes/lb1') },
