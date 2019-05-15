@@ -25,6 +25,7 @@ $ const adSlots = {
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
+    native-x={ placement: 'list1', index: 3 }
   />
 
   <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
@@ -33,10 +34,20 @@ $ const adSlots = {
     <div class="col-lg-8">
       <div class="row">
         <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="dental-hygiene" header="Dental Hygiene" />
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="dental-hygiene"
+            header="Dental Hygiene"
+            native-x={ placement: 'list1', aliases: ['dental-hygiene'], index: 3 }
+          />
         </div>
         <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list limit=4 section-alias="clinical" header="Clinical" />
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="clinical"
+            header="Clinical"
+            native-x={ placement: 'list1', aliases: ['clinical'], index: 3 }
+          />
         </div>
       </div>
     </div>
@@ -47,10 +58,20 @@ $ const adSlots = {
   </div>
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=3 section-alias="products" header="Products" />
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="products"
+        header="Products"
+        native-x={ placement: 'list1', aliases: ['products'], index: 2 }
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=3 section-alias="practice-management" header="Practice Management" />
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="practice-management"
+        header="Practice Management"
+        native-x={ placement: 'list1', aliases: ['practice-management'], index: 2 }
+      />
     </div>
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
@@ -65,10 +86,20 @@ $ const adSlots = {
   </div>
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=3 section-alias="front-office" header="Front Office" />
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="front-office"
+        header="Front Office"
+        native-x={ placement: 'list1', aliases: ['front-office'], index: 2 }
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=3 section-alias="dental-assisting" header="Dental Assisting" />
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="dental-assisting"
+        header="Dental Assisting"
+        native-x={ placement: 'list1', aliases: ['dental-assisting'], index: 2 }
+      />
     </div>
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
@@ -94,6 +125,7 @@ $ const adSlots = {
         maxPages: 0,
       }
       ads={ aliases }
+      native-x={ placement: 'card', aliases, index: 0 }
     />
 
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
