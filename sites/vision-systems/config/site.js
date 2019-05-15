@@ -24,7 +24,9 @@ module.exports = {
   primaryNavItems: [
     { href: '/factory', label: 'Factory' },
     { href: '/non-factory', label: 'Non-Factory' },
-    { href: '/cameras', label: 'Cameras' },
+    { href: '/cameras-accessories', label: 'Cameras & Accessories' },
+    { href: '/lighting-optics', label: 'Lighting & Optics' },
+    { href: '/3d-imaging', label: '3D Imaging' },
     { href: '/boards-software', label: 'Boards & Software' },
     { href: '/embedded', label: 'Embedded' },
     { href: '/unmanned', label: 'Unmanned' },
