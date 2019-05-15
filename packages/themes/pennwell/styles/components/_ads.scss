@@ -34,3 +34,27 @@
     }
   }
 }
+
+.reveal-ad-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.reveal-ad {
+  position: relative;
+  width: 300px;
+  margin: 0 auto map-get($spacers, block);
+  &--light-shadow {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, .2), 0 6px 20px 0 rgba(255, 255, 255, .19);
+  }
+  &--dark-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  }
+}
