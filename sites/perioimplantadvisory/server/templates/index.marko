@@ -34,13 +34,24 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=4
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 3 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="clinical-tips"
+            header={ title: "Clinical Tips", href: "/clinical-tips" }
+            native-x={ placement: 'list1', aliases: ['clinical-tips'], index: 3 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="dental-implants"
+            header={ title: "Dental Implants", href: "/dental-implants" }
+            native-x={ placement: 'list1', aliases: ['dental-implants'], index: 3 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -50,34 +61,27 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="periodontics"
+        header={ title: "Periodontics", href: "/periodontics" }
+        native-x={ placement: 'list1', aliases: ['periodontics'], index: 2 }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          requiresImage: false,
-          contentTypes: ["Whitepaper"],
-          limit: 4,
-        }
-        with-image=false
-        header={ title: "White Papers", href: "/white-papers" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="practice-management"
+        header={ title: "Practice Management", href: "/practice-management" }
+        native-x={ placement: 'list1', aliases: ['practice-management'], index: 2 }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          requiresImage: false,
-          contentTypes: ["Webinar"],
-          limit: 4,
-        }
-        with-image=false
-        header={ title: "Webcasts", href: "/webcasts" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="restorative-dentistry"
+        header={ title: "Restorative Dentistry", href: "/restorative-dentistry" }
+        native-x={ placement: 'list1', aliases: ['restorative-dentistry'], index: 2 }
       />
     </div>
   </div>
