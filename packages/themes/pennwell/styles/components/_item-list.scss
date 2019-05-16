@@ -38,6 +38,10 @@
       &:last-child {
         @include border-bottom-radius(0);
       }
+
+      a {
+        @include theme-card-header-color();
+      }
     }
   }
 
