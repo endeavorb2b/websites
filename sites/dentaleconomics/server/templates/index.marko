@@ -34,17 +34,55 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=4
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 3 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="macro-op-ed"
+            header={ title: "Macro/Op-Ed", href: "/macro-op-ed" }
+            native-x={ placement: 'list1', aliases: ['macro-op-ed'], index: 3 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="practice"
+            header={ title: "Practice", href: "/practice" }
+            native-x={ placement: 'list1', aliases: ['practice'], index: 3 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="science-tech"
+        header={ title: "Science & Tech", href: "/science-tech" }
+        native-x={ placement: 'list1', aliases: ['science-tech'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="money"
+        header={ title: "Money", href: "/money" }
+        native-x={ placement: 'list1', aliases: ['money'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="dental-office-design"
+        header={ title: "Dental Office Design", href: "/dental-office-design" }
+        native-x={ placement: 'list1', aliases: ['dental-office-design'], index: 2 }
+      />
     </div>
   </div>
 
@@ -70,7 +108,12 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5c9a271747062ba1048b4569" header="Current Issue" />
+      <endeavor-magazine-query-latest-issue 
+        publication-id="5c9a271747062ba1048b4569"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
