@@ -34,7 +34,7 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
-    { href: '/page/about-us', label: 'About Us' },
+    { href: 'https://www.principlesofpracticemgmt.com/index.html', label: 'Conference' },
     { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
     { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
   ],
