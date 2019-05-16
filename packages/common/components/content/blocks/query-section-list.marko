@@ -19,13 +19,14 @@ $ const nativeXEnabled = useNativeX(site, {
   aliases: nativeX.aliases,
 });
 $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
+$ const header = getAsObject(input, 'header');
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
     <endeavor-item-list flush=true card=true items=nodes>
-      <if(input.header)>
-        <@header>
-          ${input.header}
+      <if(header.title)>
+        <@header href=header.href target=header.target>
+          ${header.title}
         </@header>
       </if>
       <@item|{ item, index }|>

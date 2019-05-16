@@ -8,6 +8,7 @@ $ const { beginningAfter, beginningBefore } = input.query;
 $ const { endingAfter, endingBefore } = input.query;
 $ const layout = input.layout || 'grid';
 $ const ads = getAsObject(input, 'ads');
+$ const header = getAsObject(input, 'header');
 $ input.withImage = input.withImage === false ? false : true;
 $ input.withCard = input.withCard === true ? true : false;
 
@@ -61,9 +62,9 @@ $ const adCardInput = {
   <else>
     <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <endeavor-item-list flush=true card=true items=nodes>
-      <if(input.header)>
-        <@header>
-          ${input.header}
+      <if(header.title)>
+        <@header href=header.href target=header.target>
+          ${header.title}
         </@header>
       </if>
       <@item|{ item }|>
