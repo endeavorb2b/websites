@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/perioimplantadvisory",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
