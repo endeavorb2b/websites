@@ -12,9 +12,7 @@ $ const headerInput = getAsObject(input, 'header');
     tag=input.tag
   >
     <if(headerInput.renderBody)>
-      <endeavor-item-list-header tag=headerInput.tag modifiers=headerInput.modifiers>
-        <${headerInput.renderBody} />
-      </endeavor-item-list-header>
+      <endeavor-item-list-header ...headerInput />
     </if>
 
     <for|node, index| of=items>
