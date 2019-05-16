@@ -96,7 +96,11 @@
         "@tag": {
           "type": "string",
           "default-value": "li"
-        }
+        },
+        "@modifiers": "array",
+        "@href": "string",
+        "@target": "string",
+        "@title": "string"
       },
       "@items": "array",
       "@tag": {
@@ -135,7 +139,10 @@
       "@tag": {
         "type": "string",
         "default-value": "li"
-      }
+      },
+      "@href": "string",
+      "@target": "string",
+      "@title": "string"
     },
     "endeavor-item-list-node": {
       "template": "./item/list-node",

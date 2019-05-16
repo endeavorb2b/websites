@@ -34,10 +34,19 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list section-alias="industrial/process-water" header="Process Water" />
+      <endeavor-content-query-section-list
+        section-alias="industrial/process-water"
+        header={ title: "Process Water", href: "/industrial/process-water" }
+        limit=6
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5cc1f22975a2547f1b0041aa" header="Industrial Water World" as-card=true content-count=0 />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5cc1f22975a2547f1b0041aa"
+        header="Industrial Water World"
+        as-card=true
+        content-count=2
+      />
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -47,10 +56,16 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list section-alias="industrial/wastewater" header="Wastewater" />
+      <endeavor-content-query-section-list
+        section-alias="industrial/wastewater"
+        header={ title: "Wastewater", href: "/industrial/wastewater" }
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list section-alias="industrial/water-reuse" header="Water Reuse" />
+      <endeavor-content-query-section-list
+        section-alias="industrial/water-reuse"
+        header={ title: "Water Reuse", href: "/industrial/water-reuse" }
+      />
     </div>
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
@@ -58,7 +73,7 @@ $ const adSlots = {
           contentTypes: ["Video"],
           limit: 4,
         }
-        header="Videos"
+        header={ title: "Videos", href: "/videos" }
       />
     </div>
   </div>

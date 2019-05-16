@@ -225,9 +225,13 @@
   box-shadow: $theme-card-box-shadow;
 }
 
-@mixin theme-card-header() {
-  font-family: $theme-content-sans-serif-font;
+@mixin theme-card-header-color() {
   color: $white;
+}
+
+@mixin theme-card-header() {
+  @include theme-card-header-color();
+  font-family: $theme-content-sans-serif-font;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: $primary;

@@ -6,7 +6,7 @@ $ const { publicationId, asCard, contentCount } = input;
 <cms-query-magazine-latest-issue|{ node: issueNode }| publicationId=publicationId queryFragment=issueListFragment>
   <endeavor-item-list-wrapper flush=true card=true>
     <if(input.header)>
-      <endeavor-item-list-header>
+      <endeavor-item-list-header href=issueNode.canonicalPath>
         ${input.header}
       </endeavor-item-list-header>
     </if>

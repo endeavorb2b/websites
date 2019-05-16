@@ -34,10 +34,19 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list section-alias="municipal/drinking-water" header="Drinking Water" />
+      <endeavor-content-query-section-list
+        section-alias="municipal/drinking-water"
+        header={ title: "Drinking Water", href: "/municipal/drinking-water" }
+        limit=6
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="WaterWorld" as-card=true content-count=0 />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca26a8b08cf3add038b45b7"
+        header="WaterWorld"
+        as-card=true
+        content-count=2
+      />
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -47,19 +56,33 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list horizontal=true section-alias="municipal/drinking-water" header="Drinking Water" />
+      <endeavor-content-query-section-list
+        section-alias="municipal/drinking-water"
+        header={ title: "Drinking Water", href: "/municipal/drinking-water" }
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list horizontal=true section-alias="municipal/wastewater" header="Wastewater" />
+      <endeavor-content-query-section-list
+        section-alias="municipal/wastewater"
+        header={ title: "Wastewater", href: "/municipal/wastewater" }
+      />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=4 section-alias="municipal/urban-stormwater" header="Urban Stormwater" />
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="municipal/urban-stormwater"
+        header={ title: "Urban Stormwater", href: "/municipal/urban-stormwater" }
+      />
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list limit=4 section-alias="municipal/environmental" header="Environmental" />
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="municipal/environmental"
+        header={ title: "Environmental", href: "/municipal/environmental" }
+      />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-gam-ad-unit-define-display name="rail2" aliases=aliases />
@@ -70,7 +93,7 @@ $ const adSlots = {
           contentTypes: ["Video"],
           limit: 4,
         }
-        header="Videos"
+        header={ title: "Videos", href: "/videos" }
       />
     </div>
   </div>

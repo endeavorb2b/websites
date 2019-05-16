@@ -5,6 +5,13 @@ $ const classNames = bem('item-list', 'item', ['header', ...getAsArray(input, 'm
 
 <if(input.renderBody)>
   <${input.tag} class=classNames>
-    <${input.renderBody} />
+    <if(input.href)>
+      <endeavor-link href=input.href target=input.target title=input.title>
+        <${input.renderBody} />
+      </endeavor-link>
+    </if>
+    <else>
+      <${input.renderBody} />
+    </else>
   </>
 </if>
