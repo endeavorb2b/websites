@@ -55,7 +55,7 @@ $ const adSlots = {
           contentTypes: ["Video"],
           limit: 4,
         }
-        header="Videos"
+        header={ title: "Videos", href: "/videos" }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -66,11 +66,14 @@ $ const adSlots = {
           limit: 4,
         }
         with-image=false
-        header="White Papers"
+        header={ title: "White Papers", href: "/webcasts" }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca26a8b08cf3add038b45b7" header="Current Issue" />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca26a8b08cf3add038b45b7"
+        header="Current Issue"
+      />
     </div>
   </div>
 
