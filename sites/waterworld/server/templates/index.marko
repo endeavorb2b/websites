@@ -70,9 +70,14 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue
-        publication-id="5ca26a8b08cf3add038b45b7"
-        header="Current Issue"
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Webinar"],
+          limit: 4,
+        }
+        with-image=false
+        header={ title: "Webcasts", href: "/wwebcasts" }
       />
     </div>
   </div>
