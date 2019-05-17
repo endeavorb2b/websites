@@ -34,14 +34,44 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="detectors-imaging"
+            header={ title: "Detectors & Imaging", href: "/detectors-imaging" }
+            native-x={ placement: 'list1', aliases: ['detectors-imaging'], index: 3 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="lasers-sources"
+            header={ title: "Lasers & Sources", href: "/lasers-sources" }
+            native-x={ placement: 'list1', aliases: ['lasers-sources'], index: 3 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="optics"
+            header={ title: "Optics", href: "/optics" }
+            native-x={ placement: 'list1', aliases: ['optics'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="software-accessories"
+            header={ title: "Software Accessories", href: "/software-accessories" }
+            native-x={ placement: 'list1', aliases: ['software-accessories'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
+
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
@@ -50,12 +80,20 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="test-measurement"
+        header={ title: "Test & Measurement", href: "/test-measurement" }
+        native-x={ placement: 'list1', aliases: ['test-measurement'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
-          contentTypes: ["Video"],
-          limit: 4,
+          contentTypes: ["Webinar"],
+          limit: 3,
         }
-        header={ title: "Videos", href: "/videos" }
+        header={ title: "Webcasts", href: "/webcasts" }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -63,14 +101,39 @@ $ const adSlots = {
         query={
           requiresImage: false,
           contentTypes: ["Whitepaper"],
-          limit: 4,
+          limit: 3,
         }
         with-image=false
         header={ title: "White Papers", href: "/white-papers" }
       />
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca4e38b75a25490050041a9" header="Current Issue" />
+      <theme-pennwell-published-content-query-list
+        query={
+          contentTypes: ["Video"],
+          limit: 5,
+        }
+        header={ title: "Videos", href: "/videos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-feed
+        header="More from LaserFocusWorld"
+        limit=7
+        skip=5
+        section-id=section.id
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca4e38b75a25490050041a9"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
