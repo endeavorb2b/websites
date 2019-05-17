@@ -2,7 +2,7 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 5000000;
   font-family: $theme-content-sans-serif-font;
   box-shadow: $theme-box-shadow-lg;
   opacity: .98;
@@ -178,7 +178,7 @@
   position: fixed;
   top: 120px;
   bottom: 0;
-  z-index: 100;
+  z-index: 5000000;
 
   width: $wrapper-width;
   max-width: $wrapper-max-width;
