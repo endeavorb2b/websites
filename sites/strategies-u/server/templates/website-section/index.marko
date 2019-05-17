@@ -38,14 +38,10 @@ $ const adSlots = {
   </div>
 
   <div class="row">
-    <div class="col-lg-8 mb-block">
-      <theme-pennwell-published-content-query
-        header="Featured"
-        query={
-          sectionId: section.id,
-          limit: 7
-        }
-        layout="event"
+    <div class="col-lg-8">
+      <endeavor-content-query-feed
+        limit=7
+        section-id=section.id
       />
     </div>
     <div class="col-lg-4 ad-rail">
@@ -56,12 +52,11 @@ $ const adSlots = {
 
   <@below-container>
     <div class="published-content-query-load-more">
-      <theme-pennwell-published-content-query-load-more
+      <endeavor-content-query-load-more-list
         query={
           sectionId: section.id,
           skip: 7
         }
-        layout="load-more"
       />
     </div>
   </@below-container>

@@ -1,0 +1,94 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+import { asArray, asObject } from '@base-cms/utils';
+import { buildImgixUrl } from '@base-cms/image';
+import contentListFragment from '../../../api/fragments/content-list';
+import { useNativeX } from '../../../services/native-x';
+
+$ const { site } = out.global;
+$ const pageNumber = input.pageNumber || 1;
+$ const block = 'content-query-load-more-list';
+$ const query = {
+  limit: 7,
+  ...input.query,
+  queryFragment: contentListFragment,
+  queryName: 'QueryLoadMoreList',
+};
+
+$ const loadMore = {
+  ...input.loadMore,
+};
+
+$ const adAliases = getAsArray(input, 'ads.aliases');
+$ const adList1Input = {
+  name: 'rail1',
+  size: [300, 250],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.list1'),
+};
+$ const adList2Input = {
+  name: 'rail2',
+  size: [300, 600],
+  modifiers: ['in-card'],
+  ...getAsObject(input, 'ads.list2'),
+};
+$ const nativeX = getAsObject(input, 'nativeX');
+$ const nativeXEnabled = useNativeX(site, {
+  name: nativeX.placement,
+  index: nativeX.index,
+  aliases: nativeX.aliases,
+});
+$ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 };
+
+<div class=`${block} mb-block`>
+  <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
+    <if(nodes.length)>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+      <div class="row">
+        <div class="col-lg-8">
+          <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+          <endeavor-item-list flush=true card=true items=nodes>
+            <@item|{ item }|>
+              <endeavor-content-block-item
+                content=item
+                image-position="left"
+                image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                image-width=75
+                image-height=75
+                with-image=true
+              />
+            </@item>
+          </endeavor-item-list>
+        </div>
+        <div class="col-lg-4 ad-rail">
+          <endeavor-gam-ad-unit-define-display ...adList1Input />
+          <endeavor-gam-ad-unit-define-display ...adList2Input />
+        </div>
+      </div>
+
+      $ const { endCursor, hasNextPage } = pageInfo;
+      $ delete query.skip;
+      $ delete query.queryFragment;
+      $ delete query.renderBody;
+      $ query.after = endCursor;
+      $ const provide = {
+        ...input,
+        query,
+        ads: {
+          aliases: adAliases,
+          list1: adList1Input,
+          list2: adList2Input,
+        },
+      };
+
+      <endeavor-load-more-button
+        append-to=".container-fluid-max"
+        block-name=block
+        label="Load More Content"
+        max-pages=loadMore.maxPages
+        page-number=pageNumber
+        provide=provide
+        show=hasNextPage
+      />
+    </if>
+  </cms-query-website-scheduled-content>
+</div>
