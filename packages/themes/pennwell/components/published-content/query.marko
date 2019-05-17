@@ -30,20 +30,6 @@ $ const adCardInput = {
   ...getAsObject(input, 'ads.card'),
 };
 
-$ const adRail1Input = {
-  name: 'rail1',
-  size: [300, 250],
-  modifiers: ['in-card'],
-  ...getAsObject(input, 'ads.rail1'),
-};
-
-$ const adRail2Input = {
-  name: 'rail2',
-  size: [300, 250],
-  modifiers: ['in-card'],
-  ...getAsObject(input, 'ads.rail2'),
-};
-
 <cms-query-all-published-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
   $ query.after = endCursor;
@@ -73,34 +59,6 @@ $ const adRail2Input = {
       </div>
     </div>
   </if>
-  <else-if(layout === "load-more")>
-    <div class="row">
-      <div class="col-lg-8">
-        <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-        <endeavor-item-list flush=true card=true items=nodes>
-          <if(header.title)>
-            <@header href=header.href target=header.target>
-              ${header.title}
-            </@header>
-          </if>
-          <@item|{ item }|>
-            <endeavor-content-block-item
-              content=item
-              image-position="right"
-              image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-              image-width=75
-              image-height=75
-              with-image=input.withImage
-            />
-          </@item>
-        </endeavor-item-list>
-      </div>
-      <div class="col-lg-4 ad-rail">
-        <endeavor-gam-ad-unit-define-display ...adRail1Input />
-        <endeavor-gam-ad-unit-define-display ...adRail2Input />
-      </div>
-    </div>
-  </else-if>
   <else>
     <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <endeavor-item-list flush=true card=true items=nodes>
