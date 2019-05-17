@@ -4,19 +4,19 @@
     <form :class="bem('contents')" @submit.prevent="verify">
       <div :class="bem('row')">
         <label :class="bem('label')" for="cuf__name">Name</label>
-        <input :class="bem('field')" id="cuf__name" type="text" name="name" v-model="name" required="required" />
+        <input :class="[...bem('field'), 'form-control']" id="cuf__name" type="text" name="name" v-model="name" required="required" />
       </div>
       <div :class="bem('row')">
         <label :class="bem('label')" for="cuf__phone">Phone</label>
-        <input :class="bem('field')" id="cuf__phone" type="text" name="phone" v-model="phone" required="required" />
+        <input :class="[...bem('field'), 'form-control']" id="cuf__phone" type="text" name="phone" v-model="phone" required="required" />
       </div>
       <div :class="bem('row')">
         <label :class="bem('label')" for="cuf__email">Email</label>
-        <input :class="bem('field')" id="cuf__email" type="email" name="email" v-model="email" required="required" />
+        <input :class="[...bem('field'), 'form-control']" id="cuf__email" type="email" name="email" v-model="email" required="required" />
       </div>
       <div :class="bem('row')">
         <label :class="bem('label')" for="cuf__comments">Comments</label>
-        <textarea :class="bem('field')" id="cuf__comments" name="comments" v-model="comments" required="required" />
+        <textarea :class="[...bem('field'), 'form-control']" id="cuf__comments" name="comments" v-model="comments" required="required" />
       </div>
       <hr>
       <div :class="bem('row')">
