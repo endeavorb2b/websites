@@ -637,10 +637,10 @@
   dependencies:
     isomorphic-unfetch "^3.0.0"
 
-"@base-cms/image@^0.9.17":
-  version "0.9.17"
-  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-0.9.17.tgz#cce027cf929fd13a3365b73b308e30e1345234f0"
-  integrity sha512-AOB0qyoALd7IReUIi/e3lXgDVYU1sG1nmkIe1Q6WiYTRV1sO+kttkx2q+xsRVrMvXf6VSfHY9OmcwjtQTWZrFA==
+"@base-cms/image@^0.9.22":
+  version "0.9.22"
+  resolved "https://registry.yarnpkg.com/@base-cms/image/-/image-0.9.22.tgz#dcc220c3702bf45f73c055085af0c38e9af20cfe"
+  integrity sha512-DnM4Mh3fOoiyjqIUNbHI3HYQXEiiopqM5g4v324wMwY01HxK7vQHK8/j6dlyUE7XkeexADbiGYq/ePxIKLMusA==
   dependencies:
     "@base-cms/inflector" "^0.9.0"
 
@@ -651,13 +651,13 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.19", "@base-cms/marko-web@~0.9.19":
-  version "0.9.19"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.19.tgz#e5b0053e36d04f2e653292c683fcd036dc658aee"
-  integrity sha512-b5W3Pib1NkdV+5qO7wvzizHpJSipsCSQmsVccH7efnwLdUTYpfYiZAznAb6GOaBFGdqGx4Tav1wwYlSEaJI+7A==
+"@base-cms/marko-web@^0.9.22", "@base-cms/marko-web@~0.9.22":
+  version "0.9.22"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.22.tgz#48146e8118c6be32324a4a4a598601c03c8d3450"
+  integrity sha512-D8xYcBbh0mGbKAICBzRNly0CKgPcJXqlqkPaVA0TVWCJXOZvYXigAYTItUlMzXdQCvz6RQICRBByLPfFlLcfvw==
   dependencies:
     "@base-cms/express-apollo" "^0.9.12"
-    "@base-cms/image" "^0.9.17"
+    "@base-cms/image" "^0.9.22"
     "@base-cms/object-path" "^0.9.0"
     "@base-cms/tenant-context" "^0.9.1"
     "@base-cms/utils" "^0.9.0"
@@ -690,10 +690,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.0.tgz#a54bfbd119aaf310ff4cbd0e3ae253f4ecfa8b27"
   integrity sha512-g7+XxYSqtBclVj0FgbRiai70DR+px8oun1jPiOw3hOIUOvlDx1fc7VRsKKWmD+V40t6xYFyJX5qSfTYxqvJvOQ==
 
-"@base-cms/web-cli@~0.9.19":
-  version "0.9.19"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.19.tgz#ad878ec2840eb5ba34296c68e4f2315559d0d121"
-  integrity sha512-9AYOwpIkUNW9pE3qQdUsNzLMDB2MMlDvSmJiCiig9IqTiqFU64z3LOBisOXCqJoGyqW0LkrUGUFSOVtkN5pfaA==
+"@base-cms/web-cli@~0.9.22":
+  version "0.9.22"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.22.tgz#6c808a7b0f2b7d44ee850bfcdb62a9a6537f05b3"
+  integrity sha512-gjN4mCU1Mfr4CeaXHvyBF2YQFuEOhScmwem56WPLXBbgnTGCeh7taGBDj//TrzlQmPY6kUmRCS5GC/vLgb5jRQ==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -701,7 +701,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.9.12"
-    "@base-cms/marko-web" "^0.9.19"
+    "@base-cms/marko-web" "^0.9.22"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -722,6 +722,8 @@
     gulp-eslint "^5.0.0"
     gulp-livereload "^4.0.1"
     gulp-postcss "^8.0.0"
+    gulp-rev-all "^1.0.0"
+    gulp-rev-delete-original "^0.2.3"
     gulp-sass "^4.0.2"
     gulp-sourcemaps "^2.6.5"
     gulp-stylelint "^8.0.0"
@@ -741,7 +743,6 @@
     vue-template-compiler "^2.6.10"
     webpack "^4.29.6"
     webpack-config-utils "^2.3.1"
-    webpack-manifest-plugin "^2.0.4"
     webpack-stream "^5.2.1"
     yargs "^13.2.1"
 
@@ -2503,10 +2504,28 @@ btoa-lite@^1.0.0:
   resolved "https://registry.yarnpkg.com/btoa-lite/-/btoa-lite-1.0.0.tgz#337766da15801210fdd956c22e9c6891ab9d0337"
   integrity sha1-M3dm2hWAEhD92VbCLpxokaudAzc=
 
+buffer-alloc-unsafe@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
+  integrity sha512-TEM2iMIEQdJ2yjPJoSIsldnleVaAk1oW3DBVUykyOLsEsFmEc9kn+SFFPz+gl54KQNxlDnAwCXosOS9Okx2xAg==
+
+buffer-alloc@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/buffer-alloc/-/buffer-alloc-1.2.0.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
+  integrity sha512-CFsHQgjtW1UChdXgbyJGtnm+O/uLQeZdtbDo8mfUgYXCHSM1wgrVxXm6bSyrUuErEb+4sYVGCzASBRot7zyrow==
+  dependencies:
+    buffer-alloc-unsafe "^1.1.0"
+    buffer-fill "^1.0.0"
+
 buffer-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-equal/-/buffer-equal-1.0.0.tgz#59616b498304d556abd466966b22eeda3eca5fbe"
   integrity sha1-WWFrSYME1Var1GaWayLu2j7KX74=
+
+buffer-fill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
+  integrity sha1-+PeLdniYiO858gXNY39o5wISKyw=
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -5180,6 +5199,27 @@ gulp-postcss@^8.0.0:
     postcss-load-config "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-rev-all@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-rev-all/-/gulp-rev-all-1.0.0.tgz#365105b1ee7c3d1bf543bdafb4bf04e07d793045"
+  integrity sha512-/6SxY7jg87HRQKz9pJyA72BLxxpGSZh35T1Cxwdqys8s1hAh6V5vciAfAIDo/BkkIWnw6NvaCbxW2WsKeiQyDg==
+  dependencies:
+    chalk "^2.4.1"
+    fancy-log "^1.3.2"
+    isbinaryfile "^3.0.2"
+    merge "^1.2.0"
+    plugin-error "^1.0.1"
+    through2 "^2.0.3"
+    vinyl "^2.1.0"
+
+gulp-rev-delete-original@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/gulp-rev-delete-original/-/gulp-rev-delete-original-0.2.3.tgz#81f3f95db3bd3a324923df6d235ae953c2ac038d"
+  integrity sha1-gfP5XbO9OjJJI99tI1rpU8KsA40=
+  dependencies:
+    rimraf "^2.3.4"
+    through2 "^0.6.5"
+
 gulp-sass@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-4.0.2.tgz#cfb1e3eff2bd9852431c7ce87f43880807d8d505"
@@ -6136,10 +6176,22 @@ is-word-character@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-word-character/-/is-word-character-1.0.2.tgz#46a5dac3f2a1840898b91e576cd40d493f3ae553"
   integrity sha512-T3FlsX8rCHAH8e7RE7PfOPZVFQlcV3XRF9eOOBQ1uf70OxO7CjjSOjeImMPCADBdYWcStAbVbYvJ1m2D3tb+EA==
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+  integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
+
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
+
+isbinaryfile@^3.0.2:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/isbinaryfile/-/isbinaryfile-3.0.3.tgz#5d6def3edebf6e8ca8cae9c30183a804b5f8be80"
+  integrity sha512-8cJBL5tTd2OS0dM4jz07wQd5g0dCCqIhUxPIGtZfa5L6hWlvV5MHTITy/DBAsF+Oe2LS1X3krBUhNwaGUWpWxw==
+  dependencies:
+    buffer-alloc "^1.2.0"
 
 isexe@^2.0.0:
   version "2.0.0"
@@ -6593,7 +6645,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@~4.17.10:
+lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -6912,6 +6964,11 @@ merge2@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.3.tgz#7ee99dbd69bb6481689253f018488a1b902b0ed5"
   integrity sha512-gdUU1Fwj5ep4kplwcmftruWofEFt6lfpkkr3h860CXbAB9c3hGb55EOL2ali0Td5oebvW0E1+3Sr+Ur7XfKpRA==
+
+merge@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
+  integrity sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ==
 
 methods@^1.1.2, methods@~1.1.2:
   version "1.1.2"
@@ -8900,6 +8957,16 @@ read@1, read@~1.0.1:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
+"readable-stream@>=1.0.33-1 <1.1.0-0":
+  version "1.0.34"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
+  integrity sha1-Elgg40vIQtLyqq+v5MKRbuMsFXw=
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
+
 readable-stream@^3.0.2:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.3.0.tgz#cb8011aad002eb717bf040291feba8569c986fb9"
@@ -9269,7 +9336,7 @@ rgba-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/rgba-regex/-/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
 
-rimraf@2, rimraf@2.6.3, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
+rimraf@2, rimraf@2.6.3, rimraf@^2.3.4, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
@@ -9848,7 +9915,7 @@ string-width@^3.0.0:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.1.0"
 
-string_decoder@0.10:
+string_decoder@0.10, string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
   integrity sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
@@ -10228,6 +10295,14 @@ through2@2.X, through2@^2.0.0, through2@^2.0.1, through2@^2.0.2, through2@^2.0.3
   dependencies:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
+
+through2@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
+  integrity sha1-QaucZ7KdVyCQcUEOHXp6lozTrUg=
+  dependencies:
+    readable-stream ">=1.0.33-1 <1.1.0-0"
+    xtend ">=4.0.0 <4.1.0-0"
 
 through@2, "through@>=2.2.7 <3", through@^2.3.4, through@^2.3.6, through@^2.3.8, through@~2.3, through@~2.3.1:
   version "2.3.8"
@@ -10966,15 +11041,6 @@ webpack-config-utils@^2.3.1:
   dependencies:
     webpack-combine-loaders "2.0.4"
 
-webpack-manifest-plugin@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.0.4.tgz#e4ca2999b09557716b8ba4475fb79fab5986f0cd"
-  integrity sha512-nejhOHexXDBKQOj/5v5IZSfCeTO3x1Dt1RZEcGfBSul891X/eLIcIVH31gwxPDdsi2Z8LKKFGpM4w9+oTBOSCg==
-  dependencies:
-    fs-extra "^7.0.0"
-    lodash ">=3.5 <5"
-    tapable "^1.0.0"
-
 webpack-sources@^1.1.0, webpack-sources@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.3.0.tgz#2a28dcb9f1f45fe960d8f1493252b5ee6530fa85"
@@ -11157,7 +11223,7 @@ x-xss-protection@1.1.0:
   resolved "https://registry.yarnpkg.com/x-xss-protection/-/x-xss-protection-1.1.0.tgz#4f1898c332deb1e7f2be1280efb3e2c53d69c1a7"
   integrity sha512-rx3GzJlgEeZ08MIcDsU2vY2B1QEriUKJTSiNHHUIem6eg9pzVOr2TL3Y4Pd6TMAM5D5azGjcxqI62piITBDHVg==
 
-xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.0, xtend@~4.0.1:
+"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
