@@ -23,39 +23,23 @@ $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
   />
   <@header-left|{ block }|>
     <cms-website-section-name tag="span" block=block obj=primarySection link=true />
-    <if(input.withType)>
-      <cms-text-element tag="span" block=block obj=content field="typeTitled" />
-    </if>
   </@header-left>
   <@title tag="h5" modifiers=input.titleModifiers>
     <cms-content-short-name tag=null obj=content link=true />
   </@title>
-  <@description tag="p">
-    <cms-text-element obj=content field="title" />
-  </@description>
-  <@description tag="p">
-    <cms-text-element obj=content field="phone" />
-  </@description>
-  <@description tag="p">
-    <cms-text-element obj=content field="publicEmail" />
-  </@description>
-  <@footer-left|{ block }|>
-    <if(company.id)>
-      <endeavor-content-company-name use-prefix=false company=company />
-    </if>
-    <else>
-      <endeavor-content-authors block=block use-prefix=false content=content />
-    </else>
-  </@footer-left>
-  <@footer-right|{ block }|>
-    <if(content.type === 'event')>
-      <span class=`${block}__content-event-dates`>
-        <endeavor-content-starts block=block obj=content />
-        <endeavor-content-ends block=block obj=content />
-      </span>
-    </if>
-    <else>
-      <cms-content-published obj=content />
-    </else>
-  </@footer-right>
+  <if(content.title)>
+    <@description tag="p">
+      <cms-text-element tag=null obj=content field="title" />
+    </@description>
+  </if>
+  <if(content.phone)>
+    <@description tag="p">
+      <cms-text-element obj=content field="phone" />
+    </@description>
+  </if>
+  <if(content.publicEmail)>
+    <@description tag="p">
+      <cms-text-element tag=null obj=content field="publicEmail" />
+    </@description>
+  </if>
 </endeavor-item>
