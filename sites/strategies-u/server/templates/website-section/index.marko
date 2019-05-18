@@ -23,22 +23,25 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <endeavor-content-query-hero
-    section-id=section.id
-    limit=5
-    native-x={ placement: 'list1', aliases, index: 3 }
-  />
-
-  <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
+  <div class="page-wrapper default-page">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">${section.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-lg-8">
       <endeavor-content-query-feed
-        header="Featured"
         limit=7
-        skip=5
         section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
       />
     </div>
     <div class="col-lg-4 ad-rail">
@@ -48,13 +51,13 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 12,
-        sectionId: section.id,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
-    />
+    <div class="published-content-query-load-more">
+      <endeavor-content-query-load-more-list
+        query={
+          sectionId: section.id,
+          skip: 7
+        }
+      />
+    </div>
   </@below-container>
 </theme-pennwell-website-section-layout>
