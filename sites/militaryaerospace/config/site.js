@@ -6,15 +6,15 @@ module.exports = {
   nativeX,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-footer-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/mae/mae-footer-logo.png?h=120 2x',
       ],
     },
   },
