@@ -34,13 +34,42 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="computers"
+            header={ title: "Computers", href: "/computers" }
+            native-x={ placement: 'list1', aliases: ['computers'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="trusted-computing"
+            header={ title: "Trusted Computing", href: "/trusted-computing" }
+            native-x={ placement: 'list1', aliases: ['trusted-computing'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="unmanned"
+            header={ title: "Unmanned", href: "/unmanned" }
+            native-x={ placement: 'list1', aliases: ['unmanned'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="sensors"
+            header={ title: "Sensors", href: "/sensors" }
+            native-x={ placement: 'list1', aliases: ['sensors'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -50,12 +79,38 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="rf-analog"
+        header={ title: "RF/Analog", href: "/rf-analog" }
+        native-x={ placement: 'list1', aliases: ['rf-analog'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="power"
+        header={ title: "Power", href: "/power" }
+        native-x={ placement: 'list1', aliases: ['power'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="communications"
+        header={ title: "Communications", href: "/communications" }
+        native-x={ placement: 'list1', aliases: ['communications'], index: 2 }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="test"
+        header={ title: "Test", href: "/test" }
+        native-x={ placement: 'list1', aliases: ['test'], index: 2 }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -63,21 +118,59 @@ $ const adSlots = {
         query={
           requiresImage: false,
           contentTypes: ["Whitepaper"],
-          limit: 4,
+          limit: 3,
         }
         with-image=false
         header={ title: "White Papers", href: "/white-papers" }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca78d0475a254120e0041a9" header="Current Issue" />
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Webinar"],
+          limit: 3,
+        }
+        with-image=false
+        header={ title: "Webcasts", href: "/webcasts" }
+      />
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Video"],
+          limit: 5,
+        }
+        header={ title: "Videos", href: "/videos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        skip=5
+        section-alias=section.alias
+        header={ title: "More from Vision Systems Design" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca78d0475a254120e0041a9"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 10,
         sectionId: section.id,
       }
       load-more={
