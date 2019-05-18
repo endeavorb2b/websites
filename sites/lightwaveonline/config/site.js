@@ -36,14 +36,15 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/videos', label: 'Videos' },
+    { href: '/white-papers', label: 'White Papers' },
+    { href: '/webcasts', label: 'Webcasts' },
     { href: 'https://buyersguide.lightwaveonline.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews', target: '_blank' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
     { href: '/contact-us', label: 'Contact Us' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
     { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
   ],

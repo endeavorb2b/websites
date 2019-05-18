@@ -36,14 +36,15 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/videos', label: 'Videos' },
+    { href: '/white-papers', label: 'White Papers' },
+    { href: '/webcasts', label: 'Webcasts' },
     { href: '/btr-america-latina', label: 'BTR America Latina' },
     { href: 'https://diamondtechreviews.secure-platform.com/a', label: 'Diamond Tech Reviews' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
     { href: '/contact-us', label: 'Contact Us' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
     { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
   ],
