@@ -33,18 +33,74 @@ $ const adSlots = {
   <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
 
   <div class="row">
-    <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+   <div class="col-lg-8">
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="transmission-distribution"
+            header={ title: "Transmission & Distribution", href: "/transmission-distribution" }
+            native-x={ placement: 'list1', aliases: ['transmission-distribution'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="vehicles-accessories"
+            header={ title: "Vehicles & Accessories", href: "/vehicles-accessories" }
+            native-x={ placement: 'list1', aliases: ['vehicles-accessories'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="tools-supplies"
+            header={ title: "Tools & Supplies", href: "/tools-supplies" }
+            native-x={ placement: 'list1', aliases: ['tools-supplies'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="safety"
+            header={ title: "Safety", href: "/safety" }
+            native-x={ placement: 'list1', aliases: ['safety'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="line-construction-maintenance"
+        header={ title: "Line Construction & Maintenance", href: "/line-construction-maintenance" }
+        native-x={ placement: 'list1', aliases: ['line-construction-maintenance'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="test-measurement"
+        header={ title: "Test & Measurement", href: "/test-measurement" }
+        native-x={ placement: 'list1', aliases: ['test-measurement'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        skip=5
+        section-alias=section.alias
+        header={ title: "More from Utility Products" }
+      />
     </div>
   </div>
 
@@ -70,14 +126,19 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5c993ff747062b90038b4569" header="Current Issue" />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5c993ff747062b90038b4569"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 8,
         sectionId: section.id,
       }
       load-more={
