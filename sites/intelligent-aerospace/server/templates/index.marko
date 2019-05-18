@@ -34,13 +34,42 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="commercial"
+            header={ title: "Commercial", href: "/commercial" }
+            native-x={ placement: 'list1', aliases: ['commercial'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="military"
+            header={ title: "Military", href: "/military" }
+            native-x={ placement: 'list1', aliases: ['military'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="avionics"
+            header={ title: "Avionics", href: "/avionics" }
+            native-x={ placement: 'list1', aliases: ['avionics'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="atc-atm"
+            header={ title: "ATC/ATM", href: "/atc-atm" }
+            native-x={ placement: 'list1', aliases: ['atc-atm'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -50,12 +79,39 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="helicopter"
+        header={ title: "Helicopter", href: "/helicopter" }
+        native-x={ placement: 'list1', aliases: ['helicopter'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="satcom"
+        header={ title: "SATCOM", href: "/satcom" }
+        native-x={ placement: 'list1', aliases: ['satcom'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="unmanned"
+        header={ title: "Unmanned", href: "/unmanned" }
+        native-x={ placement: 'list1', aliases: ['unmanned'], index: 2 }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
-          contentTypes: ["Video"],
+          contentTypes: ["Video", "Webinar"],
           limit: 4,
         }
-        header={ title: "Videos", href: "/videos" }
+        header={ title: "Videos & Webcasts", href: "/videos" }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -70,14 +126,19 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca4da3c75a2546b050041a9" header="Current Issue" />
+      <endeavor-content-query-section-list
+        limit=4
+        skip=5
+        section-alias=section.alias
+        header={ title: "More from Intelligent Aerospace" }
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 9,
         sectionId: section.id,
       }
       load-more={
