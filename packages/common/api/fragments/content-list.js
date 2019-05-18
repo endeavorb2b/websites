@@ -41,6 +41,10 @@ fragment ContentListFragment on Content {
       }
     }
   }
+  ... on ContentPromotion {
+    linkText
+    linkUrl
+  }
   ... on ContentContact {
     title
     phone

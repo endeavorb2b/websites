@@ -23,23 +23,24 @@ $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
   />
   <@header-left|{ block }|>
     <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+    <if(input.withType)>
+      <cms-text-element tag="span" block=block obj=content field="typeTitled" />
+    </if>
   </@header-left>
   <@title tag="h5" modifiers=input.titleModifiers>
-    <cms-content-short-name tag=null obj=content link=true />
+    <cms-content-short-name tag=null obj=content link=true linkAttrs={ target: "_blank" } />
   </@title>
-  <if(content.title)>
+  <if(input.withTeaser)>
     <@description tag="p">
-      <cms-text-element tag=null obj=content field="title" />
+      <cms-content-teaser tag=null obj=content link=true />
     </@description>
   </if>
-  <if(content.phone)>
-    <@description tag="p">
-      <cms-text-element obj=content field="phone" />
-    </@description>
-  </if>
-  <if(content.publicEmail)>
-    <@description tag="p">
-      <cms-text-element tag=null obj=content field="publicEmail" />
-    </@description>
+
+  <if(content.linkText)>
+    <@footer-left|{ block }|>
+      <endeavor-link href=content.linkUrl target="_blank">
+        ${content.linkText}
+      </endeavor-link>
+    </@footer-left>
   </if>
 </endeavor-item>
