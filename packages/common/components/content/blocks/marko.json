@@ -143,6 +143,9 @@
     "endeavor-content-query-load-more": {
       "template": "./query-load-more.marko"
     },
+    "endeavor-content-query-load-more-list": {
+      "template": "./query-load-more-list.marko"
+    },
     "endeavor-content-query-load-more-issue-content": {
       "template": "./query-load-more-issue-content.marko"
     },
