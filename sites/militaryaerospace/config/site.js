@@ -6,15 +6,15 @@ module.exports = {
   nativeX,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/mae/mae-header-logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/mae/mae-footer-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/mae/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/mae/mae-footer-logo.png?h=120 2x',
       ],
     },
   },
@@ -37,14 +37,15 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: '/white-papers', label: 'White Papers' },
+    { href: '/webcasts', label: 'Webcasts' },
     { href: 'https://buyersguide.mae.pennnet.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://militaryawards.secure-platform.com/a', label: 'Awards', target: '_blank' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
     { href: '/contact-us', label: 'Contact Us' },
+    { href: '/page/advertise', label: 'Advertise' },
     { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
     { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
   ],

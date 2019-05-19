@@ -40,7 +40,7 @@ $ const adSlots = {
             limit=3
             section-alias="detectors-imaging"
             header={ title: "Detectors & Imaging", href: "/detectors-imaging" }
-            native-x={ placement: 'list1', aliases: ['detectors-imaging'], index: 3 }
+            native-x={ placement: 'list1', aliases: ['detectors-imaging'], index: 2 }
           />
         </div>
         <div class="col-lg-6 mb-block">
@@ -48,7 +48,7 @@ $ const adSlots = {
             limit=3
             section-alias="lasers-sources"
             header={ title: "Lasers & Sources", href: "/lasers-sources" }
-            native-x={ placement: 'list1', aliases: ['lasers-sources'], index: 3 }
+            native-x={ placement: 'list1', aliases: ['lasers-sources'], index: 2 }
           />
         </div>
       </div>
@@ -120,11 +120,11 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-content-query-feed
-        header="More from LaserFocusWorld"
-        limit=7
+      <endeavor-content-query-section-list
+        limit=4
         skip=5
-        section-id=section.id
+        section-alias=section.alias
+        header={ title: `More from ${out.global.config.siteName()}` }
       />
     </div>
     <div class="col-lg-4 mb-block">

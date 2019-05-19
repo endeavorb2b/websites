@@ -34,43 +34,86 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=4
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 3 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="ergonomics"
+            header={ title: "Ergonomics", href: "/ergonomics" }
+            native-x={ placement: 'list1', aliases: ['ergonomics'], index: 3 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=4
+            section-alias="infection-control"
+            header={ title: "Infection Control", href: "/infection-control" }
+            native-x={ placement: 'list1', aliases: ['infection-control'], index: 3 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
     </div>
   </div>
-
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="patient-care"
+        header={ title: "Patient Care", href: "/patient-care" }
+        native-x={ placement: 'list1', aliases: ['patient-care'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="pathology"
+        header={ title: "Pathology", href: "/pathology" }
+        native-x={ placement: 'list1', aliases: ['pathology'], index: 2 }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
           requiresImage: false,
-          contentTypes: ["Whitepaper"],
-          limit: 4,
+          contentTypes: ["Webinar"],
+          limit: 5,
         }
         with-image=false
-        header={ title: "White Papers", href: "/white-papers" }
+        header={ title: "Webcasts", href: "/webcasts" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="career-profession"
+        header={ title: "Career & Profession", href: "/career-profession" }
+        native-x={ placement: 'list1', aliases: ['career-profession'], index: 4 }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca78c5c75a254020e0041a9" header="Current Issue" />
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Video"],
+          limit: 5,
+        }
+        header={ title: "Videos", href: "/videos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca78c5c75a254020e0041a9"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 

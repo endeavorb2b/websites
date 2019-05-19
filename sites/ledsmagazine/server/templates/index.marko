@@ -34,13 +34,42 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="leds-ssl-design"
+            header={ title: "LEDs & SSL Design", href: "/leds-ssl-design" }
+            native-x={ placement: 'list1', aliases: ['leds-ssl-design'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="manufacturing-services-testing"
+            header={ title: "Manufacturing Services Testing", href: "/manufacturing-services-testing" }
+            native-x={ placement: 'list1', aliases: ['manufacturing-services-testing'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="architectural-lighting"
+            header={ title: "Architectural Lighting", href: "/architectural-lighting" }
+            native-x={ placement: 'list1', aliases: ['architectural-lighting'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="smart-lighting-iot"
+            header={ title: "smart-lighting-iot", href: "/smart-lighting-iot" }
+            native-x={ placement: 'list1', aliases: ['smart-lighting-iot'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -50,10 +79,40 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="specialty-ssl"
+        header={ title: "Specialty SSL", href: "/specialty-ssl" }
+        native-x={ placement: 'list1', aliases: ['specialty-ssl'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="horticultural-lighting"
+        header={ title: "Horticultural Lighting", href: "/horticultural-lighting" }
+        native-x={ placement: 'list1', aliases: ['horticultural-lighting'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Webinar"],
+          limit: 3,
+        }
+        with-image=false
+        header={ title: "Webcasts", href: "/webcasts" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
           contentTypes: ["Video"],
-          limit: 4,
+          limit: 5,
         }
         header={ title: "Videos", href: "/videos" }
       />
@@ -70,14 +129,19 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca78bab75a254fc0d0041a9" header="Current Issue" />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca78bab75a254fc0d0041a9"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 5,
         sectionId: section.id,
       }
       load-more={

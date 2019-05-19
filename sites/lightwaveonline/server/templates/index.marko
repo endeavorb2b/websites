@@ -34,13 +34,42 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="network-design"
+            header={ title: "Network Design", href: "/network-design" }
+            native-x={ placement: 'list1', aliases: ['network-design'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="fttx"
+            header={ title: "FTTX", href: "/fttx" }
+            native-x={ placement: 'list1', aliases: ['fttx'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="network-automation"
+            header={ title: "Network Automation", href: "/network-automation" }
+            native-x={ placement: 'list1', aliases: ['network-automation'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="data-center"
+            header={ title: "Data Center", href: "/data-center" }
+            native-x={ placement: 'list1', aliases: ['data-center'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
@@ -50,19 +79,46 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="5g-mobile"
+        header={ title: "5G Mobile", href: "/5g-mobile" }
+        native-x={ placement: 'list1', aliases: ['5g-mobile'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="test"
+        header={ title: "Test", href: "/test" }
+        native-x={ placement: 'list1', aliases: ['test'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="optical-tech"
+        header={ title: "Optical Tech", href: "/optical-tech" }
+        native-x={ placement: 'list1', aliases: ['optical-tech'], index: 2 }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="business"
+        header={ title: "Business", href: "/business" }
+        native-x={ placement: 'list1', aliases: ['business'], index: 2 }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
+          requiresImage: false,
           contentTypes: ["Whitepaper"],
-          limit: 4,
+          limit: 3,
         }
         with-image=false
         header={ title: "White Papers", href: "/white-papers" }
@@ -71,8 +127,9 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
+          requiresImage: false,
           contentTypes: ["Webinar"],
-          limit: 4,
+          limit: 3,
         }
         with-image=false
         header={ title: "Webcasts", href: "/webcasts" }
@@ -80,10 +137,31 @@ $ const adSlots = {
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Video"],
+          limit: 5,
+        }
+        header={ title: "Videos", href: "/videos" }
+      />
+    </div>
+    <div class="col-lg-8 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        skip=5
+        section-alias=section.alias
+        header={ title: `More from ${out.global.config.siteName()}` }
+      />
+    </div>
+  </div>
+
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 10,
         sectionId: section.id,
       }
       load-more={
