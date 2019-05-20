@@ -422,15 +422,6 @@ module.exports = {
   //   replicaSet: 'caprica',
   //   logo: 'https://s3.amazonaws.com/cygnusimages/base/rmg/ien/logo.gif',
   // },
-  madeinamericaseries: {
-    name: 'Made In America Series',
-    domain: 'madeinamericaseries.com',
-    project: 'Industrial Media Group',
-    accountKey: 'indm',
-    groupKey: 'mia',
-    tenantKey: 'indm_mia',
-    replicaSet: 'aerilon',
-  },
 
   // PennWell Corporation
   bioopticsworld: {
