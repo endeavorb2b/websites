@@ -1208,6 +1208,58 @@ module.exports = {
     },
   },
 
+  // PMMI Media Group
+  packworld: {
+    name: 'Packaging World',
+    domain: 'packworld.com',
+    project: 'PMMI Media Group',
+    accountKey: 'pmmi',
+    groupKey: 'pw',
+    tenantKey: 'pmmi_pw',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/pmmi/pw/logo.png',
+  },
+  automationworld: {
+    name: 'Automation World',
+    domain: 'automationworld.com',
+    project: 'PMMI Media Group',
+    accountKey: 'pmmi',
+    groupKey: 'aw',
+    tenantKey: 'pmmi_aw',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/pmmi/aw/logo.png',
+  },
+  healthcarepackaging: {
+    name: 'Healthcare Packaging',
+    domain: 'healthcarepackaging.com',
+    project: 'PMMI Media Group',
+    accountKey: 'pmmi',
+    groupKey: 'hp',
+    tenantKey: 'pmmi_hp',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/pmmi/hp/logo.png',
+  },
+  profoodworld: {
+    name: 'Pro Food World',
+    domain: 'profoodworld.com',
+    project: 'PMMI Media Group',
+    accountKey: 'pmmi',
+    groupKey: 'pfw',
+    tenantKey: 'pmmi_pfw',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/pmmi/pfw/logo.png',
+  },
+  oemmagazine: {
+    name: 'OEM Magazine',
+    domain: 'oemmagazine.org',
+    project: 'PMMI Media Group',
+    accountKey: 'pmmi',
+    groupKey: 'oem',
+    tenantKey: 'pmmi_oem',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/pmmi/oem/logo.png',
+  },
+
   // Washington City Paper
   // washingtoncitypaper: {
   //   name: 'Washington City Paper',
