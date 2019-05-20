@@ -10,6 +10,27 @@ module.exports = {
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/abm/ab/logo.png',
   },
+  aquamagazine: {
+    name: 'Aqua Magazine',
+    domain: 'aquamagazine.com',
+    project: 'AB Media',
+    accountKey: 'abm',
+    groupKey: 'am',
+    tenantKey: 'abm_am',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/abm/am/logo.png',
+  },
+  woodfloorbusiness: {
+    name: 'Wood Floor Business',
+    domain: 'woodfloorbusiness.com',
+    project: 'AB Media',
+    accountKey: 'abm',
+    groupKey: 'wfb',
+    tenantKey: 'abm_wfb',
+    replicaSet: 'aerilon',
+    logo: 'https://cdn.baseplatform.io/files/base/abm/wfb/logo.png',
+  },
+
   // AC Business Media
   // dmnews: {
   //   name: 'DM News',
