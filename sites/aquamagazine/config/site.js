@@ -18,11 +18,10 @@ module.exports = {
     },
   },
   socialMediaLinks: [
-    // { provider: 'facebook', href: 'https://www.facebook.com/athleticbusiness' },
-    // { provider: 'twitter', href: 'https://twitter.com/Athleticbiz' },
-    // { provider: 'linkedin', href: 'https://www.linkedin.com/company/773251' },
-    // { provider: 'youtube', href: 'https://www.youtube.com/user/AthleticBusinessMag' },
-    // { provider: 'instagram', href: 'https://www.instagram.com/athleticbiz' },
+    { provider: 'facebook', href: 'https://www.facebook.com/AQUAMagazine' },
+    { provider: 'twitter', href: 'https://twitter.com/aquamagazine' },
+    { provider: 'linkedin', href: 'http://www.linkedin.com/groups/AQUA-Magazine-3861363' },
+    { provider: 'pinterest', href: 'http://www.pinterest.com/aquamagazine/' },
   ],
   primaryNavItems: [
     { href: '/news', label: 'News' },
