@@ -2,6 +2,7 @@ const ads = require('./ads');
 
 module.exports = {
   ads,
+  company: 'Athletic Business',
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/abm/ab/logo.png?h=60',

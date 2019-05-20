@@ -448,6 +448,23 @@ services:
       - "12173:80"
       - "35173:35173"
 
+  aquamagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/aquamagazine
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12174
+      LIVERELOAD_PORT: 35174
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: abm_am
+    ports:
+      - "12174:80"
+      - "35174:35174"
+
   woodfloorbusiness:
     <<: *node
     <<: *site-cmd
