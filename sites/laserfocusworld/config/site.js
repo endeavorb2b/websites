@@ -39,6 +39,7 @@ module.exports = {
     { href: '/webcasts', label: 'Webcasts' },
     { href: 'https://buyersguide.laserfocusworld.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
     { href: 'https://laserfocusworldinnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
+    { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
@@ -55,6 +56,7 @@ module.exports = {
       { href: '/webcasts', label: 'Webcasts' },
       { href: 'https://buyersguide.laserfocusworld.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
       { href: 'https://laserfocusworldinnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
+      { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
