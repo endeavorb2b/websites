@@ -9,6 +9,7 @@ module.exports = {
     tenantKey: 'abm_ab',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/abm/ab/logo.png',
+    dns: 'external',
   },
   aquamagazine: {
     name: 'Aqua Magazine',
@@ -19,6 +20,7 @@ module.exports = {
     tenantKey: 'abm_am',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/abm/am/logo.png',
+    dns: 'external',
   },
   woodfloorbusiness: {
     name: 'Wood Floor Business',
@@ -29,6 +31,7 @@ module.exports = {
     tenantKey: 'abm_wfb',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/abm/wfb/logo.png',
+    dns: 'external',
   },
 
   // AC Business Media
@@ -368,6 +371,7 @@ module.exports = {
     tenantKey: 'euclid_cs',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/cs/logo.png',
+    dns: 'external',
   },
   metrotimes: {
     name: 'Detroit Metro Times',
@@ -378,6 +382,7 @@ module.exports = {
     tenantKey: 'euclid_mt',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/mt/logo.png',
+    dns: 'external',
   },
   orlandoweekly: {
     name: 'Orlando Weekly',
@@ -388,6 +393,7 @@ module.exports = {
     tenantKey: 'euclid_ow',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/ow/logo.png',
+    dns: 'external',
   },
   sacurrent: {
     name: 'San Antonio Current',
@@ -398,6 +404,7 @@ module.exports = {
     tenantKey: 'euclid_sac',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/sac/logo.png',
+    dns: 'external',
   },
   riverfronttimes: {
     name: 'River Front Times',
@@ -408,6 +415,7 @@ module.exports = {
     tenantKey: 'euclid_rft',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/rft/logo.png',
+    dns: 'external',
   },
   outinsa: {
     name: 'OUT in SA',
@@ -418,6 +426,7 @@ module.exports = {
     tenantKey: 'euclid_osa',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/osa/logo.png',
+    dns: 'external',
   },
   outinstl: {
     name: 'OUT in STL',
@@ -428,6 +437,7 @@ module.exports = {
     tenantKey: 'euclid_ostl',
     replicaSet: 'caprica',
     logo: 'https://cdn.baseplatform.io/files/base/euclid/ostl/logo.png',
+    dns: 'external',
   },
   // citybeat: {
   //   name: 'City Beat',
@@ -1288,6 +1298,7 @@ module.exports = {
     tenantKey: 'pmmi_pw',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/pmmi/pw/logo.png',
+    dns: 'external',
   },
   automationworld: {
     name: 'Automation World',
@@ -1298,6 +1309,7 @@ module.exports = {
     tenantKey: 'pmmi_aw',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/pmmi/aw/logo.png',
+    dns: 'external',
   },
   healthcarepackaging: {
     name: 'Healthcare Packaging',
@@ -1308,6 +1320,7 @@ module.exports = {
     tenantKey: 'pmmi_hp',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/pmmi/hp/logo.png',
+    dns: 'external',
   },
   profoodworld: {
     name: 'Pro Food World',
@@ -1318,6 +1331,7 @@ module.exports = {
     tenantKey: 'pmmi_pfw',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/pmmi/pfw/logo.png',
+    dns: 'external',
   },
   oemmagazine: {
     name: 'OEM Magazine',
@@ -1328,6 +1342,7 @@ module.exports = {
     tenantKey: 'pmmi_oem',
     replicaSet: 'aerilon',
     logo: 'https://cdn.baseplatform.io/files/base/pmmi/oem/logo.png',
+    dns: 'external',
   },
 
   // Washington City Paper
