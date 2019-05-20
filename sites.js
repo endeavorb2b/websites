@@ -533,7 +533,7 @@ module.exports = {
     groupKey: 'bow',
     tenantKey: 'ebm_bow',
     replicaSet: 'aerilon',
-
+    published: true,
     logo: 'http://base.imgix.net/files/base/pennwell/bow/logo.png',
     primaryNavItems: [
       { href: '/bioscience', label: 'Bioscience' },
@@ -574,6 +574,7 @@ module.exports = {
     groupKey: 'btr',
     tenantKey: 'ebm_btr',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/in-the-network', label: 'In the Network' },
       { href: '/in-the-home', label: 'In the Home' },
@@ -618,6 +619,7 @@ module.exports = {
     groupKey: 'cim',
     tenantKey: 'ebm_cim',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/data-center', label: 'Data Center' },
       { href: '/standards', label: 'Standards' },
@@ -660,6 +662,7 @@ module.exports = {
     groupKey: 'de',
     tenantKey: 'ebm_de',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/macro-op-ed', label: 'Macro/Op-Ed' },
       { href: '/practice', label: 'Practice' },
@@ -701,6 +704,7 @@ module.exports = {
     groupKey: 'diq',
     tenantKey: 'ebm_diq',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/practice-management', label: 'Practice Management' },
       { href: '/assistants', label: 'Assistants' },
@@ -743,6 +747,7 @@ module.exports = {
     groupKey: 'ias',
     tenantKey: 'ebm_ias',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/commercial', label: 'Commercial' },
       { href: '/military', label: 'Military' },
@@ -784,6 +789,7 @@ module.exports = {
     groupKey: 'ils',
     tenantKey: 'ebm_ils',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/cutting', label: 'Cutting' },
       { href: '/welding', label: 'Welding' },
@@ -826,6 +832,7 @@ module.exports = {
     groupKey: 'leds',
     tenantKey: 'ebm_leds',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/leds-ssl-design', label: 'LEDs & SSL Design' },
       { href: '/manufacturing-services-testing', label: 'Manufacturing Services & Testing' },
@@ -866,6 +873,7 @@ module.exports = {
     groupKey: 'lfw',
     tenantKey: 'ebm_lfw',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/home', label: 'Home' },
       { href: '/detectors-imaging', label: 'Detectors & Imaging' },
@@ -907,6 +915,7 @@ module.exports = {
     groupKey: 'lw',
     tenantKey: 'ebm_lw',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/network-design', label: 'Network Design' },
       { href: '/fttx', label: 'FTTX' },
@@ -949,6 +958,7 @@ module.exports = {
     groupKey: 'mae',
     tenantKey: 'ebm_mae',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/computers', label: 'Computers' },
       { href: '/cyber', label: 'Cyber' },
@@ -991,6 +1001,7 @@ module.exports = {
     groupKey: 'os',
     tenantKey: 'ebm_os',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/regional-reports', label: 'Regional Reports' },
       { href: '/drilling-completion', label: 'Drilling & Completion' },
@@ -1074,6 +1085,7 @@ module.exports = {
     groupKey: 'rdh',
     tenantKey: 'ebm_rdh',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
     ],
     secondaryNavItems: [
@@ -1108,6 +1120,7 @@ module.exports = {
     groupKey: 'pia',
     tenantKey: 'ebm_pia',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/clinical-tips-from-the-editor', label: 'Clinical Tips from the Editor' },
       { href: '/complications', label: 'Complications' },
@@ -1150,6 +1163,7 @@ module.exports = {
     groupKey: 'su',
     tenantKey: 'ebm_su',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [],
     secondaryNavItems: [],
     ads: {
@@ -1178,6 +1192,7 @@ module.exports = {
     groupKey: 'up',
     tenantKey: 'ebm_up',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/transmission-distribution', label: 'Transmission & Distribution' },
       { href: '/vehicles-accessories', label: 'Vehicles & Accessories' },
@@ -1218,6 +1233,7 @@ module.exports = {
     groupKey: 'vsd',
     tenantKey: 'ebm_vsd',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/factory', label: 'Factory' },
       { href: '/non-factory', label: 'Non-Factory' },
@@ -1259,6 +1275,7 @@ module.exports = {
     groupKey: 'ww',
     tenantKey: 'ebm_ww',
     replicaSet: 'aerilon',
+    published: true,
     primaryNavItems: [
       { href: '/municipal', label: 'Municipal' },
       { href: '/industrial', label: 'Industrial' },
