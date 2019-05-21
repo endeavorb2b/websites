@@ -17,136 +17,136 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: AB Media: Aqua Magazine
+      name: AB Media - Aqua Magazine
       script: scripts/deploy.js aquamagazine aerilon
       install: skip
 
     - stage: deploy
-      name: AB Media: AthleticBusiness
+      name: AB Media - AthleticBusiness
       script: scripts/deploy.js athleticbusiness aerilon
       install: skip
 
     - stage: deploy
-      name: AB Media: Wood Floor Business
+      name: AB Media - Wood Floor Business
       script: scripts/deploy.js woodfloorbusiness aerilon
       install: skip
 
     - stage: deploy
-      name: Endeavor: Evaluation Engineering
+      name: Endeavor - Evaluation Engineering
       script: scripts/deploy.js evaluationengineering picon
       install: skip
 
     - stage: deploy
-      name: Endeavor: Officer
+      name: Endeavor - Officer
       script: scripts/deploy.js officer picon
       install: skip
 
     - stage: deploy
-      name: Endeavor: Plastics Machinery Magazine
+      name: Endeavor - Plastics Machinery Magazine
       script: scripts/deploy.js plasticsmachinerymagazine picon
       install: skip
 
     - stage: deploy
-      name: PennWell: BioOptics World
+      name: PennWell - BioOptics World
       script: scripts/deploy.js bioopticsworld aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Broadband Technology Report
+      name: PennWell - Broadband Technology Report
       script: scripts/deploy.js broadbandtechreport aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Cabling Installation & Maintenance
+      name: PennWell - Cabling Installation & Maintenance
       script: scripts/deploy.js cablinginstall aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Dental Economics
+      name: PennWell - Dental Economics
       script: scripts/deploy.js dentaleconomics aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: DentistryIQ
+      name: PennWell - DentistryIQ
       script: scripts/deploy.js dentistryiq aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Industrial Laser Solutions
+      name: PennWell - Industrial Laser Solutions
       script: scripts/deploy.js industrial-lasers aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Intelligent Aerospace
+      name: PennWell - Intelligent Aerospace
       script: scripts/deploy.js intelligent-aerospace aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Laser Focus World
+      name: PennWell - Laser Focus World
       script: scripts/deploy.js laserfocusworld aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: LEDs Magazine
+      name: PennWell - LEDs Magazine
       script: scripts/deploy.js ledsmagazine aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Lightwave
+      name: PennWell - Lightwave
       script: scripts/deploy.js lightwaveonline aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Military & Aerospace Electronics
+      name: PennWell - Military & Aerospace Electronics
       script: scripts/deploy.js militaryaerospace aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Offshore Magazine
+      name: PennWell - Offshore Magazine
       script: scripts/deploy.js offshore-mag aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Oil & Gas Journal
+      name: PennWell - Oil & Gas Journal
       script: scripts/deploy.js ogj aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Perio-Implant Advisory
+      name: PennWell - Perio-Implant Advisory
       script: scripts/deploy.js perioimplantadvisory aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Registered Dental Hygienist
+      name: PennWell - Registered Dental Hygienist
       script: scripts/deploy.js rdhmag aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Strategies Unlimited
+      name: PennWell - Strategies Unlimited
       script: scripts/deploy.js strategies-u aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Utility Products
+      name: PennWell - Utility Products
       script: scripts/deploy.js utilityproducts aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: Vision Systems Design
+      name: PennWell - Vision Systems Design
       script: scripts/deploy.js vision-systems aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell: WaterWorld
+      name: PennWell - WaterWorld
       script: scripts/deploy.js waterworld aerilon
       install: skip
 
     - stage: deploy
-      name: PMMI: Automation World
+      name: PMMI - Automation World
       script: scripts/deploy.js automationworld aerilon
       install: skip
 
     - stage: deploy
-      name: PMMI: Healthcare Packaging
+      name: PMMI - Healthcare Packaging
       script: scripts/deploy.js healthcarepackaging aerilon
       install: skip
