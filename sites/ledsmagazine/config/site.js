@@ -53,6 +53,7 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '/events', label: 'Industry Events' },
       { href: '/company-newsfeed', label: 'Company Newsfeed' },
       { href: 'https://buyersguide.ledsmagazine.com/index.html', label: 'Industry Guide', target: '_blank' },
       { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
