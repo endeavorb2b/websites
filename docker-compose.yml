@@ -583,3 +583,20 @@ services:
     ports:
       - "12181:80"
       - "35181:35181"
+
+  metrotimes:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/metrotimes
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12182
+      LIVERELOAD_PORT: 35182
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: euclid_mt
+    ports:
+      - "12182:80"
+      - "35182:35182"
