@@ -566,3 +566,20 @@ services:
     ports:
       - "12180:80"
       - "35180:35180"
+
+  clevescene:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/clevescene
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12181
+      LIVERELOAD_PORT: 35181
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: euclid_cs
+    ports:
+      - "12181:80"
+      - "35181:35181"
