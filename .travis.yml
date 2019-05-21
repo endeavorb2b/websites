@@ -130,3 +130,8 @@ jobs:
       name: Vision Systems Design
       script: scripts/deploy.js vision-systems aerilon
       install: skip
+
+    - stage: deploy
+      name: Healthcare Packaging
+      script: scripts/deploy.js healthcarepackaging aerilon
+      install: skip
