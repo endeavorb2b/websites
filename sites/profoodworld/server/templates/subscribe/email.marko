@@ -1,0 +1,27 @@
+import { get, getAsObject } from '@base-cms/object-path';
+
+<theme-pennwell-subscribe-layout>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-subscribe value="Newsletters" />
+          <h1 class="page-wrapper__title">Newsletters</h1>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-subscribe-email />
+        </div>
+      </div>
+    </div>
+  </div>
+</theme-pennwell-subscribe-layout>
