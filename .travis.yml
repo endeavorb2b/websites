@@ -62,6 +62,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Euclid - San Antonio Current
+      script: scripts/deploy.js sacurrent caprica
+      install: skip
+
+    - stage: deploy
       name: Endeavor - Evaluation Engineering
       script: scripts/deploy.js evaluationengineering picon
       install: skip

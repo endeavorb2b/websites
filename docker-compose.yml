@@ -668,3 +668,20 @@ services:
     ports:
       - "12186:80"
       - "35186:35186"
+
+  sacurrent:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/sacurrent
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12187
+      LIVERELOAD_PORT: 35187
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: euclid_sac
+    ports:
+      - "12187:80"
+      - "35187:35187"
