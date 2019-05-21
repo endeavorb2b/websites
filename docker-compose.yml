@@ -617,3 +617,20 @@ services:
     ports:
       - "12183:80"
       - "35183:35183"
+
+  outinstl:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/outinstl
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12184
+      LIVERELOAD_PORT: 35184
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: euclid_ostl
+    ports:
+      - "12184:80"
+      - "35184:35184"
