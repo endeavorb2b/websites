@@ -83,6 +83,16 @@
         fill: map-get($brand-colors, twitter);
       }
     }
+    &--instagram {
+      &:hover svg {
+        fill: map-get($brand-colors, instagram);
+      }
+    }
+    &--pinterest {
+      &:hover svg {
+        fill: map-get($brand-colors, pinterest);
+      }
+    }
   }
 
   &__links {
