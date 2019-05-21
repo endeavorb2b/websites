@@ -5,15 +5,15 @@ module.exports = {
   company: 'Athletic Business',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/abm/ab/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/abm/ab/ab-navbar-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/abm/ab/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/abm/ab/ab-navbar-logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/abm/ab/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/abm/ab/ab-logo-navbar.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/abm/ab/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/abm/ab/ab-logo-navbar.png?h=120 2x',
       ],
     },
   },
@@ -36,30 +36,28 @@ module.exports = {
   secondaryNavItems: [
     { href: 'https://www.abshow.com', label: 'Attend AB Show', target: '_blank' },
     { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
-    { href: '/buyers-guide', label: 'Buyers Guide' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
+    { href: '#', label: 'Buyers Guide' },
+    { href: '#', label: 'Subscribe' },
+    { href: '#', label: 'Magazine' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
-    { href: '/subscribe', label: 'Subscribe' },
+    { href: '#', label: 'Subscribe' },
     { href: '/contact-us', label: 'Contact Us' },
-    { href: '/events', label: 'Events' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
+    { href: '#', label: 'Events' },
+    { href: '#', label: 'Privacy Policy' },
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
+      { href: '#', label: 'Magazine' },
+      { href: '#', label: 'Buyers Guide' },
     ],
     userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
+      { href: '#', label: 'Subscribe' },
       { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
+      { href: '#', label: 'Privacy Policy' },
     ],
   },
   gtmContainer: '',
