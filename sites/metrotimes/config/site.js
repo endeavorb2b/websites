@@ -24,7 +24,7 @@ module.exports = {
   ],
   primaryNavItems: [
     { href: '/news', label: 'News' },
-    { href: '/arts-cultre', label: 'Arts & Culture' },
+    { href: '/arts-culture', label: 'Arts & Culture' },
     { href: '/food-drink', label: 'Food & Drink' },
     { href: '/weed', label: 'Weed' },
     { href: '/music', label: 'Music' },
