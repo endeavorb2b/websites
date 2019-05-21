@@ -110,7 +110,7 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('municipal/urban-stormwater/load-more') },
   },
   'municipal/wastewater': {
-    lb1: { ...LB, path: path('municipal/environwastewatermental/lb1') },
+    lb1: { ...LB, path: path('municipal/wastewater/lb1') },
     lb2: { ...LB, path: path('municipal/wastewater/lb2') },
     rail1: { ...CONTENT, path: path('municipal/wastewater/rail1') },
     rail2: { ...CONTENT, path: path('municipal/wastewater/rail2') },
