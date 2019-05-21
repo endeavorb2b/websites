@@ -515,3 +515,20 @@ services:
     ports:
       - "12177:80"
       - "35177:35177"
+
+  oemmagazine:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/oemmagazine
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12178
+      LIVERELOAD_PORT: 35178
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: pmmi_oem
+    ports:
+      - "12178:80"
+      - "35178:35178"
