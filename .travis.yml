@@ -150,3 +150,18 @@ jobs:
       name: PMMI - Healthcare Packaging
       script: scripts/deploy.js healthcarepackaging aerilon
       install: skip
+
+    - stage: deploy
+      name: PMMI - OEM Magazine
+      script: scripts/deploy.js oemmagazine aerilon
+      install: skip
+
+    - stage: deploy
+      name: PMMI - Packaging World
+      script: scripts/deploy.js packworld aerilon
+      install: skip
+
+    - stage: deploy
+      name: PMMI - Pro Food World
+      script: scripts/deploy.js profoodworld aerilon
+      install: skip
