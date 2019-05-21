@@ -72,7 +72,7 @@ module.exports = {
   subscriptions: {
     newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=af1370c4-4e46-4de5-bdbd-4732ebf8443c',
     publications: {
-      '/subscribe/print/os': 'http://formdesigner.ecn5.com/GetForm?tokenuid=84e20b11-0e4c-4b5b-9fbb-a86d1fff43c2&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
+      '/subscribe/print/os': 'https://formdesigner.ecn5.com/GetForm?tokenuid=84e20b11-0e4c-4b5b-9fbb-a86d1fff43c2&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
     },
   },
   magazines: {
