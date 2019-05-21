@@ -157,6 +157,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: PMMI - Packaging World
+      script: scripts/deploy.js packworld aerilon
+      install: skip
+
+    - stage: deploy
       name: PMMI - Pro Food World
       script: scripts/deploy.js profoodworld aerilon
       install: skip
