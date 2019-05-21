@@ -30,8 +30,8 @@ module.exports = {
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
-    { href: '/contract-packaging', label: 'Contract Packaging' },
+    { href: '/magazine/5ce442f6d7e9ba3c168b45b5', label: 'Magazine' },
+    { href: '/magazine/5ce44303d7e9ba3c168b45b8', label: 'Contract Packaging' },
     { href: '/education', label: 'Education' },
     { href: '/leadership', label: 'Leaadership' },
     { href: '/events', label: 'Calendar' },
