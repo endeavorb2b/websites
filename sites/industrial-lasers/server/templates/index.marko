@@ -9,7 +9,7 @@ $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 600] }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
@@ -37,36 +37,36 @@ $ const adSlots = {
       <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=3
+            limit=4
             section-alias="cutting"
             header={ title: "Cutting", href: "/cutting" }
-            native-x={ placement: 'list1', aliases: ['cutting'], index: 2 }
+            native-x={ placement: 'list1', aliases: ['cutting'], index: 3 }
           />
         </div>
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=3
+            limit=4
             section-alias="welding"
             header={ title: "Welding", href: "/welding" }
-            native-x={ placement: 'list1', aliases: ['welding'], index: 2 }
+            native-x={ placement: 'list1', aliases: ['welding'], index: 3 }
           />
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=3
+            limit=4
             section-alias="micromachining"
             header={ title: "Micromachining", href: "/micromachining" }
-            native-x={ placement: 'list1', aliases: ['micromachining'], index: 2 }
+            native-x={ placement: 'list1', aliases: ['micromachining'], index: 3 }
           />
         </div>
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=3
+            limit=4
             section-alias="marking-engraving"
             header={ title: "Marking & Engraving", href: "/marking-engraving" }
-            native-x={ placement: 'list1', aliases: ['marking-engraving'], index: 2 }
+            native-x={ placement: 'list1', aliases: ['marking-engraving'], index: 3 }
           />
         </div>
       </div>
@@ -83,7 +83,7 @@ $ const adSlots = {
         limit=3
         section-alias="surface-treatment"
         header={ title: "Surface Treatment", href: "/surface-treatment" }
-        native-x={ placement: 'list1', aliases: ['surface-treatment'], index: 2 }
+        native-x={ placement: 'list1', aliases: ['surface-treatment'], index:  }
       />
     </div>
     <div class="col-lg-4 mb-block">
