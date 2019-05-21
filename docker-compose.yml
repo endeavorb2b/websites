@@ -651,3 +651,20 @@ services:
     ports:
       - "12185:80"
       - "35185:35185"
+
+  riverfronttimes:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/riverfronttimes
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12186
+      LIVERELOAD_PORT: 35186
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: euclid_rft
+    ports:
+      - "12186:80"
+      - "35186:35186"
