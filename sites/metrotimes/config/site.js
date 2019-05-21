@@ -5,15 +5,15 @@ module.exports = {
   company: 'Euclid Media Group',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/euclid/mt/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/euclid/dmt/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/euclid/mt/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/euclid/dmt/logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/euclid/mt/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/euclid/dmt/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/euclid/mt/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/euclid/dmt/logo.png?h=120 2x',
       ],
     },
   },
@@ -75,7 +75,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#e2252a',
-      logo: 'https://base.imgix.net/files/base/euclid/mt/logo.png?h=60',
+      logo: 'https://base.imgix.net/files/base/euclid/dmt/logo.png?h=60',
     },
   },
 };
