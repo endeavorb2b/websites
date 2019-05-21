@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'OEM Magazine',
+  siteName: 'Packaging World',
   locale: 'en',
   images: {
     lazyload: true,
