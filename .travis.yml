@@ -132,6 +132,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Wood Floor Business
+      script: scripts/deploy.js woodfloorbusiness aerilon
+      install: skip
+
+    - stage: deploy
       name: Healthcare Packaging
       script: scripts/deploy.js healthcarepackaging aerilon
       install: skip

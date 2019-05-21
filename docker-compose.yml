@@ -448,6 +448,23 @@ services:
       - "12173:80"
       - "35173:35173"
 
+  woodfloorbusiness:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/woodfloorbusiness
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12175
+      LIVERELOAD_PORT: 35175
+      SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
+      TENANT_KEY: abm_wfb
+    ports:
+      - "12175:80"
+      - "35175:35175"
+
   healthcarepackaging:
     <<: *node
     <<: *site-cmd
