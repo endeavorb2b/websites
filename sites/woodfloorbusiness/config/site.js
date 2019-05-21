@@ -5,15 +5,15 @@ module.exports = {
   company: 'Wood Floor Business',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/abm/wfb/logo-white.png?h=60',
+      src: 'https://base.imgix.net/files/base/abm/wfb/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/abm/wfb/logo-white.png?h=120 2x',
+        'https://base.imgix.net/files/base/abm/wfb/logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/abm/wfb/logo-white.png?h=60',
+      src: 'https://base.imgix.net/files/base/abm/wfb/logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/abm/wfb/logo-white.png?h=120 2x',
+        'https://base.imgix.net/files/base/abm/wfb/logo.png?h=120 2x',
       ],
     },
   },
@@ -81,7 +81,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#7cc242',
-      logo: 'https://base.imgix.net/files/base/abm/wfb/logo-white.png?h=60',
+      logo: 'https://base.imgix.net/files/base/abm/wfb/logo.png?h=60',
     },
   },
 };
