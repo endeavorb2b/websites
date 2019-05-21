@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/vision-systems",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
