@@ -596,7 +596,7 @@ services:
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
-      TENANT_KEY: euclid_mt
+      TENANT_KEY: euclid_dmt
     ports:
       - "12182:80"
       - "35182:35182"
