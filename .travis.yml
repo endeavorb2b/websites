@@ -42,6 +42,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Euclid - OUT in SA
+      script: scripts/deploy.js outinsa caprica
+      install: skip
+
+    - stage: deploy
       name: Endeavor - Evaluation Engineering
       script: scripts/deploy.js evaluationengineering picon
       install: skip
