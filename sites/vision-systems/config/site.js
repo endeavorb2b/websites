@@ -75,7 +75,7 @@ module.exports = {
   subscriptions: {
     newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=c0d535a8-6ee3-47b4-9162-5ab560c2f9ba&promoCode=WENL2019&utm_source=mag_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
     publications: {
-      '/subscribe/print/vsd': 'http://formdesigner.ecn5.com/GetForm?tokenuid=b388925c-aedf-4e46-82ea-590a0c59355a&promoCode=NW9401&cmpid=website_sub_vsd_nw9401_apr-3-2018',
+      '/subscribe/print/vsd': 'https://formdesigner.ecn5.com/GetForm?tokenuid=b388925c-aedf-4e46-82ea-590a0c59355a&promoCode=NW9401&cmpid=website_sub_vsd_nw9401_apr-3-2018',
     },
   },
   magazines: {

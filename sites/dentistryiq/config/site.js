@@ -71,8 +71,8 @@ module.exports = {
   },
   subscriptions: {
     publications: {
-      '/subscribe/print/de': 'http://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=DE&promoCode=NW88NR',
-      '/subscribe/print/rdh': 'http://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
+      '/subscribe/print/de': 'https://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=DE&promoCode=NW88NR',
+      '/subscribe/print/rdh': 'https://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
     },
   },
   contactUs: {
