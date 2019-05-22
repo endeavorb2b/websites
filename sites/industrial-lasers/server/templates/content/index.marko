@@ -40,11 +40,13 @@ $ const adSlots = {
       <aside class="col-lg-4">
         <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
-        <endeavor-content-query-related
-          exclude-content-ids=[content.id]
-          section-id=section.id
-          native-x={ placement: 'list1', aliases, index: 4 }
-        />
+        <if(!['contact', 'company'].includes(content.type))>
+          <endeavor-content-query-related
+            exclude-content-ids=[content.id]
+            section-id=section.id
+            native-x={ placement: 'list1', aliases, index: 4 }
+          />
+        </if>
       </aside>
     </div>
   </div>
