@@ -1,0 +1,56 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(input, 'issue');
+$ const publication = getAsObject(issue, 'publication');
+$ const title = `${publication.name} ${issue.name}`;
+$ const block = 'magazine-publication-card';
+
+<div class=block>
+  <div class=`${block}__card`>
+    <h5 class=`${block}__header`>
+      <cms-text-element tag=null obj=publication field="name" link=true />
+    </h5>
+    <div class=`${block}__card-body`>
+      <div class="row">
+        <div class="col-lg-8">
+          <endeavor-item flush=false modifiers=["latest-issue"]>
+            <@image
+              alt=title
+              display=true
+              modifiers=["latest-issue"]
+              image=issue.coverImage
+              link-to=issue
+              lazyload=false
+              options={ w: 600 }
+              position="left"
+              use-placeholder=true
+              width=300
+            />
+            <@title tag="h5">
+              <cms-text-element tag=null obj=issue field="name" link=true />
+            </@title>
+
+            <@description tag="p">
+              <if(input.withPublicationDescription)>
+                <cms-text-element tag=null obj=publication field="description" />
+              </if>
+            </@description>
+
+            <@description tag="p">
+              <cms-text-element tag=null obj=issue field="description" />
+            </@description>
+
+            <@footer-left|{ block }|>
+              <cms-link-element class="btn" to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
+              <cms-link-element class="btn" to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+              <cms-link-element class="btn" to=publication block=block>Archives</cms-link-element>
+            </@footer-left>
+          </endeavor-item>
+        </div>
+        <div class="col-lg-4">
+          <endeavor-magazine-block-query-archive publication=publication />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
