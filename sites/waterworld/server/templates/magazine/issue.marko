@@ -21,14 +21,7 @@ $ const publication = getAsObject(issue, 'publication');
           <endeavor-breadcrumbs-magazine target=issue />
         </div>
         <div class="page-wrapper__body">
-          <div class="row">
-            <div class="col-lg-8">
-              <endeavor-magazine-issue-card issue=issue />
-            </div>
-            <div class="col-lg-4">
-              <endeavor-magazine-block-query-archive publication=publication />
-            </div>
-          </div>
+          <endeavor-magazine-publication-card issue=issue />
         </div>
       </div>
     </div>
