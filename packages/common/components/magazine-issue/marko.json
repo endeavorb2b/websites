@@ -11,6 +11,10 @@
         "type": "boolean",
         "default-value": true
       },
+      "@with-footer": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@with-title": {
         "type": "boolean",
         "default-value": true
