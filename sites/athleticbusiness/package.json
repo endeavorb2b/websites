@@ -1,6 +1,6 @@
 {
-  "name": "@endeavorb2b/aquamagazine",
-  "version": "0.9.7",
+  "name": "@endeavorb2b/athleticbusiness",
+  "version": "0.9.9",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -8,9 +8,9 @@
     "lint": "basecms-website lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "~0.9.22",
+    "@base-cms/marko-web": "~0.9.24",
     "@base-cms/object-path": "^0.9.0",
-    "@base-cms/web-cli": "~0.9.22",
+    "@base-cms/web-cli": "~0.9.24",
     "@endeavorb2b/base-website-common": "^0.9.4",
     "@endeavorb2b/base-website-themes": "^0.9.4",
     "@newrelic/native-metrics": "^4.1.0",

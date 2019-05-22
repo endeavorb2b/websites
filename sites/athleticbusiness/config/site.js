@@ -11,9 +11,9 @@ module.exports = {
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/abm/ab/ab-logo-navbar.png?h=60',
+      src: 'https://base.imgix.net/files/base/abm/ab/ab-navbar-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/abm/ab/ab-logo-navbar.png?h=120 2x',
+        'https://base.imgix.net/files/base/abm/ab/ab-navbar-logo.png?h=120 2x',
       ],
     },
   },
