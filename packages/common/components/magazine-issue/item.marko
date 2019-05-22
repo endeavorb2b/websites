@@ -5,7 +5,7 @@ $ const publication = getAsObject(issue, 'publication');
 $ const title = `${publication.name} ${issue.name}`;
 $ const imageLinkAttrs = { title, ...input.imageLinkAttrs };
 
-<endeavor-item  modifiers=input.modifiers flush=input.flush>
+<endeavor-item modifiers=input.modifiers flush=input.flush>
   <@image
     alt=title
     display=input.withImage
@@ -43,10 +43,14 @@ $ const imageLinkAttrs = { title, ...input.imageLinkAttrs };
     </@description>
   </if>
   <@footer-left|{ block }|>
-    <cms-link-element to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
-    <cms-link-element to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+    <if(input.withFooter)>
+      <cms-link-element to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
+      <cms-link-element to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+    </if>
   </@footer-left>
   <@footer-right>
-    <cms-date-element obj=issue field="mailed" />
+    <if(input.withFooter)>
+      <cms-date-element obj=issue field="mailed" />
+    </if>
   </@footer-right>
 </endeavor-item>
