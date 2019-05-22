@@ -24,6 +24,10 @@
       "@publication": {
         "type": "object",
         "required": true
+      },
+      "@with-header": {
+        "type": "boolean",
+        "default-value": false
       }
     }
   }
