@@ -35,6 +35,11 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
   $ const cardNodes = asArray(nodes.slice(0, 10));
   $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
+    <if(input.header && pageNumber === 1)>
+      <endeavor-load-more-header>
+        ${input.header}
+      </endeavor-load-more-header>
+    </if>
     <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
     <div class=block>
       <if(cardNodes.length)>
