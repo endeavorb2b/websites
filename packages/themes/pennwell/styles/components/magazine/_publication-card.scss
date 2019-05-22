@@ -1,0 +1,50 @@
+.magazine-publication-card {
+  margin-bottom: map-get($spacers, block);
+  &__card {
+    @include theme-card();
+    min-height: 100%;
+  }
+  &__header {
+    @include theme-card-header();
+    @include border-top-radius($theme-card-border-radius);
+    padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+    margin-bottom: 0;
+
+    &:empty {
+      display: none;
+    }
+
+    &:last-child {
+      @include border-bottom-radius(0);
+    }
+
+    a {
+      @include theme-card-header-color();
+    }
+  }
+  &__card-body {
+    & .item--latest-issue {
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+      & .item {
+        &__image {
+          @include media-breakpoint-down(lg) {
+            margin: 0 auto;
+            margin-bottom: map-get($spacers, block);
+          }
+        }
+        &__title {
+          margin-bottom: map-get($spacers, block);
+          font-size: 1.5rem;
+        }
+        &__footer {
+          a {
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+            @include button-variant($primary, $primary);
+          }
+        }
+      }
+    }
+  }
+}
