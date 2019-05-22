@@ -651,17 +651,17 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.22", "@base-cms/marko-web@~0.9.22":
-  version "0.9.22"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.22.tgz#48146e8118c6be32324a4a4a598601c03c8d3450"
-  integrity sha512-D8xYcBbh0mGbKAICBzRNly0CKgPcJXqlqkPaVA0TVWCJXOZvYXigAYTItUlMzXdQCvz6RQICRBByLPfFlLcfvw==
+"@base-cms/marko-web@^0.9.24", "@base-cms/marko-web@~0.9.24":
+  version "0.9.24"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.24.tgz#bf31c4a34b3ed50bd4e3bf83f2df43c9e02b9c0d"
+  integrity sha512-6ILbzJFFNp8uLwz/xZbbjPYwzMnoRJv/o1CLYU1PadC2AIvFnyYDZbLdDffUlRQu08TKLKBdXoVbk0Z7TogZtA==
   dependencies:
     "@base-cms/express-apollo" "^0.9.12"
     "@base-cms/image" "^0.9.22"
     "@base-cms/object-path" "^0.9.0"
     "@base-cms/tenant-context" "^0.9.1"
     "@base-cms/utils" "^0.9.0"
-    "@base-cms/web-common" "^0.9.18"
+    "@base-cms/web-common" "^0.9.24"
     "@godaddy/terminus" "^4.1.0"
     cookie-parser "^1.4.4"
     express "^4.16.4"
@@ -690,10 +690,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.0.tgz#a54bfbd119aaf310ff4cbd0e3ae253f4ecfa8b27"
   integrity sha512-g7+XxYSqtBclVj0FgbRiai70DR+px8oun1jPiOw3hOIUOvlDx1fc7VRsKKWmD+V40t6xYFyJX5qSfTYxqvJvOQ==
 
-"@base-cms/web-cli@~0.9.22":
-  version "0.9.22"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.22.tgz#6c808a7b0f2b7d44ee850bfcdb62a9a6537f05b3"
-  integrity sha512-gjN4mCU1Mfr4CeaXHvyBF2YQFuEOhScmwem56WPLXBbgnTGCeh7taGBDj//TrzlQmPY6kUmRCS5GC/vLgb5jRQ==
+"@base-cms/web-cli@~0.9.24":
+  version "0.9.24"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.24.tgz#b0d6d673ad5e8fc681593531df0d97e88b3ba66d"
+  integrity sha512-WBP2CrWkwlEVWHq9UgQlEUIxyhzixUxQMCIVvMbJxoIdaV5DhymNxhhzn8bZ4qVF6j3QizWuTZtJ/7pNd7bAEQ==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -701,7 +701,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.9.12"
-    "@base-cms/marko-web" "^0.9.22"
+    "@base-cms/marko-web" "^0.9.24"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -746,10 +746,10 @@
     webpack-stream "^5.2.1"
     yargs "^13.2.1"
 
-"@base-cms/web-common@^0.9.18":
-  version "0.9.18"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-common/-/web-common-0.9.18.tgz#331ed592fdca7b478be4fc5fececab4ddff3ae83"
-  integrity sha512-0BVDV+onxwgKXxRkoOVkGmZxE9O+F9r6Rx+w9FFC9ZBh+7qpeL1HqB5yf2qnt62QA/SRoQIRbmgvz/hpkZsTig==
+"@base-cms/web-common@^0.9.24":
+  version "0.9.24"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-common/-/web-common-0.9.24.tgz#b5b181737a6dc124a2f99199a137832ad831a948"
+  integrity sha512-AtQeEK8LCFY2XTiTEY0Z90aKnxzVEBqCUk5fbM7+p2mSQYeO6X5tf1R4wW5/PQIi4ojTT3mcutRXVAe9JIvAzA==
   dependencies:
     "@base-cms/inflector" "^0.9.0"
     "@base-cms/object-path" "^0.9.0"
