@@ -49,6 +49,10 @@
       "@image-min-width": "number",
       "@title-modifiers": "array",
       "@modifiers": "array"
+    },
+    "endeavor-magazine-issue-card": {
+      "template": "./card.marko",
+      "@issue": "object"
     }
   }
 }
