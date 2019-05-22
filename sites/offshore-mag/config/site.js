@@ -39,6 +39,8 @@ module.exports = {
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
     { href: '/videos', label: 'Videos' },
+    { href: '/webcasts', label: 'Webcasts' },
+    { href: '/events', label: 'Events' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   footerNavItems: [
@@ -54,6 +56,7 @@ module.exports = {
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: '/events', label: 'Events' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },

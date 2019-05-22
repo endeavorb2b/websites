@@ -6,9 +6,9 @@ module.exports = {
   nativeX,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pennwell/vsd/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pennwell/vsd/vsd-navbar-logo.png?h=120 2x',
       ],
     },
     footer: {
