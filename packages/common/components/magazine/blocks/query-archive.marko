@@ -11,8 +11,10 @@ $ const query = {
   queryFragment,
 };
 
-<endeavor-item-list flush=true card=true items=[{}]>
-  <@header href=publication.canonicalPath>Archives</@header>
+<endeavor-item-list flush=true card=false items=[{}]>
+  <if(input.withHeader)>
+    <@header href=publication.canonicalPath>Archives</@header>
+  </if>
   <@item>
     <cms-query-magazine-active-issues|{ nodes }| ...query>
       <div class=block>
