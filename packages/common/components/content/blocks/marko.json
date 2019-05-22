@@ -146,6 +146,9 @@
     "endeavor-content-query-load-more-author": {
       "template": "./query-load-more-author.marko"
     },
+    "endeavor-content-query-load-more-company": {
+      "template": "./query-load-more-company.marko"
+    },
     "endeavor-content-query-load-more-list": {
       "template": "./query-load-more-list.marko"
     },
