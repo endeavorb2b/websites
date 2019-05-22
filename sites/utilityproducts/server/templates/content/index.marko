@@ -52,11 +52,23 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <if(section.id)>
-      <endeavor-load-more-header>
-        More in ${section.name}
-      </endeavor-load-more-header>
+    <if(content.type === 'contact')>
+      <endeavor-content-query-load-more-author
+        header=`More from ${content.name}`
+        query={ contactId: content.id }
+        ads={ aliases }
+      />
+    </if>
+    <else-if(content.type === 'company')>
+      <endeavor-content-query-load-more-company
+        header=`More from ${content.name}`
+        query={ companyId: content.id }
+        ads={ aliases }
+      />
+    </else-if>
+    <else-if(section.id)>
       <endeavor-content-query-load-more
+        header=`More in ${section.name}`
         query={
           skip: 5,
           excludeContentIds: [content.id],
@@ -65,6 +77,6 @@ $ const adSlots = {
         ads={ aliases }
         native-x={ placement: 'card', aliases, index: 0 }
       />
-    </if>
+    </else-if>
   </@below-container>
 </theme-pennwell-content-layout>
