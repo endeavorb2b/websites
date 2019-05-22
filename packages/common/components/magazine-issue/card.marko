@@ -6,11 +6,12 @@ $ const title = `${publication.name} ${issue.name}`;
 $ const block = 'magazine-issue-card';
 
 <div class=block>
-  <endeavor-item flush=true>
+  <endeavor-item flush=false>
     <@image
       alt=title
       display=true
       image=issue.coverImage
+      link-to=issue
       lazyload=false
       options={ w: 600 }
       position="left"
@@ -18,7 +19,7 @@ $ const block = 'magazine-issue-card';
       width=300
     />
     <@title tag="h5">
-      <cms-text-element tag=null obj=issue field="name" />
+      <cms-text-element tag=null obj=issue field="name" link=true />
     </@title>
 
     <@description tag="p">
@@ -32,6 +33,7 @@ $ const block = 'magazine-issue-card';
     <@footer-left|{ block }|>
       <cms-link-element class="btn" to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
       <cms-link-element class="btn" to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+      <cms-link-element class="btn" to=publication block=block>Archives</cms-link-element>
     </@footer-left>
   </endeavor-item>
 </div>

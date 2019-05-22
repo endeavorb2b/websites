@@ -4,6 +4,7 @@
     "./breadcrumbs/marko.json",
     "./content/marko.json",
     "./load-more/marko.json",
+    "./magazine-publication/marko.json",
     "./magazine-issue/marko.json",
     "./magazine/marko.json",
     "./native-x/marko.json",
