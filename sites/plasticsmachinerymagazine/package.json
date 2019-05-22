@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/plasticsmachinerymagazine",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
