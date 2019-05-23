@@ -7,6 +7,15 @@
   width: 100%;
   padding: $theme-item-padding;
 
+  &__button {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    @include button-variant($primary, $primary);
+    margin-right: map-get($spacers, 2);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__contents {
     display: flex;
     flex: 1 1 auto;
@@ -186,6 +195,17 @@
     //
   }
 
+  &--image-only {
+    #{ $self } {
+      &--image-top,
+      &__image {
+        margin-bottom: 0;
+      }
+    }
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   &--card {
     @include theme-card();
     min-height: 100%;
@@ -240,6 +260,24 @@
     }
   }
 
+  &--latest-issue {
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    #{ $self } {
+      &__image {
+        @include media-breakpoint-down(lg) {
+          margin: 0 auto;
+          margin-bottom: map-get($spacers, block);
+        }
+      }
+      &__title {
+        margin-bottom: map-get($spacers, block);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   // Content styles
   &__content-name {
     &--contact-name {
@@ -271,15 +309,6 @@
       margin-right: map-get($spacers, 1);
       margin-left: map-get($spacers, 1);
       content: "\2014";
-    }
-  }
-
-  // Magazine styles.
-  &__magazine-publication-link,
-  &__magazine-issue-link {
-    margin-right: map-get($spacers, 2);
-    &:last-child {
-      margin-right: 0;
     }
   }
 

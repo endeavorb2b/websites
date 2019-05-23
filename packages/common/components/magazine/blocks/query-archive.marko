@@ -1,0 +1,39 @@
+import gql from 'graphql-tag';
+import { getAsObject } from '@base-cms/object-path';
+import queryFragment from '../../../api/fragments/magazine-issue-list';
+
+$ const publication = getAsObject(input, 'publication');
+
+$ const block = 'magazine-archives';
+$ const query = {
+  publicationId: publication.id,
+  limit: 9,
+  queryFragment,
+};
+
+<endeavor-item-list flush=true card=false items=[{}]>
+  <if(input.withHeader)>
+    <@header href=publication.canonicalPath>Archives</@header>
+  </if>
+  <@item>
+    <cms-query-magazine-active-issues|{ nodes }| ...query>
+      <div class=block>
+        <div class="row">
+          <for|issue| of=nodes>
+            <div class=`${block}__col`>
+              <endeavor-magazine-issue-item
+                issue=issue
+                image-modifiers=["fluid", "3by4"]
+                image-options={ w: 315, h: 420, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                modifiers=["image-only"]
+                with-header=false
+                with-footer=false
+                with-title=false
+              />
+            </div>
+          </for>
+        </div>
+      </div>
+    </cms-query-magazine-active-issues>
+  </@item>
+</endeavor-item-list>

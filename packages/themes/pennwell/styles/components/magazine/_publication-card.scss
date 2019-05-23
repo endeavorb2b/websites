@@ -1,0 +1,25 @@
+.magazine-publication-card {
+  margin-bottom: map-get($spacers, block);
+  &__card {
+    @include theme-card();
+    min-height: 100%;
+  }
+  &__header {
+    @include theme-card-header();
+    @include border-top-radius($theme-card-border-radius);
+    padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+    margin-bottom: 0;
+
+    &:empty {
+      display: none;
+    }
+
+    &:last-child {
+      @include border-bottom-radius(0);
+    }
+
+    a {
+      @include theme-card-header-color();
+    }
+  }
+}

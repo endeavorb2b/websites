@@ -1,0 +1,44 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(input, 'issue');
+$ const publication = getAsObject(issue, 'publication');
+$ const title = `${publication.name} ${issue.name}`;
+$ const modifiers = input.vertical ? [] : ['latest-issue'];
+$ const imagePosition = input.vertical ? 'top' : 'left';
+$ const imageModifiers = input.vertical ? ['3by4', 'fluid'] : ['latest-issue'];
+
+<endeavor-item flush=false modifiers=modifiers>
+  <@image
+    alt=title
+    display=true
+    modifiers=imageModifiers
+    image=issue.coverImage
+    link-to=issue
+    lazyload=false
+    options={ w: 600 }
+    position=imagePosition
+    use-placeholder=true
+    width=300
+  />
+  <@title tag="h5">
+    <cms-text-element tag=null obj=issue field="name" link=true />
+  </@title>
+
+  <@description tag="p">
+    <if(!input.vertical)>
+      <cms-text-element tag=null obj=publication field="description" />
+    </if>
+  </@description>
+
+  <@description tag="p">
+    <if(!input.vertical)>
+      <cms-text-element tag=null obj=issue field="description" />
+    </if>
+  </@description>
+
+  <@footer-left>
+    <cms-link-element class="btn item__button" to=publication path="subscribeUrl">Subscribe</cms-link-element>
+    <cms-link-element class="btn item__button" to=issue path="digitalEditionUrl">Digital Edition</cms-link-element>
+    <cms-link-element class="btn item__button" to=publication>Archives</cms-link-element>
+  </@footer-left>
+</endeavor-item>

@@ -18,6 +18,17 @@
     },
     "endeavor-magazine-block-query-active-issues": {
       "template": "./query-active-issues.marko"
+    },
+    "endeavor-magazine-block-query-archive": {
+      "template": "./query-archive.marko",
+      "@publication": {
+        "type": "object",
+        "required": true
+      },
+      "@with-header": {
+        "type": "boolean",
+        "default-value": false
+      }
     }
   }
 }

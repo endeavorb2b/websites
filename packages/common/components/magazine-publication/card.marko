@@ -1,0 +1,23 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(input, 'issue');
+$ const publication = getAsObject(issue, 'publication');
+$ const block = 'magazine-publication-card';
+
+<div class=block>
+  <div class=`${block}__card`>
+    <h5 class=`${block}__header`>
+      <cms-text-element tag=null obj=publication field="name" link=true />
+    </h5>
+    <div class=`${block}__card-body`>
+      <div class="row">
+        <div class="col-lg-8">
+          <endeavor-magazine-issue-card issue=issue />
+        </div>
+        <div class="col-lg-4">
+          <endeavor-magazine-block-query-archive publication=publication />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

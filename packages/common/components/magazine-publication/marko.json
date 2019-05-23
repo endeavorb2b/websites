@@ -1,0 +1,15 @@
+{
+  "tags": {
+    "endeavor-magazine-publication-card": {
+      "template": "./card.marko",
+      "@issue": {
+        "type": "object",
+        "required": true
+      },
+      "@with-publication-description": {
+        "type": "boolean",
+        "default-value": false
+      }
+    }
+  }
+}

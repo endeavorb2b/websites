@@ -11,6 +11,10 @@
         "type": "boolean",
         "default-value": true
       },
+      "@with-footer": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@with-title": {
         "type": "boolean",
         "default-value": true
@@ -45,6 +49,14 @@
       "@image-min-width": "number",
       "@title-modifiers": "array",
       "@modifiers": "array"
+    },
+    "endeavor-magazine-issue-card": {
+      "template": "./card.marko",
+      "@issue": "object",
+      "@vertical": {
+        "type": "boolean",
+        "default-value": false
+      }
     }
   }
 }

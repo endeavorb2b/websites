@@ -3,21 +3,10 @@ import issueListFragment from '@endeavorb2b/base-website-common/api/fragments/ma
 
 <cms-query-magazine-publications|{ nodes }| query-fragment=publicationFragment>
   <if(nodes.length)>
-    <endeavor-item-list-wrapper flush=true card=false>
-      <for|publication| of=nodes>
-        <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=issueListFragment>
-          <endeavor-item-list-node|{ item: issue }| node=node>
-            <endeavor-magazine-issue-item
-              flush=true
-              image-options={ w: 240 }
-              image-position="left"
-              image-width=150
-              issue=issue
-              with-publication-description=true
-            />
-          </endeavor-item-list-node>
-        </cms-query-magazine-latest-issue>
-      </for>
-    </endeavor-item-list-wrapper>
+    <for|publication| of=nodes>
+      <cms-query-magazine-latest-issue|{ node }| publicationId=publication.id queryFragment=issueListFragment>
+        <endeavor-magazine-publication-card issue=node with-publication-description=true />
+      </cms-query-magazine-latest-issue>
+    </for>
   </if>
 </cms-query-magazine-publications>
