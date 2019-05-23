@@ -38,12 +38,6 @@
           margin-bottom: map-get($spacers, block);
           font-size: 1.5rem;
         }
-        &__footer {
-          a {
-            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-            @include button-variant($primary, $primary);
-          }
-        }
       }
     }
   }

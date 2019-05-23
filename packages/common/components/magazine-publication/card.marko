@@ -41,9 +41,9 @@ $ const block = 'magazine-publication-card';
             </@description>
 
             <@footer-left|{ block }|>
-              <cms-link-element class="btn" to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
-              <cms-link-element class="btn" to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
-              <cms-link-element class="btn" to=publication block=block>Archives</cms-link-element>
+              <cms-link-element class=`btn ${block}__button` to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
+              <cms-link-element class=`btn ${block}__button` to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+              <cms-link-element class=`btn ${block}__button` to=publication block=block>Archives</cms-link-element>
             </@footer-left>
           </endeavor-item>
         </div>
