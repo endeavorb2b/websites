@@ -4,32 +4,15 @@ import contentListFragment from '../../../api/fragments/content-list';
 $ const { publicationId, asCard, contentCount } = input;
 
 <cms-query-magazine-latest-issue|{ node: issueNode }| publicationId=publicationId queryFragment=issueListFragment>
-  <endeavor-item-list-wrapper flush=true card=true>
-    <if(input.header)>
-      <endeavor-item-list-header href=issueNode.canonicalPath>
-        ${input.header}
-      </endeavor-item-list-header>
-    </if>
-    <if(issueNode)>
+  <if(issueNode)>
+    <endeavor-item-list-wrapper flush=true card=true>
+      <if(input.header)>
+        <endeavor-item-list-header href=issueNode.canonicalPath>
+          ${input.header}
+        </endeavor-item-list-header>
+      </if>
       <endeavor-item-list-node|{ item: issue }| node=issueNode>
-        <if(asCard)>
-          <endeavor-magazine-issue-item
-            issue=issue
-            image-modifiers=["fluid", "3by4"]
-            image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
-            image-position="top"
-            modifiers=["card"]
-          />
-        </if>
-        <else>
-          <endeavor-magazine-issue-item
-            image-options={ w: 150 }
-            image-position="right"
-            image-width=100
-            image-min-height=100
-            issue=issue
-          />
-        </else>
+        <endeavor-magazine-issue-card issue=issue vertical=true />
       </endeavor-item-list-node>
       <if(contentCount > 0)>
         <cms-query-magazine-scheduled-content|{ nodes, pageInfo }|
@@ -52,6 +35,6 @@ $ const { publicationId, asCard, contentCount } = input;
           </if>
         </cms-query-magazine-scheduled-content>
       </if>
-    </if>
-  </endeavor-item-list-wrapper>
+    </endeavor-item-list-wrapper>
+  </if>
 </cms-query-magazine-latest-issue>
