@@ -70,7 +70,12 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca78d6b75a254190e0041a9" header="Current Issue" />
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="reports"
+        header={ title: "Reports", href: "/reports" }
+        native-x={ placement: 'list1', aliases: ['reports'], index: 3 }
+      />
     </div>
   </div>
 
