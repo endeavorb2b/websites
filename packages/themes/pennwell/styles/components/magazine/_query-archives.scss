@@ -12,6 +12,11 @@
     @include media-breakpoint-up(md) {
       @include make-col(4);
     }
+    &:last-child {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
   }
   .item {
     padding: 0;
