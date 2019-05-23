@@ -1,0 +1,13 @@
+$primary: #212529 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-nav-secondary-bg-color: #fff;
+$theme-site-nav-primary-bg-color: #343a40;
+$theme-site-nav-secondary-type: light;
+
+$theme-site-nav-secondary-breakpoints: (
+  hide: 915px
+);

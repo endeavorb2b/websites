@@ -1,0 +1,52 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const issue = getAsObject(data, 'issue');
+$ const publication = getAsObject(issue, 'publication');
+
+<theme-pennwell-magazine-issue-layout issue=issue>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-magazine target=issue />
+          <h1 class="page-wrapper__title">${issue.name}</h1>
+          <p class="page-wrapper__description">${publication.name}</p>
+        </div>
+        <div class="page-wrapper__body">
+          <endeavor-magazine-issue-item
+            flush=true
+            image-options={ w: 250 }
+            image-position="left"
+            image-use-placeholder=false
+            image-width=200
+            issue=issue
+            with-description=true
+            with-header=false
+            with-publication-description=true
+            with-title=false
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-load-more-header>
+      Content for the ${issue.name} Issue
+    </endeavor-load-more-header>
+    <endeavor-content-query-load-more-issue-content
+      query={ issueId: issue.id }
+    />
+  </@below-container>
+
+</theme-pennwell-magazine-issue-layout>
