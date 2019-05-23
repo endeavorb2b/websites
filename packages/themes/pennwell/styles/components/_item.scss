@@ -249,6 +249,24 @@
     }
   }
 
+  &--latest-issue {
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    #{ $self } {
+      &__image {
+        @include media-breakpoint-down(lg) {
+          margin: 0 auto;
+          margin-bottom: map-get($spacers, block);
+        }
+      }
+      &__title {
+        margin-bottom: map-get($spacers, block);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   // Content styles
   &__content-name {
     &--contact-name {
