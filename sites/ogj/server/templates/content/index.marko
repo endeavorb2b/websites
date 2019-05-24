@@ -9,7 +9,6 @@ $ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
@@ -77,4 +76,8 @@ $ const adSlots = {
       />
     </else-if>
   </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
 </theme-pennwell-content-layout>
