@@ -685,3 +685,20 @@ services:
     ports:
       - "12187:80"
       - "35187:35187"
+
+  forconstructionpros:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/forconstructionpros
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12188
+      LIVERELOAD_PORT: 35188
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: acbm_fcp
+    ports:
+      - "12188:80"
+      - "35188:35188"

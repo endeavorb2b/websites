@@ -32,6 +32,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: AC Business Media - For Construction Pros
+      script: scripts/deploy.js forconstructionpros caprica
+      install: skip
+
+    - stage: deploy
       name: Euclid - Cleveland Scene
       script: scripts/deploy.js clevescene caprica
       install: skip
