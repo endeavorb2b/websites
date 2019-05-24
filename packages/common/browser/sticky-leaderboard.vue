@@ -1,5 +1,6 @@
 <template>
   <div :class="containerClasses">
+    <div :class="bem('background')" />
     <div :id="id" />
     <button v-if="closeable" @click="close" title="Close Advertisement" :class="buttonClasses">
       <icon name="circle-with-cross" />
