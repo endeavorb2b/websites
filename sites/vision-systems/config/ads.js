@@ -88,4 +88,28 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('emerging/load-more') },
     reskin: { ...RESKIN, path: path('emerging/reskin') },
   },
+  '3d-imaging': {
+    lb1: { ...LB, path: path('3d-imaging/lb1') },
+    lb2: { ...LB, path: path('3d-imaging/lb2') },
+    rail1: { ...CONTENT, path: path('3d-imaging/rail1') },
+    rail2: { ...CONTENT, path: path('3d-imaging/rail2') },
+    'load-more': { ...CONTENT, path: path('3d-imaging/load-more') },
+    reskin: { ...RESKIN, path: path('3d-imaging/reskin') },
+  },
+  'lighting-optics': {
+    lb1: { ...LB, path: path('lighting-optics/lb1') },
+    lb2: { ...LB, path: path('lighting-optics/lb2') },
+    rail1: { ...CONTENT, path: path('lighting-optics/rail1') },
+    rail2: { ...CONTENT, path: path('lighting-optics/rail2') },
+    'load-more': { ...CONTENT, path: path('lighting-optics/load-more') },
+    reskin: { ...RESKIN, path: path('lighting-optics/reskin') },
+  },
+  'cameras-accessories': {
+    lb1: { ...LB, path: path('cameras-accessories/lb1') },
+    lb2: { ...LB, path: path('cameras-accessories/lb2') },
+    rail1: { ...CONTENT, path: path('cameras-accessories/rail1') },
+    rail2: { ...CONTENT, path: path('cameras-accessories/rail2') },
+    'load-more': { ...CONTENT, path: path('cameras-accessories/load-more') },
+    reskin: { ...RESKIN, path: path('cameras-accessories/reskin') },
+  },
 };
