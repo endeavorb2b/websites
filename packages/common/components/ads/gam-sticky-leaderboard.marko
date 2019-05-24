@@ -1,0 +1,13 @@
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import { getAsArray } from '@base-cms/object-path';
+
+$ const { site } = out.global;
+$ const { name } = input;
+$ const aliases = getAsArray(input, 'aliases');
+$ const adunit = getAdUnit(site, { name: 'BS', aliases })
+$ const { path, sizeMapping, size: sizes } = adunit;
+$ const props = { path, sizeMapping, sizes, ...input };
+
+<if(path)>
+  <cms-browser-component name="StickyLeaderboard" props=props />
+</if>
