@@ -79,11 +79,11 @@
   }
   &__container {
     position: fixed;
-    right: $grid-gutter-width / 2;
+    right: $grid-gutter-width / 4;
     bottom: 0;
-    left: $grid-gutter-width / 2;
+    left: $grid-gutter-width / 4;
     z-index: 100000;
-    padding: map-get($spacers, 3);
+    padding: map-get($spacers, 2);
     text-align: center;
     visibility: hidden;
     background-color: transparent;
@@ -95,10 +95,10 @@
     transition: visibility linear 250ms, opacity ease 250ms;
 
     @include media-breakpoint-up("xl", $grid-breakpoints) {
+      $width: map-get($grid-breakpoints, "xl");
       right: inherit;
-      left: calc(50% - 585px);
-      width: 1170px;
-      max-width: map-get($grid-breakpoints, "xl");
+      left: calc(50% - #{$width / 2});
+      width: $width;
     }
     &--visible {
       visibility: visible;
