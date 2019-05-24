@@ -68,8 +68,8 @@ export default {
         this.handler = setTimeout(() => googletag.pubads().refresh([slot]), this.intervalMs);
       }
     },
-    display({ slot }) {
-      if (slot.getSlotElementId() === this.id) this.visible = true;
+    display({ slot, isEmpty }) {
+      if (slot.getSlotElementId() === this.id && !isEmpty) this.visible = true;
     }
   },
   computed: {
@@ -82,7 +82,7 @@ export default {
   },
   mounted() {
     googletag.cmd.push(() => {
-      googletag.pubads().addEventListener('slotResponseReceived', this.display);
+      googletag.pubads().addEventListener('slotRenderEnded', this.display);
       if (this.refreshable) googletag.pubads().addEventListener('impressionViewable', this.refresh);
       googletag
         .defineSlot(this.path, this.sizes, this.id)
