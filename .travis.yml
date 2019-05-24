@@ -4,6 +4,8 @@ cache: yarn
 
 stages:
   - name: test
+  - name: notify_start
+    if: tag is present
   - name: deploy
     if: tag is present
   - name: notify
@@ -12,6 +14,9 @@ stages:
 jobs:
   include:
     - stage: test
+    - stage: notify_start
+      script: scripts/deploy-notify-start.sh
+      install: skip
     - stage: notify
       script: scripts/deploy-notify.sh
       install: skip
