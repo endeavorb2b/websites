@@ -153,11 +153,10 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue
-        publication-id="5ca78e0e75a2541f0e0041a9"
-        header="Current Issue"
-        as-card=true
-        content-count=0
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="special-reports"
+        header={ title: "Special Reports", href: "/special-reports" }
       />
     </div>
   </div>
