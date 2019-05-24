@@ -86,7 +86,6 @@ export default {
       googletag
         .defineSlot(this.path, this.sizes, this.id)
         .defineSizeMapping(buildSizeMapping(this.sizeMapping))
-        .setTargeting('refresh', true)
         .addService(googletag.pubads());
       googletag.display(this.id);
     });
