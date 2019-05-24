@@ -1,0 +1,114 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const sections = site.getAsArray('homeSections');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+};
+
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-query-hero
+    section-id=section.id
+    limit=5
+  />
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="equipment"
+            header={ title: "Equipment", href: "/equipment" }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="trucks"
+            header={ title: "Trucks", href: "/trucks" }
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=['in-card'] />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="rental"
+        header={ title: "Rental", href: "/rental" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="concrete"
+        header={ title: "Concrete", href: "/concrete" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="asphalt"
+        header={ title: "Asphalt", href: "/asphalt" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="pavement-maintenance"
+        header={ title: "Pavement Maintenance", href: "/pavement-maintenance" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="concrete"
+        header={ title: "Concrete", href: "/concrete" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="asphalt"
+        header={ title: "Asphalt", href: "/asphalt" }
+      />
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-content-query-load-more
+      query={
+        skip: 12,
+        sectionId: section.id,
+      }
+      load-more={
+        maxPages: 0,
+      }
+      ads={ aliases }
+    />
+  </@below-container>
+
+</theme-pennwell-website-section-layout>
