@@ -1,9 +1,9 @@
 <template>
-  <div :style="{ visibility, opacity }" class="sticky-leaderboard">
+  <div :class="containerClasses">
     <div :id="id" />
-    <div v-if="closeable" @click="close" title="Close Advertisement" class="close">
+    <button v-if="closeable" @click="close" title="Close Advertisement" :class="buttonClasses">
       <icon name="circle-with-cross" />
-    </div>
+    </button>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import Icon from './icon.vue';
 
 const buildSizeMapping = sm => sm.reduce((map, s) => map.addSize(s.viewport, s.size), googletag.sizeMapping()).build();
 const generateId = () => `div-gpt-ad-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+const block = 'sticky-leaderboard';
 
 export default {
   props: {
@@ -49,15 +50,16 @@ export default {
       id: generateId(),
       intervalMs: this.interval * 1000,
       handler: null,
-      visibility: 'hidden',
+      visible: false,
     };
   },
   components: {
     Icon,
   },
   methods: {
+    bem: (name, mod = []) => [block, `${block}__${name}`, ...mod.map(m => `${block}__${name}--${m}`)],
     close() {
-      this.visibility = 'hidden';
+      this.visible = false;
       clearTimeout(this.handler);
     },
     refresh({ slot }) {
@@ -66,13 +68,16 @@ export default {
       }
     },
     display({ slot }) {
-      if (slot.getSlotElementId() === this.id) this.visibility = 'visible';
+      if (slot.getSlotElementId() === this.id) this.visible = true;
     }
   },
   computed: {
-    opacity() {
-      return this.visibility === 'visible' ? .98 : 0;
+    containerClasses() {
+      return this.bem('container', this.visible ? ['visible'] : []);
     },
+    buttonClasses() {
+      return ['btn', ...this.bem('close')];
+    }
   },
   mounted() {
     googletag.cmd.push(() => {
