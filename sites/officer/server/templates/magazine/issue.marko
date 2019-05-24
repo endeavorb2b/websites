@@ -40,4 +40,8 @@ $ const publication = getAsObject(issue, 'publication');
     />
   </@below-container>
 
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-magazine-issue-layout>

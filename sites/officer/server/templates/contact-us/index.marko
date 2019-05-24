@@ -56,4 +56,9 @@ $ const query = {
       </div>
     </div>
   </div>
+
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-website-section-layout>

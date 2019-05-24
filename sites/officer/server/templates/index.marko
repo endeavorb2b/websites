@@ -57,4 +57,8 @@ $ const adSlots = {
     />
   </@below-container>
 
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS', aliases }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-website-section-layout>

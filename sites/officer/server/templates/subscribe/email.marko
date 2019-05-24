@@ -24,4 +24,9 @@ import { get, getAsObject } from '@base-cms/object-path';
       </div>
     </div>
   </div>
+
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-subscribe-layout>

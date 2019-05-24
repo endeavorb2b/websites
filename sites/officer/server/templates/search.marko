@@ -24,4 +24,9 @@ $ const { config } = out.global;
       </div>
     </div>
   </div>
+
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS', aliases }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-search-layout>

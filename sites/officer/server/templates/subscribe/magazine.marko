@@ -27,4 +27,9 @@ $ const publication = getAsObject(data, 'publication');
       </div>
     </div>
   </div>
+
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-subscribe-layout>

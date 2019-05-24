@@ -44,4 +44,8 @@ $ const page = pageDetails('Events', config);
     </div>
   </@below-container>
 
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-published-content-layout>

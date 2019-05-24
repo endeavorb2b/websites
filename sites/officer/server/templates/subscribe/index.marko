@@ -38,4 +38,9 @@ $ const newsletterDescription = 'Stay up-to-date on industry news and events, ne
       </div>
     </div>
   </div>
+
+  <@footer>
+    $ const path = getAdUnit(site, { name: 'BS' }).path;
+    <cms-browser-component name="StickyLeaderboard" props={ path } />
+  </@footer>
 </theme-pennwell-subscribe-layout>
