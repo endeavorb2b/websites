@@ -8,7 +8,6 @@ $ const aliases = hierarchyAliases(section);
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
@@ -30,7 +29,6 @@ $ const adSlots = {
     native-x={ placement: 'list1', index: 3 }
   />
 
-  <endeavor-gam-ad-unit-display id="gpt-ad-lb2" modifiers=["inline"] />
 
   <div class="row">
     <div class="col-lg-8">
@@ -152,4 +150,8 @@ $ const adSlots = {
     />
   </@below-container>
 
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false aliases=aliases />
+  </@footer>
 </theme-pennwell-website-section-layout>
