@@ -39,6 +39,26 @@
       },
       "@class": "string",
       "@modifiers": "array"
+    },
+    "endeavor-gam-ad-sticky-leaderboard": {
+      "template": "./gam-sticky-leaderboard.marko",
+      "@name": {
+        "type": "string",
+        "required": "true"
+      },
+      "@aliases": "array",
+      "@interval": {
+        "type": "number",
+        "default-value": 60
+      },
+      "@refreshable": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@closeable": {
+        "type": "boolean",
+        "default-value": true
+      }
     }
   }
 }
