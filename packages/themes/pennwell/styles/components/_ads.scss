@@ -78,11 +78,14 @@
   z-index: 100000;
   padding: map-get($spacers, 3);
   text-align: center;
+  visibility: hidden;
   background-color: $white;
   border-radius: $border-radius;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   box-shadow: $theme-box-shadow-sm;
+  opacity: 0;
+  transition: visibility linear 250ms, opacity ease 250ms;
 
   @include media-breakpoint-up("xl", $grid-breakpoints) {
     right: inherit;

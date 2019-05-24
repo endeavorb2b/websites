@@ -1,5 +1,5 @@
 <template>
-  <div v-if="active" class="sticky-leaderboard">
+  <div :style="{ visibility, opacity }" class="sticky-leaderboard">
     <div :id="id" />
     <div v-if="closeable" @click="close" title="Close Advertisement" class="close">
       <icon name="circle-with-cross" />
@@ -49,7 +49,7 @@ export default {
       id: generateId(),
       intervalMs: this.interval * 1000,
       handler: null,
-      active: true,
+      visibility: 'hidden',
     };
   },
   components: {
@@ -57,18 +57,26 @@ export default {
   },
   methods: {
     close() {
-      console.info('closing!');
-      this.active = false;
+      this.visibility = 'hidden';
       clearTimeout(this.handler);
     },
     refresh({ slot }) {
       if (slot.getSlotElementId() === this.id) {
         this.handler = setTimeout(() => googletag.pubads().refresh([slot]), this.intervalMs);
       }
+    },
+    display({ slot }) {
+      if (slot.getSlotElementId() === this.id) this.visibility = 'visible';
     }
+  },
+  computed: {
+    opacity() {
+      return this.visibility === 'visible' ? .98 : 0;
+    },
   },
   mounted() {
     googletag.cmd.push(() => {
+      googletag.pubads().addEventListener('slotResponseReceived', this.display);
       if (this.refreshable) googletag.pubads().addEventListener('impressionViewable', this.refresh);
       googletag
         .defineSlot(this.path, this.sizes, this.id)
