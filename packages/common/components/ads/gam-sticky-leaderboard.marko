@@ -4,7 +4,7 @@ import { getAsArray } from '@base-cms/object-path';
 $ const { site } = out.global;
 $ const { name } = input;
 $ const aliases = getAsArray(input, 'aliases');
-$ const adunit = getAdUnit(site, { name: 'BS', aliases })
+$ const adunit = getAdUnit(site, { name, aliases })
 $ const { path, sizeMapping, size: sizes } = adunit;
 $ const props = { path, sizeMapping, sizes, ...input };
 
