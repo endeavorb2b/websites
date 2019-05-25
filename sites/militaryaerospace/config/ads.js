@@ -88,4 +88,12 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('test/load-more') },
     reskin: { ...RESKIN, path: path('test/reskin') },
   },
+  'defense-executive': {
+    lb1: { ...LB, path: path('defense-executive/lb1') },
+    lb2: { ...LB, path: path('defense-executive/lb2') },
+    rail1: { ...CONTENT, path: path('defense-executive/rail1') },
+    rail2: { ...CONTENT, path: path('defense-executive/rail2') },
+    'load-more': { ...CONTENT, path: path('defense-executive/load-more') },
+    reskin: { ...RESKIN, path: path('defense-executive/reskin') },
+  },
 };
