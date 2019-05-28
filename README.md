@@ -249,7 +249,7 @@ If creating a set of related components, add a taglib import at a higher level f
 **Note**: Ensure that the modifications to these files include valid JSON. Always ensure lines are alpha-sorted. When adding to the common package, ensure the component is prefixed with `endeavor-`. When adding to a theme, ensure it is prefixed with `theme-<theme-name>-`.
 
 The Marko component can be added to a template by inserting a tag made of the components name as defined in your marko.json file:
-```js
+```marko
 <div>
   <my-new-component prop1="value" />
 </div>
@@ -292,7 +292,7 @@ module.exports = (app) => {
 ```
 
 Your custom template should be located within the `/sites/$SITE/server/templates/` folder, and is referenced on line 2 of the above route:
-```js
+```marko
 $ const { site } = out.global;
 
 <theme-pennwell-document>
@@ -352,7 +352,7 @@ The homepage content is layed out using the Bootstrap Grid system for rows and c
   <tr><td>Events</td><td>Section 3</td><td>Section 4</td></tr>
 </table>
 
-```js
+```marko
 <theme-pennwell-website-section-layout section=section>
   <endeavor-content-query-hero section-id=section.id limit=5 />
   <endeavor-gam-ad-unit-define-display name="LB1" />
