@@ -1,5 +1,5 @@
 # BaseCMS Websites for Endeavor Business Media
-This monorepo contains the codebase for websites managed by Endeavor Business Media. All sites within this repository utilize the @base-cms/base-cms packages, most notably the `marko-web` and `web-cli`.
+This monorepo contains the codebase for websites managed by Endeavor Business Media. All sites within this repository utilize the [@base-cms/base-cms](https://github.com/base-cms/base-cms) packages, most notably the `marko-web` and `web-cli`.
 
 ### Table of Contents
 - [Overview](#overview)
@@ -38,7 +38,7 @@ Additionally, we recommend the following tools/utilities:
 ### Contributing
 - All contributions must be submitted as pull requests to this repository, and reviewed by a repository owner before being merged.
 - All status checks must pass, and all commits must have an approving review.
-- All package versioning must be done via the @lerna/lerna script included at `./scripts/lerna.sh`.
+- All package versioning must be done via the [@lerna/lerna](https://github.com/lerna/lerna) script included at `./scripts/lerna.sh`.
 
 #### Style Guide
 - Marko
