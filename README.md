@@ -137,6 +137,32 @@ This utility will guide you through the initial configuration to add your site a
   - Increments the ports for the application and it's live-reload function
 - Adds your site to the deployment queue in [.travis.yml](blob/master/.travis.yml)
 
+#### Copy Method
+Alternatively, the easiest way to replicate an existing site is to copy the site directory (recursively) to the new site name, and update the following files:
+- `/sites/my-new-site/package.json`
+- `/sites/my-new-site/config/core.js`
+- `/sites/my-new-site/config/site.js`
+- `/sites/my-new-site/server/styles/_variables.scss`
+
+```bash
+cp -R sites/site-to-copy sites/my-new-site
+```
+```diff
+# /sites/my-new-site/package.json
+{
+-  "name": "@endeavorb2b/site-to-copy",
++  "name": "@endeavorb2b/my-new-site",
+```
+
+```diff
+# /sites/my-new-site/config/core.js
+module.exports = {
+-  siteName: 'Site to Copy',
++  siteName: 'My New Site',
+```
+
+When copying sites, ensure that unused components, templates, and routes are not copied inadvertently.
+
 #### Additional Considerations
 While the web CLI automates most of the bootstrapping process, manual intervention is required in a couple of places:
 - The [.travis.yml](blob/master/.travis.yml) should be alpha sorted by Account and Site name. Make sure the site is in the correct spot within the file before committing.
