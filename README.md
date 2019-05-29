@@ -59,7 +59,7 @@ Additionally, we recommend the following tools/utilities:
   - All project linting rules should be followed (see ESLint at project root).
   - While all ES6 code will be transpiled for the browser accessing it at run-time, beware of any potential deprecations that are not included in the transpilation.
     - Utilize [CanIUse](https://caniuse.com) to check targeted browser support for native JS and CSS methods.
-    - If an additional polyfill is required, make sure the [loader](https://github.com/base-cms/base-cms/packages/marko-web/src/components/document/index.marko#L11) is updated to reflect this.
+    - If an additional polyfill is required, make sure the [loader](https://github.com/base-cms/base-cms/blob/master/packages/marko-web/src/components/document/index.marko#L11) is updated to reflect this.
 
 
 ### Deployments
@@ -121,7 +121,7 @@ Packages should use dasherized folder names (`my-package` rather than `myPackage
 Sites should match the lowercase domain name of the site exactly, excluding the GTLD (.com/etc) or any subdomain (`www.my-NEW-site.com.jp` should be added as `my-new-site`.)
 
 ### Creating a new site
-To add a new site to this repository, you first need to know the Base Platform infrastructure stack. You can find this in the relevant [groups](https://github.com/cygnusb2b/base-platform/app/config/platform/groups/as3.yml) definition under the `infrastructure_group` key.
+To add a new site to this repository, you first need to know the Base Platform infrastructure stack. You can find this in the relevant [groups](https://github.com/cygnusb2b/base-platform/blob/master/app/config/platform/groups/as3.yml) definition under the `infrastructure_group` key.
 
 To create your site, execute the websites CLI within this repository, supplying the folder name and infrastructure stack:
 ```bash
