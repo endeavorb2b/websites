@@ -72,7 +72,7 @@ module.exports = {
     apiKey: '003355913687346718228:sdje-2o3phk',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=4e648177-9864-4c3e-ba00-e0e0af798879&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+    newsletters: 'https://endeavor.dragonforms.com/ILSPrefPage',
     publications: {
       '/subscribe/print/ils': 'https://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=ILSD&promoCode=WS702',
       '/subscribe/print/ilscn': 'https://www.industrysourcing.com/Big5/china/Subscription.asp?magazine_code=ILS',
