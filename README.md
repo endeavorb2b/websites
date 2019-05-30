@@ -60,6 +60,9 @@ Additionally, we recommend the following tools/utilities:
   - While all ES6 code will be transpiled for the browser accessing it at run-time, beware of any potential deprecations that are not included in the transpilation.
     - Utilize [CanIUse](https://caniuse.com) to check targeted browser support for native JS and CSS methods.
     - If an additional polyfill is required, make sure the [loader](https://github.com/base-cms/base-cms/blob/master/packages/marko-web/src/components/document/index.marko#L11) is updated to reflect this.
+- General
+  - All files should have a new line at the end [VSCode](https://stackoverflow.com/questions/44704968/visual-studio-code-insert-new-line-at-the-end-of-files)
+  - All files should be indented with two spaces, no tabs
 
 
 ### Deployments
