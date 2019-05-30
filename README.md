@@ -61,8 +61,9 @@ Additionally, we recommend the following tools/utilities:
     - Utilize [CanIUse](https://caniuse.com) to check targeted browser support for native JS and CSS methods.
     - If an additional polyfill is required, make sure the [loader](https://github.com/base-cms/base-cms/blob/master/packages/marko-web/src/components/document/index.marko#L11) is updated to reflect this.
 - General
-  - All files should have a new line at the end [VSCode](https://stackoverflow.com/questions/44704968/visual-studio-code-insert-new-line-at-the-end-of-files)
-  - All files should be indented with two spaces, no tabs
+  - All files should have a new line at the end [VSCode](https://stackoverflow.com/a/44704969/2195565)
+  - Ensure trailing whitespace is trimmed from each line [VSCode](https://stackoverflow.com/a/30884298/2195565)
+  - All files should be indented with two spaces [VSCode](https://stackoverflow.com/a/38556923/2195565)
 
 
 ### Deployments
