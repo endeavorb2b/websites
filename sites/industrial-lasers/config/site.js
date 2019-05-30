@@ -72,7 +72,7 @@ module.exports = {
     apiKey: '003355913687346718228:sdje-2o3phk',
   },
   subscriptions: {
-    newsletters: 'https://endeavor.dragonforms.com/ILSPrefPage',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=ILSPrefPage',
     publications: {
       '/subscribe/print/ils': 'https://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=ILSD&promoCode=WS702',
       '/subscribe/print/ilscn': 'https://www.industrysourcing.com/Big5/china/Subscription.asp?magazine_code=ILS',
