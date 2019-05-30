@@ -66,7 +66,7 @@ Additionally, we recommend the following tools/utilities:
 - Deployments to production infrastructure are performed via [Travis CI](https://travis-ci.org/endeavorb2b/websites/builds), and occur only when a release is tagged.
 - Each site is versioned independently, and the build process results in an individual docker container, hosted on [Docker Hub](https://hub,.docker.com/u/endeavorb2b).
   - If there are no changes in a site, a version will not be published, nor will the site be deployed
-- The deployment configuration is located in [.travis.yml](blob/master/.travis.yml), and specifies the site directory and [infrastructure stack](https://rancher2.as3.io/c/c-xcz9s/projects-namespaces).
+- The deployment configuration is located in [.travis.yml](.travis.yml), and specifies the site directory and [infrastructure stack](https://rancher2.as3.io/c/c-xcz9s/projects-namespaces).
 - This deployment script utilizes the site package.json version (provided by lerna on tag) and the DockerHub API to determine if a build should happen.
 - If a build is triggered, the deployment script deploys the new Docker image to the production infrastructure using the [@endeavorb2b/rancher2cli](https://github.com/endeavorb2b/rancher2cli) CLI.
 
@@ -132,10 +132,10 @@ This utility will guide you through the initial configuration to add your site a
   - describe what it does
 - Ensures that all templated files are filled out with your configuration
   - describe them (package.json, config/site.js, etc)
-- Adds your site to the build environment in [docker-compose.yml](blob/master/docker-compose.yml)
+- Adds your site to the build environment in [docker-compose.yml](docker-compose.yml)
   - Ensures that the required environment variables are set to the infrastructure stack you supplied
   - Increments the ports for the application and it's live-reload function
-- Adds your site to the deployment queue in [.travis.yml](blob/master/.travis.yml)
+- Adds your site to the deployment queue in [.travis.yml](.travis.yml)
 
 #### Copy Method
 Alternatively, the easiest way to replicate an existing site is to copy the site directory (recursively) to the new site name, and update the following files:
@@ -165,7 +165,7 @@ When copying sites, ensure that unused components, templates, and routes are not
 
 #### Additional Considerations
 While the web CLI automates most of the bootstrapping process, manual intervention is required in a couple of places:
-- The [.travis.yml](blob/master/.travis.yml) should be alpha sorted by Account and Site name. Make sure the site is in the correct spot within the file before committing.
+- The [.travis.yml](.travis.yml) should be alpha sorted by Account and Site name. Make sure the site is in the correct spot within the file before committing.
 - The CLI utility does not make any assumptions about themeing. You must manually include the theme you would like to use. See [Themeing](#themeing) for more information.
 - Similarly, the utility makes no assumptions about reusable components or common routing/templates. If you want common components or routes from an existing site, you must add the relevant templates and/or Express routing to make them work. See [Common Components](#common-components) for more information.
 
@@ -256,7 +256,7 @@ The Marko component can be added to a template by inserting a tag made of the co
 ```
 
 #### Layouts
-A common use-case for shared components is to create a `layout` component that can be reused by multiple templates to create a common layout. For an example, see the [website-section layout](blob/master/packages/themes/pennwell/components/layouts/website-section.marko) in the PennWell theme. This layout component is used by each sites `website-section` template and performs any duplicative actions, such as setting the page title or metadata, without needing to be done in every sites template.
+A common use-case for shared components is to create a `layout` component that can be reused by multiple templates to create a common layout. For an example, see the [website-section layout](packages/themes/pennwell/components/layouts/website-section.marko) in the PennWell theme. This layout component is used by each sites `website-section` template and performs any duplicative actions, such as setting the page title or metadata, without needing to be done in every sites template.
 
 #### Non-shared components
 If a Vue or Marko component is needed for a site, but will never be re-used on other sites, create the component within the `/sites/$SITE/server/components` or `/sites/$SITE/browser/` folders using the same approach as outlined above.
@@ -313,7 +313,7 @@ $ const { site } = out.global;
 ```
 
 ### Changing a logo
-The logos utilized with the [Pennwell](blob/master/packages/themes/pennwell) theme come from the `/sites/$SITE/config/site.js` file under the `logos` key. Update the `navbar` and/or `footer` sub-keys with the new logo URL and/or dimensions.
+The logos utilized with the [Pennwell](packages/themes/pennwell) theme come from the `/sites/$SITE/config/site.js` file under the `logos` key. Update the `navbar` and/or `footer` sub-keys with the new logo URL and/or dimensions.
 
 ### Changing colors
 Site colors can be customized by modifying the `/sites/$SITE/server/styles/_variables.scss`.
@@ -338,7 +338,7 @@ $theme-site-nav-secondary-breakpoints: (
 ```
 
 ### Changing home page layout
-The home page utilizes the theme's [website-section layout](blob/master/packages/themes/pennwell/components/layouts/website-section.marko). This layout supports the use of `<@above-container> ... </@above-container>` and `<@below-container> ...</@below-container>` tags to put custom content above or below the page container -- for example to add breadcrumbs or a custom page header.
+The home page utilizes the theme's [website-section layout](packages/themes/pennwell/components/layouts/website-section.marko). This layout supports the use of `<@above-container> ... </@above-container>` and `<@below-container> ...</@below-container>` tags to put custom content above or below the page container -- for example to add breadcrumbs or a custom page header.
 
 Most pages should utilize the `endeavor-content-block-page-header` and `endeavor-content-block-page-header` common components, but these are generally _not_ used on the homepage.
 
@@ -393,7 +393,7 @@ The homepage content is layed out using the Bootstrap Grid system for rows and c
   - When SCSS or Vue compilation errors happen, the site must be terminated and restarted once the error is fixed -- see below.
   - Sometimes certain files are no longer considered when watching for changes. If this happens, interrupt the process (CMD/Ctrl+C), execute `docker-compose down`, and `docker-compose up <folder-name>` again.
 - Docker Compose up throws a `No such service` error
-  - Check your spelling -- the service name argument must match the value within the [docker-compose.yml](blob/master/docker-compose.yml) service definition for the site. Ensure that this definition also matches the folder name under the `sites` directory
+  - Check your spelling -- the service name argument must match the value within the [docker-compose.yml](docker-compose.yml) service definition for the site. Ensure that this definition also matches the folder name under the `sites` directory
 - Docker Compose loads the wrong site
   - Check the `package.json` and `config/core.js` and ensure the correct site is defined.
 - An icon I added is not being displayed
