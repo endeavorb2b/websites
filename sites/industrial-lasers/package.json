@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/industrial-lasers",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
