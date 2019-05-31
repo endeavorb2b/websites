@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/laserfocusworld",
-  "version": "0.9.15",
+  "version": "0.9.17",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
