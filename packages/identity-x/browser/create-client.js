@@ -1,6 +1,6 @@
 import ApolloClient from 'apollo-boost';
 
-module.exports = ({ uri, appId }) => new ApolloClient({
+export default ({ uri, appId }) => new ApolloClient({
   uri,
   headers: { 'x-app-id': appId },
 });

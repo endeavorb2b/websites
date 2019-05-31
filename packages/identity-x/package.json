@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.0.0",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.4.0",
@@ -8,6 +8,9 @@
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
     "vue-apollo": "^3.0.0-beta.30"
+  },
+  "peerDependencies": {
+    "@base-cms/marko-web": "~0.9.29"
   },
   "devDependencies": {
     "eslint": "^5.15.1",
