@@ -26,6 +26,9 @@
     },
     "theme-pennwell-subscribe-layout": {
       "template": "./subscribe.marko"
+    },
+    "theme-pennwell-login-layout": {
+      "template": "./login.marko"
     }
   }
 }

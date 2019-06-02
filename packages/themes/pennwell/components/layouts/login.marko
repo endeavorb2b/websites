@@ -1,0 +1,22 @@
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+
+<theme-pennwell-document>
+  <@head>
+    <cms-page-title value="Login" />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('login') />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="login">
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+  <@footer>
+    <${input.footer} />
+    <theme-pennwell-site-footer />
+  </@footer>
+</theme-pennwell-document>
