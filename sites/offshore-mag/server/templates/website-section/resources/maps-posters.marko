@@ -1,4 +1,4 @@
-import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
 
@@ -24,14 +24,12 @@ $ const adSlots = {
   
   <div class="page-wrapper default-page">
     <div class="row">
-      <div class="col align-self-start">
-        <div class="page-wrapper__header">
-          <endeavor-breadcrumbs-published-content title=section.name />
-          <h1 class="page-wrapper__title">${section.name}</h1>
-          <if(section.description)>
-            <p class="page-wrapper__description">${section.description}</p>
-          </if>
-        </div>
+      <div class="col">
+        <endeavor-breadcrumbs-website-section section=section />
+        <h1 class="page-wrapper__title">${section.name}</h1>
+        <if(section.description)>
+          <p class="page-wrapper__description">${section.description}</p>
+        </if>
       </div>
     </div>
   </div>
