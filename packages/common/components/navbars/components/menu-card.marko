@@ -1,8 +1,9 @@
 import bem from '../../../utils/bem-class';
 
+$ const { isArray } = Array;
 $ const { site } = out.global;
 $ const { block } = input;
-$ const items = site.getAsArray(input.for);
+$ const items = isArray(input.items) ? input.items : site.getAsArray(input.for);
 
 <if(items.length)>
   <div class=`${bem(block, 'card-header')} card-header`>

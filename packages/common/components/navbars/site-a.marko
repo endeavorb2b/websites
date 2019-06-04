@@ -7,6 +7,15 @@ $ const nav = 'site-navbar-items';
 $ const menu = 'site-navbar-menu';
 $ const siteName = config.siteName();
 
+$ const loggedInItems = [
+  { href: '/user/logout', title: `Logout of ${siteName}`, label: 'Logout' },
+];
+$ const loggedOutItems = [
+  { href: '/user/login', title: `Login to ${siteName}`, label: 'Login' },
+  { href: '/user/register', title: `Register to ${siteName}`, label: 'Register' },
+];
+$ const getUserItems = user => user ? loggedInItems : loggedOutItems;
+
 <header class=navbar>
 
   <nav class=bem(navbar, 'secondary')>
@@ -24,6 +33,13 @@ $ const siteName = config.siteName();
         </for>
       </ul>
       <ul class="site-navbar-items site-navbar-items--tertiary">
+        <identity-x-context|{ user }|>
+          <for|item| of=getUserItems(user)>
+            <li class=bem(nav, 'item')>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+            </li>
+          </for>
+        </identity-x-context>
         <li class=bem(nav, 'item')>
           <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
             <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
@@ -52,6 +68,9 @@ $ const siteName = config.siteName();
     <div class=`${bem(menu, 'card')} card`>
       <menu-card block=menu for="primaryNavItems" header="Topics" />
       <menu-card block=menu for="menuItems.resources" header="Resources" />
+      <identity-x-context|{ user }|>
+        <menu-card block=menu items=getUserItems(user) header="Site Registration" />
+      </identity-x-context>
       <menu-card block=menu for="menuItems.userTools" header="User Tools" />
       <div class=`${bem(menu, 'card-footer')} card-footer`></div>
     </div>
