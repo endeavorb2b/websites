@@ -1,5 +1,6 @@
 const gql = require('graphql-tag');
 const { asyncRoute } = require('@base-cms/utils');
+const tokenCookie = require('../../utils/token-cookie');
 
 const logoutAppUser = gql`
   mutation LogoutAppUser($input: LogoutAppUserMutationInput!) {
@@ -8,15 +9,15 @@ const logoutAppUser = gql`
 `;
 
 module.exports = asyncRoute(async (req, res) => {
-  const { identityX, cookies } = req;
-  const { __idx: token } = cookies;
+  const { identityX } = req;
+  const token = tokenCookie.getFrom(req);
   if (!token) {
     res.json({ ok: true });
   } else {
     const input = { token };
     const variables = { input };
     await identityX.client.mutate({ mutation: logoutAppUser, variables });
-    res.clearCookie('__idx');
+    tokenCookie.removeFrom(res);
     res.json({ ok: true });
   }
 });

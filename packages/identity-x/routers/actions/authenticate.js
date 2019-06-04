@@ -1,5 +1,6 @@
 const gql = require('graphql-tag');
 const { asyncRoute } = require('@base-cms/utils');
+const tokenCookie = require('../../utils/token-cookie');
 
 const loginAppUser = gql`
   mutation LoginAppUser($input: LoginAppUserMutationInput!) {
@@ -21,7 +22,6 @@ module.exports = asyncRoute(async (req, res) => {
   const variables = { input };
   const { data = {} } = await identityX.client.mutate({ mutation: loginAppUser, variables });
   const { token: authToken } = data.loginAppUser;
-  const maxAge = 1000 * 60 * 60 * 24 * 365 * 2;
-  res.cookie('__idx', authToken.value, { maxAge, httpOnly: false });
+  tokenCookie.setTo(res, authToken.value);
   res.json({ ok: true });
 });
