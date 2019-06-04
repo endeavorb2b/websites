@@ -17,14 +17,16 @@ $ const aliases = hierarchyAliases(section);
     <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
   
-  <div class="page-wrapper default-page">
+  <div class="page-wrapper">
     <div class="row">
       <div class="col">
-        <endeavor-breadcrumbs-website-section section=section />
-        <h1 class="page-wrapper__title">${section.name}</h1>
-        <if(section.description)>
-          <p class="page-wrapper__description">${section.description}</p>
-        </if>
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">${section.description}</p>
+          </if>
+        </div>
       </div>
     </div>
   </div>
