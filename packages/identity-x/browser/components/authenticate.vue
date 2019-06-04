@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import redirect from '../utils/redirect';
+
 export default {
   props: {
     token: {
@@ -55,9 +57,7 @@ export default {
 
     redirect() {
       this.redirecting = true;
-      const path = this.redirectTo.replace(/^\/+/, '');
-      const url = `${window.location.origin}/${path}`;
-      window.location.replace(url);
+      redirect(window, this.redirectTo);
     },
   },
 };
