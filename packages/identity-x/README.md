@@ -17,6 +17,8 @@ module.exports = {
     // The mount point for backend JSON handlers
     // This is optional. If left blank will automatically mount to `/__idx`
     mountTo: '/__idx',
+    // Whether debug messages should be logged to the console
+    debug: process.env.NODE_ENV === 'development',
   },
 }
 ```
