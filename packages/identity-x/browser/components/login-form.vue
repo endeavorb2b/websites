@@ -1,5 +1,9 @@
 <template>
-  <div v-if="complete">
+  <div v-if="hasActiveUser">
+    <p>You are currently logged in as {{ activeUser.email }}.</p>
+    <a :href="logoutEndpoint" class="btn btn-primary" role="button">Logout</a>
+  </div>
+  <div v-else-if="complete">
     <h4>Almost Done!</h4>
     <p>We just sent an email to <em>{{ user.email }}</em> with your one-time login link. To finish logging in, open the email message and click the link within.</p>
     <p>Note: please make sure you check your spam and or clutter/junk folders.</p>
@@ -32,7 +36,22 @@
 </template>
 
 <script>
+import cleanPath from '../utils/clean-path';
+
 export default {
+  props: {
+    activeUser: {
+      type: Object,
+    },
+    authEndpoint: {
+      type: String,
+      default: '/user/authenticate',
+    },
+    logoutEndpoint: {
+      type: String,
+      default: '/user/logout',
+    },
+  },
   data: () => ({
     error: null,
     loading: false,
@@ -51,8 +70,10 @@ export default {
       return 'Continue';
     },
     authUrl() {
-      // @todo This needs to be configured.
-      return `${window.location.origin}/user/authenticate`;
+      return `${window.location.origin}/${cleanPath(this.authEndpoint)}`;
+    },
+    hasActiveUser() {
+      return this.activeUser && this.activeUser.id;
     },
   },
   methods: {
