@@ -1,2 +1,8 @@
 @import "variables";
 @import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+
+.website-section-page {
+  &--31922 {
+    margin-bottom: map-get($spacers, block);
+  }
+}
