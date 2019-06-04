@@ -64,13 +64,7 @@ export default {
       this.loading = true;
       const { user, requiredFields } = this;
       try {
-        // @todo This needs to be configured.
-        const res = await fetch('/__idx/login', {
-          method: 'post',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ user, requiredFields, authUrl: this.authUrl }),
-        });
-
+        const res = await this.$fetch('/login', {user, requiredFields, authUrl: this.authUrl });
         const data = await res.json();
         if (!res.ok) throw new Error(`${res.statusText} (${res.status}): ${data.message}`);
 

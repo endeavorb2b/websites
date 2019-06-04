@@ -42,12 +42,7 @@ export default {
         const { token } = this;
         if (!token) throw new Error('No login token was provided.');
 
-        // @todo This needs to be configured.
-        const res = await fetch('/__idx/authenticate', {
-          method: 'post',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ token }),
-        });
+        const res = await this.$fetch('/authenticate', { token });
         const data = await res.json();
         if (!res.ok) throw new Error(data.message);
         this.redirect();
