@@ -10,11 +10,16 @@ const rootConfig = {
 
 module.exports = ({
   uri,
+  token,
   appId,
   config,
   linkConfig = {},
 } = {}) => {
   if (!appId) throw new Error('An IdentityX application ID is required.');
+
+  const headers = { ...linkConfig.headers, 'x-app-id': appId };
+  if (token) headers.authorization = `AppUser ${token}`;
+
   return new ApolloClient({
     ...config,
     ...rootConfig,
@@ -22,10 +27,7 @@ module.exports = ({
       ...linkConfig,
       uri,
       fetch,
-      headers: {
-        ...linkConfig.headers,
-        'x-app-id': appId,
-      },
+      headers,
     }),
     cache: new InMemoryCache(),
   });
