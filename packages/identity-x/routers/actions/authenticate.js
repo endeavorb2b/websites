@@ -12,7 +12,6 @@ const loginAppUser = gql`
   }
 `;
 
-
 module.exports = asyncRoute(async (req, res) => {
   const { identityX, body } = req;
   const { token } = body;
