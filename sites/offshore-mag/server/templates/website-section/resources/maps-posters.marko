@@ -1,25 +1,20 @@
 import { getAsObject } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
-$ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
-};
 
 <theme-pennwell-website-section-layout section=section>
+
   <@head>
-    <endeavor-ad-gam-head slots=adSlots />
+    <endeavor-ad-gam-head />
   </@head>
 
   <@above-container>
-    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
-    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
-    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-out-of-page name="wa" />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
   
   <div class="page-wrapper default-page">
@@ -42,6 +37,6 @@ $ const adSlots = {
   </@below-container>
 
   <@footer>
-    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false aliases=aliases />
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />
   </@footer>
 </theme-pennwell-website-section-layout>
