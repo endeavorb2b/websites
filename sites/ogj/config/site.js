@@ -1,7 +1,9 @@
 const ads = require('./ads');
+const identityX = require('./identity-x');
 
 module.exports = {
   ads,
+  identityX,
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=60',

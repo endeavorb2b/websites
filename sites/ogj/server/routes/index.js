@@ -1,3 +1,4 @@
+const loadIdentityX = require('@endeavorb2b/base-website-identity-x/load-from-config');
 const contactUs = require('./contact-us');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
@@ -7,9 +8,13 @@ const loadMore = require('./load-more');
 const publishedContent = require('./published-content');
 const search = require('./search');
 const subscribe = require('./subscribe');
+const user = require('./user');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
+  // Load IdentityX before all routes.
+  loadIdentityX(app);
+
   // Homepage
   home(app);
 
@@ -36,6 +41,9 @@ module.exports = (app) => {
 
   // Subscription Pages
   subscribe(app);
+
+  // User Pages
+  user(app);
 
   // Website Sections
   websiteSections(app);
