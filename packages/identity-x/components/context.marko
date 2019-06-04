@@ -1,0 +1,22 @@
+$ const { site, req } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+$ const { identityX } = req;
+
+<if(identityX)>
+  <await(identityX.loadActiveUser())>
+    <@then|user|>
+      <${input.renderBody} user=user />
+    </@then>
+    <@catch|err|>
+      <if(input.onError)>
+        <${input.onError} err=err />
+      </if>
+      <else>
+        <pre>An unexpected error occurred: ${err.message}</pre>
+        <if(isDevelopment)>
+          <pre>${err.stack}</pre>
+        </if>
+      </else>
+    </@catch>
+  </await>
+</if>

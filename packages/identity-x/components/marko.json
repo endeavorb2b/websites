@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "identity-x-context": {
+      "template": "./context"
+    }
+  }
+}

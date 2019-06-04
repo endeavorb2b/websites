@@ -1,0 +1,6 @@
+{
+  "taglib-id": "@endeavorb2b/base-website-identity-x",
+  "taglib-imports": [
+    "./components/marko.json"
+  ]
+}
