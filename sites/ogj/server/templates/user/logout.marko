@@ -1,0 +1,30 @@
+$ const { config } = out.global;
+
+<theme-pennwell-user-layout title="Logout" for="logout">
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs>
+            <@item>
+              <endeavor-link href="/" title="Home">Home</endeavor-link>
+            </@item>
+            <@item>Logout</@item>
+          </endeavor-breadcrumbs>
+        </div>
+        <div class="page-wrapper__body">
+          <cms-browser-component name="IdentityLogout" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</theme-pennwell-user-layout>
