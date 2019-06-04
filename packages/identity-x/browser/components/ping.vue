@@ -1,17 +1,9 @@
 <template>
-  <div>IdentityX Ping {{ping}}</div>
+  <div>IdentityX Ping</div>
 </template>
 
 <script>
-import gql from 'graphql-tag';
-
 export default {
-  apollo: {
-    ping: gql`
-      query Ping {
-        ping
-      }
-    `,
-  },
+
 };
 </script>
