@@ -651,31 +651,10 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.29", "@base-cms/marko-web@~0.9.22":
+"@base-cms/marko-web@^0.9.29", "@base-cms/marko-web@~0.9.29":
   version "0.9.29"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.29.tgz#760c994a3baa7b752089f9b7a4da7e3e27a201a6"
   integrity sha512-2UciMlFKl4gt90HmUPydsCiUJt/63rf49wnUgzZq6nV8NCbHVGXQRYxi2RM4nMw1lyZz8RATM8efWopiKZrPrQ==
-  dependencies:
-    "@base-cms/express-apollo" "^0.9.12"
-    "@base-cms/image" "^0.9.22"
-    "@base-cms/object-path" "^0.9.0"
-    "@base-cms/tenant-context" "^0.9.1"
-    "@base-cms/utils" "^0.9.0"
-    "@base-cms/web-common" "^0.9.24"
-    "@godaddy/terminus" "^4.1.0"
-    cookie-parser "^1.4.4"
-    express "^4.16.4"
-    express-http-proxy "^1.5.1"
-    http-errors "^1.7.2"
-    jquery "^3.4.0"
-    marko "^4.15.2"
-    moment "^2.24.0"
-    vue "^2.6.10"
-
-"@base-cms/marko-web@~0.9.24":
-  version "0.9.24"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.24.tgz#bf31c4a34b3ed50bd4e3bf83f2df43c9e02b9c0d"
-  integrity sha512-6ILbzJFFNp8uLwz/xZbbjPYwzMnoRJv/o1CLYU1PadC2AIvFnyYDZbLdDffUlRQu08TKLKBdXoVbk0Z7TogZtA==
   dependencies:
     "@base-cms/express-apollo" "^0.9.12"
     "@base-cms/image" "^0.9.22"
