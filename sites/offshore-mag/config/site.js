@@ -52,6 +52,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/resources/maps-posters', label: 'Maps & Posters' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
