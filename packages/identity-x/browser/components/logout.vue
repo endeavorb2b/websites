@@ -1,17 +1,20 @@
 <template>
-  <div>
+  <div v-if="error">
+    <p>{{ error }}</p>
+  </div>
+  <div v-else>
     <p>Logging out...</p>
   </div>
 </template>
 
 <script>
 import redirect from '../utils/redirect';
+import getReferringPage from '../utils/get-referring-page';
 
 export default {
   props: {
     redirectTo: {
       type: String,
-      default: '/',
     },
   },
   data: () => ({
@@ -25,6 +28,7 @@ export default {
      *
      */
     async logout() {
+      this.error = null;
       try {
         const res = await this.$fetch('/logout');
         const data = await res.json();
@@ -36,7 +40,8 @@ export default {
     },
 
     redirect() {
-      redirect(window, this.redirectTo);
+      const to = this.redirectTo ? this.redirectTo : getReferringPage();
+      redirect(to);
     },
   },
 };
