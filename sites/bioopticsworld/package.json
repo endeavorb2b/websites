@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/bioopticsworld",
-  "version": "0.9.13",
+  "version": "0.9.19",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
