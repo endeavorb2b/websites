@@ -651,7 +651,28 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.24", "@base-cms/marko-web@~0.9.24":
+"@base-cms/marko-web@^0.9.29", "@base-cms/marko-web@~0.9.22":
+  version "0.9.29"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.29.tgz#760c994a3baa7b752089f9b7a4da7e3e27a201a6"
+  integrity sha512-2UciMlFKl4gt90HmUPydsCiUJt/63rf49wnUgzZq6nV8NCbHVGXQRYxi2RM4nMw1lyZz8RATM8efWopiKZrPrQ==
+  dependencies:
+    "@base-cms/express-apollo" "^0.9.12"
+    "@base-cms/image" "^0.9.22"
+    "@base-cms/object-path" "^0.9.0"
+    "@base-cms/tenant-context" "^0.9.1"
+    "@base-cms/utils" "^0.9.0"
+    "@base-cms/web-common" "^0.9.24"
+    "@godaddy/terminus" "^4.1.0"
+    cookie-parser "^1.4.4"
+    express "^4.16.4"
+    express-http-proxy "^1.5.1"
+    http-errors "^1.7.2"
+    jquery "^3.4.0"
+    marko "^4.15.2"
+    moment "^2.24.0"
+    vue "^2.6.10"
+
+"@base-cms/marko-web@~0.9.24":
   version "0.9.24"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.24.tgz#bf31c4a34b3ed50bd4e3bf83f2df43c9e02b9c0d"
   integrity sha512-6ILbzJFFNp8uLwz/xZbbjPYwzMnoRJv/o1CLYU1PadC2AIvFnyYDZbLdDffUlRQu08TKLKBdXoVbk0Z7TogZtA==
@@ -690,10 +711,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.0.tgz#a54bfbd119aaf310ff4cbd0e3ae253f4ecfa8b27"
   integrity sha512-g7+XxYSqtBclVj0FgbRiai70DR+px8oun1jPiOw3hOIUOvlDx1fc7VRsKKWmD+V40t6xYFyJX5qSfTYxqvJvOQ==
 
-"@base-cms/web-cli@~0.9.24":
-  version "0.9.24"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.24.tgz#b0d6d673ad5e8fc681593531df0d97e88b3ba66d"
-  integrity sha512-WBP2CrWkwlEVWHq9UgQlEUIxyhzixUxQMCIVvMbJxoIdaV5DhymNxhhzn8bZ4qVF6j3QizWuTZtJ/7pNd7bAEQ==
+"@base-cms/web-cli@^0.9.31", "@base-cms/web-cli@~0.9.31":
+  version "0.9.31"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.31.tgz#d77b7bd5baa18e1700d936acbfa4841fa0d662f9"
+  integrity sha512-O6CyBH+iARYg2I8coIsKgclDn/P/M8qe5wOToZprU86BRVYGNr1nN2vqCSI8xzGKdaIig6Gc+/S3dZ88eD0peA==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -701,7 +722,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.9.12"
-    "@base-cms/marko-web" "^0.9.24"
+    "@base-cms/marko-web" "^0.9.29"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -727,7 +748,7 @@
     gulp-sass "^4.0.2"
     gulp-sourcemaps "^2.6.5"
     gulp-stylelint "^8.0.0"
-    handlebars "^4.1.0"
+    handlebars "^4.1.2"
     ignore "^5.0.5"
     inquirer "^6.2.2"
     mkdirp "^0.5.1"
@@ -5287,6 +5308,17 @@ handlebars@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.1.1.tgz#6e4e41c18ebe7719ae4d38e5aca3d32fa3dd23d3"
   integrity sha512-3Zhi6C0euYZL5sM0Zcy7lInLXKQ+YLcF/olbN010mzGQ4XVm50JeyBnMqofHh696GrciGruC7kCcApPDJvVgwA==
+  dependencies:
+    neo-async "^2.6.0"
+    optimist "^0.6.1"
+    source-map "^0.6.1"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
+handlebars@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.1.2.tgz#b6b37c1ced0306b221e094fc7aca3ec23b131b67"
+  integrity sha512-nvfrjqvt9xQ8Z/w0ijewdD/vvWDTOweBUm96NTr66Wfvo1mJenBLwcYmPs3TIBP5ruzYGD7Hx/DaM9RmhroGPw==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
