@@ -2,6 +2,7 @@ const contactUs = require('./contact-us');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
+const magazine = require('./magazine');
 const loadMore = require('./load-more');
 const publishedContent = require('./published-content');
 const search = require('./search');
@@ -17,6 +18,9 @@ module.exports = (app) => {
 
   // Contact Us Page
   contactUs(app);
+
+  // Magazine Pages
+  magazine(app);
 
   // Dynamic Pages
   dynamicPages(app);
