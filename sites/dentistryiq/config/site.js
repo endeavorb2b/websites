@@ -47,7 +47,6 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
