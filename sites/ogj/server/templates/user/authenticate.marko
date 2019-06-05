@@ -1,8 +1,4 @@
 $ const { config, req } = out.global;
-$ const authProps = {
-  redirectTo: req.query.redirectTo || '/',
-  token: req.query.token,
-};
 
 <theme-pennwell-user-layout title="Authenticate" for="authenticate">
   <@head>
@@ -24,7 +20,7 @@ $ const authProps = {
           </endeavor-breadcrumbs>
         </div>
         <div class="page-wrapper__body">
-          <cms-browser-component name="IdentityAuthenticate" props=authProps />
+          <cms-browser-component name="IdentityAuthenticate" props=req.query />
         </div>
       </div>
     </div>
