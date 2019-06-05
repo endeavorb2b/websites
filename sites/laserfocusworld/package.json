@@ -10,7 +10,7 @@
   "dependencies": {
     "@base-cms/marko-web": "~0.9.24",
     "@base-cms/object-path": "^0.9.0",
-    "@base-cms/web-cli": "~0.9.24",
+    "@base-cms/web-cli": "~0.9.31",
     "@endeavorb2b/base-website-common": "^0.9.13",
     "@endeavorb2b/base-website-themes": "^0.9.13",
     "@newrelic/native-metrics": "^4.1.0",
