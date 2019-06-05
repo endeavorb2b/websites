@@ -14,7 +14,6 @@ Vue.mixin({
 export default ({ mountPoint = '/__idx' } = {}) => (path, body) => {
   const endpoint = path.replace(/^\/+/, '');
   const uri = `${mountPoint}/${endpoint}`;
-  // eslint-disable-next-line no-undef
   return fetch(uri, {
     method: 'post',
     headers: { 'content-type': 'application/json' },

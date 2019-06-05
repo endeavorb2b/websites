@@ -57,7 +57,7 @@ export default {
 
     redirect() {
       this.redirecting = true;
-      redirect(window, this.redirectTo);
+      redirect(this.redirectTo);
     },
   },
 };
