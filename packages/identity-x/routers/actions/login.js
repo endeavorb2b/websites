@@ -34,7 +34,12 @@ const isMissingFields = (user, requiredFields) => requiredFields.some(field => !
 module.exports = asyncRoute(async (req, res) => {
   const { identityX, body } = req;
   // @todo this could come from the MW config??
-  const { user, authUrl, requiredFields = [] } = body;
+  const {
+    user,
+    authUrl,
+    requiredFields = [],
+    redirectTo,
+  } = body;
   const input = { email: user.email };
   const variables = { input };
   const { data } = await identityX.client.query({ query, variables });
@@ -56,6 +61,7 @@ module.exports = asyncRoute(async (req, res) => {
         input: {
           email: user.email,
           authUrl,
+          redirectTo,
           fields: user,
         },
       },

@@ -51,6 +51,10 @@ export default {
       type: String,
       default: '/user/logout',
     },
+    loginEndpoint: {
+      type: String,
+      default: '/user/logout',
+    },
   },
   data: () => ({
     error: null,
@@ -75,6 +79,10 @@ export default {
     hasActiveUser() {
       return this.activeUser && this.activeUser.id;
     },
+    redirectTo() {
+      const { pathname } = window.location;
+      return pathname === this.loginEndpoint ? undefined : pathname;
+    },
   },
   methods: {
     /**
@@ -83,9 +91,19 @@ export default {
     async loadUser() {
       this.error = null;
       this.loading = true;
-      const { user, requiredFields } = this;
+      const {
+        user,
+        requiredFields,
+        redirectTo,
+        authUrl,
+      } = this;
       try {
-        const res = await this.$fetch('/login', {user, requiredFields, authUrl: this.authUrl });
+        const res = await this.$fetch('/login', {
+          user,
+          requiredFields,
+          redirectTo,
+          authUrl,
+        });
         const data = await res.json();
         if (!res.ok) throw new Error(`${res.statusText} (${res.status}): ${data.message}`);
 
