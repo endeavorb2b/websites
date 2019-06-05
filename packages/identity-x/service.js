@@ -1,5 +1,6 @@
 const createClient = require('./create-client');
 const getActiveUser = require('./api/queries/get-active-user');
+const getActiveContext = require('./api/queries/get-active-context');
 const tokenCookie = require('./utils/token-cookie');
 
 class IdentityX {
@@ -35,6 +36,20 @@ class IdentityX {
       }
     }
     return this.activeUser;
+  }
+
+  async loadActiveContext() {
+    if (typeof this.activeContext === 'undefined') {
+      try {
+        const { data = {} } = await this.client.query({ query: getActiveContext });
+        this.activeContext = data.activeAppContext || {};
+      } catch (e) {
+        this.activeContext = {};
+        this.token = null;
+        tokenCookie.removeFrom(this.res);
+      }
+    }
+    return this.activeContext;
   }
 }
 
