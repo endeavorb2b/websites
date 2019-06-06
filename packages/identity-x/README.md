@@ -13,7 +13,7 @@ module.exports = {
     // The IdentityX application ID to use for this website
     appId: '[your-app-id-here]',
     // The IdentityX GraphQL API uri
-    uri: 'https://identity-x.base-cms.io/graphql',
+    uri: 'https://identity-x.base-cms.io/graphql', // or use an env variable
     // The mount point for backend JSON handlers
     // This is optional. If left blank will automatically mount to `/__idx`
     mountTo: '/__idx',
@@ -54,7 +54,7 @@ module.exports = (app) => {
   // ... more routes here...
 };
 ```
-- Finally, build out user-facing login/authenticate/register (etc) pages using the IdentityZ browser components. For example, a login page:
+- Build out user-facing login/authenticate/register (etc) pages using the IdentityX browser components. For example, a login page:
 ```marko
 $ const { config } = out.global;
 
