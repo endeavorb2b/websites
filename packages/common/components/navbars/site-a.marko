@@ -14,7 +14,10 @@ $ const loggedOutItems = [
   { href: '/user/login', title: `Login to ${siteName}`, label: 'Login' },
   { href: '/user/register', title: `Register to ${siteName}`, label: 'Register' },
 ];
-$ const getUserItems = hasUser => hasUser ? loggedInItems : loggedOutItems;
+$ const getUserItems = (isEnabled, hasUser) => {
+  if (!isEnabled) return [];
+  return hasUser ? loggedInItems : loggedOutItems;
+};
 
 <header class=navbar>
 
@@ -33,8 +36,8 @@ $ const getUserItems = hasUser => hasUser ? loggedInItems : loggedOutItems;
         </for>
       </ul>
       <ul class="site-navbar-items site-navbar-items--tertiary">
-        <identity-x|{ hasUser }|>
-          <for|item| of=getUserItems(hasUser)>
+        <identity-x|{ isEnabled, hasUser }|>
+          <for|item| of=getUserItems(isEnabled, hasUser)>
             <li class=bem(nav, 'item')>
               <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
@@ -68,8 +71,8 @@ $ const getUserItems = hasUser => hasUser ? loggedInItems : loggedOutItems;
     <div class=`${bem(menu, 'card')} card`>
       <menu-card block=menu for="primaryNavItems" header="Topics" />
       <menu-card block=menu for="menuItems.resources" header="Resources" />
-      <identity-x|{ hasUser }|>
-        <menu-card block=menu items=getUserItems(hasUser) header="Site Registration" />
+      <identity-x|{ isEnabled, hasUser }|>
+        <menu-card block=menu items=getUserItems(isEnabled, hasUser) header="Site Registration" />
       </identity-x>
       <menu-card block=menu for="menuItems.userTools" header="User Tools" />
       <div class=`${bem(menu, 'card-footer')} card-footer`></div>
