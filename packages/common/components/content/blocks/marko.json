@@ -14,6 +14,20 @@
         "required": true
       }
     },
+    "endeavor-content-block-primary-media": {
+      "template": "./primary-media.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
+    "endeavor-content-block-page-body-contents": {
+      "template": "./page-body-contents.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
     "endeavor-content-block-page-header": {
       "template": "./page-header.marko",
       "@content": {
