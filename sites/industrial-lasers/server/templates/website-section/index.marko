@@ -7,7 +7,7 @@ $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 600] }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
@@ -33,7 +33,7 @@ $ const adSlots = {
     <div class="col-lg-8">
       <endeavor-content-query-feed
         header="Featured"
-        limit=7
+        limit=8
         skip=5
         section-id=section.id
         native-x={ placement: 'list2', aliases, index: 6 }
