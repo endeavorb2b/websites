@@ -22,9 +22,9 @@ $ const { config } = out.global;
           <h1 class="page-wrapper__title">Login to ${config.siteName()}</h1>
         </div>
         <div class="page-wrapper__body">
-          <identity-x-context|{ user }|>
+          <identity-x|{ user }|>
             <cms-browser-component name="IdentityLoginForm" props={ activeUser: user } />
-          </identity-x-context>
+          </identity-x>
         </div>
       </div>
     </div>
