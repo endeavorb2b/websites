@@ -74,6 +74,12 @@
         color: $black;
       }
     }
+
+    &--locked {
+      a::before {
+        content: "\1F512";
+      }
+    }
   }
 
   &__description {

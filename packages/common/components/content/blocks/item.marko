@@ -1,9 +1,12 @@
-import { getAsObject } from '@base-cms/object-path';
+import { getAsObject, getAsArray, get } from '@base-cms/object-path';
 
+$ const { identityX } = out.global.req;
 $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
 $ const company = getAsObject(content, 'company');
 $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
+$ const titleModifiers = getAsArray(input, 'titleModifiers');
+$ if (get(content, 'userRegistration.isRequired') && identityX) titleModifiers.push('locked');
 
 <if(content.type === 'contact')>
   <endeavor-content-block-contact-item ...input />
@@ -34,7 +37,7 @@ $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
         <cms-text-element tag="span" block=block obj=content field="typeTitled" />
       </if>
     </@header-left>
-    <@title tag="h5" modifiers=input.titleModifiers>
+    <@title tag="h5" modifiers=titleModifiers>
       <cms-content-short-name tag=null obj=content link=true />
     </@title>
     <if(input.withTeaser)>
