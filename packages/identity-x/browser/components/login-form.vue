@@ -53,7 +53,7 @@ export default {
     },
     loginEndpoint: {
       type: String,
-      default: '/user/logout',
+      default: '/user/login',
     },
   },
   data: () => ({
