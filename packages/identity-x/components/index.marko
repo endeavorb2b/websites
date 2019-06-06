@@ -1,0 +1,58 @@
+import { getAsArray } from '@base-cms/object-path'
+
+$ const { site, req } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+$ const { identityX } = req;
+$ const isEnabled = Boolean(req.identityX) && input.enabled;
+$ const loadContext = async () => (isEnabled ? identityX.loadActiveContext() : {
+  user: null,
+  mergedAccessLevels: [],
+  mergedTeams: [],
+  hasTeams: false,
+  hasUser: false,
+});
+
+
+$ const requiredAccessLevels = getAsArray(input, 'requiredAccessLevels');
+$ const requiresAccessLevel = isEnabled ? Boolean(requiredAccessLevels.length) : false;
+$ const canDisplayContent = (hasAccessLevel, { hasUser, hasTeams }) => {
+  if (!isEnabled) return true;
+  if (requiresAccessLevel && !hasAccessLevel) return false;
+  return hasUser || hasTeams;
+};
+$ const lacksRequiredAccess = (hasAccessLevel) => {
+  if (!isEnabled) return false;
+  return requiresAccessLevel && !hasAccessLevel;
+};
+$ const needsLoginForm = ({ hasUser, hasTeams }) => {
+  if (!isEnabled) return false;
+  return !hasUser && !hasTeams
+};
+
+<await(loadContext())>
+  <@then|context|>
+    $ const accessLevelIds = context.mergedAccessLevels.map(level => level.id);
+    $ const hasAccessLevel = requiredAccessLevels.some(id => accessLevelIds.includes(id));
+    $ const output = {
+      ...context,
+      isEnabled,
+      requiresAccessLevel,
+      hasAccessLevel,
+      lacksRequiredAccess: lacksRequiredAccess(hasAccessLevel),
+      needsLoginForm: needsLoginForm(context),
+      canDisplayContent: canDisplayContent(hasAccessLevel, context),
+    };
+    <${input.renderBody} ...output />
+  </@then>
+  <@catch|err|>
+    <if(input.onError)>
+      <${input.onError} err=err />
+    </if>
+    <else>
+      <pre>An unexpected error occurred: ${err.message}</pre>
+      <if(isDevelopment)>
+        <pre>${err.stack}</pre>
+      </if>
+    </else>
+  </@catch>
+</await>

@@ -1,7 +1,14 @@
 {
   "tags": {
-    "identity-x-context": {
-      "template": "./context"
+    "identity-x": {
+      "template": "./index",
+      "@enabled": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@required-access-levels": {
+        "type": "array"
+      }
     }
   }
 }

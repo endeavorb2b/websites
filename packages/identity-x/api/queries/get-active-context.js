@@ -18,6 +18,8 @@ query GetActiveAppContext {
       id
       name
     }
+    hasTeams
+    hasUser
   }
 }
 
