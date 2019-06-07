@@ -2,6 +2,7 @@
   "tags": {
     "identity-x": {
       "template": "./index",
+      "<on-error>": {},
       "@enabled": {
         "type": "boolean",
         "default-value": true
