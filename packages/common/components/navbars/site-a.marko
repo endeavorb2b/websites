@@ -1,4 +1,5 @@
 import bem from '../../utils/bem-class';
+import getNavItems from './get-nav-items';
 
 $ const { site, config } = out.global;
 
@@ -7,63 +8,50 @@ $ const nav = 'site-navbar-items';
 $ const menu = 'site-navbar-menu';
 $ const siteName = config.siteName();
 
-$ const loggedInItems = [
-  { href: '/user/logout', title: `Logout of ${siteName}`, label: 'Logout' },
-];
-$ const loggedOutItems = [
-  { href: '/user/login', title: `Login to ${siteName}`, label: 'Login' },
-  { href: '/user/register', title: `Register to ${siteName}`, label: 'Register' },
-];
-$ const getUserItems = (isEnabled, hasUser) => {
-  if (!isEnabled) return [];
-  return hasUser ? loggedInItems : loggedOutItems;
-};
 
 <header class=navbar>
+  <identity-x|{ isEnabled: regEnabled, hasUser }|>
+    <nav class=bem(navbar, 'secondary')>
+      <div class="site-navbar-container">
+        <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
 
-  <nav class=bem(navbar, 'secondary')>
-    <div class="site-navbar-container">
-      <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
-
-      <a class=bem(navbar, 'brand') title=`${siteName} Homepage` href="/">
-        <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
-      </a>
-      <ul class="site-navbar-items site-navbar-items--secondary">
-        <for|item| of=site.getAsArray('secondaryNavItems')>
-          <li class=bem(nav, 'item')>
-            <endeavor-link class=bem(nav, 'link') target=item.target href=item.href>${item.label}</endeavor-link>
-          </li>
-        </for>
-      </ul>
-      <ul class="site-navbar-items site-navbar-items--tertiary">
-        <identity-x|{ isEnabled, hasUser }|>
-          <for|item| of=getUserItems(isEnabled, hasUser)>
+        <a class=bem(navbar, 'brand') title=`${siteName} Homepage` href="/">
+          <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
+        </a>
+        <ul class="site-navbar-items site-navbar-items--secondary">
+          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'secondaryNavItems' })>
             <li class=bem(nav, 'item')>
               <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
           </for>
-        </identity-x>
-        <li class=bem(nav, 'item')>
-          <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
-            <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <nav class=bem(navbar, 'primary')>
-    <div class="site-navbar-container">
-      <ul class="site-navbar-items site-navbar-items--primary">
-        <for|item| of=site.getAsArray('primaryNavItems')>
+        </ul>
+        <ul class="site-navbar-items site-navbar-items--tertiary">
+          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'tertiaryNavItems' })>
+            <li class=bem(nav, 'item')>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+            </li>
+          </for>
           <li class=bem(nav, 'item')>
-            <endeavor-link class=bem(nav, 'link') target=item.target href=item.href>${item.label}</endeavor-link>
+            <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
+              <endeavor-icon name="magnifying-glass" modifiers=["site-navbar"] />
+            </a>
           </li>
-        </for>
-      </ul>
-    </div>
-  </nav>
+        </ul>
+      </div>
+    </nav>
 
+    <nav class=bem(navbar, 'primary')>
+      <div class="site-navbar-container">
+        <ul class="site-navbar-items site-navbar-items--primary">
+          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'primaryNavItems' })>
+            <li class=bem(nav, 'item')>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+            </li>
+          </for>
+        </ul>
+      </div>
+    </nav>
+  </identity-x>
 </header>
 
 <aside class=menu>
@@ -71,9 +59,6 @@ $ const getUserItems = (isEnabled, hasUser) => {
     <div class=`${bem(menu, 'card')} card`>
       <menu-card block=menu for="primaryNavItems" header="Topics" />
       <menu-card block=menu for="menuItems.resources" header="Resources" />
-      <identity-x|{ isEnabled, hasUser }|>
-        <menu-card block=menu items=getUserItems(isEnabled, hasUser) header="Site Registration" />
-      </identity-x>
       <menu-card block=menu for="menuItems.userTools" header="User Tools" />
       <div class=`${bem(menu, 'card-footer')} card-footer`></div>
     </div>
