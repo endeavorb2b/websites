@@ -41,7 +41,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/reports', label: 'Laser Market Reports' },
+      { href: '/reports', label: 'Laser Market Reports', target: '_blank' },
       { href: '/videos', label: 'Videos' },
       { href: '/page/events-conferences', label: 'Events & Conferences' },
     ],
