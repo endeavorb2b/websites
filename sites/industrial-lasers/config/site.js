@@ -50,6 +50,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/blogs', label: 'Commentary' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
