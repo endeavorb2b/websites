@@ -1,12 +1,13 @@
-import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import { getAsObject, getAsArray } from '@base-cms/object-path';
 
 $ const { identityX } = out.global.req;
 $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
 $ const company = getAsObject(content, 'company');
+$ const userRegistration = getAsObject(content, 'userRegistration');
 $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
 $ const titleModifiers = getAsArray(input, 'titleModifiers');
-$ if (get(content, 'userRegistration.isRequired') && identityX) titleModifiers.push('locked');
+$ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
 
 <if(content.type === 'contact')>
   <endeavor-content-block-contact-item ...input />
