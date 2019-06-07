@@ -1,5 +1,6 @@
 const ads = require('./ads');
 const identityX = require('./identity-x');
+const userLinks = require('./user-links');
 
 module.exports = {
   ads,
@@ -36,6 +37,9 @@ module.exports = {
     { href: '/videos', label: 'Videos' },
     { href: '/page/about-us', label: 'About Us' },
   ],
+  tertiaryNavItems: [
+    ...userLinks,
+  ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
     { href: '/contact-us', label: 'Contact Us' },
@@ -51,6 +55,7 @@ module.exports = {
       { href: '/webcasts', label: 'Webcasts' },
     ],
     userTools: [
+      ...userLinks,
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
