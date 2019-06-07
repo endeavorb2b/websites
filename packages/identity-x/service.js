@@ -32,7 +32,7 @@ class IdentityX {
         this.activeUser = data.activeAppUser || null;
       } catch (e) {
         this.token = null;
-        tokenCookie.removeFrom(this.res);
+        throw e;
       }
     }
     return this.activeUser;
@@ -46,7 +46,7 @@ class IdentityX {
       } catch (e) {
         this.activeContext = {};
         this.token = null;
-        tokenCookie.removeFrom(this.res);
+        throw e;
       }
     }
     return this.activeContext;
