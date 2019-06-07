@@ -6,6 +6,7 @@
     "@base-cms/image": "^0.9.22",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
+    "@endeavorb2b/base-website-identity-x": "^0.9.0",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
     "helmet": "^3.16.0",
@@ -13,7 +14,7 @@
     "vue-recaptcha": "^1.1.1"
   },
   "peerDependencies": {
-    "@base-cms/marko-web": "~0.9.24",
+    "@base-cms/marko-web": "~0.9.29",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1"
   },

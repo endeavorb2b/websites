@@ -1,0 +1,17 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const content = getAsObject(input, 'content');
+
+<cms-content-body tag="div" class="content-body-contents" obj=content />
+
+<div class="content-body-footer">
+  <if(content.type === "whitepaper")>
+    <endeavor-content-block-download content=content />
+  </if>
+  <if(content.type === "document")>
+    <endeavor-content-block-download content=content />
+  </if>
+  <if(content.type === "webinar")>
+    <endeavor-content-block-webinar-button content=content />
+  </if>
+</div>

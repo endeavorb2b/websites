@@ -1,14 +1,13 @@
-.content-page-body {
-  &__primary-media {
-    margin-bottom: map-get($spacers, block);
-    .caption {
-      @include theme-media-caption();
-    }
-    .credit {
-      @include theme-media-credit();
-    }
+.content-primary-media {
+  margin-bottom: map-get($spacers, block);
+  .caption {
+    @include theme-media-caption();
   }
-  &__primary-video {
+  .credit {
+    @include theme-media-credit();
+  }
+
+  &__video {
     @include theme-embed-responsive(16, 9);
 
     iframe,
@@ -19,7 +18,7 @@
     }
   }
 
-  &__primary-image {
+  &__image {
     @include theme-embed-responsive(16, 9);
     border-radius: $border-radius;
     box-shadow: $theme-box-shadow-lg;

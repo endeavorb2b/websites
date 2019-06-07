@@ -1,0 +1,38 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const block = 'content-primary-media';
+$ const { site } = out.global;
+
+$ const content = getAsObject(input, 'content');
+$ const primaryImage = getAsObject(content, 'primaryImage');
+
+$ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true) && primaryImage.src;
+$ const displayMedia = displayPrimaryImage || content.embedCode;
+
+<if(displayMedia)>
+  <div class=block>
+    <if(content.embedCode)>
+      <div class=`${block}__video`>
+        $!{content.embedCode}
+      </div>
+    </if>
+    <else-if(displayPrimaryImage)>
+      <div class=`${block}__image`>
+        <!-- @todo Add support for responsive images / size variance based on context -->
+        <cms-image-element
+          block=block
+          modifiers=['primary-image']
+          lazyload=false
+          obj=primaryImage
+          options={ w: 720, h: 405, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+        />
+      </div>
+      <if(primaryImage.caption)>
+        <span class="caption">${primaryImage.caption}</span>
+      </if>
+      <if(primaryImage.credit)>
+        <span class="credit">${primaryImage.credit}</span>
+      </if>
+    </else-if>
+  </div>
+</if>

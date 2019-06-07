@@ -32,6 +32,9 @@
     "endeavor-breadcrumbs-search": {
       "template": "./search.marko"
     },
+    "endeavor-breadcrumbs-login": {
+      "template": "./login.marko"
+    },
     "endeavor-breadcrumbs-subscribe": {
       "template": "./subscribe.marko",
       "@value": "string"

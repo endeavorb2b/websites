@@ -1,23 +1,27 @@
 import bem from '../../../utils/bem-class';
+import getNavItems from '../get-nav-items';
 
 $ const { site } = out.global;
 $ const { block } = input;
-$ const items = site.getAsArray(input.for);
 
-<if(items.length)>
-  <div class=`${bem(block, 'card-header')} card-header`>
-    ${input.header}
-  </div>
-  <div class=`${bem(block, 'list-group')} list-group list-group-flush`>
-    <for|item| of=items>
-      <endeavor-link
-        class=`${bem(block, 'list-group-item')} list-group-item list-group-item-action`
-        href=item.href
-        target=item.target
-        title=item.title
-      >
-        ${item.label}
-      </endeavor-link>
-    </for>
-  </div>
-</if>
+<identity-x|{ isEnabled: regEnabled, hasUser }|>
+  $ const items = getNavItems({ site, regEnabled, hasUser, key: input.for });
+  <if(items.length)>
+    <div class=`${bem(block, 'card-header')} card-header`>
+      ${input.header}
+    </div>
+
+    <div class=`${bem(block, 'list-group')} list-group list-group-flush`>
+      <for|item| of=items>
+        <endeavor-link
+          class=`${bem(block, 'list-group-item')} list-group-item list-group-item-action`
+          href=item.href
+          target=item.target
+          title=item.title
+        >
+          ${item.label}
+        </endeavor-link>
+      </for>
+    </div>
+  </if>
+</identity-x>

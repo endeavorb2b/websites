@@ -29,6 +29,9 @@ fragment ContentListFragment on Content {
     alt
     isLogo
   }
+  userRegistration {
+    isRequired
+  }
   ... on Authorable {
     authors {
       edges {

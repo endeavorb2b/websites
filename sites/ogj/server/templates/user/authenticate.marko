@@ -1,0 +1,29 @@
+$ const { config, req } = out.global;
+
+<theme-pennwell-user-layout title="Authenticate" for="authenticate">
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs>
+            <@item>
+              <endeavor-link href="/" title="Home">Home</endeavor-link>
+            </@item>
+          </endeavor-breadcrumbs>
+        </div>
+        <div class="page-wrapper__body">
+          <cms-browser-component name="IdentityAuthenticate" props=req.query />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</theme-pennwell-user-layout>

@@ -1,0 +1,15 @@
+{
+  "tags": {
+    "identity-x": {
+      "template": "./index",
+      "<on-error>": {},
+      "@enabled": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@required-access-levels": {
+        "type": "array"
+      }
+    }
+  }
+}
