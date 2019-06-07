@@ -9,15 +9,15 @@ $ const { isRequired: requiresReg, accessLevels } = getAsObject(content, 'userRe
   <endeavor-content-block-primary-media content=content />
   <endeavor-content-block-contact-details content=content />
   <identity-x|{ lacksRequiredAccess, needsLoginForm }| enabled=requiresReg required-access-levels=accessLevels>
-    <if(lacksRequiredAccess)>
-      <!-- @todo Display required access levels -->
-      <!-- @todo Allow this text to be modified / child-rendered -->
-      <p>Your user account does not have access to this content. Please contact support to upgrade your access level.</p>
-    </if>
-    <else-if(needsLoginForm)>
+    <if(needsLoginForm)>
       <!-- @todo Allow this text to be modified / child-rendered -->
       <p>You must be logged-in to access this content.</p>
       <cms-browser-component name="IdentityLoginForm" />
+    </if>
+    <else-if(lacksRequiredAccess)>
+      <!-- @todo Display required access levels -->
+      <!-- @todo Allow this text to be modified / child-rendered -->
+      <p>Your user account does not have access to this content. Please contact support to upgrade your access level.</p>
     </else-if>
   </identity-x>
 </div>
