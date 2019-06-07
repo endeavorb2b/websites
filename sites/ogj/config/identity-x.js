@@ -1,6 +1,6 @@
 module.exports = {
   enabled: true,
-  appId: '5cf1797bba814a000656ab79',
+  appId: '5cf67e2221be593b13b30edf',
   uri: process.env.IDENTITYX_GRAPHQL_URI || 'https://identity-x.base-cms.io/graphql',
   mountTo: '/__idx',
   debug: process.env.NODE_ENV === 'development',
