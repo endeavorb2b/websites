@@ -1,10 +1,12 @@
 FROM node:10.15 as build
+WORKDIR /root
 ENV NODE_ENV production
 ARG SITE
 
-ADD ./ /root
-WORKDIR /root
-RUN yarn --production
+ADD package.json yarn.lock /root/
+ADD packages /root/packages
+ADD sites/$SITE /root/sites/$SITE
+RUN yarn --production --frozen-lockfile
 
 WORKDIR /root/sites/$SITE
 RUN node_modules/.bin/basecms-website build
