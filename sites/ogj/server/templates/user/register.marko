@@ -23,7 +23,7 @@ $ const { config } = out.global;
         </div>
         <div class="page-wrapper__body">
           <identity-x|{ user }|>
-            <cms-browser-component name="IdentityRegister" props={ activeUser: user } />
+            <cms-browser-component name="IdentitySignInForm" props={ activeUser: user, context: 'register' } />
           </identity-x>
         </div>
       </div>
