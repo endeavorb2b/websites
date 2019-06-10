@@ -34,6 +34,7 @@
 import Email from './fields/email.vue';
 import GivenName from  './fields/given-name.vue';
 import FamilyName from './fields/family-name.vue';
+import cleanPath from '../../utils/clean-path';
 
 export default {
   components: {
@@ -72,6 +73,10 @@ export default {
       type: String,
       default: 'Register',
     },
+    registerEndpoint: {
+      type: String,
+      default: '/user/register',
+    },
     requiredFields: {
       type: Array,
       default: () => ['givenName', 'familyName'],
@@ -85,11 +90,15 @@ export default {
     user: {},
   }),
   computed: {
+    authUrl() {
+      return `${window.location.origin}/${cleanPath(this.authEndpoint)}`;
+    },
     buttonLabel() {
       if (this.loading) return 'Loading...';
-      if (this.needsInput) return 'Finish';
-      if (this.isLoginContext) return this.loginButtonLabel;
-      if (this.isRegisterContext) return this.registerButtonLabel;
+      if (this.needsInput) {
+        if (this.isLoginContext) return this.loginButtonLabel;
+        if (this.isRegisterContext) return this.registerButtonLabel;
+      }
       return 'Continue';
     },
     hasActiveUser() {
@@ -99,19 +108,44 @@ export default {
       return this.context === 'login';
     },
     isRegisterContext() {
-      return this.context === 'registier';
+      return this.context === 'register';
     },
     redirectTo() {
       const { pathname } = window.location;
-      const endpoints = [this.loginEndpoint, this.logoutEndpoint];
-      return pathname === endpoints.includes(pathname) ? undefined : pathname;
+      const endpoints = [this.loginEndpoint, this.registerEndpoint];
+      return endpoints.includes(pathname) ? undefined : pathname;
     },
   },
   methods: {
     async handle() {
       this.error = null;
       this.loading = true;
-      Object.keys(this.user).map(key => console.log(key, this.user[key]));
+      const {
+        user,
+        requiredFields,
+        redirectTo,
+        authUrl,
+      } = this;
+      try {
+        const res = await this.$fetch('/login', {
+          user,
+          requiredFields,
+          redirectTo,
+          authUrl,
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(`${res.statusText} (${res.status}): ${data.message}`);
+
+        if (data.ok) {
+          this.complete = true;
+        } else if (data.needsInput) {
+          this.needsInput = true;
+        }
+      } catch (e) {
+        this.error = e.message;
+      } finally {
+        this.loading = false;
+      }
     },
   },
 };
