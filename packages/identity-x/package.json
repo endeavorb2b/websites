@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "private": true,
   "dependencies": {
     "@base-cms/marko-web": "^0.9.29",
