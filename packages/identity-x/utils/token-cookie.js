@@ -8,9 +8,14 @@ const setTo = (res, token) => {
 };
 
 const getFrom = (req) => {
-  const cookies = cookie.parse(req.get('cookie'));
-  const { [COOKIE_NAME]: token } = cookies;
-  return token;
+  try {
+    const cookies = cookie.parse(req.get('cookie') || '');
+    const { [COOKIE_NAME]: token } = cookies;
+    return token;
+  } catch (e) {
+    // @todo log this error.
+    return undefined;
+  }
 };
 
 const removeFrom = (res) => {
