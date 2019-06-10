@@ -6,7 +6,7 @@ ARG SITE
 ADD package.json yarn.lock /root/
 ADD packages /root/packages
 ADD sites/$SITE /root/sites/$SITE
-RUN yarn --production --frozen-lockfile
+RUN yarn --production --pure-lockfile
 
 WORKDIR /root/sites/$SITE
 RUN node_modules/.bin/basecms-website build
