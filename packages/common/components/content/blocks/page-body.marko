@@ -12,7 +12,7 @@ $ const { isRequired: requiresReg, accessLevels } = getAsObject(content, 'userRe
     <if(needsLoginForm)>
       <!-- @todo Allow this text to be modified / child-rendered -->
       <p>You must be logged-in to access this content.</p>
-      <cms-browser-component name="IdentityLoginForm" />
+      <cms-browser-component name="IdentitySignInForm" />
     </if>
     <else-if(lacksRequiredAccess)>
       <!-- @todo Display required access levels -->
