@@ -5,7 +5,9 @@
   "dependencies": {
     "@base-cms/marko-web": "^0.9.29",
     "@endeavorb2b/base-website-common": "^0.10.0",
-    "bootstrap": "4.3.1"
+    "bootstrap": "4.3.1",
+    "graphql": "^14.3.1",
+    "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
     "stylelint": "^9.10.1",
