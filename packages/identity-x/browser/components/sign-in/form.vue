@@ -50,7 +50,6 @@ export default {
     },
     context: {
       type: String,
-      required: true,
       validator: (v) => ['login', 'register'].includes(v),
     },
     loginButtonLabel: {
@@ -98,6 +97,7 @@ export default {
       if (this.needsInput) {
         if (this.isLoginContext) return this.loginButtonLabel;
         if (this.isRegisterContext) return this.registerButtonLabel;
+        return 'Finish';
       }
       return 'Continue';
     },
