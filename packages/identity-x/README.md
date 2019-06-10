@@ -80,7 +80,7 @@ $ const { config } = out.global;
           <h1 class="page-wrapper__title">Login to ${config.siteName()}</h1>
         </div>
         <div class="page-wrapper__body">
-          <cms-browser-component name="IdentityLoginForm" />
+          <cms-browser-component name="IdentitySignInForm" props={ activeUser: user, context: 'login' } />
         </div>
       </div>
     </div>
