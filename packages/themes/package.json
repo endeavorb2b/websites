@@ -3,16 +3,11 @@
   "version": "0.10.0",
   "private": true,
   "dependencies": {
+    "@base-cms/marko-web": "^0.9.29",
+    "@endeavorb2b/base-website-common": "^0.10.0",
     "bootstrap": "4.3.1"
   },
-  "peerDependencies": {
-    "@base-cms/marko-web": "~0.9.29",
-    "@endeavorb2b/base-website-common": "^0.10.0",
-    "graphql": "^14.2.0",
-    "graphql-tag": "^2.10.0"
-  },
   "devDependencies": {
-    "@endeavorb2b/base-website-common": "^0.10.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.3.0"
   }

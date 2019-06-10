@@ -651,7 +651,7 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.29", "@base-cms/marko-web@~0.9.29":
+"@base-cms/marko-web@^0.9.29":
   version "0.9.29"
   resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.29.tgz#760c994a3baa7b752089f9b7a4da7e3e27a201a6"
   integrity sha512-2UciMlFKl4gt90HmUPydsCiUJt/63rf49wnUgzZq6nV8NCbHVGXQRYxi2RM4nMw1lyZz8RATM8efWopiKZrPrQ==
@@ -690,7 +690,7 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.0.tgz#a54bfbd119aaf310ff4cbd0e3ae253f4ecfa8b27"
   integrity sha512-g7+XxYSqtBclVj0FgbRiai70DR+px8oun1jPiOw3hOIUOvlDx1fc7VRsKKWmD+V40t6xYFyJX5qSfTYxqvJvOQ==
 
-"@base-cms/web-cli@^0.9.31", "@base-cms/web-cli@~0.9.31":
+"@base-cms/web-cli@^0.9.31":
   version "0.9.31"
   resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.31.tgz#d77b7bd5baa18e1700d936acbfa4841fa0d662f9"
   integrity sha512-O6CyBH+iARYg2I8coIsKgclDn/P/M8qe5wOToZprU86BRVYGNr1nN2vqCSI8xzGKdaIig6Gc+/S3dZ88eD0peA==
