@@ -1,1 +1,3 @@
 node_modules
+sites/*/node_modules
+packages/*/node_modules
