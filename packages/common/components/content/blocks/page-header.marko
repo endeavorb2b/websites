@@ -1,6 +1,7 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
+$ const specialTypes = ['event', 'webinar', 'whitepaper'];
 
 <div class="page-wrapper__header">
   <endeavor-breadcrumbs-website-section section=content.primarySection />
@@ -8,6 +9,18 @@ $ const content = getAsObject(input, 'content');
   <cms-content-teaser tag="p" class="page-wrapper__deck" obj=input.content />
   <if(content.type !== 'contact')>
     <endeavor-content-block-attribution content=input.content />
-    <cms-content-published obj=input.content />
+  </if>
+  <if(content.type !== 'contact' && !specialTypes.includes(content.type))>
+    <cms-content-published class="page-wrapper__date" obj=input.content />
+  </if>
+  <if(content.type === 'event')>
+    <p class="page-wrapper__event-date">
+      <endeavor-content-starts obj=input.content/> - <endeavor-content-ends obj=input.content/>
+    </p>
+  </if>
+    <if(content.type === 'webinar')>
+    <p class="page-wrapper__starts-date">
+      <endeavor-content-starts obj=input.content/>
+    </p>
   </if>
 </div>
