@@ -47,7 +47,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/front-office/office-forms', label: 'Forms' },
+      { href: '/front-office/office-forms', label: 'Front Office Forms' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
