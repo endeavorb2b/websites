@@ -53,6 +53,7 @@ module.exports = {
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
       { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+      { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
@@ -75,7 +76,7 @@ module.exports = {
     },
   },
   magazines: {
-    description: 'BioOptics World magzaine has merged with its sister publication, Laser Focus World, with coverage on optical technologies and instrumentation for the lLife Sciences.',
+    description: 'BioOptics World magzaine has merged with its sister publication, Laser Focus World, with coverage on optical technologies and instrumentation for the Life Sciences.',
   },
   contactUs: {
     branding: {
