@@ -53,7 +53,7 @@ module.exports = {
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
       { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
-      { href: 'https://www.strategies-u.com/reports', label: 'Market Reports', target: '_blank' },
+      { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
