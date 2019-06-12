@@ -67,7 +67,7 @@ module.exports = {
     apiKey: '003355913687346718228:mb2grfhfx08',
   },
   subscriptions: {
-    newsletters: 'https://endeavor.dragonforms.com/UPPrefPage',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=UPPrefPage',
     publications: {
       '/subscribe/print/up': 'https://formdesigner.ecn5.com/GetForm?tokenuid=e97538ee-c358-44e2-9cb2-ccd37cdd79ae&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
     },
