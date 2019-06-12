@@ -56,7 +56,7 @@ module.exports = {
       { href: '/webcasts', label: 'Webcasts' },
       { href: 'https://buyersguide.industrial-lasers.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
       { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
-      { href: 'https://www.strategies-u.com/reports', label: 'Laser Market Reports', target: '_blank' },
+      { href: 'https://www.strategies-u.com/reports', label: 'Market Reports', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
