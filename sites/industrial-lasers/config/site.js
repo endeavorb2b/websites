@@ -39,7 +39,7 @@ module.exports = {
     { href: '/white-papers', label: 'White Papers' },
     { href: '/webcasts', label: 'Webcasts' },
     { href: 'https://buyersguide.industrial-lasers.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
-    { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
+    { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
