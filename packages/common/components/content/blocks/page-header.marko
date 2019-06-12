@@ -15,7 +15,11 @@ $ const specialTypes = ['event', 'webinar', 'whitepaper'];
   </if>
   <if(content.type === 'event')>
     <p class="page-wrapper__event-date">
-      <endeavor-content-starts obj=input.content/> - <endeavor-content-ends obj=input.content/>
+      <endeavor-content-starts obj=input.content />
+      <if(content.ends)>
+        <span class="page-wrapper__event-date-divider"> - </span>
+        <endeavor-content-ends obj=input.content/>
+      </if>
     </p>
   </if>
     <if(content.type === 'webinar')>
