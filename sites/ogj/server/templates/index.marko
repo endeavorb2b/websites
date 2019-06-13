@@ -23,6 +23,32 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
+  <identity-x|{ mergedTeams }|>
+    <if(mergedTeams.length)>
+      $ const team = mergedTeams[0];
+      <div class="row">
+        <div class="col mb-block">
+          <div class="item item--card item--image-left">
+            <!-- @todo This is hardcoded for demo purposes only. Change this!!! -->
+            <div class="item__image">
+              <a href="/">
+                <img src="https://avatars1.githubusercontent.com/u/42003920?s=200&v=4" class="item__asset-image" width="75" height="75" />
+              </a>
+            </div>
+            <div class="item__contents">
+              <h5 class="item__title item__title--large">
+                ${team.name}
+              </h5>
+              <p class="item__description">
+                Welcome to ${out.global.config.siteName()}. Informational text would reside here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </if>
+  </identity-x>
+
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
