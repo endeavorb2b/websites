@@ -44,6 +44,7 @@ $ const adSlots = {
           <endeavor-content-query-related
             exclude-content-ids=[content.id]
             section-id=section.id
+            native-x={ placement: 'list1', aliases, index: 4 }
           />
         </if>
       </aside>
@@ -74,6 +75,7 @@ $ const adSlots = {
           sectionId: section.id,
         }
         ads={ aliases }
+        native-x={ placement: 'card', aliases, index: 0 }
       />
     </else-if>
   </@below-container>
