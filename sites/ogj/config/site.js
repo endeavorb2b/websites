@@ -1,10 +1,12 @@
 const ads = require('./ads');
 const identityX = require('./identity-x');
+const nativeX = require('./native-x');
 const userLinks = require('./user-links');
 
 module.exports = {
   ads,
   identityX,
+  nativeX,
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=60',
