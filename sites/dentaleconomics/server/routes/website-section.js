@@ -14,5 +14,4 @@ module.exports = (app) => {
     template: section,
     queryFragment,
   }));
-  submissionHandler(app);
 };
