@@ -9,6 +9,7 @@ module.exports = (app) => {
     template: contactUsTemplate,
     queryFragment,
   }));
+  submissionHandler(app);
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
     template: section,
     queryFragment,
