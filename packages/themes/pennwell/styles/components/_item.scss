@@ -127,6 +127,8 @@
   }
 
   &__asset-image {
+    max-width: 100%;
+    height: auto;
     border-radius: $border-radius;
   }
 
