@@ -1,11 +1,17 @@
 const queryFragment = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/website-section-page');
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
+const submissionHandler = require('@endeavorb2b/base-website-common/utils/contact-us');
 const section = require('../templates/website-section');
-const analystsTemplate = require('../templates/contact-us');
+const contactUsTemplate = require('../templates/website-section/contact-us');
 
 module.exports = (app) => {
+  app.get('/:alias(contact-us)', withWebsiteSection({
+    template: contactUsTemplate,
+    queryFragment,
+  }));
+  submissionHandler(app);
   app.get('/:alias(analysts)', withWebsiteSection({
-    template: analystsTemplate,
+    template: contactUsTemplate,
     queryFragment,
   }));
   app.get('/:alias([a-z0-9-/]+)', withWebsiteSection({
