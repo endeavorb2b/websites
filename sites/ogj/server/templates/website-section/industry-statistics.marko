@@ -1,0 +1,74 @@
+import { get, getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
+};
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper default-page">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">${section.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 mb-block">
+      <endeavor-content-query-section-list
+        limit=50
+        requires-image=false
+        section-alias="industry-statistics/oil-gas-journal"
+        header={ title: "Oil & Gas Journal" }
+      />
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        limit=25
+        requires-image=false
+        section-alias="industry-statistics/ogj-online-statistics-definitions"
+        header={ title: "OGJ Online Statistics Definitions" }
+      />
+    </div>
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        limit=25
+        requires-image=false
+        section-alias="industry-statistics/ogj-online-historical-data-definitions"
+        header={ title: "OGJ Online Historical Data Definitions" }
+      />
+    </div>
+  </div>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
+</theme-pennwell-website-section-layout>
