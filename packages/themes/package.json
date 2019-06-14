@@ -3,7 +3,7 @@
   "version": "0.10.5",
   "private": true,
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.29",
+    "@base-cms/marko-web": "^0.9.34",
     "@endeavorb2b/base-website-common": "^0.10.4",
     "bootstrap": "4.3.1",
     "graphql": "^14.3.1",
