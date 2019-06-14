@@ -43,6 +43,11 @@
         @include theme-card-header-color();
       }
     }
+
+    &--description {
+      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+      color: $gray;
+    }
   }
 
   &--card {
