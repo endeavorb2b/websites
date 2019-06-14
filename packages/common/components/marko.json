@@ -109,7 +109,7 @@
           "default-value": "li"
         },
         "@modifiers": "array",
-        "@content": "string"
+        "@value": "string"
       },
       "@items": "array",
       "@tag": {
