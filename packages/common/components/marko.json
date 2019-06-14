@@ -103,6 +103,14 @@
         "@target": "string",
         "@title": "string"
       },
+      "<description>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array",
+        "@value": "string"
+      },
       "@items": "array",
       "@tag": {
         "type": "string",
@@ -144,6 +152,15 @@
       "@href": "string",
       "@target": "string",
       "@title": "string"
+    },
+    "endeavor-item-list-description": {
+      "template": "./item/list-description",
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      },
+      "@value": "string"
     },
     "endeavor-item-list-node": {
       "template": "./item/list-node",

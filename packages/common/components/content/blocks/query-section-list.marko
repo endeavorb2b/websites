@@ -20,6 +20,7 @@ $ const nativeXEnabled = useNativeX(site, {
 });
 $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 $ const header = getAsObject(input, 'header');
+$ const description = getAsObject(input, 'description');
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -28,6 +29,11 @@ $ const header = getAsObject(input, 'header');
         <@header href=header.href target=header.target>
           ${header.title}
         </@header>
+      </if>
+      <if(description.value)>
+        <@description>
+          ${description.value}
+        </@description>
       </if>
       <@item|{ item, index }|>
         <if(nativeXEnabled && index === nativeX.index)>

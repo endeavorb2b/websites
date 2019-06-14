@@ -43,6 +43,11 @@
         @include theme-card-header-color();
       }
     }
+
+    &--description {
+      @include theme-description-text();
+      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+    }
   }
 
   &--card {
