@@ -45,9 +45,8 @@
     }
 
     &--description {
+      @include theme-description-text();
       padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
-      font-family: $theme-content-sans-serif-font;
-      color: $gray;
     }
   }
 
