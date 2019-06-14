@@ -30,9 +30,9 @@ $ const description = getAsObject(input, 'description');
           ${header.title}
         </@header>
       </if>
-      <if(description.content)>
+      <if(description.value)>
         <@description>
-          ${description.content}
+          ${description.value}
         </@description>
       </if>
       <@item|{ item, index }|>

@@ -160,7 +160,7 @@
         "type": "string",
         "default-value": "li"
       },
-      "@content": "string"
+      "@value": "string"
     },
     "endeavor-item-list-node": {
       "template": "./item/list-node",
