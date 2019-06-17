@@ -7,22 +7,15 @@ $ const noPublishDateContentTypes = ['event', 'webinar', 'contact'];
 <cms-content-name tag="h1" class="page-wrapper__title" obj=input.content />
 <cms-content-teaser tag="p" class="page-wrapper__deck" obj=input.content />
 <if(content.type === 'event')>
-  <p class="page-wrapper__event-date">
     <endeavor-content-starts obj=input.content />
-    <if(content.ends)>
-      <span class="page-wrapper__event-date-divider"> - </span>
-      <endeavor-content-ends obj=input.content/>
-    </if>
-  </p>
+    <endeavor-content-ends class="page-wrapper__ends-date" obj=input.content/>
 </if>
 <if(content.type === 'webinar')>
-  <p class="page-wrapper__starts-date">
     <endeavor-content-starts obj=input.content/>
-  </p>
 </if>
 <if(content.type !== 'contact')>
   <endeavor-content-block-attribution content=input.content />
 </if>
 <if(!noPublishDateContentTypes.includes(content.type))>
-  <cms-content-published class="page-wrapper__date" obj=input.content />
+  <cms-content-published obj=input.content />
 </if>
