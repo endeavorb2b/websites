@@ -1,7 +1,7 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
-$ const noPublishDateContentTypes = ['event', 'webinar', 'whitepaper', 'contact'];
+$ const noPublishDateContentTypes = ['event', 'webinar', 'contact'];
 
 <endeavor-breadcrumbs-website-section section=content.primarySection />
 <cms-content-name tag="h1" class="page-wrapper__title" obj=input.content />
