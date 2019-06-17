@@ -44,6 +44,10 @@
       }
     }
 
+    &--secondary {
+      background-color: $secondary;
+    }
+
     &--description {
       @include theme-description-text();
       padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
