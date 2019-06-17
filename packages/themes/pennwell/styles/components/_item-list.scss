@@ -48,6 +48,10 @@
       @include theme-description-text();
       padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
     }
+
+    &--wrap {
+      flex-wrap: wrap;
+    }
   }
 
   &--card {
