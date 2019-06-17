@@ -1,0 +1,6 @@
+{
+  "taglib-id": "@endeavorb2b/ogj",
+  "taglib-imports": [
+    "./server/components/marko.json"
+  ]
+}
