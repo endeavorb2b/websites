@@ -36,7 +36,9 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'Videos' },
+    { href: '/past-issues', label: 'Past Issues' },
+    { href: '/ogj-survey-downloads', label: 'Surveys' },
+    { href: '/industry-statistics', label: 'Industry Statistics' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   tertiaryNavItems: [
@@ -52,9 +54,14 @@ module.exports = {
   menuItems: {
     resources: [
       { href: '/magazine', label: 'Magazine' },
+      { href: '/past-issues', label: 'Past Issues' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://www.pennwellbooks.com/categories/petroleum.html', label: 'Bookstore' },
+      { href: 'https://ogjresearch.com/', label: 'Research' },
+      { href: '/ogj-survey-downloads', label: 'Surveys' },
+      { href: '/industry-statistics', label: 'Industry Statistics' },
     ],
     userTools: [
       ...userLinks,
