@@ -22,7 +22,9 @@ $ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
     width=input.imageWidth
   />
   <@header-left|{ block }|>
-    <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+    <if(input.withSection)>
+      <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+    </if>
   </@header-left>
   <@title tag="h5" modifiers=input.titleModifiers>
     <cms-content-short-name tag=null obj=content link=true />

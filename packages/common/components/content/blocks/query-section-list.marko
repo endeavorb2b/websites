@@ -23,6 +23,7 @@ $ const header = getAsObject(input, 'header');
 $ const description = getAsObject(input, 'description');
 $ const footer = getAsObject(input, 'footer');
 $ const withImage = input.withImage === undefined ? true : Boolean(input.withImage);
+$ const withSection = input.withSection === undefined ? true : Boolean(input.withSection);
 $ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
@@ -51,6 +52,7 @@ $ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(inp
           <endeavor-content-block-item
             content=item
             with-image=withImage
+            with-section=withSection
             image-use-placeholder=usePlaceholder
             image-position="right"
             image-options=imageOptions

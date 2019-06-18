@@ -57,6 +57,10 @@
         "type": "boolean",
         "default-value": false
       },
+      "@with-section": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@image-lazyload": {
         "type": "boolean",
         "default-value": true
@@ -94,6 +98,10 @@
         "type": "boolean",
         "default-value": true
       },
+      "@with-section": {
+        "type": "boolean",
+        "default-value": true
+      },
       "@image-lazyload": {
         "type": "boolean",
         "default-value": true
@@ -125,6 +133,10 @@
         "default-value": true
       },
       "@with-type": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-section": {
         "type": "boolean",
         "default-value": true
       },
