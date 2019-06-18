@@ -1,0 +1,33 @@
+$ const { config } = out.global;
+
+<theme-pennwell-user-layout title="Login" for="login">
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs>
+            <@item>
+              <endeavor-link href="/" title="Home">Home</endeavor-link>
+            </@item>
+            <@item>Login</@item>
+          </endeavor-breadcrumbs>
+          <h1 class="page-wrapper__title">Login to ${config.siteName()}</h1>
+        </div>
+        <div class="page-wrapper__body">
+          <identity-x|{ user }|>
+            <cms-browser-component name="IdentitySignInForm" props={ activeUser: user, context: 'login' } />
+          </identity-x>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</theme-pennwell-user-layout>

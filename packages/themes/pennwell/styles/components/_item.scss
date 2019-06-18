@@ -74,6 +74,12 @@
         color: $black;
       }
     }
+
+    &--locked {
+      a::before {
+        content: "\1F512";
+      }
+    }
   }
 
   &__description {
@@ -121,6 +127,8 @@
   }
 
   &__asset-image {
+    max-width: 100%;
+    height: auto;
     border-radius: $border-radius;
   }
 

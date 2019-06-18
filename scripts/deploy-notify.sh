@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
+[[ $RANCHER_CLUSTERID = "c-rc5kp" ]] && ENVIRONMENT="staging" || ENVIRONMENT="production"
 
 payload="{
   \"attachments\": [{
     \"color\": \"good\",
-    \"text\": \"Deployment of \`$TRAVIS_REPO_SLUG\` @ \`$TRAVIS_TAG\` to production has finished successfully.\"
+    \"text\": \"Deployment of \`$TRAVIS_REPO_SLUG\` @ \`$TRAVIS_TAG\` to \`$ENVIRONMENT\` has finished.\"
   }]
 }"
 curl -f -X POST --data "$payload" \

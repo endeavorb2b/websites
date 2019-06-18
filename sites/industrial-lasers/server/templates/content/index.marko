@@ -9,13 +9,13 @@ $ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 600] }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
 <theme-pennwell-content-layout content=content>
   <@head>
-    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id } />
+    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>
 
   <@above-container>
@@ -27,7 +27,9 @@ $ const adSlots = {
   <div class="page-wrapper">
     <div class="row">
       <div class="col">
-        <endeavor-content-block-page-header content=content />
+        <div class="page-wrapper__header">
+          <endeavor-content-block-page-header content=content />
+        </div>
       </div>
     </div>
 

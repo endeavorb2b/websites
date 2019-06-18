@@ -1,21 +1,20 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.9.13",
+  "version": "0.10.6",
   "private": true,
   "dependencies": {
     "@base-cms/image": "^0.9.22",
+    "@base-cms/marko-web": "^0.9.34",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
+    "@endeavorb2b/base-website-identity-x": "^0.10.6",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
+    "graphql": "^14.3.1",
+    "graphql-tag": "^2.10.1",
     "helmet": "^3.16.0",
     "node-fetch": "^2.5.0",
     "vue-recaptcha": "^1.1.1"
-  },
-  "peerDependencies": {
-    "@base-cms/marko-web": "~0.9.24",
-    "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
     "eslint": "^5.15.1",

@@ -62,11 +62,11 @@ $ const adSlots = {
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=3
-            section-alias="software-accessories"
-            header={ title: "Software Accessories", href: "/software-accessories" }
-            native-x={ placement: 'list1', aliases: ['software-accessories'], index: 2 }
+            section-alias="fiber-optics"
+            header={ title: "Fiber Optics", href: "/fiber-optics" }
+            native-x={ placement: 'list1', aliases: ['fiber-optics'], index: 2 }
           />
-        </div>
+        </div>        
       </div>
     </div>
 
@@ -77,6 +77,14 @@ $ const adSlots = {
   </div>
 
   <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="software-accessories"
+        header={ title: "Software & Accessories", href: "/software-accessories" }
+        native-x={ placement: 'list1', aliases: ['software-accessories'], index: 2 }
+      />
+    </div>  
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=3
@@ -94,20 +102,20 @@ $ const adSlots = {
         header={ title: "Webcasts", href: "/webcasts" }
       />
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
           requiresImage: false,
           contentTypes: ["Whitepaper"],
-          limit: 3,
+          limit: 5,
         }
         with-image=false
         header={ title: "White Papers", href: "/white-papers" }
       />
-    </div>
-  </div>
-
-  <div class="row">
+    </div>  
     <div class="col-lg-4 mb-block">
       <theme-pennwell-published-content-query-list
         query={
@@ -115,14 +123,6 @@ $ const adSlots = {
           limit: 5,
         }
         header={ title: "Videos", href: "/videos" }
-      />
-    </div>
-    <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list
-        limit=4
-        skip=5
-        section-alias=section.alias
-        header={ title: `More from ${out.global.config.siteName()}` }
       />
     </div>
     <div class="col-lg-4 mb-block">

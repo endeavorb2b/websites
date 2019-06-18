@@ -3,6 +3,7 @@ import bem from '../../utils/bem-class';
 
 $ const items = getAsArray(input, 'items');
 $ const headerInput = getAsObject(input, 'header');
+$ const descriptionInput = getAsObject(input, 'description');
 
 <if(items.length)>
   <endeavor-item-list-wrapper
@@ -13,6 +14,10 @@ $ const headerInput = getAsObject(input, 'header');
   >
     <if(headerInput.renderBody)>
       <endeavor-item-list-header ...headerInput />
+    </if>
+
+    <if(descriptionInput.renderBody)>
+      <endeavor-item-list-description ...descriptionInput />
     </if>
 
     <for|node, index| of=items>

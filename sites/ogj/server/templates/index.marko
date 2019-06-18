@@ -23,6 +23,32 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
+  <identity-x|{ mergedTeams }|>
+    <if(mergedTeams.length)>
+      $ const team = mergedTeams[0];
+      <div class="row">
+        <div class="col mb-block">
+          <div class="item item--card item--image-left">
+            <!-- @todo This is hardcoded for demo purposes only. Change this!!! -->
+            <div class="item__image">
+              <a href="/">
+                <img src="https://avatars1.githubusercontent.com/u/42003920?s=200&v=4" class="item__asset-image" width="75" height="75" />
+              </a>
+            </div>
+            <div class="item__contents">
+              <h5 class="item__title item__title--large">
+                ${team.name}
+              </h5>
+              <p class="item__description">
+                Welcome to ${out.global.config.siteName()}. Informational text would reside here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </if>
+  </identity-x>
+
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
@@ -31,16 +57,79 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-      />
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="general-interest"
+            header={ title: "General Interest", href: "/general-interest" }
+            native-x={ placement: 'list1', aliases: ['general-interest'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="exploration-development"
+            header={ title: "Exploration & Development", href: "/exploration-development" }
+            native-x={ placement: 'list1', aliases: ['exploration-development'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="drilling-production"
+            header={ title: "Drilling & Production", href: "/drilling-production" }
+            native-x={ placement: 'list1', aliases: ['drilling-production'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="refining-processing"
+            header={ title: "Refining & Processing", href: "/refining-processing" }
+            native-x={ placement: 'list1', aliases: ['refining-processing'], index: 2 }
+          />
+        </div>
+      </div>
     </div>
     <div class="col-lg-4 ad-rail">
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="pipelines-transportation"
+        header={ title: "Pipelines & Transportation", href: "/pipelines-transportation" }
+        native-x={ placement: 'list1', aliases: ['pipelines-transportation'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Whitepaper"],
+          limit: 3,
+        }
+        with-image=false
+        header={ title: "White Papers", href: "/white-papers" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <theme-pennwell-published-content-query-list
+        query={
+          requiresImage: false,
+          contentTypes: ["Webinar"],
+          limit: 3,
+        }
+        with-image=false
+        header={ title: "Webcasts", href: "/webcasts" }
+      />
     </div>
   </div>
 
@@ -55,25 +144,27 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
-        query={
-          requiresImage: false,
-          contentTypes: ["Whitepaper"],
-          limit: 4,
-        }
-        with-image=false
-        header={ title: "White Papers", href: "/white-papers" }
+      <endeavor-content-query-section-list
+        limit=4
+        skip=5
+        section-alias=section.alias
+        header={ title: `More from ${out.global.config.siteName()}` }
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <endeavor-magazine-query-latest-issue publication-id="5ca3d91475a2545c040041a9" header="Current Issue" />
+      <endeavor-magazine-query-latest-issue
+        publication-id="5ca3d91475a2545c040041a9"
+        header="Current Issue"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 9,
         sectionId: section.id,
       }
       load-more={

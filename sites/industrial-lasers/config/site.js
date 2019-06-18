@@ -39,7 +39,7 @@ module.exports = {
     { href: '/white-papers', label: 'White Papers' },
     { href: '/webcasts', label: 'Webcasts' },
     { href: 'https://buyersguide.industrial-lasers.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
-    { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
+    { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
@@ -50,12 +50,14 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/commentary', label: 'Commentary' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
       { href: 'https://buyersguide.industrial-lasers.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
-      { href: 'https://www.marketplaceseminar.com/index.html', label: 'LP Market Seminar', target: '_blank' },
+      { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+      { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
@@ -72,7 +74,7 @@ module.exports = {
     apiKey: '003355913687346718228:sdje-2o3phk',
   },
   subscriptions: {
-    newsletters: 'https://endeavor.dragonforms.com/ILSPrefPage',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=ILSPrefPage',
     publications: {
       '/subscribe/print/ils': 'https://eforms.kmpsgroup.com/jointforms/Forms/Subscription.aspx?pubcode=ILSD&promoCode=WS702',
       '/subscribe/print/ilscn': 'https://www.industrysourcing.com/Big5/china/Subscription.asp?magazine_code=ILS',

@@ -99,6 +99,11 @@
     &:hover {
       text-decoration: underline;
     }
+
+    &--search {
+      padding-top: 0;
+      padding-left: 0;
+    }
   }
 
   &--primary {
@@ -155,16 +160,24 @@
   &--tertiary {
     margin-top: auto;
     margin-left: auto;
+    font-size: 14px;
 
     @media (max-width: map-get($theme-site-nav-secondary-breakpoints, hide)) {
       margin-top: initial;
     }
 
     #{ $self } {
+      &__item {
+        align-self: center;
+      }
       &__link {
         padding-top: 0;
-        padding-right: 0;
         padding-bottom: 0;
+        @include theme-navbar-link-color($theme-site-nav-secondary-type);
+
+        &:hover {
+          @include theme-navbar-link-hover-color($theme-site-nav-secondary-type);
+        }
       }
     }
   }
