@@ -51,7 +51,7 @@ $ const groupByYear = (nodes) => {
       <for|{ year, items }, index| of=grouped>
         <div class="col-lg-4 mb-block">
           <endeavor-item-list flush=true card=true items=items>
-            <@header modifiers=["header-secondary"]>${year}</@header>
+            <@header>${year}</@header>
             <@item|{ item, index }|>
               <endeavor-content-block-item content=item with-image=false />
             </@item>
