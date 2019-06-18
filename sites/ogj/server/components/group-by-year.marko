@@ -28,30 +28,34 @@ $ const groupByYear = (nodes) => {
   <if(nodes.length)>
     $ const grouped = groupByYear(nodes);
 
-    <endeavor-item-list flush=true card=true items=[{}]>
-      <if(header.title)>
-        <@header href=header.href target=header.target>
-          ${header.title}
-        </@header>
-      </if>
-      <if(description.value)>
-        <@description>
-          ${description.value}
-        </@description>
-      </if>
+    <div class="row">
+      <div class="col mb-block">
+        <endeavor-item-list flush=true card=true items=[{}]>
+          <if(header.title)>
+            <@header href=header.href target=header.target>
+              ${header.title}
+            </@header>
+          </if>
+          <if(description.value)>
+            <@description>
+              ${description.value}
+            </@description>
+          </if>
+        </endeavor-item-list>
+      </div>
+    </div>
 
-      <@item modifiers=["wrap"]>
-        <for|{ year, items }, index| of=grouped>
-          <div class="col-lg-6 mt-block">
-            <endeavor-item-list flush=true card=false items=items>
-              <@header modifiers=["secondary"]>${year}</@header>
-              <@item|{ item, index }|>
-                <endeavor-content-block-item content=item with-image=false />
-              </@item>
-            </endeavor-item-list>
-          </div>
-        </for>
-      </@item>
-    </endeavor-item-list>
+    <div class="row">
+      <for|{ year, items }, index| of=grouped>
+        <div class="col-lg-6 mb-block">
+          <endeavor-item-list flush=true card=true items=items>
+            <@header modifiers=["header-secondary"]>${year}</@header>
+            <@item|{ item, index }|>
+              <endeavor-content-block-item content=item with-image=false />
+            </@item>
+          </endeavor-item-list>
+        </div>
+      </for>
+    </div>
   </if>
 </cms-query-website-scheduled-content>
