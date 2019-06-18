@@ -40,11 +40,4 @@
     @include theme-page-body-spacing();
   }
 
-  &__ends-date {
-    &::before {
-      margin-right: map-get($spacers, 1);
-      margin-left: map-get($spacers, 1);
-      content: "\2014";
-    }
-  }
 }
