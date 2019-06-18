@@ -62,6 +62,40 @@ $ const aliases = hierarchyAliases(section);
     </div>
   </div>
 
+  <div class="row mb-block">
+    <div class="col-lg-4" id="ethylene-report">
+      <endeavor-content-query-section-list
+        requires-image=false
+        limit=5
+        use-placeholder=false
+        section-alias="ogj-survey-downloads/ethylene-report"
+        header={ href: "/ogj-survey-downloads/ethylene-report", title: "Ethylene Report" }
+        description={ value: "International Survey of Ethylene from steam crackers" }
+        footer={ href: "/ogj-survey-downloads/ethylene-report", value: "View all Ethylene Report surveys" }
+      />
+    </div>
+    <div class="col-lg-4" id="catalyst-compilation">
+      <endeavor-content-query-section-list
+        requires-image=false
+        limit=6
+        use-placeholder=false
+        section-alias="ogj-survey-downloads/ogj-intl-refining-catalyst-compilation"
+        header={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", title: "Int'l. Refining Catalyst Compilation" }
+        footer={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", value: "View all Catalyst Compilation surveys" }
+      />
+    </div>
+    <div class="col-lg-4" id="worldwide-eor">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        section-alias="ogj-survey-downloads/worldwide-eor"
+        header={ href: "/ogj-survey-downloads/worldwide-eor", title: "Worldwide EOR" }
+        description={ value: "The Oil & Gas Journal biennial worldwide enhanced oil recovery survey lists projects that include various injection technologies used in primary, secondary, and tertiary oil recovery. But the survey does not cover projects that involve waterflooding or pressure maintenance with natural gas. " }
+        footer={ href: "/ogj-survey-downloads/worldwide-eor", value: "View all EOR surveys" }
+      />
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-lg-6 mb-block">
       <endeavor-content-query-section-list
@@ -109,40 +143,6 @@ $ const aliases = hierarchyAliases(section);
       />
     </div>
   </div>
-
-
-  <div class="row mb-block">
-    <div class="col-lg-4" id="ethylene-report">
-      <endeavor-content-query-section-list
-        requires-image=false
-        use-placeholder=false
-        section-alias="ogj-survey-downloads/ethylene-report"
-        header={ href: "/ogj-survey-downloads/ethylene-report", title: "Ethylene Report" }
-        description={ value: "International Survey of Ethylene from steam crackers" }
-        footer={ href: "/ogj-survey-downloads/ethylene-report", value: "View all Ethylene Report surveys" }
-      />
-    </div>
-    <div class="col-lg-4" id="catalyst-compilation">
-      <endeavor-content-query-section-list
-        requires-image=false
-        use-placeholder=false
-        section-alias="ogj-survey-downloads/ogj-intl-refining-catalyst-compilation"
-        header={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", title: "Int'l. Refining Catalyst Compilation" }
-        footer={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", value: "View all Catalyst Compilation surveys" }
-      />
-    </div>
-    <div class="col-lg-4" id="worldwide-eor">
-      <endeavor-content-query-section-list
-        requires-image=false
-        use-placeholder=false
-        section-alias="ogj-survey-downloads/worldwide-eor"
-        header={ href: "/ogj-survey-downloads/worldwide-eor", title: "Worldwide EOR" }
-        description={ value: "The Oil & Gas Journal biennial worldwide enhanced oil recovery survey lists projects that include various injection technologies used in primary, secondary, and tertiary oil recovery. But the survey does not cover projects that involve waterflooding or pressure maintenance with natural gas. " }
-        footer={ href: "/ogj-survey-downloads/worldwide-eor", value: "View all EOR surveys" }
-      />
-    </div>
-  </div>
-
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
