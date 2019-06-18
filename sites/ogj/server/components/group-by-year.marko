@@ -1,0 +1,64 @@
+import { getAsObject } from '@base-cms/object-path';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const block = 'content-query-section-list';
+$ const params = {
+  limit: 200,
+  requiresImage: false,
+  ...input,
+  queryFragment: contentListFragment,
+  queryName: 'OGJByYear',
+};
+$ const header = getAsObject(input, 'header');
+$ const description = getAsObject(input, 'description');
+
+$ const groupByYear = (nodes) => {
+  const mapped = nodes.reduce((map, node) => {
+    if (!node.published) return map;
+    const year = (new Date(node.published)).getFullYear();
+    if (!map.has(year)) map.set(year, new Set());
+    map.get(year).add(node);
+    return map;
+  }, new Map());
+  const keys = [...mapped.keys()].sort((a, b) => b - a);
+  return keys.map((year) => ({ year, items: [...mapped.get(year)] }));
+};
+
+<cms-query-website-scheduled-content|{ nodes }| ...params>
+  <if(nodes.length)>
+    $ const grouped = groupByYear(nodes);
+
+    <if(header.title || description.value)>
+      <div class="row">
+        <div class="col mb-block">
+          <endeavor-item-list flush=true card=true items=[{}]>
+            <if(header.title)>
+              <@header href=header.href target=header.target>
+                ${header.title}
+              </@header>
+            </if>
+            <if(description.value)>
+              <@description>
+                ${description.value}
+              </@description>
+            </if>
+          </endeavor-item-list>
+        </div>
+      </div>
+    </if>
+
+    <div class="row">
+      <for|{ year, items }, index| of=grouped>
+        <div class="col-lg-4 mb-block">
+          <endeavor-item-list flush=true card=true items=items>
+            <@header>${year}</@header>
+            <@item|{ item, index }|>
+              <endeavor-content-block-item content=item image-use-placeholder=false with-section=false />
+            </@item>
+          </endeavor-item-list>
+        </div>
+      </for>
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

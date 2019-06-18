@@ -1,0 +1,157 @@
+import { get, getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper default-page">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">${section.description}</p>
+          </if>
+          <p class="page-wrapper__description">
+            <a href="https://ogjresearch.com" target="_blank">Buy Additional Oil & Gas Surveys</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        limit=7
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/ogj-top-200-us-oil-gas-companies"
+        header={ href: "/ogj-survey-downloads/ogj-top-200-us-oil-gas-companies", title: "Top 200 US Oil & Gas Companies" }
+        description={ value: "Exclusive report on the operating and financial performance of the top 200 public oil and gas companies in the US." }
+        footer={ href: "/ogj-survey-downloads/ogj-top-200-us-oil-gas-companies", value: "View all Top 200 US surveys" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        limit=7
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/ogj-top-100-non-us-oil-gas-companies"
+        header={ href: "/ogj-survey-downloads/ogj-top-100-non-us-oil-gas-companies", title: "Top 100 Non-US Oil & Gas Companies" }
+        description={ value: "Exclusive report on the operating and financial performance of the top 100 non-U.S. oil and gas firms in the world." }
+        footer={ href: "/ogj-survey-downloads/ogj-top-100-non-us-oil-gas-companies", value: "View all Top 100 Non-US surveys" }
+      />
+    </div>
+
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+    </div>
+  </div>
+
+  <div class="row mb-block">
+    <div class="col-lg-4" id="ethylene-report">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/ethylene-report"
+        header={ href: "/ogj-survey-downloads/ethylene-report", title: "Ethylene Report" }
+        description={ value: "International Survey of Ethylene from steam crackers" }
+        footer={ href: "/ogj-survey-downloads/ethylene-report", value: "View all Ethylene Report surveys" }
+      />
+    </div>
+    <div class="col-lg-4" id="catalyst-compilation">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/ogj-intl-refining-catalyst-compilation"
+        header={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", title: "Int'l. Refining Catalyst Compilation" }
+        footer={ href: "/ogj-survey-downloads/ogj-intl-refining-catalyst-compilation", value: "View all Catalyst Compilation surveys" }
+      />
+    </div>
+    <div class="col-lg-4" id="worldwide-eor">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/worldwide-eor"
+        header={ href: "/ogj-survey-downloads/worldwide-eor", title: "Worldwide EOR" }
+        description={ value: "The Oil & Gas Journal biennial worldwide enhanced oil recovery survey lists projects that include various injection technologies used in primary, secondary, and tertiary oil recovery. But the survey does not cover projects that involve waterflooding or pressure maintenance with natural gas. " }
+        footer={ href: "/ogj-survey-downloads/worldwide-eor", value: "View all EOR surveys" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/worldwide-construction"
+        header={ href: "/ogj-survey-downloads/worldwide-construction", title: "Worldwide Construction" }
+        description={ value: "This twice a year, exclusive report shows activity on oil and gas processing facilities and pipelines under construction. The report provides project details and signals broad trends. Major refining, petrochemical, gas processing, sulfur recovery, and pipeline projects are listed." }
+        footer={ href: "/ogj-survey-downloads/worldwide-construction", value: "View all Construction surveys" }
+      />
+    </div>
+
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/worldwide-gas-processing"
+        header={ href: "/ogj-survey-downloads/worldwide-gas-processing", title: "Worldwide Gas Processing" }
+        description={ value: "The Gas Processing report shows plant-by-plant details combined with an analysis of global gas processing trends. Capacity, throughput, and production details for more than 1,500 individual plants around the world are included. This report is a must-read for gas processors, natural gas producers and gas pipeline operators." }
+        footer={ href: "/ogj-survey-downloads/worldwide-gas-processing", value: "View all Gas Processing surveys" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/worldwide-refining"
+        header={ href: "/ogj-survey-downloads/worldwide-refining", title: "Worldwide Refining" }
+        description={ value: "This long-time OGJ special report has plant-by-plant operating data and expert analysis of refining trends. The Refining report is a great reference for technical staff, operating managers and executives." }
+        footer={ href: "/ogj-survey-downloads/worldwide-refining", value: "View all Refining surveys" }
+      />
+    </div>
+
+    <div class="col-lg-6 mb-block">
+      <endeavor-content-query-section-list
+        requires-image=false
+        use-placeholder=false
+        with-section=false
+        section-alias="ogj-survey-downloads/worldwide-production"
+        header={ href: "/ogj-survey-downloads/worldwide-production", title: "Worldwide Production" }
+        description={ value: "The Production report is a compilation of field-by-field oil production and country-by-country oil and gas reserves." }
+        footer={ href: "/ogj-survey-downloads/worldwide-production", value: "View all Production surveys" }
+      />
+    </div>
+  </div>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
+</theme-pennwell-website-section-layout>

@@ -33,7 +33,9 @@ $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
       width=input.imageWidth
     />
     <@header-left|{ block }|>
-      <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+      <if(input.withSection)>
+        <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+      </if>
       <if(input.withType)>
         <cms-text-element tag="span" block=block obj=content field="typeTitled" />
       </if>

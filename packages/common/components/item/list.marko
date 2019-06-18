@@ -4,6 +4,7 @@ import bem from '../../utils/bem-class';
 $ const items = getAsArray(input, 'items');
 $ const headerInput = getAsObject(input, 'header');
 $ const descriptionInput = getAsObject(input, 'description');
+$ const footerInput = getAsObject(input, 'footer');
 
 <if(items.length)>
   <endeavor-item-list-wrapper
@@ -20,15 +21,21 @@ $ const descriptionInput = getAsObject(input, 'description');
       <endeavor-item-list-description ...descriptionInput />
     </if>
 
-    <for|node, index| of=items>
-      $ const itemInput = getAsObject(input, 'item');
-      <endeavor-item-list-node|{ item }|
-        tag=itemInput.tag
-        modifiers=itemInput.modifiers
-        node=node
-      >
-        <${itemInput.renderBody} item=item index=index />
-      </endeavor-item-list-node>
-    </for>
+    <div class=bem('item-list', 'contents')>
+      <for|node, index| of=items>
+        $ const itemInput = getAsObject(input, 'item');
+        <endeavor-item-list-node|{ item }|
+          tag=itemInput.tag
+          modifiers=itemInput.modifiers
+          node=node
+        >
+          <${itemInput.renderBody} item=item index=index />
+        </endeavor-item-list-node>
+      </for>
+    </div>
+
+    <if(footerInput.renderBody)>
+      <endeavor-item-list-footer ...footerInput />
+    </if>
   </endeavor-item-list-wrapper>
 </if>
