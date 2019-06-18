@@ -87,6 +87,16 @@
         "@modifiers": "array",
         "@value": "string"
       },
+      "<footer>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array",
+        "@href": "string",
+        "@target": "string",
+        "@title": "string"
+      },
       "@items": "array",
       "@tag": {
         "type": "string",
@@ -117,6 +127,17 @@
         "type": "string",
         "default-value": "ul"
       }
+    },
+    "endeavor-item-list-footer": {
+      "template": "./list-footer",
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      },
+      "@href": "string",
+      "@target": "string",
+      "@value": "string"
     },
     "endeavor-item-list-header": {
       "template": "./list-header",

@@ -53,6 +53,12 @@
       padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
     }
 
+    &--footer {
+      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+      margin-top: auto;
+      border-top: none;
+    }
+
     &--wrap {
       flex-wrap: wrap;
     }

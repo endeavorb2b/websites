@@ -1,0 +1,17 @@
+import { getAsArray } from '@base-cms/object-path';
+import bem from '../../utils/bem-class';
+
+$ const classNames = bem('item-list', 'item', ['footer', ...getAsArray(input, 'modifiers')]);
+
+<if(input.renderBody)>
+  <${input.tag} class=classNames>
+    <if(input.href)>
+      <endeavor-link href=input.href target=input.target title=input.value>
+        <${input.renderBody} />
+      </endeavor-link>
+    </if>
+    <else>
+      <${input.renderBody} />
+    </else>
+  </>
+</if>

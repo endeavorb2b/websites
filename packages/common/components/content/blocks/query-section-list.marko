@@ -21,6 +21,7 @@ $ const nativeXEnabled = useNativeX(site, {
 $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 $ const header = getAsObject(input, 'header');
 $ const description = getAsObject(input, 'description');
+$ const footer = getAsObject(input, 'footer');
 $ const withImage = input.withImage === undefined ? true : Boolean(input.withImage);
 $ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
 
@@ -58,6 +59,11 @@ $ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(inp
           />
         </else>
       </@item>
+      <if(footer.value)>
+        <@footer href=footer.href target=footer.target>
+          ${footer.value}
+        </@footer>
+      </if>
     </endeavor-item-list>
   </if>
 </cms-query-website-scheduled-content>
