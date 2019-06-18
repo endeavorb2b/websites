@@ -42,20 +42,21 @@ $ const aliases = hierarchyAliases(section);
     </div>
   </div>
 
-  <div class="row" id="top200">
-    <div class="col-lg-8 mb-block">
-      <div class="row">
-        <div class="col-lg-6">
+  <div class="row">
+    <div class="col-lg-8">
+
+      <div class="row" id="top200">
+        <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=50
             requires-image=false
             with-image=false
             section-alias="ogj-survey-downloads/ogj-top-200-us-oil-gas-companies"
-            header={ title: "Top 200 US Oil & Gas Companies" }
+            header={ href: "/ogj-survey-downloads/ogj-top-200-us-oil-gas-companies", title: "Top 200 US Oil & Gas Companies" }
             description={ value: "Exclusive report on the operating and financial performance of the top 200 public oil and gas companies in the US." }
           />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=50
             requires-image=false
@@ -66,72 +67,71 @@ $ const aliases = hierarchyAliases(section);
           />
         </div>
       </div>
+
+      <div class="row" id="worldwide-construction">
+        <div class="col mb-block">
+          <ogj-content-query-group-by-year
+            section-alias="ogj-survey-downloads/worldwide-construction"
+            header={ title: "Worldwide Construction" }
+            description={ value: "This twice a year, exclusive report shows activity on oil and gas processing facilities and pipelines under construction. The report provides project details and signals broad trends. Major refining, petrochemical, gas processing, sulfur recovery, and pipeline projects are listed." }
+          />
+        </div>
+      </div>
+
+      <div class="row" id="worldwide-gas-processing">
+        <div class="col mb-block">
+          <ogj-content-query-group-by-year
+            requires-image=false
+            section-alias="ogj-survey-downloads/worldwide-gas-processing"
+            header={ title: "Worldwide Gas Processing" }
+            description={ value: "The Gas Processing report shows plant-by-plant details combined with an analysis of global gas processing trends. Capacity, throughput, and production details for more than 1,500 individual plants around the world are included. This report is a must-read for gas processors, natural gas producers and gas pipeline operators." }
+          />
+        </div>
+      </div>
+
+      <div class="row" id="worldwide-refining">
+        <div class="col mb-block">
+          <ogj-content-query-group-by-year
+            section-alias="ogj-survey-downloads/worldwide-refining"
+            header={ title: "Worldwide Refining" }
+            description={ value: "This long-time OGJ special report has plant-by-plant operating data and expert analysis of refining trends. The Refining report is a great reference for technical staff, operating managers and executives." }
+          />
+        </div>
+      </div>
+
+      <div class="row" id="worldwide-production">
+        <div class="col mb-block">
+          <ogj-content-query-group-by-year
+            limit=50
+            requires-image=false
+            section-alias="ogj-survey-downloads/worldwide-production"
+            header={ title: "Worldwide Production" }
+            description={ value: "The Production report is a compilation of field-by-field oil production and country-by-country oil and gas reserves." }
+          />
+        </div>
+      </div>
+
     </div>
     <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
+      <endeavor-gam-ad-unit-define-display name="rail1" />
+      <endeavor-gam-ad-unit-define-display name="rail2" />
       <endeavor-gam-ad-unit-define-display name="rail1" />
       <endeavor-gam-ad-unit-define-display name="rail2" />
     </div>
   </div>
 
-
-  <div class="row" id="worldwide-construction">
-    <div class="col-lg-8 mb-block">
-      <ogj-content-query-group-by-year
-        section-alias="ogj-survey-downloads/worldwide-construction"
-        header={ title: "Worldwide Construction" }
-        description={ value: "This twice a year, exclusive report shows activity on oil and gas processing facilities and pipelines under construction. The report provides project details and signals broad trends. Major refining, petrochemical, gas processing, sulfur recovery, and pipeline projects are listed." }
-      />
-    </div>
-    <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-define-display name="rail1" />
-      <endeavor-gam-ad-unit-define-display name="rail2" />
-    </div>
-  </div>
-
-  <div class="row" id="worldwide-gas-processing">
-    <div class="col-lg-8 mb-block">
-      <ogj-content-query-group-by-year
-        requires-image=false
-        section-alias="ogj-survey-downloads/worldwide-gas-processing"
-        header={ title: "Worldwide Gas Processing" }
-        description={ value: "The Gas Processing report shows plant-by-plant details combined with an analysis of global gas processing trends. Capacity, throughput, and production details for more than 1,500 individual plants around the world are included. This report is a must-read for gas processors, natural gas producers and gas pipeline operators." }
-      />
-    </div>
-    <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-define-display name="rail1" />
-      <endeavor-gam-ad-unit-define-display name="rail2" />
-    </div>
-  </div>
-
-  <div class="row" id="worldwide-refining">
-    <div class="col-lg-8 mb-block">
-      <ogj-content-query-group-by-year
-        section-alias="ogj-survey-downloads/worldwide-refining"
-        header={ title: "Worldwide Refining" }
-        description={ value: "This long-time OGJ special report has plant-by-plant operating data and expert analysis of refining trends. The Refining report is a great reference for technical staff, operating managers and executives." }
-      />
-    </div>
-    <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-define-display name="rail1" />
-      <endeavor-gam-ad-unit-define-display name="rail2" />
-    </div>
-  </div>
-
-  <div class="row" id="worldwide-production">
-    <div class="col-lg-8 mb-block">
-      <ogj-content-query-group-by-year
-        limit=50
-        requires-image=false
-        section-alias="ogj-survey-downloads/worldwide-production"
-        header={ title: "Worldwide Production" }
-        description={ value: "The Production report is a compilation of field-by-field oil production and country-by-country oil and gas reserves." }
-      />
-    </div>
-    <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-define-display name="rail1" />
-      <endeavor-gam-ad-unit-define-display name="rail2" />
-    </div>
-  </div>
 
   <div class="row mb-block">
     <div class="col-lg-4" id="ethylene-report">
