@@ -22,6 +22,7 @@ $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0
 $ const header = getAsObject(input, 'header');
 $ const description = getAsObject(input, 'description');
 $ const withImage = input.withImage === undefined ? true : Boolean(input.withImage);
+$ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -49,6 +50,7 @@ $ const withImage = input.withImage === undefined ? true : Boolean(input.withIma
           <endeavor-content-block-item
             content=item
             with-image=withImage
+            image-use-placeholder=usePlaceholder
             image-position="right"
             image-options=imageOptions
             image-width=75
