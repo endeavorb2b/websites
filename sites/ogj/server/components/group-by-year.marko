@@ -28,26 +28,28 @@ $ const groupByYear = (nodes) => {
   <if(nodes.length)>
     $ const grouped = groupByYear(nodes);
 
-    <div class="row">
-      <div class="col mb-block">
-        <endeavor-item-list flush=true card=true items=[{}]>
-          <if(header.title)>
-            <@header href=header.href target=header.target>
-              ${header.title}
-            </@header>
-          </if>
-          <if(description.value)>
-            <@description>
-              ${description.value}
-            </@description>
-          </if>
-        </endeavor-item-list>
+    <if(header.title || description.value)>
+      <div class="row">
+        <div class="col mb-block">
+          <endeavor-item-list flush=true card=true items=[{}]>
+            <if(header.title)>
+              <@header href=header.href target=header.target>
+                ${header.title}
+              </@header>
+            </if>
+            <if(description.value)>
+              <@description>
+                ${description.value}
+              </@description>
+            </if>
+          </endeavor-item-list>
+        </div>
       </div>
-    </div>
+    </if>
 
     <div class="row">
       <for|{ year, items }, index| of=grouped>
-        <div class="col-lg-6 mb-block">
+        <div class="col-lg-4 mb-block">
           <endeavor-item-list flush=true card=true items=items>
             <@header modifiers=["header-secondary"]>${year}</@header>
             <@item|{ item, index }|>
