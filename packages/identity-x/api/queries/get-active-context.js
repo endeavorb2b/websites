@@ -13,6 +13,7 @@ query GetActiveAppContext {
     mergedTeams {
       id
       name
+      photoURL
     }
     mergedAccessLevels {
       id

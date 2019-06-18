@@ -29,11 +29,12 @@ $ const adSlots = {
       <div class="row">
         <div class="col mb-block">
           <div class="item item--card item--image-left">
-            <!-- @todo This is hardcoded for demo purposes only. Change this!!! -->
             <div class="item__image">
-              <!-- <a href="/">
-                <img src="https://avatars1.githubusercontent.com/u/42003920?s=200&v=4" class="item__asset-image" width="75" height="75" />
-              </a> -->
+              <if(team.photoURL)>
+                <a href="/page/ogj-site-license-research-program" title="Site Licensing Details">
+                  <img src=`${team.photoURL}?auto=format&fill-color=fff&fit=fillmax&h=200&w=200&pad=5` class="item__asset-image" width="100" height="100" />
+                </a>
+              </if>
             </div>
             <div class="item__contents">
               <h5 class="item__title item__title--large">
@@ -49,12 +50,18 @@ $ const adSlots = {
     </if>
   </identity-x>
 
+  <endeavor-content-query-hero
+    section-id=section.id
+    limit=5
+  />
+
   <div class="row">
     <div class="col-lg-8">
       <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=5
+            skip=5
             section-id=section.id
             requires-image=false
             use-placeholder=false
