@@ -21,7 +21,7 @@ $ const footerInput = getAsObject(input, 'footer');
       <endeavor-item-list-description ...descriptionInput />
     </if>
 
-    <div class=[bem('item-list', 'contents')]>
+    <div class=bem('item-list', 'contents')>
       <for|node, index| of=items>
         $ const itemInput = getAsObject(input, 'item');
         <endeavor-item-list-node|{ item }|
