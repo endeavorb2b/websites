@@ -1,0 +1,151 @@
+{
+  "tags": {
+    "endeavor-item": {
+      "template": "./item",
+      "<image>": {
+        "@alt": "string",
+        "@display": {
+          "type": "boolean",
+          "default-value": true
+        },
+        "@image": "object",
+        "@link-attrs": "object",
+        "@link-to": "object",
+        "@height": "number",
+        "@lazyload": {
+          "type": "boolean",
+          "default-value": true
+        },
+        "@modifiers": "array",
+        "@options": "object",
+        "@position": {
+          "type": "string",
+          "default-value": "left"
+        },
+        "@width": "number",
+        "@min-height": "number",
+        "@min-width": "number",
+        "@use-placeholder": {
+          "type": "boolean",
+          "default-value": true
+        }
+      },
+      "<header-left>": {},
+      "<header-right>": {},
+      "<title>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "div"
+        },
+        "@modifiers": "array"
+      },
+      "@description <description>[]": {
+        "@tag": {
+          "type": "string",
+          "default-value": "p"
+        },
+        "@modifiers": "array"
+      },
+      "<footer-left>": {},
+      "<footer-right>": {},
+      "@tag": {
+        "type": "string",
+        "default-value": "div"
+      },
+      "@header-modifiers": "array",
+      "@footer-modifiers": "array",
+      "@modifiers": "array",
+      "@flush": {
+        "type": "boolean",
+        "default-value": false
+      }
+    },
+    "endeavor-item-list": {
+      "template": "./list",
+      "<item>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array"
+      },
+      "<header>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array",
+        "@href": "string",
+        "@target": "string",
+        "@title": "string"
+      },
+      "<description>": {
+        "@tag": {
+          "type": "string",
+          "default-value": "li"
+        },
+        "@modifiers": "array",
+        "@value": "string"
+      },
+      "@items": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "ul"
+      },
+      "@flush": {
+        "type": "string",
+        "default-value": false
+      },
+      "@card": {
+        "type": "string",
+        "default-value": false
+      },
+      "@modifiers": "array"
+    },
+    "endeavor-item-list-wrapper": {
+      "template": "./list-wrapper",
+      "@card": {
+        "type": "string",
+        "default-value": false
+      },
+      "@flush": {
+        "type": "string",
+        "default-value": false
+      },
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "ul"
+      }
+    },
+    "endeavor-item-list-header": {
+      "template": "./list-header",
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      },
+      "@href": "string",
+      "@target": "string",
+      "@title": "string"
+    },
+    "endeavor-item-list-description": {
+      "template": "./list-description",
+      "@modifiers": "array",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      },
+      "@value": "string"
+    },
+    "endeavor-item-list-node": {
+      "template": "./list-node",
+      "@modifiers": "array",
+      "@node": "object",
+      "@tag": {
+        "type": "string",
+        "default-value": "li"
+      }
+    }
+  }
+}
