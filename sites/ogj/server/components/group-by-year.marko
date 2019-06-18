@@ -14,14 +14,15 @@ $ const header = getAsObject(input, 'header');
 $ const description = getAsObject(input, 'description');
 
 $ const groupByYear = (nodes) => {
-  const grouped = nodes.reduce((obj, node) => {
+  const mapped = nodes.reduce((map, node) => {
+    if (!node.published) return map;
     const year = (new Date(node.published)).getFullYear();
-    const group = obj[year] || [];
-    group.push(node);
-    return { ...obj, [year]: group };
-  }, {});
-  const keys = Object.keys(grouped).sort((a, b) => b - a);
-  return keys.map((year) => ({ year, items: grouped[year] }));
+    if (!map.has(year)) map.set(year, new Set());
+    map.get(year).add(node);
+    return map;
+  }, new Map());
+  const keys = [...mapped.keys()].sort((a, b) => b - a);
+  return keys.map((year) => ({ year, items: [...mapped.get(year)] }));
 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
