@@ -1,11 +1,21 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
+$ const noPublishDateContentTypes = ['event', 'webinar', 'contact'];
 
 <endeavor-breadcrumbs-website-section section=content.primarySection />
 <cms-content-name tag="h1" class="page-wrapper__title" obj=input.content />
 <cms-content-teaser tag="p" class="page-wrapper__deck" obj=input.content />
+<if(content.type === 'event')>
+    <endeavor-content-starts block="item" obj=input.content />
+    <endeavor-content-ends block="item" obj=input.content/>
+</if>
+<if(content.type === 'webinar')>
+    <endeavor-content-starts block="item" obj=input.content/>
+</if>
 <if(content.type !== 'contact')>
   <endeavor-content-block-attribution content=input.content />
+</if>
+<if(!noPublishDateContentTypes.includes(content.type))>
   <cms-content-published obj=input.content />
 </if>
