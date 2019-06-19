@@ -15,6 +15,7 @@ class IdentityX {
     this.res = res;
     this.token = tokenCookie.getFrom(req);
     this.client = createClient({
+      req,
       token: this.token,
       uri,
       appId,
