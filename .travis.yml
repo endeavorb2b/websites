@@ -24,59 +24,64 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: AB Media - Aqua Magazine
-      script: scripts/deploy.js aquamagazine aerilon
+      name: PennWell - Oil & Gas Journal
+      script: scripts/deploy.js ogj aerilon
       install: skip
 
-    - stage: deploy
-      name: AB Media - AthleticBusiness
-      script: scripts/deploy.js athleticbusiness aerilon
-      install: skip
+    # - stage: deploy
+    #   name: AB Media - Aqua Magazine
+    #   script: scripts/deploy.js aquamagazine aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: AB Media - Wood Floor Business
-      script: scripts/deploy.js woodfloorbusiness aerilon
-      install: skip
+    # - stage: deploy
+    #   name: AB Media - AthleticBusiness
+    #   script: scripts/deploy.js athleticbusiness aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: AC Business Media - For Construction Pros
-      script: scripts/deploy.js forconstructionpros caprica
-      install: skip
+    # - stage: deploy
+    #   name: AB Media - Wood Floor Business
+    #   script: scripts/deploy.js woodfloorbusiness aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - Cleveland Scene
-      script: scripts/deploy.js clevescene caprica
-      install: skip
+    # - stage: deploy
+    #   name: AC Business Media - For Construction Pros
+    #   script: scripts/deploy.js forconstructionpros caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - Detroit Metro Times
-      script: scripts/deploy.js metrotimes caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - Cleveland Scene
+    #   script: scripts/deploy.js clevescene caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - Orlando Weekly
-      script: scripts/deploy.js orlandoweekly caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - Detroit Metro Times
+    #   script: scripts/deploy.js metrotimes caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - OUT in SA
-      script: scripts/deploy.js outinsa caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - Orlando Weekly
+    #   script: scripts/deploy.js orlandoweekly caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - OUT in STL
-      script: scripts/deploy.js outinstl caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - OUT in SA
+    #   script: scripts/deploy.js outinsa caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - River Front Times
-      script: scripts/deploy.js riverfronttimes caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - OUT in STL
+    #   script: scripts/deploy.js outinstl caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Euclid - San Antonio Current
-      script: scripts/deploy.js sacurrent caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - River Front Times
+    #   script: scripts/deploy.js riverfronttimes caprica
+    #   install: skip
+
+    # - stage: deploy
+    #   name: Euclid - San Antonio Current
+    #   script: scripts/deploy.js sacurrent caprica
+    #   install: skip
 
     - stage: deploy
       name: Endeavor - Evaluation Engineering
@@ -154,11 +159,6 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: PennWell - Oil & Gas Journal
-      script: scripts/deploy.js ogj aerilon
-      install: skip
-
-    - stage: deploy
       name: PennWell - Perio-Implant Advisory
       script: scripts/deploy.js perioimplantadvisory aerilon
       install: skip
@@ -188,27 +188,27 @@ jobs:
       script: scripts/deploy.js waterworld aerilon
       install: skip
 
-    - stage: deploy
-      name: PMMI - Automation World
-      script: scripts/deploy.js automationworld aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PMMI - Automation World
+    #   script: scripts/deploy.js automationworld aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PMMI - Healthcare Packaging
-      script: scripts/deploy.js healthcarepackaging aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PMMI - Healthcare Packaging
+    #   script: scripts/deploy.js healthcarepackaging aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PMMI - OEM Magazine
-      script: scripts/deploy.js oemmagazine aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PMMI - OEM Magazine
+    #   script: scripts/deploy.js oemmagazine aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PMMI - Packaging World
-      script: scripts/deploy.js packworld aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PMMI - Packaging World
+    #   script: scripts/deploy.js packworld aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PMMI - Pro Food World
-      script: scripts/deploy.js profoodworld aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PMMI - Pro Food World
+    #   script: scripts/deploy.js profoodworld aerilon
+    #   install: skip
