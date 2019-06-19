@@ -1,13 +1,13 @@
 {
   "name": "@endeavorb2b/base-website-common",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "private": true,
   "dependencies": {
     "@base-cms/image": "^0.9.22",
     "@base-cms/marko-web": "^0.9.35",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
-    "@endeavorb2b/base-website-identity-x": "^0.10.9",
+    "@endeavorb2b/base-website-identity-x": "^0.10.10",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
     "graphql": "^14.3.1",
