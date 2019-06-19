@@ -4,8 +4,8 @@ module.exports = {
   placements: {
     default: {
       card: { id: '5cdb1903f41dfb0001fb2ea7' },
-      list2: { id: '5cdb1909f41dfb0001fb2fdf' },
-      list1: { id: '5cdb190ff41dfb0001fb312c' },
+      list2: { id: '5cdb190ff41dfb0001fb312c' },
+      list1: { id: '5cdb1909f41dfb0001fb2fdf' },
     },
     municipal: {
       card: { id: '5cdb16baf41dfb0001fac272' },
