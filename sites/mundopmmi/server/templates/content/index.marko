@@ -1,0 +1,82 @@
+import { getAsObject, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const content = getAsObject(data, 'content');
+$ const section = getAsObject(content, 'primarySection');
+$ const aliases = hierarchyAliases(section);
+$ const block = 'content-page';
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
+};
+
+<theme-pennwell-content-layout content=content>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-content-block-page-header content=content />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <endeavor-content-block-page-body content=content />
+      </div>
+
+      <aside class="col-lg-4">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
+        <if(!['contact', 'company'].includes(content.type))>
+          <endeavor-content-query-related
+            exclude-content-ids=[content.id]
+            section-id=section.id
+          />
+        </if>
+      </aside>
+    </div>
+  </div>
+
+  <@below-container>
+    <if(content.type === 'contact')>
+      <endeavor-content-query-load-more-author
+        header=`More from ${content.name}`
+        query={ contactId: content.id }
+        ads={ aliases }
+      />
+    </if>
+    <else-if(content.type === 'company')>
+      <endeavor-content-query-load-more-company
+        header=`More from ${content.name}`
+        query={ companyId: content.id }
+        ads={ aliases }
+      />
+    </else-if>
+    <else-if(section.id)>
+      <endeavor-content-query-load-more
+        header=`More in ${section.name}`
+        query={
+          skip: 5,
+          excludeContentIds: [content.id],
+          sectionId: section.id,
+        }
+        ads={ aliases }
+      />
+    </else-if>
+  </@below-container>
+</theme-pennwell-content-layout>
