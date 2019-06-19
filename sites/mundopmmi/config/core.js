@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'mundo PMMI',
-  locale: 'en',
+  locale: 'es',
   images: {
     lazyload: true,
   },
