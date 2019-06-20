@@ -1,9 +1,8 @@
 import { getAsObject } from '@base-cms/object-path';
 
-$ const issue = getAsObject(data, 'issue');
-$ const publication = getAsObject(issue, 'publication');
+$ const publication = getAsObject(data, 'publication');
 
-<theme-pennwell-magazine-issue-layout issue=issue>
+<theme-pennwell-magazine-publication-layout publication=publication>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -18,22 +17,25 @@ $ const publication = getAsObject(issue, 'publication');
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
-          <endeavor-breadcrumbs-magazine target=issue />
-        </div>
-        <div class="page-wrapper__body">
-          <endeavor-magazine-publication-card issue=issue />
+          <endeavor-breadcrumbs-magazine target=publication />
+          <h1 class="page-wrapper__title">
+            ${publication.name} Archives
+          </h1>
+          <if(publication.description)>
+            <p class="page-wrapper__description">
+              ${publication.description}
+            </p>
+          </if>
         </div>
       </div>
     </div>
   </div>
 
   <@below-container>
-    <endeavor-load-more-header>
-      Content from ${issue.name}
-    </endeavor-load-more-header>
-    <endeavor-content-query-load-more-issue-content
-      query={ issueId: issue.id }
+    <endeavor-magazine-block-query-active-issues
+      query={ publicationId: publication.id }
     />
+
   </@below-container>
 
-</theme-pennwell-magazine-issue-layout>
+</theme-pennwell-magazine-publication-layout>
