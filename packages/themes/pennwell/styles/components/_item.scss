@@ -320,19 +320,4 @@
     }
   }
 
-  // Magazine
-  &__magazine-issue-link,
-  &__magazine-publication-link {
-    display: inline-block;
-    padding: $theme-item-padding;
-    margin: $theme-element-group-margin;
-    color: $white;
-    background-color: $primary;
-    border-color: $primary;
-    border-radius: $border-radius;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
 }
