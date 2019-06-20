@@ -4,7 +4,7 @@ import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const query = {
-  sectionAlias: 'contact-us',
+  sectionAlias: section.alias,
   limit: 100,
   queryFragment: contentListFragment,
 };
@@ -18,7 +18,7 @@ $ const query = {
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" />
     <endeavor-gam-ad-unit-out-of-page name="reskin" />
-    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <div class="page-wrapper">
@@ -27,7 +27,7 @@ $ const query = {
         <div class="page-wrapper__header">
           <endeavor-breadcrumbs-contact-us />
           <div class="page-wrapper__title">
-            Contact Us
+            ${section.name}
           </div>
         </div>
         <div class="page-wrapper__body">
@@ -56,8 +56,4 @@ $ const query = {
       </div>
     </div>
   </div>
-
-  <@footer>
-    <endeavor-gam-ad-sticky-leaderboard name="BS" />
-  </@footer>
 </theme-pennwell-website-section-layout>
