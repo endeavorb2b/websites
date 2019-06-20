@@ -1,4 +1,3 @@
-const contactUs = require('./contact-us');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
@@ -14,9 +13,6 @@ module.exports = (app) => {
 
   // Load More / Infinite Scroll
   loadMore(app);
-
-  // Contact Us Page
-  contactUs(app);
 
   // Dynamic Pages
   dynamicPages(app);
