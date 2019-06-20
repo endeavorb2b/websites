@@ -75,7 +75,7 @@ module.exports = {
     apiKey: '003355913687346718228:m_5jkc8w8fq',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=25ab9782-5598-4ac2-af33-91a1d7ece79f&promoCode=WENL2019&utm_source=enl_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=LEDPrefPage',
     publications: {
       '/subscribe/print/leds': 'https://formdesigner.ecn5.com/GetForm?tokenuid=b238fdb4-ccc3-4438-9a6b-1ba1c898a9e1&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
     },
