@@ -4,7 +4,7 @@ import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const query = {
-  sectionAlias: 'contact-us',
+  sectionAlias: section.alias,
   limit: 100,
   queryFragment: contentListFragment,
 };
@@ -27,7 +27,7 @@ $ const query = {
         <div class="page-wrapper__header">
           <endeavor-breadcrumbs-contact-us />
           <div class="page-wrapper__title">
-            Contact Us
+            ${section.name}
           </div>
         </div>
         <div class="page-wrapper__body">
@@ -36,7 +36,7 @@ $ const query = {
           <cms-query-website-scheduled-content|{ nodes }| ...query>
             <endeavor-item-list flush=true card=false items=nodes>
               <@item|{ item }|>
-                <endeavor-content-block-contact-item
+                <endeavor-content-block-item
                   content=item
                   flush=true
                   image-position="left"
@@ -56,5 +56,4 @@ $ const query = {
       </div>
     </div>
   </div>
-
 </theme-pennwell-website-section-layout>
