@@ -6,8 +6,16 @@
       "@enabled": {
         "type": "boolean",
         "default-value": true
+      }
+    },
+    "identity-x-access": {
+      "template": "./access",
+      "<on-error>": {},
+      "@enabled": {
+        "type": "boolean",
+        "default-value": true
       },
-      "@required-access-levels": {
+      "@required-access-level-ids": {
         "type": "array"
       }
     }
