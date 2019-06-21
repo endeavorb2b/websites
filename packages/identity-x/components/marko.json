@@ -10,6 +10,17 @@
       "@required-access-levels": {
         "type": "array"
       }
+    },
+    "identity-x-access": {
+      "template": "./access",
+      "<on-error>": {},
+      "@enabled": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@required-access-level-ids": {
+        "type": "array"
+      }
     }
   }
 }
