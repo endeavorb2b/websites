@@ -53,6 +53,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/events', label: 'Events' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/past-issues', label: 'Past Issues' },
       { href: '/videos', label: 'Videos' },
