@@ -62,6 +62,7 @@ module.exports = {
       { href: 'https://ogjresearch.com/', label: 'Research' },
       { href: '/ogj-survey-downloads', label: 'Surveys' },
       { href: '/industry-statistics', label: 'Industry Statistics' },
+      { href: '/page/submit-article', label: 'Submit an Article' },
     ],
     userTools: [
       ...userLinks,
