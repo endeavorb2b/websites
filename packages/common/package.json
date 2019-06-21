@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@base-cms/image": "^0.9.22",
-    "@base-cms/marko-web": "^0.9.35",
+    "@base-cms/marko-web": "^0.9.36",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
     "@endeavorb2b/base-website-identity-x": "^0.10.10",
