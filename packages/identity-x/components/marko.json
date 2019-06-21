@@ -6,9 +6,6 @@
       "@enabled": {
         "type": "boolean",
         "default-value": true
-      },
-      "@required-access-levels": {
-        "type": "array"
       }
     },
     "identity-x-access": {
