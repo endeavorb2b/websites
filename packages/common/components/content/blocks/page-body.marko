@@ -3,29 +3,37 @@ import { getAsObject, getAsArray } from '@base-cms/object-path';
 $ const { req } = out.global;
 $ const content = getAsObject(input, 'content');
 
-$ const { isRequired: requiresReg, accessLevels } = getAsObject(content, 'userRegistration');
+$ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(content, 'userRegistration');
 
-<div class="page-wrapper__body">
-  <endeavor-content-block-primary-media content=content />
-  <endeavor-content-block-contact-details content=content />
-  <identity-x|{ lacksRequiredAccess, needsLoginForm }| enabled=requiresReg required-access-levels=accessLevels>
-    <if(needsLoginForm)>
-      <!-- @todo Allow this text to be modified / child-rendered -->
-      <p>You must be logged-in to access this content.</p>
-      <cms-browser-component name="IdentitySignInForm" />
+<identity-x-access|context| enabled=requiresReg required-access-level-ids=accessLevelIds>
+  $ const {
+    canAccess,
+    isLoggedIn,
+    requiresAccessLevel,
+    hasRequiredAccessLevel,
+    messages,
+  } = context;
+
+  <div class="page-wrapper__body">
+    <endeavor-content-block-primary-media content=content />
+    <endeavor-content-block-contact-details content=content />
+    <if(!canAccess)>
+      <if(isLoggedIn && !hasRequiredAccessLevel)>
+        $!{messages.loggedInNoAccess}
+      </if>
+      <else-if(!isLoggedIn && requiresAccessLevel)>
+        $!{messages.loggedOutNoAccess}
+      </else-if>
+      <else-if(!isLoggedIn)>
+        <h5>You must be logged-in to access this content.</h5>
+        <cms-browser-component name="IdentitySignInForm" />
+      </else-if>
     </if>
-    <else-if(lacksRequiredAccess)>
-      <!-- @todo Display required access levels -->
-      <!-- @todo Allow this text to be modified / child-rendered -->
-      <p>Your user account does not have access to this content. Please contact support to upgrade your access level.</p>
-    </else-if>
-  </identity-x>
-</div>
+  </div>
 
-<div class="page-wrapper__contents">
-  <identity-x|{ canDisplayContent }| enabled=requiresReg required-access-levels=accessLevels>
-    <if(canDisplayContent)>
+  <div class="page-wrapper__contents">
+    <if(canAccess)>
       <endeavor-content-block-page-body-contents content=content />
     </if>
-  </identity-x>
-</div>
+  </div>
+</identity-x-access>
