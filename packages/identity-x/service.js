@@ -1,5 +1,6 @@
 const createClient = require('./create-client');
 const getActiveContext = require('./api/queries/get-active-context');
+const checkContentAccess = require('./api/queries/check-content-access');
 const tokenCookie = require('./utils/token-cookie');
 
 class IdentityX {
@@ -25,17 +26,17 @@ class IdentityX {
   }
 
   async loadActiveContext() {
-    if (typeof this.activeContext === 'undefined') {
-      try {
-        const { data = {} } = await this.client.query({ query: getActiveContext });
-        this.activeContext = data.activeAppContext || {};
-      } catch (e) {
-        this.activeContext = {};
-        this.token = null;
-        throw e;
-      }
+    if (!this.activeContextQuery) {
+      this.activeContextQuery = this.client.query({ query: getActiveContext });
     }
-    return this.activeContext;
+    const { data = {} } = await this.activeContextQuery;
+    return data.activeAppContext || {};
+  }
+
+  async checkContentAccess(input) {
+    const variables = { input };
+    const { data = {} } = await this.client.query({ query: checkContentAccess, variables });
+    return data.checkContentAccess || {};
   }
 }
 
