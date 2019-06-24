@@ -4,11 +4,11 @@ $ const { surveyId, surveyType } = getAsObject(input, 'content.gating');
 $ const { fileSrc: target } = getAsObject(input, 'content');
 
 <if(surveyId)>
-  <p>To access this piece of premium content, please fill out the following form:</p>
   <if(surveyType === 'app_form_com')>
     <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
   </if>
   <else-if(surveyType === 'wufoo')>
+    <script src="https://secure.wufoo.com/scripts/embed/form.js"></script>
     <cms-browser-component name="GatedDownloadWufoo" props={ surveyId, target } />
   </else-if>
 </if>

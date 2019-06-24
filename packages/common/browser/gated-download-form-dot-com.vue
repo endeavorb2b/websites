@@ -1,9 +1,12 @@
 <template>
   <div class="button-wrapper" v-if="canDownload">
     <p>Your download should start automatically. If not, click the button below to access this document.</p>
-    <a v-bind:href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
+    <a :href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
   </div>
-  <iframe v-else v-bind:src="formUrl" frameborder="0" v-bind:width="width" v-bind:height="height"></iframe>
+  <div v-else>
+    <p>To access this piece of premium content, please fill out the following form:</p>
+    <iframe :src="formUrl" frameborder="0" :width="width" :height="height"></iframe>
+  </div>
 </template>
 
 <script>
