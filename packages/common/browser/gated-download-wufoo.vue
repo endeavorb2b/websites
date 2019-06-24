@@ -5,7 +5,7 @@
   </div>
   <div v-else>
     <p>To access this piece of premium content, please fill out the following form:</p>
-    <iframe :src="formUrl" frameborder="0" :width="width" :height="height"></iframe>
+    <div :id="formId" />
   </div>
 </template>
 
@@ -16,9 +16,9 @@ export default {
       type: String,
       required: true,
     },
-    surveyHost: {
+    userName: {
       type: String,
-      default: 'cygnuscorporate.wufoo.com',
+      default: 'cygnuscorporate',
     },
     label: {
       type: String,
@@ -31,16 +31,34 @@ export default {
     height: {
       type: String,
       default: '1000',
-    },
-    width: {
-      type: String,
-      default: '100%',
     }
   },
   data: () => ({ canDownload: false }),
+  mounted() {
+    const options = {
+      userName: this.userName,
+      formHash: this.surveyId,
+      autoResize: true,
+      height: this.height,
+      async: true,
+      ssl: true,
+      addSubmitListener: (e) => {
+        if (e.data === 'wufoo-submit-done') {
+          this.canDownload = true;
+          window.open(this.target);
+        }
+      },
+    };
+    const instance = new WufooForm();
+    instance.initialize(options);
+    instance.display();
+  },
   computed: {
+    formId: function() {
+      return `wufoo-${this.surveyId}`;
+    },
     formUrl: function() {
-      return `https://${this.surveyHost}/embed/${this.surveyId}?header=hide`;
+      return `https://${this.userName}.wufoo.com/forms/${this.surveyId}`
     },
   },
 };
