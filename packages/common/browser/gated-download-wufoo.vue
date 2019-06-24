@@ -40,6 +40,7 @@ export default {
       formHash: this.surveyId,
       autoResize: true,
       height: this.height,
+      header: 'hide',
       async: true,
       ssl: true,
       addSubmitListener: (e) => {
