@@ -1,5 +1,6 @@
 <template>
   <div class="button-wrapper" v-if="canDownload">
+    <p>Your download should start automatically. If not, click the button below to access this document.</p>
     <a v-bind:href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
   </div>
   <iframe v-else v-bind:src="formUrl" frameborder="0" v-bind:width="width" v-bind:height="height"></iframe>
@@ -34,6 +35,7 @@ export default {
     window.addEventListener('message', (e) => {
       if (typeof e.data === 'string' && e.data.indexOf('type:whitepaper-registration') !== -1) {
         this.canDownload = true;
+        window.open(this.target);
       }
     }, false);
   },
