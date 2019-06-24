@@ -4,7 +4,7 @@
     <a :href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
   </div>
   <div v-else>
-    <p>To access this piece of premium content, please fill out the following form:</p>
+    <strong>To access this piece of premium content, please fill out the following form:</strong>
     <iframe :src="formUrl" frameborder="0" :width="width" :height="height"></iframe>
   </div>
 </template>
