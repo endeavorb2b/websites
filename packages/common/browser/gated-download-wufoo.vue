@@ -35,24 +35,42 @@ export default {
   },
   data: () => ({ canDownload: false }),
   mounted() {
-    const options = {
-      userName: this.userName,
-      formHash: this.surveyId,
-      autoResize: true,
-      height: this.height,
-      header: 'hide',
-      async: true,
-      ssl: true,
-      addSubmitListener: (e) => {
-        if (e.data === 'wufoo-submit-done') {
-          this.canDownload = true;
-          window.open(this.target);
-        }
-      },
-    };
-    const instance = new WufooForm();
-    instance.initialize(options);
-    instance.display();
+    const init = this.init;
+    if (window.WufooForm) {
+      init();
+    } else {
+      const s = document.createElement('script');
+      s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
+      s.onload = s.onreadystatechange = function() {
+        const rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        init();
+      };
+      const scr = document.getElementsByTagName('script')[0];
+      scr.parentNode.insertBefore(s, scr);
+    }
+  },
+  methods: {
+    init() {
+      const options = {
+        userName: this.userName,
+        formHash: this.surveyId,
+        autoResize: true,
+        height: this.height,
+        header: 'hide',
+        async: true,
+        ssl: true,
+        addSubmitListener: (e) => {
+          if (e.data === 'wufoo-submit-done') {
+            this.canDownload = true;
+            window.open(this.target);
+          }
+        },
+      };
+      const instance = new WufooForm();
+      instance.initialize(options);
+      instance.display();
+    }
   },
   computed: {
     formId: function() {

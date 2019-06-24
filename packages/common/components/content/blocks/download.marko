@@ -8,7 +8,6 @@ $ const { fileSrc: target } = getAsObject(input, 'content');
     <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
   </if>
   <else-if(surveyType === 'wufoo')>
-    <script src="https://secure.wufoo.com/scripts/embed/form.js"></script>
     <cms-browser-component name="GatedDownloadWufoo" props={ surveyId, target } />
   </else-if>
 </if>
