@@ -13,6 +13,19 @@ const retrieve = async ({ uri, placementId, opts }) => {
   return response.text();
 };
 
+const retrieveElements = async ({ uri, placementId, opts }) => {
+  const query = isObject(opts) ? `?opts=${encodeURIComponent(JSON.stringify(opts))}` : '';
+  const url = `${uri}/placement/elements/${placementId}.json${query}`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    const err = new Error(response.statusMessage);
+    console.log(response);
+    err.statusCode = response.statusText;
+    throw err;
+  }
+  return response.json();
+};
+
 const getURI = site => site.get('nativeX.uri');
 
 const getTrackingURI = site => site.get('nativeX.trackingUri', getURI(site));
@@ -48,6 +61,7 @@ module.exports = {
   getPlacementId,
   useNativeX,
   retrieve,
+  retrieveElements,
   getTrackingURI,
   getURI,
 };

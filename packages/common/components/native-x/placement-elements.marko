@@ -1,0 +1,33 @@
+import { retrieveElements, isEnabled, getPlacementId, getURI } from '../../services/native-x';
+
+$ const { site, onAsyncBlockError } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+$ const { name, aliases } = input;
+
+$ const args = {
+  uri: getURI(site),
+  placementId: getPlacementId(site, { name, aliases }),
+  opts: {
+    image: input.imageOptions,
+  },
+};
+
+<if(isEnabled(site, { name, aliases }))>
+  <await(retrieveElements(args))>
+    <@then|{ ads }|>
+      <${input.renderBody} ads=ads />
+    </@then>
+    <@catch|err|>
+      $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
+      <if(input.onError)>
+        <${input.onError} err=err />
+      </if>
+      <else>
+        <pre>An unexpected error occurred: ${err.message}</pre>
+        <if(isDevelopment)>
+          <pre>${err.stack}</pre>
+        </if>
+      </else>
+    </@catch>
+  </await>
+</if>
