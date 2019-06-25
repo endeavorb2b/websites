@@ -1,4 +1,4 @@
-import { retrieve, isEnabled, getPlacementId, getURI } from '../../services/native-x';
+import { retrieveElements, isEnabled, getPlacementId, getURI } from '../../services/native-x';
 
 $ const { site, onAsyncBlockError, req } = out.global;
 $ const isDevelopment = process.env.NODE_ENV === 'development';
@@ -8,20 +8,15 @@ $ const args = {
   uri: getURI(site),
   placementId: getPlacementId(site, { name, aliases }),
   opts: {
-    fv: input.fallbackVars,
+    image: input.imageOptions,
   },
   req,
 };
 
 <if(isEnabled(site, { name, aliases }))>
-  <await(retrieve(args))>
-    <@then|html|>
-      <if(input.renderBody)>
-        <${input.renderBody} html=html />
-      </if>
-      <else>
-        $!{html}
-      </else>
+  <await(retrieveElements(args))>
+    <@then|{ ads }|>
+      <${input.renderBody} ads=ads />
     </@then>
     <@catch|err|>
       $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);

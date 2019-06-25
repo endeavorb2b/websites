@@ -5,6 +5,9 @@
     },
     "endeavor-nativex-init": {
       "template": "./init.marko"
+    },
+    "endeavor-nativex-placement-elements": {
+      "template": "./placement-elements.marko"
     }
   }
 }

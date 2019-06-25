@@ -1,7 +1,6 @@
 import { getAsObject, getAsArray } from '@base-cms/object-path';
 import { asArray, asObject } from '@base-cms/utils';
 import contentListFragment from '../../../api/fragments/content-list';
-import { useNativeX } from '../../../services/native-x';
 
 $ const { site } = out.global;
 $ const pageNumber = input.pageNumber || 1;
@@ -31,11 +30,6 @@ $ const adListInput = {
   ...getAsObject(input, 'ads.list'),
 };
 $ const nativeX = getAsObject(input, 'nativeX');
-$ const nativeXEnabled = useNativeX(site, {
-  name: nativeX.placement,
-  index: nativeX.index,
-  aliases: nativeX.aliases,
-});
 $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
@@ -53,23 +47,19 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
         <div class="row">
           <for|content, index| of=cardNodes>
             <div class=`${block}__col`>
-              <if(nativeXEnabled && index === nativeX.index)>
-                <endeavor-content-nativex-item
-                  placement=nativeX.placement
-                  aliases=nativeX.aliases
-                  content=content
-                  image-options=imageOptions
-                />
-              </if>
-              <else>
-                <endeavor-content-block-item
-                  content=content
-                  image-modifiers=["fluid", "21by9"]
-                  image-options=imageOptions
-                  image-position="top"
-                  modifiers=["card"]
-                />
-              </else>
+              <endeavor-content-nativex-item
+                placement=nativeX.placement
+                aliases=nativeX.aliases
+                index=nativeX.index
+                current-index=index
+                item={
+                  content,
+                  imageModifiers: ["fluid", "21by9"],
+                  imageOptions,
+                  imagePosition: "top",
+                  modifiers: ["card"]
+                }
+              />
             </div>
             <if(index === 1 || index === 6)>
               <div class=`${block}__col`>

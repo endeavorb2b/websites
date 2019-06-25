@@ -1,7 +1,6 @@
 import { getAsObject } from '@base-cms/object-path';
 import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
-import { useNativeX } from '../../../services/native-x';
 
 $ const { site } = out.global;
 $ const block = 'content-query-section-list';
@@ -13,18 +12,13 @@ $ const params = {
   queryName: 'QuerySectionList',
 };
 $ const nativeX = getAsObject(input, 'nativeX');
-$ const nativeXEnabled = useNativeX(site, {
-  name: nativeX.placement,
-  index: nativeX.index,
-  aliases: nativeX.aliases,
-});
 $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 $ const header = getAsObject(input, 'header');
 $ const description = getAsObject(input, 'description');
 $ const footer = getAsObject(input, 'footer');
 $ const withImage = input.withImage === undefined ? true : Boolean(input.withImage);
 $ const withSection = input.withSection === undefined ? true : Boolean(input.withSection);
-$ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
+$ const imageUsePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -40,26 +34,22 @@ $ const usePlaceholder = input.usePlaceholder === undefined ? true : Boolean(inp
         </@description>
       </if>
       <@item|{ item, index }|>
-        <if(nativeXEnabled && index === nativeX.index)>
-          <endeavor-content-nativex-item
-            placement=nativeX.placement
-            aliases=nativeX.aliases
-            content=item
-            image-options=imageOptions
-          />
-        </if>
-        <else>
-          <endeavor-content-block-item
-            content=item
-            with-image=withImage
-            with-section=withSection
-            image-use-placeholder=usePlaceholder
-            image-position="right"
-            image-options=imageOptions
-            image-width=75
-            image-height=75
-          />
-        </else>
+        <endeavor-content-nativex-item
+          placement=nativeX.placement
+          aliases=nativeX.aliases
+          index=nativeX.index
+          current-index=index
+          item={
+            content: item,
+            imageHeight: 75,
+            imageOptions,
+            imagePosition: "right",
+            imageUsePlaceholder,
+            imageWidth: 75,
+            withImage,
+            withSection,
+          }
+        />
       </@item>
       <if(footer.value)>
         <@footer href=footer.href target=footer.target>
