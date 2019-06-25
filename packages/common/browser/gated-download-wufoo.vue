@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import cleanPath from './utils/clean-path';
+
 export default {
   props: {
     formHash: {
@@ -75,7 +77,7 @@ export default {
       return `wufoo-${this.formHash}`;
     },
     formUrl: function() {
-      return `https://${this.userName}.wufoo.com/forms/${this.formHash}`
+      return `https://${cleanPath(this.userName)}.wufoo.com/forms/${cleanPath(this.formHash)}`
     },
   },
 };

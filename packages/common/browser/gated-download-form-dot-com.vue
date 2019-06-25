@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import cleanPath from './utils/clean-path';
+
 export default {
   props: {
     surveyId: {
@@ -44,7 +46,7 @@ export default {
   },
   computed: {
     formUrl: function() {
-      return `https://app.form.com${this.surveyId}?cburl=${window.location}`;
+      return `https://app.form.com/${cleanPath(this.surveyId)}?cburl=${window.location}`;
     },
   },
 };
