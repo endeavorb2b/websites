@@ -74,7 +74,7 @@ module.exports = {
     apiKey: '003355913687346718228:q0eepyg2tx0',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=18490ced-7640-46e3-a0a5-4c49f80a2101&promoCode=WENL2019&utm_source=mag_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-25',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=MAEPrefPage',
     publications: {
       '/subscribe/print/mae': 'https://formdesigner.ecn5.com/GetForm?tokenuid=046345a9-19bb-4e6d-b034-e69baa602f10&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
     },
