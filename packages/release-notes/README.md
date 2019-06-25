@@ -1,13 +1,13 @@
 # Websites Release Notes Generator
-Generates release notes for the currently tagged version, or for a range of tags (or commit hashes).
+Generates release notes for the currently tagged version, or for a range of tags/commit hashes.
 
 ## Usage
-Note: you must have a GitHub personal access token to execute these scripts. You can create an access token via https://github.com/settings/tokens and then set the `GITHUB_PERSONAL_ACCESS_TOKEN` variable in the a `.env` file in the project root.
+Note: you must have a GitHub personal access token to execute these scripts. You can create an access token via https://github.com/settings/tokens and then set the `GITHUB_PERSONAL_ACCESS_TOKEN` variable in a `.env` file within the project root.
 
 - Install dependencies
 - Run `./node_modules/.bin/website-release-notes` from the project root to generate notes based off the current project tag
 
-This will output the tag name and generate the release code name and notes.
+This will output the tag name and generate the release name and notes.
 
 Example:
 ```
