@@ -81,4 +81,7 @@ module.exports = {
       logo: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
     },
   },
+  wufoo: {
+    userName: 'cygnuscorporate',
+  },
 };

@@ -82,4 +82,7 @@ module.exports = {
     },
     to: 'clong@pennwell.com',
   },
+  wufoo: {
+    userName: 'cygnuscorporate',
+  },
 };
