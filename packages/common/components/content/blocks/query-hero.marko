@@ -2,7 +2,6 @@ import { asArray, asObject } from '@base-cms/utils';
 import { getAsObject } from '@base-cms/object-path';
 import { buildImgixUrl } from '@base-cms/image';
 import contentListFragment from '../../../api/fragments/content-list';
-import { useNativeX } from '../../../services/native-x';
 
 $ const { site } = out.global;
 $ const block = 'content-query-hero';
@@ -13,11 +12,6 @@ $ const params = {
   queryName: 'QueryHero',
 };
 $ const nativeX = getAsObject(input, 'nativeX');
-$ const nativeXEnabled = useNativeX(site, {
-  name: nativeX.placement,
-  index: nativeX.index,
-  aliases: nativeX.aliases,
-});
 $ const listImageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
@@ -43,23 +37,19 @@ $ const listImageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fp
         <div class=`${block}__list`>
           <endeavor-item-list flush=true card=true items=listNodes>
             <@item|{ item, index }|>
-              <if(nativeXEnabled && index === nativeX.index)>
-                <endeavor-content-nativex-item
-                  placement=nativeX.placement
-                  aliases=nativeX.aliases
-                  content=item
-                  image-options=listImageOptions
-                />
-              </if>
-              <else>
-                <endeavor-content-block-item
-                  content=item
-                  image-position="right"
-                  image-options=listImageOptions
-                  image-width=75
-                  image-height=75
-                />
-              </else>
+              <endeavor-content-nativex-item
+                placement=nativeX.placement
+                aliases=nativeX.aliases
+                index=nativeX.index
+                current-index=index
+                item={
+                  content: item,
+                  imageHeight: 75,
+                  imageOptions: listImageOptions,
+                  imagePosition: "right",
+                  imageWidth: 75,
+                }
+              />
             </@item>
           </endeavor-item-list>
         </div>
