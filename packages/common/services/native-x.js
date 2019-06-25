@@ -55,7 +55,33 @@ const hasIndex = index => typeof index !== 'undefined' && index !== null && inde
 const useNativeX = (config, { name, index, aliases }) => isEnabled(config, { name, aliases })
   && hasIndex(index);
 
+const convertAdToContent = (ad) => {
+  const { campaign, creative, image } = ad;
+  return {
+    id: campaign.id,
+    shortName: creative.title,
+    typeTitled: 'Text Ad',
+    type: 'text-ad',
+    teaser: creative.teaser,
+    published: campaign.createdAt,
+    canonicalPath: ad.href,
+    primaryImage: {
+      id: image.id,
+      alt: creative.title,
+      src: image.src,
+      __typename: 'AssetImage',
+    },
+    primarySection: {
+      name: 'Sponsored',
+      fullName: 'Sponsored',
+      __typename: 'WebsiteSection',
+    },
+    __typename: 'ContentTextAd',
+  };
+};
+
 module.exports = {
+  convertAdToContent,
   isEnabled,
   isInitable,
   getPlacementId,
