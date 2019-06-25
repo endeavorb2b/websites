@@ -1,17 +1,55 @@
 import { getAsObject } from '@base-cms/object-path';
 import { buildImgixUrl } from '@base-cms/image';
+import { useNativeX, convertAdToContent } from '../../../services/native-x';
 
-$ const content = getAsObject(input, 'content');
-$ const primarySection = getAsObject(content, 'primarySection');
-$ const image = getAsObject(content, 'primaryImage');
+$ const { site } = out.global;
 
-<endeavor-nativex-placement
-  name=input.placement
-  aliases=input.aliases
-  fallback-vars={
-    url: content.canonicalPath,
-    content: { title: content.shortName, type: content.typeTitled, published: content.publishedDate },
-    image: { src: buildImgixUrl(image.src, input.imageOptions, undefined, image.isLogo), alt: image.alt },
-    section: { name: primarySection.name },
-  }
-/>
+$ const isEnabled = () => useNativeX(site, {
+  name: input.placement,
+  index: input.index,
+  aliases: input.aliases,
+});
+
+$ const itemInput = getAsObject(input, 'item');
+
+<if(input.currentIndex === input.index && isEnabled())>
+  <endeavor-nativex-placement-elements|{ ads }|
+    name=input.placement
+    aliases=input.aliases
+    image-options=itemInput.imageOptions
+  >
+    $ const hasAd = ads && ads.length && ads[0];
+    <if(hasAd)>
+      $ const ad = ads[0];
+      $ const linkAttrs = { target: "_blank", rel: "noopener", ...ad.attributes.link };
+      <if(ad.hasCampaign)>
+        <!-- Campaign found. Convert the ad to a "content object" and append tracking. -->
+        <!-- Note: `image-options` are intentionally reset, as NX handles them directly (see L19) -->
+        $ const content = convertAdToContent(ad);
+        <endeavor-content-block-item
+          ...itemInput
+          attrs=ad.attributes.container
+          content-link-attrs=linkAttrs
+          content=content
+          image-options={}
+        />
+      </if>
+      <else>
+        <!-- No campaign was found. Append fallback tracking to content item -->
+        <endeavor-content-block-item
+          ...itemInput
+          attrs=ad.attributes.container
+          content-link-attrs=ad.attributes.link
+        />
+      </else>
+    </if>
+    <else>
+      <!-- No ad data was returned. Display the regular content item. -->
+      <endeavor-content-block-item ...itemInput />
+    </else>
+  </endeavor-nativex-placement-elements>
+</if>
+<else>
+  <!-- This position is not eligible for an ad. Display the regular content item. -->
+  <endeavor-content-block-item ...itemInput />
+</else>
