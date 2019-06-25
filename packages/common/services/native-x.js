@@ -1,10 +1,23 @@
 const { isObject, asArray } = require('@base-cms/utils');
 const fetch = require('node-fetch');
 
-const retrieve = async ({ uri, placementId, opts }) => {
+const createHeaders = ({ req }) => {
+  if (!req) return {};
+  return {
+    'x-forwarded-for': req.ip,
+    'user-agent': req.get('user-agent'),
+  };
+};
+
+const retrieve = async ({
+  uri,
+  placementId,
+  opts,
+  req,
+}) => {
   const query = isObject(opts) ? `?opts=${encodeURIComponent(JSON.stringify(opts))}` : '';
   const url = `${uri}/placement/${placementId}.html${query}`;
-  const response = await fetch(url);
+  const response = await fetch(url, { headers: createHeaders({ req }) });
   if (!response.ok) {
     const err = new Error(response.statusMessage);
     err.statusCode = response.statusText;
@@ -13,10 +26,15 @@ const retrieve = async ({ uri, placementId, opts }) => {
   return response.text();
 };
 
-const retrieveElements = async ({ uri, placementId, opts }) => {
+const retrieveElements = async ({
+  uri,
+  placementId,
+  opts,
+  req,
+}) => {
   const query = isObject(opts) ? `?opts=${encodeURIComponent(JSON.stringify(opts))}` : '';
   const url = `${uri}/placement/elements/${placementId}.json${query}`;
-  const response = await fetch(url);
+  const response = await fetch(url, { headers: createHeaders({ req }) });
   if (!response.ok) {
     const err = new Error(response.statusMessage);
     err.statusCode = response.statusText;
