@@ -1,6 +1,6 @@
 import { retrieve, isEnabled, getPlacementId, getURI } from '../../services/native-x';
 
-$ const { site, onAsyncBlockError } = out.global;
+$ const { site, onAsyncBlockError, req } = out.global;
 $ const isDevelopment = process.env.NODE_ENV === 'development';
 $ const { name, aliases } = input;
 
@@ -10,6 +10,7 @@ $ const args = {
   opts: {
     fv: input.fallbackVars,
   },
+  req,
 };
 
 <if(isEnabled(site, { name, aliases }))>
