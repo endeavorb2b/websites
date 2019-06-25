@@ -1,14 +1,16 @@
 import { getAsObject } from '@base-cms/object-path';
 
+$ const { site } = out.global;
 $ const { surveyId, surveyType } = getAsObject(input, 'content.gating');
 $ const { fileSrc: target } = getAsObject(input, 'content');
+$ const { userName } = site.getAsObject('wufoo');
 
 <if(surveyId)>
   <if(surveyType === 'app_form_com')>
     <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
   </if>
   <else-if(surveyType === 'wufoo')>
-    <cms-browser-component name="GatedDownloadWufoo" props={ surveyId, target } />
+    <cms-browser-component name="GatedDownloadWufoo" props={ surveyId, target, userName } />
   </else-if>
 </if>
 <else>

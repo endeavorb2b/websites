@@ -18,7 +18,7 @@ export default {
     },
     userName: {
       type: String,
-      default: 'cygnuscorporate',
+      required: true,
     },
     label: {
       type: String,
