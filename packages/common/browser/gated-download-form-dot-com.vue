@@ -1,7 +1,7 @@
 <template>
   <div class="button-wrapper" v-if="canDownload">
     <p>Your download should start automatically. If not, click the button below to access this document.</p>
-    <a :href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
+    <a :href="target" class="btn btn-lg btn-primary" target="_blank" rel="noopener noreferer">{{ label }}</a>
   </div>
   <div v-else>
     <strong>To access this piece of premium content, please fill out the following form:</strong>
