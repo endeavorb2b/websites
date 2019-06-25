@@ -15,6 +15,8 @@ const retrieve = async ({ uri, placementId, opts }) => {
 
 const getURI = site => site.get('nativeX.uri');
 
+const getTrackingURI = site => site.get('nativeX.trackingUri', getURI(site));
+
 const getPlacementId = (config, { name, aliases }) => {
   const prefix = 'nativeX.placements';
   const defaultId = config.get(`${prefix}.default.${name}.id`);
@@ -46,5 +48,6 @@ module.exports = {
   getPlacementId,
   useNativeX,
   retrieve,
+  getTrackingURI,
   getURI,
 };
