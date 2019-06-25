@@ -1,11 +1,17 @@
 <template>
   <div class="button-wrapper" v-if="canDownload">
-    <a v-bind:href="target" class="btn btn-lg btn-primary" target="_blank"> {{ label }}</a>
+    <p>Your download should start automatically. If not, click the button below to access this document.</p>
+    <a :href="target" class="btn btn-lg btn-primary" target="_blank" rel="noopener noreferer">{{ label }}</a>
   </div>
-  <iframe v-else v-bind:src="formUrl" frameborder="0" v-bind:width="width" v-bind:height="height"></iframe>
+  <div v-else>
+    <strong>To access this piece of premium content, please fill out the following form:</strong>
+    <iframe :src="formUrl" frameborder="0" :width="width" :height="height"></iframe>
+  </div>
 </template>
 
 <script>
+import cleanPath from './utils/clean-path';
+
 export default {
   props: {
     surveyId: {
@@ -34,12 +40,13 @@ export default {
     window.addEventListener('message', (e) => {
       if (typeof e.data === 'string' && e.data.indexOf('type:whitepaper-registration') !== -1) {
         this.canDownload = true;
+        window.open(this.target);
       }
     }, false);
   },
   computed: {
     formUrl: function() {
-      return `https://app.form.com${this.surveyId}?cburl=${window.location}`;
+      return `https://app.form.com/${cleanPath(this.surveyId)}?cburl=${window.location}`;
     },
   },
 };
