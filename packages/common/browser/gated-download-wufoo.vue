@@ -34,21 +34,23 @@ export default {
     }
   },
   data: () => ({ canDownload: false }),
-  mounted() {
+  async mounted() {
     const init = this.init;
-    if (window.WufooForm) {
-      init();
-    } else {
-      const s = document.createElement('script');
-      s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function() {
-        const rs = this.readyState;
-        if (rs && rs != 'complete' && rs != 'loaded') return;
-        init();
-      };
-      const scr = document.getElementsByTagName('script')[0];
-      scr.parentNode.insertBefore(s, scr);
+    if (!window.WufooForm) {
+      await (new Promise((resolve) => {
+        const s = document.createElement('script');
+        s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+          const rs = this.readyState;
+          if (rs && rs !== 'complete' && rs !== 'loaded') return;
+          resolve();
+        };
+        const scr = document.getElementsByTagName('script')[0];
+        scr.parentNode.insertBefore(s, scr);
+      }));
     }
+    init();
+
   },
   methods: {
     init() {
