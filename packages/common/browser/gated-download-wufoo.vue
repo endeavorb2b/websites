@@ -41,8 +41,8 @@ export default {
         const s = document.createElement('script');
         s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
         s.onload = s.onreadystatechange = function() {
-          const rs = this.readyState;
-          if (rs && rs !== 'complete' && rs !== 'loaded') return;
+          const { readyState } = this;
+          if (readyState && readyState !== 'complete' && readyState !== 'loaded') return;
           resolve();
         };
         const scr = document.getElementsByTagName('script')[0];
