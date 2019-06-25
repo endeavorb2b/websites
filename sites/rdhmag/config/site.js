@@ -70,7 +70,7 @@ module.exports = {
     apiKey: '003355913687346718228:uz62nndii_e',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=bd881530-bb9e-44c5-9129-818b03b42d05&promoCode=WENL2019&utm_source=eNL_sub&utm_medium=website&utm_campaign=WENL2019&utm_content=2019-02-15',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=RDHPrefPage',
     publications: {
       '/subscribe/print/rdh': 'https://formdesigner.ecn5.com/GetForm?tokenuid=be483ce1-58cd-40a2-9ffc-db04519f2e16&promoCode=NW93&&cmpid=email_sub_rdh_website_2018',
     },
