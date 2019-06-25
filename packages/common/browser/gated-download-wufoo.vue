@@ -77,7 +77,7 @@ export default {
       return `wufoo-${this.formHash}`;
     },
     formUrl: function() {
-      return `https://${cleanPath(this.userName)}.wufoo.com/forms/${cleanPath(this.formHash)}`
+      return `https://${this.userName}.wufoo.com/forms/${cleanPath(this.formHash)}`
     },
   },
 };
