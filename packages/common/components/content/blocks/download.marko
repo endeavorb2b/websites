@@ -10,7 +10,7 @@ $ const { userName } = site.getAsObject('wufoo');
     <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
   </if>
   <else-if(surveyType === 'wufoo')>
-    <cms-browser-component name="GatedDownloadWufoo" props={ surveyId, target, userName } />
+    <cms-browser-component name="GatedDownloadWufoo" props={ formHash: surveyId, target, userName } />
   </else-if>
 </if>
 <else>

@@ -12,7 +12,7 @@
 <script>
 export default {
   props: {
-    surveyId: {
+    formHash: {
       type: String,
       required: true,
     },
@@ -52,7 +52,7 @@ export default {
     init() {
       const options = {
         userName: this.userName,
-        formHash: this.surveyId,
+        formHash: this.formHash,
         autoResize: true,
         height: this.height,
         header: 'hide',
@@ -72,10 +72,10 @@ export default {
   },
   computed: {
     formId: function() {
-      return `wufoo-${this.surveyId}`;
+      return `wufoo-${this.formHash}`;
     },
     formUrl: function() {
-      return `https://${this.userName}.wufoo.com/forms/${this.surveyId}`
+      return `https://${this.userName}.wufoo.com/forms/${this.formHash}`
     },
   },
 };
