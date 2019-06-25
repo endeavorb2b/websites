@@ -81,7 +81,7 @@ module.exports = {
     apiKey: '003355913687346718228:t6qdcjgnqpk',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=22b7d82d-e6f5-421a-89a2-518e519e7718',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=OGJPrefPage',
     publications: {
       '/subscribe/print/ogj': 'https://formdesigner.ecn5.com/GetForm?tokenuid=2455740f-950f-4ec5-b983-7088b8e2d84d&promoCode=NE9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=NE9WEB&utm_content=2019-02-26',
     },
