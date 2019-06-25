@@ -35,7 +35,6 @@ export default {
   },
   data: () => ({ canDownload: false }),
   async mounted() {
-    const init = this.init;
     if (!window.WufooForm) {
       await (new Promise((resolve, reject) => {
         const s = document.createElement('script');
@@ -47,8 +46,7 @@ export default {
         scr.parentNode.insertBefore(s, scr);
       }));
     }
-    init();
-
+    this.init();
   },
   methods: {
     init() {
