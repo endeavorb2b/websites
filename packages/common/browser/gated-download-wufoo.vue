@@ -37,14 +37,12 @@ export default {
   async mounted() {
     const init = this.init;
     if (!window.WufooForm) {
-      await (new Promise((resolve) => {
+      await (new Promise((resolve, reject) => {
         const s = document.createElement('script');
         s.src = 'https://secure.wufoo.com/scripts/embed/form.js';
-        s.onload = s.onreadystatechange = function() {
-          const { readyState } = this;
-          if (readyState && readyState !== 'complete' && readyState !== 'loaded') return;
-          resolve();
-        };
+        s.async = 1;
+        s.onerror = () => reject(new Error('Unable to load Wufoo form script.'));
+        s.onload = resolve;
         const scr = document.getElementsByTagName('script')[0];
         scr.parentNode.insertBefore(s, scr);
       }));
