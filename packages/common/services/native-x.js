@@ -19,7 +19,6 @@ const retrieveElements = async ({ uri, placementId, opts }) => {
   const response = await fetch(url);
   if (!response.ok) {
     const err = new Error(response.statusMessage);
-    console.log(response);
     err.statusCode = response.statusText;
     throw err;
   }
