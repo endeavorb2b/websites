@@ -6,3 +6,6 @@ $gray-600:  rgba(0, 0, 0, .54) !default;
 @import "../../default/styles/theme";
 
 // Override classes here.
+body {
+  -webkit-font-smoothing: antialiased;
+}
