@@ -1,13 +1,31 @@
 @import "bootstrap/functions";
 
-$black:       #000 !default;
-$body-color:  $black !default;
+$black:         #000 !default;
+$white:         #fff !default;
+$body-color:    $black !default;
+$border-radius: .5rem !default;
+
+$enable-shadows: true !default;
+$enable-rounded: true !default;
 
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/components";
 
 @import "mixins";
+
+// Generic
+$theme-box-shadow-sm:   0 1px 7px rgba(0, 0, 0, .05) !default;
+$theme-box-shadow-lg:   0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+
+// Cards
+$theme-card-background-color:   $white !default;
+$theme-card-border:             none !default;
+$theme-card-border-radius:      $border-radius !default;
+$theme-card-box-shadow:         $theme-box-shadow-sm !default;
+
+// Item Lists
+$theme-item-list-card-min-height:   100% !default;
 
 // Items
 $theme-item-padding:                      .75rem !default;
@@ -37,3 +55,14 @@ $theme-icon-width:  1rem !default;
 
 @import "theme/icons";
 @import "theme/item";
+@import "theme/item-list";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

@@ -1,3 +1,10 @@
+@mixin theme-card() {
+  @include border-radius($theme-card-border-radius);
+  @include box-shadow($theme-card-box-shadow);
+  background-color: $theme-card-background-color;
+  border: $theme-card-border;
+}
+
 
 @mixin theme-navbar-type($type) {
   @if $type == dark {
