@@ -36,7 +36,7 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
-    { href: '/past-issues', label: 'Past Issues' },
+    { href: '/magazine/5ca3d91475a2545c040041a9', label: 'Past Issues' },
     { href: '/ogj-survey-downloads', label: 'Surveys' },
     { href: '/industry-statistics', label: 'Industry Statistics' },
     { href: '/page/about-us', label: 'About Us' },
@@ -55,7 +55,7 @@ module.exports = {
     resources: [
       { href: '/events', label: 'Events' },
       { href: '/magazine', label: 'Magazine' },
-      { href: '/past-issues', label: 'Past Issues' },
+      { href: '/magazine/5ca3d91475a2545c040041a9', label: 'Past Issues' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
