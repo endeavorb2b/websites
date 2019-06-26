@@ -1,11 +1,25 @@
 @import "bootstrap/functions";
+
+$black:       #000 !default;
+$body-color:  $black !default;
+
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/components";
 
 @import "mixins";
 
+// Items
+$theme-item-padding:            .75rem !default;
+$theme-item-element-margin:     6px !default;
+
+$theme-item-contents-padding:   .25rem !default;
+
+$theme-item-header-margin:      $theme-item-element-margin !default;
+
+// Icons
 $theme-icon-height: 1rem !default;
 $theme-icon-width:  1rem !default;
 
 @import "theme/icons";
+@import "theme/item";
