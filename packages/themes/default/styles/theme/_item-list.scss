@@ -13,6 +13,60 @@
     border: $list-group-border-width solid $list-group-border-color;
   }
 
+  &__header,
+  &__body,
+  &__contents,
+  &__item,
+  &__footer {
+    &:first-child {
+      @include border-top-radius($theme-item-list-border-radius);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      @include border-bottom-radius($theme-item-list-border-radius);
+    }
+  }
+
+  &__contents {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header,
+  &__footer,
+  &__item,
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__header,
+  &__footer,
+  &__body {
+    padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+  }
+
+  &__header {
+    @include theme-card-header();
+    margin-bottom: 0;
+    &:empty {
+      display: none;
+    }
+
+    a {
+      @include theme-card-header-link();
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    &:empty {
+      display: none;
+    }
+  }
+
   &--card {
     @include theme-card();
     min-height: $theme-item-list-card-min-height;

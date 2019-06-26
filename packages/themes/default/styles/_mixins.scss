@@ -5,6 +5,22 @@
   border: $theme-card-border;
 }
 
+@mixin theme-card-header() {
+  color: $theme-card-header-color;
+  // font-family: $theme-content-sans-serif-font;
+  text-transform: $theme-card-header-text-transform;
+  letter-spacing: $theme-card-header-letter-spacing;
+  background-color: $theme-card-header-background-color;
+  border-bottom: $theme-card-header-border;
+}
+
+@mixin theme-card-header-link() {
+  color: $theme-card-header-link-color;
+  text-decoration: $theme-card-header-link-text-decoration;
+  &:hover {
+    color: $theme-card-header-link-hover-color;
+  }
+}
 
 @mixin theme-navbar-type($type) {
   @if $type == dark {
