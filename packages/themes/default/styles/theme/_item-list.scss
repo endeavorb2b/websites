@@ -60,6 +60,11 @@
     }
   }
 
+  // &__body,
+  // &__footer {
+  //   @include theme-description-text();
+  // }
+
   &__footer {
     margin-top: auto;
     &:empty {
