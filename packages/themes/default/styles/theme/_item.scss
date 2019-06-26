@@ -129,7 +129,115 @@
 
   &__asset-image {
     @include border-radius($theme-item-image-border-radius);
-    max-width: 100%; // @todo fix this
-    height: auto; // @todo fix this
+    // max-width: 100%; // @todo fix this for ie
+    // height: auto; // @todo fix this for ie
+  }
+
+  &__image-placeholder {
+    min-width: 100%;
+    min-height: 100%;
+    background-blend-mode: $theme-item-image-placeholder-blend-mode;
+    background-image: $theme-item-image-placeholder-image;
+    background-position: $theme-item-image-placeholder-position;
+    opacity: $theme-item-image-placeholder-opacity;
+  }
+
+  &__image {
+    $image: &;
+
+    a {
+      @include border-radius($theme-item-image-border-radius);
+      @include box-shadow($theme-item-image-box-shadow);
+      position: relative;
+      display: inline-block; // @todo change back to block?
+    }
+
+    &--placeholder {
+      a {
+        background-color: $theme-item-image-placeholder-color;
+      }
+    }
+
+    &--centercap {
+      text-align: center;
+      a {
+        min-height: 100px;
+      }
+    }
+
+    &--fluid {
+      #{ $self } {
+        &__asset-image {
+          @include theme-embed-responsive-item();
+        }
+        &__image-placeholder {
+          @include theme-embed-responsive-item();
+        }
+      }
+    }
+    &--21by9 {
+      a {
+        @include theme-embed-responsive(21, 9);
+      }
+    }
+    &--16by9 {
+      a {
+        @include theme-embed-responsive(16, 9);
+      }
+    }
+    &--4by3 {
+      a {
+        @include theme-embed-responsive(4, 3);
+      }
+    }
+    &--3by4 {
+      a {
+        @include theme-embed-responsive(3, 4);
+      }
+    }
+    &--1by1 {
+      a {
+        @include theme-embed-responsive(1, 1);
+      }
+    }
+  }
+
+
+  &--image-left {
+    flex-direction: row;
+    #{ $self } {
+      &__image {
+        margin-top: auto;
+        margin-right: $theme-item-padding;
+        margin-bottom: auto;
+      }
+      &__contents {
+        padding: 0;
+        padding-right: $theme-item-contents-padding;
+      }
+    }
+  }
+
+  &--image-right {
+    flex-direction: row-reverse;
+    #{ $self } {
+      &__image {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: $theme-item-padding;
+      }
+      &__contents {
+        padding: 0;
+        padding-left: $theme-item-contents-padding;
+      }
+    }
+  }
+
+  &--image-top {
+    #{ $self } {
+      &__image {
+        margin-bottom: $theme-item-padding;
+      }
+    }
   }
 }
