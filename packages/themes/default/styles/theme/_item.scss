@@ -26,9 +26,9 @@
     letter-spacing: $theme-item-header-letter-spacing;
     a {
       color: $theme-item-header-link-color;
-      text-decoration: $theme-item-header-link-text-decoration;
       &:hover {
         color: $theme-item-header-link-hover-color;
+        text-decoration: $theme-item-header-link-text-decoration;
       }
     }
     &:empty {
@@ -60,9 +60,9 @@
     a {
       // @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
       color: $theme-item-title-link-color;
-      text-decoration: $theme-item-title-link-text-decoration;
       &:hover {
         color: $theme-item-title-link-hover-color;
+        text-decoration: $theme-item-title-link-text-decoration;
       }
     }
 
@@ -78,6 +78,24 @@
     &--locked {
       a::before {
         content: $theme-item-title-locked-content;
+      }
+    }
+  }
+
+  &__description {
+    // @include theme-description-text();
+    margin-bottom: $theme-item-description-margin;
+    color: $theme-item-description-color;
+    &:empty {
+      display: none;
+    }
+
+    a {
+      // @include theme-max-lines($line-height: 25px, $line-height-sm: 23px);
+      color: $theme-item-description-link-color;
+      &:hover {
+        color: $theme-item-description-link-hover-color;
+        text-decoration: $theme-item-description-link-text-decoration;
       }
     }
   }
