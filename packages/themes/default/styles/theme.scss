@@ -10,12 +10,19 @@ $body-color:  $black !default;
 @import "mixins";
 
 // Items
-$theme-item-padding:            .75rem !default;
-$theme-item-element-margin:     6px !default;
+$theme-item-padding:                      .75rem !default;
+$theme-item-element-margin:               6px !default;
+$theme-item-letter-spacing:               normal !default;
+$theme-item-text-decoration:              none !default;
 
-$theme-item-contents-padding:   .25rem !default;
+$theme-item-contents-padding:             .25rem !default;
 
-$theme-item-header-margin:      $theme-item-element-margin !default;
+$theme-item-header-color:                 $gray-600 !default;
+$theme-item-header-link-color:            $theme-item-header-color !default;
+$theme-item-header-link-hover-color:      $theme-item-header-link-color !default;
+$theme-item-header-link-text-decoration:  $theme-item-text-decoration !default;
+$theme-item-header-letter-spacing:        $theme-item-letter-spacing !default;
+$theme-item-header-margin:                $theme-item-element-margin !default;
 
 // Icons
 $theme-icon-height: 1rem !default;

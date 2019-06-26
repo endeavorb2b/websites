@@ -22,10 +22,14 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: $theme-item-header-margin;
-    color: $blue; // change
-    letter-spacing: normal;
+    color: $theme-item-header-color;
+    letter-spacing: $theme-item-header-letter-spacing;
     a {
-      color: $blue; // change
+      color: $theme-item-header-link-color;
+      text-decoration: $theme-item-header-link-text-decoration;
+      &:hover {
+        color: $theme-item-header-link-hover-color;
+      }
     }
     &:empty {
       display: none;
