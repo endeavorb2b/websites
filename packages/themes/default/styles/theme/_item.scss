@@ -99,4 +99,37 @@
       }
     }
   }
+
+  &__footer {
+    // @include theme-small-text();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    color: $theme-item-footer-color;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__footer-left {
+    margin-top: auto;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__footer-right {
+    margin-top: auto;
+    white-space: nowrap;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__asset-image {
+    @include border-radius($theme-item-image-border-radius);
+    max-width: 100%; // @todo fix this
+    height: auto; // @todo fix this
+  }
 }
