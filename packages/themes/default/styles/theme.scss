@@ -24,6 +24,13 @@ $theme-item-header-link-text-decoration:  $theme-item-text-decoration !default;
 $theme-item-header-letter-spacing:        $theme-item-letter-spacing !default;
 $theme-item-header-margin:                $theme-item-element-margin !default;
 
+$theme-item-title-color:                  $black !default;
+$theme-item-title-link-color:             $theme-item-title-color !default;
+$theme-item-title-link-hover-color:       $theme-item-title-link-color !default;
+$theme-item-title-link-text-decoration:   $theme-item-text-decoration !default;
+$theme-item-title-margin:                 $theme-item-element-margin !default;
+$theme-item-title-locked-content:         "\1F512" !default;
+
 // Icons
 $theme-icon-height: 1rem !default;
 $theme-icon-width:  1rem !default;

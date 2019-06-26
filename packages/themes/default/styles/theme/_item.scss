@@ -35,4 +35,50 @@
       display: none;
     }
   }
+
+  &__header-left {
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__header-right {
+    white-space: nowrap;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__title {
+    // @include theme-heading(list);
+    margin-bottom: $theme-item-title-margin;
+    color: $theme-item-title-color;
+    &:empty {
+      display: none;
+    }
+
+    a {
+      // @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
+      color: $theme-item-title-link-color;
+      text-decoration: $theme-item-title-link-text-decoration;
+      &:hover {
+        color: $theme-item-title-link-hover-color;
+      }
+    }
+
+    &--large {
+      // @include theme-heading(h5);
+
+      // a {
+      //   // @include theme-max-lines($line-height: 30px, $line-height-sm: 26px);
+      //   color: $black;
+      // }
+    }
+
+    &--locked {
+      a::before {
+        content: $theme-item-title-locked-content;
+      }
+    }
+  }
 }
