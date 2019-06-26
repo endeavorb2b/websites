@@ -1,0 +1,11 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/components";
+
+@import "mixins";
+
+$theme-icon-height: 1rem !default;
+$theme-icon-width:  1rem !default;
+
+@import "theme/icons";

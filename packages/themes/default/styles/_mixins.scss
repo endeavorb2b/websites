@@ -1,0 +1,8 @@
+
+@mixin theme-navbar-type($type) {
+  @if $type == dark {
+    @extend .navbar-dark;
+  } @else {
+    @extend .navbar-light;
+  }
+}
