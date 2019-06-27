@@ -1,13 +1,11 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const block = 'content-primary-media';
-$ const { site } = out.global;
 
 $ const content = getAsObject(input, 'content');
 $ const primaryImage = getAsObject(content, 'primaryImage');
 
-$ const displayPrimaryImage = site.get('contentPage.displayPrimaryImage', true) && primaryImage.src;
-$ const displayMedia = displayPrimaryImage || content.embedCode;
+$ const displayMedia = input.displayPrimaryImage || content.embedCode;
 
 <if(displayMedia)>
   <div class=block>
@@ -16,7 +14,7 @@ $ const displayMedia = displayPrimaryImage || content.embedCode;
         $!{content.embedCode}
       </div>
     </if>
-    <else-if(displayPrimaryImage)>
+    <else-if(input.displayPrimaryImage)>
       <div class=`${block}__image`>
         <!-- @todo Add support for responsive images / size variance based on context -->
         <cms-image-element
