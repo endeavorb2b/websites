@@ -295,6 +295,11 @@
   }
 
   &__content-link {
+    &--company {
+      .item__asset-image {
+        max-width: initial;
+      }
+    }
     &--video {
       &::after {
         position: absolute;
