@@ -19,6 +19,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@display-primary-image": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-page-body-contents": {
@@ -40,6 +44,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@display-primary-image": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-item": {
