@@ -7,15 +7,17 @@
   margin-bottom: 0;
 
   &__item {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-
     margin-bottom: -$list-group-border-width;
     color: $list-group-color;
     background-color: $list-group-bg;
     border: $list-group-border-width solid $list-group-border-color;
+  }
 
+  &__header,
+  &__body,
+  &__contents,
+  &__item,
+  &__footer {
     &:first-child {
       @include border-top-radius($theme-card-border-radius);
     }
@@ -24,30 +26,49 @@
       margin-bottom: 0;
       @include border-bottom-radius($theme-card-border-radius);
     }
+  }
 
-    // @todo headers still have issues with borders
-    &--header {
-      @include theme-card-header();
-      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
-      margin-bottom: 0;
+  &__contents {
+    display: flex;
+    flex-direction: column;
+  }
 
-      &:empty {
-        display: none;
-      }
+  &__header,
+  &__footer,
+  &__item,
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
 
-      &:last-child {
-        @include border-bottom-radius(0);
-      }
+  &__header,
+  &__footer,
+  &__body {
+    padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+  }
 
-      a {
-        @include theme-card-header-color();
-      }
+  // @todo headers still have issues with borders
+  &__header {
+    @include theme-card-header();
+    margin-bottom: 0;
+
+    &:empty {
+      display: none;
     }
 
-    &--description {
-      @include theme-description-text();
-      padding: $theme-item-padding ($theme-item-padding + $theme-item-contents-padding);
+    a {
+      @include theme-card-header-color();
     }
+  }
+
+  &__body,
+  &__footer {
+    @include theme-description-text();
+  }
+
+  &__footer {
+    margin-top: auto;
   }
 
   &--card {

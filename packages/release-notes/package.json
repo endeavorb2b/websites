@@ -1,0 +1,19 @@
+{
+  "name": "@endeavorb2b/base-website-release-notes",
+  "version": "0.11.2",
+  "private": true,
+  "bin": {
+    "website-release-notes-between": "bin/between.js",
+    "website-release-notes": "bin/release.js"
+  },
+  "dependencies": {
+    "@base-cms/env": "^0.9.25",
+    "@octokit/rest": "^16.28.2",
+    "numeral": "^2.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}

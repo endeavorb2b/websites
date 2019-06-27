@@ -1,9 +1,9 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.10.6",
+  "version": "0.11.0",
   "private": true,
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.34",
+    "@base-cms/marko-web": "^0.9.36",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
     "apollo-cache-inmemory": "^1.6.0",

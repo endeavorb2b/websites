@@ -19,7 +19,7 @@ $ const publication = getAsObject(data, 'publication');
         <div class="page-wrapper__header">
           <endeavor-breadcrumbs-magazine target=publication />
           <h1 class="page-wrapper__title">
-            ${publication.name}
+            ${publication.name} Archives
           </h1>
           <if(publication.description)>
             <p class="page-wrapper__description">
@@ -32,9 +32,7 @@ $ const publication = getAsObject(data, 'publication');
   </div>
 
   <@below-container>
-    <endeavor-load-more-header>
-      Recent Issues
-    </endeavor-load-more-header>
+
     <endeavor-magazine-block-query-active-issues
       query={ publicationId: publication.id }
     />

@@ -1,0 +1,40 @@
+import { get, getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head />
+  </@head>
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper default-page">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">${section.description}</p>
+          </if>
+          <p class="page-wrapper__description">
+            <a href="https://ogjresearch.com" target="_blank">Buy Additional Oil & Gas Surveys</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ogj-content-query-group-by-year section-id=section.id />
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
+</theme-pennwell-website-section-layout>

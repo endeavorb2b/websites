@@ -5,7 +5,7 @@ $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
 $ const company = getAsObject(content, 'company');
 $ const userRegistration = getAsObject(content, 'userRegistration');
-$ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs };
+$ const imageLinkAttrs = { title: content.shortName, ...input.imageLinkAttrs, ...input.contentLinkAttrs };
 $ const titleModifiers = getAsArray(input, 'titleModifiers');
 $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
 
@@ -16,7 +16,7 @@ $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
   <endeavor-content-block-promotion-item ...input />
 </else-if>
 <else>
-  <endeavor-item modifiers=input.modifiers flush=input.flush>
+  <endeavor-item modifiers=input.modifiers flush=input.flush attrs=input.attrs>
     <@image
       display=input.withImage
       height=input.imageHeight
@@ -33,17 +33,19 @@ $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
       width=input.imageWidth
     />
     <@header-left|{ block }|>
-      <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+      <if(input.withSection)>
+        <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+      </if>
       <if(input.withType)>
         <cms-text-element tag="span" block=block obj=content field="typeTitled" />
       </if>
     </@header-left>
     <@title tag="h5" modifiers=titleModifiers>
-      <cms-content-short-name tag=null obj=content link=true />
+      <cms-content-short-name tag=null obj=content link=true link-attrs=input.contentLinkAttrs />
     </@title>
     <if(input.withTeaser)>
       <@description tag="p">
-        <cms-content-teaser tag=null obj=content link=true />
+        <cms-content-teaser tag=null obj=content link=true link-attrs=input.contentLinkAttrs />
       </@description>
     </if>
     <@footer-left|{ block }|>

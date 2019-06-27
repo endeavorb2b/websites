@@ -1,4 +1,4 @@
-import { isInitable, getURI } from '../../services/native-x';
+import { isInitable, getTrackingURI } from '../../services/native-x';
 
 $ const { site } = out.global;
 
@@ -11,7 +11,7 @@ $ const { site } = out.global;
       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; a.crossOrigin = 'anonymous'; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://d24bnj4f1s1f8m.cloudfront.net/1.0.0-rc.4.3/fortnight.min.js', 'fortnight');
     fortnight('init', {
-      domain: '${getURI(site)}'
+      domain: '${getTrackingURI(site)}'
     });
   </script>
 </if>

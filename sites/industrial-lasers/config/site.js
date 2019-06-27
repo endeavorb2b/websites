@@ -50,6 +50,7 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/events', label: 'Events' },
       { href: '/commentary', label: 'Commentary' },
       { href: '/magazine', label: 'Magazine' },
       { href: '/videos', label: 'Videos' },
@@ -90,5 +91,8 @@ module.exports = {
       logo: 'https://base.imgix.net/files/base/pennwell/ils/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
+  },
+  wufoo: {
+    userName: 'cygnuscorporate',
   },
 };

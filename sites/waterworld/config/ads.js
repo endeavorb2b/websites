@@ -74,6 +74,20 @@ module.exports = {
     rail2: { ...CONTENT, path: path('municipal/technologies/disinfection/rail2') },
     'load-more': { ...CONTENT, path: path('municipal/technologies/disinfection/load-more') },
   },
+  'municipal/technologies/filtration': {
+    lb1: { ...LB, path: path('municipal/technologies/filtration/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/filtration/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/filtration/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/filtration/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/filtration/load-more') },
+  },
+  'municipal/technologies/flow-level-pressure-measurement': {
+    lb1: { ...LB, path: path('municipal/technologies/flow-level-pressure-measurement/lb1') },
+    lb2: { ...LB, path: path('municipal/technologies/flow-level-pressure-measurement/lb2') },
+    rail1: { ...CONTENT, path: path('municipal/technologies/flow-level-pressure-measurement/rail1') },
+    rail2: { ...CONTENT, path: path('municipal/technologies/flow-level-pressure-measurement/rail2') },
+    'load-more': { ...CONTENT, path: path('municipal/technologies/flow-level-pressure-measurement/load-more') },
+  },
   'municipal/technologies/lab-sampling-analytical': {
     lb1: { ...LB, path: path('municipal/technologies/lab-sampling-analytical/lb1') },
     lb2: { ...LB, path: path('municipal/technologies/lab-sampling-analytical/lb2') },
@@ -143,6 +157,13 @@ module.exports = {
     rail1: { ...CONTENT, path: path('industrial/process-water/rail1') },
     rail2: { ...CONTENT, path: path('industrial/process-water/rail2') },
     'load-more': { ...CONTENT, path: path('industrial/process-water/load-more') },
+  },
+  'industrial/water-reuse': {
+    lb1: { ...LB, path: path('industrial/water-reuse/lb1') },
+    lb2: { ...LB, path: path('industrial/water-reuse/lb2') },
+    rail1: { ...CONTENT, path: path('industrial/water-reuse/rail1') },
+    rail2: { ...CONTENT, path: path('industrial/water-reuse/rail2') },
+    'load-more': { ...CONTENT, path: path('industrial/water-reuse/load-more') },
   },
   international: {
     lb1: { ...LB, path: path('international/lb1') },

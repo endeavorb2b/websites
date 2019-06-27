@@ -47,8 +47,13 @@ fragment ContentPageFragment on Content {
     source
     byline
   }
+  ... on ContentEvent {
+    ends
+    starts
+  }
   ... on ContentWebinar {
     linkUrl
+    starts
     sponsors {
       edges {
         node {

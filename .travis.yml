@@ -149,13 +149,13 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: PennWell - Offshore Magazine
-      script: scripts/deploy.js offshore-mag aerilon
+      name: PennWell - Oil & Gas Journal
+      script: scripts/deploy.js ogj aerilon
       install: skip
 
     - stage: deploy
-      name: PennWell - Oil & Gas Journal
-      script: scripts/deploy.js ogj aerilon
+      name: PennWell - Offshore Magazine
+      script: scripts/deploy.js offshore-mag aerilon
       install: skip
 
     - stage: deploy
@@ -196,6 +196,11 @@ jobs:
     - stage: deploy
       name: PMMI - Healthcare Packaging
       script: scripts/deploy.js healthcarepackaging aerilon
+      install: skip
+
+    - stage: deploy
+      name: PMMI - mundo
+      script: scripts/deploy.js mundopmmi aerilon
       install: skip
 
     - stage: deploy

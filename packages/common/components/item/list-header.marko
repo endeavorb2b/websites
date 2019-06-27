@@ -1,7 +1,7 @@
 import { getAsArray } from '@base-cms/object-path';
 import bem from '../../utils/bem-class';
 
-$ const classNames = bem('item-list', 'item', ['header', ...getAsArray(input, 'modifiers')]);
+$ const classNames = bem('item-list', 'header', getAsArray(input, 'modifiers'));
 
 <if(input.renderBody)>
   <${input.tag} class=classNames>

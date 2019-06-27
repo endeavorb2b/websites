@@ -36,7 +36,9 @@ module.exports = {
   secondaryNavItems: [
     { href: '/subscribe', label: 'Subscribe' },
     { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'Videos' },
+    { href: '/magazine/5ca3d91475a2545c040041a9', label: 'Past Issues' },
+    { href: '/ogj-survey-downloads', label: 'Surveys' },
+    { href: '/industry-statistics', label: 'Industry Statistics' },
     { href: '/page/about-us', label: 'About Us' },
   ],
   tertiaryNavItems: [
@@ -51,10 +53,17 @@ module.exports = {
   ],
   menuItems: {
     resources: [
+      { href: '/events', label: 'Events' },
       { href: '/magazine', label: 'Magazine' },
+      { href: '/magazine/5ca3d91475a2545c040041a9', label: 'Past Issues' },
       { href: '/videos', label: 'Videos' },
       { href: '/white-papers', label: 'White Papers' },
       { href: '/webcasts', label: 'Webcasts' },
+      { href: 'https://www.pennwellbooks.com/categories/petroleum.html', label: 'Bookstore' },
+      { href: 'https://ogjresearch.com/', label: 'Research' },
+      { href: '/ogj-survey-downloads', label: 'Surveys' },
+      { href: '/industry-statistics', label: 'Industry Statistics' },
+      { href: '/page/submit-article', label: 'Submit an Article' },
     ],
     userTools: [
       ...userLinks,
@@ -72,7 +81,7 @@ module.exports = {
     apiKey: '003355913687346718228:t6qdcjgnqpk',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=22b7d82d-e6f5-421a-89a2-518e519e7718',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=OGJPrefPage',
     publications: {
       '/subscribe/print/ogj': 'https://formdesigner.ecn5.com/GetForm?tokenuid=2455740f-950f-4ec5-b983-7088b8e2d84d&promoCode=NE9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=NE9WEB&utm_content=2019-02-26',
     },
@@ -86,5 +95,8 @@ module.exports = {
       logo: 'https://base.imgix.net/files/base/pennwell/ogj/logo.png?h=60',
     },
     to: 'pwestervelt@pennwell.com',
+  },
+  wufoo: {
+    userName: 'cygnuscorporate',
   },
 };

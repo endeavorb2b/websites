@@ -11,6 +11,13 @@
   }
   &__content-name {
     margin-right: map-get($spacers, 2);
+    &::after {
+      display: inline-block;
+      content: ", ";
+    }
+    &:last-child::after {
+      content: "";
+    }
   }
   div:last-child {
     margin-bottom: map-get($spacers, 2);

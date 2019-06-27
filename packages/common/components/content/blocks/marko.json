@@ -19,6 +19,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@display-primary-image": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-page-body-contents": {
@@ -40,6 +44,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@display-primary-image": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-item": {
@@ -56,6 +64,10 @@
       "@with-type": {
         "type": "boolean",
         "default-value": false
+      },
+      "@with-section": {
+        "type": "boolean",
+        "default-value": true
       },
       "@image-lazyload": {
         "type": "boolean",
@@ -78,7 +90,9 @@
       "@image-min-height": "number",
       "@image-min-width": "number",
       "@title-modifiers": "array",
-      "@modifiers": "array"
+      "@modifiers": "array",
+      "@attrs": "object",
+      "@content-link-attrs": "object"
     },
     "endeavor-content-nativex-item": {
       "template": "./nativex-item.marko"
@@ -91,6 +105,10 @@
         "default-value": true
       },
       "@with-type": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-section": {
         "type": "boolean",
         "default-value": true
       },
@@ -125,6 +143,10 @@
         "default-value": true
       },
       "@with-type": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@with-section": {
         "type": "boolean",
         "default-value": true
       },

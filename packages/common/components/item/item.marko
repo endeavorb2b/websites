@@ -23,7 +23,7 @@ $ if (image.position) modifiers.push(`image-${image.position}`);
 $ if (input.flush) modifiers.push('flush');
 $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
 
-<${input.tag} class=classNames>
+<${input.tag} class=classNames ...input.attrs>
   <if(image.display)>
     <image
       alt=image.alt
@@ -32,6 +32,7 @@ $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
       image=image.image
       lazyload=image.lazyload
       link-attrs=image.linkAttrs
+      link-path=image.linkPath
       link-to=image.linkTo
       min-height=image.minHeight
       min-width=image.minWidth

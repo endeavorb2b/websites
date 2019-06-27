@@ -76,7 +76,7 @@ module.exports = {
     apiKey: '003355913687346718228:9fw7nfvu5hw',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=28d2fe32-119b-468e-a58a-a7b564581eaf&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=LFWPrefPage',
     publications: {
       '/subscribe/print/lfw': 'https://formdesigner.ecn5.com/GetForm?tokenuid=28d2fe32-119b-468e-a58a-a7b564581eaf&promoCode=NW2019&utm_source=mag_sub&utm_medium=website&utm_campaign=NW2019&utm_content=2019-02-25',
     },
@@ -90,5 +90,8 @@ module.exports = {
       logo: 'https://base.imgix.net/files/base/pennwell/lfw/logo.png?h=60',
     },
     to: 'juliac@pennwell.com',
+  },
+  wufoo: {
+    userName: 'cygnuscorporate',
   },
 };

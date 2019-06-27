@@ -44,8 +44,8 @@ $ const imageLinkAttrs = { title, ...input.imageLinkAttrs };
   </if>
   <@footer-left|{ block }|>
     <if(input.withFooter)>
-      <cms-link-element to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
-      <cms-link-element to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
+      <cms-link-element class="btn item__button" to=publication path="subscribeUrl" block=block>Subscribe</cms-link-element>
+      <cms-link-element class="btn item__button" to=issue path="digitalEditionUrl" block=block>Digital Edition</cms-link-element>
     </if>
   </@footer-left>
   <@footer-right>

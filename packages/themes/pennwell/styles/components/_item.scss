@@ -11,6 +11,7 @@
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
     @include button-variant($primary, $primary);
     margin-right: map-get($spacers, 2);
+    margin-top: map-get($spacers, 2);
     &:last-child {
       margin-right: 0;
     }

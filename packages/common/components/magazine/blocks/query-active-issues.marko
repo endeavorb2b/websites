@@ -8,7 +8,7 @@ $ const { publicationId } = getAsObject(input, 'query');
 $ const block = 'magazine-active-issues';
 $ const query = {
   publicationId,
-  limit: 10,
+  limit: 12,
   ...input.query,
   queryFragment,
 };
@@ -47,13 +47,10 @@ $ const adCardInput = {
             image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
             image-position="top"
             modifiers=["card"]
+            with-header=false
+            with-footer=false
           />
         </div>
-        <if(index === 1 || index === 6)>
-          <div class=`${block}__col`>
-            <endeavor-gam-ad-unit-define-display ...adCardInput/>
-          </div>
-        </if>
       </for>
     </div>
   </div>
