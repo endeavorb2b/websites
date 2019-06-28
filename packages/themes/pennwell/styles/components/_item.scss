@@ -110,7 +110,7 @@
     &:empty {
       display: none;
     }
-    @include media-breakpoint-up("md", $grid-breakpoints) {
+    @include media-breakpoint-up(md) {
       flex-direction: row;
     }
   }
