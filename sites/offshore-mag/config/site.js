@@ -74,7 +74,7 @@ module.exports = {
     apiKey: '003355913687346718228:jon24h47vcu',
   },
   subscriptions: {
-    newsletters: 'https://formdesigner.ecn5.com/GetForm?tokenuid=af1370c4-4e46-4de5-bdbd-4732ebf8443c',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=OFFPrefPage',
     publications: {
       '/subscribe/print/os': 'https://formdesigner.ecn5.com/GetForm?tokenuid=84e20b11-0e4c-4b5b-9fbb-a86d1fff43c2&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
     },
