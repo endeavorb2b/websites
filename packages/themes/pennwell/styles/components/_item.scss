@@ -322,4 +322,10 @@
     }
   }
 
+  // Video
+  &__video {
+    iframe {
+      max-width: 100%;
+    }
+  }
 }
