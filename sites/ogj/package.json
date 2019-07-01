@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/ogj",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
