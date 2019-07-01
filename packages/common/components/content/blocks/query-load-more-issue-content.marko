@@ -11,6 +11,21 @@ $ const query = {
   ...input.query,
   queryFragment: contentListFragment,
 };
+$ const params = {
+  cardImageModifiers: ['fluid','21by9'],
+  cardImageHeight: 270,
+  cardImageWidth: 630,
+  cardImageFit: 'crop',
+  cardImageCrop: 'focalpoint',
+  cardImagePosition: 'top',
+  listImageModifier: [],
+  listImageHeight: 99,
+  listImageWidth: 176,
+  listImageFit: 'crop',
+  listImageCrop: 'focalpoint',
+  listImagePosition: 'right',
+  ...input.params,
+}
 
 $ const loadMore = {
   ...input.loadMore,
@@ -29,6 +44,8 @@ $ const adListInput = {
   modifiers: ['in-card'],
   ...getAsObject(input, 'ads.list'),
 };
+$ const listImageOptions = { w: params.listImageWidth, h: params.listImageHeight, fit: params.listImageFit, crop: params.listImageCrop, fpX: 0.5, fpY: 0.5 };
+$ const cardImageOptions = { w: params.cardImageWidth, h: params.cardImageHeight, fit: params.cardImageFit, crop: params.cardImageCrop, fpX: 0.5, fpY: 0.5 };
 
 <cms-query-magazine-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const { endCursor, hasNextPage } = pageInfo;
@@ -57,9 +74,9 @@ $ const adListInput = {
             <div class=`${block}__col`>
               <endeavor-content-block-item
                 content=content
-                image-modifiers=["fluid", "21by9"]
-                image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
-                image-position="top"
+                image-modifiers=params.cardImageModifiers
+                image-options=cardImageOptions
+                image-position=params.cardImagePosition
                 modifiers=["card"]
               />
             </div>
@@ -83,10 +100,10 @@ $ const adListInput = {
               <@item|{ item }|>
                 <endeavor-content-block-item
                   content=item
-                  image-position="left"
-                  image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                  image-width=176
-                  image-height=99
+                  image-position=params.listImagePosition
+                  image-options=listImageOptions
+                  image-width=params.listImageWidth
+                  image-height=params.listImageHeight
                 />
               </@item>
             </endeavor-item-list>

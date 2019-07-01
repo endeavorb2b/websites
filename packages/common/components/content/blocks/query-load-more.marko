@@ -11,6 +11,21 @@ $ const query = {
   queryFragment: contentListFragment,
   queryName: 'QueryLoadMore',
 };
+$ const params = {
+  cardImageModifiers: ['fluid','21by9'],
+  cardImageHeight: 270,
+  cardImageWidth: 630,
+  cardImageFit: 'crop',
+  cardImageCrop: 'focalpoint',
+  cardImagePosition: 'top',
+  listImageModifier: [],
+  listImageHeight: 99,
+  listImageWidth: 176,
+  listImageFit: 'crop',
+  listImageCrop: 'focalpoint',
+  listImagePosition: 'right',
+  ...input.params,
+}
 
 $ const loadMore = {
   ...input.loadMore,
@@ -30,7 +45,8 @@ $ const adListInput = {
   ...getAsObject(input, 'ads.list'),
 };
 $ const nativeX = getAsObject(input, 'nativeX');
-$ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 };
+$ const listImageOptions = { w: params.listImageWidth, h: params.listImageHeight, fit: params.listImageFit, crop: params.listImageCrop, fpX: 0.5, fpY: 0.5 };
+$ const cardImageOptions = { w: params.cardImageWidth, h: params.cardImageHeight, fit: params.cardImageFit, crop: params.cardImageCrop, fpX: 0.5, fpY: 0.5 };
 
 <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
   $ const cardNodes = asArray(nodes.slice(0, 10));
@@ -54,9 +70,9 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
                 current-index=index
                 item={
                   content,
-                  imageModifiers: ["fluid", "21by9"],
-                  imageOptions,
-                  imagePosition: "top",
+                  imageModifiers: params.cardImageModifiers,
+                  cardImageOptions,
+                  imagePosition: params.cardImagePosition,
                   modifiers: ["card"]
                 }
               />
@@ -81,10 +97,10 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
               <@item|{ item }|>
                 <endeavor-content-block-item
                   content=item
-                  image-position="left"
-                  image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                  image-width=176
-                  image-height=99
+                  image-position=params.listImagePosition
+                  image-options=listImageOptions
+                  image-width=params.listImageWidth
+                  image-height=params.listImageHeight
                 />
               </@item>
             </endeavor-item-list>
