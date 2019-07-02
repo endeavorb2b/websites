@@ -5,15 +5,15 @@ module.exports = {
   company: 'PMMI Media Group',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pmmi/mundo/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pmmi/mundo/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pmmi/mundo/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pmmi/mundo/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=120 2x',
       ],
     },
   },
@@ -23,14 +23,13 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/MundoPMMI' },
   ],
   primaryNavItems: [
-    { href: 'https://www.expopack.com.mx', label: 'EXPO PACK International', target: '_blank' },
-    { href: '/articulos', label: 'Artículos' },
+    { href: '/automatizacion', label: 'Automatización' },
+    { href: '/empaque', label: 'Empaque' },
+    { href: '/procesamiento', label: 'Procesamiento' },
   ],
   secondaryNavItems: [
     { href: '/subscribe', label: 'Suscribir' },
     { href: '/videos', label: 'Vídeos' },
-    { href: '/events', label: 'Eventos' },
-    { href: '/webcasts', label: 'Webinars' },
   ],
   footerNavItems: [
     { href: '/', label: 'Home' },
@@ -43,17 +42,18 @@ module.exports = {
   ],
   menuItems: {
     resources: [
-      { href: '/magazine', label: 'Revista' },
-      { href: '/videos', label: 'Vídeos' },
-      { href: '/white-papers', label: 'Libros Blancos' },
       { href: '/events', label: 'Eventos' },
+      { href: '/', label: 'Descargas' },
+      { href: '/videos', label: 'Vídeos' },
     ],
     userTools: [
-      { href: '/subscribe', label: 'Suscribir' },
-      { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anunciar', target: '_blank' },
-      { href: '/page/about-us', label: 'Sobre nosotras' },
-      { href: '/contact-us', label: 'Contáctenos' },
-      { href: '/page/privacy-policy', label: 'Política de privacidad' },
+      { href: '/suscríbase', label: 'Suscríbase' },
+      { href: '/anuncie', label: 'Anuncie' },
+      { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
+      { href: '/contrato', label: 'Contrato' },
+      { href: '/privacidad', label: 'Privacidad' },
+      { href: '/condiciones-de-uso', label: 'Condiciones de uso' },
+      { href: '/términos-y-condiciones-de-publicidad', label: 'Términos y condiciones de publicidad' },
     ],
   },
   gtmContainer: '',
