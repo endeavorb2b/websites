@@ -7,7 +7,7 @@ module.exports = {
     navbar: {
       src: 'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
+        'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=120 2x',
       ],
     },
     footer: {
@@ -47,7 +47,7 @@ module.exports = {
       { href: '/videos', label: 'Vídeos' },
     ],
     userTools: [
-      { href: '/suscríbase', label: 'Suscríbase' },
+      { href: '/subscribe', label: 'Suscríbase' },
       { href: '/anuncie', label: 'Anuncie' },
       { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
       { href: '/contrato', label: 'Contrato' },
