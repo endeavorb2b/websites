@@ -23,13 +23,13 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/MundoPMMI' },
   ],
   primaryNavItems: [
+  ],
+  secondaryNavItems: [
     { href: '/automatizacion', label: 'Automatización' },
     { href: '/empaque', label: 'Empaque' },
     { href: '/procesamiento', label: 'Procesamiento' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Suscribir' },
     { href: '/videos', label: 'Vídeos' },
+    { href: '/subscribe', label: 'Suscribir' },
   ],
   footerNavItems: [
     { href: '/', label: 'Home' },
