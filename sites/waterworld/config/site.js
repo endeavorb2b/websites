@@ -67,7 +67,7 @@ module.exports = {
     apiKey: '003355913687346718228:anjajr3pydu',
   },
   subscriptions: {
-    newsletters: 'https://endeavor.dragonforms.com/WWPrefPage',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=WWPrefPage',
     publications: {
       '/subscribe/print/ww': 'https://formdesigner.ecn5.com/GetForm?tokenuid=251e2ac3-4c6a-495d-a7d8-5178dc76acd5&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
       '/subscribe/print/iww': 'https://formdesigner.ecn5.com/GetForm?tokenuid=0aaf9d77-861e-46ba-905b-43ad58b691cc&promoCode=N9WEB&utm_source=mag_sub&utm_medium=website&utm_campaign=N9WEB&utm_content=2019-02-26',
