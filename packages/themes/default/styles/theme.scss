@@ -47,6 +47,12 @@ $theme-text-description-font-style:       normal !default;
 $theme-text-description-line-height:      25px !default;
 $theme-text-description-line-height-sm:   23px !default;
 
+$theme-text-page-title-font-size:         40px !default;
+$theme-text-page-title-font-size-sm:      32px !default;
+$theme-text-page-title-font-weight:       $font-weight-normal !default;
+$theme-text-page-title-line-height:       50px !default;
+$theme-text-page-title-line-height-sm:    40px !default;
+
 $theme-text-small-font-family:            $theme-font-family-sans-serif !default;
 $theme-text-small-font-size:              14px !default;
 $theme-text-small-line-height:            20px !default;
@@ -177,11 +183,22 @@ $theme-item-image-placeholder-opacity:         .2 !default;
 $theme-item-card-min-height:                   100% !default;
 
 // Pages
-$theme-page-background-color:   $white !default;
-$theme-page-border-radius:      $border-radius !default;
-$theme-page-box-shadow:         $theme-box-shadow-sm !default;
-$theme-page-padding-bottom:     .75rem !default;
-$theme-page-padding-bottom-sm:  0 !default;
+$theme-page-padding:                map-get($spacers, 3) !default;
+$theme-page-padding-sm:             0 !default;
+
+$theme-page-background-color:       $white !default;
+$theme-page-border-radius:          $border-radius !default;
+$theme-page-box-shadow:             $theme-box-shadow-sm !default;
+$theme-page-padding-bottom:         .75rem !default;
+$theme-page-padding-bottom-sm:      0 !default;
+
+$theme-page-body-padding:           $theme-page-padding !default;
+$theme-page-body-padding-sm:        $theme-page-padding-sm !default;
+$theme-page-body-margin-bottom:     map-get($spacers, block) !default;
+$theme-page-body-margin-bottom-sm:  .75rem !default;
+
+$theme-page-header-padding:         $theme-page-padding !default;
+$theme-page-header-padding-sm:      $theme-page-padding-sm !default;
 
 // Breadcrumbs
 $theme-breadcrumbs-background-color:      $theme-page-background-color !default;

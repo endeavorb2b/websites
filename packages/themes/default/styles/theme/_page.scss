@@ -8,4 +8,24 @@
 
   padding-bottom: $theme-page-padding-bottom;
   background-color: $theme-page-background-color;
+
+  &__header {
+    @include theme-page-header-spacing();
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include theme-text-page-title();
+  }
+
+  &__contents {
+    // @include content-body();
+    @include theme-page-body-spacing();
+  }
+
+  &__body {
+    @include theme-page-body-spacing();
+  }
 }
