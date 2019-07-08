@@ -30,49 +30,49 @@
   @if $size == h1 {
     font-size: $theme-heading-h1-font-size;
     line-height: $theme-heading-h1-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-h1-font-size-sm;
       line-height: $theme-heading-h1-line-height-sm;
     }
   } @else if $size == h2 {
     font-size: $theme-heading-h2-font-size;
     line-height: $theme-heading-h2-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-h2-font-size-sm;
       line-height: $theme-heading-h2-line-height-sm;
     }
   } @else if $size == h3 {
     font-size: $theme-heading-h3-font-size;
     line-height: $theme-heading-h3-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-h3-font-size-sm;
       line-height: $theme-heading-h3-line-height-sm;
     }
   } @else if $size == h4 {
     font-size: $theme-heading-h4-font-size;
     line-height: $theme-heading-h4-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-h4-font-size-sm;
       line-height: $theme-heading-h4-line-height-sm;
     }
   } @else if $size == h5 {
     font-size: $theme-heading-h5-font-size;
     line-height: $theme-heading-h5-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-h5-font-size-sm;
       line-height: $theme-heading-h5-line-height-sm;
     }
   } @else if $size == list {
     font-size: $theme-heading-list-font-size;
     line-height: $theme-heading-list-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-list-font-size-sm;
       line-height: $theme-heading-list-line-height-sm;
     }
   } @else {
     font-size: $theme-heading-small-font-size;
     line-height: $theme-heading-small-line-height;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
       font-size: $theme-heading-small-font-size-sm;
       line-height: $theme-heading-small-line-height-sm;
     }
