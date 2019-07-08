@@ -1,6 +1,6 @@
 <template>
   <div :class="containerClasses">
-    <div :class="bem('background')" />
+    <div :class="backgroundClasses" />
     <div :id="id" />
     <button v-if="closeable" @click="close" title="Close Advertisement" :class="buttonClasses">
       <icon name="circle-with-cross" />
@@ -58,7 +58,6 @@ export default {
     Icon,
   },
   methods: {
-    bem: (name, mod = []) => [block, `${block}__${name}`, ...mod.map(m => `${block}__${name}--${m}`)],
     close() {
       this.visible = false;
       clearTimeout(this.handler);
@@ -74,11 +73,19 @@ export default {
   },
   computed: {
     containerClasses() {
-      return this.bem('container', this.visible ? ['visible'] : []);
+      const classes = [block];
+      if (this.visible) {
+        classes.push(`${block}--visible`);
+        return classes;
+      }
+      return classes;
     },
     buttonClasses() {
-      return ['btn', ...this.bem('close')];
-    }
+      return ['btn', `${block}__close`];
+    },
+    backgroundClasses() {
+      return `${block}__background`;
+    },
   },
   mounted() {
     googletag.cmd.push(() => {
