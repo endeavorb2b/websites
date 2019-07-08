@@ -1,0 +1,30 @@
+.content-primary-media {
+  margin-bottom: $theme-primary-media-margin-bottom;
+  .caption {
+    @include theme-media-caption();
+  }
+  .credit {
+    @include theme-media-credit();
+  }
+
+  &__video {
+    @include theme-embed-responsive($theme-primary-media-aspect-ratio-x, $theme-primary-media-aspect-ratio-y);
+
+    iframe,
+    embed,
+    object,
+    video {
+      @include theme-embed-responsive-item();
+    }
+  }
+
+  &__image {
+    @include theme-embed-responsive($theme-primary-media-aspect-ratio-x, $theme-primary-media-aspect-ratio-y);
+    @include border-radius($theme-primary-media-border-radius);
+    @include box-shadow($theme-primary-media-box-shadow);
+    img {
+      @include theme-embed-responsive-item();
+      @include border-radius($theme-primary-media-border-radius);
+    }
+  }
+}

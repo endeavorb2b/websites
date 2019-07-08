@@ -156,6 +156,25 @@ $theme-content-paragraph-strong-font-weight:    700 !default;
 $theme-content-paragraph-image-border-radius:   $border-radius !default;
 $theme-content-paragraph-image-box-shadow:      $theme-box-shadow-lg !default;
 
+// Content Primary Media
+$theme-primary-media-aspect-ratio-x:  16 !default;
+$theme-primary-media-aspect-ratio-y:  9 !default;
+$theme-primary-media-border-radius:   $border-radius !default;
+$theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
+$theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
+
+// Media
+$theme-media-caption-color:       $gray-600 !default;
+$theme-media-caption-font-weight: 600 !default;
+$theme-media-credit-color:        $black !default;
+$theme-media-credit-font-weight:  400 !default;
+$theme-media-credit-font-style:   italic !default;
+$theme-media-footer-font-family:  $theme-font-family-sans-serif !default;
+$theme-media-footer-font-size:    $font-size-base !default;
+$theme-media-footer-line-height:  $line-height-sm !default;
+$theme-media-footer-padding-x:    $border-radius;
+$theme-media-footer-padding-y:    map-get($spacers, 1) !default;
+
 // Cards
 $theme-card-background-color:             $white !default;
 $theme-card-border:                       none !default;

@@ -198,6 +198,30 @@
   }
 }
 
+@mixin theme-media-caption() {
+  @include theme-media-common-footer();
+  font-weight: $theme-media-caption-font-weight;
+  color: $theme-media-caption-color;
+}
+
+@mixin theme-media-credit() {
+  @include theme-media-common-footer();
+  font-style: $theme-media-credit-font-style;
+  font-weight: $theme-media-credit-font-weight;
+  color: $theme-media-credit-color;
+}
+
+@mixin theme-media-common-footer() {
+  display: inline-block;
+  padding: $theme-media-footer-padding-y $theme-media-footer-padding-x;
+  margin: 0;
+  font-family: $theme-media-footer-font-family;
+  font-size: $theme-media-footer-font-size;
+  line-height: $theme-media-footer-line-height;
+  text-align: left;
+  letter-spacing: normal;
+}
+
 @mixin theme-navbar-type($type) {
   @if $type == dark {
     @extend .navbar-dark;
