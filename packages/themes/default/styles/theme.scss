@@ -246,6 +246,7 @@ $theme-page-border-radius:          $border-radius !default;
 $theme-page-box-shadow:             $theme-box-shadow-sm !default;
 $theme-page-padding-bottom:         .75rem !default;
 $theme-page-padding-bottom-sm:      0 !default;
+$theme-page-margin-bottom:          map-get($spacers, block) !default;
 
 $theme-page-body-padding:           $theme-page-padding !default;
 $theme-page-body-padding-sm:        $theme-page-padding-sm !default;

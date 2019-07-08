@@ -41,3 +41,9 @@
     @include theme-page-body-spacing();
   }
 }
+
+.content-page,
+.default-page,
+.dynamic-page {
+  margin-bottom: $theme-page-margin-bottom;
+}
