@@ -172,6 +172,13 @@ $theme-content-attribution-prefix-margin:             map-get($spacers, 1) !defa
 $theme-content-attribution-prefix-spacer-content:     "\2014" !default;
 $theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
 
+// Contact Details
+$theme-contact-details-font-family:       $theme-font-family-sans-serif !default;
+$theme-contact-details-font-size:         16px !default;
+$theme-contact-details-label-font-weight: 600 !default;
+$theme-contact-details-label-margin:      map-get($spacers, 2) !default;
+$theme-contact-details-section-margin:    map-get($spacers, 3) !default;
+
 // Media
 $theme-media-caption-color:       $gray-600 !default;
 $theme-media-caption-font-weight: 600 !default;

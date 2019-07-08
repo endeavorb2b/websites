@@ -1,0 +1,47 @@
+.content-contact-details {
+  font-family: $theme-contact-details-font-family;
+  font-size: $theme-contact-details-font-size;
+
+  &__section {
+    margin-bottom: $theme-contact-details-section-margin;
+  }
+
+  // &__social-links {
+  //   a {
+  //     margin-right: map-get($spacers, 2);
+  //   }
+  //   svg {
+  //     width: 25px;
+  //     height: 25px;
+  //     fill: #333;
+  //     @include media-breakpoint-down("sm", $grid-breakpoints) {
+  //       width: 44px;
+  //       height: 44px;
+  //     }
+  //   }
+  //   .icon--facebook:hover {
+  //     fill: map-get($brand-colors, facebook);
+  //   }
+  //   .icon--instagram:hover {
+  //     fill: map-get($brand-colors, instagram);
+  //   }
+  //   .icon--twitter:hover {
+  //     fill: map-get($brand-colors, twitter);
+  //   }
+  //   .icon--linkedin:hover {
+  //     fill: map-get($brand-colors, linkedin);
+  //   }
+  //   .icon--pinterest:hover {
+  //     fill: map-get($brand-colors, pinterest);
+  //   }
+  //   .icon--youtube:hover {
+  //     fill: map-get($brand-colors, youtube);
+  //   }
+  // }
+
+  &__label {
+    margin-right: $theme-contact-details-label-margin;
+    margin-bottom: 0;
+    font-weight: $theme-contact-details-label-font-weight;
+  }
+}
