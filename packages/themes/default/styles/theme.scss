@@ -163,6 +163,15 @@ $theme-primary-media-border-radius:   $border-radius !default;
 $theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
 $theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
 
+// Content Attribution
+$theme-content-attribution-font-family:               $theme-font-family-sans-serif !default;
+$theme-content-attribution-name-content:              ", " !default;
+$theme-content-attribution-name-margin:               map-get($spacers, 2) !default;
+$theme-content-attribution-prefix-font-weight:        600 !default;
+$theme-content-attribution-prefix-margin:             map-get($spacers, 1) !default;
+$theme-content-attribution-prefix-spacer-content:     "\2014" !default;
+$theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
+
 // Media
 $theme-media-caption-color:       $gray-600 !default;
 $theme-media-caption-font-weight: 600 !default;
