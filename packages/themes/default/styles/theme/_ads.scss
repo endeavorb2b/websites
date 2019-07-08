@@ -22,3 +22,44 @@
     box-shadow: $theme-ad-box-shadow;
   }
 }
+
+.ad-rail {
+  padding-top: $theme-ad-padding;
+  padding-bottom: $theme-ad-padding;
+
+  .ad-container {
+    margin-bottom: $theme-ad-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Hide Google search promotions/ads.
+.gsc-adBlock { /* stylelint-disable-line */
+  display: none;
+}
+
+.reveal-ad-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.reveal-ad {
+  position: relative;
+  width: 300px;
+  margin: 0 auto $theme-ad-margin;
+  &--light-shadow {
+    @include box-shadow($theme-ad-reveal-box-shadow-light);
+  }
+  &--dark-shadow {
+    @include box-shadow($theme-ad-reveal-box-shadow-dark);
+  }
+}
