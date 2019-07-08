@@ -1,0 +1,11 @@
+.page-wrapper {
+  @include border-radius($theme-page-border-radius);
+  @include box-shadow($theme-page-box-shadow);
+  @include make-container();
+  @include media-breakpoint-down(sm) {
+    padding-bottom: $theme-page-padding-bottom-sm;
+  }
+
+  padding-bottom: $theme-page-padding-bottom;
+  background-color: $theme-page-background-color;
+}
