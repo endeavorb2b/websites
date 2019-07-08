@@ -26,9 +26,10 @@
     letter-spacing: $theme-item-header-letter-spacing;
     a {
       color: $theme-item-header-link-color;
+      text-decoration: $theme-item-header-link-text-decoration;
       &:hover {
         color: $theme-item-header-link-hover-color;
-        text-decoration: $theme-item-header-link-text-decoration;
+        text-decoration: $theme-item-header-link-hover-text-decoration;
       }
     }
     &:empty {
@@ -60,9 +61,10 @@
     a {
       // @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
       color: $theme-item-title-link-color;
+      text-decoration: $theme-item-title-link-text-decoration;
       &:hover {
         color: $theme-item-title-link-hover-color;
-        text-decoration: $theme-item-title-link-text-decoration;
+        text-decoration: $theme-item-title-link-hover-text-decoration;
       }
     }
 
@@ -93,17 +95,21 @@
     a {
       // @include theme-max-lines($line-height: 25px, $line-height-sm: 23px);
       color: $theme-item-description-link-color;
+      text-decoration: $theme-item-description-link-text-decoration;
       &:hover {
         color: $theme-item-description-link-hover-color;
-        text-decoration: $theme-item-description-link-text-decoration;
+        text-decoration: $theme-item-description-link-hover-text-decoration;
       }
     }
   }
 
   &__footer {
     // @include theme-small-text();
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
     color: $theme-item-footer-color;
