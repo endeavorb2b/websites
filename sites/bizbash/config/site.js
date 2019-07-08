@@ -61,7 +61,7 @@ module.exports = {
       { href: '/page/terms-conditions', label: 'Terms & Conditions', target: '_blank' },
     ],
   },
-  gtmContainer: 'GTM-5TWCFJ',
+  // gtmContainer: 'GTM-5TWCFJ',
   search: {
     engine: 'google',
     apiKey: '017383739850048358259:p0nyaiybgnq',
