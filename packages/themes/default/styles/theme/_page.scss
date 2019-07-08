@@ -24,6 +24,10 @@
     @include theme-text-page-deck();
   }
 
+  &__description {
+    @include theme-text-page-description();
+  }
+
   &__contents {
     // @include content-body();
     @include theme-page-body-spacing();

@@ -40,32 +40,40 @@ $theme-responsive-text-breakpoint:            sm !default;
 $theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
 
 // Text (used by mixins)
-$theme-text-description-font-family:      $theme-font-family-serif !default;
-$theme-text-description-font-size:        17px !default;
-$theme-text-description-font-size-sm:     16px !default;
-$theme-text-description-font-style:       normal !default;
-$theme-text-description-line-height:      25px !default;
-$theme-text-description-line-height-sm:   23px !default;
+$theme-text-description-font-family:          $theme-font-family-serif !default;
+$theme-text-description-font-size:            17px !default;
+$theme-text-description-font-size-sm:         16px !default;
+$theme-text-description-font-style:           normal !default;
+$theme-text-description-line-height:          25px !default;
+$theme-text-description-line-height-sm:       23px !default;
 
-$theme-text-page-deck-font-color:         $gray-600 !default;
-$theme-text-page-deck-font-family:        $theme-font-family-sans-serif !default;
-$theme-text-page-deck-font-size:          24px !default;
-$theme-text-page-deck-font-size-sm:       22px !default;
-$theme-text-page-deck-font-weight:        $font-weight-normal !default;
-$theme-text-page-deck-line-height:        34px !default;
-$theme-text-page-deck-line-height-sm:     30px !default;
+$theme-text-page-deck-font-color:             $gray-600 !default;
+$theme-text-page-deck-font-family:            $theme-font-family-sans-serif !default;
+$theme-text-page-deck-font-size:              24px !default;
+$theme-text-page-deck-font-size-sm:           22px !default;
+$theme-text-page-deck-font-weight:            $font-weight-normal !default;
+$theme-text-page-deck-line-height:            34px !default;
+$theme-text-page-deck-line-height-sm:         30px !default;
 
-$theme-text-page-title-font-color:        $black !default;
-$theme-text-page-title-font-family:        $theme-font-family-page-title !default;
-$theme-text-page-title-font-size:         40px !default;
-$theme-text-page-title-font-size-sm:      32px !default;
-$theme-text-page-title-font-weight:       $font-weight-normal !default;
-$theme-text-page-title-line-height:       50px !default;
-$theme-text-page-title-line-height-sm:    40px !default;
+$theme-text-page-description-font-color:      $gray-600 !default;
+$theme-text-page-description-font-family:     $theme-font-family-sans-serif !default;
+$theme-text-page-description-font-size:       20px !default;
+$theme-text-page-description-font-size-sm:    18px !default;
+$theme-text-page-description-font-weight:     $font-weight-normal !default;
+$theme-text-page-description-line-height:     28px !default;
+$theme-text-page-description-line-height-sm:  26px !default;
 
-$theme-text-small-font-family:            $theme-font-family-sans-serif !default;
-$theme-text-small-font-size:              14px !default;
-$theme-text-small-line-height:            20px !default;
+$theme-text-page-title-font-color:            $black !default;
+$theme-text-page-title-font-family:           $theme-font-family-page-title !default;
+$theme-text-page-title-font-size:             40px !default;
+$theme-text-page-title-font-size-sm:          32px !default;
+$theme-text-page-title-font-weight:           $font-weight-normal !default;
+$theme-text-page-title-line-height:           50px !default;
+$theme-text-page-title-line-height-sm:        40px !default;
+
+$theme-text-small-font-family:                $theme-font-family-sans-serif !default;
+$theme-text-small-font-size:                  14px !default;
+$theme-text-small-line-height:                20px !default;
 
 // Headings (used by mixins)
 $theme-heading-font-family:           $theme-font-family-sans-serif !default;

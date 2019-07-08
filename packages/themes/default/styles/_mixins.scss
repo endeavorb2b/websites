@@ -166,6 +166,18 @@
   }
 }
 
+@mixin theme-text-page-description() {
+  font-family: $theme-text-page-description-font-family;
+  font-size: $theme-text-page-description-font-size;
+  font-weight: $theme-text-page-description-font-weight;
+  line-height: $theme-text-page-description-line-height;
+  color: $theme-text-page-description-font-color;
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+    font-size: $theme-text-page-description-font-size-sm;
+    line-height: $theme-text-page-description-line-height-sm;
+  }
+}
+
 @mixin theme-text-page-title() {
   font-family: $theme-text-page-title-font-family;
   font-size: $theme-text-page-title-font-size;
