@@ -44,6 +44,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: BizBash Media - BizBash
+      script: scripts/deploy.js bizbash caprica
+      install: skip
+
+    - stage: deploy
       name: Euclid - Cleveland Scene
       script: scripts/deploy.js clevescene caprica
       install: skip
