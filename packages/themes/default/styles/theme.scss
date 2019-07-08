@@ -177,6 +177,12 @@ $theme-item-card-min-height:                   100% !default;
 $theme-icon-height: 1rem !default;
 $theme-icon-width:  1rem !default;
 
+// Ads
+$theme-ad-box-shadow: 0 .125rem .25rem rgba($black, .075) !default;
+$theme-ad-margin:     map-get($spacers, block) !default;
+$theme-ad-padding:    $theme-ad-margin !default;
+
+@import "theme/ads";
 @import "theme/content";
 @import "theme/icons";
 @import "theme/item";
