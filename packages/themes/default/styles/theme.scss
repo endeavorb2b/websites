@@ -9,13 +9,15 @@ $theme-font-family-page-title: $theme-font-family-serif !default;
 $font-family-sans-serif: $theme-font-family-sans-serif !default;
 
 $black:           #000 !default;
-$white:           #fff !default;
 $body-color:      $black !default;
 $body-bg:         #f5f5f5 !default;
 $border-radius:   .5rem !default;
 
 $enable-shadows: true !default;
 $enable-rounded: true !default;
+
+$breadcrumb-margin-bottom:  0 !default;
+$breadcrumb-padding-x:      0 !default;
 
 $block-spacer: 1.5rem !default;
 $spacers: (
@@ -174,6 +176,24 @@ $theme-item-image-placeholder-opacity:         .2 !default;
 
 $theme-item-card-min-height:                   100% !default;
 
+// Pages
+$theme-page-background-color:   $white !default;
+
+// Breadcrumbs
+$theme-breadcrumbs-background-color:      $theme-page-background-color !default;
+$theme-breadcrumbs-font-family:           $theme-font-family-sans-serif !default;
+$theme-breadcrumbs-font-size:             16px !default;
+$theme-breadcrumbs-font-size-sm:          14px !default;
+$theme-breadcrumbs-font-weight:           $font-weight-normal !default;
+$theme-breadcrumbs-letter-spacing:        normal !default;
+$theme-breadcrumbs-line-height:           $line-height-base !default;
+$theme-breadcrumbs-line-height-sm:        $line-height-base !default;
+$theme-breadcrumbs-link-color:            $link-color !default;
+$theme-breadcrumbs-link-decoration:       $link-decoration !default;
+$theme-breadcrumbs-link-hover-color:      $link-hover-color !default;
+$theme-breadcrumbs-link-hover-decoration: $link-hover-decoration !default;
+$theme-breadcrumbs-transform:             uppercase !default;
+
 // Icons
 $theme-icon-height: 1rem !default;
 $theme-icon-width:  1rem !default;
@@ -198,6 +218,7 @@ $theme-ad-sticky-leaderboard-close-position:    .25rem !default;
 $theme-ad-sticky-leaderboard-close-size:        1.25rem !default;
 
 @import "theme/ads";
+@import "theme/breadcrumbs";
 @import "theme/content";
 @import "theme/icons";
 @import "theme/item";
