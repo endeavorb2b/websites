@@ -1,9 +1,9 @@
 const { Router } = require('express');
 const { json } = require('body-parser');
+const jsonErrorHandler = require('@endeavorb2b/base-website-routing-utils/json-error-handler');
 const authenticate = require('./authenticate');
 const login = require('./login');
 const logout = require('./logout');
-const jsonErrorHandler = require('../json-error-handler');
 
 const router = Router();
 
