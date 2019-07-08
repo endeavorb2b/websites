@@ -56,6 +56,7 @@ $theme-item-link-hover-decoration:             $link-hover-decoration !default;
 $theme-item-contents-padding:                  .25rem !default;
 
 $theme-item-header-color:                      $gray-600 !default;
+$theme-item-header-font-weight:                $font-weight-normal !default;
 $theme-item-header-link-color:                 $theme-item-header-color !default;
 $theme-item-header-link-decoration:            $theme-item-link-decoration !default;
 $theme-item-header-link-hover-color:           $theme-item-header-link-color !default;
@@ -80,6 +81,7 @@ $theme-item-description-link-hover-color:      $theme-item-description-link-colo
 $theme-item-description-link-hover-decoration: none !default;
 
 $theme-item-footer-color:                      $gray-600 !default;
+$theme-item-footer-font-weight:                $font-weight-normal !default;
 $theme-item-footer-link-color:                 $link-color !default;
 $theme-item-footer-link-decoration:            $theme-item-link-decoration !default;
 $theme-item-footer-link-hover-color:           $link-hover-color !default;

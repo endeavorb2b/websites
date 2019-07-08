@@ -22,6 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: $theme-item-header-margin;
+    font-weight: $theme-item-header-font-weight;
     color: $theme-item-header-color;
     letter-spacing: $theme-item-header-letter-spacing;
     a {
@@ -112,6 +113,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
+    font-weight: $theme-item-footer-font-weight;
     color: $theme-item-footer-color;
     &:empty {
       display: none;
