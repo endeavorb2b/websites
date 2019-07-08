@@ -6,8 +6,8 @@
 }
 
 @mixin theme-card-header() {
+  font-family: $theme-card-header-font-family;
   color: $theme-card-header-color;
-  // font-family: $theme-content-sans-serif-font;
   text-transform: $theme-card-header-text-transform;
   letter-spacing: $theme-card-header-letter-spacing;
   background-color: $theme-card-header-background-color;
@@ -20,6 +20,27 @@
   &:hover {
     color: $theme-card-header-link-hover-color;
     text-decoration: $theme-card-header-link-hover-decoration;
+  }
+}
+
+@mixin theme-max-lines($line-height, $line-height-sm, $num: 2, $text-overflow: ellipsis) {
+  display: block;
+  max-height: $line-height * $num;
+  overflow: hidden;
+  text-overflow: $text-overflow;
+  @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
+    max-height: $line-height-sm * $num;
+  }
+}
+
+@mixin theme-text-description() {
+  font-family: $theme-font-family-serif;
+  font-size: $theme-text-description-font-size;
+  font-style: $theme-text-description-font-style;
+  line-height: $theme-text-description-line-height;
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+    font-size: $theme-text-description-font-size-sm;
+    line-height: $theme-text-description-line-height-sm;
   }
 }
 

@@ -31,6 +31,19 @@ $spacers: (
 $theme-box-shadow-sm:   0 1px 7px rgba(0, 0, 0, .05) !default;
 $theme-box-shadow-lg:   0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
 
+// Responsive Text
+$theme-responsive-max-lines:                  2 !default;
+$theme-responsive-text-breakpoint:            sm !default;
+$theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
+
+// Text (used by mixins)
+$theme-text-description-font-family:      $theme-font-family-serif !default;
+$theme-text-description-font-size:        17px !default;
+$theme-text-description-font-size-sm:     16px !default;
+$theme-text-description-font-style:       normal !default;
+$theme-text-description-line-height:      25px !default;
+$theme-text-description-line-height-sm:   23px !default;
+
 // Cards
 $theme-card-background-color:             $white !default;
 $theme-card-border:                       none !default;
@@ -42,6 +55,7 @@ $theme-card-header-background-color:      $primary !default;
 $theme-card-header-border-color:          $black !default;
 $theme-card-header-border-size:           1px !default;
 $theme-card-header-border:                $theme-card-header-border-size solid $theme-card-header-border-color !default;
+$theme-card-header-font-family:           $theme-font-family-sans-serif !default;
 $theme-card-header-letter-spacing:        normal !default;
 $theme-card-header-link-color:            $theme-card-header-color !default;
 $theme-card-header-link-decoration:       $link-decoration !default;
@@ -87,6 +101,7 @@ $theme-item-description-link-color:            $theme-item-description-color !de
 $theme-item-description-link-decoration:       $theme-item-link-decoration !default;
 $theme-item-description-link-hover-color:      $theme-item-description-link-color !default;
 $theme-item-description-link-hover-decoration: none !default;
+$theme-item-description-max-lines:             $theme-responsive-max-lines !default;
 
 $theme-item-footer-color:                      $gray-600 !default;
 $theme-item-footer-font-weight:                $font-weight-normal !default;
