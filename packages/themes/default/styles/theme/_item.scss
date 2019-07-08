@@ -17,7 +17,7 @@
   }
 
   &__header {
-    // @include theme-small-text();
+    @include theme-text-small();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -105,7 +105,7 @@
   }
 
   &__footer {
-    // @include theme-small-text();
+    @include theme-text-small();
     @include media-breakpoint-up(md) {
       flex-direction: row;
     }
