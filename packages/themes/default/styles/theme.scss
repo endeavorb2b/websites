@@ -275,6 +275,9 @@ $theme-breadcrumbs-transform:             uppercase !default;
 $theme-icon-height: 1rem !default;
 $theme-icon-width:  1rem !default;
 
+// Lazyload Images
+$theme-lazyloaded-tranisition: opacity 250ms;
+
 // Ads
 $theme-ad-box-shadow:                           0 .125rem .25rem rgba($black, .075) !default;
 $theme-ad-margin:                               map-get($spacers, block) !default;
@@ -300,6 +303,7 @@ $theme-ad-sticky-leaderboard-close-size:        1.25rem !default;
 @import "theme/icons";
 @import "theme/item";
 @import "theme/item-list";
+@import "theme/lazyload";
 @import "theme/page";
 
 html {
