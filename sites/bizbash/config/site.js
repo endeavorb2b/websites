@@ -4,15 +4,15 @@ module.exports = {
   ads,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
       ],
     },
   },
@@ -69,8 +69,7 @@ module.exports = {
   subscriptions: {
     newsletters: 'https://www.bizbash.com/subscribe/email',
     publications: {
-      '/subscribe/print/let': 'https://cygnus.omeda.com/cgi-win/let.cgi?login',
-      '/subscribe/print/lepn': 'https://cygnus.omeda.com/cgi-win/lepn.cgi?login',
+      '/subscribe/print/bzb': 'https://www.b2bmediaportal.com/biz/bizsub.aspx'
     },
   },
   magazines: {
@@ -79,7 +78,7 @@ module.exports = {
   contactUs: {
     branding: {
       bgColor: '#005ea0',
-      logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png',
+      logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
     },
   },
 };
