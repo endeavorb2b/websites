@@ -86,7 +86,7 @@
   }
 
   &__description {
-    // @include theme-description-text();
+    @include theme-text-description();
     margin-bottom: $theme-item-description-margin;
     color: $theme-item-description-color;
     &:empty {
@@ -94,7 +94,7 @@
     }
 
     a {
-      // @include theme-max-lines($line-height: 25px, $line-height-sm: 23px);
+      @include theme-max-lines($line-height: $theme-text-description-line-height, $line-height-sm: $theme-text-description-line-height-sm, $num: $theme-item-description-max-lines);
       color: $theme-item-description-link-color;
       text-decoration: $theme-item-description-link-decoration;
       &:hover {
