@@ -16,9 +16,10 @@
 
 @mixin theme-card-header-link() {
   color: $theme-card-header-link-color;
-  text-decoration: $theme-card-header-link-text-decoration;
+  text-decoration: $theme-card-header-link-decoration;
   &:hover {
     color: $theme-card-header-link-hover-color;
+    text-decoration: $theme-card-header-link-hover-decoration;
   }
 }
 

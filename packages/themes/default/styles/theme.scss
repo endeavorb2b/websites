@@ -36,8 +36,9 @@ $theme-card-header-border-size:           1px !default;
 $theme-card-header-border:                $theme-card-header-border-size solid $theme-card-header-border-color !default;
 $theme-card-header-letter-spacing:        normal !default;
 $theme-card-header-link-color:            $theme-card-header-color !default;
+$theme-card-header-link-decoration:       $link-decoration !default;
 $theme-card-header-link-hover-color:      $theme-card-header-link-color !default;
-$theme-card-header-link-text-decoration:  none !default;
+$theme-card-header-link-hover-decoration: $link-hover-decoration !default;
 $theme-card-header-text-transform:        uppercase !default;
 
 
