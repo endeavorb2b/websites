@@ -44,6 +44,12 @@
   }
 }
 
+@mixin theme-text-small() {
+  font-family: $theme-text-small-font-family;
+  font-size: $theme-text-small-font-size;
+  line-height: $theme-text-small-line-height;
+}
+
 @mixin theme-navbar-type($type) {
   @if $type == dark {
     @extend .navbar-dark;
