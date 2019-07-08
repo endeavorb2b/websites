@@ -144,8 +144,6 @@
 
   &__asset-image {
     @include border-radius($theme-item-image-border-radius);
-    // max-width: 100%; // @todo fix this for ie
-    // height: auto; // @todo fix this for ie
   }
 
   &__image-placeholder {
