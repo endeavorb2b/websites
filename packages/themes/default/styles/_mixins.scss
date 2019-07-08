@@ -23,6 +23,89 @@
   }
 }
 
+@mixin theme-content-body() {
+  @include theme-text-page-body();
+  h1 {
+    @include theme-content-heading(h1);
+  }
+  h2 {
+    @include theme-content-heading(h2);
+  }
+  h3 {
+    @include theme-content-heading(h3);
+  }
+  h4 {
+    @include theme-content-heading(h4);
+  }
+  h5 {
+    @include theme-content-heading(h5);
+  }
+  h6 {
+    @include theme-content-heading(h6);
+  }
+  strong,
+  b {
+    font-weight: $theme-content-paragraph-strong-font-weight;
+  }
+  [data-embed-type="image"] img {
+    @include border-radius($theme-content-paragraph-image-border-radius);
+    @include box-shadow($theme-content-paragraph-image-box-shadow);
+  }
+  p,
+  ul,
+  table,
+  [data-oembed-type="video"],
+  [data-embed-type="image"],
+  ol {
+    @include theme-content-body-paragraph();
+  }
+}
+
+@mixin theme-content-body-paragraph() {
+  margin-bottom: $theme-content-paragraph-margin-bottom;
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+    margin-bottom: $theme-content-paragraph-margin-bottom-sm;
+  }
+  &:empty {
+    display: none;
+  }
+}
+
+@mixin theme-content-heading($size) {
+  @include theme-heading($size);
+  @if $size == h1 {
+    margin-bottom: $theme-content-heading-h1-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h1-margin-bottom-sm;
+    }
+  } @else if $size == h2 {
+    margin-bottom: $theme-content-heading-h2-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h2-margin-bottom-sm;
+    }
+  } @else if $size == h3 {
+    margin-bottom: $theme-content-heading-h3-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h3-margin-bottom-sm;
+    }
+  } @else if $size == h4 {
+    margin-bottom: $theme-content-heading-h4-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
+    }
+  } @else if $size == h5 {
+    margin-bottom: $theme-content-heading-h5-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h5-margin-bottom-sm;
+    }
+  } @else {
+    margin-bottom: $theme-content-heading-h6-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h6-margin-bottom-sm;
+    }
+  }
+}
+
 @mixin theme-embed-responsive($ratio-x, $ratio-y) {
   position: relative;
   display: block;
@@ -127,7 +210,7 @@
   padding-right: $theme-page-body-padding;
   padding-left: $theme-page-body-padding;
   margin-bottom: $theme-page-body-margin-bottom;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
     padding-right: $theme-page-body-padding-sm;
     padding-left: $theme-page-body-padding-sm;
     margin-bottom: $theme-page-body-margin-bottom-sm;
@@ -136,7 +219,7 @@
 
 @mixin theme-page-header-spacing() {
   padding: $theme-page-header-padding;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
     padding-top: $theme-page-header-padding-sm;
     padding-right: $theme-page-header-padding-sm;
     padding-left: $theme-page-header-padding-sm;
@@ -151,6 +234,18 @@
   @include media-breakpoint-down($theme-responsive-text-breakpoint) {
     font-size: $theme-text-description-font-size-sm;
     line-height: $theme-text-description-line-height-sm;
+  }
+}
+
+@mixin theme-text-page-body() {
+  font-family: $theme-text-page-body-font-family;
+  font-size: $theme-text-page-body-font-size;
+  font-weight: $theme-text-page-body-font-weight;
+  line-height: $theme-text-page-body-line-height;
+  color: $theme-text-page-body-font-color;
+  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+    font-size: $theme-text-page-body-font-size-sm;
+    line-height: $theme-text-page-body-line-height-sm;
   }
 }
 

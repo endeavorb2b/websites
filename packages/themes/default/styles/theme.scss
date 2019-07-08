@@ -47,6 +47,14 @@ $theme-text-description-font-style:           normal !default;
 $theme-text-description-line-height:          25px !default;
 $theme-text-description-line-height-sm:       23px !default;
 
+$theme-text-page-body-font-color:             $black !default;
+$theme-text-page-body-font-family:            $theme-font-family-serif !default;
+$theme-text-page-body-font-size:              19px !default;
+$theme-text-page-body-font-size-sm:           17px !default;
+$theme-text-page-body-font-weight:            $font-weight-normal !default;
+$theme-text-page-body-line-height:            33px !default;
+$theme-text-page-body-line-height-sm:         27px !default;
+
 $theme-text-page-deck-font-color:             $gray-600 !default;
 $theme-text-page-deck-font-family:            $theme-font-family-sans-serif !default;
 $theme-text-page-deck-font-size:              24px !default;
@@ -118,6 +126,35 @@ $theme-heading-list-font-size:        17px !default;
 $theme-heading-list-font-size-sm:     16px !default;
 $theme-heading-list-line-height:      22px !default;
 $theme-heading-list-line-height-sm:   20px !default;
+
+// Content Headings
+$theme-content-heading-large-margin-bottom:     53px !default;
+$theme-content-heading-large-margin-bottom-sm:  48px !default;
+
+$theme-content-heading-h1-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
+$theme-content-heading-h1-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
+
+$theme-content-heading-h2-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
+$theme-content-heading-h2-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
+
+$theme-content-heading-h3-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
+$theme-content-heading-h3-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
+
+$theme-content-heading-h4-margin-bottom:        39px !default;
+$theme-content-heading-h4-margin-bottom-sm:     31px !default;
+
+$theme-content-heading-h5-margin-bottom:        25px !default;
+$theme-content-heading-h5-margin-bottom-sm:     17px !default;
+
+$theme-content-heading-h6-margin-bottom:        11px !default;
+$theme-content-heading-h6-margin-bottom-sm:     $theme-content-heading-h6-margin-bottom !default;
+
+// Content Paragraphs
+$theme-content-paragraph-margin-bottom:         29px !default;
+$theme-content-paragraph-margin-bottom-sm:      21px !default;
+$theme-content-paragraph-strong-font-weight:    700 !default;
+$theme-content-paragraph-image-border-radius:   $border-radius !default;
+$theme-content-paragraph-image-box-shadow:      $theme-box-shadow-lg !default;
 
 // Cards
 $theme-card-background-color:             $white !default;

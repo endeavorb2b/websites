@@ -28,8 +28,12 @@
     @include theme-text-page-description();
   }
 
+  &__content {
+    @include theme-content-body();
+  }
+
   &__contents {
-    // @include content-body();
+    @include theme-content-body();
     @include theme-page-body-spacing();
   }
 
