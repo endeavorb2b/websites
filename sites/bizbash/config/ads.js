@@ -12,13 +12,22 @@ const MR = {
 const HP = {
   size: [300, 600],
 };
+const LB = {};
+
+const RESKIN = {};
+const WA = {};
 
 const path = unit => `/21802476813/bizbash.com/${unit}`;
 
 module.exports = {
   default: {
     BS: { ...BS, path: path('bb_bs') },
-    MR: { ...MR, path: path('bb_mr') },
     HP: { ...HP, path: path('bb_hp') },
+    LB: { ...LB, path: path('bb_lb') },
+    MR: { ...MR, path: path('bb_mr') },
+    // ML: { ...ML, path: path('bb_ml') },
+    SL: { ...BS, path: path('bb_bl') },
+    WA: { ...WA, path: path('bb_wa') },
+    RESKIN: { ...RESKIN, path: path('bb_reskin') },
   },
 };
