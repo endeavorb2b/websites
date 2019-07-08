@@ -1,7 +1,15 @@
 // Override variables here.
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,600|Cardo|Lora:400,400i,700,700i");
 
 $black:     rgba(0, 0, 0, .84) !default;
 $gray-600:  rgba(0, 0, 0, .54) !default;
+
+$font-weight-bold:      600 !default;
+$headings-font-weight:  $font-weight-bold !default;
+
+$theme-font-family-sans-serif: "Fira Sans", "Roboto", "Arial", sans-serif !default;
+$theme-font-family-serif: "Lora", "Georgia", "Cambria", "Times New Roman", "Times", serif !default;
+$theme-font-family-page-title: "Cardo", "Georgia", "Cambria", "Times New Roman", "Times", serif !default;
 
 $theme-card-header-letter-spacing: 1px !default;
 
