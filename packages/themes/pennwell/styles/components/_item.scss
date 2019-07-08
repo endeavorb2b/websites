@@ -103,12 +103,15 @@
   &__footer {
     @include theme-small-text();
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
     color: $gray;
     &:empty {
       display: none;
+    }
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
     }
   }
 
@@ -128,8 +131,6 @@
   }
 
   &__asset-image {
-    max-width: 100%;
-    height: auto;
     border-radius: $border-radius;
   }
 
@@ -321,4 +322,10 @@
     }
   }
 
+  // Video
+  &__video {
+    iframe {
+      max-width: 100%;
+    }
+  }
 }

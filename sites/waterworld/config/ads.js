@@ -158,6 +158,13 @@ module.exports = {
     rail2: { ...CONTENT, path: path('industrial/process-water/rail2') },
     'load-more': { ...CONTENT, path: path('industrial/process-water/load-more') },
   },
+  'industrial/water-reuse': {
+    lb1: { ...LB, path: path('industrial/water-reuse/lb1') },
+    lb2: { ...LB, path: path('industrial/water-reuse/lb2') },
+    rail1: { ...CONTENT, path: path('industrial/water-reuse/rail1') },
+    rail2: { ...CONTENT, path: path('industrial/water-reuse/rail2') },
+    'load-more': { ...CONTENT, path: path('industrial/water-reuse/load-more') },
+  },
   international: {
     lb1: { ...LB, path: path('international/lb1') },
     lb2: { ...LB, path: path('international/lb2') },

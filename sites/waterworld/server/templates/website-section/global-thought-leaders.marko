@@ -64,8 +64,7 @@ $ const aliases = hierarchyAliases(section);
                     />
                     <@header-left>Watch ${get(content, "company.name")}'s Video</@header-left>
                     <@description tag="div">
-                      <!-- @todo Bring in primary-video styling for item? -->
-                      <div class="content-page-body__primary-video">
+                      <div class="item__video">
                         $!{content.embedCode}
                       </div>
                     </@description>
