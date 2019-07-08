@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Disallow: /load-more
+
+Sitemap: https://www.offshore-mag.com/sitemap.xml
+Sitemap: https://www.offshore-mag.com/sitemap-google-news.xml
