@@ -1,1 +1,1 @@
-# Offshore Magazine Website
+# Bizbash Magazine Website
