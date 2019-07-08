@@ -116,6 +116,15 @@
     &:empty {
       display: none;
     }
+
+    a {
+      color: $theme-item-footer-link-color;
+      text-decoration: $theme-item-footer-link-text-decoration;
+      &:hover {
+        color: $theme-item-footer-link-hover-color;
+        text-decoration: $theme-item-footer-link-hover-text-decoration;
+      }
+    }
   }
 
   &__footer-left {
