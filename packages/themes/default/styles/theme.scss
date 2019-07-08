@@ -48,6 +48,50 @@ $theme-text-small-font-family:            $theme-font-family-sans-serif !default
 $theme-text-small-font-size:              14px !default;
 $theme-text-small-line-height:            20px !default;
 
+// Headings (used by mixins)
+$theme-heading-font-family:           $theme-font-family-sans-serif !default;
+$theme-heading-font-weight:           $headings-font-weight !default;
+
+$theme-heading-large-font-size:       34px !default;
+$theme-heading-large-font-size-sm:    30px !default;
+$theme-heading-large-line-height:     40px !default;
+$theme-heading-large-line-height-sm:  36px !default;
+
+$theme-heading-small-font-size:       19px !default;
+$theme-heading-small-font-size-sm:    17px !default;
+$theme-heading-small-line-height:     24px !default;
+$theme-heading-small-line-height-sm:  20px !default;
+
+$theme-heading-h1-font-size:          $theme-heading-large-font-size !default;
+$theme-heading-h1-font-size-sm:       $theme-heading-large-font-size-sm !default;
+$theme-heading-h1-line-height:        $theme-heading-large-line-height !default;
+$theme-heading-h1-line-height-sm:     $theme-heading-large-line-height-sm !default;
+
+$theme-heading-h2-font-size:          $theme-heading-large-font-size !default;
+$theme-heading-h2-font-size-sm:       $theme-heading-large-font-size-sm !default;
+$theme-heading-h2-line-height:        $theme-heading-large-line-height !default;
+$theme-heading-h2-line-height-sm:     $theme-heading-large-line-height-sm !default;
+
+$theme-heading-h3-font-size:          $theme-heading-large-font-size !default;
+$theme-heading-h3-font-size-sm:       $theme-heading-large-font-size-sm !default;
+$theme-heading-h3-line-height:        $theme-heading-large-line-height !default;
+$theme-heading-h3-line-height-sm:     $theme-heading-large-line-height-sm !default;
+
+$theme-heading-h4-font-size:          26px !default;
+$theme-heading-h4-font-size-sm:       22px !default;
+$theme-heading-h4-line-height:        32px !default;
+$theme-heading-h4-line-height-sm:     28px !default;
+
+$theme-heading-h5-font-size:          24px !default;
+$theme-heading-h5-font-size-sm:       20px !default;
+$theme-heading-h5-line-height:        30px !default;
+$theme-heading-h5-line-height-sm:     26px !default;
+
+$theme-heading-list-font-size:        17px !default;
+$theme-heading-list-font-size-sm:     16px !default;
+$theme-heading-list-line-height:      22px !default;
+$theme-heading-list-line-height-sm:   20px !default;
+
 // Cards
 $theme-card-background-color:             $white !default;
 $theme-card-border:                       none !default;
@@ -97,6 +141,10 @@ $theme-item-title-link-decoration:             $theme-item-link-decoration !defa
 $theme-item-title-link-hover-color:            $theme-item-title-link-color !default;
 $theme-item-title-link-hover-decoration:       $theme-item-link-hover-decoration !default;
 $theme-item-title-margin:                      $theme-item-element-margin !default;
+$theme-item-title-max-lines:                   3 !default;
+
+$theme-item-title-large-max-lines:             $theme-responsive-max-lines !default;
+
 $theme-item-title-locked-content:              "\1F512" !default;
 
 $theme-item-description-margin:                $theme-item-element-margin !default;
