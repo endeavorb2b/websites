@@ -60,10 +60,10 @@
     }
   }
 
-  // &__body,
-  // &__footer {
-  //   @include theme-description-text();
-  // }
+  &__body,
+  &__footer {
+    @include theme-text-description();
+  }
 
   &__footer {
     margin-top: auto;
