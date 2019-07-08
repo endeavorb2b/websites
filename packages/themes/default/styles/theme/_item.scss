@@ -26,10 +26,10 @@
     letter-spacing: $theme-item-header-letter-spacing;
     a {
       color: $theme-item-header-link-color;
-      text-decoration: $theme-item-header-link-text-decoration;
+      text-decoration: $theme-item-header-link-decoration;
       &:hover {
         color: $theme-item-header-link-hover-color;
-        text-decoration: $theme-item-header-link-hover-text-decoration;
+        text-decoration: $theme-item-header-link-hover-decoration;
       }
     }
     &:empty {
@@ -61,10 +61,10 @@
     a {
       // @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
       color: $theme-item-title-link-color;
-      text-decoration: $theme-item-title-link-text-decoration;
+      text-decoration: $theme-item-title-link-decoration;
       &:hover {
         color: $theme-item-title-link-hover-color;
-        text-decoration: $theme-item-title-link-hover-text-decoration;
+        text-decoration: $theme-item-title-link-hover-decoration;
       }
     }
 
@@ -95,10 +95,10 @@
     a {
       // @include theme-max-lines($line-height: 25px, $line-height-sm: 23px);
       color: $theme-item-description-link-color;
-      text-decoration: $theme-item-description-link-text-decoration;
+      text-decoration: $theme-item-description-link-decoration;
       &:hover {
         color: $theme-item-description-link-hover-color;
-        text-decoration: $theme-item-description-link-hover-text-decoration;
+        text-decoration: $theme-item-description-link-hover-decoration;
       }
     }
   }
@@ -119,10 +119,10 @@
 
     a {
       color: $theme-item-footer-link-color;
-      text-decoration: $theme-item-footer-link-text-decoration;
+      text-decoration: $theme-item-footer-link-decoration;
       &:hover {
         color: $theme-item-footer-link-hover-color;
-        text-decoration: $theme-item-footer-link-hover-text-decoration;
+        text-decoration: $theme-item-footer-link-hover-decoration;
       }
     }
   }
