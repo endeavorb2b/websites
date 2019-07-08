@@ -17,6 +17,7 @@ $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(
   <div class="page-wrapper__body">
     <endeavor-content-block-primary-media content=content display-primary-image=input.displayPrimaryImage />
     <endeavor-content-block-contact-details content=content />
+    <endeavor-content-block-inquiry-button content=content />
     <if(!canAccess)>
       <if(isLoggedIn && !hasRequiredAccessLevel)>
         $!{messages.loggedInNoAccess}
