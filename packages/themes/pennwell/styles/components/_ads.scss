@@ -64,6 +64,40 @@
 }
 
 .sticky-leaderboard {
+  position: fixed;
+  right: $grid-gutter-width / 4;
+  bottom: 0;
+  left: $grid-gutter-width / 4;
+  z-index: 100000;
+  padding: map-get($spacers, 2);
+  text-align: center;
+  visibility: hidden;
+  background-color: transparent;
+  border-radius: $border-radius;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: $theme-box-shadow-lg;
+  opacity: 0;
+  transition: visibility linear 250ms, opacity ease 250ms;
+
+  @include media-breakpoint-up("xl", $grid-breakpoints) {
+    $width: map-get($grid-breakpoints, "xl");
+    right: inherit;
+    left: calc(50% - #{$width / 2});
+    width: $width;
+  }
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  &--visible ~ .site-footer > .site-footer {
+    &__container {
+      &:last-child {
+        padding-bottom: 130px;
+      }
+    }
+  }
+
   &__background {
     position: absolute;
     top: 0;
@@ -77,41 +111,7 @@
     border-bottom-left-radius: 0;
     box-shadow: $theme-box-shadow-lg;
   }
-  &__container {
-    position: fixed;
-    right: $grid-gutter-width / 4;
-    bottom: 0;
-    left: $grid-gutter-width / 4;
-    z-index: 100000;
-    padding: map-get($spacers, 2);
-    text-align: center;
-    visibility: hidden;
-    background-color: transparent;
-    border-radius: $border-radius;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    box-shadow: $theme-box-shadow-lg;
-    opacity: 0;
-    transition: visibility linear 250ms, opacity ease 250ms;
 
-    @include media-breakpoint-up("xl", $grid-breakpoints) {
-      $width: map-get($grid-breakpoints, "xl");
-      right: inherit;
-      left: calc(50% - #{$width / 2});
-      width: $width;
-    }
-    &--visible {
-      visibility: visible;
-      opacity: 1;
-    }
-    &--visible ~ .site-footer > .site-footer {
-      &__container {
-        &:last-child {
-          padding-bottom: 130px;
-        }
-      }
-    }
-  }
   &__close {
     position: absolute;
     top: .15rem;
