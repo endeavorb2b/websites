@@ -52,7 +52,7 @@
   }
 
   &__title {
-    // @include theme-heading(list);
+    @include theme-heading(list);
     margin-bottom: $theme-item-title-margin;
     color: $theme-item-title-color;
     &:empty {
@@ -60,7 +60,7 @@
     }
 
     a {
-      // @include theme-max-lines($line-height: 22px, $line-height-sm: 20px, $num: 3);
+      @include theme-max-lines($line-height: $theme-heading-list-line-height, $line-height-sm: $theme-heading-list-line-height-sm, $num: $theme-item-title-max-lines);
       color: $theme-item-title-link-color;
       text-decoration: $theme-item-title-link-decoration;
       &:hover {
@@ -70,12 +70,10 @@
     }
 
     &--large {
-      // @include theme-heading(h5);
-
-      // a {
-      //   // @include theme-max-lines($line-height: 30px, $line-height-sm: 26px);
-      //   color: $black;
-      // }
+      @include theme-heading(h5);
+      a {
+        @include theme-max-lines($line-height: $theme-heading-h5-line-height, $line-height-sm: $theme-heading-h5-line-height-sm, $num: $theme-item-title-large-max-lines);
+      }
     }
 
     &--locked {
