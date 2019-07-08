@@ -20,6 +20,10 @@
     @include theme-text-page-title();
   }
 
+  &__deck {
+    @include theme-text-page-deck();
+  }
+
   &__contents {
     // @include content-body();
     @include theme-page-body-spacing();
