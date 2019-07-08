@@ -69,7 +69,7 @@ module.exports = {
   subscriptions: {
     newsletters: 'https://www.bizbash.com/subscribe/email',
     publications: {
-      '/subscribe/print/bzb': 'https://www.b2bmediaportal.com/biz/bizsub.aspx'
+      '/subscribe/print/bzb': 'https://www.b2bmediaportal.com/biz/bizsub.aspx',
     },
   },
   magazines: {
