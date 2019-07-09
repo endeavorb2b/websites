@@ -1,11 +1,14 @@
 <template>
   <button
-    v-on:click="toggle"
-    v-bind:class="blockName"
+    :class="blockName"
     type="button"
     aria-label="Website Navigation Menu"
+    @click="toggle"
   >
-    <icon v-bind:name="iconName" v-bind:modifiers="['site-navbar']" />
+    <icon
+      :name="iconName"
+      :modifiers="['site-navbar']"
+    />
   </button>
 </template>
 
@@ -13,17 +16,18 @@
 import Icon from './icon.vue';
 
 export default {
+  components: {
+    Icon,
+  },
   props: {
     targets: {
       type: Array,
+      default: () => [],
     },
     toggleClass: {
       type: String,
       required: true,
-    }
-  },
-  components: {
-    Icon,
+    },
   },
   data: () => ({
     blockName: 'site-navbar-toggler',
