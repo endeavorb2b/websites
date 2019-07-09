@@ -26,9 +26,6 @@
         "required": true
       }
     },
-    "endeavor-breadcrumbs-contact-us": {
-      "template": "./contact-us.marko"
-    },
     "endeavor-breadcrumbs-search": {
       "template": "./search.marko"
     },
