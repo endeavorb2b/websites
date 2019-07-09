@@ -1,7 +1,8 @@
 const { asyncRoute } = require('@base-cms/utils');
 const sgMail = require('@sendgrid/mail');
+const { content: contentLoader } = require('@base-cms/web-common/page-loaders');
 
-const { error, log } = console;
+const { error } = console;
 
 const { SENDGRID_API_KEY, SENDGRID_BCC } = process.env;
 if (!SENDGRID_API_KEY || SENDGRID_API_KEY === '(unset)') throw new Error('Required env SENDGRID_API_KEY was not set!');
@@ -12,12 +13,6 @@ const exception = (message, code = 400) => {
   const err = new Error(message);
   err.statusCode = code;
   return err;
-};
-
-const loadContent = async (contentId) => {
-  // @todo qyery for ontent
-  log('query!');
-  return { id: contentId };
 };
 
 const send = async ({ template, input, subject }, addresses) => {
@@ -87,7 +82,8 @@ module.exports = ({
 }) => asyncRoute(async (req, res) => {
   try {
     const { locals } = res.app;
-    const content = await loadContent(req.params.id, queryFragment);
+    const { apollo } = req;
+    const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
     await sendNotification(emailTemplate, locals, content, req);
     if (req.body.email) {
       await sendThankYou(submissionTemplate, locals, content, req.body.email);
