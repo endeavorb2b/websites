@@ -136,6 +136,24 @@ Load your custom template when performing [Routing](#routing) configuration.
 ### Custom Inquiry Email
 The notification email marko template can be customized.
 ```marko
+$ const {
+  content,
+  subject,
+  addresses,
+  domain,
+  payload,
+} = input;
+<!doctype html>
+<html>
+  <head>
+    <title>${subject}</title>
+  </head>
+  <body>
+    <pre>${JSON.stringify(content, null, 2)}</pre>
+    <pre>${JSON.stringify(addresses, null, 2)}</pre>
+    <pre>${JSON.stringify(payload, null, 2)}</pre>
+  </body>
+</html>
 ```
 
 Load your custom template when performing [Routing](#routing) configuration.
@@ -143,6 +161,21 @@ Load your custom template when performing [Routing](#routing) configuration.
 ### Custom Inquiry Email Submission
 Similarly, the thank you email marko template can be customized:
 ```marko
+$ const {
+  content,
+  subject,
+  addresses,
+} = input;
+<!doctype html>
+<html>
+  <head>
+    <title>${subject}</title>
+  </head>
+  <body>
+    <pre>${JSON.stringify(content, null, 2)}</pre>
+    <pre>${JSON.stringify(addresses, null, 2)}</pre>
+  </body>
+</html>
 ```
 Load your custom template when performing [Routing](#routing) configuration.
 
@@ -181,15 +214,26 @@ export default Browser;
 Load the core Inquiry handler to the `site/server/routes.js` file, ensuring that Inquiry is loaded before _all_ other routes. Custom templates and/or GraphQL query fragments can be passed to the Inquiry router to utilize them. If these options are not sent, the default templates will be used.
 
 ### RMI Routing
-To utilize the RMI templates, do not pass any options to the Inquiry router's loader.
+To utilize the RMI template(s), you must first copy the Marko template from the package into your sites templates directory. The email templates do not need to be copied, but can be if additional customizations are needed.
 ```js
-const loadInquiry = require('@endeavorb2b/base-website-identity-x/load-from-config');
+// site/server/routes/index.js
+const inquiry = require('./inquiry');
 
 module.exports = (app) => {
-  loadInquiry(app);
+  // Load Inquiry routing
+  inquiry(app);
 
   // ... other routes
 };
+```
+
+```js
+// site/server/routes/inquiry.js
+const loadInquiry = require('@endeavorb2b/base-website-inquiry/load-from-config');
+const template = require('../templates/inquiry');
+
+module.exports = app => loadInquiry(app, { template });
+
 ```
 
 ### Custom Routing
