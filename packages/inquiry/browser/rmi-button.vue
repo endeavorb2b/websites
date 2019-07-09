@@ -16,7 +16,7 @@
     },
     computed: {
       target() {
-        return `/${this.prefix}/${this.contentId}`;
+        return `${this.prefix}/${this.contentId}`;
       },
     },
   };
