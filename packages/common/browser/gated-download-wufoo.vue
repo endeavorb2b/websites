@@ -1,7 +1,20 @@
 <template>
-  <div class="button-wrapper" v-if="canDownload">
-    <p>Your download should start automatically. If not, click the button below to access this document.</p>
-    <a :href="target" class="btn btn-lg btn-primary" target="_blank" rel="noopener noreferer">{{ label }}</a>
+  <div
+    v-if="canDownload"
+    class="button-wrapper"
+  >
+    <p>
+      Your download should start automatically.
+      If not, click the button below to access this document.
+    </p>
+    <a
+      :href="target"
+      class="btn btn-lg btn-primary"
+      target="_blank"
+      rel="noopener noreferer"
+    >
+      {{ label }}
+    </a>
   </div>
   <div v-else>
     <strong>To access this piece of premium content, please fill out the following form:</strong>
@@ -33,9 +46,17 @@ export default {
     height: {
       type: String,
       default: '1000',
-    }
+    },
   },
   data: () => ({ canDownload: false }),
+  computed: {
+    formId() {
+      return `wufoo-${this.formHash}`;
+    },
+    formUrl() {
+      return `https://${this.userName}.wufoo.com/forms/${cleanPath(this.formHash)}`;
+    },
+  },
   async mounted() {
     if (!window.WufooForm) {
       await (new Promise((resolve, reject) => {
@@ -67,17 +88,9 @@ export default {
           }
         },
       };
-      const instance = new WufooForm();
+      const instance = new window.WufooForm();
       instance.initialize(options);
       instance.display();
-    }
-  },
-  computed: {
-    formId: function() {
-      return `wufoo-${this.formHash}`;
-    },
-    formUrl: function() {
-      return `https://${this.userName}.wufoo.com/forms/${cleanPath(this.formHash)}`
     },
   },
 };
