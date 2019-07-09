@@ -40,6 +40,9 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
             <p style="font-family:Arial; font-size:12px;">
               This e-mail is being sent to you because a user submitted an inquiry on ${domain}.
             </p>
+            <p style="font-family:Arial; font-size:12px;">
+              To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.from', 'base@endeavorb2b.com')}.
+            </p>
             <if(isDev)>
               <p style="color: red">This email has not been sent. In production, this would have been sent to:</p>
               <pre>${JSON.stringify(addresses, null, 2)}</pre>
@@ -47,16 +50,16 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
             <hr>
             <table>
               <tbody>
-                <if(company)>
-                  <tr>
-                    <td nowrap><b>Company</b></td>
-                    <td>${company.name}</td>
-                  </tr>
-                </if>
                 <tr>
                   <td nowrap><b>${content.type}</b></td>
                   <td>${content.name}</td>
                 </tr>
+                <if(company.name)>
+                  <tr>
+                    <td nowrap><b>From</b></td>
+                    <td>${company.name}</td>
+                  </tr>
+                </if>
                 <tr>
                   <td nowrap><b>Url</b></td>
                   <td><a href=url>${url}</a></td>
@@ -67,10 +70,10 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
             <hr>
             <table>
               <tbody>
-                <for|key| in="payload">
+                <for|key, value| in=payload>
                   <tr>
                     <td nowrap><b>${key}</b></td>
-                    <td>${payload.key}</td>
+                    <td>${value}</td>
                   </tr>
                 </for>
               </tbody>

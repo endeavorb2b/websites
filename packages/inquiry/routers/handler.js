@@ -24,9 +24,11 @@ const send = async ({ template, input, subject }, addresses) => {
   const isDev = process.env.NODE_ENV === 'development';
   const html = template.renderToString({ ...input, isDev });
   const emails = isDev ? { to: 'developer@endeavorb2b.com' } : addresses;
+  const cfgFrom = input.$global.site.get('inquiry.fromEmail');
+  const cfgName = input.$global.config.get('siteName');
 
   return sgMail.send({
-    from: 'Base CMS <noreply@base-cms.io>',
+    from: cfgFrom && cfgName ? `${cfgName} <${cfgFrom}>` : 'Base CMS <noreply@base-cms.io>',
     ...emails,
     subject,
     html,
@@ -51,7 +53,7 @@ const getSalesAddresses = ({ site, content }) => {
 };
 
 const sendNotification = (template, locals, content, req) => {
-  const { body: payload, hostname } = req;
+  const { body: payload, hostname: domain } = req;
   const { site } = locals;
   const addresses = getSalesAddresses({ site, content });
   const subject = 'A new inquiry submission was received.';
@@ -60,10 +62,9 @@ const sendNotification = (template, locals, content, req) => {
     content,
     subject,
     addresses,
-    hostname,
+    domain,
     payload,
   };
-
   return send({ template, input, subject }, addresses);
 };
 
@@ -76,7 +77,6 @@ const sendThankYou = (template, locals, content, email) => {
     subject,
     addresses,
   };
-
   return send({ template, input, subject }, addresses);
 };
 
