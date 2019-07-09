@@ -720,3 +720,20 @@ services:
     ports:
       - "12189:80"
       - "35189:35189"
+
+  bizbash:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/bizbash
+    environment:
+      <<: *env
+      PORT: 80
+      EXPOSED_PORT: 12190
+      LIVERELOAD_PORT: 35190
+      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+      TENANT_KEY: bizbash_bzb
+    ports:
+      - "12190:80"
+      - "35190:35190"

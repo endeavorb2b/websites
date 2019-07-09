@@ -1,0 +1,67 @@
+import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'BS', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'BS', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'MR', aliases, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'HP', aliases, size: [300, 600] }),
+};
+
+<theme-pennwell-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-query-hero
+    section-id=section.id
+    limit=5
+    native-x={ placement: 'list1', aliases, index: 3 }
+  />
+
+
+  <div class="row">
+    <div class="col-lg-8">
+      <endeavor-content-query-feed
+        header="Featured"
+        limit=7
+        skip=5
+        section-id=section.id
+        native-x={ placement: 'list2', aliases, index: 6 }
+      />
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-content-query-load-more
+      query={
+        skip: 12,
+        sectionId: section.id,
+      }
+      ads={ 
+        aliases,
+        list: { name: "MR" },
+        card: { name: "HP" },
+      }
+      native-x={ placement: 'card', aliases, index: 0 }
+    />
+  </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="BS" refreshable=false aliases=aliases />
+  </@footer>
+</theme-pennwell-website-section-layout>

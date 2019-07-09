@@ -1,0 +1,29 @@
+$primary: #005ea0 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+
+$theme-content-title-font: "Source Sans Pro", "Georgia", "Times New Roman", "Times", serif !default;
+$theme-content-serif-font: "Open Sans", sans-serif !default;
+$theme-content-sans-serif-font: "Open Sans", sans-serif !default;
+
+$theme-box-shadow-sm: none !default;
+$theme-box-shadow-lg: none !default;
+
+$black: #333 !default;
+$white: #fff;
+$gray: rgba(0, 0, 0, .54) !default;
+$body-color: $black !default;
+$body-bg: #fff !default;
+$font-family-sans-serif: $theme-content-sans-serif-font !default;
+$font-weight-bold: 600 !default;
+$border-radius: 0 !default;
+
+$theme-ads-box-shadow: 0 .125rem .25rem rgba($black, .075) !default;
+
+$navbar-dark-color:         $white !default;
+$navbar-dark-hover-color:   $white !default;
+$navbar-light-color:        rgba($black, .75) !default;
+$navbar-light-hover-color:  rgba($black, 1) !default;
