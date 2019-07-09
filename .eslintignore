@@ -2,3 +2,5 @@
 *.marko.js
 # Build assets
 **/dist/
+# Node Modules
+**/node_modules/
