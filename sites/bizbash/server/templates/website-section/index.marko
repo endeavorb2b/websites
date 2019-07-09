@@ -20,29 +20,16 @@ $ const adSlots = {
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
-    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
-    native-x={ placement: 'list1', aliases, index: 3 }
   />
 
-
   <div class="row">
-    <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=7
-        skip=5
-        section-id=section.id
-        native-x={ placement: 'list2', aliases, index: 6 }
-      />
-    </div>
-    <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
-      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    <div class="col-lg-12">
+      <endeavor-gam-ad-unit-display id="gpt-ad-lb1" />
     </div>
   </div>
 
@@ -52,7 +39,7 @@ $ const adSlots = {
         skip: 12,
         sectionId: section.id,
       }
-      ads={ 
+      ads={
         aliases,
         list: { name: "MR" },
         card: { name: "HP" },
