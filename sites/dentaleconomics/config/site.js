@@ -54,7 +54,7 @@ module.exports = {
       { href: '/page/submission-guidelines', label: 'Submission Guidelines' },
       { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
       { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples' },
-      { href: '/editorial-advisory-board', label: 'Editorial Advisory Board' }
+      { href: '/editorial-advisory-board', label: 'Editorial Advisory Board' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
