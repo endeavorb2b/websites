@@ -40,7 +40,7 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
               This e-mail is being sent to you because a user submitted an inquiry on ${domain}.
             </p>
             <p style="font-family:Arial; font-size:12px;">
-              To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.from', 'base@endeavorb2b.com')}.
+              To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.fromEmail', 'base@endeavorb2b.com')}.
             </p>
             <if(isDev)>
               <p style="color: red">This email has not been sent. In production, this would have been sent to:</p>

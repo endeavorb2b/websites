@@ -9,27 +9,14 @@ module.exports = gql`
       id
       name
       canonicalPath
-      salesContacts {
-        edges {
-          node {
-            id
-            name
-            email
-          }
-        }
-      }
     }
     ... on Inquirable {
       enableRmi
       leadsDelivery
-      salesContacts {
-        edges {
-          node {
-            id
-            name
-            email
-          }
-        }
+      inquiryContacts {
+        id
+        name
+        email
       }
     }
   }

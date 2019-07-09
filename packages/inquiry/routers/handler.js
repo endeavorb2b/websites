@@ -35,13 +35,11 @@ const getSalesAddresses = ({ site, content }) => {
     to: [site.getAsObject('inquiry.defaultContact')],
     bcc,
   };
-  if (site.getAsObject('inquiry.directSend') && content.leadsDelivery) {
-    // @todo ensure these pull from the parent `company`-like object, if not present.
-    // @todo this should be provided by the Inquirable graph resolver...
-    const contacts = content.salesContacts;
-    if (contacts && contacts.edges.length) {
+  if (site.getAsObject('inquiry.directSend')) {
+    const contacts = content.inquiryContacts;
+    if (contacts && contacts.length) {
       addresses.cc = [site.getAsObject('inquiry.defaultContact')];
-      addresses.to = contacts.edges.map(({ node: { name, email } }) => ({ name, email }));
+      addresses.to = contacts.map(({ name, email }) => ({ name, email }));
     }
   }
   return addresses;
