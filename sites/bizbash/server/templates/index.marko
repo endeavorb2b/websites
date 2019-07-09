@@ -21,55 +21,68 @@ $ const adSlots = {
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
-    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
   <endeavor-content-query-hero
     section-id=section.id
     limit=5
-    native-x={ placement: 'list1', index: 3 }
   />
 
+  <div class="row">
+    <div class="col-lg-12">
+      <endeavor-gam-ad-unit-display id="gpt-ad-lb1" />
+    </div>
+  </div>
 
   <div class="row">
-    <div class="col-lg-8">
-      <div class="row">
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list
-            limit=3
-            section-alias="production-strategy"
-            header={ title: "Production & Strategy", href: "/production-strategy" }
-          />
-        </div>
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list
-            limit=3
-            section-alias="style-decor"
-            header={ title: "Style & Decor", href: "/style-decor" }
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list
-            limit=3
-            section-alias="catering"
-            header={ title: "Catering", href: "/catering" }
-          />
-        </div>
-      </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="production-strategy"
+        header={ title: "Production & Strategy", href: "/production-strategy" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="style-decor"
+        header={ title: "Style & Decor", href: "/style-decor" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="catering"
+        header={ title: "Catering", href: "/catering" }
+      />
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="bizbash-lists"
+        header={ title: "BizBash Lists", href: "/bizbash-lists" }
+      />
     </div>
     <div class="col-lg-4 ad-rail">
-      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
       <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-magazine-query-latest-issue
+        publication-id="5b2a4e6c0305572b008b45ae"
+        header="In Print"
+        as-card=true
+        content-count=0
+      />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 5,
         sectionId: section.id,
       }
       load-more={
