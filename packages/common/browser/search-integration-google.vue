@@ -1,5 +1,5 @@
 <template>
-  <gcse:search v-pre></gcse:search>
+  <gcse:search v-pre />
 </template>
 
 <script>
