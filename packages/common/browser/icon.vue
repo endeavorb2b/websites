@@ -1,5 +1,10 @@
 <template>
-  <svg v-bind:class="classNames"><use v-bind:href="href" v-bind:xlink:href="href" /></svg>
+  <svg :class="classNames">
+    <use
+      :href="href"
+      :xlink:href="href"
+    />
+  </svg>
 </template>
 
 <script>
