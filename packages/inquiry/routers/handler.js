@@ -20,30 +20,10 @@ const loadContent = async (contentId) => {
   return { id: contentId };
 };
 
-const send = async ({
-  locals,
-  hostname,
-  content,
-  addresses,
-  payload,
-  template,
-  subject,
-} = {
-  subject: 'A new inquiry submission was received.',
-}) => {
+const send = async ({ template, input, subject }, addresses) => {
   const isDev = process.env.NODE_ENV === 'development';
-  if (isDev) log({ ...payload, addresses });
-  const input = {
-    $global: locals,
-    hostname,
-    content,
-    subject,
-    payload,
-    addresses,
-    isDev,
-  };
-  const html = template.renderToString(input);
-  const emails = isDev ? { to: 'jworden@endeavorb2b.com' } : addresses;
+  const html = template.renderToString({ ...input, isDev });
+  const emails = isDev ? { to: 'developer@endeavorb2b.com' } : addresses;
 
   return sgMail.send({
     from: 'Base CMS <noreply@base-cms.io>',
@@ -74,26 +54,31 @@ const sendNotification = (template, locals, content, req) => {
   const { body: payload, hostname } = req;
   const { site } = locals;
   const addresses = getSalesAddresses({ site, content });
-
-  return send({
-    addresses,
+  const subject = 'A new inquiry submission was received.';
+  const input = {
+    $global: locals,
     content,
+    subject,
+    addresses,
     hostname,
-    locals,
-    payload: { ...payload, addresses },
-    subject: 'A new inquiry submission was received.',
-    template,
-  });
+    payload,
+  };
+
+  return send({ template, input, subject }, addresses);
 };
 
-const sendThankYou = (template, locals, content, email) => send({
-  addresses: { to: email, bcc },
-  content,
-  locals,
-  subject: 'Your inquiry was received',
-  template,
-});
+const sendThankYou = (template, locals, content, email) => {
+  const addresses = { to: email, bcc };
+  const subject = 'Your inquiry was received.';
+  const input = {
+    $global: locals,
+    content,
+    subject,
+    addresses,
+  };
 
+  return send({ template, input, subject }, addresses);
+};
 
 module.exports = ({
   emailTemplate,
@@ -107,6 +92,7 @@ module.exports = ({
     if (req.body.email) {
       await sendThankYou(submissionTemplate, locals, content, req.body.email);
     }
+    res.json({ ok: true });
   } catch (e) {
     error(e);
     throw exception(e);
