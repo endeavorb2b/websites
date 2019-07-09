@@ -2,15 +2,15 @@
   <form-group>
     <label :for="id">{{ label }}</label>
     <input
-      v-model="givenName"
       :id="id"
+      v-model="givenName"
       class="form-control"
       type="text"
       :required="true"
       :disabled="disabled"
       :placeholder="placeholder"
       autocomplete="given-name"
-    />
+    >
   </form-group>
 </template>
 
@@ -30,8 +30,14 @@ export default {
       type: String,
       default: 'First Name',
     },
-    placeholder: String,
-    value: String,
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    value: {
+      type: String,
+      default: '',
+    },
   },
   data: () => ({
     id: 'sign-on-given-name',
