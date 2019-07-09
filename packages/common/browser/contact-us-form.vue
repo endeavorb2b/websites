@@ -149,6 +149,7 @@ export default {
     },
     async onVerify(token) {
       this.loading = true;
+      this.error = null;
       if (token) {
         // eslint-disable-next-line no-underscore-dangle
         const payload = { ...this._data, token };
@@ -164,7 +165,7 @@ export default {
             throw new Error(res.statusText);
           }
         } catch (e) {
-          this.error = e;
+          this.error = e.message;
         } finally {
           this.loading = false;
         }
