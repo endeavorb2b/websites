@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js --max-warnings 5 --ignore-path ../../.eslintignore ./",
-    "test": "yarn run lint"
+    "test": "yarn lint"
   },
   "dependencies": {
     "@base-cms/env": "^0.9.25",

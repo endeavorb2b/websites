@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
-    "test": "yarn run lint"
+    "test": "yarn lint"
   },
   "dependencies": {
     "@base-cms/image": "^0.9.22",
@@ -24,8 +24,6 @@
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "stylelint": "^9.10.1",
-    "stylelint-config-twbs-bootstrap": "^0.3.0"
+    "eslint-plugin-vue": "^5.2.3"
   }
 }

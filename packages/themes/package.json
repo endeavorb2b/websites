@@ -3,8 +3,10 @@
   "version": "0.11.4",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
-    "test": "yarn run lint"
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:js": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
+    "lint:css": "stylelint ./**/*.scss --max-warnings 5",
+    "test": "yarn lint"
   },
   "dependencies": {
     "@base-cms/marko-web": "^0.9.36",
@@ -14,6 +16,9 @@
     "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.3.0"
   }
