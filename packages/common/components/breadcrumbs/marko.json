@@ -29,6 +29,9 @@
     "endeavor-breadcrumbs-contact-us": {
       "template": "./contact-us.marko"
     },
+    "endeavor-breadcrumbs-editorial-advisory-board": {
+      "template": "./editorial-advisory-board.marko"
+    },
     "endeavor-breadcrumbs-search": {
       "template": "./search.marko"
     },
