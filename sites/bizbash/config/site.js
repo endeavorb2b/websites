@@ -26,14 +26,14 @@ module.exports = {
     { href: '/production-strategy', label: 'Production & Strategy' },
     { href: '/style-decor', label: 'Style & Decor' },
     { href: '/catering', label: 'Catering' },
-    { href: '/bizbash-list', label: 'Bizbash List' },
+    { href: '/bizbash-lists', label: 'Bizbash Lists' },
   ],
   secondaryNavItems: [
     { href: '/gathergeeks', label: 'GatherGeeks' },
-    { href: '/bizbash-events', label: 'Our Events & Awards' },
+    { href: '#', label: 'Our Events & Awards' },
     { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-    { href: '/venue-directory', label: 'Find A Venue' },
-    { href: '/supplier-directory', label: 'Find Suppliers' },
+    { href: '#', label: 'Find A Venue' },
+    { href: '#', label: 'Find Suppliers' },
     { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
   ],
   footerNavItems: [
@@ -46,15 +46,15 @@ module.exports = {
   menuItems: {
     resources: [
       { href: '/gathergeeks', label: 'GatherGeeks' },
-      { href: '/bizbash-events', label: 'Our Events &amp; Awards' },
+      { href: '#', label: 'Our Events &amp; Awards' },
       { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-      { href: '/venue-directory', label: 'Find A Venue' },
-      { href: '/supplier-directory', label: 'Find Suppliers' },
+      { href: '#', label: 'Find A Venue' },
+      { href: '#', label: 'Find Suppliers' },
       { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
     ],
     userTools: [
       { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
+      { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
       { href: '/contact-us', label: 'Contact Us' },
       { href: '/page/privacy-policy', label: 'Privacy Policy', target: '_blank' },
