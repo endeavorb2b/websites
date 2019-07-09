@@ -1,0 +1,33 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const { site } = out.global;
+$ const inquiry = site.getAsObject('inquiry');
+$ const content = getAsObject(data, 'content');
+
+<theme-pennwell-content-layout content=content>
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs>
+            <@item>
+              <endeavor-link href="/" title="Home">Home</endeavor-link>
+            </@item>
+            <@item>Inquiry</@item>
+          </endeavor-breadcrumbs>
+          <h1 class="page-wrapper__title">Request More Information</h1>
+          <p>Please fill out the form below to request more information about
+            <cms-content-name tag=null obj=content link=true />
+            <cms-content-name tag=null obj=content.company link=true>
+              <@before>&nbsp;from&nbsp;</@before>
+            </cms-content-name>
+          </p>
+        </div>
+        <div class="page-wrapper__body">
+          <cms-browser-component name=inquiry.formComponentName props={ contentId: content.id, mountPoint: inquiry.mountPoint } />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</theme-pennwell-content-layout>
