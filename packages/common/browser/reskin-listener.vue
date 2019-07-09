@@ -29,7 +29,12 @@ const display = (payload) => {
 
   const adContainer = $('<div>').addClass('reveal-ad');
   if (options.boxShadow) adContainer.addClass(`reveal-ad--${options.boxShadow}-shadow`);
-  adContainer.html($('<a>', { href, title, target, rel }).append($('<img>', { src, alt })));
+  adContainer.html($('<a>', {
+    href,
+    title,
+    target,
+    rel,
+  }).append($('<img>', { src, alt })));
 
   const revealBackground = $('<a>', { href, target, rel }).addClass('reveal-ad-background').css({ backgroundImage });
   $('body').css({ backgroundColor }).prepend(revealBackground);
@@ -37,12 +42,12 @@ const display = (payload) => {
   $('.container-fluid-max').append(adContainer.clone());
 };
 
-const listener = function (e) {
+const listener = (e) => {
   const payload = parseJson(e.data);
   if (['adImagePath', 'adTitle', 'backgroundImagePath', 'adClickUrl'].every(k => payload[k])) {
     display(payload);
-    removeListener();
   }
+  window.removeEventListener('message', listener, false);
 };
 
 const addListener = () => window.addEventListener('message', listener, false);
