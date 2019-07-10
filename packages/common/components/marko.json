@@ -17,10 +17,12 @@
   ],
   "tags": {
     "endeavor-icon": {
-      "template": "./icon"
-    },
-    "endeavor-load-icons": {
-      "template": "./load-icons"
+      "template": "./icon",
+      "@name": {
+        "type": "string",
+        "required": true
+      },
+      "@modifiers": "array"
     },
     "endeavor-link": {
       "template": "./link"

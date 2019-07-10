@@ -1,8 +1,11 @@
 import { getAsArray } from '@base-cms/object-path';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 
-$ const href = `#icon-${input.name}`;
 $ const block = 'icon';
 $ const modifiers = getAsArray(input, 'modifiers');
 $ const classNames = [block, `${block}--${input.name}`, ...modifiers.map(mod => `${block}--${mod}`)];
+$ const file = resolve(__dirname, `../icons/${input.name}.svg`);
+$ const svg = readFileSync(file, 'utf8').toString();
 
-<svg class=classNames><use href=href xlink:href=href /></svg>
+<span class=classNames>$!{svg}</span>
