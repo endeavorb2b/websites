@@ -84,4 +84,12 @@ module.exports = {
   wufoo: {
     userName: 'cygnuscorporate',
   },
+  inquiry: {
+    enabled: true,
+    directSend: true,
+    sendTo: 'Endeavor Developer <developer@endeavorb2b.com>',
+    sendFrom: 'Officer.com <noreply@officer.com>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
+  },
 };
