@@ -71,7 +71,7 @@
     <button type="submit" class="btn btn-lg btn-primary" :disabled="loading">Submit</button>
   </form>
   <div v-else>
-    Thanks for your submission!
+    Thanks for your inquiry! We'll reach out shortly.
   </div>
 </template>
 

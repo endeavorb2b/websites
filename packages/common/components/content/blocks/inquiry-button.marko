@@ -1,13 +1,1 @@
-import { getAsObject } from '@base-cms/object-path';
-
-$ const { site } = out.global;
-$ const inquiry = site.getAsObject('inquiry');
-$ const content = getAsObject(input, 'content');
-
-<if(inquiry.enabled)>
-  $ const inquiryTypes = site.getAsArray('inquiry.contentTypes');
-  <if(inquiryTypes.includes(content.type))>
-    $ const inquiryProps = { contentId: content.id, prefix: inquiry.mountTo };
-    <cms-browser-component name=inquiry.buttonComponentName props=inquiryProps />
-  </if>
-</if>
+<a href="#inquiry-form" class="btn btn-lg btn-primary">Request More Information</a>
