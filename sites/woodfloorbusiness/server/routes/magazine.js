@@ -1,6 +1,6 @@
 const { withMagazinePublication, withMagazineIssue } = require('@base-cms/marko-web/middleware');
-const magazinePage = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-page');
-const magazineIssuePage = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-issue-page');
+const magazinePage = require('@endeavorb2b/base-website-themes/default/api/fragments/magazine-page');
+const magazineIssuePage = require('@endeavorb2b/base-website-themes/default/api/fragments/magazine-issue-page');
 const magazine = require('../templates/magazine');
 const magazinePublication = require('../templates/magazine/publication');
 const magazineIssue = require('../templates/magazine/issue');
