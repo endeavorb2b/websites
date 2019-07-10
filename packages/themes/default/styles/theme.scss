@@ -205,6 +205,22 @@ $theme-embedded-media-align-left-width:   50% !default;
 $theme-embedded-media-align-right-margin: 1rem !default;
 $theme-embedded-media-align-right-width:  50% !default;
 
+// Load More
+$theme-load-more-font-family:     $theme-font-family-sans-serif !default;
+$theme-load-more-bottom-spacing:  map-get($spacers, 3) !default;
+
+$theme-load-more-button-background-color: $primary !default;
+$theme-load-more-button-border-color:     $primary !default;
+$theme-load-more-button-color:            $white !default;
+$theme-load-more-button-font-family:      $theme-load-more-font-family !default;
+$theme-load-more-button-text-align:       center !default;
+
+$theme-load-more-header-font-family:      $theme-load-more-font-family !default;
+$theme-load-more-header-size:             h4 !default;
+$theme-load-more-header-text-align:       center !default;
+$theme-load-more-header-text-transform:   uppercase !default;
+
+
 // Cards
 $theme-card-background-color:             $white !default;
 $theme-card-border:                       none !default;
@@ -398,6 +414,7 @@ $theme-ad-sticky-leaderboard-close-size:        1.25rem !default;
 @import "theme/item";
 @import "theme/item-list";
 @import "theme/lazyload";
+@import "theme/load-more";
 @import "theme/magazine";
 @import "theme/page";
 @import "theme/subscribe";
