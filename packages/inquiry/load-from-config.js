@@ -18,11 +18,11 @@ module.exports = (app, options = {}) => {
   if (!options.template) throw new Error('Inquiry template must be provided!');
   if (inquiry.enabled) {
     const mountTo = inquiry.mountTo || '/__inquiry';
-    if (inquiry.defaultContact && inquiry.defaultContact.name && inquiry.defaultContact.email) {
+    if (inquiry.sendFrom && inquiry.sendTo) {
       app.use(mountTo, router(config));
       if (inquiry.debug) log(`Inquiry mounted on ${mountTo}.`);
     } else {
-      throw new Error('Inquiry default contact is not set!');
+      throw new Error('inquiry.{sendFrom,sendTo} configs are required and not present.');
     }
   }
 };

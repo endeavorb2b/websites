@@ -19,6 +19,7 @@ x-env-defaults: &env
   NODE_ENV: development
   RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY-(unset)}
   SENDGRID_API_KEY: ${SENDGRID_API_KEY-(unset)}
+  SENDGRID_DEV_TO: developer@endeavorb2b.com
   YARN_CACHE_FOLDER: /.yarn-cache
 
 x-site-command: &site-cmd

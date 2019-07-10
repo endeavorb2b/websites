@@ -263,6 +263,17 @@ module.exports = (app) => {
 ```
 ---
 ## Configuration
+A minimal configuration consists of the `enabled`, `sendTo`, and `sendFrom` properties:
+```js
+module.exports = {
+  // ...other config options
+  inquiry: {
+    enabled: true,
+    sendFrom: 'My Website <no-reply@sub.domain.tld>',
+    sendTo: 'Jane Smith <jane@sub.domain.tld>',
+  },
+}
+```
 The following lists all Inquiry configuration options, and the details of each option follow.
 ```js
 module.exports = {
@@ -270,31 +281,34 @@ module.exports = {
   inquiry: {
     // Whether the service is enabled/active
     enabled: true,
-    // The name of the button component to load.
-    buttonComponentName: 'RMIButton',
-    contentTypes: ['Product', 'Company', 'Venue', 'Supplier'],
     // Whether inquiries will be sent to sales contacts
     directSend: true,
     // The default contact. Receives all submissions
     // - CC'd if directSend and salesContacts exist
     // - TO'd in all other cases.
-    defaultContact: {
-      name: 'Contact Person Name',
-      email: 'Contact.Person.Email@company.name',
-    },
-    // The name of the form browser component to load.
-    formComponentName: 'RMIForm',
+    sendTo: 'Contact Person <contact.person@company.name>',
+    // The address the inquiry notifications will be sent from
+    sendFrom: 'no-reply@company.name',
+    // The address that will receive a copy of all notifications
+    sendBcc: 'emailactivity@company.name',
     // The backend URI prefix
     mountTo: '__inquiry',
+    // If debug information should be printed to the console
     debug: process.env.NODE_ENV === 'development',
   },
 };
 ```
 - `enabled` (Boolean): If the Inquiry component should be used. Used on the content page to conditionally render your inquiry button component.
-- `buttonComponentName` (String): The name of the button component used during [Component Registration](#component-registration).
-- `contentTypes` (Array): The content types that should display the Inquiry button component, if enabled. *note: GraphQL type (whitepaper instead of Whitepaper)*.
 - `directSend` (Boolean): If the Inquiry email should be sent to external (sales contacts), or just the default contact.
-- `defaultContact` (Object): The name and email address of the default contact. Will be CC'd instead of To'd if `directSend` is true and sales contacts exist.
-- `formCompnentName` (String): The name of the form component used during [Component Registration](#component-registration).
+- `sendFrom` (Email[]): The address that emails will be sent from.
+- `sendTo` (Email[]): The address of the default contact.
+  - If `directSend: true` and sales contacts exist, will be CC'd instead of TO'd.
 - `mountTo` (String): The URI path prefix for inquiry routes used during [Routing](#routing) configuration.
 - `debug` (Boolean): If debug logging messages will be output regarding component and routing registration.
+- *Note*: The `Email` psuedo-type can support string-formatted email addresses, objects containing `name` and/or `email` properties, or arrays of either. For all supported inputs, see the @sendgrid/mail documentation. A few examples follow:
+  - `email@domain.tld`
+  - `email1@domain.tld, email2@domain.tld`
+  - `Jane Smith <jane@domain.tld>`
+  - `Jane Smith <jane@domain.tld>, john@domain.tld`
+  - `['jane@domain.tld', 'john@domain.tld']`
+  - `[{ name: 'Jane Smith', email: 'jane@domain.tld' }]`
