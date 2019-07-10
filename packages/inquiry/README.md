@@ -1,10 +1,11 @@
 # Inquiry Integration
 To integrate this package with BaseCMS MarkoJS/Vue websites, do the following:
-1. Add `@endeavorb2b/base-website-inquiry` as dependency in the website's `package.json` file
-2. [Import](#request-more-information-package) or [create custom](#custom-components) components & templates.
-3. Update [component registration](#component-registration) for browser components.
-4. Update [routing](#routing) to include the inquiry submission handling and form template.
-4. [Configure](#configuration) Inquiry inside the `site/config/site.js`.
+- Add `@endeavorb2b/base-website-inquiry` as dependency in the website's `package.json` file
+  - If needed, [create a custom](#custom-components) Inquiry Form component or email templates.
+- Update [component registration](#component-registration) for browser components.
+- Include the form on relevant [content page templates](#content-page-inclusion).
+- Update [routing](#routing) to include the inquiry submission handler (and optional custom email templates).
+- [Configure](#configuration) Inquiry inside the `site/config/site.js`.
 
 ---
 ## Request More Information Package
@@ -15,42 +16,56 @@ To register the RMI browser components, see the [RMI Component Registration](#rm
 To register the RMI routing and templates, see the [RMI Routing](#rmi-routing) section.
 
 ---
-## Custom Components
-The Inquiry package is fully customizable, and includes five potential customization options:
-- The Inquiry Button (Vue), displayed on content pages
-- The Inquiry Form (Vue), linked to by the Inquiry Button
-- The Inquiry Template (Marko), a custom wrapper including the inquiry form
-- The Inquiry Email (Marko), an email template sent to sales/internal contacts.
-- The Inquiry Email Submission (Marko), an email template sent to the user.
+## Component Registration
+In order to show the inquiry form, you must register the component and include it in the [content page template](#content-template).
 
-### Custom Inquiry Button
-If you need a custom inquiry button, you can create a component within your site's browser components:
-```vue
-<template>
-  <a :href="target" class="btn btn-lg btn-primary">!! My Custom Button Text !!</a>
-</template>
+### RMI Component Registration
+Add the components within the `site/browser/index.js` file, for example:
+```js
+import Browser from '@endeavorb2b/base-website-common/browser';
+import inquiryLoader from '@endeavorb2b/base-website-inquiry/browser';
 
-<script>
-  export default {
-    props: {
-      contentId: {
-        type: Number,
-        required: true,
-      },
-      prefix: {
-        type: String,
-        default: '__inquiry',
-      },
-    },
-    computed: {
-      target() {
-        return `/${this.prefix}/${this.contentId}`;
-      },
-    },
-  };
-</script>
+inquiryLoader(Browser);
+
+export default Browser;
 ```
-Load your custom template when performing [component registration](#component-registration).
+
+### Custom Component Registration
+Add the components within the `site/browser/index.js` file, for example:
+```js
+import Browser from '@endeavorb2b/base-website-common/browser';
+import inquiryLoader from '@endeavorb2b/base-website-inquiry/browser';
+import MyInquiryForm from './my-inquiry-form.vue';
+
+inquiryLoader(Browser, { component: MyInquiryForm });
+
+export default Browser;
+```
+---
+## Content Page Inclusion
+The inquiry form should be added to the relevant content page template, for example in `site/server/templates/content/index.marko`:
+```marko
+$ // Only show the inquiry form on products and companies
+$ const showInquiry = site.get('inquiry.enabled') && ['product', 'company'].includes(content.type);
+<endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
+<if(showInquiry)>
+  <endeavor-content-block-inquiry-form content=content />
+</if>
+```
+Additionally, the `content-block-page-body` component supports a `show-inquiry-button` property to include a call out button linking to the form.
+```marko
+<endeavor-content-block-page-body
+  content=content
+  display-primary-image=displayPrimaryImage
+  show-inquiry-button=showInquiry
+/>
+```
+---
+## Custom Components
+The Inquiry package is fully customizable, and includes three potential customization options:
+- The Inquiry Form (Vue), which can be included on content pages.
+- The Inquiry Email Notification (Marko), an email template sent to sales/internal contacts.
+- The Inquiry Email Confirmation (Marko), an email template sent to the user.
 
 ### Custom Inquiry Form
 Create an inquiry form if needed) with your fields within your site's browser components:
@@ -83,9 +98,11 @@ Create an inquiry form if needed) with your fields within your site's browser co
       field1: 'default-value',
     }),
     methods: {
-      async validate() {
-        if (this.field1) return true;
-        return false;
+      async submit() {
+        const payload = {
+          field1: this.field1,
+        };
+        await this.$submit(payload);
       },
     }
   }
@@ -93,47 +110,7 @@ Create an inquiry form if needed) with your fields within your site's browser co
 ```
 Load your custom template when performing [component registration](#component-registration).
 
-### Custom Inquiry Template
-Create an inquiry template to customize the page wrapping your Inquiry Form component within your site's templates folder. This component is loaded using the `withContent` loader from `@base-cms/web-common` package. The GraphQL query fragment can be customized to include additional fields -- see the [Routing](#routing) section.
-
-```marko
-$ const { site } = out.global;
-$ const inquiryProps = site.getAsObject('inquiry');
-$ const content = getAsObject(data, 'content');
-
-<theme-pennwell-content-layout title="Inquiry">
-  <@head>
-    <endeavor-ad-gam-head />
-  </@head>
-
-  <@above-container>
-    <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
-  </@above-container>
-
-  <div class="page-wrapper">
-    <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <endeavor-breadcrumbs>
-            <@item>
-              <endeavor-link href="/" title="Home">Home</endeavor-link>
-            </@item>
-            <@item>Inquiry</@item>
-          </endeavor-breadcrumbs>
-          <h1 class="page-wrapper__title">Inquire about ${content.name}</h1>
-        </div>
-        <div class="page-wrapper__body">
-          <cms-browser-component name="MyInquiryForm" props=inquiryProps />
-        </div>
-      </div>
-    </div>
-  </div>
-</theme-pennwell-content-layout>
-```
-
-Load your custom template when performing [Routing](#routing) configuration.
-
-### Custom Inquiry Email
+### Custom Inquiry Email Notification
 The notification email marko template can be customized.
 ```marko
 $ const {
@@ -158,7 +135,7 @@ $ const {
 
 Load your custom template when performing [Routing](#routing) configuration.
 
-### Custom Inquiry Email Submission
+### Custom Inquiry Email Confirmation
 Similarly, the thank you email marko template can be customized:
 ```marko
 $ const {
@@ -180,36 +157,6 @@ $ const {
 Load your custom template when performing [Routing](#routing) configuration.
 
 ---
-## Component Registration
-The Inquiry package will load your Button and Form components automatically, but must be told the component name to load. These components must also be registered into your site's Vue instance.
-
-### RMI Component Registration
-Add the components within the `site/browser/index.js` file, for example:
-```js
-import Browser from '@endeavorb2b/base-website-common/browser';
-import RMIButton from '@endeavorb2b/base-website-inquiry/browser/rmi-button.vue';
-import RMIForm from '@endeavorb2b/base-website-inquiry/browser/rmi-form.vue';
-
-Browser.registerComponent('RMIButton', RMIButton);
-Browser.registerComponent('RMIForm', RMIForm);
-
-export default Browser;
-```
-
-### Custom Component Registration
-Add the components within the `site/browser/index.js` file, for example:
-```js
-import Browser from '@endeavorb2b/base-website-common/browser';
-import MyInquiryButton from './my-inquiry-button.vue';
-import MyInquiryForm from './my-inquiry-form.vue';
-
-Browser.registerComponent('MyInquiryButton', MyInquiryButton);
-Browser.registerComponent('MyInquiryForm', MyInquiryForm);
-
-export default Browser;
-```
-
----
 ## Routing
 Load the core Inquiry handler to the `site/server/routes.js` file, ensuring that Inquiry is loaded before _all_ other routes. Custom templates and/or GraphQL query fragments can be passed to the Inquiry router to utilize them. If these options are not sent, the default templates will be used.
 
@@ -217,30 +164,20 @@ Load the core Inquiry handler to the `site/server/routes.js` file, ensuring that
 To utilize the RMI template(s), you must first copy the Marko template from the package into your sites templates directory. The email templates do not need to be copied, but can be if additional customizations are needed.
 ```js
 // site/server/routes/index.js
-const inquiry = require('./inquiry');
+const loadInquiry = require('@endeavorb2b/base-website-inquiry/load-from-config');
 
 module.exports = (app) => {
-  // Load Inquiry routing
-  inquiry(app);
+  // Load Inquiry before all routes.
+  loadInquiry(app);
 
   // ... other routes
 };
-```
-
-```js
-// site/server/routes/inquiry.js
-const loadInquiry = require('@endeavorb2b/base-website-inquiry/load-from-config');
-const template = require('../templates/inquiry');
-
-module.exports = app => loadInquiry(app, { template });
-
 ```
 
 ### Custom Routing
 To use a custom template(s) and/or query fragment, pass those values to the Inquiry router's loader:
 ```js
 const loadInquiry = require('@endeavorb2b/base-website-identity-x/load-from-config');
-const inquiryTemplate = require('../templates/inquiry');
 const inquiryEmailTemplate = require('../templates/inquiry/email');
 const inquirySubmissionTemplate = require('../templates/inquiry/submission');
 
@@ -250,13 +187,11 @@ const inquiryFragment = gql`
 
 module.exports = (app) => {
   // Load Inquiry before all routes.
-  const inquiryConfig = {
-    template: inquiryTemplate,
+  loadInquiry(app, {
     queryFragment: inquiryFragment,
-    email: inquiryEmailTemplate,
-    emailSubmission: inquirySubmissionTemplate,
-  };
-  loadInquiry(app, inquiryConfig);
+    emailTemplate: inquiryEmailTemplate,
+    submissionTemplate: inquirySubmissionTemplate,
+  });
 
   // ... other routes
 };
@@ -305,10 +240,11 @@ module.exports = {
   - If `directSend: true` and sales contacts exist, will be CC'd instead of TO'd.
 - `mountTo` (String): The URI path prefix for inquiry routes used during [Routing](#routing) configuration.
 - `debug` (Boolean): If debug logging messages will be output regarding component and routing registration.
-- *Note*: The `Email` psuedo-type can support string-formatted email addresses, objects containing `name` and/or `email` properties, or arrays of either. For all supported inputs, see the @sendgrid/mail documentation. A few examples follow:
-  - `email@domain.tld`
-  - `email1@domain.tld, email2@domain.tld`
-  - `Jane Smith <jane@domain.tld>`
-  - `Jane Smith <jane@domain.tld>, john@domain.tld`
-  - `['jane@domain.tld', 'john@domain.tld']`
-  - `[{ name: 'Jane Smith', email: 'jane@domain.tld' }]`
+
+*Note*: The `Email` psuedo-type can support string-formatted email addresses, objects containing `name` and/or `email` properties, or arrays of either. For all supported inputs, see the @sendgrid/mail documentation. A few examples follow:
+- `email@domain.tld`
+- `email1@domain.tld, email2@domain.tld`
+- `Jane Smith <jane@domain.tld>`
+- `Jane Smith <jane@domain.tld>, john@domain.tld`
+- `['jane@domain.tld', 'john@domain.tld']`
+- `[{ name: 'Jane Smith', email: 'jane@domain.tld' }]`
