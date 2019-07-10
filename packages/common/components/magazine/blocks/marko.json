@@ -29,6 +29,9 @@
         "type": "boolean",
         "default-value": false
       }
+    },
+    "endeavor-magazine-publication-list": {
+      "template": "./publication-list.marko"
     }
   }
 }

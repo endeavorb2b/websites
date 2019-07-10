@@ -1,7 +1,0 @@
-{
-  "tags": {
-    "theme-pennwell-magazine-publication-list": {
-      "template": "./publication-list.marko"
-    }
-  }
-}
