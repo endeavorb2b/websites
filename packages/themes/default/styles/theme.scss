@@ -173,11 +173,12 @@ $theme-content-attribution-prefix-spacer-content:     "\2014" !default;
 $theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
 
 // Contact Details
-$theme-contact-details-font-family:       $theme-font-family-sans-serif !default;
-$theme-contact-details-font-size:         16px !default;
-$theme-contact-details-label-font-weight: 600 !default;
-$theme-contact-details-label-margin:      map-get($spacers, 2) !default;
-$theme-contact-details-section-margin:    map-get($spacers, 3) !default;
+$theme-contact-details-font-family:         $theme-font-family-sans-serif !default;
+$theme-contact-details-font-size:           16px !default;
+$theme-contact-details-label-font-weight:   600 !default;
+$theme-contact-details-label-margin:        map-get($spacers, 2) !default;
+$theme-contact-details-section-margin:      map-get($spacers, 3) !default;
+$theme-contact-details-social-icon-margin:  map-get($spacers, 2) !default;
 
 // Media
 $theme-media-caption-color:       $gray-600 !default;

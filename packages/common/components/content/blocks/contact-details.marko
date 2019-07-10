@@ -36,9 +36,7 @@ $ const socialLinks = getAsArray(content, 'socialLinks');
       <div class=bem(block, "social-links")>
         <for|item| of=socialLinks>
           <if(item.url && item.provider)>
-            <endeavor-link href=item.url target="_blank">
-              <endeavor-icon name=item.provider.toLowerCase() block=block />
-            </endeavor-link>
+            <endeavor-social-icon-link provider=item.provider href=item.url modifiers=["dark", "lg"] />
           </if>
         </for>
       </div>

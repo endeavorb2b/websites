@@ -8,7 +8,7 @@
 
   &__social-links {
     a {
-      margin-right: map-get($spacers, 2);
+      margin-right: $theme-contact-details-social-icon-margin;
     }
     svg {
       width: 25px;
