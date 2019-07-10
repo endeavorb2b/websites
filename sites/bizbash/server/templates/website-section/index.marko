@@ -6,10 +6,8 @@ $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'BS', aliases }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'BS', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'MR', aliases, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'HP', aliases, size: [300, 600] }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
 };
 
 <theme-pennwell-website-section-layout section=section>
@@ -29,26 +27,22 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-12">
-      <endeavor-gam-ad-unit-display id="gpt-ad-lb1" />
+      <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 12,
+        skip: 5,
         sectionId: section.id,
       }
-      ads={
-        aliases,
-        list: { name: "MR" },
-        card: { name: "HP" },
-      }
+      ads={ aliases }
       native-x={ placement: 'card', aliases, index: 0 }
     />
   </@below-container>
 
   <@footer>
-    <endeavor-gam-ad-sticky-leaderboard name="BS" refreshable=false aliases=aliases />
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
   </@footer>
 </theme-pennwell-website-section-layout>
