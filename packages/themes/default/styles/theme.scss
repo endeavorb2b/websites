@@ -307,8 +307,47 @@ $theme-breadcrumbs-link-hover-decoration: $link-hover-decoration !default;
 $theme-breadcrumbs-transform:             uppercase !default;
 
 // Icons
-$theme-icon-height: 1rem !default;
-$theme-icon-width:  1rem !default;
+$theme-icon-drop-shadow:  1px 1px 1px rgba(0, 0, 0, .3) !default;
+$theme-icon-fill:         $black !default;
+$theme-icon-fill-dark:    $black !default;
+$theme-icon-fill-light:   $white !default;
+$theme-icon-size-lg:      1.5rem !default;
+$theme-icon-size-xl:      2.5rem !default;
+$theme-icon-size:         1rem !default;
+$theme-icon-transition:   fill ease 250ms !default;
+
+// Social Colors
+$dribbble:      #ea4c89 !default;
+$facebook:      #4172b8 !default;
+$github:        #181717 !default;
+$googleplus:    #dc4e41 !default;
+$instagram:     #e4405f !default;
+$linkedin:      #0077b5 !default;
+$pinterest:     #bd081c !default;
+$reddit:        #ff4500 !default;
+$slack:         #4a154b !default;
+$twitter:       #1da1f2 !default;
+$whatsapp:      #25d366 !default;
+$youtube:       #f00 !default;
+
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    "dribbble":     $dribbble,
+    "facebook":     $facebook,
+    "github":       $github,
+    "googleplus":   $googleplus,
+    "instagram":    $instagram,
+    "linkedin":     $linkedin,
+    "pinterest":    $pinterest,
+    "reddit":       $reddit,
+    "slack":        $slack,
+    "twitter":      $twitter,
+    "whatsapp":     $whatsapp,
+    "youtube":      $youtube
+  ),
+  $brand-colors
+);
 
 // Lazyload Images
 $theme-lazyloaded-tranisition: opacity 250ms;

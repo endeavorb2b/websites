@@ -1,4 +1,48 @@
 .icon {
-  width: $theme-icon-width;
-  height: $theme-icon-height;
+  $self: &;
+  svg {
+    width: $theme-icon-size;
+    height: $theme-icon-size;
+    transition: $theme-icon-transition;
+    fill: $theme-icon-fill;
+  }
+
+  &--lg svg {
+    width: $theme-icon-size-lg;
+    height: $theme-icon-size-lg;
+  }
+
+  &--xl svg {
+    width: $theme-icon-size-xl;
+    height: $theme-icon-size-xl;
+  }
+
+  &--light svg {
+    fill: $theme-icon-fill-light;
+  }
+
+  &--dark svg {
+    fill: $theme-icon-fill-dark;
+  }
+
+  &--shadow svg {
+    filter: drop-shadow($theme-icon-drop-shadow);
+  }
+
+  @each $provider, $color in $brand-colors {
+    &--#{$provider} {
+      &:not(#{$self}--dark):not(#{$self}--light) svg {
+        fill: $color;
+        &:hover {
+          fill: darken($color, 10%);
+        }
+      }
+    }
+
+    &--#{$provider} svg {
+      &:hover {
+        fill: $color;
+      }
+    }
+  }
 }
