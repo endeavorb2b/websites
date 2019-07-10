@@ -29,9 +29,6 @@ export default {
         body: body ? JSON.stringify(body) : undefined,
       });
     },
-    validate() {
-      throw new Error('Validate method must be overwritten!');
-    },
     async $submit(payload) {
       this.error = null;
       this.loading = true;
