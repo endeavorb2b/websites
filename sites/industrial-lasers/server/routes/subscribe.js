@@ -1,5 +1,5 @@
 const { withMagazineSubscribeUrl } = require('@base-cms/marko-web/middleware');
-const queryFragment = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/magazine-publication');
+const queryFragment = require('@endeavorb2b/base-website-common/api/fragments/magazine-publication');
 const subscribe = require('../templates/subscribe/index');
 const subscribeEmail = require('../templates/subscribe/email');
 const subscribeMagazine = require('../templates/subscribe/magazine');
