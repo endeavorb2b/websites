@@ -65,38 +65,40 @@
 }
 
 .sticky-leaderboard {
-  @include border-radius($theme-ad-sticky-leaderboard-border-radius);
-  @include box-shadow($theme-ad-sticky-leaderboard-box-shadow);
-  @include media-breakpoint-up(xl) {
-    $width: map-get($grid-breakpoints, "xl");
-    right: inherit;
-    left: calc(50% - #{$width / 2});
-    width: $width;
-  }
+  $self: &;
 
-  position: fixed;
-  right: $grid-gutter-width / 4;
-  bottom: 0;
-  left: $grid-gutter-width / 4;
-  z-index: $theme-ad-sticky-leaderboard-z-index;
-  padding: $theme-ad-sticky-leaderboard-padding;
-  text-align: center;
-  visibility: hidden;
-  background-color: transparent;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  opacity: 0;
-  transition: $theme-ad-sticky-leaderboard-transition;
+  &__container {
+    @include border-radius($theme-ad-sticky-leaderboard-border-radius);
+    @include box-shadow($theme-ad-sticky-leaderboard-box-shadow);
+    @include media-breakpoint-up(xl) {
+      $width: map-get($grid-breakpoints, "xl");
+      right: inherit;
+      left: calc(50% - #{$width / 2});
+      width: $width;
+    }
+
+    position: fixed;
+    right: $grid-gutter-width / 4;
+    bottom: 0;
+    left: $grid-gutter-width / 4;
+    z-index: $theme-ad-sticky-leaderboard-z-index;
+    padding: $theme-ad-sticky-leaderboard-padding;
+    text-align: center;
+    visibility: hidden;
+    background-color: transparent;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    opacity: 0;
+    transition: $theme-ad-sticky-leaderboard-transition;
+  }
 
   &--visible {
-    visibility: visible;
-    opacity: 1;
-  }
+    padding-top: calc(100px + #{$theme-ad-sticky-leaderboard-padding} + #{$theme-ad-sticky-leaderboard-padding});
 
-  &--visible ~ .site-footer > .site-footer {
-    &__container {
-      &:last-child {
-        padding-bottom: 130px;
+    #{ $self } {
+      &__container {
+        visibility: visible;
+        opacity: 1;
       }
     }
   }

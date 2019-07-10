@@ -3,16 +3,18 @@
     v-if="canDisplay"
     :class="containerClasses"
   >
-    <div :class="backgroundClasses" />
-    <div :id="id" />
-    <button
-      v-if="closeable"
-      :class="buttonClasses"
-      title="Close Advertisement"
-      @click="close"
-    >
-      <icon-x :modifiers="iconModifiers" />
-    </button>
+    <div class="sticky-leaderboard__container">
+      <div :class="backgroundClasses" />
+      <div :id="id" />
+      <button
+        v-if="closeable"
+        :class="buttonClasses"
+        title="Close Advertisement"
+        @click="close"
+      >
+        <icon-x :modifiers="iconModifiers" />
+      </button>
+    </div>
   </div>
 </template>
 
