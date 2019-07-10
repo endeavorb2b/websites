@@ -374,7 +374,7 @@ The homepage content is layed out using the Bootstrap Grid system for rows and c
   </div>
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
+      <endeavor-published-content-query-list
         query={ requiresImage: false, contentTypes: ["Event"], limit: 3 }
         header={ title: "Upcoming Events", href: "/events" }
       />

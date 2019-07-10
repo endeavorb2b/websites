@@ -1,5 +1,16 @@
 {
   "taglib-imports": [
     "./blocks/marko.json"
-  ]
+  ],
+  "tags": {
+    "endeavor-published-content-query": {
+      "template": "./query.marko"
+    },
+    "endeavor-published-content-query-list": {
+      "template": "./query-list.marko"
+    },
+    "endeavor-published-content-query-load-more": {
+      "template": "./query-load-more.marko"
+    }
+  }
 }

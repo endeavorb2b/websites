@@ -5,7 +5,7 @@ $ input.pageNumber = input.pageNumber || 1;
 $ const block = 'published-content-query-load-more';
 $ const appendTo = input.appendTo || `.${block}`;
 
-<theme-pennwell-published-content-query|{ nodes, loadMore }| ...input>
+<endeavor-published-content-query|{ nodes, loadMore }| ...input>
   $ const { endCursor, hasNextPage, provide } = loadMore;
   <endeavor-load-more-button
     append-to=appendTo
@@ -15,4 +15,4 @@ $ const appendTo = input.appendTo || `.${block}`;
     provide=provide
     show=hasNextPage
   />
-</theme-pennwell-published-content-query>
+</endeavor-published-content-query>
