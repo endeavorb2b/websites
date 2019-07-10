@@ -222,6 +222,8 @@ module.exports = {
     sendFrom: 'no-reply@company.name',
     // The address that will receive a copy of all notifications
     sendBcc: 'emailactivity@company.name',
+    // The support email address
+    supportEmail: 'support@company.name',
     // The backend URI prefix
     mountTo: '__inquiry',
     // If debug information should be printed to the console
@@ -234,6 +236,8 @@ module.exports = {
 - `sendFrom` (Email[]): The address that emails will be sent from.
 - `sendTo` (Email[]): The address of the default contact.
   - If `directSend: true` and sales contacts exist, will be CC'd instead of TO'd.
+- `supportEmail` (String): The support email address, included in notification footer if present.
+- `logo` (URI): The site logo, included in the header if present.
 - `mountTo` (String): The URI path prefix for inquiry routes used during [Routing](#routing) configuration.
 - `debug` (Boolean): If debug logging messages will be output regarding component and routing registration.
 

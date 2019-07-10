@@ -3,13 +3,8 @@ import { getAsObject } from '@base-cms/object-path';
 $ const styles = 'table {width: 630px;margin: 0 auto;} .danger { color: red } body{font-family: sans-serif; color: #333; margin: 0;}h1{font-family: monospace; line-height: 58px; text-align:center; margin: 0;}.subject, .footer{text-align:center; border-top: 1px solid #EEE; padding: 1em;}.footer{font-family: monospace; color: #CCC;}';
 $ const { domain, subject, isDev, addresses } = input;
 $ const { site, config } = out.global;
-$ const defaults = {
-  title: config.get('siteName'),
-  bgColor: '#FFF',
-  logo: 'https://s3.amazonaws.com/media.cygnus.com/base.png',
-  supportName: `${config.get('siteName')} Support`,
-  supportEmail: 'base@endeavorb2b.com',
-};
+$ const inquiry = site.getAsObject('inquiry');
+
 $ const content = getAsObject(input, 'content');
 $ const company = getAsObject(content, 'company');
 $ const payload = getAsObject(input, 'payload');
@@ -25,13 +20,18 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
     <table>
       <tbody>
         <tr>
-          <td bgcolor=site.get('contactUs.branding.bgColor', defaults.bgColor)>
-            <img src=site.get('contactUs.branding.logo', defaults.logo) alt=site.get('contactUs.branding.title') />
+          <td>
+            <if(inquiry.logo)>
+              <img src=inquiry.logo alt=config.get('siteName') />
+            </if>
+            <else>
+              <h1>${config.get('siteName')}</h1>
+            </else>
           </td>
         </tr>
         <tr>
           <td class="subject">
-            <p>${site.get('contactUs.branding.title', defaults.title)} Inquiry Notification</p>
+            <p>${config.get('siteName')} Inquiry Notification</p>
           </td>
         </tr>
         <tr>
@@ -40,7 +40,7 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
               This e-mail is being sent to you because a user submitted an inquiry on ${domain}.
             </p>
             <p style="font-family:Arial; font-size:12px;">
-              To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.fromEmail', 'base@endeavorb2b.com')}.
+              To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.fromEmail')}.
             </p>
             <if(isDev)>
               <p style="color: red">This email has not been sent. In production, this would have been sent to:</p>
@@ -82,10 +82,12 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
         <tr>
           <td class="footer">
             <small>
-              This is an automated message from ${site.get('contactUs.branding.title', defaults.title)}. Please do not reply directly to this email &mdash; direct any inquiries to
-              <a href=`mailto:${site.get('contactUs.support.email', defaults.supportEmail)}`>
-                ${site.get('contactUs.support.name', defaults.supportName)}
-              </a>
+              This is an automated message from ${config.get('siteName')}. Please do not reply directly to this email
+              <if(inquiry.supportEmail)>&mdash; direct any inquiries to
+                <a href=`mailto:${inquiry.supportEmail}`>
+                  ${inquiry.supportEmail}
+                </a>
+              </if>
             </small>
           </td>
         </tr>
