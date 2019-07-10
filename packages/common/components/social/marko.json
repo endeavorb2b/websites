@@ -1,7 +1,20 @@
 {
   "tags": {
-    "endeavor-social-links": {
-      "template": "./links.marko"
+    "endeavor-social-icon-link": {
+      "template": "./icon-link.marko",
+      "@provider": {
+        "type": "string",
+        "required": true
+      },
+      "@href": {
+        "type": "string",
+        "required": true
+      },
+      "@target": {
+        "type": "string",
+        "default-value": "_blank"
+      },
+      "@modifiers": "array"
     }
   }
 }
