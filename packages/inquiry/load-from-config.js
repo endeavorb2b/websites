@@ -17,6 +17,11 @@ module.exports = (app, options = {}) => {
   };
   if (!options.template) throw new Error('Inquiry template must be provided!');
   if (inquiry.enabled) {
+    // ensure SENDGRID_API_KEY and SENDGRID_DEV_TO are set
+    // @todo use @base-cms/env for this
+    const { SENDGRID_API_KEY } = process.env;
+    if (!SENDGRID_API_KEY) throw new Error('Required env SENDGRID_API_KEY was not set!');
+
     const mountTo = inquiry.mountTo || '/__inquiry';
     if (inquiry.sendFrom && inquiry.sendTo) {
       app.use(mountTo, router(config));

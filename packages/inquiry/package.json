@@ -5,6 +5,7 @@
   "dependencies": {
     "@base-cms/marko-web": "^0.9.36",
     "@base-cms/web-common": "^0.9.34",
+    "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
     "@endeavorb2b/base-website-routing-utils": "^0.11.2",
     "@sendgrid/mail": "^6.4.0",
