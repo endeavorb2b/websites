@@ -7,6 +7,16 @@
   width: 100%;
   padding: $theme-item-padding;
 
+  &__button {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    @include button-variant($primary, $primary);
+    margin-top: map-get($spacers, 2);
+    margin-right: map-get($spacers, 2);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__contents {
     display: flex;
     flex: 1 1 auto;
@@ -117,7 +127,7 @@
       display: none;
     }
 
-    a {
+    a:not(#{$self}__button) {
       color: $theme-item-footer-link-color;
       text-decoration: $theme-item-footer-link-decoration;
       &:hover {
