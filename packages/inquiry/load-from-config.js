@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 const router = require('./routers');
-const defaultEmailTemplate = require('./templates/email.marko');
-const defaultSubmissionTemplate = require('./templates/submission.marko');
+const defaultNotificationTemplate = require('./templates/notification.marko');
+const defaultSubmissionTemplate = require('./templates/confirmation.marko');
 const defaultQueryFragment = require('./default-fragment');
 
 const { log } = console;
@@ -10,12 +10,10 @@ module.exports = (app, options = {}) => {
   const { site } = app.locals;
   const inquiry = site.getAsObject('inquiry');
   const config = {
-    template: options.template,
     queryFragment: options.queryFragment || defaultQueryFragment,
-    emailTemplate: options.emailTemplate || defaultEmailTemplate,
-    submissionTemplate: options.submissionTemplate || defaultSubmissionTemplate,
+    notification: options.notificationTemplate || defaultNotificationTemplate,
+    confirmation: options.confirmationTemplate || defaultSubmissionTemplate,
   };
-  if (!options.template) throw new Error('Inquiry template must be provided!');
   if (inquiry.enabled) {
     // ensure SENDGRID_API_KEY and SENDGRID_DEV_TO are set
     // @todo use @base-cms/env for this

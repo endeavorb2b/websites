@@ -178,20 +178,16 @@ module.exports = (app) => {
 To use a custom template(s) and/or query fragment, pass those values to the Inquiry router's loader:
 ```js
 const loadInquiry = require('@endeavorb2b/base-website-identity-x/load-from-config');
-const inquiryEmailTemplate = require('../templates/inquiry/email');
-const inquirySubmissionTemplate = require('../templates/inquiry/submission');
+const notificationTemplate = require('../templates/inquiry/notification');
+const confirmationTemplate = require('../templates/inquiry/confirmation');
 
-const inquiryFragment = gql`
+const queryFragment = gql`
   // GQL fragment goes here
 `;
 
 module.exports = (app) => {
   // Load Inquiry before all routes.
-  loadInquiry(app, {
-    queryFragment: inquiryFragment,
-    emailTemplate: inquiryEmailTemplate,
-    submissionTemplate: inquirySubmissionTemplate,
-  });
+  loadInquiry(app, { queryFragment, notificationTemplate, confirmationTemplate });
 
   // ... other routes
 };
