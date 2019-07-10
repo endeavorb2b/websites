@@ -92,9 +92,29 @@
       comments: '',
     }),
     methods: {
-      async validate(payload) {
-        // Ensures all required parameters are present
-        return ['firstName', 'lastName', 'email', 'jobTitle', 'country'].every(k => payload[k]);
+      async submit() {
+        const {
+         firstName,
+         lastName,
+         email,
+         phone,
+         company,
+         jobTitle,
+         country,
+         postalCode,
+         comments,
+        } = this;
+        await this.$submit({
+         firstName,
+         lastName,
+         email,
+         phone,
+         company,
+         jobTitle,
+         country,
+         postalCode,
+         comments,
+        });
       },
     }
   }

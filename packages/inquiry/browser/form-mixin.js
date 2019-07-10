@@ -32,16 +32,10 @@ export default {
     validate() {
       throw new Error('Validate method must be overwritten!');
     },
-    async submit() {
+    async $submit(payload) {
       this.error = null;
       this.loading = true;
-      // eslint-disable-next-line no-underscore-dangle
-      const payload = { ...this._data };
-      delete payload.complete;
-      delete payload.error;
-      delete payload.loading;
       try {
-        await this.validate(payload);
         const res = await this.fetch(`/${this.contentId}`, payload);
         const data = await res.json();
         if (!res.ok) throw new Error(`${res.statusText} (${res.status}): ${data.message}`);
