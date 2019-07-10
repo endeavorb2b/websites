@@ -1,6 +1,7 @@
 $ const { site, config } = out.global;
 $ const footerLogo = site.getAsObject('logos.footer');
 $ const defaultLogo = site.getAsObject('logos.navbar');
+$ const socialLinks = site.getAsArray('socialMediaLinks');
 $ const logo = footerLogo.src ? footerLogo : defaultLogo;
 $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
 $ const siteName = config.siteName();
@@ -15,7 +16,13 @@ $ const footerItems = site.getAsArray('footerNavItems');
   </div>
   <div class="site-footer__container site-footer__container--links">
 
-    <endeavor-social-links block="site-footer" />
+    <if(socialLinks.length)>
+      <div class="site-footer__social-icons">
+        <for|item| of=socialLinks>
+          <endeavor-social-icon-link provider=item.provider href=item.href modifiers=["light", "xl", "shadow"] />
+        </for>
+      </div>
+    </if>
 
     <if(footerItems.length)>
       <ul class="navbar-nav site-footer__links">
