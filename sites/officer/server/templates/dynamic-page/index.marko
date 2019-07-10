@@ -2,7 +2,7 @@ import { getAsObject } from '@base-cms/object-path';
 $ const { site } = out.global;
 $ const page = getAsObject(data, 'page');
 
-<theme-pennwell-dynamic-page-layout page=page>
+<theme-default-dynamic-page-layout page=page>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -31,4 +31,4 @@ $ const page = getAsObject(data, 'page');
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="BS" />
   </@footer>
-</theme-pennwell-dynamic-page-layout>
+</theme-default-dynamic-page-layout>

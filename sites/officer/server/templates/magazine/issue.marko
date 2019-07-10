@@ -3,7 +3,7 @@ import { getAsObject } from '@base-cms/object-path';
 $ const issue = getAsObject(data, 'issue');
 $ const publication = getAsObject(issue, 'publication');
 
-<theme-pennwell-magazine-issue-layout issue=issue>
+<theme-default-magazine-issue-layout issue=issue>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -43,4 +43,4 @@ $ const publication = getAsObject(issue, 'publication');
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="BS" />
   </@footer>
-</theme-pennwell-magazine-issue-layout>
+</theme-default-magazine-issue-layout>

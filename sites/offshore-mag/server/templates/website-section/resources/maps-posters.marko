@@ -5,7 +5,7 @@ $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
 
-<theme-pennwell-website-section-layout section=section>
+<theme-default-website-section-layout section=section>
 
   <@head>
     <endeavor-ad-gam-head />
@@ -16,7 +16,7 @@ $ const aliases = hierarchyAliases(section);
     <endeavor-gam-ad-unit-out-of-page name="reskin" />
     <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
   </@above-container>
-  
+
   <div class="page-wrapper">
     <div class="row">
       <div class="col">
@@ -41,4 +41,4 @@ $ const aliases = hierarchyAliases(section);
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />
   </@footer>
-</theme-pennwell-website-section-layout>
+</theme-default-website-section-layout>

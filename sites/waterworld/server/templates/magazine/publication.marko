@@ -2,7 +2,7 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const publication = getAsObject(data, 'publication');
 
-<theme-pennwell-magazine-publication-layout publication=publication>
+<theme-default-magazine-publication-layout publication=publication>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -36,4 +36,4 @@ $ const publication = getAsObject(data, 'publication');
       query={ publicationId: publication.id }
     />
   </@below-container>
-</theme-pennwell-magazine-publication-layout>
+</theme-default-magazine-publication-layout>
