@@ -11,7 +11,7 @@
       title="Close Advertisement"
       @click="close"
     >
-      <icon-x />
+      <icon-x :modifiers="iconModifiers" />
     </button>
   </div>
 </template>
@@ -19,10 +19,8 @@
 <script>
 import IconX from '../icons/vue/x.vue';
 
-const { googletag } = window;
-
 const buildSizeMapping = sm => sm
-  .reduce((map, s) => map.addSize(s.viewport, s.size), googletag.sizeMapping()).build();
+  .reduce((map, s) => map.addSize(s.viewport, s.size), window.googletag.sizeMapping()).build();
 const generateId = () => `div-gpt-ad-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
 const block = 'sticky-leaderboard';
 
@@ -47,6 +45,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    iconModifiers: {
+      type: Array,
+      default: () => ['light', 'md'],
+    },
     sizes: {
       type: Array,
       default: () => [[970, 90], [970, 66], [728, 90], [320, 50], [300, 50], [300, 100]],
@@ -70,7 +72,7 @@ export default {
   },
   computed: {
     canDisplay() {
-      if (googletag) return true;
+      if (window.googletag) return true;
       return false;
     },
     containerClasses() {
@@ -90,6 +92,7 @@ export default {
   },
   mounted() {
     if (this.canDisplay) {
+      const { googletag } = window;
       googletag.cmd.push(() => {
         googletag.pubads().addEventListener('slotRenderEnded', this.display);
         if (this.refreshable) googletag.pubads().addEventListener('impressionViewable', this.refresh);
@@ -111,7 +114,7 @@ export default {
     },
     refresh({ slot }) {
       if (slot.getSlotElementId() === this.id) {
-        this.handler = setTimeout(() => googletag.pubads().refresh([slot]), this.intervalMs);
+        this.handler = setTimeout(() => window.googletag.pubads().refresh([slot]), this.intervalMs);
       }
     },
     display({ slot, isEmpty }) {
