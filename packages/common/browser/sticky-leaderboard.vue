@@ -11,13 +11,13 @@
       title="Close Advertisement"
       @click="close"
     >
-      <icon name="circle-with-cross" />
+      <icon-x />
     </button>
   </div>
 </template>
 
 <script>
-import Icon from './icon.vue';
+import IconX from '../icons/vue/x.vue';
 
 const { googletag } = window;
 
@@ -28,7 +28,7 @@ const block = 'sticky-leaderboard';
 
 export default {
   components: {
-    Icon,
+    IconX,
   },
   props: {
     path: {
