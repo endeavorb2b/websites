@@ -1,0 +1,24 @@
+import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+$ const content = getAsObject(input, 'content');
+
+<theme-default-document>
+  <@head>
+    <cms-page-metadata for="content" ...content />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('content', content) />
+    <endeavor-nativex-init />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="content" data=content>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+  <@footer>
+    <${input.footer} />
+  </@footer>
+</theme-default-document>

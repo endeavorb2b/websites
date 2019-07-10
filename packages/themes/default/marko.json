@@ -1,0 +1,6 @@
+{
+  "taglib-imports": [
+    "./components/marko.json",
+    "./layouts/marko.json"
+  ]
+}

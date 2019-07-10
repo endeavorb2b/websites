@@ -1,0 +1,34 @@
+{
+  "tags": {
+    "theme-default-content-layout": {
+      "template": "./content.marko"
+    },
+    "theme-default-dynamic-page-layout": {
+      "template": "./dynamic-page.marko"
+    },
+    "theme-default-website-section-layout": {
+      "template": "./website-section.marko"
+    },
+    "theme-default-search-layout": {
+      "template": "./search.marko"
+    },
+    "theme-default-published-content-layout": {
+      "template": "./published-content.marko"
+    },
+    "theme-default-magazine-layout": {
+      "template": "./magazine.marko"
+    },
+    "theme-default-magazine-issue-layout": {
+      "template": "./magazine-issue.marko"
+    },
+    "theme-default-magazine-publication-layout": {
+      "template": "./magazine-publication.marko"
+    },
+    "theme-default-subscribe-layout": {
+      "template": "./subscribe.marko"
+    },
+    "theme-default-user-layout": {
+      "template": "./user.marko"
+    }
+  }
+}
