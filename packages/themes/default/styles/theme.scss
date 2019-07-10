@@ -192,6 +192,19 @@ $theme-media-footer-line-height:  $line-height-sm !default;
 $theme-media-footer-padding-x:    $border-radius;
 $theme-media-footer-padding-y:    map-get($spacers, 1) !default;
 
+// Embedded Media
+$theme-embedded-media-color:        $gray-600 !default;
+$theme-embedded-media-font-family:  $theme-font-family-sans-serif !default;
+$theme-embedded-media-font-size:    $font-size-base !default;
+$theme-embedded-media-line-height:  $line-height-sm !default;
+$theme-embedded-media-margin:       .5rem 0 0 !default;
+
+$theme-embedded-media-align-left-margin:  1rem !default;
+$theme-embedded-media-align-left-width:   50% !default;
+
+$theme-embedded-media-align-right-margin: 1rem !default;
+$theme-embedded-media-align-right-width:  50% !default;
+
 // Cards
 $theme-card-background-color:             $white !default;
 $theme-card-border:                       none !default;
@@ -380,6 +393,7 @@ $theme-ad-sticky-leaderboard-close-size:        1.25rem !default;
 @import "theme/breadcrumbs";
 @import "theme/contact-us";
 @import "theme/content";
+@import "theme/embedded-media";
 @import "theme/icons";
 @import "theme/item";
 @import "theme/item-list";
