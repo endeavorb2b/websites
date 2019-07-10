@@ -1,5 +1,3 @@
-import fetch from 'node-fetch'; // polyfilled browser version?
-
 export default {
   props: {
     mountPoint: {
