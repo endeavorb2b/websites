@@ -5,7 +5,7 @@ $ const block = 'content-primary-media';
 $ const content = getAsObject(input, 'content');
 $ const primaryImage = getAsObject(content, 'primaryImage');
 
-$ const displayMedia = input.displayPrimaryImage || content.embedCode;
+$ const displayMedia = input.displayPrimaryImage && primaryImage.src || content.embedCode;
 
 <if(displayMedia)>
   <div class=block>
