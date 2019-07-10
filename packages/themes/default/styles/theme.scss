@@ -308,10 +308,11 @@ $theme-breadcrumbs-transform:             uppercase !default;
 
 // Icons
 $theme-icon-drop-shadow:  1px 1px 1px rgba(0, 0, 0, .3) !default;
-$theme-icon-fill:         $black !default;
 $theme-icon-fill-dark:    $black !default;
 $theme-icon-fill-light:   $white !default;
+$theme-icon-fill:         $black !default;
 $theme-icon-size-lg:      1.5rem !default;
+$theme-icon-size-md:      1.25rem !default;
 $theme-icon-size-xl:      2.5rem !default;
 $theme-icon-size:         1rem !default;
 $theme-icon-transition:   fill ease 250ms !default;
