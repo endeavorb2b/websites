@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+require('./env');
 const router = require('./routers');
 const defaultNotificationTemplate = require('./templates/notification.marko');
 const defaultSubmissionTemplate = require('./templates/confirmation.marko');
@@ -15,11 +15,6 @@ module.exports = (app, options = {}) => {
     confirmation: options.confirmationTemplate || defaultSubmissionTemplate,
   };
   if (inquiry.enabled) {
-    // ensure SENDGRID_API_KEY and SENDGRID_DEV_TO are set
-    // @todo use @base-cms/env for this
-    const { SENDGRID_API_KEY } = process.env;
-    if (!SENDGRID_API_KEY) throw new Error('Required env SENDGRID_API_KEY was not set!');
-
     const mountTo = inquiry.mountTo || '/__inquiry';
     if (inquiry.sendFrom && inquiry.sendTo) {
       app.use(mountTo, router(config));

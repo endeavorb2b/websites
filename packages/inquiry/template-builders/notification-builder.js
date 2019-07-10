@@ -1,8 +1,5 @@
 const { getAsArray } = require('@base-cms/object-path');
-
-// @todo use @base-cms/env for this
-const isDev = process.env.NODE_ENV === 'development';
-const { SENDGRID_DEV_TO } = process.env;
+const { SENDGRID_DEV_TO, isDev } = require('../env');
 
 module.exports = (template, locals, content, req) => {
   const { body: payload, hostname: domain } = req;
