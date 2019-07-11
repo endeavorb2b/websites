@@ -410,11 +410,11 @@ $theme-site-header-breakpoints: () !default;
 $theme-site-header-breakpoints: map-merge(
   (
     hide-primary: 768px,
-    hide-secondary: 768px,
-    hide-tertiary: 768px,
+    hide-secondary: 576px,
+    hide-tertiary: 0,
     small-logo: 768px,
-    small-text-primary: 768px,
-    small-text-secondary: 768px
+    small-text-primary: 992px,
+    small-text-secondary: 992px
   ),
   $theme-site-header-breakpoints
 );
@@ -455,14 +455,17 @@ $theme-site-navbar-light-colors: (
 $theme-site-navbar-brand-margin-y: 0 !default;
 $theme-site-navbar-brand-margin-x: 12px !default;
 
-$theme-site-navbar-primary-bg-color:    $primary !default;
-$theme-site-navbar-primary-font-family: $theme-site-header-font-family !default;
-$theme-site-navbar-primary-font-size:   16px !default;
-$theme-site-navbar-primary-font-weight: $font-weight-normal !default;
-$theme-site-navbar-primary-line-height: 24px !default;
-$theme-site-navbar-primary-padding-x:   16px !default;
-$theme-site-navbar-primary-padding-y:   0 !default;
-$theme-site-navbar-primary-type:        dark !default;
+$theme-site-navbar-primary-bg-color:        $primary !default;
+$theme-site-navbar-primary-font-family:     $theme-site-header-font-family !default;
+$theme-site-navbar-primary-font-size:       16px !default;
+$theme-site-navbar-primary-font-size-sm:    14px !default;
+$theme-site-navbar-primary-font-weight:     $font-weight-normal !default;
+$theme-site-navbar-primary-height-sm:       4px !default;
+$theme-site-navbar-primary-line-height:     24px !default;
+$theme-site-navbar-primary-line-height-sm:  21px !default;
+$theme-site-navbar-primary-padding-x:       16px !default;
+$theme-site-navbar-primary-padding-y:       0 !default;
+$theme-site-navbar-primary-type:            dark !default;
 
 $theme-site-navbar-primary-link-active-background-color:  initial !default;
 $theme-site-navbar-primary-link-active-color:             navbar-link-color($theme-site-navbar-primary-type, active) !default;
@@ -493,14 +496,16 @@ $theme-site-navbar-primary-background-colors: (
   active: $theme-site-navbar-primary-link-active-background-color
 );
 
-$theme-site-navbar-secondary-bg-color:    $dark !default;
-$theme-site-navbar-secondary-font-family: $theme-site-header-font-family !default;
-$theme-site-navbar-secondary-font-size:   14px !default;
-$theme-site-navbar-secondary-font-weight: $font-weight-normal !default;
-$theme-site-navbar-secondary-line-height: 21px !default;
-$theme-site-navbar-secondary-padding-x:   16px !default;
-$theme-site-navbar-secondary-padding-y:   10px !default;
-$theme-site-navbar-secondary-type:        dark !default;
+$theme-site-navbar-secondary-bg-color:        $dark !default;
+$theme-site-navbar-secondary-font-family:     $theme-site-header-font-family !default;
+$theme-site-navbar-secondary-font-size:       14px !default;
+$theme-site-navbar-secondary-font-size-sm:    12px !default;
+$theme-site-navbar-secondary-font-weight:     $font-weight-normal !default;
+$theme-site-navbar-secondary-line-height:     21px !default;
+$theme-site-navbar-secondary-line-height-sm:  18px !default;
+$theme-site-navbar-secondary-padding-x:       16px !default;
+$theme-site-navbar-secondary-padding-y:       10px !default;
+$theme-site-navbar-secondary-type:            dark !default;
 
 $theme-site-navbar-secondary-link-active-background-color:  initial !default;
 $theme-site-navbar-secondary-link-active-color:             navbar-link-color($theme-site-navbar-secondary-type, active) !default;
