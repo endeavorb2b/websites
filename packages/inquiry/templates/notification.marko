@@ -70,10 +70,12 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
             <table>
               <tbody>
                 <for|key, value| in=payload>
-                  <tr>
-                    <td nowrap><b>${key}</b></td>
-                    <td>${value}</td>
-                  </tr>
+                  <if(key !== 'confirmationEmail')>
+                    <tr>
+                      <td nowrap><b>${key}</b></td>
+                      <td>${value}</td>
+                    </tr>
+                  </if>
                 </for>
               </tbody>
             </table>

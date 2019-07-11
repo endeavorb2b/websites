@@ -1,10 +1,9 @@
-module.exports = (template, locals, content, req) => {
-  const { email } = req.body;
+module.exports = (template, locals, content, confirmataionEmail) => {
   const { site } = locals;
   const { sendBcc } = site.getAsObject('inquiry');
 
   const addresses = {
-    to: email,
+    to: confirmataionEmail,
     from: site.get('inquiry.sendFrom'),
     bcc: sendBcc,
   };

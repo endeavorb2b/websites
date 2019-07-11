@@ -105,6 +105,7 @@
          firstName,
          lastName,
          email,
+         confirmationEmail: email,
          phone,
          company,
          jobTitle,

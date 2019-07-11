@@ -68,7 +68,7 @@ The Inquiry package is fully customizable, and includes three potential customiz
 - The Inquiry Email Confirmation (Marko), an email template sent to the user.
 
 ### Custom Inquiry Form
-Create an inquiry form if needed) with your fields within your site's browser components:
+Create an inquiry form if needed) with your fields within your site's browser components. *Note*: If you want a confirmation/thank you email to be sent to the submitter, you **must** include the `confirmationEmail` field with your payload to the `$submit` method.
 ```vue
 <template>
   <form @submit="submit" v-if="incomplete">

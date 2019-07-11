@@ -8,6 +8,8 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
   const { apollo } = req;
   const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
   await send(notificationBuilder(notification, locals, content, req));
-  if (req.body.email) await send(confirmationBuilder(confirmation, locals, content, req));
+  if (req.body.confirmationEmail) {
+    await send(confirmationBuilder(confirmation, locals, content, req.body.confirmationEmail));
+  }
   res.json({ ok: true });
 });
