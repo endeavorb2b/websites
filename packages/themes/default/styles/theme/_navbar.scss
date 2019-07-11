@@ -193,17 +193,13 @@
 }
 
 .site-navbar-menu {
-  $self: &;
-  $wrapper-width: 264px;
-  $wrapper-max-width: 75vw;
-
   position: fixed;
-  top: 120px;
+  top: calculate-navbar-height-for(default);
   bottom: 0;
   z-index: $theme-site-header-z-index - 1;
 
-  width: $wrapper-width;
-  max-width: $wrapper-max-width;
+  width: $theme-site-navbar-menu-width;
+  max-width: $theme-site-navbar-menu-max-width;
 
   overflow-x: auto;
   overflow-y: scroll;
@@ -215,21 +211,21 @@
 
   opacity: .98;
   transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear .25s;
-  transform: translateX(-#{$wrapper-width});
+  transform: translateX(-#{$theme-site-navbar-menu-width});
 
-  // @media (max-width: map-get($theme-site-nav-primary-breakpoints, small-text)) {
-  //   top: 117px;
-  // }
-  // @media (max-width: map-get($theme-site-nav-primary-breakpoints, hide)) {
-  //   top: 84px;
-  // }
-  // @media (max-width: map-get($theme-site-nav-secondary-breakpoints, hide)) {
-  //   top: 54px;
-  // }
+  @media (max-width: map-get($theme-site-header-breakpoints, small-logo)) {
+    top: calculate-navbar-height-for(small-logo);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, small-text-primary)) {
+    top: calculate-navbar-height-for(small-text-primary);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, hide-primary)) {
+    top: calculate-navbar-height-for(hide-primary);
+  }
 
   &--open {
+    @include box-shadow($theme-site-navbar-menu-box-shadow);
     visibility: visible;
-    // box-shadow: $theme-site-nav-menu-box-shadow;
     transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0s;
     transform: translateX(0);
   }

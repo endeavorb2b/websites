@@ -28,6 +28,7 @@ $spacers: (
 @import "bootstrap/mixins";
 @import "bootstrap/components";
 
+@import "functions";
 @import "mixins";
 
 // Generic
@@ -461,8 +462,8 @@ $theme-site-navbar-primary-font-size:       16px !default;
 $theme-site-navbar-primary-font-size-sm:    14px !default;
 $theme-site-navbar-primary-font-weight:     $font-weight-normal !default;
 $theme-site-navbar-primary-height-sm:       4px !default;
-$theme-site-navbar-primary-line-height:     24px !default;
-$theme-site-navbar-primary-line-height-sm:  21px !default;
+$theme-site-navbar-primary-line-height:     get-line-height($theme-site-navbar-primary-font-size, 24px) !default;
+$theme-site-navbar-primary-line-height-sm:  get-line-height($theme-site-navbar-primary-font-size-sm, 21px) !default;
 $theme-site-navbar-primary-padding-x:       16px !default;
 $theme-site-navbar-primary-padding-y:       0 !default;
 $theme-site-navbar-primary-type:            dark !default;
@@ -501,8 +502,8 @@ $theme-site-navbar-secondary-font-family:     $theme-site-header-font-family !de
 $theme-site-navbar-secondary-font-size:       14px !default;
 $theme-site-navbar-secondary-font-size-sm:    12px !default;
 $theme-site-navbar-secondary-font-weight:     $font-weight-normal !default;
-$theme-site-navbar-secondary-line-height:     21px !default;
-$theme-site-navbar-secondary-line-height-sm:  18px !default;
+$theme-site-navbar-secondary-line-height:     get-line-height($theme-site-navbar-secondary-font-size, 21px) !default;
+$theme-site-navbar-secondary-line-height-sm:  get-line-height($theme-site-navbar-secondary-font-size-sm, 18px) !default;
 $theme-site-navbar-secondary-padding-x:       16px !default;
 $theme-site-navbar-secondary-padding-y:       10px !default;
 $theme-site-navbar-secondary-type:            dark !default;
@@ -538,15 +539,57 @@ $theme-site-navbar-secondary-background-colors: (
 
 $theme-site-navbar-link-transition: color ease 300ms, text-decoration ease 300ms, background-color ease 300ms !default;
 
-// $theme-site-navbar-link-padding-top:  8px !default;
-// $theme-site-navbar-link-padding-x:    8px !default;
-
-
 $theme-site-navbar-logo-drop-shadow:   1px 1px 1px rgba(0, 0, 0, .35) !default;
 $theme-site-navbar-logo-height:        60px !default;
 $theme-site-navbar-logo-height-sm:     $theme-site-navbar-logo-height / 2 !default;
 
 $theme-site-navbar-icon-transition:  fill ease 300ms !default;
+
+$theme-site-navbar-menu-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
+$theme-site-navbar-menu-width:      264px !default;
+$theme-site-navbar-menu-max-width:  75vw !default;
+
+@function get-navbar-breakpoints-for($target) {
+  $target-size: map-get($theme-site-header-breakpoints, $target);
+  $elgible-breakpoints: [];
+  @if $target-size == null {
+    @return $elgible-breakpoints;
+  }
+  @each $name, $size in $theme-site-header-breakpoints {
+    @if $size >= $target-size {
+      $elgible-breakpoints: append($elgible-breakpoints, $name);
+    }
+  }
+  @return $elgible-breakpoints;
+}
+
+@function calculate-navbar-height-for($target-breakpoint) {
+  $breakpoints: get-navbar-breakpoints-for($target-breakpoint);
+
+  // Variable defaults.
+  $logo-height: $theme-site-navbar-logo-height;
+  $primary-font-size: $theme-site-navbar-primary-font-size * $theme-site-navbar-primary-line-height;
+  $primary-link-padding: $theme-site-navbar-primary-link-padding * 2;
+  // These are constant.
+  $brand-margin: $theme-site-navbar-brand-margin-y * 2;
+  $secondary-padding: $theme-site-navbar-secondary-padding-y * 2;
+
+  @if length($breakpoints) == 0 {
+    @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
+  }
+  @if index($breakpoints, small-logo) != null {
+    $logo-height: $theme-site-navbar-logo-height-sm;
+  }
+  @if index($breakpoints, small-text-primary) != null {
+    $primary-font-size: $theme-site-navbar-primary-font-size-sm * $theme-site-navbar-primary-line-height-sm;
+  }
+  @if index($breakpoints, hide-primary) != null {
+    // Orverride font size again with hidden height and set padding to none
+    $primary-font-size: $theme-site-navbar-primary-height-sm;
+    $primary-link-padding: 0;
+  }
+  @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
+}
 
 @import "theme/ads";
 @import "theme/breadcrumbs";
