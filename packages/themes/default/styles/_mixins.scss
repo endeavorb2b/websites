@@ -188,6 +188,15 @@
   }
 }
 
+@mixin theme-hide-scrollbars() {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
 @mixin theme-max-lines($line-height, $line-height-sm, $num: 2, $text-overflow: ellipsis) {
   display: block;
   max-height: $line-height * $num;
@@ -222,11 +231,55 @@
   letter-spacing: normal;
 }
 
-@mixin theme-navbar-type($type) {
-  @if $type == dark {
-    @extend .navbar-dark;
-  } @else {
-    @extend .navbar-light;
+@mixin theme-navbar() {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  // padding: $theme-site-navbar-padding-y $theme-site-navbar-padding-x;
+}
+
+@mixin theme-navbar-link-background-color($background-color-map) {
+  background-color: map-get($background-color-map, default);
+  &:hover {
+    background-color: map-get($background-color-map, hover);
+  }
+  &:active {
+    background-color: map-get($background-color-map, active);
+  }
+}
+
+@mixin theme-navbar-link-color($color-map) {
+  $color: map-get($color-map, color);
+  $hover: map-get($color-map, hover);
+  $active: map-get($color-map, active);
+
+  color: $color;
+  svg {
+    fill: $color;
+  }
+  &:hover {
+    color: $hover;
+    svg {
+      fill: $hover;
+    }
+  }
+  &:active {
+    color: $active;
+    svg {
+      fill: $active;
+    }
+  }
+}
+
+@mixin theme-navbar-link-decoration($decoration-map) {
+  text-decoration: map-get($decoration-map, default);
+  &:hover {
+    text-decoration: map-get($decoration-map, hover);
+  }
+  &:active {
+    text-decoration: map-get($decoration-map, active);
   }
 }
 
