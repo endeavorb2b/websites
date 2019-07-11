@@ -251,7 +251,7 @@
 }
 
 @mixin theme-navbar-link-color($color-map) {
-  $color: map-get($color-map, color);
+  $color: map-get($color-map, default);
   $hover: map-get($color-map, hover);
   $active: map-get($color-map, active);
 

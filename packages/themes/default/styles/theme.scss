@@ -434,13 +434,13 @@ $theme-site-navbar-padding-x:           16px !default;
 $theme-site-navbar-padding-y:           0 !default;
 
 $theme-site-navbar-dark-colors: (
-  color: $theme-site-navbar-dark-color,
+  default: $theme-site-navbar-dark-color,
   hover: $theme-site-navbar-dark-hover-color,
   active: $theme-site-navbar-dark-active-color
 );
 
 $theme-site-navbar-light-colors: (
-  color: $theme-site-navbar-light-color,
+  default: $theme-site-navbar-light-color,
   hover: $theme-site-navbar-light-hover-color,
   active: $theme-site-navbar-light-active-color
 );
@@ -468,7 +468,7 @@ $theme-site-navbar-primary-link-active-background-color:  initial !default;
 $theme-site-navbar-primary-link-active-color:             navbar-link-color($theme-site-navbar-primary-type, active) !default;
 $theme-site-navbar-primary-link-active-decoration:        underline !default;
 $theme-site-navbar-primary-link-background-color:         initial !default;
-$theme-site-navbar-primary-link-color:                    navbar-link-color($theme-site-navbar-primary-type, color) !default;
+$theme-site-navbar-primary-link-color:                    navbar-link-color($theme-site-navbar-primary-type, default) !default;
 $theme-site-navbar-primary-link-decoration:               none !default;
 $theme-site-navbar-primary-link-hover-background-color:   initial !default;
 $theme-site-navbar-primary-link-hover-color:              navbar-link-color($theme-site-navbar-primary-type, hover) !default;
@@ -476,7 +476,7 @@ $theme-site-navbar-primary-link-hover-decoration:         underline !default;
 $theme-site-navbar-primary-link-padding:                  8px !default;
 
 $theme-site-navbar-primary-colors: (
-  color: $theme-site-navbar-primary-link-color,
+  default: $theme-site-navbar-primary-link-color,
   hover: $theme-site-navbar-primary-link-hover-color,
   active: $theme-site-navbar-primary-link-active-color
 );
@@ -506,7 +506,7 @@ $theme-site-navbar-secondary-link-active-background-color:  initial !default;
 $theme-site-navbar-secondary-link-active-color:             navbar-link-color($theme-site-navbar-secondary-type, active) !default;
 $theme-site-navbar-secondary-link-active-decoration:        underline !default;
 $theme-site-navbar-secondary-link-background-color:         initial !default;
-$theme-site-navbar-secondary-link-color:                    navbar-link-color($theme-site-navbar-secondary-type, color) !default;
+$theme-site-navbar-secondary-link-color:                    navbar-link-color($theme-site-navbar-secondary-type, default) !default;
 $theme-site-navbar-secondary-link-decoration:               none !default;
 $theme-site-navbar-secondary-link-hover-background-color:   initial !default;
 $theme-site-navbar-secondary-link-hover-color:              navbar-link-color($theme-site-navbar-secondary-type, hover) !default;
@@ -514,7 +514,7 @@ $theme-site-navbar-secondary-link-hover-decoration:         underline !default;
 $theme-site-navbar-secondary-link-padding:                  8px !default;
 
 $theme-site-navbar-secondary-colors: (
-  color: $theme-site-navbar-secondary-link-color,
+  default: $theme-site-navbar-secondary-link-color,
   hover: $theme-site-navbar-secondary-link-hover-color,
   active: $theme-site-navbar-secondary-link-active-color
 );
