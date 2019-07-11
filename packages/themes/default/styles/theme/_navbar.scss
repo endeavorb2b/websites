@@ -147,6 +147,10 @@
       line-height: $theme-site-navbar-secondary-line-height-sm;
     }
 
+    @media (max-width: map-get($theme-site-header-breakpoints, small-logo)) {
+      margin-top: initial;
+    }
+
     #{ $self } {
       &__item {
         @include theme-navbar-link-background-color($theme-site-navbar-secondary-background-colors);
