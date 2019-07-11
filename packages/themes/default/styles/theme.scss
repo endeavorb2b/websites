@@ -622,5 +622,16 @@ body {
     max-width: map-get($grid-breakpoints, xl);
   }
   flex-shrink: 0;
+  padding-top: calculate-navbar-height-for(default);
   margin-top: map-get($spacers, 4);
+
+  @media (max-width: map-get($theme-site-header-breakpoints, small-logo)) {
+    padding-top: calculate-navbar-height-for(small-logo);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, small-text-primary)) {
+    padding-top: calculate-navbar-height-for(small-text-primary);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, hide-primary)) {
+    padding-top: calculate-navbar-height-for(hide-primary);
+  }
 }
