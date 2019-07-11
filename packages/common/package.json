@@ -5,9 +5,9 @@
   "dependencies": {
     "@base-cms/env": "^0.9.25",
     "@base-cms/image": "^0.9.22",
-    "@base-cms/marko-web": "^0.9.36",
-    "@base-cms/object-path": "^0.9.0",
-    "@base-cms/utils": "^0.9.0",
+    "@base-cms/marko-web": "^0.9.37",
+    "@base-cms/object-path": "^0.9.37",
+    "@base-cms/utils": "^0.9.37",
     "@endeavorb2b/base-website-identity-x": "^0.11.9",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
