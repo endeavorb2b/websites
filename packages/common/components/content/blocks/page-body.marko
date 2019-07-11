@@ -2,7 +2,6 @@ import { getAsObject, getAsArray } from '@base-cms/object-path';
 
 $ const { req } = out.global;
 $ const content = getAsObject(input, 'content');
-$ const { showInquiryButton } = input;
 
 $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(content, 'userRegistration');
 
@@ -18,7 +17,7 @@ $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(
   <div class="page-wrapper__body">
     <endeavor-content-block-primary-media content=content display-primary-image=input.displayPrimaryImage />
     <endeavor-content-block-contact-details content=content />
-    <if(showInquiryButton)>
+    <if(input.showInquiryButton)>
       <endeavor-content-block-inquiry-button content=content />
     </if>
     <if(!canAccess)>
