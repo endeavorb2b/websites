@@ -1,0 +1,25 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const block = 'content-image-list';
+$ const images = getAsArray(input, 'imageConnection.edges').map(({ node }) => node);
+
+<if(images.length)>
+  <div class=block>
+    <for|image, index| of=images>
+      <div class=`${block}__item`>
+        <cms-text-element tag="div" class="title" field="displayName" obj=image />
+        <div class=`${block}__image`>
+          <!-- @todo Add support for responsive images / size variance based on context -->
+          <cms-image-element
+            block=block
+            lazyload=false
+            obj=image
+            options={ w: 720, h: 405, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+          />
+        </div>
+        <cms-text-element tag="div" class="caption" field="caption" obj=image asHTML=true />
+        <cms-text-element tag="div" class="credit" field="credit" obj=image />
+      </div>
+    </for>
+  </div>
+</if>
