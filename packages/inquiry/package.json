@@ -1,19 +1,16 @@
 {
-  "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.11.0",
+  "name": "@endeavorb2b/base-website-inquiry",
+  "version": "0.11.2",
   "private": true,
   "dependencies": {
     "@base-cms/marko-web": "^0.9.36",
+    "@base-cms/web-common": "^0.9.34",
     "@base-cms/object-path": "^0.9.0",
     "@base-cms/utils": "^0.9.0",
+    "@endeavorb2b/base-website-common": "^0.11.2",
     "@endeavorb2b/base-website-routing-utils": "^0.11.2",
-    "apollo-cache-inmemory": "^1.6.0",
-    "apollo-client": "^2.6.0",
-    "apollo-link-http": "^1.5.14",
     "body-parser": "^1.19.0",
-    "cookie": "0.3.1",
     "express": "^4.16.4",
-    "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
     "node-fetch": "^2.6.0"
   },

@@ -36,7 +36,11 @@ $ const displayPrimaryImage = (content.type === 'whitepaper') ? false : true;
 
     <div class="row">
       <div class="col-lg-8">
-        <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
+        $ const showInquiry = site.get('inquiry.enabled') && ['product', 'company'].includes(content.type);
+        <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage show-inquiry-button=showInquiry />
+        <if(showInquiry)>
+          <endeavor-content-block-inquiry-form content=content />
+        </if>
       </div>
 
       <aside class="col-lg-4">
