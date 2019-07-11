@@ -1,5 +1,4 @@
 const { getAsArray } = require('@base-cms/object-path');
-const { SENDGRID_DEV_TO, isDev } = require('../env');
 
 module.exports = (template, locals, content, req) => {
   const { body: payload, hostname: domain } = req;
@@ -10,6 +9,7 @@ module.exports = (template, locals, content, req) => {
     to: directSend && contacts.length ? contacts : sendTo,
     cc: directSend && contacts.length ? sendTo : undefined,
     bcc: sendBcc,
+    from: site.get('inquiry.sendFrom'),
   };
   const subject = 'A new inquiry submission was received.';
   const input = {
@@ -19,13 +19,8 @@ module.exports = (template, locals, content, req) => {
     addresses,
     domain,
     payload,
-    isDev,
+    isDev: process.env === 'development',
   };
   const html = template.renderToString(input);
-  const emails = isDev ? { to: SENDGRID_DEV_TO } : addresses;
-  return {
-    html,
-    subject,
-    addresses: { ...emails, from: site.get('inquiry.sendFrom') },
-  };
+  return { html, subject, addresses };
 };

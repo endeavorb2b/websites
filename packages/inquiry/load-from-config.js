@@ -1,4 +1,3 @@
-require('./env');
 const router = require('./routers');
 const defaultNotificationTemplate = require('./templates/notification.marko');
 const defaultSubmissionTemplate = require('./templates/confirmation.marko');

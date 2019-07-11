@@ -1,12 +1,13 @@
-const { SENDGRID_DEV_TO, isDev } = require('../env');
-
 module.exports = (template, locals, content, req) => {
   const { email } = req.body;
   const { site } = locals;
   const { sendBcc } = site.getAsObject('inquiry');
 
-  const addresses = { to: email };
-  if (sendBcc) addresses.bcc = sendBcc;
+  const addresses = {
+    to: email,
+    from: site.get('inquiry.sendFrom'),
+    bcc: sendBcc,
+  };
   const subject = 'Your inquiry was received.';
   const input = {
     $global: locals,
@@ -15,10 +16,5 @@ module.exports = (template, locals, content, req) => {
     addresses,
   };
   const html = template.renderToString(input);
-  const emails = isDev ? { to: SENDGRID_DEV_TO } : addresses;
-  return {
-    html,
-    subject,
-    addresses: { ...emails, from: site.get('inquiry.sendFrom') },
-  };
+  return { html, subject, addresses };
 };
