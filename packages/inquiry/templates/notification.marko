@@ -2,13 +2,13 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const styles = 'table {width: 630px;margin: 0 auto;} .danger { color: red } body{font-family: sans-serif; color: #333; margin: 0;}h1{font-family: monospace; line-height: 58px; text-align:center; margin: 0;}.subject, .footer{text-align:center; border-top: 1px solid #EEE; padding: 1em;}.footer{font-family: monospace; color: #CCC;}';
 $ const { domain, subject, isDev, addresses } = input;
-$ const { site, config } = out.global;
+$ const { site, config, req } = out.global;
+$ const { hostname } = req;
 $ const inquiry = site.getAsObject('inquiry');
-
 $ const content = getAsObject(input, 'content');
 $ const company = getAsObject(content, 'company');
 $ const payload = getAsObject(input, 'payload');
-$ const url = `https://${domain}/${content.id}`;
+$ const url = `https://${hostname}/${content.id}`;
 $ const bgColor = site.get('inquiry.bgColor', 'transparent');
 
 <!doctype html>
@@ -38,8 +38,7 @@ $ const bgColor = site.get('inquiry.bgColor', 'transparent');
         <tr>
           <td>
             <p style="font-family:Arial; font-size:12px;">
-              <!-- @todo pull from `req` -->
-              This e-mail is being sent to you because a user submitted an inquiry on ${domain}.
+              This e-mail is being sent to you because a user submitted an inquiry on ${hostname}.
             </p>
             <p style="font-family:Arial; font-size:12px;">
               To ensure that you receive future automatic notifications, please whitelist ${site.get('inquiry.fromEmail')}.

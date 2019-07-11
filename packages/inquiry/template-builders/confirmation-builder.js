@@ -6,6 +6,8 @@
  * @param global    The marko globals to provide to the template
  * @param content   The platform.Content model to use in the template.
  * @param email     The email address this confirmation should be sent to
+ * @param from      The address emails will be sent from.
+ * @param bcc       The address(s) that will be blind copied on the email.
  * @returns Object  An object containing the rendered html, subject line, and addresses
  */
 module.exports = ({
@@ -13,14 +15,13 @@ module.exports = ({
   $global,
   content,
   email,
+  bcc,
+  from,
 }) => {
-  const { site } = $global;
-  const { sendBcc } = site.getAsObject('inquiry');
-
   const addresses = {
     to: email,
-    from: site.get('inquiry.sendFrom'),
-    bcc: sendBcc,
+    from,
+    bcc,
   };
   const subject = 'Your inquiry was received.';
   const input = {

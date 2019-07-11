@@ -5,6 +5,13 @@ const buildMarkoGlobal = require('@endeavorb2b/base-website-routing-utils/build-
 const { notificationBuilder, confirmationBuilder } = require('../template-builders');
 
 module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(async (req, res) => {
+  const { site } = res.app.locals;
+  const {
+    sendBcc: bcc,
+    sendFrom: from,
+    sendTo: to,
+    directSend,
+  } = site.getAsObject('inquiry');
   const $global = buildMarkoGlobal(res);
   const { apollo } = req;
   const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
@@ -13,6 +20,10 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
     $global,
     content,
     payload: req.body,
+    to,
+    from,
+    bcc,
+    directSend,
   }));
   if (req.body.confirmationEmail) {
     await send(confirmationBuilder({
@@ -20,6 +31,8 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
       $global,
       content,
       email: req.body.confirmationEmail,
+      from,
+      bcc,
     }));
   }
   res.json({ ok: true });
