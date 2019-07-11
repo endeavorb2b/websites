@@ -238,6 +238,7 @@ module.exports = {
   - If `directSend: true` and sales contacts exist, will be CC'd instead of TO'd.
 - `supportEmail` (String): The support email address, included in notification footer if present.
 - `logo` (URI): The site logo, included in the header if present.
+- `bgColor` (String): If present, changes the background color of email headers.
 - `mountTo` (String): The URI path prefix for inquiry routes used during [Routing](#routing) configuration.
 - `debug` (Boolean): If debug logging messages will be output regarding component and routing registration.
 

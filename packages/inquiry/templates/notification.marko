@@ -8,7 +8,8 @@ $ const inquiry = site.getAsObject('inquiry');
 $ const content = getAsObject(input, 'content');
 $ const company = getAsObject(content, 'company');
 $ const payload = getAsObject(input, 'payload');
-$ const url = `https://${domain}/${content.canonicalPath}`;
+$ const url = `https://${domain}/${content.id}`;
+$ const bgColor = site.get('inquiry.bgColor', 'transparent');
 
 <!doctype html>
 <html>
@@ -20,7 +21,7 @@ $ const url = `https://${domain}/${content.canonicalPath}`;
     <table>
       <tbody>
         <tr>
-          <td>
+          <td bgColor=bgColor style="text-align: center">
             <if(inquiry.logo)>
               <img src=inquiry.logo alt=config.get('siteName') />
             </if>
