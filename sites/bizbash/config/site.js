@@ -60,7 +60,7 @@ module.exports = {
       { href: '/page/privacy-policy', label: 'Privacy Policy' },
     ],
   },
-  gtmContainer: 'GTM-5TWCFJ',
+  // gtmContainer: 'GTM-5TWCFJ',
   search: {
     engine: 'google',
     apiKey: '017383739850048358259:p0nyaiybgnq',
