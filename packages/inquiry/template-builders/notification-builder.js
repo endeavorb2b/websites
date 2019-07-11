@@ -1,7 +1,20 @@
 const { getAsArray } = require('@base-cms/object-path');
 
-module.exports = (template, locals, content, req) => {
-  const { body: payload, hostname: domain } = req;
+/**
+ * Generates an HTML email template notifying contact(s) of a user's inquiry.
+ *
+ * @param template  The marko template to render
+ * @param locals    The marko globals to provide to the template
+ * @param content   The platform.Content model to use in the template.
+ * @param payload   An object containing the user's submitted data.
+ * @returns Object  An object containing the rendered html, subject line, and addresses
+ */
+module.exports = ({
+  template,
+  locals,
+  content,
+  payload,
+}) => {
   const { site } = locals;
   const { sendTo, sendBcc, directSend } = site.getAsObject('inquiry');
   const contacts = getAsArray(content, 'inquiryContacts').map(({ name, email }) => ({ name, email }));
@@ -17,7 +30,6 @@ module.exports = (template, locals, content, req) => {
     content,
     subject,
     addresses,
-    domain,
     payload,
     isDev: process.env === 'development',
   };

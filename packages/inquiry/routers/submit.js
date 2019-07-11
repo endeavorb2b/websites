@@ -7,9 +7,19 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
   const { locals } = res.app;
   const { apollo } = req;
   const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
-  await send(notificationBuilder(notification, locals, content, req));
+  await send(notificationBuilder({
+    template: notification,
+    locals,
+    content,
+    payload: req.body,
+  }));
   if (req.body.confirmationEmail) {
-    await send(confirmationBuilder(confirmation, locals, content, req.body.confirmationEmail));
+    await send(confirmationBuilder({
+      template: confirmation,
+      locals,
+      content,
+      email: req.body.confirmationEmail,
+    }));
   }
   res.json({ ok: true });
 });
