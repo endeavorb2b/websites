@@ -3,18 +3,18 @@
  * notifying them that it was received.
  *
  * @param template  The marko template to render
- * @param locals    The marko globals to provide to the template
+ * @param global    The marko globals to provide to the template
  * @param content   The platform.Content model to use in the template.
  * @param email     The email address this confirmation should be sent to
  * @returns Object  An object containing the rendered html, subject line, and addresses
  */
 module.exports = ({
   template,
-  locals,
+  $global,
   content,
   email,
 }) => {
-  const { site } = locals;
+  const { site } = $global;
   const { sendBcc } = site.getAsObject('inquiry');
 
   const addresses = {
@@ -24,7 +24,7 @@ module.exports = ({
   };
   const subject = 'Your inquiry was received.';
   const input = {
-    $global: locals,
+    $global,
     content,
     subject,
     addresses,
