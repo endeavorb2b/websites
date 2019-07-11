@@ -25,12 +25,8 @@ $ const displayMedia = input.displayPrimaryImage && primaryImage.src && content.
           options={ w: 720, h: 405, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
         />
       </div>
-      <if(primaryImage.caption)>
-        <span class="caption">${primaryImage.caption}</span>
-      </if>
-      <if(primaryImage.credit)>
-        <span class="credit">${primaryImage.credit}</span>
-      </if>
+        <cms-text-element tag="div" class="caption" field="caption" obj=primaryImage asHTML=true />
+        <cms-text-element tag="div" class="credit" field="credit" obj=primaryImage />
     </else-if>
   </div>
 </if>
