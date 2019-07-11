@@ -545,9 +545,10 @@ $theme-site-navbar-logo-height-sm:     $theme-site-navbar-logo-height / 2 !defau
 
 $theme-site-navbar-icon-transition:  fill ease 300ms !default;
 
-$theme-site-navbar-menu-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
-$theme-site-navbar-menu-width:      264px !default;
-$theme-site-navbar-menu-max-width:  75vw !default;
+$theme-site-navbar-menu-box-shadow:             0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
+$theme-site-navbar-menu-width:                  264px !default;
+$theme-site-navbar-menu-max-width:              75vw !default;
+$theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 60%) !default;
 
 @function get-navbar-breakpoints-for($target) {
   $target-size: map-get($theme-site-header-breakpoints, $target);

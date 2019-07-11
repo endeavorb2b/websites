@@ -253,13 +253,12 @@
   }
 
   &__list-group-item {
-    // @include theme-item();
     padding: .5rem 1rem;
     font-size: 14px;
 
-    // &:hover {
-    //   background-color: $theme-site-nav-menu-hover-color;
-    // }
+    &:hover {
+      background-color: $theme-site-navbar-menu-hover-background-color;
+    }
 
     &:last-child {
       border-bottom-right-radius: 0;
