@@ -3,9 +3,9 @@
   "version": "0.11.9",
   "private": true,
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.36",
-    "@base-cms/object-path": "^0.9.0",
-    "@base-cms/utils": "^0.9.0",
+    "@base-cms/marko-web": "^0.9.38",
+    "@base-cms/object-path": "^0.9.38",
+    "@base-cms/utils": "^0.9.38",
     "@endeavorb2b/base-website-routing-utils": "^0.11.9",
     "apollo-cache-inmemory": "^1.6.0",
     "apollo-client": "^2.6.0",

@@ -8,9 +8,9 @@
     "lint": "basecms-website lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.36",
-    "@base-cms/object-path": "^0.9.0",
-    "@base-cms/web-cli": "^0.9.36",
+    "@base-cms/marko-web": "^0.9.38",
+    "@base-cms/object-path": "^0.9.38",
+    "@base-cms/web-cli": "^0.9.38",
     "@endeavorb2b/base-website-common": "^0.11.9",
     "@endeavorb2b/base-website-identity-x": "^0.11.9",
     "@endeavorb2b/base-website-themes": "^0.11.9",
