@@ -409,12 +409,15 @@ $theme-ad-sticky-leaderboard-close-size:        1.25rem !default;
 $theme-site-header-breakpoints: () !default;
 $theme-site-header-breakpoints: map-merge(
   (
-    small-logo: 768px
+    hide-primary: 768px,
+    hide-secondary: 768px,
+    hide-tertiary: 768px,
+    small-logo: 768px,
+    small-text-primary: 768px,
+    small-text-secondary: 768px
   ),
   $theme-site-header-breakpoints
 );
-
-// secondary height, normal: $theme-site-navbar-brand-margin-y + $theme-site-navbar-logo-height + $theme-site-navbar-secondary-padding-y
 
 $theme-site-header-box-shadow:  $theme-box-shadow-lg !default;
 $theme-site-header-font-family: $theme-font-family-sans-serif !default;
