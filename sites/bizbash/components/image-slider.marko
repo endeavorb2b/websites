@@ -19,7 +19,7 @@ $ const imageFormat = (image) => {
   $ const images = connection.map(({ node }) => imageFormat(node));
   <div class="row">
     <div class="col">
-      <cms-browser-component name="RelatedImageCarousel" props={ images } />
+      <cms-browser-component name="ImageSlider" props={ images } />
     </div>
   </div>
 </if>
