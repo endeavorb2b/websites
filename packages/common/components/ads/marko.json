@@ -1,7 +1,7 @@
 {
   "tags": {
     "endeavor-ad-gam-head": {
-      "template": "./gam-ad-head",
+      "template": "./gam-ad-head.marko",
       "@enable-single-request": {
         "type": "boolean",
         "default-value": true
