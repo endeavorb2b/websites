@@ -1,7 +1,6 @@
 {
   "taglib-id": "@endeavorb2b/base-website-themes",
   "taglib-imports": [
-    "./default/marko.json",
-    "./pennwell/marko.json"
+    "./default/marko.json"
   ]
 }
