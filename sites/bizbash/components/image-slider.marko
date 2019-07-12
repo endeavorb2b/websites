@@ -1,0 +1,25 @@
+import { buildImgixUrl } from '@base-cms/image';
+import { getAsArray } from '@base-cms/object-path';
+
+$ const connection = getAsArray(input, 'images.edges');
+$ const imageOptions = {
+  fit: 'crop',
+  crop: 'focalpoint',
+  fpX: 0.5,
+  fpY: 0.5,
+  h: 515,
+  w: 1200,
+};
+$ const imageFormat = (image) => {
+  const src = buildImgixUrl(image.src, imageOptions);
+  return { ...image, src };
+};
+
+<if(connection.length)>
+  $ const images = connection.map(({ node }) => imageFormat(node));
+  <div class="row">
+    <div class="col">
+      <cms-browser-component name="RelatedImageCarousel" props={ images } />
+    </div>
+  </div>
+</if>

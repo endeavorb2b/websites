@@ -1,0 +1,6 @@
+{
+  "taglib-id": "@endeavorb2b/bizbash",
+  "taglib-imports": [
+    "./components/marko.json"
+  ]
+}
