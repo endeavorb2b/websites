@@ -2,6 +2,9 @@
   "tags": {
     "bizbash-image-slider": {
       "template": "./image-slider"
+    },
+    "bizbash-rmi-form": {
+      "template": "./rmi-form"
     }
   }
 }

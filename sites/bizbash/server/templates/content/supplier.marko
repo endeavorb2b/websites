@@ -13,7 +13,6 @@ $ const adSlots = {
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
-$ const displayPrimaryImage = (content.type === 'whitepaper') ? false : true;
 
 <theme-pennwell-content-layout content=content>
   <@head>
@@ -28,17 +27,17 @@ $ const displayPrimaryImage = (content.type === 'whitepaper') ? false : true;
 
   <div class="page-wrapper">
     <bizbash-image-slider images=content.images />
+    <div class="page-wrapper__header">
+      <endeavor-content-block-page-header content=content />
+    </div>
 
     <div class="row">
       <div class="col-lg-8">
-        <div class="page-wrapper__header">
-          <endeavor-content-block-page-header content=content />
-        </div>
-        <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
+        <endeavor-content-block-page-body content=content display-primary-image=false  />
       </div>
 
       <aside class="col-lg-4">
-        [ RMI FORM ]
+        <bizbash-rmi-form content=content />
       </aside>
     </div>
   </div>
