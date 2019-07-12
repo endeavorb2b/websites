@@ -1,2 +1,10 @@
-@import "variables";
-@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+$primary: #1371b8 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-navbar-secondary-bg-color: #fff;
+$theme-site-navbar-secondary-type: light;
+
+@import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";

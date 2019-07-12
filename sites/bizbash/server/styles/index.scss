@@ -1,3 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i&Open+Sans:300,300i,400,700,700i");
-@import "variables";
-@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+
+$primary: #005ea0 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+
+$theme-font-family-sans-serif: "Open Sans", sans-serif !default;
+$theme-font-family-serif: "Open Sans", sans-serif !default;
+$theme-font-family-page-title: "Source Sans Pro", "Georgia", "Times New Roman", "Times", serif !default;
+
+$enable-shadows: false !default;
+$enable-rounded: false !default;
+
+$black: #333 !default;
+$white: #fff;
+$gray: rgba(0, 0, 0, .54) !default;
+$body-color: $black !default;
+$body-bg: #fff !default;
+$font-weight-bold: 600 !default;
+
+@import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
