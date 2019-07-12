@@ -592,8 +592,29 @@ $theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-prima
   @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
 }
 
+// Site Footer
+$theme-site-footer-box-shadow:  $theme-box-shadow-lg !default;
+$theme-site-footer-font-family: $theme-site-header-font-family !default;
+$theme-site-footer-font-size:   16px !default;
+$theme-site-footer-font-weight: $font-weight-normal !default;
+$theme-site-footer-line-height: get-line-height($theme-site-footer-font-size, 24px) !default;
+$theme-site-footer-opacity:     .98 !default;
+$theme-site-footer-spacer:      map-get($spacers, 3) !default;
+$theme-site-footer-spacer-sm:   map-get($spacers, 2) !default;
+
+$theme-site-footer-copyright-color:       $light !default;
+$theme-site-footer-copyright-font-size:   14px !default;
+$theme-site-footer-copyright-font-weight: $font-weight-normal !default;
+$theme-site-footer-copyright-line-height: get-line-height($theme-site-footer-copyright-font-size, 21px) !default;
+
+$theme-site-footer-logo-box-shadow: 2px 2px 2px rgba(0, 0, 0, .5) !default;
+$theme-site-footer-logo-height:     60px !default;
+$theme-site-footer-logo-height-sm:  $theme-site-footer-logo-height / 2 !default;
+
 $theme-site-footer-primary-bg-color:    $theme-site-navbar-primary-bg-color !default;
+$theme-site-footer-primary-type:        dark !default;
 $theme-site-footer-secondary-bg-color:  $theme-site-navbar-secondary-bg-color !default;
+$theme-site-footer-secondary-type:      dark !default;
 
 @import "theme/ads";
 @import "theme/breadcrumbs";
