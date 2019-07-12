@@ -81,7 +81,7 @@ module.exports = {
       bgColor: '#0072bc',
       logo: 'https://base.imgix.net/files/base/pennwell/ww/logo.png?h=60',
     },
-    to: 'amyb@pennwell.com',
+    to: 'abailie@endeavorb2b.com',
   },
   wufoo: {
     userName: 'cygnuscorporate',
