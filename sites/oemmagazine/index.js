@@ -9,7 +9,7 @@ const coreConfig = require('./config/core');
 
 const { log } = console;
 
-startServer({
+module.exports = startServer({
   rootDir: __dirname,
   coreConfig,
   siteConfig,
