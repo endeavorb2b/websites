@@ -11,7 +11,7 @@ $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
 };
-$ const displayPrimaryImage = (content.type === 'whitepaper') ? false : true;
+$ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
 <theme-default-content-layout content=content>
   <@head>

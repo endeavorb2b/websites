@@ -1,3 +1,4 @@
+const loadInquiry = require('@endeavorb2b/base-website-inquiry/load-from-config');
 const contentTypes = require('./content');
 const dynamicPages = require('./dynamic-page');
 const home = require('./home');
@@ -9,6 +10,9 @@ const subscribe = require('./subscribe');
 const websiteSections = require('./website-section');
 
 module.exports = (app) => {
+  // Load Inquiry routing
+  loadInquiry(app);
+
   // Homepage
   home(app);
 

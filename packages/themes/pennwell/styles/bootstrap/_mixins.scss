@@ -254,6 +254,12 @@
   }
 }
 
+@mixin theme-media-title() {
+  @include theme-media-common-footer();
+  font-weight: 800;
+  color: $black;
+}
+
 @mixin theme-media-caption() {
   @include theme-media-common-footer();
   font-weight: 600;

@@ -4,15 +4,15 @@ module.exports = {
   ads,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=120 2x',
       ],
     },
   },
@@ -27,6 +27,7 @@ module.exports = {
     { href: '/style-decor', label: 'Style & Decor' },
     { href: '/catering', label: 'Catering' },
     { href: '/bizbash-lists', label: 'Bizbash Lists' },
+    { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
   ],
   secondaryNavItems: [
     { href: '/gathergeeks', label: 'GatherGeeks' },
@@ -38,10 +39,9 @@ module.exports = {
   ],
   footerNavItems: [
     { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
+    { href: '/page/contact-us', label: 'Contact Us' },
     { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: '/page/terms-conditions', label: 'Terms & Conditions', target: '_blank' },
+    { href: '/page/privacy-policy', label: 'Privacy Policy' },
   ],
   menuItems: {
     resources: [
@@ -56,9 +56,8 @@ module.exports = {
       { href: '/subscribe', label: 'Subscribe' },
       { href: '/page/advertise', label: 'Advertise' },
       { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: '/page/terms-conditions', label: 'Terms & Conditions', target: '_blank' },
+      { href: '/page/contact-us', label: 'Contact Us' },
+      { href: '/page/privacy-policy', label: 'Privacy Policy' },
     ],
   },
   // gtmContainer: 'GTM-5TWCFJ',

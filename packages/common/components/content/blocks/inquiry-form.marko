@@ -1,0 +1,14 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const content = getAsObject(input, 'content');
+
+<div class="page-wrapper__body">
+  <hr id="inquiry-form">
+  <p>Fill out the form below to request more information about
+    <cms-content-name tag=null obj=content link=true />
+    <cms-content-name tag=null obj=content.company link=true>
+      <@before>&nbsp;from&nbsp;</@before>
+    </cms-content-name>
+  </p>
+  <cms-browser-component name="InquiryForm" props={ contentId: content.id } />
+</div>

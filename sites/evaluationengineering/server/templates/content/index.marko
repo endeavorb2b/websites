@@ -12,7 +12,7 @@ $ const adSlots = {
   'gpt-ad-right1': getAdUnit(site, { name: 'MR', aliases }),
   'gpt-ad-right2': getAdUnit(site, { name: 'MR', aliases }),
 };
-$ const displayPrimaryImage = (content.type === 'whitepaper') ? false : true;
+$ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
 <theme-default-content-layout content=content>
   <@head>

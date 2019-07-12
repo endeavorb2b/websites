@@ -14,6 +14,20 @@
         "required": true
       }
     },
+    "endeavor-content-block-inquiry-button": {
+      "template": "./inquiry-button.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
+    "endeavor-content-block-inquiry-form": {
+      "template": "./inquiry-form.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      }
+    },
     "endeavor-content-block-primary-media": {
       "template": "./primary-media.marko",
       "@content": {
@@ -48,7 +62,15 @@
       "@display-primary-image": {
         "type": "boolean",
         "default-value": true
+      },
+      "@show-inquiry-button": {
+        "type": "boolean",
+        "default-value": false
       }
+    },
+    "endeavor-content-block-image-list": {
+      "template": "./image-list.marko",
+      "@image-connection": "object"
     },
     "endeavor-content-block-item": {
       "template": "./item.marko",
