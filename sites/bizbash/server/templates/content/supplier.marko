@@ -23,14 +23,14 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+    <bizbash-image-slider images=content.images />
   </@above-container>
 
   <div class="page-wrapper">
     <div class="page-wrapper__header">
       <endeavor-content-block-page-header content=content />
     </div>
-
-    <bizbash-image-slider images=content.images />
 
     <div class="row">
       <div class="col-lg-8">
@@ -44,11 +44,11 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-      <endeavor-content-query-load-more-company
-        header=`More from ${content.name}`
-        query={ companyId: content.id }
-        ads={ aliases }
-      />
+    <endeavor-content-query-load-more-related
+      header=`More from ${content.name}`
+      query={ contentId: content.id }
+      ads={ aliases }
+    />
   </@below-container>
 
   <@footer>
