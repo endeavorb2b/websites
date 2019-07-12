@@ -2,7 +2,11 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
 
-<h3>Request More Information</h3>
-<hr id="inquiry-form">
-<p>Fill out the form below to request more information about <cms-content-name tag=null obj=content link=false /></p>
-<cms-browser-component name="InquiryForm" props={ contentId: content.id } />
+<div class="card">
+  <div class="card-header">Request More Information</div>
+  <div class="card-body">
+    <p>Fill out the form below to request more information about <cms-content-name tag=null obj=content link=false />.</p>
+    <hr id="inquiry-form">
+    <cms-browser-component name="InquiryForm" props={ contentId: content.id } />
+  </div>
+</div>

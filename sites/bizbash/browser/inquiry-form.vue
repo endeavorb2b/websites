@@ -62,7 +62,7 @@
     </div>
 
     <pre class="alert alert-danger text-danger" v-if="error">An error occurred: {{ error }}</pre>
-    <button type="submit" class="btn btn-lg btn-primary" :disabled="loading">Submit</button>
+    <button type="submit" class="btn btn-block btn-lg btn-primary" :disabled="loading">Submit</button>
   </form>
   <div v-else>
     Thanks for your inquiry! We'll reach out shortly.
