@@ -8,7 +8,7 @@
     "lint": "yarn lint:js && yarn lint:css",
     "lint:js": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
     "lint:css": "stylelint ./**/*.scss --max-warnings 5",
-    "test": "yarn lint"
+    "test": "yarn lint && yarn build"
   },
   "dependencies": {
     "@base-cms/marko-web": "^0.9.38",
