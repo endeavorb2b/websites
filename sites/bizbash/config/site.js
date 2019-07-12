@@ -4,15 +4,15 @@ module.exports = {
   ads,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=120 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=120 2x',
       ],
     },
   },
