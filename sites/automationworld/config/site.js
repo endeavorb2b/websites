@@ -5,9 +5,9 @@ module.exports = {
   company: 'PMMI Media Group',
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/pmmi/aw/logo.png?h=60',
+      src: 'https://base.imgix.net/files/base/pmmi/aw/logo.png?h=40',
       srcset: [
-        'https://base.imgix.net/files/base/pmmi/aw/logo.png?h=120 2x',
+        'https://base.imgix.net/files/base/pmmi/aw/logo.png?h=80 2x',
       ],
     },
     footer: {
