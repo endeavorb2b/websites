@@ -33,7 +33,6 @@ module.exports = {
     { href: '/pavement-maintenance', label: 'Pavement & Maintenance' },
     { href: '/profit-matters', label: 'Profit Matters' },
     { href: '/equipment-management', label: 'Equipment Management' },
-    { href: '/equipment-management2', label: 'Equipment Mana' },
   ],
   secondaryNavItems: [
     { href: 'https://www.constructionnetworkmediakit.com/', label: 'Advertise', target: '_blank' },
