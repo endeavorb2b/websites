@@ -8,4 +8,15 @@ $theme-site-navbar-secondary-bg-color: #045866;
 $theme-site-navbar-primary-bg-color: $primary;
 $theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 65%);
 
+$theme-site-navbar-logo-height: 55px;
+$theme-site-navbar-logo-height-sm: 30px;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 870px,
+  hide-secondary: 804px,
+  small-logo: 894px,
+  small-text-primary: 976px,
+  small-text-secondary: 976px
+);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
