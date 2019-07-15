@@ -4,6 +4,27 @@ const contentPageFragment = require('@endeavorb2b/base-website-themes/default/ap
 module.exports = gql`
   fragment BzbContentPageFragment on Content {
     ...ContentPageFragment
+    ... on ContentTopList {
+      relatedTo(input:{sort:{order:values}}) {
+        edges {
+          node {
+            id
+            shortName
+            canonicalPath
+            images {
+              edges {
+                node {
+                  id
+                  src
+                  alt
+                  displayName
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     ... on ContentSupplier {
       images {
         edges {

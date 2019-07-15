@@ -3,6 +3,12 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
+    "bizbash-top-list-galleries": {
+      "template": "./top-list-galleries.marko"
+    },
+    "bizbash-image-list": {
+      "template": "./image-list.marko"
+    },
     "bizbash-inquiry-form": {
       "template": "./inquiry-form.marko"
     }

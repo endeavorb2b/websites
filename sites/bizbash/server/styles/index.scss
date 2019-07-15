@@ -64,3 +64,45 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
     content: "*";
   }
 }
+
+.top-list {
+  &__title {
+    @include theme-page-body-spacing();
+    @include theme-content-heading(h4);
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: map-get($spacers, block);
+  }
+  &__column {
+    margin-bottom: map-get($spacers, block);
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+  &__link {
+    display: block;
+  }
+  &__overlay {
+    small {
+      margin: 0 auto;
+      color: $white;
+    }
+    position: absolute;
+    top: 0;
+    right: .9rem;
+    bottom: 0;
+    left: .9rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+  }
+  &__overlay:empty {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+import { buildImgixUrl } from '@base-cms/image';
+import { getAsArray } from '@base-cms/object-path';
+
+$ const connection = getAsArray(input, 'galleries.edges');
+
+<if(connection.length)>
+  $ const galleries = connection.map(({ node }) => node);
+  <for|gallery| of=galleries>
+    <h4 class="top-list__title">${gallery.shortName}</h4>
+    <bizbash-image-list link=gallery.canonicalPath images=gallery.images />
+  </for>
+</if>

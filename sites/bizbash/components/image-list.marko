@@ -1,0 +1,33 @@
+import { buildImgixUrl } from '@base-cms/image';
+import { getAsArray } from '@base-cms/object-path';
+
+$ const block = 'top-list';
+$ const connection = getAsArray(input, 'images.edges');
+$ const imageOptions = {
+  fit: 'crop',
+  crop: 'focalpoint',
+  fpX: 0.5,
+  fpY: 0.5,
+  w: 680,
+  h: 380,
+};
+$ const imageFormat = (image) => {
+  const src = buildImgixUrl(image.src, imageOptions);
+  return { ...image, src };
+};
+
+<if(connection.length)>
+  $ const images = connection.map(({ node }) => imageFormat(node));
+  <div class=`${block}__row`>
+    <for|image| of=images>
+      <div class=`${block}__column`>
+        <a class=`${block}__link` href=input.link title="View Image Gallery">
+          <img class="img-fluid" src=image.src alt=image.alt />
+          <div class=`${block}__overlay`>
+            <small>${image.displayName}</small>
+          </div>
+        </a>
+      </div>
+    </for>
+  </div>
+</if>
