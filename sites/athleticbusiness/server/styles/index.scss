@@ -4,4 +4,12 @@ $light: #e9ecef !default; // equivalent to default gray-200
 $dark: #212529 !default; // equivalent to default gray-900
 $info: #6c757d !default; // equivalent to default gray-600
 
+$theme-site-header-breakpoints: (
+  hide-primary: 800px,
+  hide-secondary: 660px,
+  small-logo: 775px,
+  small-text-primary: 910px,
+  small-text-secondary: 840px
+);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
