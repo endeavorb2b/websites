@@ -15,10 +15,14 @@ $enable-shadows: false !default;
 $enable-rounded: false !default;
 
 $black: #333 !default;
-$white: #fff;
-$gray: rgba(0, 0, 0, .54) !default;
-$body-color: $black !default;
 $body-bg: #fff !default;
-$font-weight-bold: 600 !default;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 836px,
+  hide-secondary: 916px,
+  small-logo: 1012px,
+  small-text-primary: 935px,
+  small-text-secondary: 1120px
+);
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
