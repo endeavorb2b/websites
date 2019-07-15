@@ -4,14 +4,7 @@
       <li data-target="#image-slider" v-for="(image, index) in images" :data-slide-to="index" :class="{ active: index === activeIndex }" @click="set(index)" />
     </ol>
     <div class="carousel-inner">
-      <div v-for="(image, index) in images" class="carousel-item" :class="{ active: index === activeIndex }">
-        <img class="d-block w-100" :src="image.src" :alt="image.alt" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5 v-if="image.displayName">{{ image.displayName }}</h5>
-          <p v-if="image.caption">{{ image.caption }}</p>
-          <p v-if="image.credit">{{ image.credit }}</p>
-        </div>
-      </div>
+      <ImageSlide v-for="(image, index) in images" :key="index" :length="images.length" :index="index" :image="image" :activeIndex="activeIndex" />
     </div>
     <a href="#" class="carousel-control-prev" role="button" data-slide="prev" @click="decrement">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -27,18 +20,15 @@
 .carousel-indicators {
   margin-bottom: 0;
 }
-.carousel-caption {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 1rem;
-  text-shadow: rgba(0, 0, 0, .6) 0 1px 2px;
-  background: rgba(0, 0, 0, .75);
-}
 </style>
 
 <script>
+import ImageSlide from './image-slide.vue';
+
 export default {
+  components: {
+    ImageSlide,
+  },
   data: () => ({
     activeIndex: 0,
   }),
@@ -49,16 +39,13 @@ export default {
     increment() {
       const { activeIndex } = this;
       const length = this.images.length; //
-      this.activeIndex = (activeIndex + 1 >= length) ? 0 : activeIndex + 1;
+      this.activeIndex = (activeIndex + 1 >= length) ? activeIndex : activeIndex + 1;
     },
     decrement() {
       const { activeIndex } = this;
       const length = this.images.length; //
-      this.activeIndex = (activeIndex - 1 < 0) ? length - 1 : activeIndex - 1;
+      this.activeIndex = (activeIndex - 1 < 0) ? activeIndex : activeIndex - 1;
     },
-  },
-  computed: {
-
   },
   props: {
     images: {
