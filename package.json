@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "node_modules/.bin/lerna run lint",
     "deploy": "scripts/deploy.js",
-    "test": "node compile.js && node_modules/.bin/lerna run test --parallel"
+    "test": "node compile.js && node_modules/.bin/lerna run test --concurrency=4"
   },
   "devDependencies": {
     "lerna": "^3.13.1"
