@@ -1,10 +1,16 @@
 <template>
   <div class="carousel-item" :class="classNames">
-    <img class="d-block w-100" :src="image.src" :alt="image.alt" />
+    <img class="d-block w-100" :src="image.src" :alt="image.alt">
     <div class="carousel-caption d-none d-md-block">
-      <h5 v-if="image.displayName">{{ image.displayName }}</h5>
-      <p v-if="image.caption">{{ image.caption }}</p>
-      <p v-if="image.credit">{{ image.credit }}</p>
+      <h5 v-if="image.displayName">
+        {{ image.displayName }}
+      </h5>
+      <p v-if="image.caption">
+        {{ image.caption }}
+      </p>
+      <p v-if="image.credit">
+        {{ image.credit }}
+      </p>
     </div>
   </div>
 </template>
