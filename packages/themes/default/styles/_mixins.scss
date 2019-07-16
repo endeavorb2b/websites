@@ -7,6 +7,8 @@
 
 @mixin theme-card-header() {
   font-family: $theme-card-header-font-family;
+  font-size: $theme-card-header-font-size;
+  font-weight: $theme-card-header-font-weight;
   color: $theme-card-header-color;
   text-transform: $theme-card-header-text-transform;
   letter-spacing: $theme-card-header-letter-spacing;
