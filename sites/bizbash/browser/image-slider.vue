@@ -19,22 +19,20 @@
       />
     </div>
     <a
-      href="#"
+      href="#previous-slide"
       class="carousel-control-prev"
       role="button"
       @click="decrement"
     >
-      <span class="carousel-control-prev-icon" aria-hidden="true" />
-      <span class="sr-only">Previous</span>
+      <span class="carousel-control-prev-icon" area-label="Next" aria-hidden="true" />
     </a>
     <a
-      href="#"
+      href="#next-slide"
       class="carousel-control-next"
       role="button"
       @click="increment"
     >
-      <span class="carousel-control-next-icon" aria-hidden="true" />
-      <span class="sr-only">Next</span>
+      <span class="carousel-control-next-icon" aria-label="Previous" aria-hidden="true" />
     </a>
   </div>
 </template>
