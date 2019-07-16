@@ -31,7 +31,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: $theme-item-header-margin;
     font-weight: $theme-item-header-font-weight;
     color: $theme-item-header-color;
     letter-spacing: $theme-item-header-letter-spacing;
@@ -49,12 +48,14 @@
   }
 
   &__header-left {
+    margin-bottom: $theme-item-header-margin;
     &:empty {
       display: none;
     }
   }
 
   &__header-right {
+    margin-bottom: $theme-item-header-margin;
     white-space: nowrap;
     &:empty {
       display: none;
