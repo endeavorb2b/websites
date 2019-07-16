@@ -1,10 +1,10 @@
 {
   "tags": {
     "bizbash-image-slider": {
-      "template": "./image-slider"
+      "template": "./image-slider.marko"
     },
     "bizbash-rmi-form": {
-      "template": "./rmi-form"
+      "template": "./rmi-form.marko"
     }
   }
 }
