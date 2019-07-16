@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700|Oswald:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700|Oswald:500,700&display=swap");
+
+// Bizbash specific vars
+$bizbash-letter-spacing: .1px;
 
 // Fonts
 // $theme-font-family-sans-serif: "Open Sans", sans-serif;
@@ -7,8 +10,9 @@ $theme-font-family-serif: "Open Sans", sans-serif;
 $theme-font-family-page-title: "Source Sans Pro", "Arial", sans-serif;
 
 // Colors
-$primary: #0072bb;
-$black:   #000;
+$primary:   #0072bb;
+$black:     #000;
+$gray-600:  #4d4d4d;
 
 // General Settings
 $body-bg: #fff;
@@ -29,15 +33,21 @@ $theme-heading-list-line-height:      23.345px;
 $theme-heading-list-line-height-sm:   21.345px;
 
 // Items
+$theme-item-footer-font-family:     "Oswald", "Arial", sans-serif;
+$theme-item-footer-font-size:       11px;
+$theme-item-footer-font-weight:     500;
+$theme-item-footer-text-transform:  uppercase;
+
 $theme-item-title-link-hover-decoration: none;
 
 // Cards
 $theme-card-header-background-color:  #fff;
-$theme-card-header-font-family:       "Oswald";
-$theme-card-header-font-weight:       700;
-$theme-card-header-font-size:         26.825px;
-$theme-card-header-link-color:        $primary;
 $theme-card-header-border:            none;
+$theme-card-header-font-family:       "Oswald", "Arial", sans-serif;
+$theme-card-header-font-size:         26.825px;
+$theme-card-header-font-weight:       700;
+$theme-card-header-letter-spacing:    $bizbash-letter-spacing;
+$theme-card-header-link-color:        $primary;
 
 // Navbar / Header
 $theme-site-header-breakpoints: (
@@ -50,6 +60,7 @@ $theme-site-header-breakpoints: (
 
 $theme-site-navbar-primary-bg-color:      $black;
 $theme-site-navbar-primary-font-size:     18.5px;
+$theme-site-navbar-primary-font-size-sm:  16px;
 $theme-site-navbar-primary-font-weight:   700;
 $theme-site-navbar-primary-line-height:   1;
 
@@ -61,7 +72,7 @@ $theme-site-navbar-primary-link-hover-color:        #fff;
 $theme-site-navbar-secondary-bg-color:  $black;
 $theme-site-navbar-secondary-font-size:     12px;
 $theme-site-navbar-secondary-font-size-sm:  12px;
-$theme-site-navbar-secondary-font-family:   "Roboto Condensed";
+$theme-site-navbar-secondary-font-family:   "Roboto Condensed", "Arial", sans-serif;
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
 
@@ -75,6 +86,9 @@ $theme-site-navbar-logo-height-sm: 30px;
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
 
+body {
+  letter-spacing: $bizbash-letter-spacing;
+}
 
 .site-navbar-items {
   $self: &;
