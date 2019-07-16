@@ -16,11 +16,6 @@
     </a>
   </div>
 </template>
-<style scoped>
-.carousel-indicators {
-  margin-bottom: 0;
-}
-</style>
 
 <script>
 import ImageSlide from './image-slide.vue';

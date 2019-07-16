@@ -9,17 +9,6 @@
   </div>
 </template>
 
-<style scoped>
-.carousel-caption {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 1rem;
-  text-shadow: rgba(0, 0, 0, .6) 0 1px 2px;
-  background: rgba(0, 0, 0, .75);
-}
-</style>
-
 <script>
 export default {
   props: {
