@@ -46,19 +46,16 @@ const listener = (e) => {
   const payload = parseJson(e.data);
   if (['adImagePath', 'adTitle', 'backgroundImagePath', 'adClickUrl'].every(k => payload[k])) {
     display(payload);
+    window.removeEventListener('message', listener);
   }
-  window.removeEventListener('message', listener, false);
 };
-
-const addListener = () => window.addEventListener('message', listener, false);
-const removeListener = () => window.removeEventListener('message', listener, false);
 
 export default {
   created() {
-    addListener();
+    window.addEventListener('message', listener);
   },
   beforeDestroy() {
-    removeListener();
+    window.removeEventListener('message', listener);
   },
 };
 </script>
