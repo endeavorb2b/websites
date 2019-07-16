@@ -134,6 +134,28 @@
   border: 0;
 }
 
+@mixin theme-apply-heading(
+  $font-family: $font-family-sans-serif,
+  $font-size-sm: $font-size-sm,
+  $font-size: $font-size-base,
+  $font-weight: $font-weight-normal,
+  $letter-spacing: inherit,
+  $line-height-sm: $line-height-base,
+  $line-height: $line-height-base,
+  $sm-breakpoint: sm
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+  @include media-breakpoint-down($sm-breakpoint) {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+}
+
 @mixin theme-heading($size) {
   font-family: $theme-heading-font-family;
   font-weight: $theme-heading-font-weight;
