@@ -362,9 +362,3 @@
     line-height: $theme-text-page-title-line-height-sm;
   }
 }
-
-@mixin theme-text-small() {
-  font-family: $theme-text-small-font-family;
-  font-size: $theme-text-small-font-size;
-  line-height: $theme-text-small-line-height;
-}

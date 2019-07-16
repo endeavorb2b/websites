@@ -27,11 +27,13 @@
   }
 
   &__header {
-    @include theme-text-small();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: $theme-item-header-font-family;
+    font-size: $theme-item-header-font-size;
     font-weight: $theme-item-header-font-weight;
+    line-height: $theme-item-header-line-height;
     color: $theme-item-header-color;
     letter-spacing: $theme-item-header-letter-spacing;
     a {
@@ -114,7 +116,6 @@
   }
 
   &__footer {
-    @include theme-text-small();
     @include media-breakpoint-up(md) {
       flex-direction: row;
     }
@@ -122,8 +123,12 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
+    font-family: $theme-item-footer-font-family;
+    font-size: $theme-item-footer-font-size;
     font-weight: $theme-item-footer-font-weight;
+    line-height: $theme-item-footer-line-height;
     color: $theme-item-footer-color;
+    text-transform: $theme-item-footer-text-transform;
     &:empty {
       display: none;
     }

@@ -258,7 +258,10 @@ $theme-item-link-hover-decoration:             $link-hover-decoration !default;
 $theme-item-contents-padding:                  .25rem !default;
 
 $theme-item-header-color:                      $gray-600 !default;
+$theme-item-header-font-family:                $theme-font-family-sans-serif !default;
+$theme-item-header-font-size:                  14px !default;
 $theme-item-header-font-weight:                $font-weight-normal !default;
+$theme-item-header-line-height:                20px !default;
 $theme-item-header-link-color:                 $theme-item-header-color !default;
 $theme-item-header-link-decoration:            $theme-item-link-decoration !default;
 $theme-item-header-link-hover-color:           $theme-item-header-link-color !default;
@@ -288,11 +291,15 @@ $theme-item-description-link-hover-decoration: none !default;
 $theme-item-description-max-lines:             $theme-responsive-max-lines !default;
 
 $theme-item-footer-color:                      $gray-600 !default;
+$theme-item-footer-font-family:                $theme-font-family-sans-serif !default;
+$theme-item-footer-font-size:                  14px !default;
 $theme-item-footer-font-weight:                $font-weight-normal !default;
+$theme-item-footer-line-height:                20px !default;
 $theme-item-footer-link-color:                 $link-color !default;
 $theme-item-footer-link-decoration:            $theme-item-link-decoration !default;
 $theme-item-footer-link-hover-color:           $link-hover-color !default;
 $theme-item-footer-link-hover-decoration:      $theme-item-link-hover-decoration !default;
+$theme-item-footer-text-transform:             initial !default;
 
 $theme-item-image-border-radius:               $border-radius !default;
 $theme-item-image-box-shadow:                  $theme-box-shadow-lg !default;
