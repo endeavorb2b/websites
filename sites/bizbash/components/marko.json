@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "bizbash-image-slider": {
+      "template": "./image-slider.marko"
+    },
+    "bizbash-inquiry-form": {
+      "template": "./inquiry-form.marko"
+    }
+  }
+}

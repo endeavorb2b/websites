@@ -1,0 +1,24 @@
+import { buildImgixUrl } from '@base-cms/image';
+import { getAsArray } from '@base-cms/object-path';
+
+$ const imageOptions = {
+  fit: 'crop',
+  crop: 'focalpoint',
+  fpX: 0.5,
+  fpY: 0.5,
+  h: 515,
+  w: 1200,
+};
+$ const imageFormat = (image) => {
+  const src = buildImgixUrl(image.src, imageOptions);
+  return { ...image, src };
+};
+$ const images = getAsArray(input, 'images').map(node => imageFormat(node));
+
+<if(images.length)>
+  <div class="row">
+    <div class="col">
+      <cms-browser-component name="ImageSlider" props={ images } />
+    </div>
+  </div>
+</if>
