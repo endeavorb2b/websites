@@ -44,3 +44,11 @@ $theme-site-header-breakpoints: (
     margin-bottom: 0;
   }
 }
+
+.required-field {
+  &::after {
+    margin-left: map-get($spacers, 1);
+    color: $red;
+    content: "*";
+  }
+}

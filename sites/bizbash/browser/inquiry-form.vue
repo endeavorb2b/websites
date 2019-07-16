@@ -1,9 +1,9 @@
 <template>
   <form v-if="incomplete" @submit.prevent="submit">
     <div class="form-group">
-      <label for="firstName">First Name</label>
+      <label for="inquiry-first-name" class="required-field">First Name</label>
       <input
-        id="firstName"
+        id="inquiry-first-name"
         v-model="firstName"
         type="text"
         class="form-control"
@@ -11,9 +11,9 @@
       >
     </div>
     <div class="form-group">
-      <label for="lastName">Last Name</label>
+      <label for="inquiry-last-name" class="required-field">Last Name</label>
       <input
-        id="lastName"
+        id="inquiry-last-name"
         v-model="lastName"
         type="text"
         class="form-control"
@@ -21,9 +21,9 @@
       >
     </div>
     <div class="form-group">
-      <label for="email">Email address</label>
+      <label for="inquiry-email" class="required-field">Email address</label>
       <input
-        id="email"
+        id="inquiry-email"
         v-model="email"
         type="email"
         class="form-control"
@@ -31,9 +31,9 @@
       >
     </div>
     <div class="form-group">
-      <label for="phone">Phone Number</label>
+      <label for="inquiry-phone" class="required-field">Phone Number</label>
       <input
-        id="phone"
+        id="inquiry-phone"
         v-model="phone"
         type="text"
         class="form-control"
@@ -41,18 +41,18 @@
       >
     </div>
     <div class="form-group">
-      <label for="company">Company Name</label>
+      <label for="inquiry-company">Company Name</label>
       <input
-        id="company"
+        id="inquiry-company"
         v-model="company"
         type="text"
         class="form-control"
       >
     </div>
     <div class="form-group">
-      <label for="jobTitle">Job Title</label>
+      <label for="inquiry-job-title" class="required-field">Job Title</label>
       <input
-        id="jobTitle"
+        id="inquiry-job-title"
         v-model="jobTitle"
         type="text"
         class="form-control"
@@ -60,9 +60,9 @@
       >
     </div>
     <div class="form-group">
-      <label for="country">Country</label>
+      <label for="inquiry-country" class="required-field">Country</label>
       <input
-        id="country"
+        id="inquiry-country"
         v-model="country"
         type="text"
         class="form-control"
@@ -70,9 +70,9 @@
       >
     </div>
     <div class="form-group">
-      <label for="postalCode">ZIP/Postal Code</label>
+      <label for="inquiry-postal-code">ZIP/Postal Code</label>
       <input
-        id="postalCode"
+        id="inquiry-postal-code"
         v-model="postalCode"
         type="text"
         class="form-control"
@@ -80,9 +80,9 @@
     </div>
 
     <div class="form-group">
-      <label for="eventType">Event Type</label>
+      <label for="inquiry-event-type" class="required-field">Event Type</label>
       <select
-        id="eventType"
+        id="inquiry-event-type"
         v-model="eventType"
         class="form-control"
         required
@@ -97,42 +97,38 @@
     </div>
 
     <div class="form-group">
-      <label for="numberOfGuests">Number of Guest(s)</label>
+      <label for="inquiry-number-of-guests">Number of Guest(s)</label>
       <textarea
-        id="numberOfGuests"
+        id="inquiry-number-of-guests"
         v-model="numberOfGuests"
-        type="numberOfGuests"
         class="form-control"
       />
     </div>
 
     <div class="form-group">
-      <label for="eventDate">Event Date</label>
+      <label for="inquiry-event-date">Event Date</label>
       <textarea
-        id="eventDate"
+        id="inquiry-event-date"
         v-model="eventDate"
-        type="eventDate"
         class="form-control"
       />
     </div>
 
     <div class="form-group">
-      <label for="eventDescription">Describe Your Event</label>
+      <label for="inquiry-event-description" class="required-field">Describe Your Event</label>
       <textarea
-        id="eventDescription"
+        id="inquiry-event-description"
         v-model="eventDescription"
-        type="eventDescription"
         class="form-control"
         required
       />
     </div>
 
     <div class="form-group">
-      <label for="desiredAmenities">List of Desired Amenities</label>
+      <label for="inquiry-desired-amenities">List of Desired Amenities</label>
       <textarea
-        id="desiredAmenities"
+        id="inquiry-desired-amenities"
         v-model="desiredAmenities"
-        type="desiredAmenities"
         class="form-control"
       />
     </div>
