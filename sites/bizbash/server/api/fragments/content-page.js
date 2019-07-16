@@ -5,7 +5,7 @@ module.exports = gql`
   fragment BzbContentPageFragment on Content {
     ...ContentPageFragment
     ... on ContentTopList {
-      relatedTo(input:{sort:{order:values}}) {
+      relatedTo(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
         edges {
           node {
             id
