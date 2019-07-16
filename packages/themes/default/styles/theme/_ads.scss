@@ -1,0 +1,133 @@
+.ad-container {
+  text-align: center;
+  &--top-of-page {
+    margin-bottom: $theme-ad-margin;
+  }
+  &--content-page-right {
+    margin-bottom: $theme-ad-margin;
+  }
+  &--inline {
+    margin-bottom: $theme-ad-margin;
+  }
+  &--in-card {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    > div {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  iframe {
+    box-shadow: $theme-ad-box-shadow;
+  }
+}
+
+.ad-rail {
+  padding-top: $theme-ad-padding;
+  padding-bottom: $theme-ad-padding;
+
+  .ad-container {
+    margin-bottom: $theme-ad-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Hide Google search promotions/ads.
+.gsc-adBlock { /* stylelint-disable-line */
+  display: none;
+}
+
+.reveal-ad-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.reveal-ad {
+  position: relative;
+  width: 300px;
+  margin: 0 auto $theme-ad-margin;
+  &--light-shadow {
+    @include box-shadow($theme-ad-reveal-box-shadow-light);
+  }
+  &--dark-shadow {
+    @include box-shadow($theme-ad-reveal-box-shadow-dark);
+  }
+}
+
+.sticky-leaderboard {
+  $self: &;
+
+  &__container {
+    @include border-radius($theme-ad-sticky-leaderboard-border-radius);
+    @include box-shadow($theme-ad-sticky-leaderboard-box-shadow);
+    @include media-breakpoint-up(xl) {
+      $width: map-get($grid-breakpoints, "xl");
+      right: inherit;
+      left: calc(50% - #{$width / 2});
+      width: $width;
+    }
+
+    position: fixed;
+    right: $grid-gutter-width / 4;
+    bottom: 0;
+    left: $grid-gutter-width / 4;
+    z-index: $theme-ad-sticky-leaderboard-z-index;
+    padding: $theme-ad-sticky-leaderboard-padding;
+    text-align: center;
+    visibility: hidden;
+    background-color: transparent;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    opacity: 0;
+    transition: $theme-ad-sticky-leaderboard-transition;
+  }
+
+  &--visible {
+    padding-top: calc(100px + #{$theme-ad-sticky-leaderboard-padding} + #{$theme-ad-sticky-leaderboard-padding});
+
+    #{ $self } {
+      &__container {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__background {
+    @include border-radius($theme-ad-sticky-leaderboard-border-radius);
+    @include box-shadow($theme-ad-sticky-leaderboard-box-shadow);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $theme-ad-sticky-leaderboard-background-color;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: $theme-ad-sticky-leaderboard-close-position;
+    right: $theme-ad-sticky-leaderboard-close-position;
+    z-index: $theme-ad-sticky-leaderboard-z-index + 1;
+    padding: 0;
+    line-height: 0;
+    & > svg {
+      width: $theme-ad-sticky-leaderboard-close-size;
+      height: $theme-ad-sticky-leaderboard-close-size;
+      fill: $theme-ad-sticky-leaderboard-close-color;
+    }
+  }
+}

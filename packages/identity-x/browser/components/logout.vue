@@ -15,6 +15,7 @@ export default {
   props: {
     redirectTo: {
       type: String,
+      default: null,
     },
   },
   data: () => ({

@@ -1,2 +1,15 @@
-@import "variables";
-@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+$primary: #035fac !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-header-breakpoints: (
+  hide-primary: 660px,
+  hide-secondary: 650px,
+  small-logo: 900px,
+  small-text-primary: 745px,
+  small-text-secondary: 980px
+);
+
+@import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";

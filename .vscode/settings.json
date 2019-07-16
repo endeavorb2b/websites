@@ -1,0 +1,10 @@
+{
+  "emmet.includeLanguages": {
+    "marko": "html"
+  },
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "eslint.validate": [ "javascript", "javascriptreact", { "language": "vue", "autoFix": true } ]
+}

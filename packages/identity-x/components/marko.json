@@ -1,7 +1,7 @@
 {
   "tags": {
     "identity-x": {
-      "template": "./index",
+      "template": "./index.marko",
       "<on-error>": {},
       "@enabled": {
         "type": "boolean",
@@ -9,7 +9,7 @@
       }
     },
     "identity-x-access": {
-      "template": "./access",
+      "template": "./access.marko",
       "<on-error>": {},
       "@enabled": {
         "type": "boolean",

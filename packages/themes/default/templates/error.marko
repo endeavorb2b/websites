@@ -1,0 +1,17 @@
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+$ const error = input.error || {};
+
+<theme-default-document>
+  <@head>
+    <cms-page-title value=`${input.statusCode} ${input.statusMessage}` />
+  </@head>
+  <div class="container-fluid-max">
+    <cms-page-container for="error">
+      <h4>${input.statusCode} ${input.statusMessage}</h4>
+      <h6>${error.message}</h6>
+      <if(isDevelopment)>
+        <pre>${error.stack}</pre>
+      </if>
+    </cms-page-container>
+  </div>
+</theme-default-document>

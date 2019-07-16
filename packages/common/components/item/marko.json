@@ -1,7 +1,7 @@
 {
   "tags": {
     "endeavor-item": {
-      "template": "./item",
+      "template": "./item.marko",
       "<image>": {
         "@alt": "string",
         "@display": {
@@ -63,7 +63,7 @@
       }
     },
     "endeavor-item-list": {
-      "template": "./list",
+      "template": "./list.marko",
       "<item>": {
         "@tag": {
           "type": "string",
@@ -115,7 +115,7 @@
       "@modifiers": "array"
     },
     "endeavor-item-list-wrapper": {
-      "template": "./list-wrapper",
+      "template": "./list-wrapper.marko",
       "@card": {
         "type": "string",
         "default-value": false
@@ -131,7 +131,7 @@
       }
     },
     "endeavor-item-list-footer": {
-      "template": "./list-footer",
+      "template": "./list-footer.marko",
       "@modifiers": "array",
       "@tag": {
         "type": "string",
@@ -142,7 +142,7 @@
       "@value": "string"
     },
     "endeavor-item-list-header": {
-      "template": "./list-header",
+      "template": "./list-header.marko",
       "@modifiers": "array",
       "@tag": {
         "type": "string",
@@ -153,7 +153,7 @@
       "@title": "string"
     },
     "endeavor-item-list-description": {
-      "template": "./list-description",
+      "template": "./list-description.marko",
       "@modifiers": "array",
       "@tag": {
         "type": "string",
@@ -162,7 +162,7 @@
       "@value": "string"
     },
     "endeavor-item-list-node": {
-      "template": "./list-node",
+      "template": "./list-node.marko",
       "@modifiers": "array",
       "@node": "object",
       "@tag": {

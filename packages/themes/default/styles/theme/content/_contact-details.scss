@@ -1,0 +1,20 @@
+.content-contact-details {
+  font-family: $theme-contact-details-font-family;
+  font-size: $theme-contact-details-font-size;
+
+  &__section {
+    margin-bottom: $theme-contact-details-section-margin;
+  }
+
+  &__social-links {
+    a {
+      margin-right: map-get($spacers, 2);
+    }
+  }
+
+  &__label {
+    margin-right: $theme-contact-details-label-margin;
+    margin-bottom: 0;
+    font-weight: $theme-contact-details-label-font-weight;
+  }
+}

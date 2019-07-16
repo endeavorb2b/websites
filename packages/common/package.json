@@ -2,6 +2,10 @@
   "name": "@endeavorb2b/base-website-common",
   "version": "0.11.9",
   "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
+    "test": "yarn lint"
+  },
   "dependencies": {
     "@base-cms/env": "^0.9.25",
     "@base-cms/image": "^0.9.22",
@@ -21,7 +25,6 @@
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-twbs-bootstrap": "^0.3.0"
+    "eslint-plugin-vue": "^5.2.3"
   }
 }

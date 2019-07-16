@@ -1,0 +1,16 @@
+.magazine-archives {
+  width: 100%;
+  padding: $theme-magazine-archives-padding;
+  padding-bottom: 0;
+
+  &__col {
+    margin-bottom: map-get($spacers, block);
+    @include make-col-ready();
+    @include make-col(4);
+    &:last-child {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}

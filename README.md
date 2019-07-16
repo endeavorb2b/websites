@@ -374,7 +374,7 @@ The homepage content is layed out using the Bootstrap Grid system for rows and c
   </div>
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
+      <endeavor-published-content-query-list
         query={ requiresImage: false, contentTypes: ["Event"], limit: 3 }
         header={ title: "Upcoming Events", href: "/events" }
       />
@@ -400,6 +400,3 @@ The homepage content is layed out using the Bootstrap Grid system for rows and c
   - Check your spelling -- the service name argument must match the value within the [docker-compose.yml](docker-compose.yml) service definition for the site. Ensure that this definition also matches the folder name under the `sites` directory
 - Docker Compose loads the wrong site
   - Check the `package.json` and `config/core.js` and ensure the correct site is defined.
-- An icon I added is not being displayed
-  - This repository uses the [Entypo icon library](https://limit-zero.github.io/ember-entypo/). Ensure the icon you are loading is included in this icon set.
-  - The `<endeavor-load-icons />` component in the theme's document layout must include the icon at load time for the SVG to be linked correctly. Ensure the icon is loaded here, or include another call to `<endeavor-load-icons />`.

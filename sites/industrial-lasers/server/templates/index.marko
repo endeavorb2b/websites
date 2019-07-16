@@ -12,7 +12,7 @@ $ const adSlots = {
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
-<theme-pennwell-website-section-layout section=section>
+<theme-default-website-section-layout section=section>
   <@head>
     <endeavor-ad-gam-head slots=adSlots />
   </@head>
@@ -104,7 +104,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
+      <endeavor-published-content-query-list
         query={
           contentTypes: ["Video"],
           limit: 5,
@@ -113,7 +113,7 @@ $ const adSlots = {
       />
     </div>
     <div class="col-lg-4 mb-block">
-      <theme-pennwell-published-content-query-list
+      <endeavor-published-content-query-list
         query={
           requiresImage: false,
           contentTypes: ["Whitepaper", "Webinar"],
@@ -151,4 +151,4 @@ $ const adSlots = {
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false aliases=aliases />
   </@footer>
-</theme-pennwell-website-section-layout>
+</theme-default-website-section-layout>

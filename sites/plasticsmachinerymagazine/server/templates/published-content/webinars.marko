@@ -9,7 +9,7 @@ $ const query = {
 };
 $ const page = pageDetails('Webcasts', config);
 
-<theme-pennwell-published-content-layout page=page>
+<theme-default-published-content-layout page=page>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -36,11 +36,11 @@ $ const page = pageDetails('Webcasts', config);
 
   <@below-container>
     <div class="published-content-query-load-more">
-      <theme-pennwell-published-content-query-load-more
+      <endeavor-published-content-query-load-more
         query=query
         layout="webinar"
       />
     </div>
   </@below-container>
 
-</theme-pennwell-published-content-layout>
+</theme-default-published-content-layout>

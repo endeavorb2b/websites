@@ -4,7 +4,7 @@ $ const { config } = out.global;
 $ const query = { contentTypes: ['Video'], limit: 10 };
 $ const page = pageDetails('Videos', config);
 
-<theme-pennwell-published-content-layout page=page>
+<theme-default-published-content-layout page=page>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -31,7 +31,7 @@ $ const page = pageDetails('Videos', config);
 
   <@below-container>
     <div class="published-content-query-load-more">
-      <theme-pennwell-published-content-query-load-more
+      <endeavor-published-content-query-load-more
         query=query
         ads={
           card: { name: "MR" },
@@ -43,4 +43,4 @@ $ const page = pageDetails('Videos', config);
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="BS" />
   </@footer>
-</theme-pennwell-published-content-layout>
+</theme-default-published-content-layout>

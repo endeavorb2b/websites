@@ -1,0 +1,25 @@
+.content-attribution {
+  font-family: $theme-content-attribution-font-family;
+  &__prefix {
+    margin-right: $theme-content-attribution-prefix-margin;
+    font-weight: $theme-content-attribution-prefix-font-weight;
+    &::after {
+      margin-left: $theme-content-attribution-prefix-margin;
+      font-weight: $theme-content-attribution-prefix-spacer-font-weight;
+      content: $theme-content-attribution-prefix-spacer-content;
+    }
+  }
+  &__content-name {
+    margin-right: $theme-content-attribution-name-margin;
+    &::after {
+      display: inline-block;
+      content: $theme-content-attribution-name-content;
+    }
+    &:last-child::after {
+      content: "";
+    }
+  }
+  div:last-child {
+    margin-bottom: $theme-content-attribution-name-margin;
+  }
+}

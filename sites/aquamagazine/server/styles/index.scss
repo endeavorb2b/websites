@@ -1,2 +1,18 @@
-@import "variables";
-@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+$primary:   #005bb1 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light:     #e9ecef !default; // equivalent to default gray-200
+$dark:      #212529 !default; // equivalent to default gray-900
+$info:      #6c757d !default; // equivalent to default gray-600
+
+$theme-site-navbar-secondary-bg-color:  #fff;
+$theme-site-navbar-secondary-type:      light;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 698px,
+  hide-secondary: 650px,
+  small-logo: 720px,
+  small-text-primary: 800px,
+  small-text-secondary: 784px,
+);
+
+@import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";

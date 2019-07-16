@@ -6,6 +6,10 @@
     "website-release-notes-between": "bin/between.js",
     "website-release-notes": "bin/release.js"
   },
+  "scripts": {
+    "lint": "eslint --ext .js --max-warnings 5 --ignore-path ../../.eslintignore ./",
+    "test": "yarn lint"
+  },
   "dependencies": {
     "@base-cms/env": "^0.9.25",
     "@octokit/rest": "^16.28.2",

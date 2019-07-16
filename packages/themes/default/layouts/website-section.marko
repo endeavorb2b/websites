@@ -1,0 +1,26 @@
+import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+$ const section = getAsObject(input, 'section');
+
+<theme-default-document>
+  <@head>
+    <cms-page-metadata for="website-section" ...section />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('website-section', section) />
+    <endeavor-nativex-init />
+    <link rel="alternate" type="application/rss+xml" title=`RSS Feed for ${section.name}` href=`/rss/${section.alias}.xml` />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="website-section" data=section>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+  <@footer>
+    <endeavor-footer-site-a />
+    <${input.footer} />
+  </@footer>
+</theme-default-document>

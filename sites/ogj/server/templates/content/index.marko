@@ -14,7 +14,7 @@ $ const adSlots = {
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
-<theme-pennwell-content-layout content=content>
+<theme-default-content-layout content=content>
   <@head>
     <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>
@@ -84,4 +84,4 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
   </@footer>
-</theme-pennwell-content-layout>
+</theme-default-content-layout>

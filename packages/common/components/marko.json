@@ -3,10 +3,11 @@
     "./ads/marko.json",
     "./breadcrumbs/marko.json",
     "./content/marko.json",
+    "./footers/marko.json",
     "./item/marko.json",
     "./load-more/marko.json",
-    "./magazine-publication/marko.json",
     "./magazine-issue/marko.json",
+    "./magazine-publication/marko.json",
     "./magazine/marko.json",
     "./native-x/marko.json",
     "./navbars/marko.json",
@@ -17,13 +18,15 @@
   ],
   "tags": {
     "endeavor-icon": {
-      "template": "./icon"
-    },
-    "endeavor-load-icons": {
-      "template": "./load-icons"
+      "template": "./icon.marko",
+      "@name": {
+        "type": "string",
+        "required": true
+      },
+      "@modifiers": "array"
     },
     "endeavor-link": {
-      "template": "./link"
+      "template": "./link.marko"
     }
   }
 }

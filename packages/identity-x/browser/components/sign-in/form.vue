@@ -1,11 +1,20 @@
 <template>
   <div v-if="hasActiveUser">
     <p>You are currently logged in as {{ activeUser.email }}.</p>
-    <a :href="logoutEndpoint" class="btn btn-primary" role="button">{{ logoutButtonLabel }}</a>
+    <a
+      :href="logoutEndpoint"
+      class="btn btn-primary"
+      role="button"
+    >
+      {{ logoutButtonLabel }}
+    </a>
   </div>
   <div v-else-if="complete">
     <h4>Almost Done!</h4>
-    <p>We just sent an email to <em>{{ user.email }}</em> with your one-time login link. To finish logging in, open the email message and click the link within.</p>
+    <p>
+      We just sent an email to <em>{{ user.email }}</em> with your one-time login link.
+      To finish logging in, open the email message and click the link within.
+    </p>
     <p>Note: please make sure you check your spam and or clutter/junk folders.</p>
   </div>
   <div v-else-if="needsInput">
@@ -14,25 +23,39 @@
       <fieldset :disabled="loading">
         <given-name v-model="user.givenName" />
         <family-name v-model="user.familyName" />
-        <button type="submit" class="btn btn-primary">{{ buttonLabel }}</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          {{ buttonLabel }}
+        </button>
       </fieldset>
-      <p v-show="error">An error occurred: {{ error }}</p>
+      <p v-show="error">
+        An error occurred: {{ error }}
+      </p>
     </form>
   </div>
   <div v-else>
     <form @submit.prevent="handle">
       <fieldset :disabled="loading">
         <email v-model="user.email" />
-        <button type="submit" class="btn btn-primary">{{ buttonLabel }}</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          {{ buttonLabel }}
+        </button>
       </fieldset>
-      <p v-show="error">An error occurred: {{ error }}</p>
+      <p v-show="error">
+        An error occurred: {{ error }}
+      </p>
     </form>
   </div>
 </template>
 
 <script>
 import Email from './fields/email.vue';
-import GivenName from  './fields/given-name.vue';
+import GivenName from './fields/given-name.vue';
 import FamilyName from './fields/family-name.vue';
 import cleanPath from '../../utils/clean-path';
 
@@ -43,14 +66,18 @@ export default {
     FamilyName,
   },
   props: {
-    activeUser: Object,
+    activeUser: {
+      type: Object,
+      default: () => {},
+    },
     authEndpoint: {
       type: String,
       default: '/user/authenticate',
     },
     context: {
       type: String,
-      validator: (v) => ['login', 'register'].includes(v),
+      validator: v => ['login', 'register'].includes(v),
+      default: '',
     },
     loginButtonLabel: {
       type: String,
@@ -102,7 +129,7 @@ export default {
       return 'Continue';
     },
     hasActiveUser() {
-      return this.activeUser && this.activeUser.id;
+      return this.activeUser && this.activeUser.email;
     },
     isLoginContext() {
       return this.context === 'login';

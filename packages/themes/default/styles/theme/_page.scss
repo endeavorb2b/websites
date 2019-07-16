@@ -1,0 +1,49 @@
+.page-wrapper {
+  @include border-radius($theme-page-border-radius);
+  @include box-shadow($theme-page-box-shadow);
+  @include make-container();
+  @include media-breakpoint-down(sm) {
+    padding-bottom: $theme-page-padding-bottom-sm;
+  }
+
+  padding-bottom: $theme-page-padding-bottom;
+  background-color: $theme-page-background-color;
+
+  &__header {
+    @include theme-page-header-spacing();
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include theme-text-page-title();
+  }
+
+  &__deck {
+    @include theme-text-page-deck();
+  }
+
+  &__description {
+    @include theme-text-page-description();
+  }
+
+  &__content {
+    @include theme-content-body();
+  }
+
+  &__contents {
+    @include theme-content-body();
+    @include theme-page-body-spacing();
+  }
+
+  &__body {
+    @include theme-page-body-spacing();
+  }
+}
+
+.content-page,
+.default-page,
+.dynamic-page {
+  margin-bottom: $theme-page-margin-bottom;
+}

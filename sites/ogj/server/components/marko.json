@@ -1,7 +1,7 @@
 {
   "tags": {
     "ogj-content-query-group-by-year": {
-      "template": "./group-by-year"
+      "template": "./group-by-year.marko"
     }
   }
 }

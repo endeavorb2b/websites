@@ -1,0 +1,19 @@
+.load-more-button {
+  padding-bottom: $theme-load-more-bottom-spacing;
+  text-align: $theme-load-more-button-text-align;
+  .btn {
+    margin-bottom: map-get($spacers, block);
+    font-family: $theme-load-more-button-font-family;
+    color: $theme-load-more-button-color;
+    background-color: $theme-load-more-button-background-color;
+    border-color: $theme-load-more-button-border-color;
+  }
+}
+
+.load-more-header {
+  @include theme-heading($theme-load-more-header-size);
+  margin-bottom: $theme-load-more-bottom-spacing;
+  font-family: $theme-load-more-header-font-family;
+  text-align: $theme-load-more-header-text-align;
+  text-transform: $theme-load-more-header-text-transform;
+}

@@ -1,40 +1,45 @@
 <template>
   <button
-    v-on:click="toggle"
-    v-bind:class="blockName"
+    :class="blockName"
     type="button"
     aria-label="Website Navigation Menu"
+    @click="toggle"
   >
-    <icon v-bind:name="iconName" v-bind:modifiers="['site-navbar']" />
+    <icon-x
+      v-if="expanded"
+      :modifiers="iconModifiers"
+    />
+    <icon-three-bars
+      v-else
+      :modifiers="iconModifiers"
+    />
   </button>
 </template>
 
 <script>
-import Icon from './icon.vue';
+import IconThreeBars from '../icons/vue/three-bars.vue';
+import IconX from '../icons/vue/x.vue';
 
 export default {
+  components: {
+    IconThreeBars,
+    IconX,
+  },
   props: {
     targets: {
       type: Array,
+      default: () => [],
     },
     toggleClass: {
       type: String,
       required: true,
-    }
-  },
-  components: {
-    Icon,
+    },
   },
   data: () => ({
     blockName: 'site-navbar-toggler',
     expanded: false,
+    iconModifiers: ['lg'],
   }),
-  computed: {
-    iconName() {
-      if (this.expanded) return 'cross';
-      return 'menu';
-    },
-  },
   methods: {
     toggle() {
       this.expanded = !this.expanded;

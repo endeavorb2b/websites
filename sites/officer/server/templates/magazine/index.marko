@@ -1,7 +1,7 @@
 $ const { site } = out.global;
 $ const description = site.get('magazines.description');
 
-<theme-pennwell-magazine-layout>
+<theme-default-magazine-layout>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -23,7 +23,7 @@ $ const description = site.get('magazines.description');
           </if>
         </div>
         <div class="page-wrapper__body">
-          <theme-pennwell-magazine-publication-list />
+          <endeavor-magazine-publication-list />
         </div>
       </div>
     </div>
@@ -32,4 +32,4 @@ $ const description = site.get('magazines.description');
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="BS" />
   </@footer>
-</theme-pennwell-magazine-layout>
+</theme-default-magazine-layout>

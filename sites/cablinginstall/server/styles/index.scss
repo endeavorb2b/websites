@@ -1,2 +1,22 @@
-@import "variables";
-@import "../../node_modules/@endeavorb2b/base-website-themes/pennwell/styles/theme";
+$primary: #ee2e30 !default;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef !default; // equivalent to default gray-200
+$dark: #212529 !default; // equivalent to default gray-900
+$info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-navbar-primary-bg-color: #ee2e30;
+$theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 40%);
+$theme-site-navbar-secondary-bg-color: #fff;
+$theme-site-navbar-secondary-type: light;
+
+$theme-site-navbar-logo-height: 50px;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 786px,
+  hide-secondary: 746px,
+  small-logo: 870px,
+  small-text-primary: 880px,
+  small-text-secondary: 940px
+);
+
+@import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";

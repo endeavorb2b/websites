@@ -1,0 +1,24 @@
+import { getAsObject } from '@base-cms/object-path';
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+$ const page = getAsObject(input, 'page');
+
+<theme-default-document>
+  <@head>
+    <cms-page-metadata for="dynamic-page" ...page />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('dynamic-page', page) />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for="dynamic-page" data=page>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+  <@footer>
+    <endeavor-footer-site-a />
+    <${input.footer} />
+  </@footer>
+</theme-default-document>

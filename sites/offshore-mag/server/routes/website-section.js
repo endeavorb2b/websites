@@ -1,4 +1,4 @@
-const queryFragment = require('@endeavorb2b/base-website-themes/pennwell/api/fragments/website-section-page');
+const queryFragment = require('@endeavorb2b/base-website-themes/default/api/fragments/website-section-page');
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const submissionHandler = require('@endeavorb2b/base-website-common/utils/contact-us');
 const section = require('../templates/website-section');

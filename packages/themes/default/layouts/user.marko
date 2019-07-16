@@ -1,0 +1,23 @@
+import createPageContext from '@endeavorb2b/base-website-common/utils/create-page-context';
+
+$ const { site } = out.global;
+$ const type = `user-${input.for}`;
+
+<theme-default-document>
+  <@head>
+    <cms-page-title value=input.title />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext(type) />
+    <${input.head} />
+  </@head>
+  <div class="container-fluid-max">
+    <${input.aboveContainer} />
+    <cms-page-container for=type>
+      <${input.renderBody} />
+    </cms-page-container>
+    <${input.belowContainer} />
+  </div>
+  <@footer>
+    <endeavor-footer-site-a />
+    <${input.footer} />
+  </@footer>
+</theme-default-document>

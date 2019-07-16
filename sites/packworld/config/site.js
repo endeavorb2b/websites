@@ -33,7 +33,7 @@ module.exports = {
     { href: '/magazine/5ce442f6d7e9ba3c168b45b5', label: 'Magazine' },
     { href: '/magazine/5ce44303d7e9ba3c168b45b8', label: 'Contract Packaging' },
     { href: '/education', label: 'Education' },
-    { href: '/leadership', label: 'Leaadership' },
+    { href: '/leadership', label: 'Leadership' },
     { href: '/events', label: 'Calendar' },
     { href: '/webcasts', label: 'Webinars' },
   ],

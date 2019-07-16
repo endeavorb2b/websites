@@ -1,10 +1,11 @@
 import { get, getAsObject } from '@base-cms/object-path';
 
-$ const { config } = out.global;
+$ const { config, site } = out.global;
+$ const socialLinks = site.getAsArray('socialMediaLinks');
 $ const description = `${config.siteName()} has products that deliver powerful content to you in a variety of forms including print, online, email and social media. To subscribe to a product or manage your current subscription, click below and put the power of ${config.siteName()} at your fingertips.`;
 $ const newsletterDescription = 'Stay up-to-date on industry news and events, new product launches and more. Select from our list of targeted newsletter offerings to stay informed on the topics that matter to you and your business.';
 
-<theme-pennwell-subscribe-layout>
+<theme-default-subscribe-layout>
   <@head>
     <endeavor-ad-gam-head />
   </@head>
@@ -24,7 +25,13 @@ $ const newsletterDescription = 'Stay up-to-date on industry news and events, ne
           <p class="page-wrapper__description">${description}</p>
         </div>
         <div class="page-wrapper__contents">
-          <endeavor-social-links block="site-subscribe" />
+          <if(socialLinks.length)>
+            <div class="subscribe-social-icons">
+              <for|item| of=socialLinks>
+                <endeavor-social-icon-link provider=item.provider href=item.href modifiers=["xl"] />
+              </for>
+            </div>
+          </if>
           <hr>
           <h5>Newsletters</h5>
           <p>${newsletterDescription}</p>
@@ -33,4 +40,4 @@ $ const newsletterDescription = 'Stay up-to-date on industry news and events, ne
       </div>
     </div>
   </div>
-</theme-pennwell-subscribe-layout>
+</theme-default-subscribe-layout>

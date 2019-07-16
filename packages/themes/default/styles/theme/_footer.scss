@@ -1,0 +1,95 @@
+.site-footer {
+  @include box-shadow($theme-site-footer-box-shadow);
+  margin-top: auto;
+  font-family: $theme-site-footer-font-family;
+  font-size: $theme-site-footer-font-size;
+  font-weight: $theme-site-footer-font-weight;
+  line-height: $theme-site-footer-line-height;
+  opacity: $theme-site-footer-opacity;
+
+  &__container {
+    @include make-container();
+    padding-top: $theme-site-footer-spacer;
+    padding-bottom: $theme-site-footer-spacer;
+    text-align: center;
+
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      padding-top: $theme-site-footer-spacer-sm;
+      padding-bottom: $theme-site-footer-spacer-sm;
+    }
+
+    &--brand {
+      @if $theme-site-footer-secondary-type == dark {
+        @extend .navbar-dark;
+      } @else {
+        @extend .navbar-light;
+      }
+      background-color: $theme-site-footer-secondary-bg-color;
+    }
+
+    &--links {
+      @if $theme-site-footer-primary-type == dark {
+        @extend .navbar-dark;
+      } @else {
+        @extend .navbar-light;
+      }
+      background-color: $theme-site-footer-primary-bg-color;
+    }
+  }
+
+  &__brand {
+    display: inline-block;
+    img {
+      height: $theme-site-footer-logo-height;
+      filter: drop-shadow($theme-site-footer-logo-box-shadow);
+      @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+        height: $theme-site-footer-logo-height-sm;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: $theme-site-footer-spacer;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-site-footer-spacer-sm;
+    }
+
+    a {
+      margin: 0 $theme-site-footer-spacer;
+      @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+        margin: 0 $theme-site-footer-spacer-sm;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: $theme-site-footer-spacer;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-site-footer-spacer-sm;
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__link {
+    margin: 0 $theme-site-footer-spacer;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin: 0 $theme-site-footer-spacer-sm;
+    }
+    a {
+      padding: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: $theme-site-footer-copyright-font-size;
+    font-weight: $theme-site-footer-copyright-font-weight;
+    line-height: $theme-site-footer-copyright-line-height;
+    color: $theme-site-footer-copyright-color;
+  }
+}

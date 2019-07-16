@@ -3,7 +3,7 @@ const contentLoadMore = require('@endeavorb2b/base-website-common/components/con
 const contentLoadMoreAuthor = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-author');
 const contentLoadMoreCompany = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-company');
 const contentLoadMoreList = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-list');
-const publishedLoadMore = require('@endeavorb2b/base-website-themes/pennwell/components/published-content/query-load-more');
+const publishedLoadMore = require('@endeavorb2b/base-website-common/components/published-content/query-load-more');
 const magazineIssueContent = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-issue-content');
 const magazineIssues = require('@endeavorb2b/base-website-common/components/magazine/blocks/query-active-issues');
 
