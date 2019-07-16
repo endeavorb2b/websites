@@ -65,7 +65,16 @@
   }
 
   &__title {
-    @include theme-heading(list);
+    @include theme-apply-heading(
+      $font-family: $theme-item-title-font-family,
+      $font-size-sm: $theme-item-title-font-size-sm,
+      $font-size: $theme-item-title-font-size,
+      $font-weight: $theme-item-title-font-weight,
+      $letter-spacing: $theme-item-title-letter-spacing,
+      $line-height-sm: $theme-item-title-line-height-sm,
+      $line-height: $theme-item-title-line-height,
+      $sm-breakpoint: $theme-responsive-text-breakpoint
+    );
     margin-bottom: $theme-item-title-margin;
     color: $theme-item-title-color;
     &:empty {
@@ -73,7 +82,11 @@
     }
 
     a {
-      @include theme-max-lines($line-height: $theme-heading-list-line-height, $line-height-sm: $theme-heading-list-line-height-sm, $num: $theme-item-title-max-lines);
+      @include theme-max-lines(
+        $line-height-sm: $theme-item-title-line-height-sm,
+        $line-height: $theme-item-title-line-height,
+        $num: $theme-item-title-max-lines
+      );
       color: $theme-item-title-link-color;
       text-decoration: $theme-item-title-link-decoration;
       &:hover {
@@ -83,9 +96,23 @@
     }
 
     &--large {
-      @include theme-heading(h5);
+      @include theme-apply-heading(
+        $font-family: $theme-item-title-font-family,
+        $font-size-sm: $theme-item-title-large-font-size-sm,
+        $font-size: $theme-item-title-large-font-size,
+        $font-weight: $theme-item-title-large-font-weight,
+        $letter-spacing: $theme-item-title-large-letter-spacing,
+        $line-height-sm: $theme-item-title-large-line-height-sm,
+        $line-height: $theme-item-title-large-line-height,
+        $sm-breakpoint: $theme-responsive-text-breakpoint
+      );
+
       a {
-        @include theme-max-lines($line-height: $theme-heading-h5-line-height, $line-height-sm: $theme-heading-h5-line-height-sm, $num: $theme-item-title-large-max-lines);
+        @include theme-max-lines(
+          $line-height-sm: $theme-item-title-large-line-height-sm,
+          $line-height: $theme-item-title-large-line-height,
+          $num: $theme-item-title-large-max-lines
+        );
       }
     }
 

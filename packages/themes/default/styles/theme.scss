@@ -272,13 +272,27 @@ $theme-item-header-letter-spacing:             $theme-item-letter-spacing !defau
 $theme-item-header-margin:                     $theme-item-element-margin !default;
 
 $theme-item-title-color:                       $black !default;
+$theme-item-title-font-family:                 $theme-font-family-sans-serif !default;
+$theme-item-title-font-size-sm:                16px !default;
+$theme-item-title-font-size:                   17px !default;
+$theme-item-title-font-weight:                 600 !default;
+$theme-item-title-letter-spacing:              inherit !default;
+$theme-item-title-line-height-sm:              20px !default;
+$theme-item-title-line-height:                 22px !default;
+$theme-item-title-margin:                      $theme-item-element-margin !default;
+$theme-item-title-max-lines:                   3 !default;
+
 $theme-item-title-link-color:                  $theme-item-title-color !default;
 $theme-item-title-link-decoration:             $theme-item-link-decoration !default;
 $theme-item-title-link-hover-color:            $theme-item-title-link-color !default;
 $theme-item-title-link-hover-decoration:       $theme-item-link-hover-decoration !default;
-$theme-item-title-margin:                      $theme-item-element-margin !default;
-$theme-item-title-max-lines:                   3 !default;
 
+$theme-item-title-large-font-size-sm:          20px !default;
+$theme-item-title-large-font-size:             24px !default;
+$theme-item-title-large-font-weight:           $theme-item-title-font-weight !default;
+$theme-item-title-large-letter-spacing:        $theme-item-title-letter-spacing !default;
+$theme-item-title-large-line-height-sm:        26px !default;
+$theme-item-title-large-line-height:           30px !default;
 $theme-item-title-large-max-lines:             $theme-responsive-max-lines !default;
 
 $theme-item-title-locked-content:              "\1F512" !default;
