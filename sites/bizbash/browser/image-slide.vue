@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-item" :class="classNames">
-    <img class="d-block w-100" :src="image.src" :alt="image.alt">
-    <div class="carousel-caption d-none d-md-block">
+    <img :src="image.src" :alt="image.alt">
+    <div class="carousel-caption">
       <h5 v-if="image.displayName">
         {{ image.displayName }}
       </h5>
