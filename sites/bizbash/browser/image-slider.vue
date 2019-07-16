@@ -24,7 +24,7 @@
       role="button"
       @click="decrement"
     >
-      <span class="carousel-control-prev-icon" area-label="Next" aria-hidden="true" />
+      <span class="carousel-control-prev-icon" aria-label="Previous Slide" aria-hidden="true" />
     </a>
     <a
       href="#next-slide"
@@ -32,7 +32,7 @@
       role="button"
       @click="increment"
     >
-      <span class="carousel-control-next-icon" aria-label="Previous" aria-hidden="true" />
+      <span class="carousel-control-next-icon" aria-label="Next Slide" aria-hidden="true" />
     </a>
   </div>
 </template>

@@ -1,6 +1,7 @@
 const ads = require('./ads');
 
 module.exports = {
+  company: 'BizBash Media, Inc.',
   ads,
   logos: {
     navbar: {
