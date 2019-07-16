@@ -84,7 +84,7 @@
       <select
         id="inquiry-event-type"
         v-model="eventType"
-        class="form-control"
+        class="custom-select"
         required
       >
         <option disabled value="">
