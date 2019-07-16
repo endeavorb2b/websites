@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700|Oswald:700&display=swap");
 
 // Fonts
 // $theme-font-family-sans-serif: "Open Sans", sans-serif;
@@ -12,6 +12,7 @@ $black:   #000;
 
 // General Settings
 $body-bg: #fff;
+$list-group-border-width: 0;
 $enable-shadows: false;
 $enable-rounded: false;
 
@@ -30,6 +31,13 @@ $theme-heading-list-line-height-sm:   21.345px;
 // Items
 $theme-item-title-link-hover-decoration: none;
 
+// Cards
+$theme-card-header-background-color:  #fff;
+$theme-card-header-font-family:       "Oswald";
+$theme-card-header-font-weight:       700;
+$theme-card-header-font-size:         26.825px;
+$theme-card-header-link-color:        $primary;
+$theme-card-header-border:            none;
 
 // Navbar / Header
 $theme-site-header-breakpoints: (
@@ -87,5 +95,11 @@ $theme-site-navbar-logo-height-sm: 30px;
         }
       }
     }
+  }
+}
+
+.item-list {
+  &__header {
+    padding-bottom: 0;
   }
 }
