@@ -1,28 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i&Open+Sans:300,300i,400,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700&display=swap");
 
-$primary: #005ea0 !default;
-$secondary: #495057; // equivalent to default gray-700
-$light: #e9ecef !default; // equivalent to default gray-200
-$dark: #212529 !default; // equivalent to default gray-900
-$info: #6c757d !default; // equivalent to default gray-600
+// Fonts
+// $theme-font-family-sans-serif: "Open Sans", sans-serif;
+$theme-font-family-sans-serif: "Source Sans Pro", "Arial", sans-serif;
+$theme-font-family-serif: "Open Sans", sans-serif;
+$theme-font-family-page-title: "Source Sans Pro", "Arial", sans-serif;
+
+// Colors
+$primary: #0072bb;
+$black:   #000;
+
+// General Settings
+$body-bg: #fff;
+$enable-shadows: false;
+$enable-rounded: false;
+
+// Responsive Text
+$theme-responsive-max-lines: 4;
+
+// Headings
+$theme-heading-font-family: $theme-font-family-page-title;
+$theme-heading-font-weight: 300;
+
+$theme-heading-list-font-size:        16.675px;
+$theme-heading-list-font-size-sm:     15.575px;
+$theme-heading-list-line-height:      23.345px;
+$theme-heading-list-line-height-sm:   21.345px;
 
 
-$theme-font-family-sans-serif: "Open Sans", sans-serif !default;
-$theme-font-family-serif: "Open Sans", sans-serif !default;
-$theme-font-family-page-title: "Source Sans Pro", "Georgia", "Times New Roman", "Times", serif !default;
+// Navbar / Header
+// $theme-site-header-breakpoints: (
+//   hide-primary: 836px,
+//   hide-secondary: 916px,
+//   small-logo: 1012px,
+//   small-text-primary: 935px,
+//   small-text-secondary: 1120px
+// );
 
-$enable-shadows: false !default;
-$enable-rounded: false !default;
+$theme-site-navbar-primary-bg-color:      $black;
+$theme-site-navbar-primary-font-size:     18.5px;
+$theme-site-navbar-primary-font-weight:   700;
+$theme-site-navbar-primary-line-height:   1;
 
-$black: #333 !default;
-$body-bg: #fff !default;
+$theme-site-navbar-primary-link-active-color:       $primary;
+$theme-site-navbar-primary-link-active-decoration:  none;
+$theme-site-navbar-primary-link-color:              #fff;
+$theme-site-navbar-primary-link-hover-color:        #fff;
 
-$theme-site-header-breakpoints: (
-  hide-primary: 836px,
-  hide-secondary: 916px,
-  small-logo: 1012px,
-  small-text-primary: 935px,
-  small-text-secondary: 1120px
-);
+$theme-site-navbar-secondary-bg-color:  $black;
+$theme-site-navbar-secondary-font-size:     12px;
+$theme-site-navbar-secondary-font-family:   "Roboto Condensed";
+$theme-site-navbar-secondary-font-weight:   700;
+$theme-site-navbar-secondary-line-height:   1;
+
+$theme-site-navbar-secondary-link-color:    $primary;
+$theme-site-navbar-secondary-hover-color:   $primary;
+
+$theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
+
+$theme-site-navbar-logo-height: 50px;
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
