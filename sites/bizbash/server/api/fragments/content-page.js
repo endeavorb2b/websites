@@ -11,7 +11,7 @@ module.exports = gql`
             id
             shortName
             canonicalPath
-            images {
+            images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
               edges {
                 node {
                   id
@@ -26,7 +26,7 @@ module.exports = gql`
       }
     }
     ... on ContentSupplier {
-      images {
+      images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
         edges {
           node {
             id
