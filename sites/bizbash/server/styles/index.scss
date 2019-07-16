@@ -29,13 +29,13 @@ $theme-heading-list-line-height-sm:   21.345px;
 
 
 // Navbar / Header
-// $theme-site-header-breakpoints: (
-//   hide-primary: 836px,
-//   hide-secondary: 916px,
-//   small-logo: 1012px,
-//   small-text-primary: 935px,
-//   small-text-secondary: 1120px
-// );
+$theme-site-header-breakpoints: (
+  hide-primary: 830px,
+  hide-secondary: 800px,
+  small-logo: 865px,
+  small-text-primary: 950px,
+  small-text-secondary: 865px
+);
 
 $theme-site-navbar-primary-bg-color:      $black;
 $theme-site-navbar-primary-font-size:     18.5px;
@@ -49,6 +49,7 @@ $theme-site-navbar-primary-link-hover-color:        #fff;
 
 $theme-site-navbar-secondary-bg-color:  $black;
 $theme-site-navbar-secondary-font-size:     12px;
+$theme-site-navbar-secondary-font-size-sm:  12px;
 $theme-site-navbar-secondary-font-family:   "Roboto Condensed";
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
@@ -59,5 +60,6 @@ $theme-site-navbar-secondary-hover-color:   $primary;
 $theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
 
 $theme-site-navbar-logo-height: 50px;
+$theme-site-navbar-logo-height-sm: 30px;
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
