@@ -1,11 +1,9 @@
 <template>
-  <div id="image-slider" class="carousel slide" data-ride="carousel">
+  <div class="carousel">
     <ol class="carousel-indicators">
       <li
         v-for="(image, index) in images"
         :key="index"
-        data-target="#image-slider"
-        :data-slide-to="index"
         :class="{ active: index === activeIndex }"
         @click="set(index)"
       />
@@ -24,7 +22,6 @@
       href="#"
       class="carousel-control-prev"
       role="button"
-      data-slide="prev"
       @click="decrement"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true" />
@@ -34,7 +31,6 @@
       href="#"
       class="carousel-control-next"
       role="button"
-      data-slide="next"
       @click="increment"
     >
       <span class="carousel-control-next-icon" aria-hidden="true" />
