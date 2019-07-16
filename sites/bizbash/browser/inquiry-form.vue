@@ -65,7 +65,7 @@
         id="country"
         v-model="country"
         type="text"
-        lass="form-control"
+        class="form-control"
         required
       >
     </div>

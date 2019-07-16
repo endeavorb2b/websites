@@ -3,8 +3,8 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
-    "bizbash-rmi-form": {
-      "template": "./rmi-form.marko"
+    "bizbash-inquiry-form": {
+      "template": "./inquiry-form.marko"
     }
   }
 }
