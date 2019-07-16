@@ -30,10 +30,10 @@ $theme-heading-list-line-height-sm:   21.345px;
 
 // Navbar / Header
 $theme-site-header-breakpoints: (
-  hide-primary: 830px,
+  hide-primary: 896px,
   hide-secondary: 800px,
   small-logo: 865px,
-  small-text-primary: 950px,
+  small-text-primary: 1020px,
   small-text-secondary: 865px
 );
 
@@ -63,3 +63,26 @@ $theme-site-navbar-logo-height: 50px;
 $theme-site-navbar-logo-height-sm: 30px;
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
+
+
+.site-navbar-items {
+  $self: &;
+
+  &--primary {
+    #{ $self } {
+      // stylelint-disable-next-line
+      &__item:first-child a::before {
+        padding-right: 0;
+        content: "";
+      }
+      &__link {
+        &::before {
+          float: left;
+          padding-right: $theme-site-navbar-primary-padding-x - 1;
+          color: $primary;
+          content: "|";
+        }
+      }
+    }
+  }
+}
