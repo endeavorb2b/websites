@@ -7,4 +7,15 @@ $info: #6c757d !default; // equivalent to default gray-600
 $theme-site-navbar-secondary-bg-color: #fff;
 $theme-site-navbar-secondary-type: light;
 
+$theme-site-navbar-logo-height: 45px;
+$theme-site-navbar-logo-height-sm: 30px;
+
+$theme-site-header-breakpoints: (
+  hide-primary: 620px,
+  hide-secondary: 696px,
+  small-logo: 797px,
+  small-text-primary: 700px,
+  small-text-secondary: 848px
+);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
