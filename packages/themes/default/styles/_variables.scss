@@ -199,7 +199,7 @@ $theme-media-credit-font-style:   italic !default;
 $theme-media-footer-font-family:  $theme-font-family-sans-serif !default;
 $theme-media-footer-font-size:    $font-size-base !default;
 $theme-media-footer-line-height:  $line-height-sm !default;
-$theme-media-footer-padding-x:    $border-radius;
+$theme-media-footer-padding-x:    $border-radius !default;
 $theme-media-footer-padding-y:    map-get($spacers, 1) !default;
 
 // Embedded Media

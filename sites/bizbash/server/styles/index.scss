@@ -95,6 +95,14 @@ $theme-card-header-font-weight:       700;
 $theme-card-header-letter-spacing:    $bizbash-letter-spacing;
 $theme-card-header-link-color:        $primary;
 
+// Media
+$theme-media-caption-font-weight: 400;
+$theme-media-credit-color:        #777;
+$theme-media-credit-font-style:   initial;
+$theme-media-footer-font-size:    14px;
+$theme-media-footer-padding-x:    0;
+$theme-media-footer-padding-y:    0;
+
 // Navbar / Header
 $theme-site-header-breakpoints: (
   hide-primary: 896px,
