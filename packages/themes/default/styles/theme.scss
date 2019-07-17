@@ -42,14 +42,6 @@ $theme-responsive-text-breakpoint:            sm !default;
 $theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
 
 // Text (used by mixins)
-$theme-text-page-description-font-color:      $gray-600 !default;
-$theme-text-page-description-font-family:     $theme-font-family-sans-serif !default;
-$theme-text-page-description-font-size:       20px !default;
-$theme-text-page-description-font-size-sm:    18px !default;
-$theme-text-page-description-font-weight:     $font-weight-normal !default;
-$theme-text-page-description-line-height:     28px !default;
-$theme-text-page-description-line-height-sm:  26px !default;
-
 $theme-text-page-title-font-color:            $black !default;
 $theme-text-page-title-font-family:           $theme-font-family-page-title !default;
 $theme-text-page-title-font-size:             40px !default;
@@ -369,38 +361,46 @@ $theme-item-list-footer-line-height-sm:   $theme-item-list-body-line-height-sm !
 $theme-item-list-footer-line-height:      $theme-item-list-body-line-height !default;
 
 // Pages
-$theme-page-padding:                map-get($spacers, 3) !default;
-$theme-page-padding-sm:             0 !default;
+$theme-page-padding:                    map-get($spacers, 3) !default;
+$theme-page-padding-sm:                 0 !default;
 
-$theme-page-background-color:       $white !default;
-$theme-page-border-radius:          $border-radius !default;
-$theme-page-box-shadow:             $theme-box-shadow-sm !default;
-$theme-page-padding-bottom:         .75rem !default;
-$theme-page-padding-bottom-sm:      0 !default;
-$theme-page-margin-bottom:          map-get($spacers, block) !default;
+$theme-page-background-color:           $white !default;
+$theme-page-border-radius:              $border-radius !default;
+$theme-page-box-shadow:                 $theme-box-shadow-sm !default;
+$theme-page-padding-bottom:             .75rem !default;
+$theme-page-padding-bottom-sm:          0 !default;
+$theme-page-margin-bottom:              map-get($spacers, block) !default;
 
-$theme-page-body-color:             $black !default;
-$theme-page-body-font-family:       $theme-font-family-serif !default;
-$theme-page-body-font-size:         19px !default;
-$theme-page-body-font-size-sm:      17px !default;
-$theme-page-body-font-weight:       $font-weight-normal !default;
-$theme-page-body-line-height:       get-line-height($theme-page-body-font-size, 33px) !default;
-$theme-page-body-line-height-sm:    get-line-height($theme-page-body-font-size-sm, 27px) !default;
-$theme-page-body-padding:           $theme-page-padding !default;
-$theme-page-body-padding-sm:        $theme-page-padding-sm !default;
-$theme-page-body-margin-bottom:     map-get($spacers, block) !default;
-$theme-page-body-margin-bottom-sm:  .75rem !default;
+$theme-page-body-color:                 $black !default;
+$theme-page-body-font-family:           $theme-font-family-serif !default;
+$theme-page-body-font-size:             19px !default;
+$theme-page-body-font-size-sm:          17px !default;
+$theme-page-body-font-weight:           $font-weight-normal !default;
+$theme-page-body-line-height:           get-line-height($theme-page-body-font-size, 33px) !default;
+$theme-page-body-line-height-sm:        get-line-height($theme-page-body-font-size-sm, 27px) !default;
+$theme-page-body-padding:               $theme-page-padding !default;
+$theme-page-body-padding-sm:            $theme-page-padding-sm !default;
+$theme-page-body-margin-bottom:         map-get($spacers, block) !default;
+$theme-page-body-margin-bottom-sm:      .75rem !default;
 
-$theme-page-deck-font-color:        $gray-600 !default;
-$theme-page-deck-font-family:       $theme-font-family-sans-serif !default;
-$theme-page-deck-font-size:         24px !default;
-$theme-page-deck-font-size-sm:      22px !default;
-$theme-page-deck-font-weight:       $font-weight-normal !default;
-$theme-page-deck-line-height:       get-line-height($theme-page-deck-font-size, 34px) !default;
-$theme-page-deck-line-height-sm:    get-line-height($theme-page-deck-font-size-sm, 30px) !default;
+$theme-page-deck-color:                 $gray-600 !default;
+$theme-page-deck-font-family:           $theme-font-family-sans-serif !default;
+$theme-page-deck-font-size:             24px !default;
+$theme-page-deck-font-size-sm:          22px !default;
+$theme-page-deck-font-weight:           $font-weight-normal !default;
+$theme-page-deck-line-height:           get-line-height($theme-page-deck-font-size, 34px) !default;
+$theme-page-deck-line-height-sm:        get-line-height($theme-page-deck-font-size-sm, 30px) !default;
 
-$theme-page-header-padding:         $theme-page-padding !default;
-$theme-page-header-padding-sm:      $theme-page-padding-sm !default;
+$theme-page-description-color:          $gray-600 !default;
+$theme-page-description-font-family:    $theme-font-family-sans-serif !default;
+$theme-page-description-font-size:      20px !default;
+$theme-page-description-font-size-sm:   18px !default;
+$theme-page-description-font-weight:    $font-weight-normal !default;
+$theme-page-description-line-height:    get-line-height($theme-page-description-font-size, 28px) !default;
+$theme-page-description-line-height-sm: get-line-height($theme-page-description-font-size-sm, 26px) !default;
+
+$theme-page-header-padding:             $theme-page-padding !default;
+$theme-page-header-padding-sm:          $theme-page-padding-sm !default;
 
 // Breadcrumbs
 $theme-breadcrumbs-background-color:      $theme-page-background-color !default;
