@@ -76,7 +76,7 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
     flex-wrap: wrap;
     margin-bottom: map-get($spacers, block);
   }
-  &__column {
+  &__col {
     margin-bottom: map-get($spacers, block);
     @include make-col-ready();
     @include media-breakpoint-up(md) {
@@ -87,9 +87,8 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
     display: block;
   }
   &__overlay {
-    small {
-      margin: 0 auto;
-      color: $white;
+    &:empty {
+      display: none;
     }
     position: absolute;
     top: 0;
@@ -102,7 +101,8 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
     text-align: center;
     background: rgba(0, 0, 0, .5);
   }
-  &__overlay:empty {
-    display: none;
+  &__small {
+    margin: 0 auto;
+    color: $white;
   }
 }

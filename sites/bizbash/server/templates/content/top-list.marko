@@ -39,7 +39,8 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     <div class="row">
       <div class="col-lg-8">
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
-        <bizbash-top-list-galleries galleries=content.relatedTo />
+        $ const galleries = getAsArray(content, 'relatedTo.edges').map(({ node }) => node);
+        <bizbash-top-list-galleries galleries=galleries />
       </div>
 
       <aside class="col-lg-4">

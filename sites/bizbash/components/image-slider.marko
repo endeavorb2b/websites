@@ -1,19 +1,7 @@
-import { buildImgixUrl } from '@base-cms/image';
 import { getAsArray } from '@base-cms/object-path';
+import imageFormat from './image-format';
 
-$ const imageOptions = {
-  fit: 'crop',
-  crop: 'focalpoint',
-  fpX: 0.5,
-  fpY: 0.5,
-  h: 515,
-  w: 1200,
-};
-$ const imageFormat = (image) => {
-  const src = buildImgixUrl(image.src, imageOptions);
-  return { ...image, src };
-};
-$ const images = getAsArray(input, 'images').map(node => imageFormat(node));
+$ const images = getAsArray(input, 'images').map(node => imageFormat(node, { w: 1200, h: 515 }));
 
 <if(images.length)>
   <div class="row">
