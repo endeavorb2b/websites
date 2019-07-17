@@ -1,0 +1,35 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const spaces = getAsArray(input, 'spaces');
+
+<if(spaces.length)>
+  <h4>Venue Capacity</h4>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Space</th>
+          <th scope="col">Max. Reception Capacity</th>
+          <th scope="col">Max. Seated Capacity</th>
+          <th scope="col">Sq. Feet</th>
+          <th scope="col">Floor Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <for|space| of=spaces>
+          <tr>
+            <td>${space.name}</td>
+            <td>${space.capacityMaxStanding}</td>
+            <td>${space.capacityMaxSeated}</td>
+            <td>${space.area}</td>
+            <td>
+              <if(space.floorPlan)>
+                <endeavor-link href=space.floorPlan.src target="_blank" alt=space.floorPlan.alt>View</endeavor-link>
+              </if>
+            </td>
+          </tr>
+        </for>
+      </tbody>
+    </table>
+  </div>
+</if>
