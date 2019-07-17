@@ -158,11 +158,19 @@ $theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
 $theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
 
 // Content Attribution
+$theme-content-attribution-color:                     $black !default;
 $theme-content-attribution-font-family:               $theme-font-family-sans-serif !default;
+$theme-content-attribution-font-size:                 16px !default;
+$theme-content-attribution-font-weight:               $font-weight-normal !default;
+$theme-content-attribution-line-height:               $line-height-base !default;
+$theme-content-attribution-text-transform:            initial !default;
+
 $theme-content-attribution-name-content:              ", " !default;
 $theme-content-attribution-name-margin:               map-get($spacers, 2) !default;
+
 $theme-content-attribution-prefix-font-weight:        600 !default;
 $theme-content-attribution-prefix-margin:             map-get($spacers, 1) !default;
+$theme-content-attribution-prefix-margin-after:       $theme-content-attribution-prefix-margin !default;
 $theme-content-attribution-prefix-spacer-content:     "\2014" !default;
 $theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
 
