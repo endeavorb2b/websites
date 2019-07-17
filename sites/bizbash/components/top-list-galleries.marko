@@ -14,7 +14,9 @@ $ const imageOptions = {
 
 <if(galleries.length)>
   <for|gallery| of=galleries>
-    <h4 class=`${block}__title`>${gallery.shortName}</h4>
+    <h4 class=`${block}__title`>
+      <cms-link-element to=gallery path="canonicalPath">${gallery.shortName}</cms-link-element>
+    </h4>
     $ const images = getAsArray(gallery, 'images.edges').map(({ node }) => imageFormat(node, imageOptions));
     <bizbash-image-list link=gallery.canonicalPath images=images block=block />
   </for>
