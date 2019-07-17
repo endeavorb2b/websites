@@ -4,3 +4,52 @@
   }
   @return $line-height-px / $font-size-px;
 }
+
+@function navbar-link-color($navbar-type, $color-type) {
+  @if $navbar-type == dark {
+    @return map-get($theme-site-navbar-dark-colors, $color-type);
+  }
+  @return map-get($theme-site-navbar-light-colors, $color-type);
+}
+
+@function get-navbar-breakpoints-for($target) {
+  $target-size: map-get($theme-site-header-breakpoints, $target);
+  $elgible-breakpoints: [];
+  @if $target-size == null {
+    @return $elgible-breakpoints;
+  }
+  @each $name, $size in $theme-site-header-breakpoints {
+    @if $size >= $target-size {
+      $elgible-breakpoints: append($elgible-breakpoints, $name);
+    }
+  }
+  @return $elgible-breakpoints;
+}
+
+@function calculate-navbar-height-for($target-breakpoint) {
+  $breakpoints: get-navbar-breakpoints-for($target-breakpoint);
+
+  // Variable defaults.
+  $logo-height: $theme-site-navbar-logo-height;
+  $primary-font-size: $theme-site-navbar-primary-font-size * $theme-site-navbar-primary-line-height;
+  $primary-link-padding: $theme-site-navbar-primary-link-padding * 2;
+  // These are constant.
+  $brand-margin: $theme-site-navbar-brand-margin-y * 2;
+  $secondary-padding: $theme-site-navbar-secondary-padding-y * 2;
+
+  @if length($breakpoints) == 0 {
+    @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
+  }
+  @if index($breakpoints, small-logo) != null {
+    $logo-height: $theme-site-navbar-logo-height-sm;
+  }
+  @if index($breakpoints, small-text-primary) != null {
+    $primary-font-size: $theme-site-navbar-primary-font-size-sm * $theme-site-navbar-primary-line-height-sm;
+  }
+  @if index($breakpoints, hide-primary) != null {
+    // Orverride font size again with hidden height and set padding to none
+    $primary-font-size: $theme-site-navbar-primary-height-sm;
+    $primary-link-padding: 0;
+  }
+  @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
+}
