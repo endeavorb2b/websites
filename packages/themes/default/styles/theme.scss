@@ -42,13 +42,6 @@ $theme-responsive-text-breakpoint:            sm !default;
 $theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
 
 // Text (used by mixins)
-$theme-text-description-font-family:          $theme-font-family-serif !default;
-$theme-text-description-font-size:            17px !default;
-$theme-text-description-font-size-sm:         16px !default;
-$theme-text-description-font-style:           normal !default;
-$theme-text-description-line-height:          25px !default;
-$theme-text-description-line-height-sm:       23px !default;
-
 $theme-text-page-body-font-color:             $black !default;
 $theme-text-page-body-font-family:            $theme-font-family-serif !default;
 $theme-text-page-body-font-size:              19px !default;
