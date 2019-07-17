@@ -60,7 +60,15 @@
 }
 
 @mixin theme-content-body() {
-  @include theme-text-page-body();
+  @include theme-apply-fonts(
+    $font-family: $theme-page-body-font-family,
+    $font-size-sm: $theme-page-body-font-size-sm,
+    $font-size: $theme-page-body-font-size,
+    $font-weight: $theme-page-body-font-weight,
+    $line-height-sm: $theme-page-body-line-height-sm,
+    $line-height: $theme-page-body-line-height,
+  );
+  color: $theme-page-body-color;
   h1 {
     @include theme-apply-fonts(
       $font-family: $theme-content-heading-h1-font-family,
@@ -306,18 +314,6 @@
     padding-top: $theme-page-header-padding-sm;
     padding-right: $theme-page-header-padding-sm;
     padding-left: $theme-page-header-padding-sm;
-  }
-}
-
-@mixin theme-text-page-body() {
-  font-family: $theme-text-page-body-font-family;
-  font-size: $theme-text-page-body-font-size;
-  font-weight: $theme-text-page-body-font-weight;
-  line-height: $theme-text-page-body-line-height;
-  color: $theme-text-page-body-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-body-font-size-sm;
-    line-height: $theme-text-page-body-line-height-sm;
   }
 }
 

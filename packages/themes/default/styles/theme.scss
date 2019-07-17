@@ -42,14 +42,6 @@ $theme-responsive-text-breakpoint:            sm !default;
 $theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
 
 // Text (used by mixins)
-$theme-text-page-body-font-color:             $black !default;
-$theme-text-page-body-font-family:            $theme-font-family-serif !default;
-$theme-text-page-body-font-size:              19px !default;
-$theme-text-page-body-font-size-sm:           17px !default;
-$theme-text-page-body-font-weight:            $font-weight-normal !default;
-$theme-text-page-body-line-height:            33px !default;
-$theme-text-page-body-line-height-sm:         27px !default;
-
 $theme-text-page-deck-font-color:             $gray-600 !default;
 $theme-text-page-deck-font-family:            $theme-font-family-sans-serif !default;
 $theme-text-page-deck-font-size:              24px !default;
@@ -395,6 +387,13 @@ $theme-page-padding-bottom:         .75rem !default;
 $theme-page-padding-bottom-sm:      0 !default;
 $theme-page-margin-bottom:          map-get($spacers, block) !default;
 
+$theme-page-body-color:             $black !default;
+$theme-page-body-font-family:       $theme-font-family-serif !default;
+$theme-page-body-font-size:         19px !default;
+$theme-page-body-font-size-sm:      17px !default;
+$theme-page-body-font-weight:       $font-weight-normal !default;
+$theme-page-body-line-height:       get-line-height($theme-page-body-font-size, 33px) !default;
+$theme-page-body-line-height-sm:    get-line-height($theme-page-body-font-size-sm, 27px) !default;
 $theme-page-body-padding:           $theme-page-padding !default;
 $theme-page-body-padding-sm:        $theme-page-padding-sm !default;
 $theme-page-body-margin-bottom:     map-get($spacers, block) !default;
