@@ -13,6 +13,7 @@ $ const adSlots = {
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
+$ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
 
 <theme-default-content-layout content=content>
   <@head>
@@ -23,13 +24,11 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
-
-    $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
-    <bizbash-image-slider images=images />
   </@above-container>
 
   <div class="page-wrapper">
     <div class="page-wrapper__header">
+      <bizbash-image-slider images=images />
       <endeavor-content-block-page-header content=content />
     </div>
 
