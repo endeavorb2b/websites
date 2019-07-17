@@ -1,0 +1,56 @@
+.top-list {
+  &__title {
+    padding-right: $theme-page-body-padding;
+    padding-left: $theme-page-body-padding;
+    margin-bottom: $theme-page-body-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      padding-right: $theme-page-body-padding-sm;
+      padding-left: $theme-page-body-padding-sm;
+      margin-bottom: $theme-page-body-margin-bottom-sm;
+    }
+    @include theme-heading(h4);
+    margin-bottom: $theme-content-heading-h4-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: map-get($spacers, block);
+  }
+  &__col {
+    margin-bottom: map-get($spacers, block);
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+  &__link {
+    display: block;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__overlay {
+    &:empty {
+      display: none;
+    }
+    position: absolute;
+    top: 0;
+    right: .9rem;
+    bottom: 0;
+    left: .9rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+  }
+  &__name {
+    margin: 0 auto;
+    color: $white;
+  }
+}

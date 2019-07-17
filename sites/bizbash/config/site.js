@@ -1,6 +1,7 @@
 const ads = require('./ads');
 
 module.exports = {
+  company: 'BizBash Media, Inc.',
   ads,
   logos: {
     navbar: {
@@ -79,5 +80,14 @@ module.exports = {
       bgColor: '#005ea0',
       logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
     },
+  },
+  inquiry: {
+    enabled: true,
+    directSend: false,
+    sendTo: 'Endeavor Developer <developer@endeavorb2b.com>',
+    sendFrom: 'BizBash.com <noreply@bizbash.com>',
+    sendBcc: 'emailactivity@cygnus.com',
+    logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
+    bgColor: '#25292d',
   },
 };

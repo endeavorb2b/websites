@@ -91,7 +91,14 @@ $theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
 $theme-site-navbar-logo-height: 45px;
 $theme-site-navbar-logo-height-sm: 30px;
 
+// Carousel
+$theme-carousel-caption-padding: 1rem;
+$theme-carousel-caption-text-shadow: rgba(0, 0, 0, .6) 0 1px 2px;
+$theme-carousel-caption-background: rgba(0, 0, 0, .75);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
+@import "components/carousel";
+@import "components/top-list";
 
 body {
   letter-spacing: $bizbash-letter-spacing;
@@ -141,5 +148,13 @@ body {
 .item-list {
   &__header {
     padding-bottom: 0;
+  }
+}
+
+.required-field {
+  &::after {
+    margin-left: map-get($spacers, 1);
+    color: $red;
+    content: "*";
   }
 }

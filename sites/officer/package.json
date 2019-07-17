@@ -11,9 +11,9 @@
     "test": "yarn lint && yarn build"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.38",
-    "@base-cms/object-path": "^0.9.38",
-    "@base-cms/web-cli": "^0.9.39",
+    "@base-cms/marko-web": "^0.9.40",
+    "@base-cms/object-path": "^0.9.40",
+    "@base-cms/web-cli": "^0.9.40",
     "@endeavorb2b/base-website-common": "^0.11.9",
     "@endeavorb2b/base-website-inquiry": "^0.11.9",
     "@endeavorb2b/base-website-themes": "^0.11.9",

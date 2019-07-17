@@ -207,6 +207,9 @@
     "endeavor-content-query-load-more-company": {
       "template": "./query-load-more-company.marko"
     },
+    "endeavor-content-query-load-more-related": {
+      "template": "./query-load-more-related.marko"
+    },
     "endeavor-content-query-load-more-list": {
       "template": "./query-load-more-list.marko"
     },
