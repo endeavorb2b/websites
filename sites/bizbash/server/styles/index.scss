@@ -85,6 +85,10 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
   }
   &__link {
     display: block;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   &__overlay {
     &:empty {

@@ -7,12 +7,12 @@ $ const images = getAsArray(input, 'images');
   <div class=`${block}__row`>
     <for|image| of=images>
       <div class=`${block}__col`>
-        <a class=`${block}__link` href=input.link title="View Image Gallery">
-          <img class="img-fluid" src=image.src alt=image.alt />
+        <endeavor-link class=`${block}__link` href=input.link title="View Image Gallery">
+          <img src=image.src alt=image.alt />
           <div class=`${block}__overlay`>
             <small class=`${block}__small`>${image.displayName}</small>
           </div>
-        </a>
+        </endeavor-link>
       </div>
     </for>
   </div>
