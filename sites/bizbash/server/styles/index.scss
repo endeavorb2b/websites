@@ -5,9 +5,7 @@
 $bizbash-letter-spacing: .1px;
 
 // Fonts
-// $theme-font-family-sans-serif: "Open Sans", sans-serif;
 $theme-font-family-sans-serif: "Source Sans Pro", "Arial", sans-serif;
-$theme-font-family-serif: "Open Sans", sans-serif;
 $theme-font-family-page-title: "Source Sans Pro", "Arial", sans-serif;
 
 // Colors
@@ -20,6 +18,7 @@ $body-bg: #fff;
 $list-group-border-width: 0;
 $enable-shadows: false;
 $enable-rounded: false;
+$breadcrumb-divider-color: $black;
 
 // Items
 $theme-item-footer-font-family:         "Oswald", "Arial", sans-serif;
@@ -46,6 +45,37 @@ $theme-item-description-font-size:      13px;
 $theme-item-description-line-height-sm: get-line-height($theme-item-description-font-size-sm, 24px) !default;
 $theme-item-description-line-height:    get-line-height($theme-item-description-font-size, 24px) !default;
 $theme-item-description-margin:         10px;
+
+// Pages
+$theme-page-title-color:        #333;
+$theme-page-title-font-size:    32px;
+$theme-page-title-font-weight:  700;
+
+$theme-page-deck-color:       #565656;
+$theme-page-deck-font-family: "Open Sans", sans-serif;
+$theme-page-deck-font-size:   18px !default;
+
+// Content Attribution
+$theme-content-attribution-color:                   $gray-600;
+$theme-content-attribution-font-family:             "Oswald", "Arial", sans-serif;
+$theme-content-attribution-font-size:               12px;
+$theme-content-attribution-font-weight:             700;
+$theme-content-attribution-text-transform:          uppercase;
+$theme-content-attribution-prefix-spacer-content:   "";
+$theme-content-attribution-prefix-margin-after:     0;
+
+// Content Published Date
+$theme-content-published-date-color:                     $theme-content-attribution-color;
+$theme-content-published-date-font-family:               $theme-content-attribution-font-family;
+$theme-content-published-date-font-size:                 $theme-content-attribution-font-size;
+$theme-content-published-date-font-weight:               $theme-content-attribution-font-weight;
+$theme-content-published-date-text-transform:            $theme-content-attribution-text-transform;
+
+// Breadcrumbs
+$theme-breadcrumbs-font-family:   "Roboto Condensed", sans-serif;
+$theme-breadcrumbs-font-size:     12px;
+$theme-breadcrumbs-font-size-sm:  12px;
+$theme-breadcrumbs-font-weight:   600;
 
 // Cards
 $theme-card-header-background-color:  #fff;
@@ -151,5 +181,19 @@ body {
   }
 }
 
+.content-attribution {
+  display: inline;
+  &__content-authors {
+    display: inline;
+  }
+}
+
+.content-attribution + .content-published-date {
+  display: inline;
+  &::before {
+    margin-right: $theme-content-attribution-prefix-margin;
+    margin-left: $theme-content-attribution-prefix-margin;
+    font-weight: $theme-content-attribution-prefix-spacer-font-weight;
+    content: "\2014";
   }
 }
