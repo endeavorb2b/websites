@@ -2,11 +2,12 @@ import { getAsArray } from '@base-cms/object-path';
 import imageFormat from './image-format';
 
 $ const galleries = getAsArray(input, 'galleries');
+$ const { block } = input;
 
 <if(galleries.length)>
   <for|gallery| of=galleries>
-    <h4 class="top-list__title">${gallery.shortName}</h4>
+    <h4 class=`${block}__title`>${gallery.shortName}</h4>
     $ const images = getAsArray(gallery, 'images.edges').map(({ node }) => imageFormat(node, { w: 680, h: 380 }));
-    <bizbash-image-list link=gallery.canonicalPath images=images />
+    <bizbash-image-list link=gallery.canonicalPath images=images block=block />
   </for>
 </if>

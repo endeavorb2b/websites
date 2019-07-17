@@ -1,6 +1,6 @@
 import { getAsArray } from '@base-cms/object-path';
 
-$ const block = 'top-list';
+$ const { block } = input;
 $ const images = getAsArray(input, 'images');
 
 <if(images.length)>
