@@ -7,7 +7,12 @@ $ const navbar = 'site-navbar';
 $ const nav = 'site-navbar-items';
 $ const menu = 'site-navbar-menu';
 $ const siteName = config.siteName();
-$ const navigation = site.get('navigation');
+$ const navigation = {
+  primary: site.getAsArray('navigation.primary.items'),
+  secondary: site.getAsArray('navigation.secondary.items'),
+  tertiary: site.getAsArray('navigation.tertiary.items'),
+};
+$ const navMenu = site.get('navigation.menu');
 
 <header class=navbar>
   <identity-x|{ isEnabled: regEnabled, hasUser }|>
@@ -19,27 +24,23 @@ $ const navigation = site.get('navigation');
           <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
         </a>
         <ul class="site-navbar-items site-navbar-items--secondary">
-          <if(navigation.secondary && navigation.secondary.items)>
-            <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.secondary.items })>
-              <li class=bem(nav, 'item')>
-                <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
-              </li>
-            </for>
-          </if>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.secondary })>
+            <li class=bem(nav, 'item')>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+            </li>
+          </for>
         </ul>
         <ul class="site-navbar-items site-navbar-items--tertiary">
-          <if(navigation.tertiary && navigation.tertiary.items)>
-            <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.tertiary.items })>
-              <li class=bem(nav, 'item')>
-                <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
-              </li>
-            </for>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.tertiary })>
             <li class=bem(nav, 'item')>
-              <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
-                <endeavor-icon name="search" modifiers=["site-navbar"] />
-              </a>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
-          </if>
+          </for>
+          <li class=bem(nav, 'item')>
+            <a class=bem(nav, 'link', ['search']) title=`Search ${siteName}` href="/search">
+              <endeavor-icon name="search" modifiers=["site-navbar"] />
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -47,13 +48,11 @@ $ const navigation = site.get('navigation');
     <nav class=bem(navbar, 'primary')>
       <div class="site-navbar-container">
         <ul class="site-navbar-items site-navbar-items--primary">
-          <if(navigation.primary && navigation.primary.items)>
-            <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.primary.items })>
-              <li class=bem(nav, 'item')>
-                <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
-              </li>
-            </for>
-          </if>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.primary })>
+            <li class=bem(nav, 'item')>
+              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+            </li>
+          </for>
         </ul>
       </div>
     </nav>
@@ -63,13 +62,11 @@ $ const navigation = site.get('navigation');
 <aside class=menu>
   <div class=bem(menu, 'contents')>
     <div class=`${bem(menu, 'card')} card`>
-      <if(navigation.menu)>
-        <for|key, item| in=navigation.menu>
-          <if(item.items && item.label)>
-            <menu-card block=menu for=item.items header=item.label />
-          </if>
-        </for>
-      </if>
+      <for|key, item| in=navMenu>
+        <if(item.items && item.label)>
+          <menu-card block=menu for=item.items header=item.label />
+        </if>
+      </for>
       <div class=`${bem(menu, 'card-footer')} card-footer`></div>
     </div>
   </div>
