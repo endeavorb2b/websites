@@ -316,15 +316,3 @@
     padding-left: $theme-page-header-padding-sm;
   }
 }
-
-@mixin theme-text-page-title() {
-  font-family: $theme-text-page-title-font-family;
-  font-size: $theme-text-page-title-font-size;
-  font-weight: $theme-text-page-title-font-weight;
-  line-height: $theme-text-page-title-line-height;
-  color: $theme-text-page-title-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-title-font-size-sm;
-    line-height: $theme-text-page-title-line-height-sm;
-  }
-}

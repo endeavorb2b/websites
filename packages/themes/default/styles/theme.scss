@@ -41,15 +41,6 @@ $theme-responsive-max-lines:                  2 !default;
 $theme-responsive-text-breakpoint:            sm !default;
 $theme-responsive-text-max-lines-breakpoint:  $theme-responsive-text-breakpoint !default;
 
-// Text (used by mixins)
-$theme-text-page-title-font-color:            $black !default;
-$theme-text-page-title-font-family:           $theme-font-family-page-title !default;
-$theme-text-page-title-font-size:             40px !default;
-$theme-text-page-title-font-size-sm:          32px !default;
-$theme-text-page-title-font-weight:           $font-weight-normal !default;
-$theme-text-page-title-line-height:           50px !default;
-$theme-text-page-title-line-height-sm:        40px !default;
-
 // General Heading Defaults
 $theme-heading-font-family:           $theme-font-family-sans-serif !default;
 $theme-heading-font-weight:           600 !default;
@@ -398,6 +389,14 @@ $theme-page-description-font-size-sm:   18px !default;
 $theme-page-description-font-weight:    $font-weight-normal !default;
 $theme-page-description-line-height:    get-line-height($theme-page-description-font-size, 28px) !default;
 $theme-page-description-line-height-sm: get-line-height($theme-page-description-font-size-sm, 26px) !default;
+
+$theme-page-title-color:                $black !default;
+$theme-page-title-font-family:          $theme-font-family-page-title !default;
+$theme-page-title-font-size:            40px !default;
+$theme-page-title-font-size-sm:         32px !default;
+$theme-page-title-font-weight:          $font-weight-normal !default;
+$theme-page-title-line-height:          get-line-height($theme-page-title-font-size, 50px) !default;
+$theme-page-title-line-height-sm:       get-line-height($theme-page-title-font-size-sm, 40px) !default;
 
 $theme-page-header-padding:             $theme-page-padding !default;
 $theme-page-header-padding-sm:          $theme-page-padding-sm !default;
