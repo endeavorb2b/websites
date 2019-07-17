@@ -402,10 +402,10 @@ $theme-page-description-line-height-sm: get-line-height($theme-page-description-
 $theme-page-title-color:                $black !default;
 $theme-page-title-font-family:          $theme-font-family-page-title !default;
 $theme-page-title-font-size:            40px !default;
-$theme-page-title-font-size-sm:         32px !default;
+$theme-page-title-font-size-sm:         $theme-page-title-font-size - 8 !default;
 $theme-page-title-font-weight:          $font-weight-normal !default;
-$theme-page-title-line-height:          get-line-height($theme-page-title-font-size, 50px) !default;
-$theme-page-title-line-height-sm:       get-line-height($theme-page-title-font-size-sm, 40px) !default;
+$theme-page-title-line-height:          get-line-height($theme-page-title-font-size, $theme-page-title-font-size + 10) !default;
+$theme-page-title-line-height-sm:       get-line-height($theme-page-title-font-size-sm, $theme-page-title-font-size-sm + 8) !default;
 
 $theme-page-header-padding:             $theme-page-padding !default;
 $theme-page-header-padding-sm:          $theme-page-padding-sm !default;
