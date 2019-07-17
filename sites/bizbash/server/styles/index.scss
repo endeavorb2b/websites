@@ -67,8 +67,19 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
 
 .top-list {
   &__title {
-    @include theme-page-body-spacing();
-    @include theme-content-heading(h4);
+    padding-right: $theme-page-body-padding;
+    padding-left: $theme-page-body-padding;
+    margin-bottom: $theme-page-body-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      padding-right: $theme-page-body-padding-sm;
+      padding-left: $theme-page-body-padding-sm;
+      margin-bottom: $theme-page-body-margin-bottom-sm;
+    }
+    @include theme-heading(h4);
+    margin-bottom: $theme-content-heading-h4-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
+    }
   }
   &__row {
     display: flex;
