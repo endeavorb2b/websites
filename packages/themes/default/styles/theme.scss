@@ -248,11 +248,6 @@ $theme-card-header-link-hover-color:      $theme-card-header-link-color !default
 $theme-card-header-link-hover-decoration: $link-hover-decoration !default;
 $theme-card-header-text-transform:        uppercase !default;
 
-
-// Item Lists
-$theme-item-list-card-min-height:   100% !default;
-$theme-item-list-border-radius:     $theme-card-border-radius !default;
-
 // Items
 $theme-item-padding:                           .75rem !default;
 $theme-item-element-margin:                    6px !default;
@@ -337,6 +332,25 @@ $theme-item-image-placeholder-position:        $theme-item-image-border-radius $
 $theme-item-image-placeholder-opacity:         .2 !default;
 
 $theme-item-card-min-height:                   100% !default;
+
+
+// Item Lists
+$theme-item-list-card-min-height:         100% !default;
+$theme-item-list-border-radius:           $theme-card-border-radius !default;
+
+$theme-item-list-body-font-family:        $theme-item-description-font-family !default;
+$theme-item-list-body-font-size-sm:       $theme-item-description-font-size-sm !default;
+$theme-item-list-body-font-size:          $theme-item-description-font-size !default;
+$theme-item-list-body-font-weight:        $theme-item-description-font-weight !default;
+$theme-item-list-body-line-height-sm:     $theme-item-description-line-height-sm !default;
+$theme-item-list-body-line-height:        $theme-item-description-line-height !default;
+
+$theme-item-list-footer-font-family:      $theme-item-list-body-font-family !default;
+$theme-item-list-footer-font-size-sm:     $theme-item-list-body-font-size-sm !default;
+$theme-item-list-footer-font-size:        $theme-item-list-body-font-size !default;
+$theme-item-list-footer-font-weight:      $theme-item-list-body-font-weight !default;
+$theme-item-list-footer-line-height-sm:   $theme-item-list-body-line-height-sm !default;
+$theme-item-list-footer-line-height:      $theme-item-list-body-line-height !default;
 
 // Pages
 $theme-page-padding:                map-get($spacers, 3) !default;
