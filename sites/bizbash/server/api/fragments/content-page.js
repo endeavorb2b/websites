@@ -39,6 +39,36 @@ module.exports = gql`
         }
       }
     }
+    ... on ContentVenue {
+      images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
+        edges {
+          node {
+            id
+            src
+            alt
+            displayName
+            credit
+            caption
+          }
+        }
+      }
+      spaces {
+        edges {
+          node {
+            id
+            name
+            area
+            capacityMin
+            capacityMaxSeated
+            capacityMaxStanding
+            floorPlan {
+              id
+              src
+            }
+          }
+        }
+      }
+    }
   }
   ${contentPageFragment}
 `;

@@ -22,6 +22,10 @@
     },
     "bizbash-inquiry-form": {
       "template": "./inquiry-form.marko"
+    },
+    "bizbash-venue-capacity": {
+      "template": "./venue-capacity.marko",
+      "@spaces": "array"
     }
   }
 }
