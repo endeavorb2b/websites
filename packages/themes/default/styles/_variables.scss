@@ -166,6 +166,14 @@ $theme-content-attribution-prefix-margin:             map-get($spacers, 1) !defa
 $theme-content-attribution-prefix-spacer-content:     "\2014" !default;
 $theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
 
+// Content Published Date
+$theme-content-published-date-color:                     $black !default;
+$theme-content-published-date-font-family:               $theme-font-family-sans-serif !default;
+$theme-content-published-date-font-size:                 16px !default;
+$theme-content-published-date-font-weight:               $font-weight-normal !default;
+$theme-content-published-date-line-height:               $line-height-base !default;
+$theme-content-published-date-text-transform:            initial !default;
+
 // Contact Details
 $theme-contact-details-font-family:         $theme-font-family-sans-serif !default;
 $theme-contact-details-font-size:           16px !default;

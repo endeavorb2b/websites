@@ -17,5 +17,5 @@ $ const noPublishDateContentTypes = ['event', 'webinar', 'contact'];
   <endeavor-content-block-attribution content=input.content />
 </if>
 <if(!noPublishDateContentTypes.includes(content.type))>
-  <cms-content-published obj=input.content />
+  <cms-content-published class="content-published-date" obj=input.content />
 </if>
