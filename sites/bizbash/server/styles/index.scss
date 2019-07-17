@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:300,300i,400,700,700i|Roboto+Condensed:700|Oswald:500,700&display=swap");
+@import "../../node_modules/@endeavorb2b/base-website-themes/default/styles/functions";
 
 // Bizbash specific vars
 $bizbash-letter-spacing: .1px;
@@ -29,21 +30,21 @@ $theme-item-footer-text-transform:      uppercase;
 $theme-item-title-font-size-sm:         15.575px;
 $theme-item-title-font-size:            16.675px;
 $theme-item-title-font-weight:          300;
-$theme-item-title-line-height-sm:       21.345px;
-$theme-item-title-line-height:          23.345px;
+$theme-item-title-line-height-sm:       get-line-height($theme-item-title-font-size-sm, 21.345px) !default;
+$theme-item-title-line-height:          get-line-height($theme-item-title-font-size, 23.345px) !default;
 $theme-item-title-max-lines:            4;
 
 $theme-item-title-large-font-size-sm:   28px;
 $theme-item-title-large-font-size:      32px;
 $theme-item-title-large-font-weight:    700;
-$theme-item-title-large-line-height-sm: 34px;
-$theme-item-title-large-line-height:    38px;
+$theme-item-title-large-line-height-sm: get-line-height($theme-item-title-large-font-size-sm, 34px) !default;
+$theme-item-title-large-line-height:    get-line-height($theme-item-title-large-font-size, 38px) !default;
 $theme-item-title-large-max-lines:      3;
 
 $theme-item-description-font-size-sm:   13px;
 $theme-item-description-font-size:      13px;
-$theme-item-description-line-height-sm: 24px;
-$theme-item-description-line-height:    24px;
+$theme-item-description-line-height-sm: get-line-height($theme-item-description-font-size-sm, 24px) !default;
+$theme-item-description-line-height:    get-line-height($theme-item-description-font-size, 24px) !default;
 $theme-item-description-margin:         10px;
 
 // Cards

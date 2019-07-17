@@ -212,13 +212,21 @@
   }
 }
 
-@mixin theme-max-lines($line-height, $line-height-sm, $num: 2, $text-overflow: ellipsis) {
+@mixin theme-max-lines(
+  $font-size,
+  $font-size-sm,
+  $line-height,
+  $line-height-sm,
+  $num: 2,
+  $text-overflow: ellipsis,
+  $breakpoint: $theme-responsive-text-max-lines-breakpoint,
+) {
   display: block;
-  max-height: $line-height * $num;
+  max-height: ($font-size * $line-height) * $num;
   overflow: hidden;
   text-overflow: $text-overflow;
-  @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-    max-height: $line-height-sm * $num;
+  @include media-breakpoint-down($breakpoint) {
+    max-height: ($font-size-sm * $line-height-sm) * $num;
   }
 }
 

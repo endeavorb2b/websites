@@ -82,8 +82,10 @@
 
     a {
       @include theme-max-lines(
-        $line-height-sm: $theme-item-title-line-height-sm,
+        $font-size: $theme-item-title-font-size,
+        $font-size-sm: $theme-item-title-font-size-sm,
         $line-height: $theme-item-title-line-height,
+        $line-height-sm: $theme-item-title-line-height-sm,
         $num: $theme-item-title-max-lines
       );
       color: $theme-item-title-link-color;
@@ -107,8 +109,10 @@
 
       a {
         @include theme-max-lines(
-          $line-height-sm: $theme-item-title-large-line-height-sm,
+          $font-size: $theme-item-title-large-font-size,
+          $font-size-sm: $theme-item-title-large-font-size-sm,
           $line-height: $theme-item-title-large-line-height,
+          $line-height-sm: $theme-item-title-large-line-height-sm,
           $num: $theme-item-title-large-max-lines
         );
       }
@@ -138,8 +142,10 @@
 
     a {
       @include theme-max-lines(
-        $line-height-sm: $theme-item-description-line-height-sm,
+        $font-size: $theme-item-description-font-size,
+        $font-size-sm: $theme-item-description-font-size-sm,
         $line-height: $theme-item-description-line-height,
+        $line-height-sm: $theme-item-description-line-height-sm,
         $num: $theme-item-description-max-lines
       );
       color: $theme-item-description-link-color;
