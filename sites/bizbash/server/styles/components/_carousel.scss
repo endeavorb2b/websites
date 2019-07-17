@@ -1,6 +1,8 @@
 @import "../../node_modules/bootstrap/scss/carousel";
 
 .carousel {
+  margin-bottom: $breadcrumb-padding-y;
+
   .carousel-item {
     img {
       display: block;

@@ -12,9 +12,5 @@ $ const imageOptions = {
 $ const images = getAsArray(input, 'images').map(node => imageFormat(node, imageOptions));
 
 <if(images.length)>
-  <div class="row">
-    <div class="col">
-      <cms-browser-component name="ImageSlider" props={ images } />
-    </div>
-  </div>
+  <cms-browser-component name="ImageSlider" props={ images } />
 </if>
