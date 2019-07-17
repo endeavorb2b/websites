@@ -134,7 +134,18 @@
   border: 0;
 }
 
-@mixin theme-apply-heading(
+@mixin theme-apply-responsive-fonts(
+  $font-size: $font-size-sm,
+  $line-height: $line-height-base,
+  $breakpoint: $theme-responsive-text-breakpoint
+) {
+  @include media-breakpoint-down($breakpoint) {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+@mixin theme-apply-fonts(
   $font-family: $font-family-sans-serif,
   $font-size-sm: $font-size-sm,
   $font-size: $font-size-base,
@@ -142,7 +153,7 @@
   $letter-spacing: inherit,
   $line-height-sm: $line-height-base,
   $line-height: $line-height-base,
-  $sm-breakpoint: sm
+  $sm-breakpoint: $theme-responsive-text-breakpoint
 ) {
   font-family: $font-family;
   font-size: $font-size;
@@ -150,10 +161,11 @@
   line-height: $line-height;
   letter-spacing: $letter-spacing;
 
-  @include media-breakpoint-down($sm-breakpoint) {
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
-  }
+  @include theme-apply-responsive-fonts(
+    $font-size: $font-size-sm,
+    $line-height: $line-height-sm,
+    $breakpoint: $sm-breakpoint
+  );
 }
 
 @mixin theme-heading($size) {
@@ -323,17 +335,6 @@
     padding-top: $theme-page-header-padding-sm;
     padding-right: $theme-page-header-padding-sm;
     padding-left: $theme-page-header-padding-sm;
-  }
-}
-
-@mixin theme-text-description() {
-  font-family: $theme-text-description-font-family;
-  font-size: $theme-text-description-font-size;
-  font-style: $theme-text-description-font-style;
-  line-height: $theme-text-description-line-height;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-description-font-size-sm;
-    line-height: $theme-text-description-line-height-sm;
   }
 }
 
