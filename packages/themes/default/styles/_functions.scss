@@ -1,3 +1,6 @@
-@function get-line-height($font-size, $line-height) {
-  @return $line-height / $font-size;
+@function get-line-height($font-size-px, $line-height-px) {
+  @if $line-height-px < $font-size-px {
+    @return 1;
+  }
+  @return $line-height-px / $font-size-px;
 }
