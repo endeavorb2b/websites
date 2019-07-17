@@ -317,18 +317,6 @@
   }
 }
 
-@mixin theme-text-page-deck() {
-  font-family: $theme-text-page-deck-font-family;
-  font-size: $theme-text-page-deck-font-size;
-  font-weight: $theme-text-page-deck-font-weight;
-  line-height: $theme-text-page-deck-line-height;
-  color: $theme-text-page-deck-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-deck-font-size-sm;
-    line-height: $theme-text-page-deck-line-height-sm;
-  }
-}
-
 @mixin theme-text-page-description() {
   font-family: $theme-text-page-description-font-family;
   font-size: $theme-text-page-description-font-size;

@@ -21,7 +21,15 @@
   }
 
   &__deck {
-    @include theme-text-page-deck();
+    @include theme-apply-fonts(
+      $font-family: $theme-page-deck-font-family,
+      $font-size-sm: $theme-page-deck-font-size-sm,
+      $font-size: $theme-page-deck-font-size,
+      $font-weight: $theme-page-deck-font-weight,
+      $line-height-sm: $theme-page-deck-line-height-sm,
+      $line-height: $theme-page-deck-line-height,
+    );
+    color: $theme-page-deck-font-color;
   }
 
   &__description {
