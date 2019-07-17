@@ -3,8 +3,29 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
+    "bizbash-top-list-galleries": {
+      "template": "./top-list-galleries.marko",
+      "@block": {
+        "type": "string",
+        "default-value": "top-list"
+      },
+      "@galleries": "array"
+    },
+    "bizbash-image-list": {
+      "template": "./image-list.marko",
+      "@block": {
+        "type": "string",
+        "default-value": "top-list"
+      },
+      "@images": "array",
+      "@link": "string"
+    },
     "bizbash-inquiry-form": {
       "template": "./inquiry-form.marko"
+    },
+    "bizbash-venue-capacity": {
+      "template": "./venue-capacity.marko",
+      "@spaces": "array"
     }
   }
 }

@@ -1,0 +1,61 @@
+import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const content = getAsObject(data, 'content');
+$ const section = getAsObject(content, 'primarySection');
+$ const aliases = hierarchyAliases(section);
+$ const block = 'content-page';
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
+};
+$ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
+$ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
+
+<theme-default-content-layout content=content>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="page-wrapper__header">
+      <bizbash-image-slider images=images />
+      <endeavor-content-block-page-header content=content />
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <endeavor-content-block-page-body content=content display-primary-image=false  />
+        <div class="page-wrapper__body">
+          <bizbash-venue-capacity spaces=spaces />
+        </div>
+      </div>
+
+      <aside class="col-lg-4">
+        <bizbash-inquiry-form content=content />
+      </aside>
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-content-query-load-more-related
+      header=`More from ${content.name}`
+      query={ contentId: content.id }
+      ads={ aliases }
+    />
+  </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
+  </@footer>
+</theme-default-content-layout>

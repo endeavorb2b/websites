@@ -11,6 +11,7 @@
     "test": "yarn lint && yarn build"
   },
   "dependencies": {
+    "@base-cms/image": "^0.9.22",
     "@base-cms/marko-web": "^0.9.40",
     "@base-cms/object-path": "^0.9.40",
     "@base-cms/web-cli": "^0.9.40",

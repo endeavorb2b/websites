@@ -125,7 +125,7 @@ fragment ContentPageFragment on Content {
     }
   }
   ... on ContentMediaGallery {
-    images {
+    images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
       edges {
         node {
           id
