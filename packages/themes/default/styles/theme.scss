@@ -85,49 +85,56 @@ $theme-text-small-font-family:                $theme-font-family-sans-serif !def
 $theme-text-small-font-size:                  14px !default;
 $theme-text-small-line-height:                20px !default;
 
-// Headings (used by mixins)
+// General Heading Defaults
 $theme-heading-font-family:           $theme-font-family-sans-serif !default;
 $theme-heading-font-weight:           600 !default;
 
 $theme-heading-large-font-size:       34px !default;
 $theme-heading-large-font-size-sm:    30px !default;
-$theme-heading-large-line-height:     40px !default;
-$theme-heading-large-line-height-sm:  36px !default;
+$theme-heading-large-line-height:     get-line-height($theme-heading-large-font-size, 40px) !default;
+$theme-heading-large-line-height-sm:  get-line-height($theme-heading-large-font-size-sm, 36px) !default;
 
-$theme-heading-small-font-size:       19px !default;
-$theme-heading-small-font-size-sm:    17px !default;
-$theme-heading-small-line-height:     24px !default;
-$theme-heading-small-line-height-sm:  20px !default;
-
+$theme-heading-h1-font-family:        $theme-heading-font-family !default;
+$theme-heading-h1-font-weight:        $theme-heading-font-weight !default;
 $theme-heading-h1-font-size:          $theme-heading-large-font-size !default;
 $theme-heading-h1-font-size-sm:       $theme-heading-large-font-size-sm !default;
 $theme-heading-h1-line-height:        $theme-heading-large-line-height !default;
 $theme-heading-h1-line-height-sm:     $theme-heading-large-line-height-sm !default;
 
+$theme-heading-h2-font-family:        $theme-heading-font-family !default;
+$theme-heading-h2-font-weight:        $theme-heading-font-weight !default;
 $theme-heading-h2-font-size:          $theme-heading-large-font-size !default;
 $theme-heading-h2-font-size-sm:       $theme-heading-large-font-size-sm !default;
 $theme-heading-h2-line-height:        $theme-heading-large-line-height !default;
 $theme-heading-h2-line-height-sm:     $theme-heading-large-line-height-sm !default;
 
+$theme-heading-h3-font-family:        $theme-heading-font-family !default;
+$theme-heading-h3-font-weight:        $theme-heading-font-weight !default;
 $theme-heading-h3-font-size:          $theme-heading-large-font-size !default;
 $theme-heading-h3-font-size-sm:       $theme-heading-large-font-size-sm !default;
 $theme-heading-h3-line-height:        $theme-heading-large-line-height !default;
 $theme-heading-h3-line-height-sm:     $theme-heading-large-line-height-sm !default;
 
+$theme-heading-h4-font-family:        $theme-heading-font-family !default;
+$theme-heading-h4-font-weight:        $theme-heading-font-weight !default;
 $theme-heading-h4-font-size:          26px !default;
 $theme-heading-h4-font-size-sm:       22px !default;
-$theme-heading-h4-line-height:        32px !default;
-$theme-heading-h4-line-height-sm:     28px !default;
+$theme-heading-h4-line-height:        get-line-height($theme-heading-h4-font-size, 32px) !default;
+$theme-heading-h4-line-height-sm:     get-line-height($theme-heading-h4-font-size-sm, 28px) !default;
 
+$theme-heading-h5-font-family:        $theme-heading-font-family !default;
+$theme-heading-h5-font-weight:        $theme-heading-font-weight !default;
 $theme-heading-h5-font-size:          24px !default;
 $theme-heading-h5-font-size-sm:       20px !default;
-$theme-heading-h5-line-height:        30px !default;
-$theme-heading-h5-line-height-sm:     26px !default;
+$theme-heading-h5-line-height:        get-line-height($theme-heading-h5-font-size, 30px) !default;
+$theme-heading-h5-line-height-sm:     get-line-height($theme-heading-h5-font-size-sm, 26px) !default;
 
-$theme-heading-list-font-size:        17px !default;
-$theme-heading-list-font-size-sm:     16px !default;
-$theme-heading-list-line-height:      22px !default;
-$theme-heading-list-line-height-sm:   20px !default;
+$theme-heading-h6-font-family:        $theme-heading-font-family !default;
+$theme-heading-h6-font-weight:        $theme-heading-font-weight !default;
+$theme-heading-h6-font-size:          19px !default;
+$theme-heading-h6-font-size-sm:       17px !default;
+$theme-heading-h6-line-height:        get-line-height($theme-heading-h6-font-size, 24px) !default;
+$theme-heading-h6-line-height-sm:     get-line-height($theme-heading-h6-font-size-sm, 20px) !default;
 
 // Content Headings
 $theme-content-heading-large-margin-bottom:     53px !default;
