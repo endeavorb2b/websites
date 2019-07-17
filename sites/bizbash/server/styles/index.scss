@@ -2,11 +2,16 @@
 @import "../../node_modules/@endeavorb2b/base-website-themes/default/styles/functions";
 
 // Bizbash specific vars
-$bizbash-letter-spacing: .1px;
+$bizbash-letter-spacing:  .1px;
 
 // Fonts
-$theme-font-family-sans-serif: "Source Sans Pro", "Arial", sans-serif;
-$theme-font-family-page-title: "Source Sans Pro", "Arial", sans-serif;
+$font-source-sans-pro:    "Source Sans Pro", "Arial", sans-serif;
+$font-open-sans:          "Open Sans", "Arial", sans-serif;
+$font-oswald:             "Oswald", "Arial", sans-serif;
+$font-roboto-condensed:   "Roboto Condensed", sans-serif;
+
+$theme-font-family-sans-serif: $font-open-sans;
+$theme-font-family-page-title: $font-source-sans-pro;
 
 // Colors
 $primary:   #0072bb;
@@ -20,12 +25,16 @@ $enable-shadows: false;
 $enable-rounded: false;
 $breadcrumb-divider-color: $black;
 
+// Headings
+$theme-heading-font-family: $font-source-sans-pro;
+
 // Items
-$theme-item-footer-font-family:         "Oswald", "Arial", sans-serif;
+$theme-item-footer-font-family:         $font-oswald;
 $theme-item-footer-font-size:           11px;
 $theme-item-footer-font-weight:         500;
 $theme-item-footer-text-transform:      uppercase;
 
+$theme-item-title-font-family:          $theme-heading-font-family;
 $theme-item-title-font-size-sm:         15.575px;
 $theme-item-title-font-size:            16.675px;
 $theme-item-title-font-weight:          300;
@@ -40,6 +49,7 @@ $theme-item-title-large-line-height-sm: get-line-height($theme-item-title-large-
 $theme-item-title-large-line-height:    get-line-height($theme-item-title-large-font-size, 38px) !default;
 $theme-item-title-large-max-lines:      3;
 
+$theme-item-description-font-family:    $font-open-sans;
 $theme-item-description-font-size-sm:   13px;
 $theme-item-description-font-size:      13px;
 $theme-item-description-line-height-sm: get-line-height($theme-item-description-font-size-sm, 24px) !default;
@@ -52,12 +62,11 @@ $theme-page-title-font-size:    32px;
 $theme-page-title-font-weight:  700;
 
 $theme-page-deck-color:       #565656;
-$theme-page-deck-font-family: "Open Sans", sans-serif;
 $theme-page-deck-font-size:   18px !default;
 
 // Content Attribution
 $theme-content-attribution-color:                   $gray-600;
-$theme-content-attribution-font-family:             "Oswald", "Arial", sans-serif;
+$theme-content-attribution-font-family:             $font-oswald;
 $theme-content-attribution-font-size:               12px;
 $theme-content-attribution-font-weight:             700;
 $theme-content-attribution-text-transform:          uppercase;
@@ -72,7 +81,7 @@ $theme-content-published-date-font-weight:               $theme-content-attribut
 $theme-content-published-date-text-transform:            $theme-content-attribution-text-transform;
 
 // Breadcrumbs
-$theme-breadcrumbs-font-family:   "Roboto Condensed", sans-serif;
+$theme-breadcrumbs-font-family:   $font-roboto-condensed;
 $theme-breadcrumbs-font-size:     12px;
 $theme-breadcrumbs-font-size-sm:  12px;
 $theme-breadcrumbs-font-weight:   600;
@@ -80,7 +89,7 @@ $theme-breadcrumbs-font-weight:   600;
 // Cards
 $theme-card-header-background-color:  #fff;
 $theme-card-header-border:            none;
-$theme-card-header-font-family:       "Oswald", "Arial", sans-serif;
+$theme-card-header-font-family:       $font-oswald;
 $theme-card-header-font-size:         26.825px;
 $theme-card-header-font-weight:       700;
 $theme-card-header-letter-spacing:    $bizbash-letter-spacing;
@@ -95,11 +104,12 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 860px
 );
 
-$theme-site-navbar-primary-bg-color:      $black;
-$theme-site-navbar-primary-font-size:     18.5px;
-$theme-site-navbar-primary-font-size-sm:  16px;
-$theme-site-navbar-primary-font-weight:   700;
-$theme-site-navbar-primary-line-height:   1;
+$theme-site-navbar-primary-bg-color:        $black;
+$theme-site-navbar-primary-font-family:   $font-source-sans-pro;
+$theme-site-navbar-primary-font-size:       18.5px;
+$theme-site-navbar-primary-font-size-sm:    16px;
+$theme-site-navbar-primary-font-weight:     700;
+$theme-site-navbar-primary-line-height:     1;
 
 $theme-site-navbar-primary-link-active-color:       $primary;
 $theme-site-navbar-primary-link-active-decoration:  none;
@@ -109,7 +119,7 @@ $theme-site-navbar-primary-link-hover-color:        #fff;
 $theme-site-navbar-secondary-bg-color:  $black;
 $theme-site-navbar-secondary-font-size:     12px;
 $theme-site-navbar-secondary-font-size-sm:  12px;
-$theme-site-navbar-secondary-font-family:   "Roboto Condensed", "Arial", sans-serif;
+$theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
 
