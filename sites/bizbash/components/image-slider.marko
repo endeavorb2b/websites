@@ -1,7 +1,15 @@
 import { getAsArray } from '@base-cms/object-path';
 import imageFormat from './image-format';
 
-$ const images = getAsArray(input, 'images').map(node => imageFormat(node, { w: 1200, h: 515 }));
+$ const imageOptions = {
+  fit: 'crop',
+  crop: 'focalpoint',
+  fpX: 0.5,
+  fpY: 0.5,
+  w: 1200,
+  h: 515,
+};
+$ const images = getAsArray(input, 'images').map(node => imageFormat(node, imageOptions));
 
 <if(images.length)>
   <div class="row">
