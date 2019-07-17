@@ -1,10 +1,8 @@
 module.exports = ({
-  site,
   regEnabled,
   hasUser,
-  key,
+  items,
 }) => {
-  const items = site.getAsArray(key);
   return items.filter((item) => {
     const { when } = item;
     if (!when) return true;

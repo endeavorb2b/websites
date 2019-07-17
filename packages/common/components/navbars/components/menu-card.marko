@@ -1,11 +1,10 @@
 import bem from '../../../utils/bem-class';
 import getNavItems from '../get-nav-items';
 
-$ const { site } = out.global;
 $ const { block } = input;
 
 <identity-x|{ isEnabled: regEnabled, hasUser }|>
-  $ const items = getNavItems({ site, regEnabled, hasUser, key: input.for });
+  $ const items = getNavItems({ regEnabled, hasUser, items: input.for });
   <if(items.length)>
     <div class=`${bem(block, 'card-header')} card-header`>
       ${input.header}

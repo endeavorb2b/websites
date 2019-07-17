@@ -22,37 +22,62 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/MundoPmmi' },
     { provider: 'facebook', href: 'https://www.facebook.com/MundoPMMI' },
   ],
-  primaryNavItems: [
-  ],
-  secondaryNavItems: [
-    { href: '/automatizacion', label: 'Automatización' },
-    { href: '/empaque', label: 'Empaque' },
-    { href: '/procesamiento', label: 'Procesamiento' },
-    { href: '/videos', label: 'Vídeos' },
-    { href: '/subscribe', label: 'Suscribir' },
-  ],
-  footerNavItems: [
-    { href: '/page/anuncie', label: 'Anuncie' },
-    { href: '/page/contrato', label: 'Contrato' },
-    { href: '/page/privacidad', label: 'Privacidad' },
-    { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
-    { href: '/page/terminos-y-condiciones-de-publicidad', label: 'Términos y condiciones de publicidad' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/events', label: 'Eventos' },
-      { href: '/', label: 'Descargas' },
-      { href: '/videos', label: 'Vídeos' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Suscríbase' },
-      { href: '/page/anuncie', label: 'Anuncie' },
-      { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
-      { href: '/page/contrato', label: 'Contrato' },
-      { href: '/page/privacidad', label: 'Privacidad' },
-      { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
-      { href: '/page/terminos-y-condiciones-de-publicidad', label: 'Términos y condiciones de publicidad' },
-    ],
+  navigation: {
+    // primary: {
+    //   items: [
+    //     { href: '/automatizacion', label: 'Automatización' },
+    //     { href: '/empaque', label: 'Empaque' },
+    //     { href: '/procesamiento', label: 'Procesamiento' },
+    //   ],
+    // },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Suscríbase' },
+        { href: '/automatizacion', label: 'Automatización' },
+        { href: '/empaque', label: 'Empaque' },
+        { href: '/procesamiento', label: 'Procesamiento' },
+        { href: '/events', label: 'Eventos' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/anuncie', label: 'Anuncie' },
+        { href: '/page/contrato', label: 'Contrato' },
+        { href: '/page/privacidad', label: 'Privacidad' },
+        { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
+        { href: '/page/terminos-y-condiciones-de-publicidad', label: 'Términos y condiciones de publicidad' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Temas',
+        items: [
+          { href: '/automatizacion', label: 'Automatización' },
+          { href: '/empaque', label: 'Empaque' },
+          { href: '/procesamiento', label: 'Procesamiento' },
+        ],
+      },
+      resources: {
+        label: 'Recursos',
+        items: [
+          { href: '/events', label: 'Eventos' },
+          { href: '/', label: 'Descargas' },
+          { href: '/videos', label: 'Vídeos' },
+        ],
+      },
+      userTools: {
+        label: 'Herramientas de usuario',
+        items: [
+          { href: '/subscribe', label: 'Suscríbase' },
+          { href: '/page/anuncie', label: 'Anuncie' },
+          { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
+          { href: '/page/contrato', label: 'Contrato' },
+          { href: '/page/privacidad', label: 'Privacidad' },
+          { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
+          { href: '/page/terminos-y-condiciones-de-publicidad', label: 'Términos y condiciones de publicidad' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {
