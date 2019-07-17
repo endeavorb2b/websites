@@ -140,21 +140,57 @@ $theme-heading-h6-line-height-sm:     get-line-height($theme-heading-h6-font-siz
 $theme-content-heading-large-margin-bottom:     53px !default;
 $theme-content-heading-large-margin-bottom-sm:  48px !default;
 
+$theme-content-heading-h1-font-family:          $theme-heading-h1-font-family !default;
+$theme-content-heading-h1-font-weight:          $theme-heading-h1-font-weight !default;
+$theme-content-heading-h1-font-size:            $theme-heading-h1-font-size !default;
+$theme-content-heading-h1-font-size-sm:         $theme-heading-h1-font-size-sm !default;
+$theme-content-heading-h1-line-height:          $theme-heading-h1-line-height !default;
+$theme-content-heading-h1-line-height-sm:       $theme-heading-h1-line-height-sm !default;
 $theme-content-heading-h1-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
 $theme-content-heading-h1-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
 
+$theme-content-heading-h2-font-family:          $theme-heading-h2-font-family !default;
+$theme-content-heading-h2-font-weight:          $theme-heading-h2-font-weight !default;
+$theme-content-heading-h2-font-size:            $theme-heading-h2-font-size !default;
+$theme-content-heading-h2-font-size-sm:         $theme-heading-h2-font-size-sm !default;
+$theme-content-heading-h2-line-height:          $theme-heading-h2-line-height !default;
+$theme-content-heading-h2-line-height-sm:       $theme-heading-h2-line-height-sm !default;
 $theme-content-heading-h2-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
 $theme-content-heading-h2-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
 
+$theme-content-heading-h3-font-family:          $theme-heading-h3-font-family !default;
+$theme-content-heading-h3-font-weight:          $theme-heading-h3-font-weight !default;
+$theme-content-heading-h3-font-size:            $theme-heading-h3-font-size !default;
+$theme-content-heading-h3-font-size-sm:         $theme-heading-h3-font-size-sm !default;
+$theme-content-heading-h3-line-height:          $theme-heading-h3-line-height !default;
+$theme-content-heading-h3-line-height-sm:       $theme-heading-h3-line-height-sm !default;
 $theme-content-heading-h3-margin-bottom:        $theme-content-heading-large-margin-bottom !default;
 $theme-content-heading-h3-margin-bottom-sm:     $theme-content-heading-large-margin-bottom-sm !default;
 
+$theme-content-heading-h4-font-family:          $theme-heading-h4-font-family !default;
+$theme-content-heading-h4-font-weight:          $theme-heading-h4-font-weight !default;
+$theme-content-heading-h4-font-size:            $theme-heading-h4-font-size !default;
+$theme-content-heading-h4-font-size-sm:         $theme-heading-h4-font-size-sm !default;
+$theme-content-heading-h4-line-height:          $theme-heading-h4-line-height !default;
+$theme-content-heading-h4-line-height-sm:       $theme-heading-h4-line-height-sm !default;
 $theme-content-heading-h4-margin-bottom:        39px !default;
 $theme-content-heading-h4-margin-bottom-sm:     31px !default;
 
+$theme-content-heading-h5-font-family:          $theme-heading-h5-font-family !default;
+$theme-content-heading-h5-font-weight:          $theme-heading-h5-font-weight !default;
+$theme-content-heading-h5-font-size:            $theme-heading-h5-font-size !default;
+$theme-content-heading-h5-font-size-sm:         $theme-heading-h5-font-size-sm !default;
+$theme-content-heading-h5-line-height:          $theme-heading-h5-line-height !default;
+$theme-content-heading-h5-line-height-sm:       $theme-heading-h5-line-height-sm !default;
 $theme-content-heading-h5-margin-bottom:        25px !default;
 $theme-content-heading-h5-margin-bottom-sm:     17px !default;
 
+$theme-content-heading-h6-font-family:          $theme-heading-h6-font-family !default;
+$theme-content-heading-h6-font-weight:          $theme-heading-h6-font-weight !default;
+$theme-content-heading-h6-font-size:            $theme-heading-h6-font-size !default;
+$theme-content-heading-h6-font-size-sm:         $theme-heading-h6-font-size-sm !default;
+$theme-content-heading-h6-line-height:          $theme-heading-h6-line-height !default;
+$theme-content-heading-h6-line-height-sm:       $theme-heading-h6-line-height-sm !default;
 $theme-content-heading-h6-margin-bottom:        11px !default;
 $theme-content-heading-h6-margin-bottom-sm:     $theme-content-heading-h6-margin-bottom !default;
 
@@ -225,11 +261,11 @@ $theme-load-more-button-font-family:      $theme-load-more-font-family !default;
 $theme-load-more-button-text-align:       center !default;
 
 $theme-load-more-header-font-family:      $theme-load-more-font-family !default;
-$theme-load-more-header-font-size-sm:     22px !default;
-$theme-load-more-header-font-size:        26px !default;
+$theme-load-more-header-font-size-sm:     $theme-heading-h4-font-size-sm !default;
+$theme-load-more-header-font-size:        $theme-heading-h4-font-size !default;
 $theme-load-more-header-font-weight:      $font-weight-bold !default;
-$theme-load-more-header-line-height-sm:   28px !default;
-$theme-load-more-header-line-height:      32px !default;
+$theme-load-more-header-line-height-sm:   $theme-heading-h4-line-height-sm !default;
+$theme-load-more-header-line-height:      $theme-heading-h4-line-height !default;
 $theme-load-more-header-text-align:       center !default;
 $theme-load-more-header-text-transform:   uppercase !default;
 
@@ -293,12 +329,12 @@ $theme-item-title-link-decoration:             $theme-item-link-decoration !defa
 $theme-item-title-link-hover-color:            $theme-item-title-link-color !default;
 $theme-item-title-link-hover-decoration:       $theme-item-link-hover-decoration !default;
 
-$theme-item-title-large-font-size-sm:          20px !default;
-$theme-item-title-large-font-size:             24px !default;
+$theme-item-title-large-font-size-sm:          $theme-heading-h5-font-size-sm !default;
+$theme-item-title-large-font-size:             $theme-heading-h5-font-size !default;
 $theme-item-title-large-font-weight:           $theme-item-title-font-weight !default;
 $theme-item-title-large-letter-spacing:        $theme-item-title-letter-spacing !default;
-$theme-item-title-large-line-height-sm:        26px !default;
-$theme-item-title-large-line-height:           30px !default;
+$theme-item-title-large-line-height-sm:        $theme-heading-h5-line-height-sm !default;
+$theme-item-title-large-line-height:           $theme-heading-h5-line-height !default;
 $theme-item-title-large-max-lines:             $theme-responsive-max-lines !default;
 
 $theme-item-title-locked-content:              "\1F512" !default;

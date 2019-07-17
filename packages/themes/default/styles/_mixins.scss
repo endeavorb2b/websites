@@ -1,139 +1,3 @@
-@mixin theme-card() {
-  @include border-radius($theme-card-border-radius);
-  @include box-shadow($theme-card-box-shadow);
-  background-color: $theme-card-background-color;
-  border: $theme-card-border;
-}
-
-@mixin theme-card-header() {
-  font-family: $theme-card-header-font-family;
-  font-size: $theme-card-header-font-size;
-  font-weight: $theme-card-header-font-weight;
-  color: $theme-card-header-color;
-  text-transform: $theme-card-header-text-transform;
-  letter-spacing: $theme-card-header-letter-spacing;
-  background-color: $theme-card-header-background-color;
-  border-bottom: $theme-card-header-border;
-}
-
-@mixin theme-card-header-link() {
-  color: $theme-card-header-link-color;
-  text-decoration: $theme-card-header-link-decoration;
-  &:hover {
-    color: $theme-card-header-link-hover-color;
-    text-decoration: $theme-card-header-link-hover-decoration;
-  }
-}
-
-@mixin theme-content-body() {
-  @include theme-text-page-body();
-  h1 {
-    @include theme-content-heading(h1);
-  }
-  h2 {
-    @include theme-content-heading(h2);
-  }
-  h3 {
-    @include theme-content-heading(h3);
-  }
-  h4 {
-    @include theme-content-heading(h4);
-  }
-  h5 {
-    @include theme-content-heading(h5);
-  }
-  h6 {
-    @include theme-content-heading(h6);
-  }
-  strong,
-  b {
-    font-weight: $theme-content-paragraph-strong-font-weight;
-  }
-  [data-embed-type="image"] img {
-    @include border-radius($theme-content-paragraph-image-border-radius);
-    @include box-shadow($theme-content-paragraph-image-box-shadow);
-  }
-  p,
-  ul,
-  table,
-  [data-oembed-type="video"],
-  [data-embed-type="image"],
-  ol {
-    @include theme-content-body-paragraph();
-  }
-}
-
-@mixin theme-content-body-paragraph() {
-  margin-bottom: $theme-content-paragraph-margin-bottom;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    margin-bottom: $theme-content-paragraph-margin-bottom-sm;
-  }
-  &:empty {
-    display: none;
-  }
-}
-
-@mixin theme-content-heading($size) {
-  @include theme-heading($size);
-  @if $size == h1 {
-    margin-bottom: $theme-content-heading-h1-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h1-margin-bottom-sm;
-    }
-  } @else if $size == h2 {
-    margin-bottom: $theme-content-heading-h2-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h2-margin-bottom-sm;
-    }
-  } @else if $size == h3 {
-    margin-bottom: $theme-content-heading-h3-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h3-margin-bottom-sm;
-    }
-  } @else if $size == h4 {
-    margin-bottom: $theme-content-heading-h4-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
-    }
-  } @else if $size == h5 {
-    margin-bottom: $theme-content-heading-h5-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h5-margin-bottom-sm;
-    }
-  } @else {
-    margin-bottom: $theme-content-heading-h6-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h6-margin-bottom-sm;
-    }
-  }
-}
-
-@mixin theme-embed-responsive($ratio-x, $ratio-y) {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-
-  &::before {
-    display: block;
-    content: "";
-    @if $ratio-y and $ratio-x {
-      padding-top: percentage($ratio-y / $ratio-x);
-    }
-  }
-}
-
-@mixin theme-embed-responsive-item() {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 @mixin theme-apply-responsive-fonts(
   $font-size: $font-size-sm,
   $line-height: $line-height-base,
@@ -168,53 +32,167 @@
   );
 }
 
-@mixin theme-heading($size) {
-  font-family: $theme-heading-font-family;
-  font-weight: $theme-heading-font-weight;
+@mixin theme-card() {
+  @include border-radius($theme-card-border-radius);
+  @include box-shadow($theme-card-box-shadow);
+  background-color: $theme-card-background-color;
+  border: $theme-card-border;
+}
 
-  @if $size == h1 {
-    font-size: $theme-heading-h1-font-size;
-    line-height: $theme-heading-h1-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h1-font-size-sm;
-      line-height: $theme-heading-h1-line-height-sm;
+@mixin theme-card-header() {
+  font-family: $theme-card-header-font-family;
+  font-size: $theme-card-header-font-size;
+  font-weight: $theme-card-header-font-weight;
+  color: $theme-card-header-color;
+  text-transform: $theme-card-header-text-transform;
+  letter-spacing: $theme-card-header-letter-spacing;
+  background-color: $theme-card-header-background-color;
+  border-bottom: $theme-card-header-border;
+}
+
+@mixin theme-card-header-link() {
+  color: $theme-card-header-link-color;
+  text-decoration: $theme-card-header-link-decoration;
+  &:hover {
+    color: $theme-card-header-link-hover-color;
+    text-decoration: $theme-card-header-link-hover-decoration;
+  }
+}
+
+@mixin theme-content-body() {
+  @include theme-text-page-body();
+  h1 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h1-font-family,
+      $font-size-sm: $theme-content-heading-h1-font-size-sm,
+      $font-size: $theme-content-heading-h1-font-size,
+      $font-weight: $theme-content-heading-h1-font-weight,
+      $line-height-sm: $theme-content-heading-h1-line-height-sm,
+      $line-height: $theme-content-heading-h1-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h1-margin-bottom-sm;
     }
-  } @else if $size == h2 {
-    font-size: $theme-heading-h2-font-size;
-    line-height: $theme-heading-h2-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h2-font-size-sm;
-      line-height: $theme-heading-h2-line-height-sm;
+    margin-bottom: $theme-content-heading-h1-margin-bottom;
+  }
+  h2 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h2-font-family,
+      $font-size-sm: $theme-content-heading-h2-font-size-sm,
+      $font-size: $theme-content-heading-h2-font-size,
+      $font-weight: $theme-content-heading-h2-font-weight,
+      $line-height-sm: $theme-content-heading-h2-line-height-sm,
+      $line-height: $theme-content-heading-h2-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h2-margin-bottom-sm;
     }
-  } @else if $size == h3 {
-    font-size: $theme-heading-h3-font-size;
-    line-height: $theme-heading-h3-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h3-font-size-sm;
-      line-height: $theme-heading-h3-line-height-sm;
+    margin-bottom: $theme-content-heading-h2-margin-bottom;
+  }
+  h3 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h3-font-family,
+      $font-size-sm: $theme-content-heading-h3-font-size-sm,
+      $font-size: $theme-content-heading-h3-font-size,
+      $font-weight: $theme-content-heading-h3-font-weight,
+      $line-height-sm: $theme-content-heading-h3-line-height-sm,
+      $line-height: $theme-content-heading-h3-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h3-margin-bottom-sm;
     }
-  } @else if $size == h4 {
-    font-size: $theme-heading-h4-font-size;
-    line-height: $theme-heading-h4-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h4-font-size-sm;
-      line-height: $theme-heading-h4-line-height-sm;
+    margin-bottom: $theme-content-heading-h3-margin-bottom;
+  }
+  h4 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h4-font-family,
+      $font-size-sm: $theme-content-heading-h4-font-size-sm,
+      $font-size: $theme-content-heading-h4-font-size,
+      $font-weight: $theme-content-heading-h4-font-weight,
+      $line-height-sm: $theme-content-heading-h4-line-height-sm,
+      $line-height: $theme-content-heading-h4-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
     }
-  } @else if $size == h5 {
-    font-size: $theme-heading-h5-font-size;
-    line-height: $theme-heading-h5-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h5-font-size-sm;
-      line-height: $theme-heading-h5-line-height-sm;
+    margin-bottom: $theme-content-heading-h4-margin-bottom;
+  }
+  h5 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h5-font-family,
+      $font-size-sm: $theme-content-heading-h5-font-size-sm,
+      $font-size: $theme-content-heading-h5-font-size,
+      $font-weight: $theme-content-heading-h5-font-weight,
+      $line-height-sm: $theme-content-heading-h5-line-height-sm,
+      $line-height: $theme-content-heading-h5-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h5-margin-bottom-sm;
     }
-  } @else {
-    font-size: $theme-heading-h6-font-size;
-    line-height: $theme-heading-h6-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h6-font-size-sm;
-      line-height: $theme-heading-h6-line-height-sm;
+    margin-bottom: $theme-content-heading-h5-margin-bottom;
+  }
+  h6 {
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h6-font-family,
+      $font-size-sm: $theme-content-heading-h6-font-size-sm,
+      $font-size: $theme-content-heading-h6-font-size,
+      $font-weight: $theme-content-heading-h6-font-weight,
+      $line-height-sm: $theme-content-heading-h6-line-height-sm,
+      $line-height: $theme-content-heading-h6-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h6-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h6-margin-bottom;
+  }
+  strong,
+  b {
+    font-weight: $theme-content-paragraph-strong-font-weight;
+  }
+  [data-embed-type="image"] img {
+    @include border-radius($theme-content-paragraph-image-border-radius);
+    @include box-shadow($theme-content-paragraph-image-box-shadow);
+  }
+  p,
+  ul,
+  table,
+  [data-oembed-type="video"],
+  [data-embed-type="image"],
+  ol {
+    margin-bottom: $theme-content-paragraph-margin-bottom;
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-paragraph-margin-bottom-sm;
+    }
+    &:empty {
+      display: none;
     }
   }
+}
+
+@mixin theme-embed-responsive($ratio-x, $ratio-y) {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+    @if $ratio-y and $ratio-x {
+      padding-top: percentage($ratio-y / $ratio-x);
+    }
+  }
+}
+
+@mixin theme-embed-responsive-item() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 @mixin theme-hide-scrollbars() {
