@@ -12,7 +12,11 @@
 </template>
 
 <script>
+import * as Sentry from '@sentry/browser';
 import redirect from '../utils/redirect';
+import checkCookies from '../utils/check-cookies';
+import AuthenticationError from './authentication-error';
+import FeatureError from './feature-error';
 
 export default {
   props: {
@@ -32,7 +36,13 @@ export default {
     redirecting: false,
   }),
   mounted() {
-    this.authenticate();
+    if (checkCookies()) {
+      this.authenticate();
+    } else {
+      const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');
+      this.error = error.message;
+      Sentry.captureException(error);
+    }
   },
   methods: {
     /**
@@ -44,11 +54,16 @@ export default {
         const { token } = this;
         if (!token) throw new Error('No login token was provided.');
 
+        Sentry.addBreadcrumb({ category: 'auth', message: 'Checking token', data: { token } });
         const res = await this.$fetch('/authenticate', { token });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.message);
+
+        Sentry.addBreadcrumb({ category: 'auth', message: 'Token checked', data });
+        if (!res.ok) throw new AuthenticationError(data.message, res.status);
+        Sentry.captureMessage('AuthenticationSuccess');
         this.redirect();
       } catch (e) {
+        Sentry.captureException(e);
         this.error = `Unable to login: ${e.message}`;
       } finally {
         this.loading = false;
