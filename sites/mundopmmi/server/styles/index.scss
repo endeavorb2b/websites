@@ -1,11 +1,14 @@
-$primary: #1c496d !default;
-$secondary: #495057; // equivalent to default gray-700
-$light: #e9ecef !default; // equivalent to default gray-200
-$dark: #212529 !default; // equivalent to default gray-900
-$info: #6c757d !default; // equivalent to default gray-600
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i|Source+Serif+Pro:400,600&display=swap");
 
-$theme-font-family-sans-serif: "IBM Plex Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$theme-font-family-serif: "Source Serif Pro", serif !default;
+$primary: #1c496d;
+$secondary: #495057; // equivalent to default gray-700
+$light: #e9ecef; // equivalent to default gray-200
+$dark: #212529; // equivalent to default gray-900
+$info: #6c757d; // equivalent to default gray-600
+
+$theme-font-family-sans-serif: "IBM Plex Sans", sans-serif;
+$theme-font-family-serif: "Source Serif Pro", serif;
+$theme-font-family-page-title: $theme-font-family-sans-serif;
 
 $enable-rounded: false;
 
