@@ -32,6 +32,10 @@ $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(
         <cms-browser-component name="IdentitySignInForm" />
       </else-if>
     </if>
+    <if(canAccess && content.type === 'media-gallery')>
+      $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
+      <endeavor-page-body-images images=images />
+    </if>
   </div>
 
   <div class="page-wrapper__contents">

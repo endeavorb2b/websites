@@ -1,10 +1,15 @@
 .content-attribution {
   font-family: $theme-content-attribution-font-family;
+  font-size: $theme-content-attribution-font-size;
+  font-weight: $theme-content-attribution-font-weight;
+  line-height: $theme-content-attribution-line-height;
+  color: $theme-content-attribution-color;
+  text-transform: $theme-content-attribution-text-transform;
   &__prefix {
     margin-right: $theme-content-attribution-prefix-margin;
     font-weight: $theme-content-attribution-prefix-font-weight;
     &::after {
-      margin-left: $theme-content-attribution-prefix-margin;
+      margin-left: $theme-content-attribution-prefix-margin-after;
       font-weight: $theme-content-attribution-prefix-spacer-font-weight;
       content: $theme-content-attribution-prefix-spacer-content;
     }
@@ -15,8 +20,11 @@
       display: inline-block;
       content: $theme-content-attribution-name-content;
     }
-    &:last-child::after {
-      content: "";
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        content: "";
+      }
     }
   }
   div:last-child {

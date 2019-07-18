@@ -1,124 +1,252 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i&Open+Sans:300,300i,400,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:400,400i,700,700i|Roboto+Condensed:700|Oswald:500,700&display=swap");
+@import "../../node_modules/@endeavorb2b/base-website-themes/default/styles/functions";
 
-$primary: #005ea0 !default;
-$secondary: #495057; // equivalent to default gray-700
-$light: #e9ecef !default; // equivalent to default gray-200
-$dark: #212529 !default; // equivalent to default gray-900
-$info: #6c757d !default; // equivalent to default gray-600
+// Bizbash specific vars
+$bizbash-letter-spacing:  .1px;
 
+// Fonts
+$font-source-sans-pro:    "Source Sans Pro", "Arial", sans-serif;
+$font-open-sans:          "Open Sans", "Arial", sans-serif;
+$font-oswald:             "Oswald", "Arial", sans-serif;
+$font-roboto-condensed:   "Roboto Condensed", sans-serif;
 
-$theme-font-family-sans-serif: "Open Sans", sans-serif !default;
-$theme-font-family-serif: "Open Sans", sans-serif !default;
-$theme-font-family-page-title: "Source Sans Pro", "Georgia", "Times New Roman", "Times", serif !default;
+$theme-font-family-sans-serif: $font-open-sans;
+$theme-font-family-page-title: $font-source-sans-pro;
 
-$enable-shadows: false !default;
-$enable-rounded: false !default;
+// Colors
+$primary:   #0072bb;
+$black:     #000;
+$gray-600:  #4d4d4d;
 
-$black: #333 !default;
-$body-bg: #fff !default;
+// General Settings
+$body-bg:     #fff;
+$body-color:  #333;
+$list-group-border-width: 0;
+$enable-shadows: false;
+$enable-rounded: false;
+$breadcrumb-divider-color: $black;
 
+// Headings
+$theme-heading-font-family: $font-source-sans-pro;
+
+// Items
+$theme-item-footer-font-family:         $font-oswald;
+$theme-item-footer-font-size:           11px;
+$theme-item-footer-font-weight:         500;
+$theme-item-footer-text-transform:      uppercase;
+
+$theme-item-title-font-family:          $theme-heading-font-family;
+$theme-item-title-font-size-sm:         15.575px;
+$theme-item-title-font-size:            16.675px;
+$theme-item-title-font-weight:          300;
+$theme-item-title-line-height-sm:       get-line-height($theme-item-title-font-size-sm, 21.345px) !default;
+$theme-item-title-line-height:          get-line-height($theme-item-title-font-size, 23.345px) !default;
+$theme-item-title-max-lines:            4;
+
+$theme-item-title-large-font-size-sm:   28px;
+$theme-item-title-large-font-size:      32px;
+$theme-item-title-large-font-weight:    700;
+$theme-item-title-large-line-height-sm: get-line-height($theme-item-title-large-font-size-sm, 34px) !default;
+$theme-item-title-large-line-height:    get-line-height($theme-item-title-large-font-size, 38px) !default;
+$theme-item-title-large-max-lines:      3;
+
+$theme-item-description-font-family:    $font-open-sans;
+$theme-item-description-font-size-sm:   13px;
+$theme-item-description-font-size:      13px;
+$theme-item-description-line-height-sm: get-line-height($theme-item-description-font-size-sm, 24px) !default;
+$theme-item-description-line-height:    get-line-height($theme-item-description-font-size, 24px) !default;
+$theme-item-description-margin:         10px;
+
+// Pages
+$theme-page-title-font-size:    32px;
+$theme-page-title-font-weight:  700;
+
+$theme-page-deck-color:         #565656;
+$theme-page-deck-font-size:     18px;
+
+$theme-page-body-font-family:   $font-open-sans;
+$theme-page-body-font-size:     16px;
+$theme-page-body-font-size-sm:  16px;
+
+$theme-page-body-images-title-font-size:    17px;
+$theme-page-body-images-title-font-weight:  700;
+
+$theme-page-body-media-gallery-image-name-font-family:  $font-oswald;
+$theme-page-body-media-gallery-image-name-font-weight:  700;
+
+// Content Attribution
+$theme-content-attribution-color:                   $gray-600;
+$theme-content-attribution-font-family:             $font-oswald;
+$theme-content-attribution-font-size:               12px;
+$theme-content-attribution-font-weight:             700;
+$theme-content-attribution-text-transform:          uppercase;
+$theme-content-attribution-prefix-spacer-content:   "";
+$theme-content-attribution-prefix-margin-after:     0;
+
+// Content Published Date
+$theme-content-published-date-color:            $theme-content-attribution-color;
+$theme-content-published-date-font-family:      $theme-content-attribution-font-family;
+$theme-content-published-date-font-size:        $theme-content-attribution-font-size;
+$theme-content-published-date-font-weight:      $theme-content-attribution-font-weight;
+$theme-content-published-date-text-transform:   $theme-content-attribution-text-transform;
+
+// Contact Details
+$theme-contact-details-font-size:         12px;
+$theme-contact-details-font-weight:       700;
+$theme-contact-details-label-font-weight: 700;
+
+// Breadcrumbs
+$theme-breadcrumbs-font-family:   $font-roboto-condensed;
+$theme-breadcrumbs-font-size:     12px;
+$theme-breadcrumbs-font-size-sm:  12px;
+$theme-breadcrumbs-font-weight:   600;
+
+// Cards
+$theme-card-header-color:             $primary;
+$theme-card-header-background-color:  #fff;
+$theme-card-header-border:            none;
+$theme-card-header-font-family:       $font-oswald;
+$theme-card-header-font-size:         26.825px;
+$theme-card-header-font-weight:       700;
+$theme-card-header-letter-spacing:    $bizbash-letter-spacing;
+
+// Media
+$theme-media-caption-color:       #464646;
+$theme-media-caption-font-weight: 400;
+$theme-media-credit-color:        #777;
+$theme-media-credit-font-size:    12px;
+$theme-media-credit-font-style:   initial;
+$theme-media-footer-font-size:    14px;
+$theme-media-footer-padding-x:    0;
+$theme-media-footer-padding-y:    .5rem;
+
+// Load More
+$theme-load-more-header-color:        $theme-card-header-color;
+$theme-load-more-header-font-family:  $theme-card-header-font-family;
+$theme-load-more-header-font-size:    $theme-card-header-font-size;
+$theme-load-more-header-font-weight:  $theme-card-header-font-weight;
+
+// Navbar / Header
 $theme-site-header-breakpoints: (
-  hide-primary: 836px,
-  hide-secondary: 916px,
-  small-logo: 1012px,
-  small-text-primary: 935px,
-  small-text-secondary: 1120px
+  hide-primary: 896px,
+  hide-secondary: 812px,
+  small-logo: 860px,
+  small-text-primary: 1020px,
+  small-text-secondary: 860px
 );
 
+$theme-site-navbar-primary-bg-color:        $black;
+$theme-site-navbar-primary-font-family:   $font-source-sans-pro;
+$theme-site-navbar-primary-font-size:       18.5px;
+$theme-site-navbar-primary-font-size-sm:    16px;
+$theme-site-navbar-primary-font-weight:     700;
+$theme-site-navbar-primary-line-height:     1;
+
+$theme-site-navbar-primary-link-active-color:       $primary;
+$theme-site-navbar-primary-link-active-decoration:  none;
+$theme-site-navbar-primary-link-color:              #fff;
+$theme-site-navbar-primary-link-hover-color:        #fff;
+
+$theme-site-navbar-secondary-bg-color:  $black;
+$theme-site-navbar-secondary-font-size:     12px;
+$theme-site-navbar-secondary-font-size-sm:  12px;
+$theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
+$theme-site-navbar-secondary-font-weight:   700;
+$theme-site-navbar-secondary-line-height:   1;
+
+$theme-site-navbar-secondary-link-color:    $primary;
+$theme-site-navbar-secondary-hover-color:   $primary;
+
+$theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
+
+$theme-site-navbar-logo-height: 45px;
+$theme-site-navbar-logo-height-sm: 30px;
+
+// Carousel
 $theme-carousel-caption-padding: 1rem;
 $theme-carousel-caption-text-shadow: rgba(0, 0, 0, .6) 0 1px 2px;
 $theme-carousel-caption-background: rgba(0, 0, 0, .75);
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
-@import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/tables";
+@import "components/carousel";
 
-.carousel {
-  .carousel-item {
-    img {
-      display: block;
-      width: 100%;
+body {
+  letter-spacing: $bizbash-letter-spacing;
+}
+
+.site-navbar-items {
+  $self: &;
+  &--primary {
+    #{ $self } {
+      // stylelint-disable-next-line
+      &__item:first-child a::before {
+        padding-right: 0;
+        content: "";
+      }
+      &__link {
+        &::before {
+          float: left;
+          padding-right: $theme-site-navbar-primary-padding-x - 1;
+          color: $primary;
+          content: "|";
+        }
+      }
     }
-    .carousel-caption {
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: none;
-      padding-bottom: $theme-carousel-caption-padding;
-      text-shadow: $theme-carousel-caption-text-shadow;
-      background: $theme-carousel-caption-background;
-      @include media-breakpoint-up(md) {
-        display: block;
+  }
+}
+
+.item {
+  $self: &;
+  &--image-left {
+    #{ $self } {
+      &__image {
+        margin-top: 6px;
       }
     }
   }
 
-  .carousel-indicators {
-    margin-bottom: 0;
+  &--image-right {
+    #{ $self } {
+      &__image {
+        margin-top: 6px;
+      }
+    }
   }
 }
 
-.required-field {
-  &::after {
-    margin-left: map-get($spacers, 1);
-    color: $red;
-    content: "*";
+.item-list {
+  &__header {
+    padding-bottom: 0;
   }
 }
 
-.top-list {
-  &__title {
-    padding-right: $theme-page-body-padding;
-    padding-left: $theme-page-body-padding;
-    margin-bottom: $theme-page-body-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      padding-right: $theme-page-body-padding-sm;
-      padding-left: $theme-page-body-padding-sm;
-      margin-bottom: $theme-page-body-margin-bottom-sm;
-    }
-    @include theme-heading(h4);
-    margin-bottom: $theme-content-heading-h4-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
-    }
+.content-attribution {
+  display: inline;
+  div {
+    display: inline;
   }
-  &__row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: map-get($spacers, block);
+}
+
+.content-attribution:not(:empty) + .content-published-date {
+  display: inline;
+  &::before {
+    margin-right: $theme-content-attribution-prefix-margin;
+    margin-left: $theme-content-attribution-prefix-margin;
+    font-weight: $theme-content-attribution-prefix-spacer-font-weight;
+    content: "\2014";
   }
-  &__col {
-    margin-bottom: map-get($spacers, block);
-    @include make-col-ready();
-    @include media-breakpoint-up(md) {
-      @include make-col(4);
-    }
-  }
-  &__link {
-    display: block;
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  &__overlay {
-    &:empty {
-      display: none;
-    }
-    position: absolute;
-    top: 0;
-    right: .9rem;
-    bottom: 0;
-    left: .9rem;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
-    background: rgba(0, 0, 0, .5);
-  }
-  &__name {
-    margin: 0 auto;
-    color: $white;
+}
+
+.page-body-image,
+[data-embed-type="image"] {
+  border-bottom: 1px solid #ccc;
+}
+
+.table {
+  font-size: 12px;
+
+  th {
+    font-weight: 700;
   }
 }

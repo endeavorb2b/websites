@@ -1,0 +1,49 @@
+@import "bootstrap/components";
+
+@import "theme/ads";
+@import "theme/breadcrumbs";
+@import "theme/contact-us";
+@import "theme/content";
+@import "theme/embedded-media";
+@import "theme/footer";
+@import "theme/forms";
+@import "theme/icons";
+@import "theme/item";
+@import "theme/item-list";
+@import "theme/lazyload";
+@import "theme/load-more";
+@import "theme/magazine";
+@import "theme/navbar";
+@import "theme/page";
+@import "theme/subscribe";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-rendering: $theme-text-rendering;
+}
+
+.container-fluid-max {
+  @include make-container();
+  @include media-breakpoint-up(xl, $grid-breakpoints) {
+    max-width: map-get($grid-breakpoints, xl);
+  }
+  flex-shrink: 0;
+  padding-top: calculate-navbar-height-for(default);
+  margin-top: map-get($spacers, 4);
+
+  @media (max-width: map-get($theme-site-header-breakpoints, small-logo)) {
+    padding-top: calculate-navbar-height-for(small-logo);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, small-text-primary)) {
+    padding-top: calculate-navbar-height-for(small-text-primary);
+  }
+  @media (max-width: map-get($theme-site-header-breakpoints, hide-primary)) {
+    padding-top: calculate-navbar-height-for(hide-primary);
+  }
+}

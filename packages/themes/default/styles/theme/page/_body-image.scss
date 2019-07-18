@@ -1,0 +1,20 @@
+.page-body-image {
+  margin-bottom: $theme-primary-media-margin-bottom;
+  &__caption {
+    @include theme-media-caption();
+  }
+
+  &__credit {
+    @include theme-media-credit();
+  }
+
+  &_wrapper{
+    @include theme-embed-responsive($theme-primary-media-aspect-ratio-x, $theme-primary-media-aspect-ratio-y);
+    @include border-radius($theme-primary-media-border-radius);
+    @include box-shadow($theme-primary-media-box-shadow);
+    img {
+      @include theme-embed-responsive-item();
+      @include border-radius($theme-primary-media-border-radius);
+    }
+  }
+}

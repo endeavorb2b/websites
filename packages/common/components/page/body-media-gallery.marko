@@ -1,0 +1,26 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+import { buildImgixUrl } from '@base-cms/image';
+
+$ const block = 'page-body-media-gallery';
+$ const gallery = getAsObject(input, 'gallery');
+$ const images = getAsArray(gallery, 'images.edges').map(({ node }) => node);
+
+<if(images.length)>
+  <div class=block>
+    <h6 class=`${block}__title`>
+      <cms-link-element to=gallery path="canonicalPath">${gallery.shortName}</cms-link-element>
+    </h6>
+    <div class=`${block}__row`>
+      <for|image| of=images>
+        <div class=`${block}__col`>
+          <endeavor-link class=`${block}__link` href=`${gallery.canonicalPath}#image-${image.id}` title="View Image in Gallery">
+            <img src=buildImgixUrl(image.src, input.imageOptions) alt=image.alt />
+            <div class=`${block}__overlay`>
+              <span class=`${block}__image-name`>${image.displayName}</span>
+            </div>
+          </endeavor-link>
+        </div>
+      </for>
+    </div>
+  </div>
+</if>

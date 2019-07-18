@@ -1,0 +1,9 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const galleries = getAsArray(input, 'galleries');
+
+<if(galleries.length)>
+  <for|gallery| of=galleries>
+    <endeavor-page-body-media-gallery gallery=gallery image-options=input.imageOptions />
+  </for>
+</if>

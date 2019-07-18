@@ -27,12 +27,13 @@
   }
 
   &__header {
-    @include theme-text-small();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: $theme-item-header-margin;
+    font-family: $theme-item-header-font-family;
+    font-size: $theme-item-header-font-size;
     font-weight: $theme-item-header-font-weight;
+    line-height: $theme-item-header-line-height;
     color: $theme-item-header-color;
     letter-spacing: $theme-item-header-letter-spacing;
     a {
@@ -49,12 +50,14 @@
   }
 
   &__header-left {
+    margin-bottom: $theme-item-header-margin;
     &:empty {
       display: none;
     }
   }
 
   &__header-right {
+    margin-bottom: $theme-item-header-margin;
     white-space: nowrap;
     &:empty {
       display: none;
@@ -62,7 +65,15 @@
   }
 
   &__title {
-    @include theme-heading(list);
+    @include theme-apply-fonts(
+      $font-family: $theme-item-title-font-family,
+      $font-size-sm: $theme-item-title-font-size-sm,
+      $font-size: $theme-item-title-font-size,
+      $font-weight: $theme-item-title-font-weight,
+      $letter-spacing: $theme-item-title-letter-spacing,
+      $line-height-sm: $theme-item-title-line-height-sm,
+      $line-height: $theme-item-title-line-height
+    );
     margin-bottom: $theme-item-title-margin;
     color: $theme-item-title-color;
     &:empty {
@@ -70,7 +81,13 @@
     }
 
     a {
-      @include theme-max-lines($line-height: $theme-heading-list-line-height, $line-height-sm: $theme-heading-list-line-height-sm, $num: $theme-item-title-max-lines);
+      @include theme-max-lines(
+        $font-size: $theme-item-title-font-size,
+        $font-size-sm: $theme-item-title-font-size-sm,
+        $line-height: $theme-item-title-line-height,
+        $line-height-sm: $theme-item-title-line-height-sm,
+        $num: $theme-item-title-max-lines
+      );
       color: $theme-item-title-link-color;
       text-decoration: $theme-item-title-link-decoration;
       &:hover {
@@ -80,9 +97,24 @@
     }
 
     &--large {
-      @include theme-heading(h5);
+      @include theme-apply-fonts(
+        $font-family: $theme-item-title-font-family,
+        $font-size-sm: $theme-item-title-large-font-size-sm,
+        $font-size: $theme-item-title-large-font-size,
+        $font-weight: $theme-item-title-large-font-weight,
+        $letter-spacing: $theme-item-title-large-letter-spacing,
+        $line-height-sm: $theme-item-title-large-line-height-sm,
+        $line-height: $theme-item-title-large-line-height
+      );
+
       a {
-        @include theme-max-lines($line-height: $theme-heading-h5-line-height, $line-height-sm: $theme-heading-h5-line-height-sm, $num: $theme-item-title-large-max-lines);
+        @include theme-max-lines(
+          $font-size: $theme-item-title-large-font-size,
+          $font-size-sm: $theme-item-title-large-font-size-sm,
+          $line-height: $theme-item-title-large-line-height,
+          $line-height-sm: $theme-item-title-large-line-height-sm,
+          $num: $theme-item-title-large-max-lines
+        );
       }
     }
 
@@ -94,7 +126,14 @@
   }
 
   &__description {
-    @include theme-text-description();
+    @include theme-apply-fonts(
+      $font-family: $theme-item-description-font-family,
+      $font-size-sm: $theme-item-description-font-size-sm,
+      $font-size: $theme-item-description-font-size,
+      $font-weight: $theme-item-description-font-weight,
+      $line-height-sm: $theme-item-description-line-height-sm,
+      $line-height: $theme-item-description-line-height
+    );
     margin-bottom: $theme-item-description-margin;
     color: $theme-item-description-color;
     &:empty {
@@ -102,7 +141,13 @@
     }
 
     a {
-      @include theme-max-lines($line-height: $theme-text-description-line-height, $line-height-sm: $theme-text-description-line-height-sm, $num: $theme-item-description-max-lines);
+      @include theme-max-lines(
+        $font-size: $theme-item-description-font-size,
+        $font-size-sm: $theme-item-description-font-size-sm,
+        $line-height: $theme-item-description-line-height,
+        $line-height-sm: $theme-item-description-line-height-sm,
+        $num: $theme-item-description-max-lines
+      );
       color: $theme-item-description-link-color;
       text-decoration: $theme-item-description-link-decoration;
       &:hover {
@@ -113,7 +158,6 @@
   }
 
   &__footer {
-    @include theme-text-small();
     @include media-breakpoint-up(md) {
       flex-direction: row;
     }
@@ -121,8 +165,12 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
+    font-family: $theme-item-footer-font-family;
+    font-size: $theme-item-footer-font-size;
     font-weight: $theme-item-footer-font-weight;
+    line-height: $theme-item-footer-line-height;
     color: $theme-item-footer-color;
+    text-transform: $theme-item-footer-text-transform;
     &:empty {
       display: none;
     }

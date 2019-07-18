@@ -1,9 +1,9 @@
 .site-navbar {
-  @include box-shadow($theme-site-header-box-shadow);
   position: fixed;
   right: 0;
   left: 0;
   z-index: $theme-site-header-z-index;
+  box-shadow: $theme-site-header-box-shadow;
   opacity: $theme-site-header-opacity;
 
   &__primary {
@@ -237,8 +237,8 @@
   }
 
   &--open {
-    @include box-shadow($theme-site-navbar-menu-box-shadow);
     visibility: visible;
+    box-shadow: $theme-site-navbar-menu-box-shadow;
     transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0s;
     transform: translateX(0);
   }

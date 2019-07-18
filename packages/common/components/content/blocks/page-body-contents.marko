@@ -1,4 +1,4 @@
-import { getAsObject } from '@base-cms/object-path';
+import { getAsObject, getAsArray } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
 
@@ -13,8 +13,5 @@ $ const content = getAsObject(input, 'content');
   </if>
   <if(content.type === "webinar")>
     <endeavor-content-block-webinar-button content=content />
-  </if>
-  <if(content.type === "media-gallery")>
-    <endeavor-content-block-image-list image-connection=content.images />
   </if>
 </div>

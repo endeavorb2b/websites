@@ -1,0 +1,8 @@
+.page-body-images {
+  &__title {
+    font-family: $theme-page-body-images-title-font-family;
+    font-size: $theme-page-body-images-title-font-size;
+    font-weight: $theme-page-body-images-title-font-weight;
+    line-height: $theme-page-body-images-title-line-height;
+  }
+}

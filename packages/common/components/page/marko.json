@@ -1,0 +1,51 @@
+{
+  "tags": {
+    "endeavor-page-body-image": {
+      "template": "./body-image.marko",
+      "@image": {
+        "type": "object",
+        "required": true
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@options": {
+        "type": "object",
+        "default-value": {
+          "w": 720, "h": 405, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
+        }
+      }
+    },
+    "endeavor-page-body-images": {
+      "template": "./body-images.marko",
+      "@images": "array"
+    },
+    "endeavor-page-body-media-galleries": {
+      "template": "./body-media-galleries.marko",
+      "@galleries": {
+        "type": "array",
+        "default-value": []
+      },
+      "@image-options": {
+        "type": "object",
+        "default-value": {
+          "w": 352, "h": 198, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
+        }
+      }
+    },
+    "endeavor-page-body-media-gallery": {
+      "template": "./body-media-gallery.marko",
+      "@gallery": {
+        "type": "object",
+        "required": true
+      },
+      "@image-options": {
+        "type": "object",
+        "default-value": {
+          "w": 352, "h": 198, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
+        }
+      }
+    }
+  }
+}

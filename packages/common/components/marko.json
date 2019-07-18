@@ -11,6 +11,7 @@
     "./magazine/marko.json",
     "./native-x/marko.json",
     "./navbars/marko.json",
+    "./page/marko.json",
     "./published-content/marko.json",
     "./search/marko.json",
     "./social/marko.json",

@@ -9,6 +9,7 @@ module.exports = gql`
         edges {
           node {
             id
+            type
             shortName
             canonicalPath
             images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
