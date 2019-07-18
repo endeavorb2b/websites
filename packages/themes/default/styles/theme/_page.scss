@@ -1,3 +1,6 @@
+@import "page/body-image";
+@import "page/body-images";
+
 .page-wrapper {
   @include border-radius($theme-page-border-radius);
   @include box-shadow($theme-page-box-shadow);

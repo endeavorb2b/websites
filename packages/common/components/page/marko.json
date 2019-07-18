@@ -1,0 +1,25 @@
+{
+  "tags": {
+    "endeavor-page-body-image": {
+      "template": "./body-image.marko",
+      "@image": {
+        "type": "object",
+        "required": true
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@options": {
+        "type": "object",
+        "default-value": {
+          "w": 720, "h": 405, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
+        }
+      }
+    },
+    "endeavor-page-body-images": {
+      "template": "./body-images.marko",
+      "@images": "array"
+    }
+  }
+}
