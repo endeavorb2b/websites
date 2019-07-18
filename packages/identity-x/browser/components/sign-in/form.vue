@@ -60,8 +60,8 @@ import GivenName from './fields/given-name.vue';
 import FamilyName from './fields/family-name.vue';
 import cleanPath from '../../utils/clean-path';
 import cookiesEnabled from '../../utils/cookies-enabled';
-import FormError from './form-error';
-import FeatureError from '../feature-error';
+import FormError from '../../errors/form';
+import FeatureError from '../../errors/feature';
 
 export default {
   components: {

@@ -12,8 +12,8 @@ import * as Sentry from '@sentry/browser';
 import redirect from '../utils/redirect';
 import getReferringPage from '../utils/get-referring-page';
 import cookiesEnabled from '../utils/cookies-enabled';
-import LogoutError from './logout-error';
-import FeatureError from './feature-error';
+import LogoutError from '../errors/logout';
+import FeatureError from '../errors/feature';
 
 export default {
   props: {

@@ -15,8 +15,8 @@
 import * as Sentry from '@sentry/browser';
 import redirect from '../utils/redirect';
 import cookiesEnabled from '../utils/cookies-enabled';
-import AuthenticationError from './authentication-error';
-import FeatureError from './feature-error';
+import AuthenticationError from '../errors/authentication';
+import FeatureError from '../errors/feature';
 
 export default {
   props: {
