@@ -736,7 +736,7 @@ $ const args = {
       </form>
       <div class="row">
         <div class="content-query-load-more__col-ad">
-        <div id="facets">
+        <div class="directory-facets">
           <for|facetTypeKey, facetType| in=staticFacets>
             <ul class="list-group border-0">
               <h3>${facetType.name}</h3>
@@ -745,7 +745,10 @@ $ const args = {
                   $ const url = getFacetUrl(req, facetTypeKey, facet.id);
                   <a href=`${url}`>${ facet.name } - ${ facet.id }</a>
                   <if(facet.childFacets)>
-                    <ul class="list-group border-0">
+                    $ const facetTargetToggleClass = `.facet-${facet.id}`;
+                    $ const facetTargetToggleOpenClass = `facet-${facet.id}--open`;
+                    <cms-browser-component name="PlusMinusToggleButton" props={ targets: [facetTargetToggleClass], toggleClass: 'plus-minus-toggler--open' } />
+                    <ul class=`list-group border-0 facet-${facet.id}`>
                       <for|childFacet, index| of=facet.childFacets>
                         <li class="list-group-item border-0">
                           $ const url = getFacetUrl(req, facetTypeKey, childFacet.id);

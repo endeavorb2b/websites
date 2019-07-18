@@ -264,3 +264,21 @@ body {
     font-weight: 700;
   }
 }
+.directory-facets {
+  .plus-minus-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: .5rem;
+    & .icon svg{
+      color: $black;
+      fill: $black;
+    }
+    ~ .list-group {
+      display: none;
+      &.plus-minus-toggler--open {
+        display: initial;
+      }
+    }
+  }
+}
