@@ -120,6 +120,12 @@ $theme-media-footer-font-size:    14px;
 $theme-media-footer-padding-x:    0;
 $theme-media-footer-padding-y:    .5rem;
 
+// Load More
+$theme-load-more-header-color:        $theme-card-header-color;
+$theme-load-more-header-font-family:  $theme-card-header-font-family;
+$theme-load-more-header-font-size:    $theme-card-header-font-size;
+$theme-load-more-header-font-weight:  $theme-card-header-font-weight;
+
 // Navbar / Header
 $theme-site-header-breakpoints: (
   hide-primary: 896px,
