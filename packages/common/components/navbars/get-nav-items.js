@@ -1,8 +1,10 @@
+const { asArray } = require('@base-cms/utils');
+
 module.exports = ({
   regEnabled,
   hasUser,
   items,
-}) => items.filter((item) => {
+}) => asArray(items.filter((item) => {
   const { when } = item;
   if (!when) return true;
   if (!regEnabled) return false;
@@ -15,4 +17,4 @@ module.exports = ({
     if (when === 'logged-out') return true;
   }
   return false;
-});
+}));
