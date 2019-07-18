@@ -133,9 +133,7 @@ export default {
       return 'Continue';
     },
     hasActiveUser() {
-      const hasActiveUser = this.activeUser && this.activeUser.email;
-      if (hasActiveUser) Sentry.setUser(this.activeUser);
-      return hasActiveUser;
+      return this.activeUser && this.activeUser.email;
     },
     isLoginContext() {
       return this.context === 'login';
@@ -150,6 +148,7 @@ export default {
     },
   },
   mounted() {
+    Sentry.setUser(this.activeUser);
     if (!cookiesEnabled()) {
       const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');
       this.error = error.message;
