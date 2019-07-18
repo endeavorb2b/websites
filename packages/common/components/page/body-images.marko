@@ -6,7 +6,7 @@ $ const images = getAsArray(input, 'images');
 <if(images.length)>
   <div class=block>
     <for|image, index| of=images>
-      <div class=`${block}__item`>
+      <div id=`image-${image.id}` class=`${block}__item`>
         <cms-text-element tag="h6" class=`${block}__title` field="displayName" obj=image />
         <endeavor-page-body-image image=image />
       </div>
