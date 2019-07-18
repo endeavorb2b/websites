@@ -27,19 +27,6 @@ const validateSearch = function(urlParams) {
   }
   return urlParams;
 };
-
-const retrieve = async (url) => {
-  // const query = isObject(opts) ? `?opts=${encodeURIComponent(JSON.stringify(opts))}` : '';
- //const url = api + '?' + encodeURIComponent(JSON.stringify(apiData)); //'https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test?q=matchall&q.parser=structured';
-//  console.log(url)
-  const response = await fetch(url);
-  if (!response.ok) {
-    const err = new Error(response.statusMessage);
-    err.statusCode = response.statusText;
-    throw err;
-  }
-  return response.json();
-};
 const retrieveResults = async ({
   api,
   urlParams,
@@ -100,14 +87,11 @@ const getPaginationLink = function(req, increment, pageSize, total) {
 };
 
 const getPaginationInfo = function(start, pageSize, total) {
-
   const end = Number(start) + Number(pageSize);
-  console.log(start, end, pageSize, total);
   return end >= Number(total) ? 'Showing ' + start + ' - ' + total + ' of ' + total : 'Showing ' + start + ' - ' + end + ' of ' + total;
 };
 
 module.exports = {
-  retrieve,
   retrieveResults,
   getFacetUrl,
   generateResultImage,
