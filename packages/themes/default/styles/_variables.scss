@@ -183,8 +183,11 @@ $theme-content-published-date-line-height:               $line-height-base !defa
 $theme-content-published-date-text-transform:            initial !default;
 
 // Contact Details
+$theme-contact-details-color:               $black !default;
 $theme-contact-details-font-family:         $theme-font-family-sans-serif !default;
 $theme-contact-details-font-size:           16px !default;
+$theme-contact-details-font-weight:         $font-weight-normal !default;
+$theme-contact-details-line-height:         $line-height-base !default;
 $theme-contact-details-label-font-weight:   600 !default;
 $theme-contact-details-label-margin:        map-get($spacers, 2) !default;
 $theme-contact-details-section-margin:      map-get($spacers, 3) !default;

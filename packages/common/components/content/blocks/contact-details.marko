@@ -32,16 +32,17 @@ $ const socialLinks = getAsArray(content, 'socialLinks');
     <cms-text-element obj=content field="email" link=true link-path="emailLink" />
     <cms-text-element obj=content field="publicEmail" link=true link-path="publicEmailLink" />
     <cms-text-element obj=content field="website" link=true link-path="website" link-attrs={ target: '_blank' } />
-    <if(socialLinks.length)>
-      <div class=bem(block, "social-links")>
-        <for|item| of=socialLinks>
-          <if(item.url && item.provider)>
-            <endeavor-social-icon-link provider=item.provider href=item.url modifiers=["dark", "lg"] />
-          </if>
-        </for>
-      </div>
-    </if>
   </div>
+
+  <if(socialLinks.length)>
+    <div class=bem(block, "section", ["social-links"])>
+      <for|item| of=socialLinks>
+        <if(item.url && item.provider)>
+          <endeavor-social-icon-link provider=item.provider href=item.url modifiers=["dark", "lg"] />
+        </if>
+      </for>
+    </div>
+  </if>
 
   <div class=bem(block, "section")>
     <if(content.phone)>
