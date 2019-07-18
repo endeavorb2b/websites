@@ -8,7 +8,7 @@
     @include theme-media-credit();
   }
 
-  &_wrapper{
+  &__wrapper {
     @include theme-embed-responsive($theme-primary-media-aspect-ratio-x, $theme-primary-media-aspect-ratio-y);
     @include border-radius($theme-primary-media-border-radius);
     @include box-shadow($theme-primary-media-box-shadow);
