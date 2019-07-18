@@ -173,9 +173,6 @@
     @include media-breakpoint-down($theme-responsive-text-breakpoint) {
       margin-bottom: $theme-content-paragraph-margin-bottom-sm;
     }
-    &:empty {
-      display: none;
-    }
   }
 }
 
