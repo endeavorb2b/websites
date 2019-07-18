@@ -1,5 +1,6 @@
 @import "page/body-image";
 @import "page/body-images";
+@import "page/body-media-gallery";
 
 .page-wrapper {
   @include border-radius($theme-page-border-radius);

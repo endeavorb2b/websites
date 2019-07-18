@@ -397,6 +397,28 @@ $theme-page-body-images-title-font-family:  $theme-heading-h6-font-family !defau
 $theme-page-body-images-title-font-size:    $theme-heading-h6-font-size !default;
 $theme-page-body-images-title-font-weight:  $theme-heading-h6-font-weight !default;
 $theme-page-body-images-title-line-height:  $theme-heading-h6-line-height !default;
+$theme-page-body-images-title-margin:       .5rem !default;
+
+$theme-page-body-media-gallery-title-color:                 $theme-page-body-images-title-color !default;
+$theme-page-body-media-gallery-title-font-family:           $theme-page-body-images-title-font-family !default;
+$theme-page-body-media-gallery-title-font-size:             $theme-page-body-images-title-font-size !default;
+$theme-page-body-media-gallery-title-font-weight:           $theme-page-body-images-title-font-weight !default;
+$theme-page-body-media-gallery-title-line-height:           $theme-page-body-images-title-line-height !default;
+$theme-page-body-media-gallery-title-margin:                $theme-page-body-images-title-margin !default;
+$theme-page-body-media-gallery-title-link-color:            $theme-page-body-images-title-color !default;
+$theme-page-body-media-gallery-title-link-decoration:       $link-decoration !default;
+$theme-page-body-media-gallery-title-link-hover-color:      $theme-page-body-media-gallery-title-link-color !default;
+$theme-page-body-media-gallery-title-link-hover-decoration: $link-hover-decoration !default;
+
+$theme-page-body-media-gallery-image-name-color:        $white !default;
+$theme-page-body-media-gallery-image-name-font-family:  $theme-font-family-sans-serif !default;
+$theme-page-body-media-gallery-image-name-font-weight:  $theme-heading-font-weight !default;
+$theme-page-body-media-gallery-image-name-font-size:    $font-size-base !default;
+$theme-page-body-media-gallery-image-name-line-height:  $line-height-base !default;
+$theme-page-body-media-gallery-image-name-text-shadow:  1px 1px 4px $black !default;
+
+$theme-page-body-media-gallery-image-overlay-bg:        rgba(0, 0, 0, .5) !default;
+
 
 $theme-page-deck-color:                 $gray-600 !default;
 $theme-page-deck-font-family:           $theme-font-family-sans-serif !default;

@@ -1,0 +1,78 @@
+.page-body-media-gallery {
+  &__title {
+    margin-bottom: $theme-page-body-media-gallery-title-margin;
+    font-family: $theme-page-body-media-gallery-title-font-family;
+    font-size: $theme-page-body-media-gallery-title-font-size;
+    font-weight: $theme-page-body-media-gallery-title-font-weight;
+    line-height: $theme-page-body-media-gallery-title-line-height;
+    color: $theme-page-body-media-gallery-title-color;
+
+    a {
+      color: $theme-page-body-media-gallery-title-link-color;
+      text-decoration: $theme-page-body-media-gallery-title-link-decoration;
+      &:hover {
+        color: $theme-page-body-media-gallery-title-link-hover-color;
+        text-decoration: $theme-page-body-media-gallery-title-link-hover-decoration;
+      }
+    }
+  }
+  $spacing: $grid-gutter-width / 4;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -#{$spacing};
+    margin-bottom: map-get($spacers, block);
+    margin-left: -#{$spacing};
+    @include media-breakpoint-down(xs) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  &__col {
+    @include make-col-ready();
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-down(xs) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    padding-right: $spacing;
+    padding-left: $spacing;
+    margin-bottom: $spacing * 2;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    background: $theme-page-body-media-gallery-image-overlay-bg;
+  }
+  &__image-name {
+    margin: 0 auto;
+    font-family: $theme-page-body-media-gallery-image-name-font-family;
+    font-size: $theme-page-body-media-gallery-image-name-font-size;
+    font-weight: $theme-page-body-media-gallery-image-name-font-weight;
+    line-height: $theme-page-body-media-gallery-image-name-line-height;
+    color: $theme-page-body-media-gallery-image-name-color;
+    text-shadow: $theme-page-body-media-gallery-image-name-text-shadow;
+  }
+}
