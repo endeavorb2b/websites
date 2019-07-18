@@ -217,7 +217,7 @@ body {
   }
 }
 
-.content-attribution + .content-published-date {
+.content-attribution:not(:empty) + .content-published-date {
   display: inline;
   &::before {
     margin-right: $theme-content-attribution-prefix-margin;
