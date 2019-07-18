@@ -79,11 +79,17 @@ $theme-content-attribution-prefix-spacer-content:   "";
 $theme-content-attribution-prefix-margin-after:     0;
 
 // Content Published Date
-$theme-content-published-date-color:                     $theme-content-attribution-color;
-$theme-content-published-date-font-family:               $theme-content-attribution-font-family;
-$theme-content-published-date-font-size:                 $theme-content-attribution-font-size;
-$theme-content-published-date-font-weight:               $theme-content-attribution-font-weight;
-$theme-content-published-date-text-transform:            $theme-content-attribution-text-transform;
+$theme-content-published-date-color:            $theme-content-attribution-color;
+$theme-content-published-date-font-family:      $theme-content-attribution-font-family;
+$theme-content-published-date-font-size:        $theme-content-attribution-font-size;
+$theme-content-published-date-font-weight:      $theme-content-attribution-font-weight;
+$theme-content-published-date-text-transform:   $theme-content-attribution-text-transform;
+
+// Contact Details
+$theme-contact-details-color:             #333;
+$theme-contact-details-font-size:         12px;
+$theme-contact-details-font-weight:       700;
+$theme-contact-details-label-font-weight: 700;
 
 // Breadcrumbs
 $theme-breadcrumbs-font-family:   $font-roboto-condensed;
