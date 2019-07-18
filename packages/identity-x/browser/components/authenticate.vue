@@ -14,7 +14,7 @@
 <script>
 import * as Sentry from '@sentry/browser';
 import redirect from '../utils/redirect';
-import checkCookies from '../utils/check-cookies';
+import cookiesEnabled from '../utils/cookies-enabled';
 import AuthenticationError from './authentication-error';
 import FeatureError from './feature-error';
 
@@ -36,7 +36,7 @@ export default {
     redirecting: false,
   }),
   mounted() {
-    if (checkCookies()) {
+    if (cookiesEnabled()) {
       this.authenticate();
     } else {
       const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');

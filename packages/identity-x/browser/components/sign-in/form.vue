@@ -59,7 +59,7 @@ import Email from './fields/email.vue';
 import GivenName from './fields/given-name.vue';
 import FamilyName from './fields/family-name.vue';
 import cleanPath from '../../utils/clean-path';
-import checkCookies from '../../utils/check-cookies';
+import cookiesEnabled from '../../utils/cookies-enabled';
 import FormError from './form-error';
 import FeatureError from '../feature-error';
 
@@ -150,7 +150,7 @@ export default {
     },
   },
   mounted() {
-    if (!checkCookies()) {
+    if (!cookiesEnabled()) {
       const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');
       this.error = error.message;
       Sentry.captureException(error);

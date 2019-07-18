@@ -11,7 +11,7 @@
 import * as Sentry from '@sentry/browser';
 import redirect from '../utils/redirect';
 import getReferringPage from '../utils/get-referring-page';
-import checkCookies from '../utils/check-cookies';
+import cookiesEnabled from '../utils/cookies-enabled';
 import LogoutError from './logout-error';
 import FeatureError from './feature-error';
 
@@ -26,7 +26,7 @@ export default {
     error: null,
   }),
   mounted() {
-    if (checkCookies()) {
+    if (cookiesEnabled()) {
       this.logout();
     } else {
       const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');
