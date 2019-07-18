@@ -19,7 +19,8 @@ $black:     #000;
 $gray-600:  #4d4d4d;
 
 // General Settings
-$body-bg: #fff;
+$body-bg:     #fff;
+$body-color:  #333;
 $list-group-border-width: 0;
 $enable-shadows: false;
 $enable-rounded: false;
@@ -57,14 +58,12 @@ $theme-item-description-line-height:    get-line-height($theme-item-description-
 $theme-item-description-margin:         10px;
 
 // Pages
-$theme-page-title-color:        #333;
 $theme-page-title-font-size:    32px;
 $theme-page-title-font-weight:  700;
 
 $theme-page-deck-color:         #565656;
 $theme-page-deck-font-size:     18px !default;
 
-$theme-page-body-color:         #333;
 $theme-page-body-font-family:   $font-open-sans;
 $theme-page-body-font-size:     16px;
 $theme-page-body-font-size-sm:  16px;
@@ -86,7 +85,6 @@ $theme-content-published-date-font-weight:      $theme-content-attribution-font-
 $theme-content-published-date-text-transform:   $theme-content-attribution-text-transform;
 
 // Contact Details
-$theme-contact-details-color:             #333;
 $theme-contact-details-font-size:         12px;
 $theme-contact-details-font-weight:       700;
 $theme-contact-details-label-font-weight: 700;
@@ -107,12 +105,14 @@ $theme-card-header-letter-spacing:    $bizbash-letter-spacing;
 $theme-card-header-link-color:        $primary;
 
 // Media
+$theme-media-caption-color:       #464646;
 $theme-media-caption-font-weight: 400;
 $theme-media-credit-color:        #777;
+$theme-media-credit-font-size:    12px;
 $theme-media-credit-font-style:   initial;
 $theme-media-footer-font-size:    14px;
 $theme-media-footer-padding-x:    0;
-$theme-media-footer-padding-y:    0;
+$theme-media-footer-padding-y:    .5rem;
 
 // Navbar / Header
 $theme-site-header-breakpoints: (
@@ -225,4 +225,9 @@ body {
     font-weight: $theme-content-attribution-prefix-spacer-font-weight;
     content: "\2014";
   }
+}
+
+.page-body-image,
+[data-embed-type="image"] {
+  border-bottom: 1px solid #ccc;
 }
