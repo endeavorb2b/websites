@@ -243,7 +243,7 @@
 }
 
 @mixin theme-media-common-footer() {
-  display: inline-block;
+  display: block;
   padding: $theme-media-footer-padding-y $theme-media-footer-padding-x;
   margin: 0;
   font-family: $theme-media-footer-font-family;
