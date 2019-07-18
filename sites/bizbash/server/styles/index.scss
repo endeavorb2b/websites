@@ -62,11 +62,17 @@ $theme-page-title-font-size:    32px;
 $theme-page-title-font-weight:  700;
 
 $theme-page-deck-color:         #565656;
-$theme-page-deck-font-size:     18px !default;
+$theme-page-deck-font-size:     18px;
 
 $theme-page-body-font-family:   $font-open-sans;
 $theme-page-body-font-size:     16px;
 $theme-page-body-font-size-sm:  16px;
+
+$theme-page-body-images-title-font-size:    17px;
+$theme-page-body-images-title-font-weight:  700;
+
+$theme-page-body-media-gallery-image-name-font-family:  $font-oswald;
+$theme-page-body-media-gallery-image-name-font-weight:  700;
 
 // Content Attribution
 $theme-content-attribution-color:                   $gray-600;
@@ -96,13 +102,13 @@ $theme-breadcrumbs-font-size-sm:  12px;
 $theme-breadcrumbs-font-weight:   600;
 
 // Cards
+$theme-card-header-color:             $primary;
 $theme-card-header-background-color:  #fff;
 $theme-card-header-border:            none;
 $theme-card-header-font-family:       $font-oswald;
 $theme-card-header-font-size:         26.825px;
 $theme-card-header-font-weight:       700;
 $theme-card-header-letter-spacing:    $bizbash-letter-spacing;
-$theme-card-header-link-color:        $primary;
 
 // Media
 $theme-media-caption-color:       #464646;
@@ -158,7 +164,6 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
 @import "../../node_modules/bootstrap/scss/tables";
 @import "components/carousel";
-@import "components/top-list";
 
 body {
   letter-spacing: $bizbash-letter-spacing;
