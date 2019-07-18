@@ -18,39 +18,64 @@ module.exports = {
       ],
     },
   },
-  primaryNavItems: [
-    { href: '/reports', label: 'Reports' },
-    { href: '/page/custom-research', label: 'Custom Research' },
-    { href: '/page/surveys', label: 'Surveys' },
-    { href: '/analysts', label: 'Analysts' },
-    { href: '/blogs', label: 'Blogs' },
-    { href: '/press-releases', label: 'Press Releases' },
-  ],
-  secondaryNavItems: [
-    { href: '/videos', label: 'Videos' },
-    { href: '/page/events-conferences', label: 'Events & Conferences' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/about-us', label: 'About Us' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/videos', label: 'Videos' },
-      { href: '/page/events-conferences', label: 'Events & Conferences' },
-    ],
-    userTools: [
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/reports', label: 'Reports' },
+        { href: '/page/custom-research', label: 'Custom Research' },
+        { href: '/page/surveys', label: 'Surveys' },
+        { href: '/analysts', label: 'Analysts' },
+        { href: '/blogs', label: 'Blogs' },
+        { href: '/press-releases', label: 'Press Releases' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/videos', label: 'Videos' },
+        { href: '/page/events-conferences', label: 'Events & Conferences' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/about-us', label: 'About Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/reports', label: 'Reports' },
+          { href: '/page/custom-research', label: 'Custom Research' },
+          { href: '/page/surveys', label: 'Surveys' },
+          { href: '/analysts', label: 'Analysts' },
+          { href: '/blogs', label: 'Blogs' },
+          { href: '/press-releases', label: 'Press Releases' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/videos', label: 'Videos' },
+          { href: '/page/events-conferences', label: 'Events & Conferences' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-56MD64K',
   search: {

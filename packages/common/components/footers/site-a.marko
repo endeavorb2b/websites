@@ -6,7 +6,7 @@ $ const logo = footerLogo.src ? footerLogo : defaultLogo;
 $ const srcset = Array.isArray(logo.srcset) ? logo.srcset : [];
 $ const siteName = config.siteName();
 
-$ const footerItems = site.getAsArray('footerNavItems');
+$ const footerItems = site.getAsArray('navigation.footer.items');
 
 <footer class="site-footer">
   <div class="site-footer__container site-footer__container--brand">

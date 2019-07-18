@@ -22,46 +22,71 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/ClevelandScene' },
     { provider: 'instagram', href: 'https://www.instagram.com/clevelandscene/' },
   ],
-  primaryNavItems: [
-    { href: '/news', label: 'News' },
-    { href: '/music', label: 'Music' },
-    { href: '/movies', label: 'Movies' },
-    { href: '/eat', label: 'Eat' },
-    { href: '/arts', label: 'Arts' },
-    { href: '/calendar', label: 'Calendar' },
-  ],
-  secondaryNavItems: [
-    { href: '/slideshows', label: 'Slideshows' },
-    { href: '/special-issues', label: 'Special Issues' },
-    { href: '/best-of', label: 'Best Of' },
-    { href: '/scene-events', label: 'Scene Events' },
-    { href: '/giveaways', label: 'Giveaways' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/advertise', label: 'Advertise' },
-  ],
-  footerNavItems: [
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'http://www.ruxton.com/', label: 'National Advertising', target: '_blank' },
-    { href: '/jobs', label: 'Work Here' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    { href: '/page/terms-use', label: 'Terms of Use' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/news', label: 'News' },
+        { href: '/music', label: 'Music' },
+        { href: '/movies', label: 'Movies' },
+        { href: '/eat', label: 'Eat' },
+        { href: '/arts', label: 'Arts' },
+        { href: '/calendar', label: 'Calendar' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/slideshows', label: 'Slideshows' },
+        { href: '/special-issues', label: 'Special Issues' },
+        { href: '/best-of', label: 'Best Of' },
+        { href: '/scene-events', label: 'Scene Events' },
+        { href: '/giveaways', label: 'Giveaways' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/advertise', label: 'Advertise' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'http://www.ruxton.com/', label: 'National Advertising', target: '_blank' },
+        { href: '/jobs', label: 'Work Here' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        { href: '/page/terms-use', label: 'Terms of Use' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/news', label: 'News' },
+          { href: '/music', label: 'Music' },
+          { href: '/movies', label: 'Movies' },
+          { href: '/eat', label: 'Eat' },
+          { href: '/arts', label: 'Arts' },
+          { href: '/calendar', label: 'Calendar' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

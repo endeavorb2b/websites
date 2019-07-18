@@ -23,46 +23,72 @@ module.exports = {
     { provider: 'linkedin', href: 'http://www.linkedin.com/groups/AQUA-Magazine-3861363' },
     { provider: 'pinterest', href: 'http://www.pinterest.com/aquamagazine/' },
   ],
-  primaryNavItems: [
-    { href: '/news', label: 'News' },
-    { href: '/features', label: 'Features' },
-    { href: 'https://library.aquamagazine.com', label: 'Content Library', target: '_blank' },
-    { href: '/buyers-guide', label: 'Buyers Guide' },
-    { href: '#', label: 'Digital Issue' },
-    { href: '/community', label: 'Community' },
-    { href: '/phta-news', label: 'PHTA News' },
-  ],
-  secondaryNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/media-galleries', label: 'Photo Galleries' },
-    { href: '/events', label: 'Events' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
-    { href: '#', label: 'Digital Issue' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    { href: '/page/terms-of-use', label: 'Terms of Use' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/news', label: 'News' },
+        { href: '/features', label: 'Features' },
+        { href: 'https://library.aquamagazine.com', label: 'Content Library', target: '_blank' },
+        { href: '/buyers-guide', label: 'Buyers Guide' },
+        { href: '#', label: 'Digital Issue' },
+        { href: '/community', label: 'Community' },
+        { href: '/phta-news', label: 'PHTA News' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/media-galleries', label: 'Photo Galleries' },
+        { href: '/events', label: 'Events' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
+        { href: '#', label: 'Digital Issue' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        { href: '/page/terms-of-use', label: 'Terms of Use' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/news', label: 'News' },
+          { href: '/features', label: 'Features' },
+          { href: 'https://library.aquamagazine.com', label: 'Content Library', target: '_blank' },
+          { href: '/buyers-guide', label: 'Buyers Guide' },
+          { href: '#', label: 'Digital Issue' },
+          { href: '/community', label: 'Community' },
+          { href: '/phta-news', label: 'PHTA News' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'https://info.aquamagazine.com', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

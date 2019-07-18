@@ -21,44 +21,70 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/officercom' },
     { provider: 'facebook', href: 'https://www.facebook.com/officercom' },
   ],
-  primaryNavItems: [
-    { href: '/tactical', label: 'Tactical' },
-    { href: '/training-careers', label: 'Training & Careers' },
-    { href: '/on-the-street', label: 'On the Street' },
-    { href: '/investigations', label: 'Investigations' },
-    { href: '/command-hq', label: 'Command/HQ' },
-    { href: '/directory', label: 'Product Guide' },
-    { href: 'https://forum.officer.com', label: 'Forums' },
-  ],
-  secondaryNavItems: [
-    { href: '/features/honoring-the-fallen', label: 'Honoring the Fallen' },
-    { href: '/magazine', label: 'Publications' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/advertise', label: 'Advertise' },
-    { href: '/contact-us', label: 'Contact Us' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/tactical', label: 'Tactical' },
+        { href: '/training-careers', label: 'Training & Careers' },
+        { href: '/on-the-street', label: 'On the Street' },
+        { href: '/investigations', label: 'Investigations' },
+        { href: '/command-hq', label: 'Command/HQ' },
+        { href: '/directory', label: 'Product Guide' },
+        { href: 'https://forum.officer.com', label: 'Forums' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/features/honoring-the-fallen', label: 'Honoring the Fallen' },
+        { href: '/magazine', label: 'Publications' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/advertise', label: 'Advertise' },
+        { href: '/contact-us', label: 'Contact Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/tactical', label: 'Tactical' },
+          { href: '/training-careers', label: 'Training & Careers' },
+          { href: '/on-the-street', label: 'On the Street' },
+          { href: '/investigations', label: 'Investigations' },
+          { href: '/command-hq', label: 'Command/HQ' },
+          { href: '/directory', label: 'Product Guide' },
+          { href: 'https://forum.officer.com', label: 'Forums' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-TZNC8W8',
   search: {

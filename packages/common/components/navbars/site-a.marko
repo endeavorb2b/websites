@@ -7,7 +7,12 @@ $ const navbar = 'site-navbar';
 $ const nav = 'site-navbar-items';
 $ const menu = 'site-navbar-menu';
 $ const siteName = config.siteName();
-
+$ const navigation = {
+  primary: site.getAsArray('navigation.primary.items'),
+  secondary: site.getAsArray('navigation.secondary.items'),
+  tertiary: site.getAsArray('navigation.tertiary.items'),
+};
+$ const navMenu = site.getAsObject('navigation.menu');
 
 <header class=navbar>
   <identity-x|{ isEnabled: regEnabled, hasUser }|>
@@ -19,14 +24,14 @@ $ const siteName = config.siteName();
           <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>
         </a>
         <ul class="site-navbar-items site-navbar-items--secondary">
-          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'secondaryNavItems' })>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.secondary })>
             <li class=bem(nav, 'item')>
               <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
           </for>
         </ul>
         <ul class="site-navbar-items site-navbar-items--tertiary">
-          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'tertiaryNavItems' })>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.tertiary })>
             <li class=bem(nav, 'item')>
               <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
@@ -43,7 +48,7 @@ $ const siteName = config.siteName();
     <nav class=bem(navbar, 'primary')>
       <div class="site-navbar-container">
         <ul class="site-navbar-items site-navbar-items--primary">
-          <for|item| of=getNavItems({ site, regEnabled, hasUser, key: 'primaryNavItems' })>
+          <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.primary })>
             <li class=bem(nav, 'item')>
               <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
@@ -57,9 +62,11 @@ $ const siteName = config.siteName();
 <aside class=menu>
   <div class=bem(menu, 'contents')>
     <div class=`${bem(menu, 'card')} card`>
-      <menu-card block=menu for="primaryNavItems" header="Topics" />
-      <menu-card block=menu for="menuItems.resources" header="Resources" />
-      <menu-card block=menu for="menuItems.userTools" header="User Tools" />
+      <for|key, item| in=navMenu>
+        <if(item.items && item.label)>
+          <menu-card block=menu for=item.items header=item.label />
+        </if>
+      </for>
       <div class=`${bem(menu, 'card-footer')} card-footer`></div>
     </div>
   </div>

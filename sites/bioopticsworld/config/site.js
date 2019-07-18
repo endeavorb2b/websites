@@ -23,46 +23,70 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/BioOptics' },
     { provider: 'facebook', href: 'https://www.facebook.com/pages/BioOptics-World/131802223749' },
   ],
-  primaryNavItems: [
-    { href: '/bioscience', label: 'Bioscience' },
-    { href: '/biomedicine', label: 'Biomedicine' },
-    { href: '/bioimaging', label: 'Bioimaging' },
-    { href: '/biophotonics-techniques', label: 'Biophotonics Techniques' },
-    { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'Videos' },
-    { href: '/white-papers', label: 'White Papers' },
-    { href: '/webcasts', label: 'Webcasts' },
-    { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/blogs', label: 'Commentary' },
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
-      { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/bioscience', label: 'Bioscience' },
+        { href: '/biomedicine', label: 'Biomedicine' },
+        { href: '/bioimaging', label: 'Bioimaging' },
+        { href: '/biophotonics-techniques', label: 'Biophotonics Techniques' },
+        { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/magazine', label: 'Magazine' },
+        { href: '/videos', label: 'Videos' },
+        { href: '/white-papers', label: 'White Papers' },
+        { href: '/webcasts', label: 'Webcasts' },
+        { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/bioscience', label: 'Bioscience' },
+          { href: '/biomedicine', label: 'Biomedicine' },
+          { href: '/bioimaging', label: 'Bioimaging' },
+          { href: '/biophotonics-techniques', label: 'Biophotonics Techniques' },
+          { href: '/biophotonics-tools', label: 'Biophotonics Tools' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/blogs', label: 'Commentary' },
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+          { href: 'https://www.marketplaceseminar.com/index.html', label: 'L&P Market Seminar', target: '_blank' },
+          { href: 'https://www.strategies-u.com/reports', label: 'Photonics Market Reports', target: '_blank' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-M24RV9Q',
   search: {

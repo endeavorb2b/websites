@@ -18,46 +18,72 @@ module.exports = {
     },
   },
   socialMediaLinks: [],
-  primaryNavItems: [
-    { href: 'http://www.pharmaexpo.com', label: 'Pack Expo Shows', target: '_blank' },
-    { href: '/markets', label: 'Markets' },
-    { href: '/hot-topics', label: 'Hot Topics' },
-    { href: '/design', label: 'Design' },
-    { href: '/materials', label: 'Materials' },
-    { href: '/machinery', label: 'Machinery' },
-    { href: '/video', label: 'Video' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/media-kit', label: 'Media Kit' },
-    { href: '/magazine', label: 'Digital Edition' },
-    { href: '/playbooks', label: 'Playbooks' },
-    { href: 'https://pmmi.org/hall-of-fame', label: 'Hall of Fame', target: '_blank' },
-    { href: '/events', label: 'Industry Events' },
-  ],
-  footerNavItems: [
-    { href: '/', label: 'Home' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: 'http://www.summitmediagroup.com/hcp/healthcare-packaging', label: 'Advertise', target: '_blank' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '#', label: 'RSS Feed' },
-    { href: '/page/privacy-policy', label: 'Privacy' },
-    { href: '/page/advertising-terms-conditions', label: 'Advertising Terms and Conditions' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'http://www.summitmediagroup.com/hcp/healthcare-packaging', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: 'http://www.pharmaexpo.com', label: 'Pack Expo Shows', target: '_blank' },
+        { href: '/markets', label: 'Markets' },
+        { href: '/hot-topics', label: 'Hot Topics' },
+        { href: '/design', label: 'Design' },
+        { href: '/materials', label: 'Materials' },
+        { href: '/machinery', label: 'Machinery' },
+        { href: '/video', label: 'Video' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/media-kit', label: 'Media Kit' },
+        { href: '/magazine', label: 'Digital Edition' },
+        { href: '/playbooks', label: 'Playbooks' },
+        { href: 'https://pmmi.org/hall-of-fame', label: 'Hall of Fame', target: '_blank' },
+        { href: '/events', label: 'Industry Events' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/', label: 'Home' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: 'http://www.summitmediagroup.com/hcp/healthcare-packaging', label: 'Advertise', target: '_blank' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '#', label: 'RSS Feed' },
+        { href: '/page/privacy-policy', label: 'Privacy' },
+        { href: '/page/advertising-terms-conditions', label: 'Advertising Terms and Conditions' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: 'http://www.pharmaexpo.com', label: 'Pack Expo Shows', target: '_blank' },
+          { href: '/markets', label: 'Markets' },
+          { href: '/hot-topics', label: 'Hot Topics' },
+          { href: '/design', label: 'Design' },
+          { href: '/materials', label: 'Materials' },
+          { href: '/machinery', label: 'Machinery' },
+          { href: '/video', label: 'Video' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'http://www.summitmediagroup.com/hcp/healthcare-packaging', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

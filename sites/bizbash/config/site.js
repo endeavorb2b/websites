@@ -23,43 +23,67 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/BizBash' },
     { provider: 'facebook', href: 'https://www.facebook.com/BizBash/' },
   ],
-  primaryNavItems: [
-    { href: '/production-strategy', label: 'Production & Strategy' },
-    { href: '/style-decor', label: 'Style & Decor' },
-    { href: '/catering', label: 'Catering' },
-    { href: '/bizbash-lists', label: 'Bizbash Lists' },
-    { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
-  ],
-  secondaryNavItems: [
-    { href: '/gathergeeks', label: 'GatherGeeks' },
-    { href: '#', label: 'Our Events & Awards' },
-    { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-    { href: '#', label: 'Find A Venue' },
-    { href: '#', label: 'Find Suppliers' },
-    { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/page/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/gathergeeks', label: 'GatherGeeks' },
-      { href: '#', label: 'Our Events & Awards' },
-      { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-      { href: '#', label: 'Find A Venue' },
-      { href: '#', label: 'Find Suppliers' },
-      { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/page/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/production-strategy', label: 'Production & Strategy' },
+        { href: '/style-decor', label: 'Style & Decor' },
+        { href: '/catering', label: 'Catering' },
+        { href: '/bizbash-lists', label: 'Bizbash Lists' },
+        { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/gathergeeks', label: 'GatherGeeks' },
+        { href: '#', label: 'Our Events & Awards' },
+        { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
+        { href: '#', label: 'Find A Venue' },
+        { href: '#', label: 'Find Suppliers' },
+        { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/page/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/production-strategy', label: 'Production & Strategy' },
+          { href: '/style-decor', label: 'Style & Decor' },
+          { href: '/catering', label: 'Catering' },
+          { href: '/bizbash-lists', label: 'Bizbash Lists' },
+          { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/gathergeeks', label: 'GatherGeeks' },
+          { href: '#', label: 'Our Events & Awards' },
+          { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
+          { href: '#', label: 'Find A Venue' },
+          { href: '#', label: 'Find Suppliers' },
+          { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/page/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   // gtmContainer: 'GTM-5TWCFJ',
   search: {

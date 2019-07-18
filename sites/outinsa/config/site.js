@@ -22,45 +22,71 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/OutInSA' },
     { provider: 'instagram', href: 'http://instagram.com/outinsa' },
   ],
-  primaryNavItems: [
-    { href: '/news', label: 'News' },
-    { href: '/food', label: 'Food' },
-    { href: '/arts-culture', label: 'Arts & Culture' },
-    { href: '/health-fitness', label: 'Health & Fitness' },
-    { href: '/nightlife', label: 'Nightlife' },
-    { href: '/columns', label: 'Columns' },
-    { href: '/living', label: 'Living' },
-  ],
-  secondaryNavItems: [
-    { href: '/calendar', label: 'Calendar' },
-    { href: '/slideshows', label: 'Slideshows' },
-    { href: '/jobs', label: 'Job Listings' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/subscribe', label: 'Subscribe' },
-  ],
-  footerNavItems: [
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/jobs', label: 'Work Here' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    { href: '/page/terms-use', label: 'Terms of Use' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/news', label: 'News' },
+        { href: '/food', label: 'Food' },
+        { href: '/arts-culture', label: 'Arts & Culture' },
+        { href: '/health-fitness', label: 'Health & Fitness' },
+        { href: '/nightlife', label: 'Nightlife' },
+        { href: '/columns', label: 'Columns' },
+        { href: '/living', label: 'Living' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/calendar', label: 'Calendar' },
+        { href: '/slideshows', label: 'Slideshows' },
+        { href: '/jobs', label: 'Job Listings' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/subscribe', label: 'Subscribe' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: '/jobs', label: 'Work Here' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        { href: '/page/terms-use', label: 'Terms of Use' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/news', label: 'News' },
+          { href: '/food', label: 'Food' },
+          { href: '/arts-culture', label: 'Arts & Culture' },
+          { href: '/health-fitness', label: 'Health & Fitness' },
+          { href: '/nightlife', label: 'Nightlife' },
+          { href: '/columns', label: 'Columns' },
+          { href: '/living', label: 'Living' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

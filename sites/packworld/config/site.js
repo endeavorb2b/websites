@@ -19,47 +19,73 @@ module.exports = {
   },
   socialMediaLinks: [
   ],
-  primaryNavItems: [
-    { href: 'https://www.packexpo.com/', label: 'Pack Expo Shows', target: '_blank' },
-    { href: '/design', label: 'Design' },
-    { href: '/machinery', label: 'Machinery' },
-    { href: '/videos', label: 'Videos' },
-    { href: '/case-studies', label: 'Case Studies' },
-    { href: '/plyabooks', label: 'Playbooks' },
-    { href: 'https://gallery.packworld.com', label: 'Galleries', target: '_blank' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine/5ce442f6d7e9ba3c168b45b5', label: 'Magazine' },
-    { href: '/magazine/5ce44303d7e9ba3c168b45b8', label: 'Contract Packaging' },
-    { href: '/education', label: 'Education' },
-    { href: '/leadership', label: 'Leadership' },
-    { href: '/events', label: 'Calendar' },
-    { href: '/webcasts', label: 'Webinars' },
-  ],
-  footerNavItems: [
-    { href: '/', label: 'Home' },
-    { href: 'https://www.pmmimediagroup.com/pw/packaging-world', label: 'Advertise', target: '_blank' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: 'https://feeds.feedburner.com/packworld/QLwk', label: 'RSS', target: '_blank' },
-    { href: '/page/privacy', label: 'Privacy' },
-    { href: '/page/legal', label: 'Terms of use' },
-    { href: '/page/advertising-terms-conditions', label: 'Ad Terms & Conditions' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'https://www.pmmimediagroup.com/pw/packaging-world', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: 'https://www.packexpo.com/', label: 'Pack Expo Shows', target: '_blank' },
+        { href: '/design', label: 'Design' },
+        { href: '/machinery', label: 'Machinery' },
+        { href: '/videos', label: 'Videos' },
+        { href: '/case-studies', label: 'Case Studies' },
+        { href: '/plyabooks', label: 'Playbooks' },
+        { href: 'https://gallery.packworld.com', label: 'Galleries', target: '_blank' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/magazine/5ce442f6d7e9ba3c168b45b5', label: 'Magazine' },
+        { href: '/magazine/5ce44303d7e9ba3c168b45b8', label: 'Contract Packaging' },
+        { href: '/education', label: 'Education' },
+        { href: '/leadership', label: 'Leadership' },
+        { href: '/events', label: 'Calendar' },
+        { href: '/webcasts', label: 'Webinars' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/', label: 'Home' },
+        { href: 'https://www.pmmimediagroup.com/pw/packaging-world', label: 'Advertise', target: '_blank' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: 'https://feeds.feedburner.com/packworld/QLwk', label: 'RSS', target: '_blank' },
+        { href: '/page/privacy', label: 'Privacy' },
+        { href: '/page/legal', label: 'Terms of use' },
+        { href: '/page/advertising-terms-conditions', label: 'Ad Terms & Conditions' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: 'https://www.packexpo.com/', label: 'Pack Expo Shows', target: '_blank' },
+          { href: '/design', label: 'Design' },
+          { href: '/machinery', label: 'Machinery' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/case-studies', label: 'Case Studies' },
+          { href: '/plyabooks', label: 'Playbooks' },
+          { href: 'https://gallery.packworld.com', label: 'Galleries', target: '_blank' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'https://www.pmmimediagroup.com/pw/packaging-world', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

@@ -25,44 +25,69 @@ module.exports = {
     { provider: 'pinterest', href: 'http://www.pinterest.com/wfbiz/' },
     { provider: 'instagram', href: 'https://www.instagram.com/woodfloorbusiness/' },
   ],
-  primaryNavItems: [
-    { href: '/articles', label: 'Articles' },
-    { href: 'https://toolbox.woodfloorbusiness.com', label: 'Content Toolbox', target: '_blank' },
-    { href: '/resource-book', label: 'Resource Book' },
-    { href: '/news', label: 'News' },
-    { href: 'https://www.woodfloorbusiness.com/forum', label: 'Forum', target: '_blank' },
-    { href: '/magazine', label: 'Magazine' },
-  ],
-  secondaryNavItems: [
-    { href: '/blogs', label: 'Blogs' },
-    { href: '/events', label: 'Calendar' },
-    { href: '/classifieds', label: 'Classifieds' },
-    { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/contact-us', label: 'Contact Us' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/resource-book', label: 'Resource Book' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/articles', label: 'Articles' },
+        { href: 'https://toolbox.woodfloorbusiness.com', label: 'Content Toolbox', target: '_blank' },
+        { href: '/resource-book', label: 'Resource Book' },
+        { href: '/news', label: 'News' },
+        { href: 'https://www.woodfloorbusiness.com/forum', label: 'Forum', target: '_blank' },
+        { href: '/magazine', label: 'Magazine' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/blogs', label: 'Blogs' },
+        { href: '/events', label: 'Calendar' },
+        { href: '/classifieds', label: 'Classifieds' },
+        { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/contact-us', label: 'Contact Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/resource-book', label: 'Resource Book' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/articles', label: 'Articles' },
+          { href: 'https://toolbox.woodfloorbusiness.com', label: 'Content Toolbox', target: '_blank' },
+          { href: '/resource-book', label: 'Resource Book' },
+          { href: '/news', label: 'News' },
+          { href: 'https://www.woodfloorbusiness.com/forum', label: 'Forum', target: '_blank' },
+          { href: '/magazine', label: 'Magazine' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'https://info.woodfloorbusiness.com', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

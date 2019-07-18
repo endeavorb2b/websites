@@ -24,40 +24,67 @@ module.exports = {
     // { provider: 'youtube', href: 'https://www.youtube.com/user/AthleticBusinessMag' },
     // { provider: 'instagram', href: 'https://www.instagram.com/athleticbiz' },
   ],
-  primaryNavItems: [
-    { href: '/equipment', label: 'Equipment' },
-    { href: '/trucks', label: 'Trucks' },
-    { href: '/rental', label: 'Rental' },
-    { href: '/concrete', label: 'Concrete' },
-    { href: '/asphalt', label: 'Asphalt' },
-    { href: '/pavement-maintenance', label: 'Pavement & Maintenance' },
-    { href: '/profit-matters', label: 'Profit Matters' },
-    { href: '/equipment-management', label: 'Equipment Management' },
-  ],
-  secondaryNavItems: [
-    { href: 'https://www.constructionnetworkmediakit.com/', label: 'Advertise', target: '_blank' },
-    { href: '#', label: 'New Equipment Directory' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '#', label: 'Magazine' },
-      { href: '#', label: 'Buyers Guide' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'https://www.constructionnetworkmediakit.com', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/equipment', label: 'Equipment' },
+        { href: '/trucks', label: 'Trucks' },
+        { href: '/rental', label: 'Rental' },
+        { href: '/concrete', label: 'Concrete' },
+        { href: '/asphalt', label: 'Asphalt' },
+        { href: '/pavement-maintenance', label: 'Pavement & Maintenance' },
+        { href: '/profit-matters', label: 'Profit Matters' },
+        { href: '/equipment-management', label: 'Equipment Management' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: 'https://www.constructionnetworkmediakit.com/', label: 'Advertise', target: '_blank' },
+        { href: '#', label: 'New Equipment Directory' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/magazine', label: 'Magazine' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/equipment', label: 'Equipment' },
+          { href: '/trucks', label: 'Trucks' },
+          { href: '/rental', label: 'Rental' },
+          { href: '/concrete', label: 'Concrete' },
+          { href: '/asphalt', label: 'Asphalt' },
+          { href: '/pavement-maintenance', label: 'Pavement & Maintenance' },
+          { href: '/profit-matters', label: 'Profit Matters' },
+          { href: '/equipment-management', label: 'Equipment Management' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '#', label: 'Magazine' },
+          { href: '#', label: 'Buyers Guide' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'https://www.constructionnetworkmediakit.com', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

@@ -21,40 +21,63 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/EE_Engineers' },
     { provider: 'facebook', href: 'https://www.facebook.com/EvaluationEngineering' },
   ],
-  primaryNavItems: [
-    { href: '/applications', label: 'Applications' },
-    { href: '/industries', label: 'Industries' },
-    { href: '/instrumentation', label: 'Instrumentation' },
-    { href: '/new-products', label: 'New Products' },
-  ],
-  secondaryNavItems: [
-    { href: '/magazine', label: 'In Print' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/applications', label: 'Applications' },
+        { href: '/industries', label: 'Industries' },
+        { href: '/instrumentation', label: 'Instrumentation' },
+        { href: '/new-products', label: 'New Products' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/magazine', label: 'In Print' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/advertise', label: 'Advertise' },
+        { href: '/page/about-us', label: 'About Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/applications', label: 'Applications' },
+          { href: '/industries', label: 'Industries' },
+          { href: '/instrumentation', label: 'Instrumentation' },
+          { href: '/new-products', label: 'New Products' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-NLCH94B',
   search: {

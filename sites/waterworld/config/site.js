@@ -23,43 +23,67 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/WaterWorld' },
     { provider: 'facebook', href: 'https://www.facebook.com/waterworldmag' },
   ],
-  primaryNavItems: [
-    { href: '/municipal', label: 'Municipal' },
-    { href: '/industrial', label: 'Industrial' },
-    { href: '/international', label: 'International' },
-    { href: '/municipal/technologies', label: 'Technologies' },
-    { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'Magazine' },
-    { href: '/videos', label: 'WaterWorldTV' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: '/page/about-us', label: 'About Us' },
-  ],
-  footerNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/events', label: 'Events' },
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'WaterWorldTV' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/municipal', label: 'Municipal' },
+        { href: '/industrial', label: 'Industrial' },
+        { href: '/international', label: 'International' },
+        { href: '/municipal/technologies', label: 'Technologies' },
+        { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/magazine', label: 'Magazine' },
+        { href: '/videos', label: 'WaterWorldTV' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: '/page/about-us', label: 'About Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/municipal', label: 'Municipal' },
+          { href: '/industrial', label: 'Industrial' },
+          { href: '/international', label: 'International' },
+          { href: '/municipal/technologies', label: 'Technologies' },
+          { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/events', label: 'Events' },
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'WaterWorldTV' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-MXBGH3V',
   search: {

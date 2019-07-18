@@ -23,42 +23,66 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/PI_Advisory' },
     { provider: 'facebook', href: 'https://www.facebook.com/SurgicalRR' },
   ],
-  primaryNavItems: [
-    { href: '/clinical-tips', label: 'Clinical Tips' },
-    { href: '/dental-implants', label: 'Dental Implants' },
-    { href: '/periodontics', label: 'Periodontics' },
-    { href: '/practice-management', label: 'Practice Management' },
-    { href: '/restorative-dentistry', label: 'Restorative Dentistry' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
-    { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: 'https://www.dentistryiq.com/page/advertise', label: 'Advertise', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-      { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
-      { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'https://www.dentistryiq.com/page/advertise', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/clinical-tips', label: 'Clinical Tips' },
+        { href: '/dental-implants', label: 'Dental Implants' },
+        { href: '/periodontics', label: 'Periodontics' },
+        { href: '/practice-management', label: 'Practice Management' },
+        { href: '/restorative-dentistry', label: 'Restorative Dentistry' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+        { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: 'https://www.dentistryiq.com/page/advertise', label: 'Advertise', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/clinical-tips', label: 'Clinical Tips' },
+          { href: '/dental-implants', label: 'Dental Implants' },
+          { href: '/periodontics', label: 'Periodontics' },
+          { href: '/practice-management', label: 'Practice Management' },
+          { href: '/restorative-dentistry', label: 'Restorative Dentistry' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+          { href: 'https://pennwell.myabsorb.com', label: 'Earn CE', target: '_blank' },
+          { href: 'https://www.dentistryiq.com/products/free-samples', label: 'Free Samples', target: '_blank' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'https://www.dentistryiq.com/page/advertise', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-WVXHH29',
   search: {
