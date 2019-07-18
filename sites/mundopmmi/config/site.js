@@ -25,9 +25,6 @@ module.exports = {
   navigation: {
     primary: {
       items: [
-        { href: '/automatizacion', label: 'Automatización' },
-        { href: '/empaque', label: 'Empaque' },
-        { href: '/procesamiento', label: 'Procesamiento' },
       ],
     },
     secondary: {
