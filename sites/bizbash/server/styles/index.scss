@@ -242,3 +242,11 @@ body {
 [data-embed-type="image"] {
   border-bottom: 1px solid #ccc;
 }
+
+.table {
+  font-size: 12px;
+
+  th {
+    font-weight: 700;
+  }
+}
