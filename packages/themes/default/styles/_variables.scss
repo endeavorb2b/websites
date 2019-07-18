@@ -158,7 +158,7 @@ $theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
 $theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
 
 // Content Attribution
-$theme-content-attribution-color:                     $black !default;
+$theme-content-attribution-color:                     $body-color !default;
 $theme-content-attribution-font-family:               $theme-font-family-sans-serif !default;
 $theme-content-attribution-font-size:                 16px !default;
 $theme-content-attribution-font-weight:               $font-weight-normal !default;
@@ -175,7 +175,7 @@ $theme-content-attribution-prefix-spacer-content:     "\2014" !default;
 $theme-content-attribution-prefix-spacer-font-weight: $font-weight-normal !default;
 
 // Content Published Date
-$theme-content-published-date-color:                     $black !default;
+$theme-content-published-date-color:                     $body-color !default;
 $theme-content-published-date-font-family:               $theme-font-family-sans-serif !default;
 $theme-content-published-date-font-size:                 16px !default;
 $theme-content-published-date-font-weight:               $font-weight-normal !default;
@@ -183,7 +183,7 @@ $theme-content-published-date-line-height:               $line-height-base !defa
 $theme-content-published-date-text-transform:            initial !default;
 
 // Contact Details
-$theme-contact-details-color:               $black !default;
+$theme-contact-details-color:               $body-color !default;
 $theme-contact-details-font-family:         $theme-font-family-sans-serif !default;
 $theme-contact-details-font-size:           16px !default;
 $theme-contact-details-font-weight:         $font-weight-normal !default;
@@ -205,7 +205,7 @@ $theme-media-caption-font-size:   $theme-media-footer-font-size !default;
 $theme-media-caption-font-weight: 600 !default;
 $theme-media-caption-line-height: $theme-media-footer-line-height !default;
 
-$theme-media-credit-color:        $black !default;
+$theme-media-credit-color:        $body-color !default;
 $theme-media-credit-font-size:    $theme-media-footer-font-size !default;
 $theme-media-credit-font-style:   italic !default;
 $theme-media-credit-font-weight:  400 !default;
@@ -287,7 +287,7 @@ $theme-item-header-link-hover-decoration:      $theme-item-link-hover-decoration
 $theme-item-header-letter-spacing:             $theme-item-letter-spacing !default;
 $theme-item-header-margin:                     $theme-item-element-margin !default;
 
-$theme-item-title-color:                       $black !default;
+$theme-item-title-color:                       $body-color !default;
 $theme-item-title-font-family:                 $theme-font-family-sans-serif !default;
 $theme-item-title-font-size-sm:                16px !default;
 $theme-item-title-font-size:                   17px !default;
@@ -321,7 +321,7 @@ $theme-item-description-line-height-sm:       get-line-height($theme-item-descri
 $theme-item-description-line-height:          get-line-height($theme-item-description-font-size, 25px) !default;
 
 $theme-item-description-margin:                $theme-item-element-margin !default;
-$theme-item-description-color:                 $black !default;
+$theme-item-description-color:                 $body-color !default;
 $theme-item-description-link-color:            $theme-item-description-color !default;
 $theme-item-description-link-decoration:       $theme-item-link-decoration !default;
 $theme-item-description-link-hover-color:      $theme-item-description-link-color !default;
@@ -380,7 +380,7 @@ $theme-page-padding-bottom:             .75rem !default;
 $theme-page-padding-bottom-sm:          0 !default;
 $theme-page-margin-bottom:              map-get($spacers, block) !default;
 
-$theme-page-body-color:                 $black !default;
+$theme-page-body-color:                 $body-color !default;
 $theme-page-body-font-family:           $theme-font-family-serif !default;
 $theme-page-body-font-size:             19px !default;
 $theme-page-body-font-size-sm:          $theme-page-body-font-size - 2 !default;
@@ -414,7 +414,7 @@ $theme-page-description-font-weight:    $font-weight-normal !default;
 $theme-page-description-line-height:    get-line-height($theme-page-description-font-size, 28px) !default;
 $theme-page-description-line-height-sm: get-line-height($theme-page-description-font-size-sm, 26px) !default;
 
-$theme-page-title-color:                $black !default;
+$theme-page-title-color:                $body-color !default;
 $theme-page-title-font-family:          $theme-font-family-page-title !default;
 $theme-page-title-font-size:            40px !default;
 $theme-page-title-font-size-sm:         $theme-page-title-font-size - 8 !default;
