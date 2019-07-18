@@ -11,6 +11,8 @@
     "@base-cms/object-path": "^0.9.40",
     "@base-cms/utils": "^0.9.40",
     "@endeavorb2b/base-website-routing-utils": "^0.12.0",
+    "@sentry/browser": "^5.5.0",
+    "@sentry/integrations": "^5.5.0",
     "apollo-cache-inmemory": "^1.6.0",
     "apollo-client": "^2.6.0",
     "apollo-link-http": "^1.5.14",
