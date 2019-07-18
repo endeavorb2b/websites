@@ -13,6 +13,7 @@ $ const params = {
 $ const header = input.header || 'Related Content';
 $ const nativeX = getAsObject(input, 'nativeX');
 $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
+$ const imageUsePlaceholder = input.usePlaceholder === undefined ? true : Boolean(input.usePlaceholder);
 
 <cms-query-website-scheduled-content|{ nodes }| ...params>
   <if(nodes.length)>
@@ -34,6 +35,7 @@ $ const imageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0
               imageHeight: 75,
               imageOptions,
               imagePosition: "right",
+              imageUsePlaceholder,
               imageWidth: 75,
             }
           />
