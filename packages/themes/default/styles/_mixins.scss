@@ -231,14 +231,18 @@
 
 @mixin theme-media-caption() {
   @include theme-media-common-footer();
+  font-size: $theme-media-caption-font-size;
   font-weight: $theme-media-caption-font-weight;
+  line-height: $theme-media-caption-line-height;
   color: $theme-media-caption-color;
 }
 
 @mixin theme-media-credit() {
   @include theme-media-common-footer();
+  font-size: $theme-media-credit-font-size;
   font-style: $theme-media-credit-font-style;
   font-weight: $theme-media-credit-font-weight;
+  line-height: $theme-media-credit-line-height;
   color: $theme-media-credit-color;
 }
 

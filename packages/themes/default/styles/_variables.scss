@@ -194,16 +194,22 @@ $theme-contact-details-section-margin:      map-get($spacers, 3) !default;
 $theme-contact-details-social-icon-margin:  map-get($spacers, 2) !default;
 
 // Media
-$theme-media-caption-color:       $gray-600 !default;
-$theme-media-caption-font-weight: 600 !default;
-$theme-media-credit-color:        $black !default;
-$theme-media-credit-font-weight:  400 !default;
-$theme-media-credit-font-style:   italic !default;
 $theme-media-footer-font-family:  $theme-font-family-sans-serif !default;
 $theme-media-footer-font-size:    $font-size-base !default;
 $theme-media-footer-line-height:  $line-height-sm !default;
 $theme-media-footer-padding-x:    $border-radius !default;
 $theme-media-footer-padding-y:    map-get($spacers, 1) !default;
+
+$theme-media-caption-color:       $gray-600 !default;
+$theme-media-caption-font-size:   $theme-media-footer-font-size !default;
+$theme-media-caption-font-weight: 600 !default;
+$theme-media-caption-line-height: $theme-media-footer-line-height !default;
+
+$theme-media-credit-color:        $black !default;
+$theme-media-credit-font-size:    $theme-media-footer-font-size !default;
+$theme-media-credit-font-style:   italic !default;
+$theme-media-credit-font-weight:  400 !default;
+$theme-media-credit-line-height:  $theme-media-footer-line-height !default;
 
 // Embedded Media
 $theme-embedded-media-color:        $gray-600 !default;
