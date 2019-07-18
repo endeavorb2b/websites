@@ -12,7 +12,7 @@ $ const navigation = {
   secondary: site.getAsArray('navigation.secondary.items'),
   tertiary: site.getAsArray('navigation.tertiary.items'),
 };
-$ const navMenu = site.get('navigation.menu');
+$ const navMenu = site.getAsObject('navigation.menu');
 
 <header class=navbar>
   <identity-x|{ isEnabled: regEnabled, hasUser }|>
