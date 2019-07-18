@@ -20,45 +20,73 @@ module.exports = {
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/plastics-machinery-magazine' },
     { provider: 'twitter', href: 'https://twitter.com/PlasticsMM' },
   ],
-  primaryNavItems: [
-    { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
-    { href: '/blow-molding', label: 'Blow Molding' },
-    { href: '/thermoforming', label: 'Thermoforming' },
-    { href: '/compounding', label: 'Compounding' },
-    { href: '/injection-molding', label: 'Injection Molding' },
-    { href: '/extrusion', label: 'Extrusion' },
-    { href: '/recycling', label: 'Recycling' },
-    { href: '/molds-tooling', label: 'Molds & Tooling' },
-    { href: '/rotomolding', label: 'Rotomolding' },
-  ],
-  secondaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/magazine', label: 'In Print' },
-    { href: '/advertise', label: 'Advertise' },
-    { href: '/contact-us', label: 'Contact Us' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-    { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/webcasts', label: 'Webcasts' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
-      { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
+        { href: '/blow-molding', label: 'Blow Molding' },
+        { href: '/thermoforming', label: 'Thermoforming' },
+        { href: '/compounding', label: 'Compounding' },
+        { href: '/injection-molding', label: 'Injection Molding' },
+        { href: '/extrusion', label: 'Extrusion' },
+        { href: '/recycling', label: 'Recycling' },
+        { href: '/molds-tooling', label: 'Molds & Tooling' },
+        { href: '/rotomolding', label: 'Rotomolding' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/magazine', label: 'In Print' },
+        { href: '/advertise', label: 'Advertise' },
+        { href: '/contact-us', label: 'Contact Us' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+        { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/additive-manufacturing', label: 'Additive Manufacturing' },
+          { href: '/blow-molding', label: 'Blow Molding' },
+          { href: '/thermoforming', label: 'Thermoforming' },
+          { href: '/compounding', label: 'Compounding' },
+          { href: '/injection-molding', label: 'Injection Molding' },
+          { href: '/extrusion', label: 'Extrusion' },
+          { href: '/recycling', label: 'Recycling' },
+          { href: '/molds-tooling', label: 'Molds & Tooling' },
+          { href: '/rotomolding', label: 'Rotomolding' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/webcasts', label: 'Webcasts' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
+          { href: 'https://www.endeavorbusinessmedia.com/endeavor-terms', label: 'Terms & Conditions', target: '_blank' },
+        ],
+      },
+    },
   },
   gtmContainer: 'GTM-KBM372Z',
   search: {

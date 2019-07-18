@@ -22,45 +22,70 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/OutInSA' },
     { provider: 'instagram', href: 'http://instagram.com/outinsa' },
   ],
-  primaryNavItems: [
-    { href: '/news', label: 'News' },
-    { href: '/arts', label: 'Arts' },
-    { href: '/music', label: 'Music' },
-    { href: '/screens', label: 'Screens' },
-    { href: '/food-drink', label: 'Food & Drink' },
-    { href: '/best-of', label: 'Best Of' },
-  ],
-  secondaryNavItems: [
-    { href: '/calendar', label: 'Calendar' },
-    { href: '/galleries', label: 'Galleries' },
-    { href: '/giveaways', label: 'Giveaways' },
-    { href: '/events', label: 'Events' },
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/page/advertise', label: 'Advertise' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/page/advertise', label: 'Advertise' },
-    { href: 'http://www.ruxton.com/', label: 'National Advertising', target: '_blank' },
-    { href: '/jobs', label: 'Work Here' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    { href: '/page/terms-use', label: 'Terms of Use' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: '/page/advertise', label: 'Advertise' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/news', label: 'News' },
+        { href: '/arts', label: 'Arts' },
+        { href: '/music', label: 'Music' },
+        { href: '/screens', label: 'Screens' },
+        { href: '/food-drink', label: 'Food & Drink' },
+        { href: '/best-of', label: 'Best Of' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/calendar', label: 'Calendar' },
+        { href: '/galleries', label: 'Galleries' },
+        { href: '/giveaways', label: 'Giveaways' },
+        { href: '/events', label: 'Events' },
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/page/advertise', label: 'Advertise' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/page/advertise', label: 'Advertise' },
+        { href: 'http://www.ruxton.com/', label: 'National Advertising', target: '_blank' },
+        { href: '/jobs', label: 'Work Here' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        { href: '/page/terms-use', label: 'Terms of Use' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/news', label: 'News' },
+          { href: '/arts', label: 'Arts' },
+          { href: '/music', label: 'Music' },
+          { href: '/screens', label: 'Screens' },
+          { href: '/food-drink', label: 'Food & Drink' },
+          { href: '/best-of', label: 'Best Of' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/page/advertise', label: 'Advertise' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

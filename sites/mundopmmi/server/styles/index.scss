@@ -4,4 +4,9 @@ $light: #e9ecef !default; // equivalent to default gray-200
 $dark: #212529 !default; // equivalent to default gray-900
 $info: #6c757d !default; // equivalent to default gray-600
 
+$theme-font-family-sans-serif: "IBM Plex Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$theme-font-family-serif: "Source Serif Pro", serif !default;
+
+$enable-rounded: false;
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";

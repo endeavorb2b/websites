@@ -24,41 +24,67 @@ module.exports = {
     { provider: 'youtube', href: 'https://www.youtube.com/user/AthleticBusinessMag' },
     { provider: 'instagram', href: 'https://www.instagram.com/athleticbiz' },
   ],
-  primaryNavItems: [
-    { href: '/facilities', label: 'Facilities' },
-    { href: '/programming', label: 'Programming' },
-    { href: '/business', label: 'Business' },
-    { href: '/media-technology', label: 'Media & Technology' },
-    { href: '/safety-security', label: 'Safety & Security' },
-    { href: '/law-policy', label: 'Law & Policy' },
-    { href: '/leadership', label: 'Leadership' },
-  ],
-  secondaryNavItems: [
-    { href: 'https://www.abshow.com', label: 'Attend AB Show', target: '_blank' },
-    { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
-    { href: '#', label: 'Buyers Guide' },
-    { href: '#', label: 'Subscribe' },
-    { href: '#', label: 'Magazine' },
-  ],
-  footerNavItems: [
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '#', label: 'Subscribe' },
-    { href: '/contact-us', label: 'Contact Us' },
-    { href: '#', label: 'Events' },
-    { href: '#', label: 'Privacy Policy' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '#', label: 'Magazine' },
-      { href: '#', label: 'Buyers Guide' },
-    ],
-    userTools: [
-      { href: '#', label: 'Subscribe' },
-      { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '#', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/facilities', label: 'Facilities' },
+        { href: '/programming', label: 'Programming' },
+        { href: '/business', label: 'Business' },
+        { href: '/media-technology', label: 'Media & Technology' },
+        { href: '/safety-security', label: 'Safety & Security' },
+        { href: '/law-policy', label: 'Law & Policy' },
+        { href: '/leadership', label: 'Leadership' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: 'https://www.abshow.com', label: 'Attend AB Show', target: '_blank' },
+        { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
+        { href: '#', label: 'Buyers Guide' },
+        { href: '#', label: 'Subscribe' },
+        { href: '#', label: 'Magazine' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '#', label: 'Subscribe' },
+        { href: '/contact-us', label: 'Contact Us' },
+        { href: '#', label: 'Events' },
+        { href: '#', label: 'Privacy Policy' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/facilities', label: 'Facilities' },
+          { href: '/programming', label: 'Programming' },
+          { href: '/business', label: 'Business' },
+          { href: '/media-technology', label: 'Media & Technology' },
+          { href: '/safety-security', label: 'Safety & Security' },
+          { href: '/law-policy', label: 'Law & Policy' },
+          { href: '/leadership', label: 'Leadership' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '#', label: 'Magazine' },
+          { href: '#', label: 'Buyers Guide' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '#', label: 'Subscribe' },
+          { href: 'https://athleticbusiness.info', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '#', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {

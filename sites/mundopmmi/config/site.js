@@ -23,13 +23,13 @@ module.exports = {
     { provider: 'facebook', href: 'https://www.facebook.com/MundoPMMI' },
   ],
   navigation: {
-    // primary: {
-    //   items: [
-    //     { href: '/automatizacion', label: 'Automatización' },
-    //     { href: '/empaque', label: 'Empaque' },
-    //     { href: '/procesamiento', label: 'Procesamiento' },
-    //   ],
-    // },
+    primary: {
+      items: [
+        { href: '/automatizacion', label: 'Automatización' },
+        { href: '/empaque', label: 'Empaque' },
+        { href: '/procesamiento', label: 'Procesamiento' },
+      ],
+    },
     secondary: {
       items: [
         { href: '/subscribe', label: 'Suscríbase' },

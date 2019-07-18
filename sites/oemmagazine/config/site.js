@@ -21,41 +21,64 @@ module.exports = {
     { provider: 'twitter', href: 'https://twitter.com/OEMmagazine' },
     { provider: 'facebook', href: 'https://www.facebook.com/OEMMagazine/' },
   ],
-  primaryNavItems: [
-    { href: '/subscribe', label: 'Subscribe' },
-    { href: '/technology-topics', label: 'Technology' },
-    { href: '/gear', label: 'Gear' },
-    { href: '/oem-topics', label: 'OEM Topics' },
-  ],
-  secondaryNavItems: [
-    { href: '/calendar', label: 'Calendar' },
-    { href: '/page/about-us', label: 'About Us' },
-    { href: '/magazine', label: 'Digital Edition' },
-    { href: '/tech-trensetters', label: 'Tech Trendsetters' },
-    { href: 'https://digitaleditions.oemmagazine.org/OEM_Spring2019/OEMSpring_2019/index.html#page=1', label: 'Current Edition', target: '_blank' },
-    { href: 'http://www.theautomationconference.com', label: 'The Automation Conference', target: '_blank' },
-  ],
-  footerNavItems: [
-    { href: 'http://www.pmmimediagroup.com/ppoem/packaging-processing-oem', label: 'Advertise', target: '_blank' },
-    { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    { href: '/page/terms-use', label: 'Terms of Use' },
-    { href: '/page/advertising-terms-conditions', label: 'Advertising Terms and Conditions' },
-    { href: '/contact-us', label: 'Contact Us' },
-  ],
-  menuItems: {
-    resources: [
-      { href: '/magazine', label: 'Magazine' },
-      { href: '/videos', label: 'Videos' },
-      { href: '/white-papers', label: 'White Papers' },
-      { href: '/events', label: 'Events' },
-    ],
-    userTools: [
-      { href: '/subscribe', label: 'Subscribe' },
-      { href: 'http://www.pmmimediagroup.com/ppoem/packaging-processing-oem', label: 'Advertise', target: '_blank' },
-      { href: '/page/about-us', label: 'About Us' },
-      { href: '/contact-us', label: 'Contact Us' },
-      { href: '/page/privacy-policy', label: 'Privacy Policy' },
-    ],
+  navigation: {
+    primary: {
+      items: [
+        { href: '/subscribe', label: 'Subscribe' },
+        { href: '/technology-topics', label: 'Technology' },
+        { href: '/gear', label: 'Gear' },
+        { href: '/oem-topics', label: 'OEM Topics' },
+      ],
+    },
+    secondary: {
+      items: [
+        { href: '/calendar', label: 'Calendar' },
+        { href: '/page/about-us', label: 'About Us' },
+        { href: '/magazine', label: 'Digital Edition' },
+        { href: '/tech-trensetters', label: 'Tech Trendsetters' },
+        { href: 'https://digitaleditions.oemmagazine.org/OEM_Spring2019/OEMSpring_2019/index.html#page=1', label: 'Current Edition', target: '_blank' },
+        { href: 'http://www.theautomationconference.com', label: 'The Automation Conference', target: '_blank' },
+      ],
+    },
+    footer: {
+      items: [
+        { href: 'http://www.pmmimediagroup.com/ppoem/packaging-processing-oem', label: 'Advertise', target: '_blank' },
+        { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        { href: '/page/terms-use', label: 'Terms of Use' },
+        { href: '/page/advertising-terms-conditions', label: 'Advertising Terms and Conditions' },
+        { href: '/contact-us', label: 'Contact Us' },
+      ],
+    },
+    menu: {
+      topics: {
+        label: 'Topics',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: '/technology-topics', label: 'Technology' },
+          { href: '/gear', label: 'Gear' },
+          { href: '/oem-topics', label: 'OEM Topics' },
+        ],
+      },
+      resources: {
+        label: 'Resources',
+        items: [
+          { href: '/magazine', label: 'Magazine' },
+          { href: '/videos', label: 'Videos' },
+          { href: '/white-papers', label: 'White Papers' },
+          { href: '/events', label: 'Events' },
+        ],
+      },
+      userTools: {
+        label: 'User Tools',
+        items: [
+          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'http://www.pmmimediagroup.com/ppoem/packaging-processing-oem', label: 'Advertise', target: '_blank' },
+          { href: '/page/about-us', label: 'About Us' },
+          { href: '/contact-us', label: 'Contact Us' },
+          { href: '/page/privacy-policy', label: 'Privacy Policy' },
+        ],
+      },
+    },
   },
   gtmContainer: '',
   search: {
