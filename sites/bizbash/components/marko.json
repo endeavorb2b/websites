@@ -9,6 +9,14 @@
     "bizbash-venue-capacity": {
       "template": "./venue-capacity.marko",
       "@spaces": "array"
+    },
+    "bizbash-list-item": {
+      "template": "./list-item.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@image": "object"
     }
   }
 }
