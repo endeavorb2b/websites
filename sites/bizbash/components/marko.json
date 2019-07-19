@@ -17,6 +17,14 @@
         "required": true
       },
       "@image": "object"
+    },
+    "bizbash-hero-card": {
+      "template": "./hero-card.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@image": "object"
     }
   }
 }
