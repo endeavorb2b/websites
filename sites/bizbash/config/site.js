@@ -38,7 +38,7 @@ module.exports = {
     secondary: {
       items: [
         { href: '/gathergeeks', label: 'GatherGeeks' },
-        { href: '#', label: 'Our Events & Awards' },
+        { href: '/page/our-events', label: 'Our Events & Awards' },
         { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
         { href: '#', label: 'Find A Venue' },
         { href: '#', label: 'Find Suppliers' },
@@ -68,7 +68,7 @@ module.exports = {
         label: 'Resources',
         items: [
           { href: '/gathergeeks', label: 'GatherGeeks' },
-          { href: '#', label: 'Our Events & Awards' },
+          { href: '/page/our-events', label: 'Our Events & Awards' },
           { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
           { href: '#', label: 'Find A Venue' },
           { href: '#', label: 'Find Suppliers' },
