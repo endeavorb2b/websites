@@ -41,14 +41,14 @@ $theme-item-title-font-size:            16.675px;
 $theme-item-title-font-weight:          300;
 $theme-item-title-line-height-sm:       get-line-height($theme-item-title-font-size-sm, 21.345px) !default;
 $theme-item-title-line-height:          get-line-height($theme-item-title-font-size, 23.345px) !default;
-$theme-item-title-max-lines:            4;
+$theme-item-title-max-lines:            5;
 
 $theme-item-title-large-font-size-sm:   28px;
 $theme-item-title-large-font-size:      32px;
 $theme-item-title-large-font-weight:    700;
 $theme-item-title-large-line-height-sm: get-line-height($theme-item-title-large-font-size-sm, 34px) !default;
 $theme-item-title-large-line-height:    get-line-height($theme-item-title-large-font-size, 38px) !default;
-$theme-item-title-large-max-lines:      3;
+$theme-item-title-large-max-lines:      4;
 
 $theme-item-description-font-family:    $font-open-sans;
 $theme-item-description-font-size-sm:   13px;
