@@ -196,6 +196,12 @@ body {
   }
 }
 
+.website-scheduled-content-hero {
+  &__list {
+    margin-top: -6px;
+  }
+}
+
 .item {
   $self: &;
   &--image-left {
