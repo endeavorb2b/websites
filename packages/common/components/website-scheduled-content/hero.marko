@@ -1,0 +1,41 @@
+import { asArray, asObject } from '@base-cms/utils';
+import { getAsObject } from '@base-cms/object-path';
+import { buildImgixUrl } from '@base-cms/image';
+import contentListFragment from '../../api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const block = 'website-scheduled-content-hero';
+$ const queryInput = {
+  limit: 5,
+  queryFragment: contentListFragment,
+  queryName: 'Hero',
+  ...getAsObject(input.query),
+};
+$ const itemListInput = {
+  flush: true,
+  card: true,
+  ...getAsObject(input.itemList),
+}
+
+<cms-query-website-scheduled-content|{ nodes }| ...queryInput>
+  $ const heroNode = asObject(nodes[0]);
+  $ const listNodes = asArray(nodes.slice(1))
+  <if(nodes.length)>
+    <div class=block>
+      <if(heroNode.id)>
+        <div class=`${block}__card`>
+          <${input.cardItem} node=heroNode />
+        </div>
+      </if>
+      <if(listNodes.length)>
+        <div class=`${block}__list`>
+          <endeavor-item-list ...itemListInput items=listNodes>
+            <@item|{ item, index }|>
+              <${input.listItem} node=item index=index />
+            </@item>
+          </endeavor-item-list>
+        </div>
+      </if>
+    </div>
+  </if>
+</cms-query-website-scheduled-content>

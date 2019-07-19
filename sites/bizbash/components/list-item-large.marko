@@ -1,0 +1,41 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const content = getAsObject(input, 'content');
+$ const primarySection = getAsObject(content, 'primarySection');
+$ const primaryImage = getAsObject(content, 'primaryImage');
+$ const dateFormat = 'MMMM D, YYYY';
+$ const imageInput = {
+  height: 180,
+  image: primaryImage,
+  lazyload: true,
+  linkTo: content,
+  options: { w: 480, h: 270, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
+  position: 'left',
+  usePlaceholder: false,
+  width: 320,
+  ...getAsObject(input, 'image'),
+};
+
+<endeavor-item>
+  <@image ...imageInput />
+  <@title tag="h5" modifiers=["large"]>
+    <cms-content-short-name tag=null obj=content link=true />
+  </@title>
+  <@description tag="p">
+    <cms-content-teaser tag=null obj=content link=true />
+  </@description>
+  <@footer-left|{ block }|>
+    <cms-website-section-name tag="span" block=block obj=primarySection link=true />
+  </@footer-left>
+  <@footer-right|{ block }|>
+    <if(content.type === "event")>
+      <span class=`${block}__content-event-dates`>
+        <cms-date-element tag="date" field="starts" block=block obj=content format=dateFormat />
+        <cms-date-element tag="date" field="ends" block=block obj=content format=dateFormat />
+      </span>
+    </if>
+    <else>
+      <cms-content-published block=block obj=content format=dateFormat />
+    </else>
+  </@footer-right>
+</endeavor-item>

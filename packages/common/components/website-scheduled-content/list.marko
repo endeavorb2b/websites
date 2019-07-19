@@ -1,0 +1,31 @@
+import { getAsObject } from '@base-cms/object-path';
+import contentListFragment from '../../api/fragments/content-list';
+
+$ const block = 'website-schedule-content-list';
+$ const queryInput = {
+  limit: 5,
+  queryFragment: contentListFragment,
+  queryName: 'List',
+  ...getAsObject(input.query),
+};
+$ const itemListInput = {
+  flush: true,
+  card: true,
+  ...getAsObject(input.itemList),
+}
+
+<cms-query-website-scheduled-content|{ nodes }| ...queryInput>
+  <if(nodes.length)>
+    <endeavor-item-list ...itemListInput items=nodes>
+      <if(input.header)>
+        <@header ...input.header />
+      </if>
+      <@item|{ item, index }|>
+        <${input.item} node=item index=index />
+      </@item>
+      <if(input.footer)>
+        <@footer ...input.footer />
+      </if>
+    </endeavor-item-list>
+  </if>
+</cms-query-website-scheduled-content>
