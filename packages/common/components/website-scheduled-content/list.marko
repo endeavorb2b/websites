@@ -20,24 +20,12 @@ $ const itemListInput = {
       <if(input.header)>
         <@header ...input.header />
       </if>
-      <!-- <if(header.title)>
-        <@header href=header.href target=header.target>
-          ${header.title}
-        </@header>
-      </if>
-      <if(description.value)>
-        <@description>
-          ${description.value}
-        </@description>
-      </if> -->
       <@item|{ item, index }|>
         <${input.item} node=item index=index />
       </@item>
-      <!-- <if(footer.value)>
-        <@footer href=footer.href target=footer.target>
-          ${footer.value}
-        </@footer>
-      </if> -->
+      <if(input.footer)>
+        <@footer ...input.footer />
+      </if>
     </endeavor-item-list>
   </if>
 </cms-query-website-scheduled-content>
