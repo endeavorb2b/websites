@@ -1,0 +1,7 @@
+.required-field {
+  &::after {
+    margin-left: map-get($spacers, 1);
+    color: $red;
+    content: "*";
+  }
+}

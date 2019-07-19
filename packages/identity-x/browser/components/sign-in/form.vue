@@ -54,10 +54,14 @@
 </template>
 
 <script>
+import * as Sentry from '@sentry/browser';
 import Email from './fields/email.vue';
 import GivenName from './fields/given-name.vue';
 import FamilyName from './fields/family-name.vue';
 import cleanPath from '../../utils/clean-path';
+import cookiesEnabled from '../../utils/cookies-enabled';
+import FormError from '../../errors/form';
+import FeatureError from '../../errors/feature';
 
 export default {
   components: {
@@ -143,6 +147,14 @@ export default {
       return endpoints.includes(pathname) ? undefined : pathname;
     },
   },
+  mounted() {
+    Sentry.setUser(this.activeUser);
+    if (!cookiesEnabled()) {
+      const error = new FeatureError('Your browser does not support cookies. Please enable cookies to use this feature.');
+      this.error = error.message;
+      Sentry.captureException(error);
+    }
+  },
   methods: {
     async handle() {
       this.error = null;
@@ -154,6 +166,8 @@ export default {
         authUrl,
       } = this;
       try {
+        Sentry.setUser(user);
+        Sentry.addBreadcrumb({ category: 'auth', message: 'User submitted form', data: { user } });
         const res = await this.$fetch('/login', {
           user,
           requiredFields,
@@ -161,14 +175,18 @@ export default {
           authUrl,
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(`${res.statusText} (${res.status}): ${data.message}`);
+        if (!res.ok) throw new FormError(data.message, res.status);
 
         if (data.ok) {
+          Sentry.addBreadcrumb({ category: 'auth', message: 'Form submission complete.', data });
           this.complete = true;
         } else if (data.needsInput) {
+          Sentry.addBreadcrumb({ category: 'auth', message: 'Form submission incomplete.', data });
           this.needsInput = true;
         }
+        Sentry.captureMessage('FormSuccess');
       } catch (e) {
+        Sentry.captureException(e);
         this.error = e.message;
       } finally {
         this.loading = false;

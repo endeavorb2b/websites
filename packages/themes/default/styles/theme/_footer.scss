@@ -1,10 +1,10 @@
 .site-footer {
-  @include box-shadow($theme-site-footer-box-shadow);
   margin-top: auto;
   font-family: $theme-site-footer-font-family;
   font-size: $theme-site-footer-font-size;
   font-weight: $theme-site-footer-font-weight;
   line-height: $theme-site-footer-line-height;
+  box-shadow: $theme-site-footer-box-shadow;
   opacity: $theme-site-footer-opacity;
 
   &__container {

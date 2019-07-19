@@ -1,0 +1,15 @@
+$ const block = 'page-body-image';
+$ const { image } = input;
+
+<div class=block>
+  <div class=`${block}__wrapper`>
+    <!-- @todo Add support for responsive images / size variance based on context -->
+    <cms-image-element
+      lazyload=input.lazyload
+      obj=image
+      options=input.options
+    />
+  </div>
+  <cms-text-element tag="div" class=`${block}__caption` field="caption" obj=image asHTML=true />
+  <cms-text-element tag="div" class=`${block}__credit` field="credit" obj=image asHTML=true />
+</div>

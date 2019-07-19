@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-routing-utils",
-  "version": "0.11.9",
+  "version": "0.12.0",
   "private": true,
   "devDependencies": {
     "eslint": "^5.15.1",

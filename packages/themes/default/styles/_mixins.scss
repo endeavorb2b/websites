@@ -1,3 +1,39 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@mixin theme-apply-responsive-fonts(
+  $font-size: $font-size-sm,
+  $line-height: $line-height-base,
+  $breakpoint: $theme-responsive-text-breakpoint
+) {
+  @include media-breakpoint-down($breakpoint) {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+@mixin theme-apply-fonts(
+  $font-family: $font-family-sans-serif,
+  $font-size-sm: $font-size-sm,
+  $font-size: $font-size-base,
+  $font-weight: $font-weight-normal,
+  $letter-spacing: inherit,
+  $line-height-sm: $line-height-base,
+  $line-height: $line-height-base,
+  $sm-breakpoint: $theme-responsive-text-breakpoint
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+  @include theme-apply-responsive-fonts(
+    $font-size: $font-size-sm,
+    $line-height: $line-height-sm,
+    $breakpoint: $sm-breakpoint
+  );
+}
+
 @mixin theme-card() {
   @include border-radius($theme-card-border-radius);
   @include box-shadow($theme-card-box-shadow);
@@ -7,6 +43,8 @@
 
 @mixin theme-card-header() {
   font-family: $theme-card-header-font-family;
+  font-size: $theme-card-header-font-size;
+  font-weight: $theme-card-header-font-weight;
   color: $theme-card-header-color;
   text-transform: $theme-card-header-text-transform;
   letter-spacing: $theme-card-header-letter-spacing;
@@ -24,24 +62,98 @@
 }
 
 @mixin theme-content-body() {
-  @include theme-text-page-body();
+  @include theme-apply-fonts(
+    $font-family: $theme-page-body-font-family,
+    $font-size-sm: $theme-page-body-font-size-sm,
+    $font-size: $theme-page-body-font-size,
+    $font-weight: $theme-page-body-font-weight,
+    $line-height-sm: $theme-page-body-line-height-sm,
+    $line-height: $theme-page-body-line-height,
+  );
+  color: $theme-page-body-color;
   h1 {
-    @include theme-content-heading(h1);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h1-font-family,
+      $font-size-sm: $theme-content-heading-h1-font-size-sm,
+      $font-size: $theme-content-heading-h1-font-size,
+      $font-weight: $theme-content-heading-h1-font-weight,
+      $line-height-sm: $theme-content-heading-h1-line-height-sm,
+      $line-height: $theme-content-heading-h1-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h1-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h1-margin-bottom;
   }
   h2 {
-    @include theme-content-heading(h2);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h2-font-family,
+      $font-size-sm: $theme-content-heading-h2-font-size-sm,
+      $font-size: $theme-content-heading-h2-font-size,
+      $font-weight: $theme-content-heading-h2-font-weight,
+      $line-height-sm: $theme-content-heading-h2-line-height-sm,
+      $line-height: $theme-content-heading-h2-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h2-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h2-margin-bottom;
   }
   h3 {
-    @include theme-content-heading(h3);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h3-font-family,
+      $font-size-sm: $theme-content-heading-h3-font-size-sm,
+      $font-size: $theme-content-heading-h3-font-size,
+      $font-weight: $theme-content-heading-h3-font-weight,
+      $line-height-sm: $theme-content-heading-h3-line-height-sm,
+      $line-height: $theme-content-heading-h3-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h3-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h3-margin-bottom;
   }
   h4 {
-    @include theme-content-heading(h4);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h4-font-family,
+      $font-size-sm: $theme-content-heading-h4-font-size-sm,
+      $font-size: $theme-content-heading-h4-font-size,
+      $font-weight: $theme-content-heading-h4-font-weight,
+      $line-height-sm: $theme-content-heading-h4-line-height-sm,
+      $line-height: $theme-content-heading-h4-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h4-margin-bottom;
   }
   h5 {
-    @include theme-content-heading(h5);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h5-font-family,
+      $font-size-sm: $theme-content-heading-h5-font-size-sm,
+      $font-size: $theme-content-heading-h5-font-size,
+      $font-weight: $theme-content-heading-h5-font-weight,
+      $line-height-sm: $theme-content-heading-h5-line-height-sm,
+      $line-height: $theme-content-heading-h5-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h5-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h5-margin-bottom;
   }
   h6 {
-    @include theme-content-heading(h6);
+    @include theme-apply-fonts(
+      $font-family: $theme-content-heading-h6-font-family,
+      $font-size-sm: $theme-content-heading-h6-font-size-sm,
+      $font-size: $theme-content-heading-h6-font-size,
+      $font-weight: $theme-content-heading-h6-font-weight,
+      $line-height-sm: $theme-content-heading-h6-line-height-sm,
+      $line-height: $theme-content-heading-h6-line-height
+    );
+    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
+      margin-bottom: $theme-content-heading-h6-margin-bottom-sm;
+    }
+    margin-bottom: $theme-content-heading-h6-margin-bottom;
   }
   strong,
   b {
@@ -57,51 +169,9 @@
   [data-oembed-type="video"],
   [data-embed-type="image"],
   ol {
-    @include theme-content-body-paragraph();
-  }
-}
-
-@mixin theme-content-body-paragraph() {
-  margin-bottom: $theme-content-paragraph-margin-bottom;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    margin-bottom: $theme-content-paragraph-margin-bottom-sm;
-  }
-  &:empty {
-    display: none;
-  }
-}
-
-@mixin theme-content-heading($size) {
-  @include theme-heading($size);
-  @if $size == h1 {
-    margin-bottom: $theme-content-heading-h1-margin-bottom;
+    margin-bottom: $theme-content-paragraph-margin-bottom;
     @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h1-margin-bottom-sm;
-    }
-  } @else if $size == h2 {
-    margin-bottom: $theme-content-heading-h2-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h2-margin-bottom-sm;
-    }
-  } @else if $size == h3 {
-    margin-bottom: $theme-content-heading-h3-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h3-margin-bottom-sm;
-    }
-  } @else if $size == h4 {
-    margin-bottom: $theme-content-heading-h4-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h4-margin-bottom-sm;
-    }
-  } @else if $size == h5 {
-    margin-bottom: $theme-content-heading-h5-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h5-margin-bottom-sm;
-    }
-  } @else {
-    margin-bottom: $theme-content-heading-h6-margin-bottom;
-    @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-      margin-bottom: $theme-content-heading-h6-margin-bottom-sm;
+      margin-bottom: $theme-content-paragraph-margin-bottom-sm;
     }
   }
 }
@@ -132,62 +202,6 @@
   border: 0;
 }
 
-@mixin theme-heading($size) {
-  font-family: $theme-heading-font-family;
-  font-weight: $theme-heading-font-weight;
-
-  @if $size == h1 {
-    font-size: $theme-heading-h1-font-size;
-    line-height: $theme-heading-h1-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h1-font-size-sm;
-      line-height: $theme-heading-h1-line-height-sm;
-    }
-  } @else if $size == h2 {
-    font-size: $theme-heading-h2-font-size;
-    line-height: $theme-heading-h2-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h2-font-size-sm;
-      line-height: $theme-heading-h2-line-height-sm;
-    }
-  } @else if $size == h3 {
-    font-size: $theme-heading-h3-font-size;
-    line-height: $theme-heading-h3-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h3-font-size-sm;
-      line-height: $theme-heading-h3-line-height-sm;
-    }
-  } @else if $size == h4 {
-    font-size: $theme-heading-h4-font-size;
-    line-height: $theme-heading-h4-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h4-font-size-sm;
-      line-height: $theme-heading-h4-line-height-sm;
-    }
-  } @else if $size == h5 {
-    font-size: $theme-heading-h5-font-size;
-    line-height: $theme-heading-h5-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-h5-font-size-sm;
-      line-height: $theme-heading-h5-line-height-sm;
-    }
-  } @else if $size == list {
-    font-size: $theme-heading-list-font-size;
-    line-height: $theme-heading-list-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-list-font-size-sm;
-      line-height: $theme-heading-list-line-height-sm;
-    }
-  } @else {
-    font-size: $theme-heading-small-font-size;
-    line-height: $theme-heading-small-line-height;
-    @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-      font-size: $theme-heading-small-font-size-sm;
-      line-height: $theme-heading-small-line-height-sm;
-    }
-  }
-}
-
 @mixin theme-hide-scrollbars() {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -197,31 +211,43 @@
   }
 }
 
-@mixin theme-max-lines($line-height, $line-height-sm, $num: 2, $text-overflow: ellipsis) {
+@mixin theme-max-lines(
+  $font-size,
+  $font-size-sm,
+  $line-height,
+  $line-height-sm,
+  $num: 2,
+  $text-overflow: ellipsis,
+  $breakpoint: $theme-responsive-text-max-lines-breakpoint,
+) {
   display: block;
-  max-height: $line-height * $num;
+  max-height: ($font-size * $line-height) * $num;
   overflow: hidden;
   text-overflow: $text-overflow;
-  @include media-breakpoint-down($theme-responsive-text-max-lines-breakpoint) {
-    max-height: $line-height-sm * $num;
+  @include media-breakpoint-down($breakpoint) {
+    max-height: ($font-size-sm * $line-height-sm) * $num;
   }
 }
 
 @mixin theme-media-caption() {
   @include theme-media-common-footer();
+  font-size: $theme-media-caption-font-size;
   font-weight: $theme-media-caption-font-weight;
+  line-height: $theme-media-caption-line-height;
   color: $theme-media-caption-color;
 }
 
 @mixin theme-media-credit() {
   @include theme-media-common-footer();
+  font-size: $theme-media-credit-font-size;
   font-style: $theme-media-credit-font-style;
   font-weight: $theme-media-credit-font-weight;
+  line-height: $theme-media-credit-line-height;
   color: $theme-media-credit-color;
 }
 
 @mixin theme-media-common-footer() {
-  display: inline-block;
+  display: block;
   padding: $theme-media-footer-padding-y $theme-media-footer-padding-x;
   margin: 0;
   font-family: $theme-media-footer-font-family;
@@ -300,69 +326,4 @@
     padding-right: $theme-page-header-padding-sm;
     padding-left: $theme-page-header-padding-sm;
   }
-}
-
-@mixin theme-text-description() {
-  font-family: $theme-text-description-font-family;
-  font-size: $theme-text-description-font-size;
-  font-style: $theme-text-description-font-style;
-  line-height: $theme-text-description-line-height;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-description-font-size-sm;
-    line-height: $theme-text-description-line-height-sm;
-  }
-}
-
-@mixin theme-text-page-body() {
-  font-family: $theme-text-page-body-font-family;
-  font-size: $theme-text-page-body-font-size;
-  font-weight: $theme-text-page-body-font-weight;
-  line-height: $theme-text-page-body-line-height;
-  color: $theme-text-page-body-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-body-font-size-sm;
-    line-height: $theme-text-page-body-line-height-sm;
-  }
-}
-
-@mixin theme-text-page-deck() {
-  font-family: $theme-text-page-deck-font-family;
-  font-size: $theme-text-page-deck-font-size;
-  font-weight: $theme-text-page-deck-font-weight;
-  line-height: $theme-text-page-deck-line-height;
-  color: $theme-text-page-deck-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-deck-font-size-sm;
-    line-height: $theme-text-page-deck-line-height-sm;
-  }
-}
-
-@mixin theme-text-page-description() {
-  font-family: $theme-text-page-description-font-family;
-  font-size: $theme-text-page-description-font-size;
-  font-weight: $theme-text-page-description-font-weight;
-  line-height: $theme-text-page-description-line-height;
-  color: $theme-text-page-description-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-description-font-size-sm;
-    line-height: $theme-text-page-description-line-height-sm;
-  }
-}
-
-@mixin theme-text-page-title() {
-  font-family: $theme-text-page-title-font-family;
-  font-size: $theme-text-page-title-font-size;
-  font-weight: $theme-text-page-title-font-weight;
-  line-height: $theme-text-page-title-line-height;
-  color: $theme-text-page-title-font-color;
-  @include media-breakpoint-down($theme-responsive-text-breakpoint) {
-    font-size: $theme-text-page-title-font-size-sm;
-    line-height: $theme-text-page-title-line-height-sm;
-  }
-}
-
-@mixin theme-text-small() {
-  font-family: $theme-text-small-font-family;
-  font-size: $theme-text-small-font-size;
-  line-height: $theme-text-small-line-height;
 }

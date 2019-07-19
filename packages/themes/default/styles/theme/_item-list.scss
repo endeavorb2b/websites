@@ -60,12 +60,26 @@
     }
   }
 
-  &__body,
-  &__footer {
-    @include theme-text-description();
+  &__body {
+    @include theme-apply-fonts(
+      $font-family: $theme-item-list-body-font-family,
+      $font-size-sm: $theme-item-list-body-font-size-sm,
+      $font-size: $theme-item-list-body-font-size,
+      $font-weight: $theme-item-list-body-font-weight,
+      $line-height-sm: $theme-item-list-body-line-height-sm,
+      $line-height: $theme-item-list-body-line-height,
+    );
   }
 
   &__footer {
+    @include theme-apply-fonts(
+      $font-family: $theme-item-list-footer-font-family,
+      $font-size-sm: $theme-item-list-footer-font-size-sm,
+      $font-size: $theme-item-list-footer-font-size,
+      $font-weight: $theme-item-list-footer-font-weight,
+      $line-height-sm: $theme-item-list-footer-line-height-sm,
+      $line-height: $theme-item-list-footer-line-height,
+    );
     margin-top: auto;
     &:empty {
       display: none;

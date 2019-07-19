@@ -1,0 +1,28 @@
+@import "../../node_modules/bootstrap/scss/carousel";
+
+.carousel {
+  margin-bottom: $breadcrumb-padding-y;
+
+  .carousel-item {
+    img {
+      display: block;
+      width: 100%;
+    }
+    .carousel-caption {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      padding-bottom: $theme-carousel-caption-padding;
+      text-shadow: $theme-carousel-caption-text-shadow;
+      background: $theme-carousel-caption-background;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0;
+  }
+}
