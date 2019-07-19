@@ -18,6 +18,14 @@
       },
       "@image": "object"
     },
+    "bizbash-list-item-large": {
+      "template": "./list-item-large.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@image": "object"
+    },
     "bizbash-hero-card": {
       "template": "./hero-card.marko",
       "@content": {
