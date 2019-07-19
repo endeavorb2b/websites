@@ -33,15 +33,12 @@ $ const adSlots = {
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-lg-12 mb-block">
-      <endeavor-content-query-section-list
-        limit=50
-        requires-image=false
-        section-alias="gathergeeks"
-        header={ title: "Latest" }
-      />
-    </div>
+  <div class="page-wrapper__body">
+    <website-scheduled-content-list query={ sectionAlias: "gathergeeks", limit: 50 }>
+      <@item|{ node }|>
+        <bizbash-list-item-large content=node />
+      </@item>
+    </website-scheduled-content-list>
   </div>
 
   <@footer>
