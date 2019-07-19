@@ -261,6 +261,11 @@
         @include theme-embed-responsive(4, 3);
       }
     }
+    &--3by2 {
+      a {
+        @include theme-embed-responsive(3, 2);
+      }
+    }
     &--3by4 {
       a {
         @include theme-embed-responsive(3, 4);
