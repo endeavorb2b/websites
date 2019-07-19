@@ -20,11 +20,14 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
   </@above-container>
 
-  <endeavor-content-query-hero
-    section-id=section.id
-    limit=5
-    requires-image=true
-  />
+  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true }>
+    <@card-item|{ node }|>
+      <bizbash-hero-card content=node />
+    </@card-item>
+    <@list-item|{ node }|>
+      <bizbash-list-item content=node />
+    </@list-item>
+  </website-scheduled-content-hero>
 
   <div class="row">
     <div class="col-lg-12">
