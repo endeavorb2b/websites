@@ -15,7 +15,8 @@
     "./published-content/marko.json",
     "./search/marko.json",
     "./social/marko.json",
-    "./subscribe/marko.json"
+    "./subscribe/marko.json",
+    "./website-scheduled-content/marko.json"
   ],
   "tags": {
     "endeavor-icon": {

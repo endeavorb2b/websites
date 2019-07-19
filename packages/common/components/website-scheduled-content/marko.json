@@ -1,0 +1,11 @@
+{
+  "tags": {
+    "website-scheduled-content-hero": {
+      "template": "./hero.marko",
+      "@query": "object",
+      "@item-list": "object",
+      "<card-item>": {},
+      "<list-item>": {}
+    }
+  }
+}
