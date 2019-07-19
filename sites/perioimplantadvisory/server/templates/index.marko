@@ -9,7 +9,7 @@ $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
 <theme-default-website-section-layout section=section>
@@ -34,18 +34,18 @@ $ const adSlots = {
       <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=4
+            limit=6
             section-alias="clinical-tips"
             header={ title: "Clinical Tips", href: "/clinical-tips" }
-            native-x={ placement: 'list1', aliases: ['clinical-tips'], index: 3 }
+            native-x={ placement: 'list1', aliases: ['clinical-tips'], index: 5 }
           />
         </div>
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
-            limit=4
+            limit=6
             section-alias="dental-implants"
             header={ title: "Dental Implants", href: "/dental-implants" }
-            native-x={ placement: 'list1', aliases: ['dental-implants'], index: 3 }
+            native-x={ placement: 'list1', aliases: ['dental-implants'], index: 5 }
           />
         </div>
       </div>
