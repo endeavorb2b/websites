@@ -219,6 +219,14 @@ body {
       }
     }
   }
+
+  &--hero-card {
+    #{ $self } {
+      &__website-section-name {
+        margin-right: map-get($spacers, 2);
+      }
+    }
+  }
 }
 
 .item-list {
