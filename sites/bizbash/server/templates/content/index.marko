@@ -43,13 +43,12 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       <aside class="col-lg-4">
         <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
         <if(!['contact', 'company'].includes(content.type))>
-          <endeavor-content-query-related
-            header="Related"
-            exclude-content-ids=[content.id]
-            section-id=section.id
-            native-x={ placement: 'list1', aliases, index: 4 }
-            use-placeholder=false
-          />
+          <website-scheduled-content-list query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }>
+            <@header>Related</@header>
+            <@item|{ node }|>
+              <bizbash-list-item content=node />
+            </@item>
+          </website-scheduled-content-list>
         </if>
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
       </aside>
