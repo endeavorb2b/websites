@@ -7,11 +7,16 @@ const gatherGeeksTemplate = require('../templates/website-section/gathergeeks');
 const productionStrategyTemplate = require('../templates/website-section/production-strategy');
 const styleDecorTemplate = require('../templates/website-section/style-decor');
 const cateringTemplate = require('../templates/website-section/catering');
+const supplierDirectory = require('../templates/website-section/supplier-directory');
 const venueDirectory = require('../templates/website-section/venue-directory');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
     template: contactUsTemplate,
+    queryFragment,
+  }));
+  app.get('/:alias(supplier-directory)', withWebsiteSection({
+    template: supplierDirectory,
     queryFragment,
   }));
   app.get('/:alias(venue-directory)', withWebsiteSection({

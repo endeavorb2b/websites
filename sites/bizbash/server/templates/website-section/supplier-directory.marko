@@ -1,9 +1,9 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
 import { retrieve, retrieveResults, getFacetUrl, generateResultImage, getPaginationInfo, getPaginationLink } from '../../../services/cloud-front-search';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
-import { venueDirectory } from '../../../config/directory-search';
+import { supplierDirectory } from '../../../config/directory-search';
 
-$ const { api, featureExpression, sort, pageSize, type, facets } = venueDirectory
+$ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
 $ const { site, req } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const { q = '', topic, market, page = 1 } = req.query;
