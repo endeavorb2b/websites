@@ -1,8 +1,10 @@
 const ads = require('./ads');
+const nativeX = require('./native-x');
 
 module.exports = {
   company: 'BizBash Media, Inc.',
   ads,
+  nativeX,
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/BB_Logo_white_hires.png?h=60',
