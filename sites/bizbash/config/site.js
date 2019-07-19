@@ -31,8 +31,8 @@ module.exports = {
         { href: '/production-strategy', label: 'Production & Strategy' },
         { href: '/style-decor', label: 'Style & Decor' },
         { href: '/catering', label: 'Catering' },
-        { href: '/bizbash-lists', label: 'Bizbash Lists' },
         { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
+        { href: '/bizbash-lists', label: 'Bizbash Lists' },
       ],
     },
     secondary: {
@@ -60,8 +60,8 @@ module.exports = {
           { href: '/production-strategy', label: 'Production & Strategy' },
           { href: '/style-decor', label: 'Style & Decor' },
           { href: '/catering', label: 'Catering' },
-          { href: '/bizbash-lists', label: 'Bizbash Lists' },
           { href: '/local-venues-destinations', label: 'Local Venues & Destinations' },
+          { href: '/bizbash-lists', label: 'Bizbash Lists' },
         ],
       },
       resources: {
