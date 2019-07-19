@@ -6,6 +6,14 @@
       "@item-list": "object",
       "<card-item>": {},
       "<list-item>": {}
+    },
+    "website-scheduled-content-list": {
+      "template": "./list.marko",
+      "@query": "object",
+      "@item-list": "object",
+      "<item>": {},
+      "<header>": {},
+      "<footer>": {}
     }
   }
 }
