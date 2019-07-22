@@ -180,6 +180,14 @@ body {
   letter-spacing: $bizbash-letter-spacing;
 }
 
+.ad-rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .site-navbar-items {
   $self: &;
   &--primary {
