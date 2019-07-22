@@ -16,6 +16,7 @@ $theme-font-family-page-title: $font-source-sans-pro;
 // Colors
 $primary:   #0072bb;
 $black:     #000;
+$white:     #fff;
 $gray-600:  #4d4d4d;
 
 // General Settings
@@ -136,7 +137,7 @@ $theme-site-header-breakpoints: (
 );
 
 $theme-site-navbar-primary-bg-color:        $black;
-$theme-site-navbar-primary-font-family:   $font-source-sans-pro;
+$theme-site-navbar-primary-font-family:     $font-source-sans-pro;
 $theme-site-navbar-primary-font-size:       18.5px;
 $theme-site-navbar-primary-font-size-sm:    16px;
 $theme-site-navbar-primary-font-weight:     700;
@@ -147,7 +148,7 @@ $theme-site-navbar-primary-link-active-decoration:  none;
 $theme-site-navbar-primary-link-color:              #fff;
 $theme-site-navbar-primary-link-hover-color:        #fff;
 
-$theme-site-navbar-secondary-bg-color:  $black;
+$theme-site-navbar-secondary-bg-color:      $black;
 $theme-site-navbar-secondary-font-size:     12px;
 $theme-site-navbar-secondary-font-size-sm:  12px;
 $theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
@@ -156,6 +157,10 @@ $theme-site-navbar-secondary-line-height:   1;
 
 $theme-site-navbar-secondary-link-color:    $primary;
 $theme-site-navbar-secondary-hover-color:   $primary;
+
+$theme-site-navbar-tertiary-link-active-color:  $white;
+$theme-site-navbar-tertiary-link-color:         $white;
+$theme-site-navbar-tertiary-link-hover-color:   $white;
 
 $theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
 
