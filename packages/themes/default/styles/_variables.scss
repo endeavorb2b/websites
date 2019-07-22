@@ -657,6 +657,16 @@ $theme-site-navbar-secondary-background-colors: (
   active: $theme-site-navbar-secondary-link-active-background-color
 );
 
+$theme-site-navbar-tertiary-link-active-color:             navbar-link-color(theme-site-navbar-secondary-type, active) !default;
+$theme-site-navbar-tertiary-link-color:                    navbar-link-color(theme-site-navbar-secondary-type, default) !default;
+$theme-site-navbar-tertiary-link-hover-color:              navbar-link-color(theme-site-navbar-secondary-type, hover) !default;
+
+$theme-site-navbar-tertiary-colors: (
+  default: $theme-site-navbar-tertiary-link-color,
+  hover: $theme-site-navbar-tertiary-link-hover-color,
+  active: $theme-site-navbar-tertiary-link-active-color
+);
+
 $theme-site-navbar-link-transition: color ease 300ms, text-decoration ease 300ms, background-color ease 300ms !default;
 
 $theme-site-navbar-logo-drop-shadow:   1px 1px 1px rgba(0, 0, 0, .35) !default;
