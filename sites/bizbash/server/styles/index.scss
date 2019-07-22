@@ -235,8 +235,22 @@ body {
 }
 
 .item-list {
+  $self: &;
   &__header {
+    padding: $theme-item-padding;
     padding-bottom: 0;
+  }
+  &__contents {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &--unjustified {
+    #{ $self } {
+      &__contents {
+        flex-grow: 0;
+        justify-content: normal;
+      }
+    }
   }
 }
 
