@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.12.1",
+  "version": "0.12.5",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
