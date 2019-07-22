@@ -155,6 +155,9 @@ $theme-primary-media-border-radius:   $border-radius !default;
 $theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
 $theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
 
+$theme-primary-media-video-aspect-ratio-x: 16 !default;
+$theme-primary-media-video-aspect-ratio-y: 9 !default;
+
 // Content Attribution
 $theme-content-attribution-color:                     $body-color !default;
 $theme-content-attribution-font-family:               $theme-font-family-sans-serif !default;
