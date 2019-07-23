@@ -13,11 +13,13 @@ $ const adSlots = {
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
+$ const adTargeting = { cont_id: content.id, cont_type: content.type };
+$ const loadMoreAdsInput = { aliases, card: { targeting: adTargeting }, list: { targeting: adTargeting } };
 $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
 
 <theme-default-content-layout content=content>
   <@head>
-    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
+    <endeavor-ad-gam-head slots=adSlots targeting=adTargeting />
   </@head>
 
   <@above-container>
@@ -47,7 +49,7 @@ $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
     <endeavor-content-query-load-more-related
       header=`More from ${content.name}`
       query={ contentId: content.id }
-      ads={ aliases }
+      ads=loadMoreAdsInput
     />
   </@below-container>
 

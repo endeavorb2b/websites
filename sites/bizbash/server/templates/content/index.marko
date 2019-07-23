@@ -13,11 +13,13 @@ $ const adSlots = {
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
+$ const adTargeting = { cont_id: content.id, cont_type: content.type };
+$ const loadMoreAdsInput = { aliases, card: { targeting: adTargeting }, list: { targeting: adTargeting } };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
 <theme-default-content-layout content=content>
   <@head>
-    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
+    <endeavor-ad-gam-head slots=adSlots targeting=adTargeting />
   </@head>
 
   <@above-container>
@@ -60,14 +62,14 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       <endeavor-content-query-load-more-author
         header=`More from ${content.name}`
         query={ contactId: content.id }
-        ads={ aliases }
+        ads=loadMoreAdsInput
       />
     </if>
     <else-if(content.type === 'company')>
       <endeavor-content-query-load-more-company
         header=`More from ${content.name}`
         query={ companyId: content.id }
-        ads={ aliases }
+        ads=loadMoreAdsInput
       />
     </else-if>
     <else-if(section.id)>
@@ -78,7 +80,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
           excludeContentIds: [content.id],
           sectionId: section.id,
         }
-        ads={ aliases }
+        ads=loadMoreAdsInput
         native-x={ placement: 'card', aliases, index: 0 }
       />
     </else-if>
