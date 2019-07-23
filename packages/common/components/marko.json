@@ -1,6 +1,7 @@
 {
   "taglib-imports": [
     "./ads/marko.json",
+    "./block/marko.json",
     "./breadcrumbs/marko.json",
     "./content/marko.json",
     "./footers/marko.json",
