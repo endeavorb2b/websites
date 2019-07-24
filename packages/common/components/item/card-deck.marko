@@ -9,8 +9,11 @@ $ const slots = getAsArray(input, 'slots').reduce((map, item) => {
   return map;
 }, new Map());
 
+$ const modifiers = getAsArray(input, 'modifiers');
+$ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
+
 <if(items.length)>
-  <div class=bem(block, "row")>
+  <div class=classNames>
     <for|item, index| of=items>
       $ const slot = slots.get(index);
       <if(slot && slot.position === "before")>

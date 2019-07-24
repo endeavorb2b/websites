@@ -3,6 +3,7 @@
     "endeavor-item-card-deck": {
       "template": "./card-deck.marko",
       "@items": "array",
+      "@modifiers": "array",
       "@slots <slot>[]": {
         "@position": {
           "type": "string",

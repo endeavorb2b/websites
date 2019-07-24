@@ -1,7 +1,5 @@
 .item-card-deck {
-  &__row {
-    @include make-row();
-  }
+  @include make-row();
   &__col {
     margin-bottom: map-get($spacers, block);
     @include make-col-ready();
