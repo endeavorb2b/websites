@@ -18,6 +18,14 @@
       },
       "@image": "object"
     },
+    "bizbash-card-item": {
+      "template": "./card-item.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@image": "object"
+    },
     "bizbash-overlay-item": {
       "template": "./overlay-item.marko",
       "@modifiers": "array",

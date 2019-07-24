@@ -217,6 +217,30 @@ body {
 
 .item {
   $self: &;
+  &__title {
+    &--card-deck {
+      $title-font-size: 21px;
+      $title-font-size-sm: 16px;
+      $title-line-height: 1.2;
+      $title-line-height-sm: 1.2;
+      @include theme-apply-fonts(
+        $font-size: $title-font-size,
+        $font-size-sm: $title-font-size-sm,
+        $font-weight: 600,
+        $line-height: $title-line-height,
+        $line-height-sm: $title-line-height-sm
+      );
+      a {
+        @include theme-max-lines(
+          $font-size: $title-font-size,
+          $font-size-sm: $title-font-size-sm,
+          $line-height: $title-line-height,
+          $line-height-sm: $title-line-height-sm,
+          $num: 5
+        );
+      }
+    }
+  }
   &--image-left {
     #{ $self } {
       &__image {
@@ -239,6 +263,9 @@ body {
         position: relative;
       }
       &__image {
+        &--6by5 {
+          @include theme-embed-responsive(6, 5);
+        }
         &--3by2 {
           @include theme-embed-responsive(3, 2);
         }
