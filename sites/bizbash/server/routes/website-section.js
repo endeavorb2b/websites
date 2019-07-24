@@ -4,6 +4,9 @@ const submissionHandler = require('@endeavorb2b/base-website-common/utils/contac
 const section = require('../templates/website-section');
 const contactUsTemplate = require('../templates/website-section/contact-us');
 const gatherGeeksTemplate = require('../templates/website-section/gathergeeks');
+const productionStrategyTemplate = require('../templates/website-section/production-strategy');
+const styleDecorTemplate = require('../templates/website-section/style-decor');
+const cateringTemplate = require('../templates/website-section/catering');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -14,6 +17,21 @@ module.exports = (app) => {
 
   app.get('/:alias(gathergeeks)', withWebsiteSection({
     template: gatherGeeksTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(production-strategy)', withWebsiteSection({
+    template: productionStrategyTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(style-decor)', withWebsiteSection({
+    template: styleDecorTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(catering)', withWebsiteSection({
+    template: cateringTemplate,
     queryFragment,
   }));
 
