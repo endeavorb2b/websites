@@ -62,6 +62,9 @@
         "default-value": false
       }
     },
+    "endeavor-item-contents": {
+      "template": "./item-contents.marko"
+    },
     "endeavor-item-list": {
       "template": "./list.marko",
       "<item>": {

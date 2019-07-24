@@ -3,20 +3,8 @@ import bem from '../../utils/bem-class';
 
 $ const block = 'item';
 $ const item = getAsObject(input, 'item');
-$ const {
-  header,
-  headerLeft,
-  headerRight,
-  title,
-  footer,
-  footerLeft,
-  footerRight,
-} = input;
-$ const description = getAsArray(input, 'description');
 $ const image = getAsObject(input, 'image');
 $ const hasImage = image && image.src;
-$ const titleTag = get(title, 'tag', 'h5');
-$ const renderTitle = get(title, 'renderBody');
 
 $ const modifiers = getAsArray(input, 'modifiers');
 $ if (image.position) modifiers.push(`image-${image.position}`);
@@ -42,47 +30,5 @@ $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
       width=image.width
     />
   </if>
-  <div class=`${block}__contents`>
-    <if(headerLeft || headerRight)>
-      <div class=bem(block, "header", getAsArray(input, "headerModifiers"))>
-        <if(headerLeft)>
-          <div class=bem(block, "header-left")>
-            <${headerLeft} block=block />
-          </div>
-        </if>
-        <if(headerRight)>
-          <div class=bem(block, "header-right")>
-            <${headerRight} block=block />
-          </div>
-        </if>
-      </div>
-    </if>
-    <if(renderTitle)>
-      <${titleTag} class=bem(block, "title", getAsArray(title, "modifiers"))>
-        <${renderTitle} block=block />
-      </>
-    </if>
-    <if(description.length)>
-      <for|desc| of=description>
-        $ const descriptionTag = get(desc, 'tag', 'p');
-        <${descriptionTag} class=bem(block, "description", getAsArray(desc, "modifiers"))>
-          <${desc.renderBody} block=block />
-        </>
-      </for>
-    </if>
-    <if(footerLeft || footerRight)>
-      <div class=bem(block, "footer", getAsArray(input, "footerModifiers"))>
-        <if(footerLeft)>
-          <div class=bem(block, "footer-left")>
-            <${footerLeft} block=block />
-          </div>
-        </if>
-        <if(footerRight)>
-          <div class=bem(block, "footer-right")>
-            <${footerRight} block=block />
-          </div>
-        </if>
-      </div>
-    </if>
-  </div>
+  <endeavor-item-contents ...input />
 </>
