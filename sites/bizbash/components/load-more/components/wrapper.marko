@@ -19,7 +19,6 @@ $ const query = {
 };
 
 $ const QueryComponent = queries[type];
-$ if (!QueryComponent) throw new Error(`No query component was found for '${type}'`);
 
 <${QueryComponent}|{ nodes, pageInfo }| ...query>
   <if(nodes.length)>
