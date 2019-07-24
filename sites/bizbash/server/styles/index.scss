@@ -233,6 +233,54 @@ body {
     }
   }
 
+  &--image-overlay {
+    #{ $self } {
+      &__wrapper {
+        position: relative;
+      }
+      &__image {
+        &--3by2 {
+          @include theme-embed-responsive(3, 2);
+        }
+        &--1by1 {
+          @include theme-embed-responsive(1, 1);
+        }
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+          background: linear-gradient(to top, rgba(0, 0, 0, .65), transparent);
+        }
+      }
+      &__contents {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1.25rem;
+        color: $white;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, .65);
+        // stylelint-disable-next-line
+        a {
+          color: $white;
+          // stylelint-disable-next-line
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+      &__footer {
+        color: $white;
+      }
+      &__header {
+        color: $white;
+      }
+    }
+  }
+
   &--hero-card {
     #{ $self } {
       &__website-section-name {
