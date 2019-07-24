@@ -15,15 +15,22 @@ $ const slots = getAsArray(input, 'slots').reduce((map, item) => {
       $ const slot = slots.get(index);
       <if(slot && slot.position === "before")>
         <div class=bem(block, "col", slot.modifiers)>
-          <${slot.renderBody} />
+          <${slot.renderBody} item=item index=index />
         </div>
       </if>
-      <div class=bem(block, "col")>
-        <${input.renderBody} item=item index=index />
-      </div>
+      <if(slot && slot.position === "at")>
+        <div class=bem(block, "col", slot.modifiers)>
+          <${slot.renderBody} item=item index=index />
+        </div>
+      </if>
+      <else>
+        <div class=bem(block, "col")>
+          <${input.renderBody} item=item index=index />
+        </div>
+      </else>
       <if(slot && slot.position === "after")>
         <div class=bem(block, "col", slot.modifiers)>
-          <${slot.renderBody} />
+          <${slot.renderBody} item=item index=index />
         </div>
       </if>
     </for>
