@@ -1,6 +1,7 @@
 import { getAsArray, getAsObject } from '@base-cms/object-path';
 import AllAuthorContent from '@base-cms/marko-web/src/components/queries/all-author-content';
 import AllCompanyContent from '@base-cms/marko-web/src/components/queries/all-company-content';
+import AllPublishedContent from '@base-cms/marko-web/src/components/queries/all-published-content';
 import RelatedPublishedContent from '@base-cms/marko-web/src/components/queries/related-published-content';
 import WebsiteScheduledContent from '@base-cms/marko-web/src/components/queries/website-scheduled-content';
 import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
@@ -8,12 +9,14 @@ import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/
 $ const queries = {
   'all-author-content': AllAuthorContent,
   'all-company-content': AllCompanyContent,
+  'all-published-content': AllPublishedContent,
   'related-published-content': RelatedPublishedContent,
   'website-scheduled-content': WebsiteScheduledContent,
 };
 $ const fragments = {
   'all-author-content': contentListFragment,
   'all-company-content': contentListFragment,
+  'all-published-content': contentListFragment,
   'related-published-content': contentListFragment,
   'website-scheduled-content': contentListFragment,
 };
