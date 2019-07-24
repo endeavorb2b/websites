@@ -1,7 +1,19 @@
 {
   "tags": {
     "endeavor-item-card-deck": {
-      "template": "./card-deck.marko"
+      "template": "./card-deck.marko",
+      "@items": "array",
+      "@slots <slot>[]": {
+        "@position": {
+          "type": "string",
+          "required": true
+        },
+        "@index": {
+          "type": "number",
+          "required": true
+        },
+        "@modifiers": "array"
+      }
     },
     "endeavor-item": {
       "template": "./item.marko",
