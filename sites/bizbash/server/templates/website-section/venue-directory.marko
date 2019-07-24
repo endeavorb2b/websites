@@ -8,6 +8,8 @@ $ const { site, req } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const { q = '', topic, market, page = 1 } = req.query;
 $ const start = (page - 1) * pageSize;
+$ const activeTopic = facets.topic.values.filter(t => t.id === Number(topic));
+
 $ const args = {
   api: api,
   urlParams: {
@@ -45,11 +47,12 @@ $ const args = {
         <div class="directory-facets">
           <for|facetTypeKey, facetType| in=facets>
             <ul class="list-group border-0">
-              <h3>${facetType.name}</h3>
+              <h3 class="facet-title">${facetType.name}</h3>
               <for|key, facet| in=facetType.values>
                 <li class="list-group-item border-0">
                   $ const url = getFacetUrl(req, facetTypeKey, facet.id);
-                  <a href=`${url}`>${ facet.name }</a>
+                  $ const activeClass = Number(args.facets[facetTypeKey]) === Number(facet.id) ? 'active' : '' ;
+                  <a class=`${activeClass}` href=`${url}`>${ facet.name }</a>
                   <if(facet.childFacets)>
                     $ const facetTargetToggleClass = `.facet-${facet.id}`;
                     $ const facetTargetToggleOpenClass = `facet-${facet.id}--open`;
@@ -58,7 +61,8 @@ $ const args = {
                       <for|childFacet, index| of=facet.childFacets>
                         <li class="list-group-item border-0">
                           $ const url = getFacetUrl(req, facetTypeKey, childFacet.id);
-                          <a href=`${url}`>${ childFacet.name }</a>
+                          $ const activeClass = Number(args.facets[facetTypeKey]) === Number(childFacet.id) ? 'active' : '' ;
+                          <a class=`${activeClass}` href=`${url}`>${ childFacet.name }</a>
                         </li>
                       </for>
                     </ul>
@@ -73,10 +77,44 @@ $ const args = {
         </div>
         <div id="results" class="content-query-load-more__col-list">
           <ul class="item-list ">
-            <div id="feature-results" class="">
+            <div class="feature-results">
+              <if(topic && market)>
+                <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
+                  <if(content)>
+                    $ const primarySection = getAsObject(content, 'primarySection');
+                    $ const primaryImage = getAsObject(content, 'primaryImage');
+                    $ const dateFormat = 'MMMM D, YYYY';
+                    $ const imageInput = {
+                      image: primaryImage,
+                      lazyload: false,
+                      linkTo: content,
+                      modifiers: ['fluid', '3by2'],
+                      options: { w: 642, h: 428, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
+                      position: 'top',
+                      usePlaceholder: false,
+                      ...getAsObject(input, 'image'),
+                    };
+                    <div class="featured-directory-listing-item">
+                      <div class="sponsoreship-title">
+                        ${activeTopic[0].name} by ${content.shortName}
+                      </div>
+                      <endeavor-item modifiers=["card", "hero-card"]>
 
+                        <@image ...imageInput />
+                        <@title tag="h5" modifiers=["medium"]>
+                          <cms-content-short-name tag=null obj=content link=true />
+                        </@title>
+                        <@description tag="p">
+                          ${content.address1}<br>
+                          ${content.city}, ${content.state} ${content.zip} ${content.country}
+                        </@description>
+                      </endeavor-item>
+                    </div>
+                    </if>
+                </bizbash-pinned-directory-card>
+              </if>
             </div>
-            <div id="search-results" class="">
+            <div class="search-results">
                 <ul class="item-list item-list--flush item-list--card">
                   <div class="item-list__contents">
                   <await(retrieveResults(args))>

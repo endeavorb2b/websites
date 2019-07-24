@@ -3,6 +3,9 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
+    "bizbash-pinned-directory-card": {
+      "template": "./pinned-directory-card.marko"
+    },
     "bizbash-inquiry-form": {
       "template": "./inquiry-form.marko"
     },
