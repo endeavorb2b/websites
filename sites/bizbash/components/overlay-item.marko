@@ -1,0 +1,30 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const block = 'item';
+$ const image = getAsObject(input, 'image');
+$ const modifiers = getAsArray(input, 'modifiers');
+$ modifiers.push('card');
+$ modifiers.push('image-overlay');
+$ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
+
+<div class=classNames>
+  <div class="item__wrapper">
+    <bizbash-overlay-item-image
+      alt=image.alt
+      block=block
+      height=image.height
+      image=image.image
+      lazyload=image.lazyload
+      link-attrs=image.linkAttrs
+      link-path=image.linkPath
+      link-to=image.linkTo
+      min-height=image.minHeight
+      min-width=image.minWidth
+      modifiers=image.modifiers
+      options=image.options
+      use-placeholder=image.usePlaceholder
+      width=image.width
+    />
+    <endeavor-item-contents ...input />
+  </div>
+</div>

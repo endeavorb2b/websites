@@ -18,6 +18,12 @@
       },
       "@image": "object"
     },
+    "bizbash-overlay-item": {
+      "template": "./overlay-item.marko"
+    },
+    "bizbash-overlay-item-image": {
+      "template": "./overlay-item-image.marko"
+    },
     "bizbash-list-item-large": {
       "template": "./list-item-large.marko",
       "@content": {
