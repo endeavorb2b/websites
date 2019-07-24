@@ -2,6 +2,7 @@ import { getAsObject } from '@base-cms/object-path';
 import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const pageNumber = input.pageNumber || 1;
+$ const appendTo = input.appendTo || '.container-fluid-max';
 $ const query = {
   limit: 14,
   ...input.query,
@@ -30,7 +31,7 @@ $ const query = {
     };
 
     <endeavor-load-more-button
-      append-to=".container-fluid-max"
+      append-to=appendTo
       block-name="bizbash-load-more-website-scheduled-content"
       label="Load More Content"
       max-pages=input.maxPages
