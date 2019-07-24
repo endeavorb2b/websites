@@ -19,7 +19,7 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <div class="page-wrapper default-page">
+  <div class="page-wrapper">
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
@@ -31,14 +31,11 @@ $ const adSlots = {
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="page-wrapper__body">
-    <website-scheduled-content-list query={ sectionAlias: "gathergeeks", limit: 50 }>
-      <@item|{ node }|>
-        <bizbash-list-item-large content=node />
-      </@item>
-    </website-scheduled-content-list>
+    <bizbash-load-more-website-scheduled-content
+      append-to=".page-wrapper"
+      query={ sectionAlias: "gathergeeks", limit: 25 }
+      layout={ name: "list-large", aliases }
+    />
   </div>
 
   <@footer>
