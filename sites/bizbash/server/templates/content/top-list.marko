@@ -66,9 +66,9 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
   <@below-container>
     <if(section.id)>
       <bizbash-load-more-website-scheduled-content
-        header=`More in ${section.name}`
         query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
         layout={ aliases }
+        load-more={ header: `More in ${section.name}` }
       />
     </if>
   </@below-container>
