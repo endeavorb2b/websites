@@ -50,10 +50,11 @@ $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more-related
-      header=`More from ${content.name}`
+    <bizbash-load-more
+      type="related-published-content"
       query={ contentId: content.id }
-      ads=loadMoreAdsInput
+      layout={ aliases }
+      header=`More from ${content.name}`
     />
   </@below-container>
 
