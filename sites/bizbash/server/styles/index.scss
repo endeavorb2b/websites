@@ -305,11 +305,6 @@ body {
       &__header {
         color: $white;
       }
-    }
-  }
-
-  &--hero-card {
-    #{ $self } {
       &__website-section-name {
         margin-right: map-get($spacers, 2);
       }
