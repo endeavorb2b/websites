@@ -1,5 +1,4 @@
 const { withLoadMore } = require('@base-cms/marko-web/middleware');
-const contentLoadMore = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more');
 const contentLoadMoreAuthor = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-author');
 const contentLoadMoreCompany = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-company');
 const contentLoadMoreList = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-list');
@@ -14,7 +13,6 @@ const websiteScheduledContent = require('../../components/load-more/website-sche
 const blocks = {
   'bizbash-load-more-website-scheduled-content': websiteScheduledContent,
 
-  'content-query-load-more': contentLoadMore,
   'content-query-load-more-author': contentLoadMoreAuthor,
   'content-query-load-more-company': contentLoadMoreCompany,
   'content-query-load-more-list': contentLoadMoreList,
