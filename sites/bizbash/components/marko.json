@@ -21,8 +21,8 @@
       },
       "@image": "object"
     },
-    "bizbash-card-item": {
-      "template": "./card-item.marko",
+    "bizbash-card-item-overlay": {
+      "template": "./card-item-overlay.marko",
       "@content": {
         "type": "object",
         "required": true
