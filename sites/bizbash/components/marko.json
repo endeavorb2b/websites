@@ -19,7 +19,15 @@
       "@image": "object"
     },
     "bizbash-overlay-item": {
-      "template": "./overlay-item.marko"
+      "template": "./overlay-item.marko",
+      "@modifiers": "array",
+      "<image>": {},
+      "<header-left>": {},
+      "<header-right>": {},
+      "<title>": {},
+      "@description <description>[]": {},
+      "<footer-left>": {},
+      "<footer-right>": {}
     },
     "bizbash-overlay-item-image": {
       "template": "./overlay-item-image.marko"
