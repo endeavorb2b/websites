@@ -110,19 +110,12 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 5,
-        sectionId: section.id,
-      }
-      load-more={
-        maxPages: 0,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
+    <bizbash-load-more-website-scheduled-content
+      query={ sectionId: section.id, skip: 5 }
+      layout={ aliases }
+      max-pages=0
     />
   </@below-container>
-
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />

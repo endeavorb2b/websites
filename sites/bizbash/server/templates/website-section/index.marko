@@ -36,13 +36,9 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 5,
-        sectionId: section.id,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
+    <bizbash-load-more-website-scheduled-content
+      query={ sectionId: section.id, skip: 5 }
+      layout={ aliases }
     />
   </@below-container>
 

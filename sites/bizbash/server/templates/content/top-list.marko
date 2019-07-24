@@ -62,15 +62,10 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
 
   <@below-container>
     <if(section.id)>
-      <endeavor-content-query-load-more
+      <bizbash-load-more-website-scheduled-content
         header=`More in ${section.name}`
-        query={
-          skip: 5,
-          excludeContentIds: [content.id],
-          sectionId: section.id,
-        }
-        ads=loadMoreAdsInput
-        native-x={ placement: 'card', aliases, index: 0 }
+        query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
+        layout={ aliases }
       />
     </if>
   </@below-container>
