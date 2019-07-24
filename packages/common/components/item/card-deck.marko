@@ -1,0 +1,14 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const block = 'item-card-deck';
+$ const items = getAsArray(input, 'items');
+
+<if(items.length)>
+  <div class=`${block}__row`>
+    <for|item, index| of=items>
+      <div class=`${block}__col`>
+        <${input.renderBody} item=item index=index />
+      </div>
+    </for>
+  </div>
+</if>

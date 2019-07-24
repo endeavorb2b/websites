@@ -1,5 +1,8 @@
 {
   "tags": {
+    "endeavor-item-card-deck": {
+      "template": "./card-deck.marko"
+    },
     "endeavor-item": {
       "template": "./item.marko",
       "<image>": {
