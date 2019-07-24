@@ -58,21 +58,23 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
       </aside>
     </div>
-  </div>
 
-  <@below-container>
     <if(content.type === 'contact')>
-      <endeavor-content-query-load-more-author
-        header=`More from ${content.name}`
+      <bizbash-load-more
+        type="all-author-content"
         query={ contactId: content.id }
-        ads=loadMoreAdsInput
+        layout={ aliases }
+        header=`More from ${content.name}`
+        append-to=".page-wrapper"
       />
     </if>
     <else-if(content.type === 'company')>
-      <endeavor-content-query-load-more-company
-        header=`More from ${content.name}`
+      <bizbash-load-more
+        type="all-company-content"
         query={ companyId: content.id }
-        ads=loadMoreAdsInput
+        layout={ aliases }
+        header=`More from ${content.name}`
+        append-to=".page-wrapper"
       />
     </else-if>
     <else-if(section.id)>
@@ -81,9 +83,10 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
         layout={ aliases }
         header=`More in ${section.name}`
+        append-to=".page-wrapper"
       />
     </else-if>
-  </@below-container>
+  </div>
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
