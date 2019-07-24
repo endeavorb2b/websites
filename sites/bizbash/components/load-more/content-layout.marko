@@ -1,0 +1,38 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const nodes = getAsArray(input, 'nodes');
+$ const { aliases } = input;
+
+<endeavor-item-card-deck|{ item }| items=nodes.slice(0, 10)>
+  <@slot position="before" index=5>
+    <endeavor-gam-ad-unit-define-display
+      name="load-more"
+      size=[300, 250]
+      aliases=aliases
+      modifiers=["in-card"]
+    />
+  </@slot>
+  <@slot position="after" index=7>
+    <endeavor-gam-ad-unit-define-display
+      name="load-more"
+      size=[300, 250]
+      aliases=aliases
+      modifiers=["in-card"]
+    />
+  </@slot>
+  <bizbash-card-item content=item />
+</endeavor-item-card-deck>
+<div class="row">
+  <div class="col-md-6 col-lg-4">
+    <endeavor-gam-ad-unit-define-display
+      name="load-more"
+      size=[300, 600]
+      aliases=aliases
+    />
+  </div>
+  <div class="col-md-6 col-lg-8">
+    <endeavor-item-card-deck|{ item }| items=nodes.slice(10) modifiers=["with-left-col"]>
+      <bizbash-card-item content=item />
+    </endeavor-item-card-deck>
+  </div>
+</div>

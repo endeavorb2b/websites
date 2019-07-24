@@ -332,6 +332,23 @@ body {
   }
 }
 
+.item-card-deck {
+  $self: &;
+  &--with-left-col {
+    #{ $self } {
+      &__col {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+          @include make-col(12);
+        }
+        @include media-breakpoint-up(lg) {
+          @include make-col(6);
+        }
+      }
+    }
+  }
+}
+
 .content-attribution {
   display: inline;
   div {

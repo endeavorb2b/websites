@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./load-more/marko.json"
+  ],
   "tags": {
     "bizbash-image-slider": {
       "template": "./image-slider.marko"

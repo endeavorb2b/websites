@@ -8,8 +8,12 @@ const contentLoadMoreRelated = require('@endeavorb2b/base-website-common/compone
 const magazineIssueContent = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-issue-content');
 const magazineIssues = require('@endeavorb2b/base-website-common/components/magazine/blocks/query-active-issues');
 
+const websiteScheduledContent = require('../../components/load-more/website-scheduled-content');
+
 // Register blocks that support load more...
 const blocks = {
+  'bizbash-load-more-website-scheduled-content': websiteScheduledContent,
+
   'content-query-load-more': contentLoadMore,
   'content-query-load-more-author': contentLoadMoreAuthor,
   'content-query-load-more-company': contentLoadMoreCompany,

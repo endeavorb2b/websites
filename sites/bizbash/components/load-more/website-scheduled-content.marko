@@ -1,0 +1,47 @@
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+
+$ const pageNumber = input.pageNumber || 1;
+$ const queryInput = {
+  limit: 5,
+  ...input.query,
+  requiresImage: true,
+  queryFragment: contentListFragment,
+  queryName: 'LoadMore',
+};
+$ const layoutInput = {
+  ...input.layout,
+}
+$ const loadMoreInput = {
+  ...input.loadMore,
+};
+
+<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...queryInput>
+  <if(nodes.length)>
+    <if(input.header && pageNumber === 1)>
+      <endeavor-load-more-header>
+        ${input.header}
+      </endeavor-load-more-header>
+    </if>
+    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    <bizbash-load-more-content-layout ...layoutInput nodes=nodes />
+
+    $ const { endCursor, hasNextPage } = pageInfo;
+    $ delete queryInput.skip;
+    $ delete queryInput.queryFragment;
+    $ delete queryInput.renderBody;
+    $ const provide = {
+      ...input,
+      query: { ...queryInput, after: endCursor },
+    };
+
+    <endeavor-load-more-button
+      append-to=".container-fluid-max"
+      block-name="bizbash-load-more-website-scheduled-content"
+      label="Load More Content"
+      max-pages=loadMoreInput.maxPages
+      page-number=pageNumber
+      provide=provide
+      show=hasNextPage
+    />
+  </if>
+</cms-query-website-scheduled-content>
