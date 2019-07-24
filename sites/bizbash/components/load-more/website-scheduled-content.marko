@@ -1,21 +1,16 @@
+import { getAsObject } from '@base-cms/object-path';
 import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const pageNumber = input.pageNumber || 1;
-$ const queryInput = {
-  limit: 5,
+$ const query = {
+  limit: 14,
   ...input.query,
   requiresImage: true,
   queryFragment: contentListFragment,
   queryName: 'LoadMore',
 };
-$ const layoutInput = {
-  ...input.layout,
-}
-$ const loadMoreInput = {
-  ...input.loadMore,
-};
 
-<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...queryInput>
+<cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
   <if(nodes.length)>
     <if(input.header && pageNumber === 1)>
       <endeavor-load-more-header>
@@ -23,22 +18,22 @@ $ const loadMoreInput = {
       </endeavor-load-more-header>
     </if>
     <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-    <bizbash-load-more-content-layout ...layoutInput nodes=nodes />
+    <bizbash-load-more-content-layout ...input.layout nodes=nodes />
 
     $ const { endCursor, hasNextPage } = pageInfo;
-    $ delete queryInput.skip;
-    $ delete queryInput.queryFragment;
-    $ delete queryInput.renderBody;
+    $ delete query.skip;
+    $ delete query.queryFragment;
+    $ delete query.renderBody;
     $ const provide = {
       ...input,
-      query: { ...queryInput, after: endCursor },
+      query: { ...query, after: endCursor },
     };
 
     <endeavor-load-more-button
       append-to=".container-fluid-max"
       block-name="bizbash-load-more-website-scheduled-content"
       label="Load More Content"
-      max-pages=loadMoreInput.maxPages
+      max-pages=input.maxPages
       page-number=pageNumber
       provide=provide
       show=hasNextPage
