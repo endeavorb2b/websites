@@ -110,10 +110,11 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <bizbash-load-more-website-scheduled-content
+    <bizbash-load-more
+      type="website-schedule-content"
+      max-pages=0
       query={ sectionId: section.id, skip: 5 }
-      layout={ aliases }
-      load-more={ maxPages: 0 }
+      layout={ name: "default", aliases }
     />
   </@below-container>
 

@@ -1,0 +1,9 @@
+$ const query = {
+  limit: 14,
+  ...input.query,
+  requiresImage: true,
+};
+
+<wrapper|{ nodes }| ...input query=query>
+  <bizbash-load-more-content-layout ...input.layout nodes=nodes />
+</wrapper>

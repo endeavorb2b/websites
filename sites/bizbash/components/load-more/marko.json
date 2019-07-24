@@ -1,7 +1,7 @@
 {
   "tags": {
-    "bizbash-load-more-website-scheduled-content": {
-      "template": "./website-scheduled-content.marko"
+    "bizbash-load-more": {
+      "template": "./index.marko"
     },
     "bizbash-load-more-content-layout": {
       "template": "./content-layout.marko"

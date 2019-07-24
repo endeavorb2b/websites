@@ -31,10 +31,11 @@ $ const adSlots = {
         </div>
       </div>
     </div>
-    <bizbash-load-more-website-scheduled-content
+    <bizbash-load-more
+      type="website-scheduled-content"
       query={ sectionAlias: "gathergeeks", limit: 25 }
       layout={ name: "list-large", aliases }
-      load-more={ appendTo: '.page-wrapper' }
+      append-to=".page-wrapper"
     />
   </div>
 
