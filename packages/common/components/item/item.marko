@@ -1,10 +1,7 @@
-import { getAsObject, getAsArray, get } from '@base-cms/object-path';
-import bem from '../../utils/bem-class';
+import { getAsObject, getAsArray } from '@base-cms/object-path';
 
 $ const block = 'item';
-$ const item = getAsObject(input, 'item');
 $ const image = getAsObject(input, 'image');
-$ const hasImage = image && image.src;
 
 $ const modifiers = getAsArray(input, 'modifiers');
 $ if (image.position) modifiers.push(`image-${image.position}`);
