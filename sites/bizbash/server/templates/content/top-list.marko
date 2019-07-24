@@ -49,7 +49,10 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
 
       <aside class="col-lg-4">
         <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
-        <website-scheduled-content-list query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }>
+        <website-scheduled-content-list
+          query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }
+          item-list={ modifiers: ["unjustified"] }
+        >
           <@header>Related</@header>
           <@item|{ node }|>
             <bizbash-list-item content=node />
