@@ -38,6 +38,7 @@ module.exports = {
     rail1: { ...CONTENT, path: path('production-strategy/rail1') },
     rail2: { ...CONTENT, path: path('production-strategy/rail2') },
     'load-more': { ...CONTENT, path: path('production-strategy/load-more') },
+    reskin: { ...RESKIN, path: path('production-strategy/reskin') },
   },
   'style-decor': {
     lb1: { ...LB1, path: path('style-decor/lb1') },
@@ -45,6 +46,7 @@ module.exports = {
     rail1: { ...CONTENT, path: path('style-decor/rail1') },
     rail2: { ...CONTENT, path: path('style-decor/rail2') },
     'load-more': { ...CONTENT, path: path('style-decor/load-more') },
+    reskin: { ...RESKIN, path: path('style-decor/reskin') },
   },
   catering: {
     lb1: { ...LB1, path: path('catering/lb1') },
@@ -52,6 +54,7 @@ module.exports = {
     rail1: { ...CONTENT, path: path('catering/rail1') },
     rail2: { ...CONTENT, path: path('catering/rail2') },
     'load-more': { ...CONTENT, path: path('catering/load-more') },
+    reskin: { ...RESKIN, path: path('catering/reskin') },
   },
   'bizbash-lists': {
     lb1: { ...LB1, path: path('bizbash-lists/lb1') },
@@ -59,6 +62,7 @@ module.exports = {
     rail1: { ...CONTENT, path: path('bizbash-lists/rail1') },
     rail2: { ...CONTENT, path: path('bizbash-lists/rail2') },
     'load-more': { ...CONTENT, path: path('bizbash-lists/load-more') },
+    reskin: { ...RESKIN, path: path('bizbash-lists/reskin') },
   },
   'local-venues-destinations': {
     lb1: { ...LB1, path: path('local-venues-destinations/lb1') },
@@ -66,5 +70,14 @@ module.exports = {
     rail1: { ...CONTENT, path: path('local-venues-destinations/rail1') },
     rail2: { ...CONTENT, path: path('local-venues-destinations/rail2') },
     'load-more': { ...CONTENT, path: path('local-venues-destinations/load-more') },
+    reskin: { ...RESKIN, path: path('local-venues-destinations/reskin') },
+  },
+  gathergeeks: {
+    lb1: { ...LB1, path: path('gathergeeks/lb1') },
+    lb2: { ...LB2, path: path('gathergeeks/lb2') },
+    rail1: { ...CONTENT, path: path('gathergeeks/rail1') },
+    rail2: { ...CONTENT, path: path('gathergeeks/rail2') },
+    'load-more': { ...CONTENT, path: path('gathergeeks/load-more') },
+    reskin: { ...RESKIN, path: path('gathergeeks/reskin') },
   },
 };
