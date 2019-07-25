@@ -42,8 +42,8 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
       </div>
 
-      <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
+      <aside class="col-lg-4 page-right-rail">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
         <if(!['contact', 'company'].includes(content.type))>
           <website-scheduled-content-list
             query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }
@@ -55,17 +55,18 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
             </@item>
           </website-scheduled-content-list>
         </if>
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       </aside>
     </div>
+  </div>
 
+  <@below-container>
     <if(content.type === 'contact')>
       <bizbash-load-more
         type="all-author-content"
         query={ contactId: content.id }
         layout={ aliases }
         header=`More from ${content.name}`
-        append-to=".page-wrapper"
       />
     </if>
     <else-if(content.type === 'company')>
@@ -74,7 +75,6 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         query={ companyId: content.id }
         layout={ aliases }
         header=`More from ${content.name}`
-        append-to=".page-wrapper"
       />
     </else-if>
     <else-if(section.id)>
@@ -83,10 +83,9 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
         layout={ aliases }
         header=`More in ${section.name}`
-        append-to=".page-wrapper"
       />
     </else-if>
-  </div>
+  </@below-container>
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />

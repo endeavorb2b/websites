@@ -47,8 +47,8 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         </div>
       </div>
 
-      <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
+      <aside class="col-lg-4 page-right-rail">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
         <website-scheduled-content-list
           query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }
           item-list={ modifiers: ["unjustified"] }
@@ -58,7 +58,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
             <bizbash-list-item content=node />
           </@item>
         </website-scheduled-content-list>
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       </aside>
     </div>
   </div>

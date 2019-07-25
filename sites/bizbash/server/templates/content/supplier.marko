@@ -29,9 +29,13 @@ $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
   </@above-container>
 
   <div class="page-wrapper">
-    <div class="page-wrapper__header">
-      <bizbash-image-slider images=images />
-      <endeavor-content-block-page-header content=content />
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <bizbash-image-slider images=images />
+          <endeavor-content-block-page-header content=content />
+        </div>
+      </div>
     </div>
 
     <div class="row">
@@ -39,7 +43,7 @@ $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
         <endeavor-content-block-page-body content=content display-primary-image=false  />
       </div>
 
-      <aside class="col-lg-4">
+      <aside class="col-lg-4 page-right-rail">
         <bizbash-inquiry-form content=content />
       </aside>
     </div>
