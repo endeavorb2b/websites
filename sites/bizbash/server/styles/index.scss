@@ -180,12 +180,43 @@ body {
   letter-spacing: $bizbash-letter-spacing;
 }
 
+.container-fluid-max {
+  // @todo Determine if this should go to core
+  @include media-breakpoint-down(xs) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .ad-rail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+// @todo Re-evaluate page wrapper classes globally
+.page-wrapper {
+  padding-bottom: 0;
+  &__header,
+  &__body,
+  &__contents {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  // @todo Re-evaluate and move to core?
+  .breadcrumb {
+    padding-top: 0;
+  }
+}
+
+// @todo Move to core?
+.magazine-publication-card {
+  &__header {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .site-navbar-items {
@@ -240,6 +271,12 @@ body {
         );
       }
     }
+  }
+
+  // @todo Move to core?
+  &--latest-issue {
+    padding-right: 0;
+    padding-left: 0;
   }
   &--image-left {
     #{ $self } {
@@ -312,8 +349,19 @@ body {
   }
 }
 
+// @todo move to core
+.page-right-rail > * {
+  margin-bottom: map-get($spacers, block);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .item-list {
   $self: &;
+  // @todo Add to core
+  min-height: auto;
   &__header {
     padding: $theme-item-padding;
     padding-bottom: 0;
@@ -321,6 +369,10 @@ body {
   &__contents {
     flex-grow: 1;
     justify-content: space-between;
+  }
+  &--height-100 {
+    // @todo Add to core
+    min-height: 100%;
   }
   &--unjustified {
     #{ $self } {
@@ -369,6 +421,21 @@ body {
 .page-body-image,
 [data-embed-type="image"] {
   border-bottom: 1px solid #ccc;
+}
+
+// @todo Move to core; fix embedded images in paragraphs
+.page-body-image {
+  @include media-breakpoint-down(xs) {
+    margin-right: -#{$grid-gutter-width / 2};
+    margin-left: -#{$grid-gutter-width / 2};
+  }
+  &__caption,
+  &__credit {
+    @include media-breakpoint-down(xs) {
+      padding-right: $grid-gutter-width / 2;
+      padding-left: $grid-gutter-width / 2;
+    }
+  }
 }
 
 .table {
