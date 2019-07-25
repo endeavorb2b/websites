@@ -21,14 +21,16 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <div class="row">
-    <div class="col">
-      <div class="page-wrapper__header">
-        <endeavor-breadcrumbs-website-section section=section />
-        <h1 class="page-wrapper__title">${section.name}</h1>
-        <if(section.description)>
-          <p class="page-wrapper__description">$!{section.description}</p>
-        </if>
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
       </div>
     </div>
   </div>
@@ -36,7 +38,7 @@ $ const adSlots = {
   <@below-container>
     <bizbash-load-more
       type="website-scheduled-content"
-      query={ sectionId: section.id, skip: 5 }
+      query={ sectionId: section.id }
       layout={ aliases }
     />
   </@below-container>

@@ -31,13 +31,15 @@ $ const adSlots = {
         </div>
       </div>
     </div>
+  </div>
+
+  <@below-container>
     <bizbash-load-more
       type="website-scheduled-content"
       query={ sectionAlias: "gathergeeks", limit: 25 }
       layout={ name: "list-large", aliases }
-      append-to=".page-wrapper"
     />
-  </div>
+  </@below-container>
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
