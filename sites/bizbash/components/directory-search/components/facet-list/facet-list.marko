@@ -5,8 +5,10 @@ $ const { req } = out.global;
 $ const {
   facets,
   paramName,
-  activeId,
+  activeIds,
 } = input;
+
+$ const activeId = req.query[paramName];
 
 $ const clean = q => Object.keys(q).reduce((o, key) => {
   const value = q[key];
@@ -17,7 +19,7 @@ $ const clean = q => Object.keys(q).reduce((o, key) => {
 $ const facetUrl = (id) => {
   const query = { ...req.query };
   delete query.page;
-  if (query[paramName] && (`${query[paramName]}` === `${id}`)) {
+  if (activeId && (`${activeId}` === `${id}`)) {
     delete query[paramName];
   } else {
     query[paramName] = id;
@@ -30,9 +32,14 @@ $ const facetUrl = (id) => {
   <ul>
     <for|facet| of=facets>
       <li>
-        <a href=facetUrl(facet.id)>${facet.name}</a>
+        <a
+          class=(activeIds.includes(facet.id) ? "active" : null)
+          href=facetUrl(facet.id)
+        >
+          ${facet.name}
+        </a>
         <if(Array.isArray(facet.values))>
-          <facet-list facets=facet.values param-name=paramName active-id=activeId />
+          <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
         </if>
       </li>
     </for>

@@ -8,5 +8,8 @@
     "type": "string",
     "required": true
   },
-  "@active-id": "string"
+  "@active-ids": {
+    "type": "array",
+    "required": true
+  }
 }

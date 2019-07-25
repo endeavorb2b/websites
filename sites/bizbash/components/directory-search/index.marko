@@ -8,6 +8,11 @@ $ const start = (page - 1) * input.pageSize;
 $ const activeTopic = findActiveFacet(input.topics, topicId);
 $ const activeMarket = findActiveFacet(markets, marketId);
 
+$ const getActiveIds = (active) => {
+  if (!active) return [];
+  return active.tree.map(f => f.id);
+};
+
 <!-- $ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
 
 $ const args = {
@@ -48,13 +53,13 @@ $ const args = {
         facets=markets
         title="Markets"
         param-name="marketId"
-        active-id=marketId
+        active-ids=(getActiveIds(activeMarket))
       />
       <facet-container
         facets=input.topics
         title="Categories"
         param-name="topicId"
-        active-id=topicId
+        active-ids=(getActiveIds(activeTopic))
       />
 
       <!-- <div class="directory-facets">
