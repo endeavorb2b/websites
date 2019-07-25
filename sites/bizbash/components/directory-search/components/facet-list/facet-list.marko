@@ -1,0 +1,40 @@
+import querystring from 'querystring';
+
+$ const { req } = out.global;
+
+$ const {
+  facets,
+  paramName,
+  activeId,
+} = input;
+
+$ const clean = q => Object.keys(q).reduce((o, key) => {
+  const value = q[key];
+  if (!value) return o;
+  return { ...o, [key]: value };
+}, {});
+
+$ const facetUrl = (id) => {
+  const query = { ...req.query };
+  delete query.page;
+  if (query[paramName] && (`${query[paramName]}` === `${id}`)) {
+    delete query[paramName];
+  } else {
+    query[paramName] = id;
+  }
+  const string = querystring.stringify(clean(query));
+  return string ? `${req.path}?${string}` : req.path;
+};
+
+<if(facets.length)>
+  <ul>
+    <for|facet| of=facets>
+      <li>
+        <a href=facetUrl(facet.id)>${facet.name}</a>
+        <if(Array.isArray(facet.values))>
+          <facet-list facets=facet.values param-name=paramName active-id=activeId />
+        </if>
+      </li>
+    </for>
+  </ul>
+</if>

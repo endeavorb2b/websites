@@ -26,7 +26,7 @@
       "template": "./image-slider.marko"
     },
     "bizbash-directory-search": {
-      "template": "./directory-search.marko",
+      "template": "./directory-search/index.marko",
       "@api": {
         "type": "string",
         "default-value": "https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test"
