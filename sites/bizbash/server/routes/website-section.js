@@ -13,12 +13,12 @@ module.exports = (app) => {
     template: supplierDirectory,
     queryFragment,
   }));
-  
+
   app.get('/:alias(venue-directory)', withWebsiteSection({
     template: venueDirectory,
     queryFragment,
   }));
-  
+
   app.get('/:alias(gathergeeks)', withWebsiteSection({
     template: gatherGeeksTemplate,
     queryFragment,
