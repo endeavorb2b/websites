@@ -40,7 +40,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "industry-buzz", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "industry-buzz", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/industry-buzz">Industry Buzz</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -48,7 +48,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "production-strategy", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "production-strategy", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/production-strategy">Production & Strategy</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -56,7 +56,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor">Style & Decor</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -67,7 +67,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "catering", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "catering", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/catering">Catering</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -78,7 +78,7 @@ $ const adSlots = {
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/local-venues-destinations">Venues & Destinations</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -89,7 +89,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "bizbash-lists", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "bizbash-lists", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/bizbash-lists">BizBash Lists</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
