@@ -7,20 +7,17 @@ $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const aliases = hierarchyAliases(section);
-$ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
-$ const adTargeting = { cont_id: content.id, cont_type: content.type };
-$ const loadMoreAdsInput = { aliases, card: { targeting: adTargeting }, list: { targeting: adTargeting } };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
 <theme-default-content-layout content=content>
   <@head>
-    <endeavor-ad-gam-head slots=adSlots targeting=adTargeting />
+    <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>
 
   <@above-container>
