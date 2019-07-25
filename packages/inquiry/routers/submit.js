@@ -30,7 +30,7 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
   // Store the submission
   await storeInquiry({
     apollo,
-    content,
+    contentId: content.id,
     payload,
     addresses,
   });

@@ -1,8 +1,7 @@
-const { getAsObject } = require('@base-cms/object-path');
 const gql = require('graphql-tag');
 
 const mutation = gql`
-  mutation StoreInquirySubmission($input: CreateInquirySubmissionInput!) {
+  mutation StoreInquirySubmission($input: CreateInquirySubmissionMutationInput!) {
     createInquirySubmission(input:$input){
       id
     }
@@ -11,19 +10,13 @@ const mutation = gql`
 
 module.exports = async ({
   apollo,
-  content,
-  payload,
   addresses,
+  contentId,
+  payload,
 }) => {
-  const company = getAsObject(content, 'company');
   const input = {
-    content: {
-      id: content.id,
-      name: content.name,
-      companyId: company.id,
-      companyName: company.name,
-    },
     addresses,
+    contentId,
     payload,
   };
   return apollo.mutate({ mutation, variables: { input } });
