@@ -1,4 +1,8 @@
 const fetch = require('node-fetch');
+const { buildImgixUrl } = require('@base-cms/image');
+const { get } = require('@base-cms/object-path');
+
+const { CDN_IMAGE_HOSTNAME = 'base.imgix.net' } = process.env;
 
 const addFacetUrlParams = (urlParams, type, facets) => {
   const params = urlParams;
@@ -21,6 +25,7 @@ const validateSearch = (urlParams) => {
   }
   return params;
 };
+
 const retrieveResults = async ({
   api,
   urlParams,
@@ -63,9 +68,10 @@ const getFacetUrl = (req, param, id) => {
   return generateUrlWithQueryString(req.path, currentQuery);
 };
 
-const generateResultImage = (result) => {
-  const imagePath = result.fields.primaryimage ? result.fields.primaryimage.replace('cdn.bizbash.com', 'base.imgix.net') : 'https://base.imgix.net/files/base/bizbash/bzb/image/2019/01/160w/bizbash_placeholder.5c3778bf1e44d.jpg?auto=format&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=99&w=176';
-  return imagePath;
+const generateResultImage = (result, options) => {
+  const primaryImage = get(result, 'fields.primaryimage');
+  const src = primaryImage ? primaryImage.replace('cdn.bizbash.com', CDN_IMAGE_HOSTNAME).replace('320w/', '') : `https://${CDN_IMAGE_HOSTNAME}/files/base/bizbash/bzb/image/2019/01/bizbash_placeholder.5c3778bf1e44d.png`;
+  return buildImgixUrl(src, options);
 };
 
 const getPaginationLink = (req, increment, pageSize, total) => {
