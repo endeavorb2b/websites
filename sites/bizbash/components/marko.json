@@ -25,6 +25,33 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
+    "bizbash-directory-search": {
+      "template": "./directory-search.marko",
+      "@api": {
+        "type": "string",
+        "default-value": "https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test"
+      },
+      "@expression": {
+        "type": "string",
+        "default-value": "_score*((_time > featured_start && _time < featured_end) ? 100 : 1)"
+      },
+      "@sort": {
+        "type": "string",
+        "default-value": "featured desc, modified desc"
+      },
+      "@page-size": {
+        "type": "number",
+        "default-value": 25
+      },
+      "@topics": {
+        "type": "object",
+        "required": true
+      },
+      "@content-type": {
+        "type": "string",
+        "required": true
+      }
+    },
     "bizbash-pinned-directory-card": {
       "template": "./pinned-directory-card.marko"
     },
