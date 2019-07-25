@@ -57,7 +57,7 @@ $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
       </else>
     </@footer-left>
     <@footer-right|{ block }|>
-      <if(content.type === 'event')>
+      <if(content.type === 'event' || content.type === 'webinar')>
         <span class=`${block}__content-event-dates`>
           <endeavor-content-starts block=block obj=content />
           <endeavor-content-ends block=block obj=content />
