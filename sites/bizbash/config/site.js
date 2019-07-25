@@ -104,7 +104,7 @@ module.exports = {
   },
   contactUs: {
     branding: {
-      bgColor: '#005ea0',
+      bgColor: '#005ea0', // @todo Move to styling!
       logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
     },
   },
@@ -115,6 +115,6 @@ module.exports = {
     sendFrom: 'BizBash.com <noreply@bizbash.com>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
-    bgColor: '#25292d',
+    bgColor: '#25292d', // @todo Move to styling!
   },
 };
