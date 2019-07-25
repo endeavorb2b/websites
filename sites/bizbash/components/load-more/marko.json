@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "bizbash-load-more": {
+      "template": "./index.marko"
+    },
+    "bizbash-load-more-content-layout": {
+      "template": "./content-layout.marko"
+    }
+  }
+}

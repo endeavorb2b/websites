@@ -22,21 +22,23 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <div class="row">
-    <div class="col">
-      <div class="page-wrapper__header">
-        <endeavor-breadcrumbs-website-section section=section />
-        <h1 class="page-wrapper__title">${section.name}</h1>
-        <if(section.description)>
-          <p class="page-wrapper__description">$!{section.description}</p>
-        </if>
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/event-design", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/event-design", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/event-design">Event Design</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -44,7 +46,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/floral", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/floral", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/floral">Floral</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -52,7 +54,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/gifts-swag", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/gifts-swag", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/gifts-swag">Gifts & Swag</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -63,7 +65,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/printing-graphics", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/printing-graphics", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/printing-graphics">Printing & Graphics</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -74,7 +76,7 @@ $ const adSlots = {
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/rentals", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/rentals", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/rentals">Rentals</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -85,7 +87,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/social-events", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/social-events", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/social-events">Social Events</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -93,7 +95,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/tabletop", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/tabletop", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/tabletop">Tabletop</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -101,7 +103,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "production-strategy/strategy", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "production-strategy/strategy", limit: 5 } item-list={ modifiers: ["height-100"] }>
         <@header href="/production-strategy/strategy">Strategy</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -111,16 +113,10 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 5,
-        sectionId: section.id,
-      }
-      load-more={
-        maxPages: 0,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
+    <bizbash-load-more
+      type="website-scheduled-content"
+      query={ sectionId: section.id }
+      layout={ aliases }
     />
   </@below-container>
 

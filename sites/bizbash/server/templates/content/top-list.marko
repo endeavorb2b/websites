@@ -7,7 +7,6 @@ $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const aliases = hierarchyAliases(section);
-$ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
@@ -45,30 +44,29 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         </div>
       </div>
 
-      <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
-        <website-scheduled-content-list query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }>
+      <aside class="col-lg-4 page-right-rail">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+        <website-scheduled-content-list
+          query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }
+          item-list={ modifiers: ["unjustified"] }
+        >
           <@header>Related</@header>
           <@item|{ node }|>
             <bizbash-list-item content=node />
           </@item>
         </website-scheduled-content-list>
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       </aside>
     </div>
   </div>
 
   <@below-container>
     <if(section.id)>
-      <endeavor-content-query-load-more
+      <bizbash-load-more
+        type="website-scheduled-content"
+        query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
+        layout={ aliases }
         header=`More in ${section.name}`
-        query={
-          skip: 5,
-          excludeContentIds: [content.id],
-          sectionId: section.id,
-        }
-        ads={ aliases }
-        native-x={ placement: 'card', aliases, index: 0 }
       />
     </if>
   </@below-container>

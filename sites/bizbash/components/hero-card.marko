@@ -15,7 +15,7 @@ $ const imageInput = {
   ...getAsObject(input, 'image'),
 };
 
-<endeavor-item modifiers=["card", "hero-card"]>
+<bizbash-overlay-item modifiers=["card"]>
   <@image ...imageInput />
   <@title tag="h5" modifiers=["large"]>
     <cms-content-short-name tag=null obj=content link=true />
@@ -35,4 +35,4 @@ $ const imageInput = {
       <cms-content-published tag="span" block=block obj=content format=dateFormat />
     </else>
   </@footer-left>
-</endeavor-item>
+</bizbash-overlay-item>

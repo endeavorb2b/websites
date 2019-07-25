@@ -1,0 +1,21 @@
+{
+  "tags": {
+    "endeavor-block-item-image": {
+      "template": "./item-image.marko",
+      "@src": "string",
+      "@srcset": "array",
+      "@attrs": "object",
+      "@modifiers": "array",
+      "@use-placeholder": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@lazyload": {
+        "type": "boolean",
+        "default-value": true
+      },
+      "@height": "number",
+      "@width": "number"
+    }
+  }
+}

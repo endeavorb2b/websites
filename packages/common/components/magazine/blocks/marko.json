@@ -3,6 +3,7 @@
     "endeavor-magazine-query-latest-issue": {
       "template": "./query-latest-issue.marko",
       "@header": "string",
+      "@modifiers": "array",
       "@publication-id": {
         "type": "string",
         "required": true

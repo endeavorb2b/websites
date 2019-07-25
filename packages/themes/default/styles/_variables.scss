@@ -151,11 +151,12 @@ $theme-content-paragraph-image-border-radius:   $border-radius !default;
 $theme-content-paragraph-image-box-shadow:      $theme-box-shadow-lg !default;
 
 // Content Primary Media
-$theme-primary-media-aspect-ratio-x:  16 !default;
-$theme-primary-media-aspect-ratio-y:  9 !default;
 $theme-primary-media-border-radius:   $border-radius !default;
 $theme-primary-media-box-shadow:      $theme-box-shadow-lg !default;
 $theme-primary-media-margin-bottom:   map-get($spacers, block) !default;
+
+$theme-primary-media-video-aspect-ratio-x: 16 !default;
+$theme-primary-media-video-aspect-ratio-y: 9 !default;
 
 // Content Attribution
 $theme-content-attribution-color:                     $body-color !default;
@@ -216,7 +217,7 @@ $theme-embedded-media-color:        $gray-600 !default;
 $theme-embedded-media-font-family:  $theme-font-family-sans-serif !default;
 $theme-embedded-media-font-size:    $font-size-base !default;
 $theme-embedded-media-line-height:  $line-height-sm !default;
-$theme-embedded-media-margin:       .5rem 0 0 !default;
+$theme-embedded-media-margin:       1rem 0 0 !default;
 
 $theme-embedded-media-align-left-margin:  1rem !default;
 $theme-embedded-media-align-left-width:   50% !default;
@@ -654,6 +655,16 @@ $theme-site-navbar-secondary-background-colors: (
   default: $theme-site-navbar-secondary-link-background-color,
   hover: $theme-site-navbar-secondary-link-hover-background-color,
   active: $theme-site-navbar-secondary-link-active-background-color
+);
+
+$theme-site-navbar-tertiary-link-active-color:             navbar-link-color(theme-site-navbar-secondary-type, active) !default;
+$theme-site-navbar-tertiary-link-color:                    navbar-link-color(theme-site-navbar-secondary-type, default) !default;
+$theme-site-navbar-tertiary-link-hover-color:              navbar-link-color(theme-site-navbar-secondary-type, hover) !default;
+
+$theme-site-navbar-tertiary-colors: (
+  default: $theme-site-navbar-tertiary-link-color,
+  hover: $theme-site-navbar-tertiary-link-hover-color,
+  active: $theme-site-navbar-tertiary-link-active-color
 );
 
 $theme-site-navbar-link-transition: color ease 300ms, text-decoration ease 300ms, background-color ease 300ms !default;

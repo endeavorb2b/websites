@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/perioimplantadvisory",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -11,11 +11,11 @@
     "test": "yarn lint && yarn build"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.40",
+    "@base-cms/marko-web": "^0.9.46",
     "@base-cms/object-path": "^0.9.40",
-    "@base-cms/web-cli": "^0.9.40",
-    "@endeavorb2b/base-website-common": "^0.12.5",
-    "@endeavorb2b/base-website-themes": "^0.12.5",
+    "@base-cms/web-cli": "^0.9.46",
+    "@endeavorb2b/base-website-common": "^0.12.6",
+    "@endeavorb2b/base-website-themes": "^0.12.6",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",

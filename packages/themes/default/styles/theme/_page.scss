@@ -15,6 +15,9 @@
 
   &__header {
     @include theme-page-header-spacing();
+    &:empty {
+      display: none;
+    }
     :last-child {
       margin-bottom: 0;
     }
@@ -58,15 +61,24 @@
 
   &__content {
     @include theme-content-body();
+    &:empty {
+      display: none;
+    }
   }
 
   &__contents {
     @include theme-content-body();
     @include theme-page-body-spacing();
+    &:empty {
+      display: none;
+    }
   }
 
   &__body {
     @include theme-page-body-spacing();
+    &:empty {
+      display: none;
+    }
   }
 }
 

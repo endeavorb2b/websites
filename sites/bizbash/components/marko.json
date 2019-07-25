@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./load-more/marko.json"
+  ],
   "tags": {
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
@@ -20,6 +23,28 @@
         "required": true
       },
       "@image": "object"
+    },
+    "bizbash-card-item-overlay": {
+      "template": "./card-item-overlay.marko",
+      "@content": {
+        "type": "object",
+        "required": true
+      },
+      "@image": "object"
+    },
+    "bizbash-overlay-item": {
+      "template": "./overlay-item.marko",
+      "@modifiers": "array",
+      "<image>": {},
+      "<header-left>": {},
+      "<header-right>": {},
+      "<title>": {},
+      "@description <description>[]": {},
+      "<footer-left>": {},
+      "<footer-right>": {}
+    },
+    "bizbash-overlay-item-image": {
+      "template": "./overlay-item-image.marko"
     },
     "bizbash-list-item-large": {
       "template": "./list-item-large.marko",

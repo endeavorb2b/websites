@@ -1,7 +1,6 @@
 import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
 
 $ const { config } = out.global;
-$ const query = { contentTypes: ['Video'], limit: 10 };
 $ const page = pageDetails('Videos', config);
 
 <theme-default-published-content-layout page=page>
@@ -30,13 +29,12 @@ $ const page = pageDetails('Videos', config);
   </div>
 
   <@below-container>
-    <div class="published-content-query-load-more">
-      <endeavor-published-content-query-load-more
-        query=query
-      />
-    </div>
+    <bizbash-load-more
+      type="all-published-content"
+      query={ contentTypes: ["Video"], limit: 25 }
+      layout={ name: "list-large" }
+    />
   </@below-container>
-
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />
