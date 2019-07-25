@@ -186,6 +186,13 @@ body {
     padding-right: 0;
     padding-left: 0;
   }
+  > main {
+    // @todo Added temporarily to ensure "default-page" style is applied w/o using the class.
+    // This should be fix in cms-page core
+    > .page-wrapper {
+      margin-bottom: map-get($spacers, block);
+    }
+  }
 }
 
 .ad-rail {
