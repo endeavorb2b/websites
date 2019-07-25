@@ -1,19 +1,22 @@
-const findActiveFacet = (facets, facetId, tree = []) => {
-  if (!facetId) return undefined;
-
-  return facets.reduce((active, facet) => {
-    const { id, values } = facet;
-    if (active) return active;
-    if (`${facetId}` === `${id}`) {
-      tree.push({ ...facet });
-      return { facet: { ...facet }, tree };
-    }
-    if (Array.isArray(values) && values.length) {
-      tree.push({ ...facet });
-      return findActiveFacet(values, facetId, tree);
-    }
-    return active;
-  }, undefined) || { facet: null, tree: [] };
+const build = (facets, total = [], entries) => {
+  facets.forEach((facet) => {
+    const { id, name, values } = facet;
+    const current = entries ? [{ id, name }, ...entries] : [{ id, name }];
+    total.push(current);
+    if (Array.isArray(values) && values.length) build(values, total, current);
+  });
+  return total;
 };
 
-module.exports = findActiveFacet;
+module.exports = (facets, activeId) => {
+  const map = new Map();
+  const flat = build(facets);
+  flat.forEach((row) => {
+    const primary = row.shift();
+    const parentIds = row.map(r => r.id);
+    map.set(`${primary.id}`, { ...primary, parentIds, activeIds: [primary.id, ...parentIds] });
+  });
+  const active = map.get(`${activeId}`);
+  if (active) return active;
+  return { parentIds: [], activeIds: [] };
+};

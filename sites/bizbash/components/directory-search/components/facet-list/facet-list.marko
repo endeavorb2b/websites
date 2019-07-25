@@ -9,6 +9,7 @@ $ const {
 } = input;
 
 $ const activeId = req.query[paramName];
+$ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
 
 $ const clean = q => Object.keys(q).reduce((o, key) => {
   const value = q[key];
@@ -19,7 +20,7 @@ $ const clean = q => Object.keys(q).reduce((o, key) => {
 $ const facetUrl = (id) => {
   const query = { ...req.query };
   delete query.page;
-  if (activeId && (`${activeId}` === `${id}`)) {
+  if (isActiveId(id)) {
     delete query[paramName];
   } else {
     query[paramName] = id;
@@ -31,14 +32,17 @@ $ const facetUrl = (id) => {
 <if(facets.length)>
   <ul>
     <for|facet| of=facets>
-      <li>
-        <a
-          class=(activeIds.includes(facet.id) ? "active" : null)
-          href=facetUrl(facet.id)
-        >
-          ${facet.name}
-        </a>
+      $ const isOpen = activeIds.includes(facet.id);
+      $ const isActive = isActiveId(facet.id);
+
+      $ const classNames = ["facet", `facet--${facet.id}`];
+      $ if (isOpen) classNames.push("facet--open");
+      $ if (isActive) classNames.push("facet--active");
+
+      <li class=classNames>
+        <a href=facetUrl(facet.id)> ${facet.name}</a>
         <if(Array.isArray(facet.values))>
+          <cms-browser-component name="PlusMinusToggleButton" props={ targets: [`.facet--${facet.id}`], toggleClass: "facet--open", initiallyExpanded: isOpen } />
           <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
         </if>
       </li>

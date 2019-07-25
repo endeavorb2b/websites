@@ -180,6 +180,17 @@ body {
   letter-spacing: $bizbash-letter-spacing;
 }
 
+.facet {
+  > ul {
+    display: none;
+  }
+  &--open {
+    > ul {
+      display: block;
+    }
+  }
+}
+
 .container-fluid-max {
   // @todo Determine if this should go to core
   @include media-breakpoint-down(xs) {
