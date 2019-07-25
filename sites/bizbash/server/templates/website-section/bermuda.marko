@@ -1,0 +1,37 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+  </@above-container>
+
+  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true }>
+    <@card-item|{ node }|>
+      <bizbash-hero-card content=node />
+    </@card-item>
+    <@list-item|{ node }|>
+      <bizbash-list-item content=node />
+    </@list-item>
+  </website-scheduled-content-hero>
+
+  <@below-container>
+    <bizbash-load-more
+      type="website-scheduled-content"
+      max-pages=0
+      query={ sectionId: section.id, skip: 5 }
+      layout={ name: "default", aliases }
+    />
+  </@below-container>
+
+</theme-default-website-section-layout>
