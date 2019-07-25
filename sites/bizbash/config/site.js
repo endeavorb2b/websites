@@ -2,7 +2,7 @@ const ads = require('./ads');
 const nativeX = require('./native-x');
 
 module.exports = {
-  company: 'BizBash Media, Inc.',
+  company: 'BizBash Media, Inc',
   ads,
   nativeX,
   logos: {
