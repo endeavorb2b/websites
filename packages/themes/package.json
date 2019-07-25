@@ -9,7 +9,7 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.40",
+    "@base-cms/marko-web": "^0.9.46",
     "@endeavorb2b/base-website-common": "^0.12.5",
     "bootstrap": "4.3.1",
     "graphql": "^14.3.1",
