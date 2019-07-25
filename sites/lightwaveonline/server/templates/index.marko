@@ -145,7 +145,14 @@ $ const adSlots = {
         header={ title: "Videos", href: "/videos" }
       />
     </div>
-    <div class="col-lg-8 mb-block">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        section-alias="on-topic"
+        header={ title: "On Topic", href: "/on-topic" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=5
         skip=5

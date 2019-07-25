@@ -113,11 +113,11 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <endeavor-published-content-query-list
         query={
-          contentTypes: ["Whitepaper", "Webinar"],
+          contentTypes: ["Whitepaper"],
           limit: 4,
         }
         with-image=false
-        header={ title: "White Papers & Webinars", href: "/white-papers" }
+        header={ title: "White Papers", href: "/white-papers" }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -127,6 +127,34 @@ $ const adSlots = {
           limit: 4,
         }
         header={ title: "Videos", href: "/videos" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="on-topic"
+        header={ title: "On Topic", href: "/on-topic" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-published-content-query-list
+        query={
+          contentTypes: ["Webinar"],
+          limit: 4,
+        }
+        with-image=false
+        header={ title: "Webinars", href: "/webcasts" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        skip=4
+        section-alias=section.alias
+        header={ title: `More from ${out.global.config.siteName()}` }
       />
     </div>
   </div>
