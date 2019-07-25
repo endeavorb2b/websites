@@ -26,6 +26,10 @@ export default {
     IconDash,
   },
   props: {
+    initiallyExpanded: {
+      type: Boolean,
+      default: false,
+    },
     targets: {
       type: Array,
       default: () => [],
@@ -37,9 +41,12 @@ export default {
   },
   data: () => ({
     blockName: 'plus-minus-toggler',
-    expanded: false,
     iconModifiers: ['md'],
+    expanded: false,
   }),
+  created() {
+    this.expanded = this.initiallyExpanded;
+  },
   methods: {
     toggle() {
       this.expanded = !this.expanded;
