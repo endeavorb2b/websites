@@ -1,20 +1,20 @@
 <template>
   <form v-if="incomplete" @submit.prevent="submit">
     <div class="form-group">
-      <label for="inquiry-first-name" class="required-field">First Name</label>
+      <label for="inquiry-given-name" class="required-field">First Name</label>
       <input
-        id="inquiry-first-name"
-        v-model="firstName"
+        id="inquiry-given-name"
+        v-model="givenName"
         type="text"
         class="form-control"
         required
       >
     </div>
     <div class="form-group">
-      <label for="inquiry-last-name" class="required-field">Last Name</label>
+      <label for="inquiry-family-name" class="required-field">Last Name</label>
       <input
-        id="inquiry-last-name"
-        v-model="lastName"
+        id="inquiry-family-name"
+        v-model="familyName"
         type="text"
         class="form-control"
         required
@@ -149,8 +149,8 @@ import FormMixin from '@endeavorb2b/base-website-inquiry/browser/form-mixin';
 export default {
   mixins: [FormMixin],
   data: () => ({
-    firstName: '',
-    lastName: '',
+    givenName: '',
+    familyName: '',
     email: '',
     phone: '',
     company: '',
@@ -180,8 +180,8 @@ export default {
   methods: {
     async submit() {
       const {
-        firstName,
-        lastName,
+        givenName,
+        familyName,
         email,
         phone,
         company,
@@ -195,8 +195,8 @@ export default {
         desiredAmenities,
       } = this;
       await this.$submit({
-        firstName,
-        lastName,
+        givenName,
+        familyName,
         email,
         confirmationEmail: email,
         phone,

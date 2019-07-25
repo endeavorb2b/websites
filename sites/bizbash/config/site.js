@@ -2,7 +2,7 @@ const ads = require('./ads');
 const nativeX = require('./native-x');
 
 module.exports = {
-  company: 'BizBash Media, Inc.',
+  company: 'BizBash Media, Inc',
   ads,
   nativeX,
   logos: {
@@ -111,7 +111,7 @@ module.exports = {
   inquiry: {
     enabled: true,
     directSend: false,
-    sendTo: 'Endeavor Developer <developer@endeavorb2b.com>',
+    sendTo: 'connect@bizbash.com',
     sendFrom: 'BizBash.com <noreply@bizbash.com>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
