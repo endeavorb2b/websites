@@ -8,6 +8,15 @@ $ const start = (page - 1) * input.pageSize;
 $ const activeTopic = findActiveFacet(input.topics, topicId);
 $ const activeMarket = findActiveFacet(markets, marketId);
 
+$ const queryOptions = {
+  api: input.api,
+  type: input.contentType,
+  facets: {
+    market: markedId || undefined,
+    topic: topicId || undefined,
+  },
+};
+
 <!-- $ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
 
 $ const args = {
@@ -56,36 +65,6 @@ $ const args = {
         param-name="topicId"
         active-ids=activeTopic.activeIds
       />
-
-      <!-- <div class="directory-facets">
-        <for|facetTypeKey, facetType| in=facets>
-          <ul class="list-group border-0">
-            <h3 class="facet-title">${facetType.name}</h3>
-            <for|key, facet| in=facetType.values>
-              <li class="list-group-item border-0">
-                $ const url = getFacetUrl(req, facetTypeKey, facet.id);
-                $ const activeClass = Number(args.facets[facetTypeKey]) === Number(facet.id) ? 'active' : '' ;
-                <a class=`${activeClass}` href=`${url}`>${ facet.name }</a>
-                <if(facet.childFacets)>
-                  $ const facetTargetToggleClass = `.facet-${facet.id}`;
-                  $ const facetTargetToggleOpenClass = `facet-${facet.id}--open`;
-                  <cms-browser-component name="PlusMinusToggleButton" props={ targets: [facetTargetToggleClass], toggleClass: 'plus-minus-toggler--open' } />
-                  <ul class=`list-group border-0 facet-${facet.id}`>
-                    <for|childFacet, index| of=facet.childFacets>
-                      <li class="list-group-item border-0">
-                        $ const url = getFacetUrl(req, facetTypeKey, childFacet.id);
-                        $ const activeClass = Number(args.facets[facetTypeKey]) === Number(childFacet.id) ? 'active' : '' ;
-                        <a class=`${activeClass}` href=`${url}`>${ childFacet.name }</a>
-                      </li>
-                    </for>
-                  </ul>
-                </if>
-              </li>
-            </for>
-          </ul>
-        </for>
-      </div> -->
-
     </div>
     <div id="results" class="content-query-load-more__col-list">
       <ul class="item-list ">
