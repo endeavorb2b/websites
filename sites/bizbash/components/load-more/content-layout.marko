@@ -1,0 +1,12 @@
+import { getAsArray } from '@base-cms/object-path';
+import DefaultLayout from './content-layouts/default';
+import LargeListLayout from './content-layouts/list-large';
+
+$ const layouts = {
+  default: DefaultLayout,
+  'list-large': LargeListLayout,
+};
+$ const layout = layouts[input.name] || layouts.default;
+$ const nodes = getAsArray(input, 'nodes');
+
+<${layout} ...input nodes=nodes />

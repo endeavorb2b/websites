@@ -1,0 +1,43 @@
+import { getAsArray } from '@base-cms/object-path';
+
+$ const element = 'block__item-image';
+
+$ const hasImage = Boolean(input.src);
+$ const usePlaceholer = input.usePlaceholder && !hasImage;
+
+$ const modifiers = getAsArray(input, 'modifiers');
+$ const classNames = [element, ...modifiers.map(mod => `${element}--${mod}`)];
+$ if (input.lazyload) classNames.push('lazyload');
+
+$ const srcset = getAsArray(input.srcset).join(',') || null;
+
+$ const styles = [];
+$ if (input.width) styles.push(`width: ${input.width}px;`);
+$ if (input.height) styles.push(`height: ${input.height}px;`);
+
+<if(hasImage)>
+  <if(input.lazyload)>
+    <img
+      class=classNames
+      ...input.attrs
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src=input.src
+      data-srcset=srcset
+      alt=input.alt
+      style=styles
+    />
+  </if>
+  <else>
+    <img
+      class=classNames
+      ...input.attrs
+      src=input.src
+      srcset=srcset
+      alt=input.alt
+      style=styles
+    />
+  </else>
+</if>
+<else-if(input.usePlaceholer)>
+  <div class=`${element} ${element}--placeholder` ...input.attrs style=styles />
+</else-if>

@@ -1,0 +1,41 @@
+import { getAsArray } from '@base-cms/object-path';
+import bem from '../../utils/bem-class';
+
+$ const block = 'item-card-deck';
+$ const items = getAsArray(input, 'items');
+$ const slots = getAsArray(input, 'slots').reduce((map, item) => {
+  const { index } = item;
+  map.set(index, item)
+  return map;
+}, new Map());
+
+$ const modifiers = getAsArray(input, 'modifiers');
+$ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
+
+<if(items.length)>
+  <div class=classNames>
+    <for|item, index| of=items>
+      $ const slot = slots.get(index);
+      <if(slot && slot.position === "before")>
+        <div class=bem(block, "col", slot.modifiers)>
+          <${slot.renderBody} item=item index=index />
+        </div>
+      </if>
+      <if(slot && slot.position === "at")>
+        <div class=bem(block, "col", slot.modifiers)>
+          <${slot.renderBody} item=item index=index />
+        </div>
+      </if>
+      <else>
+        <div class=bem(block, "col")>
+          <${input.renderBody} item=item index=index />
+        </div>
+      </else>
+      <if(slot && slot.position === "after")>
+        <div class=bem(block, "col", slot.modifiers)>
+          <${slot.renderBody} item=item index=index />
+        </div>
+      </if>
+    </for>
+  </div>
+</if>

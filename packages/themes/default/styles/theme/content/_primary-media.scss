@@ -1,6 +1,6 @@
 .content-primary-media {
   &__video {
-    @include theme-embed-responsive($theme-primary-media-aspect-ratio-x, $theme-primary-media-aspect-ratio-y);
+    @include theme-embed-responsive($theme-primary-media-video-aspect-ratio-x, $theme-primary-media-video-aspect-ratio-y);
 
     iframe,
     embed,
