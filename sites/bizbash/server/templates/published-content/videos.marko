@@ -26,13 +26,15 @@ $ const page = pageDetails('Videos', config);
         </div>
       </div>
     </div>
+  </div>
+
+  <@below-container>
     <bizbash-load-more
       type="all-published-content"
       query={ contentTypes: ["Video"], limit: 25 }
       layout={ name: "list-large" }
-      append-to=".page-wrapper"
     />
-  </div>
+  </@below-container>
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />
