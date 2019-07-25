@@ -4,6 +4,7 @@ const { content: contentLoader } = require('@base-cms/web-common/page-loaders');
 const send = require('@endeavorb2b/base-website-common/utils/send-mail');
 const buildMarkoGlobal = require('@endeavorb2b/base-website-common/utils/build-marko-global');
 const { notificationBuilder, confirmationBuilder } = require('../template-builders');
+const storeInquiry = require('../utils/store-inquiry');
 
 module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(async (req, res) => {
   const { site } = res.app.locals;
@@ -25,6 +26,15 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
     bcc,
     from,
   };
+
+  // Store the submission
+  await storeInquiry({
+    apollo,
+    content,
+    payload,
+    addresses,
+  });
+
   // Notify the contacts of the submission
   await send(notificationBuilder({
     template: notification,
