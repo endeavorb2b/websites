@@ -1,11 +1,17 @@
 [data-embed-type] {
-  display: inline-block;
+  display: block;
   width: 100%;
   font-family: $theme-embedded-media-font-family;
   font-size: $theme-embedded-media-font-size;
   line-height: $theme-embedded-media-line-height;
   color: $theme-embedded-media-color;
   background: transparent;
+}
+
+.content-body-contents {
+  p:first-child [data-embed-type] {
+    margin: 0;
+  }
 }
 
 p [data-embed-type] {
