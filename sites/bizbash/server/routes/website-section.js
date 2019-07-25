@@ -5,6 +5,8 @@ const gatherGeeksTemplate = require('../templates/website-section/gathergeeks');
 const productionStrategyTemplate = require('../templates/website-section/production-strategy');
 const styleDecorTemplate = require('../templates/website-section/style-decor');
 const cateringTemplate = require('../templates/website-section/catering');
+const bermudaTemplate = require('../templates/website-section/bermuda');
+const industryBuzzTemplate = require('../templates/website-section/industry-buzz');
 
 module.exports = (app) => {
   app.get('/:alias(gathergeeks)', withWebsiteSection({
@@ -24,6 +26,16 @@ module.exports = (app) => {
 
   app.get('/:alias(catering)', withWebsiteSection({
     template: cateringTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(bermuda)', withWebsiteSection({
+    template: bermudaTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(industry-buzz)', withWebsiteSection({
+    template: industryBuzzTemplate,
     queryFragment,
   }));
 

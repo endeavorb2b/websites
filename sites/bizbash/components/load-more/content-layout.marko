@@ -1,10 +1,12 @@
 import { getAsArray } from '@base-cms/object-path';
 import DefaultLayout from './content-layouts/default';
 import LargeListLayout from './content-layouts/list-large';
+import GridNoAdsLayout from './content-layouts/grid-no-ads';
 
 $ const layouts = {
   default: DefaultLayout,
   'list-large': LargeListLayout,
+  'grid-no-ads': GridNoAdsLayout,
 };
 $ const layout = layouts[input.name] || layouts.default;
 $ const nodes = getAsArray(input, 'nodes');
