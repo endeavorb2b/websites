@@ -61,7 +61,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         header=`More from ${content.name}`
       />
     </if>
-    <else-if(content.type === 'company')>
+    <!-- <else-if(content.type === 'company')>
       <bizbash-load-more
         max-pages=0
         type="all-company-content"
@@ -69,7 +69,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         layout={ aliases }
         header=`More from ${content.name}`
       />
-    </else-if>
+    </else-if> -->
     <else-if(section.id)>
       <bizbash-load-more
         max-pages=0
