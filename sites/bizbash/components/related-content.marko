@@ -1,4 +1,4 @@
-import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+import contentListFragment from '../server/api/fragments/content-list';
 
 <cms-query-related-published-content|{ nodes }| limit=10 content-id=input.contentId query-fragment=contentListFragment>
   <if(nodes.length)>
@@ -13,7 +13,7 @@ import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/
 
 <if(!['contact', 'company'].includes(input.contentType))>
   <website-scheduled-content-list
-    query={ sectionId: input.sectionId, excludeContentIds: [input.contentId], limit: 5 }
+    query={ sectionId: input.sectionId, excludeContentIds: [input.contentId], limit: 5, queryFragment: contentListFragment }
     item-list={ modifiers: ["unjustified"] }
   >
     <@header>Latest in ${input.sectionName}</@header>
