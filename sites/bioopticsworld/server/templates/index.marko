@@ -109,12 +109,10 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="blogs"
+        header={ title: "Commentary", href: "/commentary" }
       />
     </div>
     <div class="col-lg-4 mb-block">
