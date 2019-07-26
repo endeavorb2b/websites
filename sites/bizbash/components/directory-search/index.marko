@@ -12,7 +12,7 @@ $ const queryOptions = {
   api: input.api,
   type: input.contentType,
   facets: {
-    market: markedId || undefined,
+    market: marketId || undefined,
     topic: topicId || undefined,
   },
 };
@@ -36,79 +36,74 @@ $ const args = {
   },
 }; -->
 
-<div class="small">
-  <form id="search" class="row">
-    <div class="col-lg-11 col-md-10 mb-block" >
-      <input name="phrase" type="search" class="form-control" id="search-input" placeholder="Enter search phrase..." value=phrase>
-      <if(marketId)>
-        <input name="marketId" type="hidden" value=marketId>
-      </if>
-      <if(topicId)>
-        <input name="topicId" type="hidden" value=topicId>
-      </if>
-    </div>
-    <div class="col-lg-1 col-md-2 mb-block" >
+<div class="row">
+  <div class="col mb-block">
+    <form>
+      <input name="phrase" type="search" class="form-control mb-2" placeholder="Enter search phrase..." value=phrase>
+      <if(marketId)><input name="marketId" type="hidden" value=marketId></if>
+      <if(topicId)><input name="topicId" type="hidden" value=topicId></if>
       <button type="submit" class="btn btn-primary">Search</button>
-    </div>
-  </form>
-  <div class="row">
-    <div class="content-query-load-more__col-ad">
-      <facet-container
-        facets=markets
-        title="Markets"
-        param-name="marketId"
-        active-ids=activeMarket.activeIds
-      />
-      <facet-container
-        facets=input.topics
-        title="Categories"
-        param-name="topicId"
-        active-ids=activeTopic.activeIds
-      />
-    </div>
-    <div id="results" class="content-query-load-more__col-list">
-      <ul class="item-list ">
-        <div class="feature-results">
-          <if(topicId && marketId)>
-            <!-- <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
-              <if(content)>
-                $ const primarySection = getAsObject(content, 'primarySection');
-                $ const primaryImage = getAsObject(content, 'primaryImage');
-                $ const dateFormat = 'MMMM D, YYYY';
-                $ const imageInput = {
-                  image: primaryImage,
-                  lazyload: false,
-                  linkTo: content,
-                  modifiers: ['fluid', '3by2'],
-                  options: { w: 642, h: 428, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
-                  position: 'top',
-                  usePlaceholder: false,
-                  ...getAsObject(input, 'image'),
-                };
-                <div class="featured-directory-listing-item">
-                  <div class="sponsoreship-title">
-                    ${activeTopic[0].name} by ${content.shortName}
-                  </div>
-                  <endeavor-item modifiers=["card", "hero-card"]>
-
-                    <@image ...imageInput />
-                    <@title tag="h5" modifiers=["medium"]>
-                      <cms-content-short-name tag=null obj=content link=true />
-                    </@title>
-                    <@description tag="p">
-                      ${content.address1}<br>
-                      ${content.city}, ${content.state} ${content.zip} ${content.country}
-                    </@description>
-                  </endeavor-item>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 mb-block">
+    <facet-container
+      facets=markets
+      title="Markets"
+      param-name="marketId"
+      active-ids=activeMarket.activeIds
+    />
+    <facet-container
+      facets=input.topics
+      title="Categories"
+      param-name="topicId"
+      active-ids=activeTopic.activeIds
+    />
+  </div>
+  <div class="col-8 mb-block">
+    <!-- <ul class="item-list">
+      <div class="feature-results">
+        <if(topicId && marketId)>
+          <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
+            <if(content)>
+              $ const primarySection = getAsObject(content, 'primarySection');
+              $ const primaryImage = getAsObject(content, 'primaryImage');
+              $ const dateFormat = 'MMMM D, YYYY';
+              $ const imageInput = {
+                image: primaryImage,
+                lazyload: false,
+                linkTo: content,
+                modifiers: ['fluid', '3by2'],
+                options: { w: 642, h: 428, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
+                position: 'top',
+                usePlaceholder: false,
+                ...getAsObject(input, 'image'),
+              };
+              <div class="featured-directory-listing-item">
+                <div class="sponsoreship-title">
+                  ${activeTopic[0].name} by ${content.shortName}
                 </div>
-                </if>
-            </bizbash-pinned-directory-card> -->
-          </if>
-        </div>
-        <div class="search-results">
-          <ul class="item-list item-list--flush item-list--card">
-            <div class="item-list__contents">
-            <!-- <await(retrieveResults(args))>
+                <endeavor-item modifiers=["card", "hero-card"]>
+
+                  <@image ...imageInput />
+                  <@title tag="h5" modifiers=["medium"]>
+                    <cms-content-short-name tag=null obj=content link=true />
+                  </@title>
+                  <@description tag="p">
+                    ${content.address1}<br>
+                    ${content.city}, ${content.state} ${content.zip} ${content.country}
+                  </@description>
+                </endeavor-item>
+              </div>
+            </if>
+          </bizbash-pinned-directory-card>
+        </if>
+      </div>
+      <div class="search-results">
+        <ul class="item-list item-list--flush item-list--card">
+          <div class="item-list__contents">
+            <await(retrieveResults(args))>
               <@then|response|>
                 <if(response.hits)>
                   <for|result, index| of=response.hits.hit>
@@ -160,11 +155,10 @@ $ const args = {
                   <pre>An unexpected error occurred: ${err.message}</pre>
                 </else>
               </@catch>
-            </await> -->
-            </div>
-          </ul>
-        </div>
-      </ul>
-    </div>
+            </await>
+          </div>
+        </ul>
+      </div>
+    </ul> -->
   </div>
 </div>
