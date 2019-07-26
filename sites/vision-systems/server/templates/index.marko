@@ -140,7 +140,7 @@ $ const adSlots = {
         query={
           requiresImage: false,
           contentTypes: ["Video"],
-          limit: 5,
+          limit: 4,
         }
         header={ title: "Videos", href: "/videos" }
       />
@@ -148,9 +148,8 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=4
-        skip=5
-        section-alias=section.alias
-        header={ title: `More from ${out.global.config.siteName()}` }
+        section-alias="blogs"
+        header={ title: "Commentary", href: "/blogs" }
       />
     </div>
     <div class="col-lg-4 mb-block">
