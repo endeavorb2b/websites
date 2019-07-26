@@ -1,6 +1,7 @@
 import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../../api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
@@ -38,7 +39,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/event-design", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/event-design", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/event-design">Event Design</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -46,7 +47,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/floral", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/floral", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/floral">Floral</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -54,7 +55,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/gifts-swag", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/gifts-swag", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/gifts-swag">Gifts & Swag</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -65,7 +66,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/printing-graphics", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/printing-graphics", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/printing-graphics">Printing & Graphics</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -76,7 +77,7 @@ $ const adSlots = {
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/rentals", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/rentals", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/rentals">Rentals</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -87,7 +88,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/social-events", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/social-events", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/social-events">Social Events</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -95,7 +96,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor/tabletop", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor/tabletop", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor/tabletop">Tabletop</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -103,7 +104,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "production-strategy/strategy", limit: 5 } item-list={ modifiers: ["height-100"] }>
+      <website-scheduled-content-list query={ sectionAlias: "production-strategy/strategy", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/production-strategy/strategy">Strategy</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />

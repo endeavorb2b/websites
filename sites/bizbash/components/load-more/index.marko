@@ -1,6 +1,9 @@
+import contentListFragment from '../../server/api/fragments/content-list';
+
 $ const query = {
   limit: 14,
   requiresImage: true,
+  queryFragment: contentListFragment,
   ...input.query
 };
 
