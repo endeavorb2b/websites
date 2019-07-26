@@ -3,6 +3,25 @@
     "./load-more/marko.json"
   ],
   "tags": {
+    "bizbash-related-content": {
+      "template": "./related-content.marko",
+      "@content-id": {
+        "type": "number",
+        "required": true
+      },
+      "@content-type": {
+        "type": "string",
+        "required": true
+      },
+      "@section-id": {
+        "type": "number",
+        "required": true
+      },
+      "@section-name": {
+        "type": "string",
+        "required": true
+      }
+    },
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
