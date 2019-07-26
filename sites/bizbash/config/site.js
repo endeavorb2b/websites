@@ -110,7 +110,7 @@ module.exports = {
   },
   inquiry: {
     enabled: true,
-    directSend: false,
+    directSend: true,
     sendTo: 'connect@bizbash.com',
     sendFrom: 'BizBash.com <noreply@bizbash.com>',
     sendBcc: 'emailactivity@cygnus.com',
