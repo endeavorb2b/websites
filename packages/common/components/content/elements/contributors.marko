@@ -1,16 +1,9 @@
-$ const prefixClass = `${input.block}__prefix`;
-
 <cms-content-contributors|{ contact }|
   tag=input.tag
   class=input.class
   block=input.block
   obj=input.content
 >
-  <@before|{ length }|>
-    <span class=prefixClass>
-      ${input.prefix}<if(length > 1)>s</if>
-    </span>
-  </@before>
   <cms-content-name
     tag=input.itemTag
     class=input.itemClass
