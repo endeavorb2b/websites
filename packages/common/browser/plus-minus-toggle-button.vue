@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="blockName"
+    :class="className"
     type="button"
     aria-label="Toggle Menu"
     @click="toggle"
@@ -26,6 +26,10 @@ export default {
     IconDash,
   },
   props: {
+    className: {
+      type: String,
+      default: null,
+    },
     initiallyExpanded: {
       type: Boolean,
       default: false,
@@ -40,7 +44,6 @@ export default {
     },
   },
   data: () => ({
-    blockName: 'plus-minus-toggler',
     iconModifiers: ['md'],
     expanded: false,
   }),
