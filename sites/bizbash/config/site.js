@@ -91,7 +91,7 @@ module.exports = {
   gtmContainer: 'GTM-5TWCFJ',
   search: {
     engine: 'google',
-    apiKey: '017383739850048358259:p0nyaiybgnq',
+    apiKey: '017383739850048358259:n2wdsrv6_py',
   },
   subscriptions: {
     newsletters: 'https://www.bizbash.com/subscribe/email',
