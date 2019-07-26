@@ -31,7 +31,9 @@ $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
       <div class="col">
         <div class="page-wrapper__header">
           <bizbash-image-slider images=images />
-          <endeavor-content-block-page-header content=content />
+          <endeavor-breadcrumbs-website-section section=content.primarySection />
+          <cms-content-name tag="h1" class="page-wrapper__title" obj=content />
+          <cms-content-teaser tag="p" class="page-wrapper__deck" obj=content />
         </div>
       </div>
     </div>
