@@ -51,7 +51,8 @@
       "@content": {
         "type": "object",
         "required": true
-      }
+      },
+      "@date-format": "string"
     },
     "endeavor-content-block-page-body": {
       "template": "./page-body.marko",
