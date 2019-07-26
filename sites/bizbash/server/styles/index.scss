@@ -413,6 +413,11 @@ body {
   div {
     display: inline;
   }
+  &__content-authors {
+    &::before {
+      content: "By";
+    }
+  }
 }
 
 .content-attribution:not(:empty) + .content-published-date {
