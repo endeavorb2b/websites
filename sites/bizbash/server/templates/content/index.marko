@@ -72,7 +72,6 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     </else-if> -->
     <else-if(section.id)>
       <bizbash-load-more
-        max-pages=0
         type="website-scheduled-content"
         query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
         layout={ aliases }
