@@ -134,6 +134,31 @@ $ const adSlots = {
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="blogs"
+        header={ title: "Commentary" , href: "/blogs" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        skip=4
+        section-alias=section.alias
+        header={ title: `More from ${out.global.config.siteName()}` }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="optics/optics-design"
+        header={ title: "Optics & Design" , href: "/optics/optics-design" }
+      />
+    </div>
+  </div>
+
   <@below-container>
     <endeavor-content-query-load-more
       query={
