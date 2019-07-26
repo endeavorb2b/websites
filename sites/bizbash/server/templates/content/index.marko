@@ -54,6 +54,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
   <@below-container>
     <if(content.type === 'contact')>
       <bizbash-load-more
+        max-pages=0
         type="all-author-content"
         query={ contactId: content.id }
         layout={ aliases }
@@ -62,6 +63,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     </if>
     <else-if(content.type === 'company')>
       <bizbash-load-more
+        max-pages=0
         type="all-company-content"
         query={ companyId: content.id }
         layout={ aliases }
@@ -70,6 +72,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     </else-if>
     <else-if(section.id)>
       <bizbash-load-more
+        max-pages=0
         type="website-scheduled-content"
         query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
         layout={ aliases }
