@@ -1,11 +1,11 @@
 module.exports = [
   {
     id: 62536,
-    name: 'Activations/Activities/Experiences',
+    name: 'Activations / Activities / Experiences',
     values: [
       {
         id: 62537,
-        name: 'Activations/Photo & Video Booths',
+        name: 'Activations / Photo & Video Booths',
       },
       {
         id: 62538,
@@ -17,7 +17,7 @@ module.exports = [
       },
       {
         id: 62540,
-        name: 'Body/Face Painting',
+        name: 'Body / Face Painting',
       },
       {
         id: 62541,
@@ -45,7 +45,7 @@ module.exports = [
       },
       {
         id: 62547,
-        name: 'Spa and Salon Services/Treatments',
+        name: 'Spa and Salon Services / Treatments',
       },
       {
         id: 62548,
@@ -65,7 +65,7 @@ module.exports = [
       },
       {
         id: 62552,
-        name: 'Ticket Agents/Brokers',
+        name: 'Ticket Agents / Brokers',
       },
       {
         id: 62553,
@@ -91,27 +91,27 @@ module.exports = [
       },
       {
         id: 62558,
-        name: 'Cell Phones/Walkie Talkies',
+        name: 'Cell Phones / Walkie Talkies',
       },
       {
         id: 62559,
-        name: 'Internet/Satellite Communications',
+        name: 'Internet / Satellite Communications',
       },
       {
         id: 62560,
-        name: 'Lighting Design/Equipment Companies',
+        name: 'Lighting Design / Equipment Companies',
       },
       {
         id: 62561,
-        name: 'Projection/Mapping',
+        name: 'Projection / Mapping',
       },
       {
         id: 62562,
-        name: 'Sound Design/Equipment Companies',
+        name: 'Sound Design / Equipment Companies',
       },
       {
         id: 62563,
-        name: 'Video Streaming/Platforms',
+        name: 'Video Streaming / Platforms',
       },
       {
         id: 62564,
@@ -121,11 +121,11 @@ module.exports = [
   },
   {
     id: 62565,
-    name: 'Catering/Food Services',
+    name: 'Catering / Food Services',
     values: [
       {
         id: 62571,
-        name: 'Decor/Design/Flowers',
+        name: 'Decor / Design / Flowers',
       },
       {
         id: 62566,
@@ -141,7 +141,7 @@ module.exports = [
       },
       {
         id: 62569,
-        name: 'Light/Office Caterers',
+        name: 'Light / Office Caterers',
       },
       {
         id: 62570,
@@ -163,7 +163,7 @@ module.exports = [
       },
       {
         id: 62574,
-        name: 'Event Design/Decor Companies',
+        name: 'Event Design / Decor Companies',
       },
       {
         id: 62575,
@@ -181,7 +181,7 @@ module.exports = [
   },
   {
     id: 62745,
-    name: 'Decor/Design/Flowers',
+    name: 'Decor / Design / Flowers',
     values: [
       {
         id: 62746,
@@ -193,7 +193,7 @@ module.exports = [
       },
       {
         id: 62748,
-        name: 'Event Design/Decor Companies',
+        name: 'Event Design / Decor Companies',
       },
       {
         id: 62749,
@@ -219,7 +219,7 @@ module.exports = [
     values: [
       {
         id: 62579,
-        name: 'Bands/Orchestras/Musicians',
+        name: 'Bands / Orchestras / Musicians',
       },
       {
         id: 62580,
@@ -227,7 +227,7 @@ module.exports = [
       },
       {
         id: 62581,
-        name: 'Choirs/Singers',
+        name: 'Choirs / Singers',
       },
       {
         id: 62582,
@@ -239,7 +239,7 @@ module.exports = [
       },
       {
         id: 62584,
-        name: 'Modeling Agents/Brokers',
+        name: 'Modeling Agents / Brokers',
       },
       {
         id: 62585,
@@ -259,7 +259,7 @@ module.exports = [
       },
       {
         id: 62589,
-        name: 'Talent Agents/Brokers',
+        name: 'Talent Agents / Brokers',
       },
       {
         id: 62590,
@@ -281,15 +281,15 @@ module.exports = [
       },
       {
         id: 62594,
-        name: 'Float Design/Production',
+        name: 'Float Design / Production',
       },
       {
         id: 62595,
-        name: 'Set and Stage Design/Construction',
+        name: 'Set and Stage Design / Construction',
       },
       {
         id: 62596,
-        name: 'Stage Management/Stagehands',
+        name: 'Stage Management / Stagehands',
       },
     ],
   },
@@ -319,11 +319,11 @@ module.exports = [
       },
       {
         id: 62759,
-        name: 'Lead Retrieval/Management Systems',
+        name: 'Lead Retrieval / Management Systems',
       },
       {
         id: 62760,
-        name: 'Online/Virtual Meeting Technology',
+        name: 'Online / Virtual Meeting Technology',
       },
       {
         id: 62761,
@@ -337,7 +337,7 @@ module.exports = [
   },
   {
     id: 62597,
-    name: 'Event/Meeting Planning & Marketing/PR',
+    name: 'Event / Meeting Planning & Marketing / PR',
     values: [
       {
         id: 62598,
@@ -367,7 +367,7 @@ module.exports = [
   },
   {
     id: 62763,
-    name: 'Gifts/Premiums/Awards',
+    name: 'Gifts / Premiums / Awards',
     values: [
       {
         id: 62764,
@@ -375,11 +375,11 @@ module.exports = [
       },
       {
         id: 62765,
-        name: 'Gift Bags/Packaging',
+        name: 'Gift Bags / Packaging',
       },
       {
         id: 62766,
-        name: 'Gifts/Premiums',
+        name: 'Gifts / Premiums',
       },
       {
         id: 62767,
@@ -393,7 +393,7 @@ module.exports = [
     values: [
       {
         id: 62769,
-        name: 'Charitable Organizations/Donation Recipients',
+        name: 'Charitable Organizations / Donation Recipients',
       },
       {
         id: 62770,
@@ -407,7 +407,7 @@ module.exports = [
   },
   {
     id: 62772,
-    name: 'Invitations/Registration',
+    name: 'Invitations / Registration',
     values: [
       {
         id: 62773,
@@ -427,17 +427,17 @@ module.exports = [
       },
       {
         id: 62777,
-        name: 'Name Tags/Lanyards',
+        name: 'Name Tags / Lanyards',
       },
       {
         id: 62778,
-        name: 'Online Invitation/Registration Tools',
+        name: 'Online Invitation / Registration Tools',
       },
     ],
   },
   {
     id: 62779,
-    name: 'Photography/Videography',
+    name: 'Photography / Videography',
     values: [
       {
         id: 62781,
@@ -451,7 +451,7 @@ module.exports = [
   },
   {
     id: 62780,
-    name: 'Photo Framing/Albums',
+    name: 'Photo Framing / Albums',
   },
   {
     id: 62783,
@@ -475,7 +475,7 @@ module.exports = [
       },
       {
         id: 62788,
-        name: 'Language/Translation Services',
+        name: 'Language / Translation Services',
       },
       {
         id: 62789,
@@ -489,11 +489,11 @@ module.exports = [
   },
   {
     id: 62604,
-    name: 'Rentals/Props',
+    name: 'Rentals / Props',
     values: [
       {
         id: 62605,
-        name: 'Air Conditioning/Heating/Generators',
+        name: 'Air Conditioning / Heating / Generators',
       },
       {
         id: 62606,
@@ -505,11 +505,11 @@ module.exports = [
       },
       {
         id: 62608,
-        name: 'Computer Rentals/Services',
+        name: 'Computer Rentals / Services',
       },
       {
         id: 62609,
-        name: 'Costumes/Wardrobe',
+        name: 'Costumes / Wardrobe',
       },
       {
         id: 62610,
@@ -525,7 +525,7 @@ module.exports = [
       },
       {
         id: 62613,
-        name: 'Lifts/Cherry Pickers',
+        name: 'Lifts / Cherry Pickers',
       },
       {
         id: 62614,
@@ -533,7 +533,7 @@ module.exports = [
       },
       {
         id: 62615,
-        name: 'Pipe/Drape',
+        name: 'Pipe / Drape',
       },
       {
         id: 62616,
@@ -545,7 +545,7 @@ module.exports = [
       },
       {
         id: 62618,
-        name: 'Red Carpet/Velvet Ropes',
+        name: 'Red Carpet / Velvet Ropes',
       },
       {
         id: 62619,
@@ -553,17 +553,17 @@ module.exports = [
       },
       {
         id: 62620,
-        name: 'Tables/Tabletop Rentals',
+        name: 'Tables / Tabletop Rentals',
       },
       {
         id: 62621,
-        name: 'Tents/Canopies/Inflatable Event Structures',
+        name: 'Tents / Canopies / Inflatable Event Structures',
       },
     ],
   },
   {
     id: 62791,
-    name: 'Security/Fire & Medical Services',
+    name: 'Security / Fire & Medical Services',
     values: [
       {
         id: 62793,
@@ -571,7 +571,7 @@ module.exports = [
       },
       {
         id: 62794,
-        name: 'Bomb/Contraband Detection Dogs',
+        name: 'Bomb / Contraband Detection Dogs',
       },
       {
         id: 62795,
@@ -591,25 +591,25 @@ module.exports = [
       },
       {
         id: 62799,
-        name: 'Personal/Executive Protection',
+        name: 'Personal / Executive Protection',
       },
     ],
   },
   {
     id: 62792,
-    name: 'Ambulance/Paramedics',
+    name: 'Ambulance / Paramedics',
   },
   {
     id: 62800,
-    name: 'Signage/Banners/Printing',
+    name: 'Signage / Banners / Printing',
     values: [
       {
         id: 62801,
-        name: 'Banners/Step-and-Repeats',
+        name: 'Banners / Step-and-Repeats',
       },
       {
         id: 62802,
-        name: 'Bus Wrapping/Vehicle Graphics',
+        name: 'Bus Wrapping / Vehicle Graphics',
       },
       {
         id: 62803,
@@ -665,7 +665,7 @@ module.exports = [
     values: [
       {
         id: 62815,
-        name: 'Babysitting/Childcare',
+        name: 'Babysitting / Childcare',
       },
       {
         id: 62816,
@@ -677,7 +677,7 @@ module.exports = [
       },
       {
         id: 62818,
-        name: 'Hospitality/Greeters',
+        name: 'Hospitality / Greeters',
       },
       {
         id: 62819,
@@ -689,7 +689,7 @@ module.exports = [
       },
       {
         id: 62821,
-        name: 'Medical/Emergency Support',
+        name: 'Medical / Emergency Support',
       },
       {
         id: 62822,
@@ -697,7 +697,7 @@ module.exports = [
       },
       {
         id: 62823,
-        name: 'Stage Management/Stagehands',
+        name: 'Stage Management / Stagehands',
       },
       {
         id: 62824,
@@ -719,11 +719,11 @@ module.exports = [
       },
       {
         id: 62828,
-        name: 'Lead Retrieval/Management Systems',
+        name: 'Lead Retrieval / Management Systems',
       },
       {
         id: 62829,
-        name: 'Research/Attendee Qualifying Services',
+        name: 'Research / Attendee Qualifying Services',
       },
       {
         id: 62830,
@@ -737,7 +737,7 @@ module.exports = [
   },
   {
     id: 62832,
-    name: 'Transportation/Parking Services',
+    name: 'Transportation / Parking Services',
     values: [
       {
         id: 62833,
@@ -745,7 +745,7 @@ module.exports = [
       },
       {
         id: 62834,
-        name: 'Bus Services/Rentals',
+        name: 'Bus Services / Rentals',
       },
       {
         id: 62835,
@@ -753,7 +753,7 @@ module.exports = [
       },
       {
         id: 62836,
-        name: 'Car/Taxi/Van Services',
+        name: 'Car / Taxi / Van Services',
       },
       {
         id: 62837,
@@ -769,15 +769,15 @@ module.exports = [
       },
       {
         id: 62840,
-        name: 'Helicopter Services/Rentals',
+        name: 'Helicopter Services / Rentals',
       },
       {
         id: 62841,
-        name: 'Limousine Services/Rentals',
+        name: 'Limousine Services / Rentals',
       },
       {
         id: 62842,
-        name: 'Private Jet Services/Rentals',
+        name: 'Private Jet Services / Rentals',
       },
       {
         id: 62843,
@@ -785,7 +785,7 @@ module.exports = [
       },
       {
         id: 62844,
-        name: 'Truck/Van Services/Rentals',
+        name: 'Truck / Van Services / Rentals',
       },
       {
         id: 62845,

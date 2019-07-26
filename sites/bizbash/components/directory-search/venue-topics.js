@@ -9,7 +9,7 @@ module.exports = [
     values: [
       {
         id: 62672,
-        name: 'Arcades/Virtual Reality Centers',
+        name: 'Arcades / Virtual Reality Centers',
       },
       {
         id: 62673,
@@ -53,13 +53,13 @@ module.exports = [
       },
       {
         id: 62683,
-        name: 'Wineries/Breweries/Distilleries',
+        name: 'Wineries / Breweries / Distilleries',
       },
     ],
   },
   {
     id: 62684,
-    name: 'Atriums/Lobbies (All Venues)',
+    name: 'Atriums / Lobbies (All Venues)',
   },
   {
     id: 62490,
@@ -71,19 +71,19 @@ module.exports = [
   },
   {
     id: 62492,
-    name: 'Bars/Nightclubs/Lounges',
+    name: 'Bars / Nightclubs / Lounges',
     values: [
       {
         id: 62493,
-        name: 'All Bars/Nightclubs/Lounges with Private Space/V.I.P. Rooms',
+        name: 'All Bars / Nightclubs / Lounges with Private Space / V.I.P. Rooms',
       },
       {
         id: 62494,
-        name: 'All Bars/Nightclubs/Lounges with Semiprivate Space',
+        name: 'All Bars / Nightclubs / Lounges with Semiprivate Space',
       },
       {
         id: 62495,
-        name: 'Bars/Lounges',
+        name: 'Bars / Lounges',
       },
       {
         id: 62496,
@@ -91,7 +91,7 @@ module.exports = [
       },
       {
         id: 62497,
-        name: 'Breweries/Pubs',
+        name: 'Breweries / Pubs',
       },
       {
         id: 62498,
@@ -107,13 +107,13 @@ module.exports = [
       },
       {
         id: 62501,
-        name: 'Wine/Champagne Bars',
+        name: 'Wine / Champagne Bars',
       },
     ],
   },
   {
     id: 62685,
-    name: 'Boats/Cruises',
+    name: 'Boats / Cruises',
     values: [
       {
         id: 62686,
@@ -157,7 +157,7 @@ module.exports = [
   },
   {
     id: 62690,
-    name: 'Entertainment Venues/Performance Spaces',
+    name: 'Entertainment Venues / Performance Spaces',
     values: [
       {
         id: 62691,
@@ -177,13 +177,13 @@ module.exports = [
       },
       {
         id: 62695,
-        name: 'Theaters/Performance Spaces',
+        name: 'Theaters / Performance Spaces',
       },
     ],
   },
   {
     id: 62696,
-    name: 'Golf Courses/Country Clubs',
+    name: 'Golf Courses / Country Clubs',
   },
   {
     id: 62697,
@@ -211,7 +211,7 @@ module.exports = [
       },
       {
         id: 62703,
-        name: 'Hotels With Meeting/Event Space',
+        name: 'Hotels With Meeting / Event Space',
       },
       {
         id: 62704,
@@ -223,7 +223,7 @@ module.exports = [
       },
       {
         id: 62706,
-        name: 'Resorts/Spas & Retreats',
+        name: 'Resorts / Spas & Retreats',
       },
       {
         id: 62707,
@@ -242,30 +242,30 @@ module.exports = [
   },
   {
     id: 62508,
-    name: 'Lofts/Photo Studios/Raw Spaces',
+    name: 'Lofts / Photo Studios / Raw Spaces',
     childFacet: [
       {
         id: 62509,
-        name: 'Pop-ups/Temporary Spaces',
+        name: 'Pop-ups / Temporary Spaces',
       },
     ],
   },
 
   {
     id: 62709,
-    name: 'Mansions/Houses',
+    name: 'Mansions / Houses',
   },
   {
     id: 62710,
-    name: 'Movie Studios/Sound Stages',
+    name: 'Movie Studios / Sound Stages',
   },
   {
     id: 62711,
-    name: 'Museums/Cultural Spaces',
+    name: 'Museums / Cultural Spaces',
     childFacet: [
       {
         id: 62712,
-        name: 'Art Galleries/Art Spaces/Auction Houses',
+        name: 'Art Galleries / Art Spaces / Auction Houses',
       },
       {
         id: 62713,
@@ -285,7 +285,7 @@ module.exports = [
       },
       {
         id: 62717,
-        name: 'Film/Media Museums',
+        name: 'Film / Media Museums',
       },
       {
         id: 62718,
@@ -293,11 +293,11 @@ module.exports = [
       },
       {
         id: 62719,
-        name: 'Historical/Cultural Institutions',
+        name: 'Historical / Cultural Institutions',
       },
       {
         id: 62720,
-        name: 'Science/Natural History Museums',
+        name: 'Science / Natural History Museums',
       },
     ],
   },
@@ -315,11 +315,11 @@ module.exports = [
       },
       {
         id: 62724,
-        name: 'Parks/Lawns/Plazas',
+        name: 'Parks / Lawns / Plazas',
       },
       {
         id: 62725,
-        name: 'Piers/Beaches',
+        name: 'Piers / Beaches',
       },
       {
         id: 62726,
@@ -337,7 +337,7 @@ module.exports = [
     childFacet: [
       {
         id: 62729,
-        name: 'Conference/Convention Centers',
+        name: 'Conference / Convention Centers',
       },
       {
         id: 62730,
@@ -345,11 +345,11 @@ module.exports = [
       },
       {
         id: 62731,
-        name: 'Golf Courses/Clubs',
+        name: 'Golf Courses / Clubs',
       },
       {
         id: 62732,
-        name: 'Hotels/Inns/Casinos',
+        name: 'Hotels / Inns / Casinos',
       },
       {
         id: 62733,
@@ -357,15 +357,15 @@ module.exports = [
       },
       {
         id: 62734,
-        name: 'Museums/Attractions',
+        name: 'Museums / Attractions',
       },
       {
         id: 62735,
-        name: 'Resorts/Retreats/Spas',
+        name: 'Resorts / Retreats / Spas',
       },
       {
         id: 62736,
-        name: 'Sports/Activity Venues',
+        name: 'Sports / Activity Venues',
       },
     ],
   },
@@ -415,7 +415,7 @@ module.exports = [
       },
       {
         id: 62519,
-        name: 'German/Austrian Restaurants',
+        name: 'German / Austrian Restaurants',
       },
       {
         id: 62520,
@@ -463,7 +463,7 @@ module.exports = [
       },
       {
         id: 62531,
-        name: 'Russian/Eastern European Restaurants',
+        name: 'Russian / Eastern European Restaurants',
       },
       {
         id: 62532,
@@ -475,7 +475,7 @@ module.exports = [
       },
       {
         id: 62534,
-        name: 'Thai/Vietnamese Restaurants',
+        name: 'Thai / Vietnamese Restaurants',
       },
       {
         id: 62535,
@@ -489,15 +489,15 @@ module.exports = [
   },
   {
     id: 62740,
-    name: 'Spas (Day)/Relaxation Places/Salons',
+    name: 'Spas (Day) / Relaxation Places / Salons',
   },
   {
     id: 62741,
-    name: 'Stadiums/Arenas',
+    name: 'Stadiums / Arenas',
   },
   {
     id: 62742,
-    name: 'Terraces/Roofs/Gardens/Patios (All Venues)',
+    name: 'Terraces / Roofs / Gardens / Patios (All Venues)',
     childFacet: [
       {
         id: 62743,
