@@ -1,6 +1,7 @@
 import querystring from 'querystring';
 
 $ const { req } = out.global;
+$ const block = 'directory-facets';
 
 $ const {
   facets,
@@ -29,22 +30,34 @@ $ const facetUrl = (id) => {
   return string ? `${req.path}?${string}` : req.path;
 };
 
-<if(facets.length)>
-  <ul>
+<if(facets && facets.length)>
+  <ul class=`${block}__list`>
     <for|facet| of=facets>
       $ const isOpen = activeIds.includes(facet.id);
       $ const isActive = isActiveId(facet.id);
 
-      $ const classNames = ["facet", `facet--${facet.id}`];
-      $ if (isOpen) classNames.push("facet--open");
-      $ if (isActive) classNames.push("facet--active");
+      $ const classNames = [`${block}__item`, `${block}__item--${facet.id}`];
+      $ const linkClasses = [`${block}__link`]
+      $ if (isOpen) classNames.push(`${block}__item--open`);
+      $ if (isActive) linkClasses.push(`${block}__link--active`);
 
       <li class=classNames>
-        <a href=facetUrl(facet.id)> ${facet.name}</a>
+        <a class=linkClasses href=facetUrl(facet.id)>
+          ${facet.name}
+        </a>
         <if(Array.isArray(facet.values))>
-          <cms-browser-component name="PlusMinusToggleButton" props={ targets: [`.facet--${facet.id}`], toggleClass: "facet--open", initiallyExpanded: isOpen } />
-          <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
+          <cms-browser-component
+            name="PlusMinusToggleButton"
+            props={
+              className: `${block}__toggle`,
+              targets: [`.${block}__item--${facet.id}`],
+              toggleClass: `${block}__item--open`,
+              initiallyExpanded: isOpen
+            }
+          />
         </if>
+
+        <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
       </li>
     </for>
   </ul>
