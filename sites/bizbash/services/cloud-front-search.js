@@ -4,6 +4,7 @@ const { buildImgixUrl } = require('@base-cms/image');
 const { get } = require('@base-cms/object-path');
 
 const { CDN_IMAGE_HOSTNAME = 'base.imgix.net' } = process.env;
+const API_URI = 'https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test';
 
 const addFacetUrlParams = (urlParams, type, facets) => {
   const params = urlParams;
@@ -27,10 +28,11 @@ const validateSearch = (urlParams) => {
   return params;
 };
 
-const search = async (uri, {
+const search = async ({
   phrase,
   pageNumber = 1,
   size = 25,
+  sort = 'featured desc, modified desc',
   contentType,
   exprFeatured = '_score*((_time > featured_start && _time < featured_end) ? 100 : 1)',
 }) => {
@@ -38,6 +40,7 @@ const search = async (uri, {
   const params = {
     size,
     start,
+    sort,
     'expr.featured': exprFeatured,
   };
   if (!phrase) {
@@ -52,7 +55,7 @@ const search = async (uri, {
   fq.push(`(term field=type '${contentType}')`);
   params.fq = `(and ${fq.join(' ')})`;
 
-  const url = `${uri}?${querystring.stringify(params)}`;
+  const url = `${API_URI}?${querystring.stringify(params)}`;
   const res = await fetch(url);
   if (!res.ok) {
     const err = new Error(res.statusMessage);

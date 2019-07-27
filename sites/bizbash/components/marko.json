@@ -27,22 +27,7 @@
     },
     "bizbash-directory-search": {
       "template": "./directory-search/index.marko",
-      "@api-uri": {
-        "type": "string",
-        "default-value": "https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test"
-      },
-      "@expr-featured": {
-        "type": "string",
-        "default-value": "_score*((_time > featured_start && _time < featured_end) ? 100 : 1)"
-      },
-      "@sort": {
-        "type": "string",
-        "default-value": "featured desc, modified desc"
-      },
-      "@page-size": {
-        "type": "number",
-        "default-value": 25
-      },
+      "@search-options": "object",
       "@topics": {
         "type": "object",
         "required": true

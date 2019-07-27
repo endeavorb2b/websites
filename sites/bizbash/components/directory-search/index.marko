@@ -9,6 +9,12 @@ $ const { phrase = '', topicId, marketId, page = 1 } = req.query;
 $ const activeTopic = findActiveFacet(input.topics, topicId);
 $ const activeMarket = findActiveFacet(markets, marketId);
 
+$ const searchParams = {
+  ...input.searchOptions,
+  contentType: input.contentType,
+  pageNumber: page,
+};
+
 <!-- $ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
 
 $ const args = {
@@ -54,12 +60,7 @@ $ const args = {
     />
   </div>
   <div class="col-8 mb-block">
-    <await(cloudfront.search(input.apiUri, {
-      contentType: input.contentType,
-      size: input.pageSize,
-      pageNumber: page,
-      exprFeatured: input.exprFeatured,
-    }))>
+    <await(cloudfront.search(searchParams))>
       <@then|{ hits }|>
         <search-hits hits=hits />
       </@then>
