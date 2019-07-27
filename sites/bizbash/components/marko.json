@@ -27,11 +27,11 @@
     },
     "bizbash-directory-search": {
       "template": "./directory-search/index.marko",
-      "@api": {
+      "@api-uri": {
         "type": "string",
         "default-value": "https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test"
       },
-      "@expression": {
+      "@expr-featured": {
         "type": "string",
         "default-value": "_score*((_time > featured_start && _time < featured_end) ? 100 : 1)"
       },

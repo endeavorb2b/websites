@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const querystring = require('querystring');
 const { buildImgixUrl } = require('@base-cms/image');
 const { get } = require('@base-cms/object-path');
 
@@ -24,6 +25,41 @@ const validateSearch = (urlParams) => {
     params['q.parser'] = 'structured';
   }
   return params;
+};
+
+const search = async (uri, {
+  phrase,
+  pageNumber = 1,
+  size = 25,
+  contentType,
+  exprFeatured = '_score*((_time > featured_start && _time < featured_end) ? 100 : 1)',
+}) => {
+  const start = (pageNumber - 1) * size;
+  const params = {
+    size,
+    start,
+    'expr.featured': exprFeatured,
+  };
+  if (!phrase) {
+    // No search phrase, match all.
+    params.q = 'matchall';
+    params['q.parser'] = 'structured';
+  } else {
+    // Set search phrase
+    params.q = phrase;
+  }
+  const fq = [];
+  fq.push(`(term field=type '${contentType}')`);
+  params.fq = `(and ${fq.join(' ')})`;
+
+  const url = `${uri}?${querystring.stringify(params)}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    const err = new Error(res.statusMessage);
+    err.statusCode = res.statusText;
+    throw err;
+  }
+  return res.json();
 };
 
 const retrieveResults = async ({
@@ -92,6 +128,7 @@ const getPaginationInfo = (start, pageSize, total) => {
 };
 
 module.exports = {
+  search,
   retrieveResults,
   getFacetUrl,
   generateResultImage,

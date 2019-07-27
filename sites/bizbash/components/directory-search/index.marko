@@ -1,21 +1,13 @@
 import markets from './markets';
 import findActiveFacet from './find-active-facet';
+import cloudfront from '../../services/cloud-front-search';
 
-$ const { req } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+$ const { req, onAsyncBlockError } = out.global;
 $ const { phrase = '', topicId, marketId, page = 1 } = req.query;
-$ const start = (page - 1) * input.pageSize;
 
 $ const activeTopic = findActiveFacet(input.topics, topicId);
 $ const activeMarket = findActiveFacet(markets, marketId);
-
-$ const queryOptions = {
-  api: input.api,
-  type: input.contentType,
-  facets: {
-    market: marketId || undefined,
-    topic: topicId || undefined,
-  },
-};
 
 <!-- $ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
 
@@ -50,20 +42,37 @@ $ const args = {
   <div class="col-4 mb-block">
     <facet-container
       facets=markets
-      title="Markets"
+      title="Market"
       param-name="marketId"
       active-ids=activeMarket.activeIds
     />
     <facet-container
       facets=input.topics
-      title="Categories"
+      title="Category"
       param-name="topicId"
       active-ids=activeTopic.activeIds
     />
   </div>
   <div class="col-8 mb-block">
-    <!-- <ul class="item-list">
-      <div class="feature-results">
+    <await(cloudfront.search(input.apiUri, {
+      contentType: input.contentType,
+      size: input.pageSize,
+      pageNumber: page,
+      exprFeatured: input.exprFeatured,
+    }))>
+      <@then|{ hits }|>
+        <search-hits hits=hits />
+      </@then>
+      <@catch|err|>
+        $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
+        <pre>An unexpected error occurred: ${err.message}</pre>
+        <if(isDevelopment)>
+          <pre>${err.stack}</pre>
+        </if>
+      </@catch>
+    </await>
+    <!-- <ul class="item-list"> -->
+      <!-- <div class="feature-results">
         <if(topicId && marketId)>
           <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
             <if(content)>
@@ -99,8 +108,9 @@ $ const args = {
             </if>
           </bizbash-pinned-directory-card>
         </if>
-      </div>
-      <div class="search-results">
+      </div> -->
+
+      <!-- <div class="search-results">
         <ul class="item-list item-list--flush item-list--card">
           <div class="item-list__contents">
             <await(retrieveResults(args))>
@@ -158,7 +168,7 @@ $ const args = {
             </await>
           </div>
         </ul>
-      </div>
-    </ul> -->
+      </div> -->
+    <!-- </ul> -->
   </div>
 </div>
