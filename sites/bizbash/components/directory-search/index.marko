@@ -13,26 +13,12 @@ $ const searchParams = {
   ...input.searchOptions,
   contentType: input.contentType,
   pageNumber: page,
+  phrase,
+  facets: [
+    { field: 'market', value: marketId },
+    { field: 'topic', value: topicId },
+  ]
 };
-
-<!-- $ const { api, featureExpression, sort, pageSize, type, facets } = supplierDirectory
-
-$ const args = {
-  api: api,
-  urlParams: {
-    'expr.featured': featureExpression,
-    sort: sort,
-    size: pageSize,
-    start: start,
-    page: page,
-    q: q,
-  },
-  type: type,
-  facets: {
-    market: market,
-    topic: topic,
-  },
-}; -->
 
 <div class="row">
   <div class="col mb-block">
@@ -61,6 +47,7 @@ $ const args = {
   </div>
   <div class="col-8 mb-block">
     <await(cloudfront.search(searchParams))>
+      <!-- @todo Add pagination / load more -->
       <@then|{ hits }|>
         <search-hits hits=hits />
       </@then>
@@ -109,66 +96,6 @@ $ const args = {
             </if>
           </bizbash-pinned-directory-card>
         </if>
-      </div> -->
-
-      <!-- <div class="search-results">
-        <ul class="item-list item-list--flush item-list--card">
-          <div class="item-list__contents">
-            <await(retrieveResults(args))>
-              <@then|response|>
-                <if(response.hits)>
-                  <for|result, index| of=response.hits.hit>
-                      <li class="item-list__item">
-                        <div class="item item--image-left">
-                          <div class="item__image">
-                            <a href=`/${result.id}`>
-                              <img src=generateResultImage(result) alt=`${result.fields.name}` width="176" height="99">
-                            </a>
-                          </div>
-                          <div class="item_contents">
-                            <h5 class="item__title">
-                              <a href=`/${result.id}`>
-                                ${result.fields.name}
-                              </a>
-                            </h5>
-                            <p class="item__teaser">
-                              ${result.fields.address1}<br>
-                              ${result.fields.city}, ${result.fields.state} ${result.fields.zip} ${result.fields.country}
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                  </for>
-                  <ul class="list-unstyled d-flex justify-content-between pagination">
-                    $ const prevLink = getPaginationLink(req, -1, pageSize, response.hits.found);
-                    $ const nextLink = getPaginationLink(req, 1, pageSize, response.hits.found);
-                    $ const paginationInfo = getPaginationInfo(start, pageSize, response.hits.found);
-                    <li class="previous disabled">
-                      <a href=`${prevLink}`><< Previous</a>
-                    </li>
-                    <li class="current">
-                      ${paginationInfo}
-                    </li>
-                    <li class="next">
-                      <a href=`${nextLink}`>
-                        Next >>
-                      </a>
-                    </li>
-                  </ul>
-                </if>
-              </@then>
-              <@catch|err|>
-                $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
-                <if(input.onError)>
-                  <${input.onError} err=err />
-                </if>
-                <else>
-                  <pre>An unexpected error occurred: ${err.message}</pre>
-                </else>
-              </@catch>
-            </await>
-          </div>
-        </ul>
       </div> -->
     <!-- </ul> -->
   </div>

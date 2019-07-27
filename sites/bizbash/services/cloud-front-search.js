@@ -35,6 +35,7 @@ const search = async ({
   sort = 'featured desc, modified desc',
   contentType,
   exprFeatured = '_score*((_time > featured_start && _time < featured_end) ? 100 : 1)',
+  facets = [],
 }) => {
   const start = (pageNumber - 1) * size;
   const params = {
@@ -48,11 +49,15 @@ const search = async ({
     params.q = 'matchall';
     params['q.parser'] = 'structured';
   } else {
-    // Set search phrase
+    // Set search phrase.
     params.q = phrase;
   }
-  const fq = [];
-  fq.push(`(term field=type '${contentType}')`);
+
+  // Apply terms.
+  const fq = facets.filter(f => (f && f.field && f.value)).reduce((arr, f) => {
+    arr.push(`(term field=${f.field} '${f.value}')`);
+    return arr;
+  }, [`(term field=type '${contentType}')`]);
   params.fq = `(and ${fq.join(' ')})`;
 
   const url = `${API_URI}?${querystring.stringify(params)}`;
