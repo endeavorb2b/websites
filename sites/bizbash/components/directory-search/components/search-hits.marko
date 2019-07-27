@@ -1,0 +1,12 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+
+$ const hits = getAsObject(input, 'hits');
+$ const { found = 0 } = hits;
+$ const nodes = getAsArray(hits, 'hit');
+
+<h5>Total Results: ${found}</h5>
+<endeavor-item-list flush=true card=true modifiers=["unjustified"] items=nodes>
+  <@item|{ item }|>
+    <search-hit item=item />
+  </@item>
+</endeavor-item-list>
