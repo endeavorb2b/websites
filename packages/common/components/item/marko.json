@@ -28,6 +28,7 @@
         "@link-attrs": "object",
         "@link-path": "string",
         "@link-to": "object",
+        "@link-class": "string",
         "@height": "number",
         "@lazyload": {
           "type": "boolean",
