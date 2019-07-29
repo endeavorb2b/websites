@@ -357,6 +357,12 @@ body {
 
   &--directory-search-hit {
     padding: 1rem 0;
+    img {
+      width: 240px;
+      @include media-breakpoint-down(sm) {
+        width: 176px;
+      }
+    }
     #{ $self } {
       &__image {
         margin-top: 0;
