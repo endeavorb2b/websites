@@ -1,0 +1,24 @@
+import contentListFragment from '../server/api/fragments/content-list';
+
+<cms-query-related-published-content|{ nodes }| limit=10 content-id=input.contentId query-fragment=contentListFragment>
+  <if(nodes.length)>
+    <endeavor-item-list modifiers=["unjustified"] items=nodes>
+      <@header>Related</@header>
+      <@item|{ item }|>
+        <bizbash-list-item content=item />
+      </@item>
+    </endeavor-item-list>
+  </if>
+</cms-query-related-published-content>
+
+<if(!['contact', 'company'].includes(input.contentType))>
+  <website-scheduled-content-list
+    query={ sectionId: input.sectionId, excludeContentIds: [input.contentId], limit: 5, queryFragment: contentListFragment }
+    item-list={ modifiers: ["unjustified"] }
+  >
+    <@header>Latest in ${input.sectionName}</@header>
+    <@item|{ node }|>
+      <bizbash-list-item content=node />
+    </@item>
+  </website-scheduled-content-list>
+</if>

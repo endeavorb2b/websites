@@ -17,32 +17,29 @@ $ const adSlots = {
 
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
-    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
   </@above-container>
 
-  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true }>
-    <@card-item|{ node }|>
-      <bizbash-hero-card content=node />
-    </@card-item>
-    <@list-item|{ node }|>
-      <bizbash-list-item content=node />
-    </@list-item>
-  </website-scheduled-content-hero>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
+      </div>
     </div>
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 5,
-        sectionId: section.id,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
+    <bizbash-load-more
+      type="website-scheduled-content"
+      query={ sectionId: section.id }
+      layout={ aliases }
     />
   </@below-container>
 

@@ -1,4 +1,3 @@
-const { getAsArray } = require('@base-cms/object-path');
 
 /**
  * Generates an HTML email template notifying contact(s) of a user's inquiry.
@@ -18,20 +17,8 @@ module.exports = ({
   $global,
   content,
   payload,
-  to,
-  from,
-  bcc,
-  directSend,
+  addresses,
 }) => {
-  const contacts = getAsArray(content, 'inquiryContacts')
-    .map(({ name, email }) => ({ name, email }))
-    .filter(({ email }) => email);
-  const addresses = {
-    to: directSend && contacts.length ? contacts : to,
-    cc: directSend && contacts.length ? to : undefined,
-    bcc,
-    from,
-  };
   const subject = 'A new inquiry submission was received.';
   const input = {
     $global,

@@ -50,14 +50,14 @@ $ if (userRegistration.isRequired && identityX) titleModifiers.push('locked');
     </if>
     <@footer-left|{ block }|>
       <if(company.id)>
-        <endeavor-content-company-name use-prefix=false company=company />
+        <endeavor-content-company-name company=company />
       </if>
       <else>
-        <endeavor-content-authors block=block use-prefix=false content=content />
+        <endeavor-content-authors block=block content=content />
       </else>
     </@footer-left>
     <@footer-right|{ block }|>
-      <if(content.type === 'event')>
+      <if(content.type === 'event' || content.type === 'webinar')>
         <span class=`${block}__content-event-dates`>
           <endeavor-content-starts block=block obj=content />
           <endeavor-content-ends block=block obj=content />

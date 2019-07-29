@@ -1,12 +1,6 @@
 import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
 
 $ const { config } = out.global;
-$ const query = {
-  contentTypes: ['Webinar'],
-  limit: 9,
-  sortField: 'startDate',
-  sortOrder: 'desc',
-};
 $ const page = pageDetails('Webcasts', config);
 
 <theme-default-published-content-layout page=page>
@@ -35,14 +29,12 @@ $ const page = pageDetails('Webcasts', config);
   </div>
 
   <@below-container>
-    <div class="published-content-query-load-more">
-      <endeavor-published-content-query-load-more
-        query=query
-        layout="webinar"
-      />
-    </div>
+    <bizbash-load-more
+      type="all-published-content"
+      query={ contentTypes: ["Webinar"], limit: 25, sortField: "startDate", sortOrder: "desc" }
+      layout={ name: "list-large" }
+    />
   </@below-container>
-
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=false />

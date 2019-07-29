@@ -1,5 +1,21 @@
 {
   "tags": {
+    "endeavor-item-card-deck": {
+      "template": "./card-deck.marko",
+      "@items": "array",
+      "@modifiers": "array",
+      "@slots <slot>[]": {
+        "@position": {
+          "type": "string",
+          "required": true
+        },
+        "@index": {
+          "type": "number",
+          "required": true
+        },
+        "@modifiers": "array"
+      }
+    },
     "endeavor-item": {
       "template": "./item.marko",
       "<image>": {
@@ -61,6 +77,9 @@
         "type": "boolean",
         "default-value": false
       }
+    },
+    "endeavor-item-contents": {
+      "template": "./item-contents.marko"
     },
     "endeavor-item-list": {
       "template": "./list.marko",

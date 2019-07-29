@@ -1,0 +1,199 @@
+import { getAsObject, getAsArray, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import { retrieve, retrieveResults, getFacetUrl, generateResultImage, getPaginationInfo, getPaginationLink } from '../../../services/cloud-front-search';
+import { venueDirectory } from '../../../config/directory-search';
+
+$ const { site, req } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+};
+$ const { api, featureExpression, sort, pageSize, type, facets } = venueDirectory
+$ const { q = '', topic, market, page = 1 } = req.query;
+$ const start = (page - 1) * pageSize;
+$ const activeTopic = facets.topic.values.filter(t => t.id === Number(topic));
+$ const args = {
+  api: api,
+  urlParams: {
+    'expr.featured': featureExpression,
+    sort: sort,
+    size: pageSize,
+    start: start,
+    page: page,
+    q: q,
+  },
+  type: type,
+  facets: {
+    market: market,
+    topic: topic,
+  },
+};
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="small">
+      <form id="search" class="row">
+        <div class="col-lg-11 col-md-10 mb-block" >
+            <input name="q" type="input" class="form-control" id="search-input" placeholder="keyword" value=q>
+          <if(market)>
+            <input name="market" type="hidden" value=market>
+          </if>
+          <if(topic)>
+            <input name="topic" type="hidden" value=topic>
+          </if>
+        </div>
+        <div class="col-lg-1 col-md-2 mb-block" >
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+      <div class="row">
+        <div class="content-query-load-more__col-ad">
+        <div class="directory-facets">
+          <for|facetTypeKey, facetType| in=facets>
+            <ul class="list-group border-0">
+              <h3 class="facet-title">${facetType.name}</h3>
+              <for|key, facet| in=facetType.values>
+                <li class="list-group-item border-0">
+                  $ const url = getFacetUrl(req, facetTypeKey, facet.id);
+                  $ const activeClass = Number(args.facets[facetTypeKey]) === Number(facet.id) ? 'active' : '' ;
+                  <a class=`${activeClass}` href=`${url}`>${ facet.name }</a>
+                  <if(facet.childFacets)>
+                    $ const facetTargetToggleClass = `.facet-${facet.id}`;
+                    $ const facetTargetToggleOpenClass = `facet-${facet.id}--open`;
+                    <cms-browser-component name="PlusMinusToggleButton" props={ targets: [facetTargetToggleClass], toggleClass: 'plus-minus-toggler--open' } />
+                    <ul class=`list-group border-0 facet-${facet.id}`>
+                      <for|childFacet, index| of=facet.childFacets>
+                        <li class="list-group-item border-0">
+                          $ const url = getFacetUrl(req, facetTypeKey, childFacet.id);
+                          $ const activeClass = Number(args.facets[facetTypeKey]) === Number(childFacet.id) ? 'active' : '' ;
+                          <a class=`${activeClass}` href=`${url}`>${ childFacet.name }</a>
+                        </li>
+                      </for>
+                    </ul>
+                  </if>
+                  <!--utton role="button" @click="setFacet(facet)">{{ facet.name }}</button-->
+                </li>
+              </for>
+            </ul>
+          </for>
+        </div>
+
+        </div>
+        <div id="results" class="content-query-load-more__col-list">
+          <ul class="item-list ">
+            <div class="feature-results">
+              <if(topic && market)>
+                <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
+                  <if(content)>
+                    $ const primarySection = getAsObject(content, 'primarySection');
+                    $ const primaryImage = getAsObject(content, 'primaryImage');
+                    $ const dateFormat = 'MMMM D, YYYY';
+                    $ const imageInput = {
+                      image: primaryImage,
+                      lazyload: false,
+                      linkTo: content,
+                      modifiers: ['fluid', '3by2'],
+                      options: { w: 642, h: 428, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
+                      position: 'top',
+                      usePlaceholder: false,
+                      ...getAsObject(input, 'image'),
+                    };
+                    <div class="featured-directory-listing-item">
+                      <div class="sponsoreship-title">
+                        ${activeTopic[0].name} by ${content.shortName}
+                      </div>
+                      <endeavor-item modifiers=["card", "hero-card"]>
+
+                        <@image ...imageInput />
+                        <@title tag="h5" modifiers=["medium"]>
+                          <cms-content-short-name tag=null obj=content link=true />
+                        </@title>
+                        <@description tag="p">
+                          ${content.address1}<br>
+                          ${content.city}, ${content.state} ${content.zip} ${content.country}
+                        </@description>
+                      </endeavor-item>
+                    </div>
+                    </if>
+                </bizbash-pinned-directory-card>
+              </if>
+            </div>
+            <div class="search-results">
+                <ul class="item-list item-list--flush item-list--card">
+                  <div class="item-list__contents">
+                  <await(retrieveResults(args))>
+                    <@then|response|>
+                      <if(response.hits)>
+                        <for|result, index| of=response.hits.hit>
+                            <li class="item-list__item">
+                              <div class="item item--image-left">
+                                <div class="item__image">
+                                  <a href=`/${result.id}`>
+                                    <img src=generateResultImage(result) alt=`${result.fields.name}` width="176" height="99">
+                                  </a>
+                                </div>
+                                <div class="item_contents">
+                                  <h5 class="item__title">
+                                    <a href=`/${result.id}`>
+                                      ${result.fields.name}
+                                    </a>
+                                  </h5>
+                                  <p class="item__teaser">
+                                    ${result.fields.address1}<br>
+                                    ${result.fields.city}, ${result.fields.state} ${result.fields.zip} ${result.fields.country}
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                        </for>
+                        <ul class="list-unstyled d-flex justify-content-between pagination">
+                          $ const prevLink = getPaginationLink(req, -1, pageSize, response.hits.found);
+                          $ const nextLink = getPaginationLink(req, 1, pageSize, response.hits.found);
+                          $ const paginationInfo = getPaginationInfo(start, pageSize, response.hits.found);
+                          <li class="previous disabled">
+                            <a href=`${prevLink}`><< Previous</a>
+                          </li>
+                          <li class="current">
+                            ${paginationInfo}
+                          </li>
+                          <li class="next">
+                            <a href=`${nextLink}`>
+                              Next >>
+                            </a>
+                          </li>
+                        </ul>
+                      </if>
+                    </@then>
+                    <@catch|err|>
+                      $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
+                      <if(input.onError)>
+                        <${input.onError} err=err />
+                      </if>
+                      <else>
+                        <pre>An unexpected error occurred: ${err.message}</pre>
+                      </else>
+                    </@catch>
+                  </await>
+                  </div>
+                </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
+  </@footer>
+</theme-default-website-section-layout>

@@ -6,7 +6,6 @@ $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
 $ const section = getAsObject(content, 'primarySection');
 $ const aliases = hierarchyAliases(section);
-$ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
@@ -30,7 +29,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     <div class="row">
       <div class="col">
         <div class="page-wrapper__header">
-          <endeavor-content-block-page-header content=content />
+          <endeavor-content-block-page-header content=content date-format="MMMM D, YYYY" />
         </div>
       </div>
     </div>
@@ -39,47 +38,44 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       <div class="col-lg-8">
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
       </div>
-
-      <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
-        <if(!['contact', 'company'].includes(content.type))>
-          <website-scheduled-content-list query={ sectionId: section.id, excludeContentIds: [content.id], limit: 5 }>
-            <@header>Related</@header>
-            <@item|{ node }|>
-              <bizbash-list-item content=node />
-            </@item>
-          </website-scheduled-content-list>
-        </if>
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
+      <aside class="col-lg-4 page-right-rail">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+        <bizbash-related-content
+          content-id=content.id
+          content-type=content.type
+          section-id=section.id
+          section-name=section.name
+        />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       </aside>
     </div>
   </div>
 
   <@below-container>
     <if(content.type === 'contact')>
-      <endeavor-content-query-load-more-author
-        header=`More from ${content.name}`
+      <bizbash-load-more
+        max-pages=0
+        type="all-author-content"
         query={ contactId: content.id }
-        ads={ aliases }
+        layout={ aliases }
+        header=`More from ${content.name}`
       />
     </if>
-    <else-if(content.type === 'company')>
-      <endeavor-content-query-load-more-company
-        header=`More from ${content.name}`
+    <!-- <else-if(content.type === 'company')>
+      <bizbash-load-more
+        max-pages=0
+        type="all-company-content"
         query={ companyId: content.id }
-        ads={ aliases }
+        layout={ aliases }
+        header=`More from ${content.name}`
       />
-    </else-if>
+    </else-if> -->
     <else-if(section.id)>
-      <endeavor-content-query-load-more
+      <bizbash-load-more
+        type="website-scheduled-content"
+        query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
+        layout={ aliases }
         header=`More in ${section.name}`
-        query={
-          skip: 5,
-          excludeContentIds: [content.id],
-          sectionId: section.id,
-        }
-        ads={ aliases }
-        native-x={ placement: 'card', aliases, index: 0 }
       />
     </else-if>
   </@below-container>

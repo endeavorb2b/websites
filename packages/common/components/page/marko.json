@@ -13,7 +13,7 @@
       "@options": {
         "type": "object",
         "default-value": {
-          "w": 720, "h": 405, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
+          "w": 720
         }
       }
     },

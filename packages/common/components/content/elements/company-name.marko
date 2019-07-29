@@ -1,5 +1,3 @@
-$ const prefixClass = `${input.block}__prefix`;
-
 <cms-content-name
   tag=input.tag
   class=input.class
@@ -7,12 +5,4 @@ $ const prefixClass = `${input.block}__prefix`;
   modifiers=['company-name']
   obj=input.company
   link=true
->
-  <@before>
-    <if(input.usePrefix)>
-      <span class=prefixClass>
-        ${input.prefix}
-      </span>
-    </if>
-  </@before>
-</cms-content-name>
+/>

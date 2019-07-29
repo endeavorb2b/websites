@@ -1,6 +1,7 @@
 import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
@@ -23,7 +24,7 @@ $ const adSlots = {
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
   </@above-container>
 
-  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true }>
+  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true, queryFragment: contentListFragment }>
     <@card-item|{ node }|>
       <bizbash-hero-card content=node />
     </@card-item>
@@ -40,15 +41,15 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "industry-buzz", limit: 5 }>
-        <@header href="/industry-buzz">Industry Buzz</@header>
+      <website-scheduled-content-list query={ sectionAlias: "industry-buzz", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header>Industry Buzz</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
         </@item>
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "production-strategy", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "production-strategy", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/production-strategy">Production & Strategy</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -56,7 +57,7 @@ $ const adSlots = {
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "style-decor", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "style-decor", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor">Style & Decor</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -67,7 +68,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "catering", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "catering", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/catering">Catering</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -78,7 +79,7 @@ $ const adSlots = {
       <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
     </div>
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/local-venues-destinations">Venues & Destinations</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -89,7 +90,7 @@ $ const adSlots = {
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <website-scheduled-content-list query={ sectionAlias: "bizbash-lists", limit: 5 }>
+      <website-scheduled-content-list query={ sectionAlias: "bizbash-lists", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/bizbash-lists">BizBash Lists</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
@@ -102,6 +103,7 @@ $ const adSlots = {
         header="In Print"
         as-card=true
         content-count=0
+        modifiers=["height-100"]
       />
     </div>
     <div class="col-lg-4 ad-rail">
@@ -110,19 +112,13 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 5,
-        sectionId: section.id,
-      }
-      load-more={
-        maxPages: 0,
-      }
-      ads={ aliases }
-      native-x={ placement: 'card', aliases, index: 0 }
+    <bizbash-load-more
+      type="website-scheduled-content"
+      max-pages=0
+      query={ sectionId: section.id, skip: 5 }
+      layout={ name: "default", aliases }
     />
   </@below-container>
-
 
   <@footer>
     <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />

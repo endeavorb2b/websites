@@ -48,7 +48,8 @@
   padding-left: 0;
 }
 
-.site-navbar-toggler {
+.site-navbar-toggler,
+.plus-minus-toggler {
   padding: 0;
   margin-top: auto;
   margin-bottom: auto;
@@ -195,7 +196,7 @@
         }
       }
       &__link {
-        @include theme-navbar-link-color($theme-site-navbar-secondary-colors);
+        @include theme-navbar-link-color($theme-site-navbar-tertiary-colors);
         @include theme-navbar-link-decoration($theme-site-navbar-secondary-decorations);
         padding: $theme-site-navbar-secondary-link-padding;
         padding-top: 0;

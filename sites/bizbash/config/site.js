@@ -2,7 +2,7 @@ const ads = require('./ads');
 const nativeX = require('./native-x');
 
 module.exports = {
-  company: 'BizBash Media, Inc.',
+  company: 'BizBash Media, Inc',
   ads,
   nativeX,
   logos: {
@@ -40,8 +40,8 @@ module.exports = {
         { href: '/gathergeeks', label: 'GatherGeeks' },
         { href: '/page/our-events', label: 'Our Events & Awards' },
         { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-        { href: '#', label: 'Find A Venue' },
-        { href: '#', label: 'Find Suppliers' },
+        { href: '/venue-directory', label: 'Find A Venue' },
+        { href: '/supplier-directory', label: 'Find Suppliers' },
         { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
       ],
     },
@@ -70,8 +70,9 @@ module.exports = {
           { href: '/gathergeeks', label: 'GatherGeeks' },
           { href: '/page/our-events', label: 'Our Events & Awards' },
           { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
-          { href: '#', label: 'Find A Venue' },
-          { href: '#', label: 'Find Suppliers' },
+          { href: '/venue-directory', label: 'Find A Venue' },
+          { href: '/supplier-directory', label: 'Find Suppliers' },
+          { href: '/bermuda', label: 'Bermuda Event Planner\'s Guide' },
           { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
         ],
       },
@@ -87,10 +88,10 @@ module.exports = {
       },
     },
   },
-  // gtmContainer: 'GTM-5TWCFJ',
+  gtmContainer: 'GTM-5TWCFJ',
   search: {
     engine: 'google',
-    apiKey: '017383739850048358259:p0nyaiybgnq',
+    apiKey: '017383739850048358259:n2wdsrv6_py',
   },
   subscriptions: {
     newsletters: 'https://www.bizbash.com/subscribe/email',
@@ -109,8 +110,8 @@ module.exports = {
   },
   inquiry: {
     enabled: true,
-    directSend: false,
-    sendTo: 'Endeavor Developer <developer@endeavorb2b.com>',
+    directSend: true,
+    sendTo: 'connect@bizbash.com',
     sendFrom: 'BizBash.com <noreply@bizbash.com>',
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',

@@ -1,0 +1,54 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../../api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+};
+
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <website-scheduled-content-hero query={ sectionId: section.id, requiresImage: true, queryFragment: contentListFragment }>
+    <@card-item|{ node }|>
+      <bizbash-hero-card content=node />
+    </@card-item>
+    <@list-item|{ node }|>
+      <bizbash-list-item content=node />
+    </@list-item>
+  </website-scheduled-content-hero>
+
+  <@below-container>
+    <bizbash-load-more
+      type="website-scheduled-content"
+      query={ sectionId: section.id, skip: 5, limit: 100 }
+      layout={ name: "grid-no-ads", aliases }
+    />
+  </@below-container>
+
+</theme-default-website-section-layout>
