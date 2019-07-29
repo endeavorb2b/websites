@@ -60,7 +60,7 @@ $ const searchParams = {
   </div>
   <div class="col-md-7 col-lg-8 mb-block">
     <pinned-results market-id=marketId topic-id=topicId />
-    <await(cloudfront.search(searchParams))>
+    <await(cloudfront(searchParams))>
       <@then|{ hits }|>
         <search-hits hits=hits page-size=input.pageSize page-number=page />
       </@then>
