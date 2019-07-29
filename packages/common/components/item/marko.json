@@ -18,6 +18,7 @@
     },
     "endeavor-item": {
       "template": "./item.marko",
+      "<before>": {},
       "<image>": {
         "@alt": "string",
         "@display": {

@@ -9,6 +9,9 @@ $ if (input.flush) modifiers.push('flush');
 $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
 
 <${input.tag} class=classNames ...input.attrs>
+  <if(input.before)>
+    <${input.before} block=block />
+  </if>
   <if(image.display)>
     <image
       alt=image.alt
