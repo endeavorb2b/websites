@@ -1,3 +1,4 @@
+const { NODE_ENV } = process.env;
 
 /**
  * Generates an HTML email template notifying contact(s) of a user's inquiry.
@@ -26,7 +27,7 @@ module.exports = ({
     subject,
     addresses,
     payload,
-    isDev: process.env === 'development',
+    isDev: NODE_ENV === 'development',
   };
   const html = template.renderToString(input);
   return { html, subject, addresses };
