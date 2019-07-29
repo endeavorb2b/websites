@@ -28,6 +28,10 @@
     "bizbash-directory-search": {
       "template": "./directory-search/index.marko",
       "@search-options": "object",
+      "@page-size": {
+        "type": "number",
+        "default-value": 25
+      },
       "@topics": {
         "type": "object",
         "required": true

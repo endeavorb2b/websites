@@ -42,7 +42,7 @@ $ const facetUrl = (id) => {
       $ if (isActive) linkClasses.push(`${block}__link--active`);
 
       <div class=classNames>
-        <a class=linkClasses href=facetUrl(facet.id)>
+        <a class=linkClasses href=facetUrl(facet.id) rel="nofollow">
           ${facet.name}
         </a>
         <if(Array.isArray(facet.values))>

@@ -4,7 +4,8 @@ import cloudfront from '../../services/cloud-front-search';
 
 $ const isDevelopment = process.env.NODE_ENV === 'development';
 $ const { req, onAsyncBlockError } = out.global;
-$ const { phrase = '', topicId, marketId, page = 1 } = req.query;
+$ const { phrase = '', topicId, marketId } = req.query;
+$ const page = parseInt(req.query.page, 10) || 1;
 
 $ const activeTopic = findActiveFacet(input.topics, topicId);
 $ const activeMarket = findActiveFacet(markets, marketId);
@@ -13,6 +14,7 @@ $ const searchParams = {
   ...input.searchOptions,
   contentType: input.contentType,
   pageNumber: page,
+  size: input.pageSize,
   phrase,
   facets: [
     { field: 'market', value: marketId },
@@ -60,7 +62,7 @@ $ const searchParams = {
     <await(cloudfront.search(searchParams))>
       <!-- @todo Add pagination / load more -->
       <@then|{ hits }|>
-        <search-hits hits=hits />
+        <search-hits hits=hits page-size=input.pageSize page-number=page />
       </@then>
       <@catch|err|>
         $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
