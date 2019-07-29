@@ -11,8 +11,6 @@ module.exports = gql`
       canonicalPath
     }
     ... on Inquirable {
-      enableRmi
-      leadsDelivery
       inquiryContacts {
         id
         name
