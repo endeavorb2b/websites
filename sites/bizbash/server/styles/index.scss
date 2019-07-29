@@ -374,6 +374,32 @@ body {
       }
     }
   }
+
+  &--directory-featured {
+    #{ $self } {
+      &__image-link {
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40%;
+          height: 40%;
+          content: "";
+        }
+      }
+    }
+  }
+
+  &--directory-featured-2000002 {
+    #{ $self } {
+      &__image-link {
+        &::after {
+          background: url("https://cdn.bizbash.com/files/base/bizbash/bzb/image/2019/01/320w/bb_best_2019.jpg") top left no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }
 
 // @todo move to core

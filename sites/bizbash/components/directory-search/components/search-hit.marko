@@ -4,15 +4,21 @@ $ const { CDN_IMAGE_HOSTNAME = 'base.imgix.net' } = process.env;
 
 $ const item = getAsObject(input, 'item');
 $ const fields = getAsObject(item, 'fields');
+$ const modifiers = ['directory-search-hit'];
+$ if (Array.isArray(fields.badge)) {
+  modifiers.push('directory-featured');
+  fields.badge.forEach(badge => modifiers.push(`directory-featured-${badge}`));
+};
 
 $ const imageSrc = () => {
   const { primaryimage: image } = fields;
   return image ? `${image.replace('cdn.bizbash.com', CDN_IMAGE_HOSTNAME).replace('.png', '.jpg')}?auto=format&ar=16:9&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5` : `https://${CDN_IMAGE_HOSTNAME}/files/base/bizbash/bzb/image/2019/01/bizbash_placeholder.5c3778bf1e44d.png`;
 };
 
-<endeavor-item tag="div" modifiers=["directory-search-hit"]>
+<endeavor-item tag="div" modifiers=modifiers>
   <@image
     link-to={ canonicalPath: `/${item.id}` }
+    link-class="item__image-link"
     image={ src: imageSrc(), alt: fields.name }
     lazyload=true
     options={}
