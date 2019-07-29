@@ -5,8 +5,8 @@ $ const { found = 0 } = hits;
 $ const nodes = getAsArray(hits, 'hit');
 
 <h6>Total Results: ${found}</h6>
-<endeavor-item-list flush=true card=true modifiers=["unjustified"] items=nodes>
-  <@item|{ item }|>
+<endeavor-item-list tag="div" flush=true card=true modifiers=["unjustified", "directory-search-hits"] items=nodes>
+  <@item|{ item }| tag="div">
     <search-hit item=item />
   </@item>
 </endeavor-item-list>

@@ -31,7 +31,7 @@ $ const facetUrl = (id) => {
 };
 
 <if(facets && facets.length)>
-  <ul class=`${block}__list`>
+  <div class=`${block}__list`>
     <for|facet| of=facets>
       $ const isOpen = activeIds.includes(facet.id);
       $ const isActive = isActiveId(facet.id);
@@ -41,7 +41,7 @@ $ const facetUrl = (id) => {
       $ if (isOpen) classNames.push(`${block}__item--open`);
       $ if (isActive) linkClasses.push(`${block}__link--active`);
 
-      <li class=classNames>
+      <div class=classNames>
         <a class=linkClasses href=facetUrl(facet.id)>
           ${facet.name}
         </a>
@@ -58,7 +58,7 @@ $ const facetUrl = (id) => {
         </if>
 
         <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
-      </li>
+      </div>
     </for>
-  </ul>
+  </div>
 </if>
