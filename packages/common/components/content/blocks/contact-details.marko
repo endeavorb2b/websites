@@ -42,7 +42,7 @@ $ const display = addressFields.some(k => content[k]) || socialLinks.length;
       <div class=bem(block, "section", ["social-links"])>
         <for|item| of=socialLinks>
           <if(item.url && item.provider)>
-            <endeavor-social-icon-link provider=item.provider href=item.url modifiers=["dark", "lg"] />
+            <endeavor-social-icon-link label=item.label provider=item.provider href=item.url modifiers=["dark", "lg"] />
           </if>
         </for>
       </div>

@@ -1,6 +1,8 @@
 import { get, getAsArray } from '@base-cms/object-path';
 
-$ const provider = get(input, 'provider', '').toLowerCase();
+$ let provider = get(input, 'provider', '').toLowerCase();
+<!-- Add fallback for "other" providers -->
+$ if (provider === 'other' && input.label) provider = input.label.toLowerCase();
 $ const title = `Visit us on ${provider.charAt(0).toUpperCase()}${provider.slice(1)}`;
 
 <endeavor-link class="social-icon-link" href=input.href target=input.target title=title>
