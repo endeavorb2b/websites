@@ -8,7 +8,7 @@ $ const aliases = hierarchyAliases(section);
 $ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 
 <theme-default-website-section-layout section=section>
@@ -27,37 +27,68 @@ $ const adSlots = {
     limit=5
   />
 
+  <!-- <div class="row">
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="automatizacion"
+            header={ title: "Automatización", href: "/automatizacion" }
+            native-x={ placement: 'list1', aliases: ['automatizacion'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="empaque"
+            header={ title: "Empaque", href: "/empaque" }
+            native-x={ placement: 'list1', aliases: ['empaque'], index: 2 }
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            section-alias="procesamiento"
+            header={ title: "Procesamiento", href: "/procesamiento" }
+            native-x={ placement: 'list1', aliases: ['procesamiento'], index: 2 }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
+            skip=5
+            section-alias=section.alias
+            header={ title: `More from ${out.global.config.siteName()}` }
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div> -->
+
   <div class="row">
-    <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list
-        limit=5
-        section-alias="automatizacion"
-        header={ title: "Automatización", href: "/automatizacion" }
-        native-x={ placement: 'list1', aliases: ['automatizacion'], index: 2 }
+    <div class="col-lg-8">
+      <endeavor-content-query-feed
+        header=`Latest from ${out.global.config.siteName()}`
+        limit=6
+        skip=5
+        section-id=section.id
       />
     </div>
-    <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list
-        limit=5
-        section-alias="empaque"
-        header={ title: "Empaque", href: "/empaque" }
-        native-x={ placement: 'list1', aliases: ['empaque'], index: 2 }
-      />
-    </div>
-    <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list
-        limit=5
-        section-alias="procesamiento"
-        header={ title: "Procesamiento", href: "/procesamiento" }
-        native-x={ placement: 'list1', aliases: ['procesamiento'], index: 2 }
-      />
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
     </div>
   </div>
 
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 5,
+        skip: 11,
         sectionId: section.id,
       }
       load-more={
