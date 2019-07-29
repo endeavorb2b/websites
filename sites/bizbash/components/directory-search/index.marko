@@ -59,8 +59,8 @@ $ const searchParams = {
     />
   </div>
   <div class="col-md-7 col-lg-8 mb-block">
+    <pinned-results market-id=marketId topic-id=topicId />
     <await(cloudfront.search(searchParams))>
-      <!-- @todo Add pagination / load more -->
       <@then|{ hits }|>
         <search-hits hits=hits page-size=input.pageSize page-number=page />
       </@then>
@@ -72,44 +72,5 @@ $ const searchParams = {
         </if>
       </@catch>
     </await>
-    <!-- <ul class="item-list"> -->
-      <!-- <div class="feature-results">
-        <if(topicId && marketId)>
-          <bizbash-pinned-directory-card|{ content }| section-id=Number(topic) market-id=Number(market)>
-            <if(content)>
-              $ const primarySection = getAsObject(content, 'primarySection');
-              $ const primaryImage = getAsObject(content, 'primaryImage');
-              $ const dateFormat = 'MMMM D, YYYY';
-              $ const imageInput = {
-                image: primaryImage,
-                lazyload: false,
-                linkTo: content,
-                modifiers: ['fluid', '3by2'],
-                options: { w: 642, h: 428, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
-                position: 'top',
-                usePlaceholder: false,
-                ...getAsObject(input, 'image'),
-              };
-              <div class="featured-directory-listing-item">
-                <div class="sponsoreship-title">
-                  ${activeTopic[0].name} by ${content.shortName}
-                </div>
-                <endeavor-item modifiers=["card", "hero-card"]>
-
-                  <@image ...imageInput />
-                  <@title tag="h5" modifiers=["medium"]>
-                    <cms-content-short-name tag=null obj=content link=true />
-                  </@title>
-                  <@description tag="p">
-                    ${content.address1}<br>
-                    ${content.city}, ${content.state} ${content.zip} ${content.country}
-                  </@description>
-                </endeavor-item>
-              </div>
-            </if>
-          </bizbash-pinned-directory-card>
-        </if>
-      </div> -->
-    <!-- </ul> -->
   </div>
 </div>

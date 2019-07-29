@@ -281,6 +281,19 @@ body {
     }
   }
 
+  // Directory presented by (for pinned items)
+  &__presented-by {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0;
+    font-family: $font-source-sans-pro;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19.8px;
+    color: $white;
+    background-color: $primary;
+  }
+
   // @todo Move to core?
   &--latest-issue {
     padding-right: 0;
@@ -447,6 +460,17 @@ body {
     #{ $self } {
       &__item {
         border-top: 1px solid $gray-200;
+      }
+    }
+  }
+
+  &--directory-pinned-items {
+    #{ $self } {
+      &__item {
+        border-bottom: 4px solid $gray-200;
+        &:last-child {
+          border-bottom: 4px solid $gray-200;
+        }
       }
     }
   }

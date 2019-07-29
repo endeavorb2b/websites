@@ -1,0 +1,79 @@
+import gql from 'graphql-tag';
+import { getAsArray, getAsObject } from '@base-cms/object-path';
+import contentListFragment from '../../../server/api/fragments/content-list';
+
+$ const queryFragment = gql`
+  fragment VenueDirectoryPinnedContent on Content {
+    ...BizBashContentListFragment
+    ... on Addressable {
+      address1
+      address2
+      city
+      state
+      zip
+      country
+    }
+    taxonomy(input: { pagination: { limit: 100 } }) {
+      edges {
+        node {
+          id
+          name
+          type
+        }
+      }
+    }
+  }
+  ${contentListFragment}
+`;
+
+$ const marketId = Number(input.marketId);
+$ const topicId = Number(input.topicId);
+
+<if(topicId && marketId)>
+  <cms-query-website-scheduled-content|{ nodes }|
+    section-id=topicId
+    option-id=40105
+    limit=100
+    query-fragment=queryFragment
+  >
+
+    $ const pinned = nodes.reduce((arr, node) => {
+      const taxonomy = getAsArray(node, "taxonomy.edges").map(edge => edge.node);
+      const marketIds = taxonomy.filter(t => t.type === "Market").map(t => t.id);
+      if (marketIds.includes(marketId, 'id')) arr.push(node);
+      return arr;
+    }, []);
+
+    <endeavor-item-list tag="div" flush=true card=true modifiers=["unjustified", "directory-pinned-items"] items=pinned>
+      <@item|{ item }| tag="div">
+        <endeavor-item tag="div" modifiers=["directory-search-hit", "directory-pinned"]>
+          <@before|{ block }|>
+            <h3 class=`${block}__presented-by`>
+              Presented by $!{item.shortName}
+            </h3>
+          </@before>
+          <@image
+            link-to=item
+            link-class="item__image-link"
+            image=(getAsObject(item, "primaryImage"))
+            modifiers=["fluid", "16by9"]
+            lazyload=true
+            options={ w: 640, ar: "16:9", format: "auto", fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+            position="top"
+            use-placeholder=false
+          >
+          </@image>
+          <@title tag="h5">
+            <a href=`/${item.id}`>$!{item.shortName}</a>
+          </@title>
+          <@description>
+            ${item.address1}
+          </@description>
+          <@description>
+            ${item.city} ${item.state} ${item.zip} ${item.country}
+          </@description>
+        </endeavor-item>
+      </@item>
+    </endeavor-item-list>
+  </cms-query-website-scheduled-content>
+</if>
