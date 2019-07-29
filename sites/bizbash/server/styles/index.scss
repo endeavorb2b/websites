@@ -400,6 +400,13 @@ body {
       }
     }
   }
+  &--directory-search-hits {
+    #{ $self } {
+      &__item {
+        border-top: 1px solid $gray-200;
+      }
+    }
+  }
 }
 
 .item-card-deck {
@@ -470,7 +477,7 @@ body {
 }
 
 .directory-facets {
-  $color: #f5f5f5;
+  $color: $gray-200;
   $self: &;
 
   &__title {
