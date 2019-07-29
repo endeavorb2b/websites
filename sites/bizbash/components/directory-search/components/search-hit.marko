@@ -7,7 +7,7 @@ $ const fields = getAsObject(item, 'fields');
 
 $ const imageSrc = () => {
   const { primaryimage: image } = fields;
-  return image ? image.replace('cdn.bizbash.com', CDN_IMAGE_HOSTNAME).replace('.png', '.jpg') : `https://${CDN_IMAGE_HOSTNAME}/files/base/bizbash/bzb/image/2019/01/bizbash_placeholder.5c3778bf1e44d.png`;
+  return image ? `${image.replace('cdn.bizbash.com', CDN_IMAGE_HOSTNAME).replace('.png', '.jpg')}?auto=format&ar=16:9&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5` : `https://${CDN_IMAGE_HOSTNAME}/files/base/bizbash/bzb/image/2019/01/bizbash_placeholder.5c3778bf1e44d.png`;
 };
 
 <endeavor-item tag="div" modifiers=["directory-search-hit"]>
@@ -18,7 +18,7 @@ $ const imageSrc = () => {
     options={}
     position="left"
     use-placeholder=false
-    width=176
+    width=240
   />
   <@title tag="h5">
     <a href=`/${item.id}`>${fields.name}</a>
