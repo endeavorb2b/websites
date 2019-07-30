@@ -42,9 +42,12 @@ export default {
       type: String,
       required: true,
     },
+    iconModifiers: {
+      type: Array,
+      default: () => ['md'],
+    },
   },
   data: () => ({
-    iconModifiers: ['md'],
     expanded: false,
   }),
   created() {
