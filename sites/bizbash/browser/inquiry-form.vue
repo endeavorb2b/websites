@@ -35,7 +35,7 @@
       <input
         id="inquiry-phone"
         v-model="phone"
-        type="text"
+        type="tel"
         class="form-control"
         required
       >

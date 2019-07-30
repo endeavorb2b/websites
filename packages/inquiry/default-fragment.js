@@ -15,6 +15,7 @@ module.exports = gql`
         id
         name
         email
+        publicEmail
       }
     }
   }
