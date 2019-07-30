@@ -43,7 +43,7 @@ export default {
     },
     iconModifiers: {
       type: Array,
-      default: () => ['md'],
+      default: () => [],
     },
     buttonLabel: {
       type: String,
