@@ -37,12 +37,14 @@ $ const searchParams = {
     <div class="directory-facets-toggle">
       <div class="directory-facets-toggle__label">Show Filters</div>
       <cms-browser-component
-        name="PlusMinusToggleButton"
+        name="MenuToggleButton"
         props={
           className: "directory-facets-toggle__button",
           targets: [".directory-facets"],
           toggleClass: "directory-facets--open",
           iconModifiers: ["sm"],
+          iconName: "plus",
+          expandedIconName: "dash",
         }
       />
     </div>

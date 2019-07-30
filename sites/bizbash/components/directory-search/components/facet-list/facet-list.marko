@@ -47,13 +47,15 @@ $ const facetUrl = (id) => {
         </a>
         <if(Array.isArray(facet.values))>
           <cms-browser-component
-            name="PlusMinusToggleButton"
+            name="MenuToggleButton"
             props={
               className: `${block}__toggle`,
               targets: [`.${block}__item--${facet.id}`],
               toggleClass: `${block}__item--open`,
               initiallyExpanded: isOpen,
               iconModifiers: ["sm"],
+              iconName: "plus",
+              expandedIconName: "dash",
             }
           />
         </if>
