@@ -17,7 +17,7 @@ $ const itemListInput = {
   ...getAsObject(input.itemList),
 }
 
-<cms-query-website-scheduled-content|{ nodes }| ...queryInput>
+<cms-query-website-optioned-content|{ nodes }| ...queryInput>
   $ const heroNode = asObject(nodes[0]);
   $ const listNodes = asArray(nodes.slice(1))
   <if(nodes.length)>
@@ -38,4 +38,4 @@ $ const itemListInput = {
       </if>
     </div>
   </if>
-</cms-query-website-scheduled-content>
+</cms-query-website-optioned-content>
