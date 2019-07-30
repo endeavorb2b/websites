@@ -11,12 +11,7 @@ module.exports = gql`
       canonicalPath
     }
     ... on Inquirable {
-      inquiryContacts {
-        id
-        name
-        email
-        publicEmail
-      }
+      inquiryEmails
     }
   }
 `;
