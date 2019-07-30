@@ -337,3 +337,13 @@
     padding-left: $theme-page-header-padding-sm;
   }
 }
+
+@mixin theme-toggle-button() {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: none;
+  &:focus {
+    outline: none;
+  }
+}

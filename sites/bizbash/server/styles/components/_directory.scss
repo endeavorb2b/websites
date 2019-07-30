@@ -14,14 +14,9 @@
   }
 
   &__button {
-    // @todo merge this with other button styles
+    @include theme-toggle-button();
     align-self: center;
     margin-left: auto;
-    cursor: pointer;
-    background-color: transparent;
-    border-color: transparent;
-    border-style: none;
-    outline: none;
   }
 }
 
@@ -100,21 +95,13 @@
   }
 
   &__toggle {
-    // @todo merge this with other button styles
+    @include theme-toggle-button();
     position: absolute;
     top: 0;
     right: 0;
     padding: 0;
     margin-right: .5rem;
     margin-left: auto;
-    cursor: pointer;
-    background-color: transparent;
-    border-color: transparent;
-    border-style: none;
-
-    &:focus {
-      outline: none;
-    }
 
     & > .icon {
       @include theme-navbar-link-color(( active: $primary, hover: $primary, default: $black ));
