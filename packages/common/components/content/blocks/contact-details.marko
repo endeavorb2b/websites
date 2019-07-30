@@ -3,14 +3,15 @@ import bem from '../../../utils/bem-class';
 
 $ const block = 'content-contact-details';
 $ const content = getAsObject(input, 'content');
-$ const { header } = input;
+$ const { header, showEmail } = input;
 $ const addressFields = ['address1', 'address2', 'city', 'state', 'zip', 'country'];
 $ const showAddress = addressFields.some(k => content[k]);
 $ if (content.email) content.emailLink = `mailto:${content.email}`;
 $ if (content.publicEmail) content.publicEmailLink = `mailto:${content.publicEmail}`;
 $ const socialLinks = getAsArray(content, 'socialLinks');
 
-$ const fields = ['address1', 'address2', 'city', 'state', 'zip', 'country', 'title', 'email', 'publicEmail', 'website', 'phone', 'mobile', 'tollfree', 'fax']
+$ const fields = ['address1', 'address2', 'city', 'state', 'zip', 'country', 'title', 'website', 'phone', 'mobile', 'tollfree', 'fax'];
+$ if (showEmail) fields.push('publicEmail');
 $ const display = addressFields.some(k => content[k]) || socialLinks.length;
 
 <if(display)>
@@ -33,8 +34,9 @@ $ const display = addressFields.some(k => content[k]) || socialLinks.length;
 
     <div class=bem(block, "section")>
       <cms-text-element obj=content field="title" />
-      <cms-text-element obj=content field="email" link=true link-path="emailLink" />
-      <cms-text-element obj=content field="publicEmail" link=true link-path="publicEmailLink" />
+      <if(showEmail)>
+        <cms-text-element obj=content field="publicEmail" link=true link-path="publicEmailLink" />
+      </if>
       <cms-text-element obj=content field="website" link=true link-path="website" link-attrs={ target: '_blank' } />
     </div>
 
