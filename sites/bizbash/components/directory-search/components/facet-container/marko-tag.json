@@ -1,0 +1,15 @@
+{
+  "@facets": {
+    "type": "array",
+    "required": true
+  },
+  "@title": "string",
+  "@param-name": {
+    "type": "string",
+    "required": true
+  },
+  "@active-ids": {
+    "type": "array",
+    "required": true
+  }
+}

@@ -9,6 +9,9 @@ $ if (input.flush) modifiers.push('flush');
 $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
 
 <${input.tag} class=classNames ...input.attrs>
+  <if(input.before)>
+    <${input.before} block=block />
+  </if>
   <if(image.display)>
     <image
       alt=image.alt
@@ -16,6 +19,7 @@ $ const classNames = [block, ...modifiers.map(mod => `${block}--${mod}`)];
       height=image.height
       image=image.image
       lazyload=image.lazyload
+      link-class=image.linkClass
       link-attrs=image.linkAttrs
       link-path=image.linkPath
       link-to=image.linkTo

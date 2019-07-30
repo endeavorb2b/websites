@@ -12,6 +12,10 @@
       "@content": {
         "type": "object",
         "required": true
+      },
+      "@show-email": {
+        "type": "boolean",
+        "default-value": true
       }
     },
     "endeavor-content-block-inquiry-button": {
@@ -67,7 +71,8 @@
       "@show-inquiry-button": {
         "type": "boolean",
         "default-value": false
-      }
+      },
+      "@contact-details": "object"
     },
     "endeavor-content-block-item": {
       "template": "./item.marko",

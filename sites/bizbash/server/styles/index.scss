@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:400,400i,700,700i|Roboto+Condensed:700|Oswald:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,700i|Open+Sans:400,400i,700,700i|Roboto+Condensed:700,400|Oswald:500,700&display=swap");
 @import "../../node_modules/@endeavorb2b/base-website-themes/default/styles/functions";
 
 // Bizbash specific vars
@@ -174,6 +174,7 @@ $theme-carousel-caption-background: rgba(0, 0, 0, .75);
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
 @import "../../node_modules/bootstrap/scss/tables";
+@import "components/directory";
 @import "components/carousel";
 
 body {
@@ -280,6 +281,19 @@ body {
     }
   }
 
+  // Directory presented by (for pinned items)
+  &__presented-by {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0;
+    font-family: $font-source-sans-pro;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19.8px;
+    color: $white;
+    background-color: $primary;
+  }
+
   // @todo Move to core?
   &--latest-issue {
     padding-right: 0;
@@ -354,6 +368,59 @@ body {
       }
     }
   }
+
+  &--directory-search-hit {
+    padding: 1rem 0;
+    img {
+      width: 240px;
+      @include media-breakpoint-down(sm) {
+        width: 176px;
+      }
+    }
+    #{ $self } {
+      &__image {
+        margin-top: 0;
+      }
+      &__title {
+        display: inline;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &__description {
+        margin-bottom: 0;
+        font-family: $font-roboto-condensed;
+        font-size: 14px;
+        line-height: 1.4285;
+        color: rgba(51, 51, 51, .5);
+      }
+    }
+  }
+
+  &--directory-featured {
+    #{ $self } {
+      &__image-link {
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40%;
+          height: 40%;
+          content: "";
+        }
+      }
+    }
+  }
+
+  &--directory-featured-2000002 {
+    #{ $self } {
+      &__image-link {
+        &::after {
+          background: url("https://cdn.bizbash.com/files/base/bizbash/bzb/image/2019/01/320w/bb_best_2019.jpg") top left no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }
 
 // @todo move to core
@@ -386,6 +453,24 @@ body {
       &__contents {
         flex-grow: 0;
         justify-content: normal;
+      }
+    }
+  }
+  &--directory-search-hits {
+    #{ $self } {
+      &__item {
+        border-top: 1px solid $gray-200;
+      }
+    }
+  }
+
+  &--directory-pinned-items {
+    #{ $self } {
+      &__item {
+        border-bottom: 4px solid $gray-200;
+        &:last-child {
+          border-bottom: 4px solid $gray-200;
+        }
       }
     }
   }
@@ -455,65 +540,5 @@ body {
 
   th {
     font-weight: 700;
-  }
-}
-.directory-facets {
-  & .list-group-item {
-    padding: .25rem 1.25rem;
-    & .active {
-      font-weight: $theme-page-title-font-weight;
-    }
-  }
-  & > .list-group {
-    & .facet-title {
-      font-weight: $theme-page-title-font-weight;
-    }
-    & > .list-group-item {
-      padding-left: 0;
-    }
-  }
-  .plus-minus-toggler {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: .5rem;
-    & .icon svg{
-      color: $black;
-      fill: $black;
-    }
-    ~ .list-group {
-      display: none;
-      &.plus-minus-toggler--open {
-        display: initial;
-      }
-    }
-  }
-}
-.website-section-page--59828,
-.website-section-page--59829 {
-  .item {
-    &__title {
-      font-weight: $theme-page-title-font-weight;
-    }
-  }
-  & .featured-directory-listing-item {
-    & .sponsoreship-title{
-      padding: .75rem;
-      margin: 0 .75rem;
-      font-weight: $theme-card-header-font-weight;
-      color: #fff;
-      background-color: $primary;
-    }
-    & .item--card {
-      padding-top: 0;
-      border-bottom: solid 5px #ccc;
-    }
-  }
-  & .search-results {
-    .item-list{
-      &__item {
-        border-bottom: 1px solid #ccc;
-      }
-    }
   }
 }

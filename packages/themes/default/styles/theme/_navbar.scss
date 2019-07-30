@@ -48,19 +48,11 @@
   padding-left: 0;
 }
 
-.site-navbar-toggler,
-.plus-minus-toggler {
+.site-navbar-toggler {
+  @include theme-toggle-button();
   padding: 0;
   margin-top: auto;
   margin-bottom: auto;
-  cursor: pointer;
-  background-color: transparent;
-  border-color: transparent;
-  border-style: none;
-
-  &:focus {
-    outline: none;
-  }
 
   & > .icon {
     @include theme-navbar-link-color($theme-site-navbar-secondary-colors);

@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Bizbash',
+  siteName: 'BizBash',
   locale: 'en',
   images: {
     lazyload: true,

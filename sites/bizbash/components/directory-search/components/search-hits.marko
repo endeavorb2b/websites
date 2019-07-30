@@ -1,0 +1,41 @@
+import { getAsObject, getAsArray } from '@base-cms/object-path';
+import querystring from 'querystring';
+
+$ const { req } = out.global;
+$ const pageNumber = parseInt(input.pageNumber, 10);
+$ const pageSize = parseInt(input.pageSize, 10);
+$ const hits = getAsObject(input, 'hits');
+$ const { found = 0 } = hits;
+$ const nodes = getAsArray(hits, 'hit');
+
+$ const previousQuery = querystring.stringify({ ...req.query, page: pageNumber - 1 });
+$ const previousClass = (pageNumber > 1) ? 'page-item' : 'page-item disabled';
+
+$ const first = (pageSize * (pageNumber - 1)) + 1;
+$ const last = pageSize * pageNumber;
+
+$ const nextQuery = querystring.stringify({ ...req.query, page: pageNumber + 1 });
+$ const nextClass = (last < found) ? 'page-item' : 'page-item disabled';
+
+<endeavor-item-list tag="div" flush=true card=true modifiers=["unjustified", "directory-search-hits"] items=nodes>
+  <@item|{ item }| tag="div">
+    <search-hit item=item />
+  </@item>
+</endeavor-item-list>
+<nav class="directory-pagination" aria-label="Directory search results pagination">
+  <ul class="pagination">
+    <li class=previousClass>
+      <a class="page-link" href=`${req.path}?${previousQuery}` rel="nofollow">
+        <endeavor-icon name="chevron-left" />
+        Previous
+      </a>
+    </li>
+    <li class="page-item disabled"><a class="page-link">Showing: ${first} - ${last} of ${found}</a></li>
+    <li class=nextClass>
+      <a class="page-link" href=`${req.path}?${nextQuery}` rel="nofollow">
+        Next
+        <endeavor-icon name="chevron-right" />
+      </a>
+    </li>
+  </ul>
+</nav>

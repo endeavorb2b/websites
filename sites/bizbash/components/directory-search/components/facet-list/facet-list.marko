@@ -1,0 +1,67 @@
+import querystring from 'querystring';
+
+$ const { req } = out.global;
+$ const block = 'directory-facets';
+
+$ const {
+  facets,
+  paramName,
+  activeIds,
+} = input;
+
+$ const activeId = req.query[paramName];
+$ const isActiveId = (id) => (activeId && (`${activeId}` === `${id}`));
+
+$ const clean = q => Object.keys(q).reduce((o, key) => {
+  const value = q[key];
+  if (!value) return o;
+  return { ...o, [key]: value };
+}, {});
+
+$ const facetUrl = (id) => {
+  const query = { ...req.query };
+  delete query.page;
+  if (isActiveId(id)) {
+    delete query[paramName];
+  } else {
+    query[paramName] = id;
+  }
+  const string = querystring.stringify(clean(query));
+  return string ? `${req.path}?${string}` : req.path;
+};
+
+<if(facets && facets.length)>
+  <div class=`${block}__list`>
+    <for|facet| of=facets>
+      $ const isOpen = activeIds.includes(facet.id);
+      $ const isActive = isActiveId(facet.id);
+
+      $ const classNames = [`${block}__item`, `${block}__item--${facet.id}`];
+      $ const linkClasses = [`${block}__link`]
+      $ if (isOpen) classNames.push(`${block}__item--open`);
+      $ if (isActive) linkClasses.push(`${block}__link--active`);
+
+      <div class=classNames>
+        <a class=linkClasses href=facetUrl(facet.id) rel="nofollow">
+          ${facet.name}
+        </a>
+        <if(Array.isArray(facet.values))>
+          <cms-browser-component
+            name="MenuToggleButton"
+            props={
+              className: `${block}__toggle`,
+              targets: [`.${block}__item--${facet.id}`],
+              toggleClass: `${block}__item--open`,
+              initiallyExpanded: isOpen,
+              iconModifiers: ["sm"],
+              iconName: "plus",
+              expandedIconName: "dash",
+            }
+          />
+        </if>
+
+        <facet-list facets=facet.values param-name=paramName active-ids=activeIds />
+      </div>
+    </for>
+  </div>
+</if>

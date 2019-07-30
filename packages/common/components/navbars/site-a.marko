@@ -18,7 +18,15 @@ $ const navMenu = site.getAsObject('navigation.menu');
   <identity-x|{ isEnabled: regEnabled, hasUser }|>
     <nav class=bem(navbar, 'secondary')>
       <div class="site-navbar-container">
-        <cms-browser-component name="NavbarToggleButton" props={ targets: ['.site-navbar-menu'], toggleClass: 'site-navbar-menu--open' } />
+        <cms-browser-component
+          name="MenuToggleButton"
+          props={
+            className: 'site-navbar-toggler',
+            targets: ['.site-navbar-menu'],
+            toggleClass: 'site-navbar-menu--open',
+            iconModifiers: ['lg'],
+          }
+        />
 
         <a class=bem(navbar, 'brand') title=`${siteName} Homepage` href="/">
           <img class=bem(navbar, 'logo') alt=siteName src=site.get('logos.navbar.src') srcset=site.getAsArray('logos.navbar.srcset').join(',')>

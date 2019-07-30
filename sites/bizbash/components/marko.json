@@ -25,8 +25,21 @@
     "bizbash-image-slider": {
       "template": "./image-slider.marko"
     },
-    "bizbash-pinned-directory-card": {
-      "template": "./pinned-directory-card.marko"
+    "bizbash-directory-search": {
+      "template": "./directory-search/index.marko",
+      "@search-options": "object",
+      "@page-size": {
+        "type": "number",
+        "default-value": 25
+      },
+      "@topics": {
+        "type": "object",
+        "required": true
+      },
+      "@content-type": {
+        "type": "string",
+        "required": true
+      }
     },
     "bizbash-inquiry-form": {
       "template": "./inquiry-form.marko"

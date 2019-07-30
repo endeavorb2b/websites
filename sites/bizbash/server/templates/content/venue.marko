@@ -40,7 +40,11 @@ $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
 
     <div class="row">
       <div class="col-lg-8">
-        <endeavor-content-block-page-body content=content display-primary-image=false  />
+        <endeavor-content-block-page-body
+          content=content
+          display-primary-image=false
+          contact-details={ showEmail: false }
+        />
         <div class="page-wrapper__body">
           <bizbash-venue-capacity spaces=spaces />
         </div>
