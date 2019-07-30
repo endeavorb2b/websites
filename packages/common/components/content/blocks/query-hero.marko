@@ -14,7 +14,7 @@ $ const params = {
 $ const nativeX = getAsObject(input, 'nativeX');
 $ const listImageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 
-<cms-query-website-scheduled-content|{ nodes }| ...params>
+<cms-query-website-optioned-content|{ nodes }| ...params>
   $ const heroNode = asObject(nodes[0]);
   $ const listNodes = asArray(nodes.slice(1))
   <if(nodes.length)>
@@ -56,4 +56,4 @@ $ const listImageOptions = { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fp
       </if>
     </div>
   </if>
-</cms-query-website-scheduled-content>
+</cms-query-website-optioned-content>
