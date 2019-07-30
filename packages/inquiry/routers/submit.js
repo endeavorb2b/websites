@@ -17,12 +17,10 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
   const $global = buildMarkoGlobal(res);
   const { apollo, body: payload } = req;
   const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
-  const contacts = getAsArray(content, 'inquiryContacts')
-    .map(({ name, email }) => ({ name, email }))
-    .filter(({ email }) => email);
+  const emails = getAsArray(content, 'inquiryEmails');
   const addresses = {
-    to: directSend && contacts.length ? contacts : to,
-    cc: directSend && contacts.length ? to : undefined,
+    to: directSend && emails.length ? emails : to,
+    cc: directSend && emails.length ? to : undefined,
     bcc,
     from,
   };
