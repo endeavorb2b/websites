@@ -52,7 +52,8 @@ $ const facetUrl = (id) => {
               className: `${block}__toggle`,
               targets: [`.${block}__item--${facet.id}`],
               toggleClass: `${block}__item--open`,
-              initiallyExpanded: isOpen
+              initiallyExpanded: isOpen,
+              iconModifiers: ["sm"],
             }
           />
         </if>

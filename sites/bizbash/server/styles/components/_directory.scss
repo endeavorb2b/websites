@@ -85,6 +85,7 @@
   &__item {
     position: relative;
     display: block;
+    padding-right: 2rem;
     font-family: $font-source-sans-pro;
     font-size: 14px;
     line-height: 1.7142;
@@ -117,8 +118,6 @@
 
     & > .icon {
       @include theme-navbar-link-color(( active: $primary, hover: $primary, default: $black ));
-      width: 1rem;
-      height: 1rem;
     }
   }
 }
