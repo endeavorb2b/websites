@@ -1,8 +1,13 @@
 $primary: #494232 !default;
 $secondary: #495057; // equivalent to default gray-700
+$tertiary: rgba(255, 255, 255, .75);
 $light: #e9ecef !default; // equivalent to default gray-200
 $dark: #212529 !default; // equivalent to default gray-900
 $info: #6c757d !default; // equivalent to default gray-600
+
+$theme-site-navbar-tertiary-link-active-color:  $tertiary;
+$theme-site-navbar-tertiary-link-color:         $tertiary;
+$theme-site-navbar-tertiary-link-hover-color:   #fff;
 
 $theme-site-header-breakpoints: (
   hide-primary: 1024px,
