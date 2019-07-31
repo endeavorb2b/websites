@@ -13,18 +13,17 @@ import { getAsObject } from '@base-cms/object-path';
 
   <identity-x|{ isEnabled, mergedTeams, user }|>
     <if(isEnabled)>
-      $ const { id: identityXTeamId, name: identityXTeamName } = getAsObject(mergedTeams, 0);
-      $ const { id: identityXUserId, email: identityXUserEmail } = user || {};
-      <if (identityXUserId || identityXTeamId)>
+      $ const { id: identityx_team_id, name: identityx_team_name } = getAsObject(mergedTeams, 0);
+      $ const { id: identityx_user_id, email: identityx_user_email } = user || {};
+      <if (identityx_user_id || identityx_team_id)>
+        $ const gtmArgs = JSON.stringify({
+          identityx_user_id,
+          identityx_user_email,
+          identityx_team_id,
+          identityx_team_name,
+        });
         <script>
-          if (window.dataLayer) {
-            window.dataLayer.push({
-              identityXUserId: ${identityXUserId ? `'${identityXUserId}'` : 'undefined'},
-              identityXUserEmail: ${identityXUserEmail ? `'${identityXUserEmail}'` : 'undefined'},
-              identityXTeamId: ${identityXTeamId ? `'${identityXTeamId}'` : 'undefined'},
-              identityXTeamName: ${identityXTeamName ? `'${identityXTeamName}'` : 'undefined'},
-            });
-          }
+          if (window.dataLayer) window.dataLayer.push(${gtmArgs});
         </script>
       </if>
     </if>
