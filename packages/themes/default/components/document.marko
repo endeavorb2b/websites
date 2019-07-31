@@ -1,3 +1,5 @@
+import { getAsObject } from '@base-cms/object-path';
+
 <cms-document ...input>
   <@head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -8,6 +10,25 @@
     <${input.head} />
   </@head>
   <cms-browser-component name="ReskinListener" />
+
+  <identity-x|{ isEnabled, mergedTeams, user }|>
+    <if(isEnabled)>
+      $ const { id: identityXTeamId, name: identityXTeamName } = getAsObject(mergedTeams, 0);
+      $ const { id: identityXUserId, email: identityXUserEmail } = user || {};
+      <if (identityXUserId || identityXTeamId)>
+        <script>
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              identityXUserId: ${identityXUserId ? `'${identityXUserId}'` : 'undefined'},
+              identityXUserEmail: ${identityXUserEmail ? `'${identityXUserEmail}'` : 'undefined'},
+              identityXTeamId: ${identityXTeamId ? `'${identityXTeamId}'` : 'undefined'},
+              identityXTeamName: ${identityXTeamName ? `'${identityXTeamName}'` : 'undefined'},
+            });
+          }
+        </script>
+      </if>
+    </if>
+  </identity-x>
 
   <if(input.navbar)>
     <${input.navbar} />
