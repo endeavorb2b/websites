@@ -1,5 +1,8 @@
 {
   "tags": {
+    "ogj-identityx-data-layer": {
+      "template": "./identityx-data-layer.marko"
+    },
     "ogj-content-query-group-by-year": {
       "template": "./group-by-year.marko"
     }
