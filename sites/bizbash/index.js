@@ -17,4 +17,10 @@ module.exports = startServer({
   errorTemplate,
   onStart: onStart(version),
   onAsyncBlockError: e => newrelic.noticeError(e),
+  redirectHandler: ({ from }) => {
+    const pattern = /(\/story\/[0-9]*|\/listing\/[0-9]*|\/gallery\/[0-9]*)/;
+    const matches = pattern.exec(from);
+    if (!matches || !matches[0]) return null;
+    return { to: matches[0] };
+  },
 }).then(() => log('Website started!')).catch(e => setImmediate(() => { throw e; }));
