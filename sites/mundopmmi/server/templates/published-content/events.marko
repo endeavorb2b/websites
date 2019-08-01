@@ -1,5 +1,3 @@
-import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
-
 $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Event'],
@@ -8,7 +6,11 @@ $ const query = {
   sortOrder: 'asc',
   endingAfter: (new Date()).valueOf(),
 };
-$ const page = pageDetails('Events', config);
+$ const page = {
+  title: 'Eventos',
+  description: 'Acceda aquí a información clave de las principales ferias, seminarios y eventos internacionales dirigidos a profesionales de las industrias de envasado, procesamiento de alimentos y bebidas, y automatización.'
+};
+
 
 <theme-default-published-content-layout page=page>
   <@head>
