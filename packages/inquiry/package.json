@@ -1,17 +1,17 @@
 {
   "name": "@endeavorb2b/base-website-inquiry",
-  "version": "0.12.14",
+  "version": "0.12.15",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.49",
+    "@base-cms/marko-web": "^0.9.53",
     "@base-cms/object-path": "^0.9.40",
     "@base-cms/utils": "^0.9.40",
     "@base-cms/web-common": "^0.9.49",
-    "@endeavorb2b/base-website-common": "^0.12.13",
+    "@endeavorb2b/base-website-common": "^0.12.15",
     "@endeavorb2b/base-website-routing-utils": "^0.12.0",
     "body-parser": "^1.19.0",
     "express": "^4.16.4",

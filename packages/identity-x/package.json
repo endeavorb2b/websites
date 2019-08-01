@@ -1,13 +1,13 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.12.13",
+  "version": "0.12.15",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.49",
+    "@base-cms/marko-web": "^0.9.53",
     "@base-cms/object-path": "^0.9.40",
     "@base-cms/utils": "^0.9.40",
     "@endeavorb2b/base-website-routing-utils": "^0.12.0",
