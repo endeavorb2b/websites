@@ -11,7 +11,6 @@
   "dependencies": {
     "@base-cms/marko-web": "^0.9.53",
     "@endeavorb2b/base-website-common": "^0.12.15",
-    "@endeavorb2b/base-website-identity-x": "^0.12.15",
     "bootstrap": "4.3.1",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1"
