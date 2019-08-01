@@ -29,7 +29,7 @@ module.exports = {
     },
     secondary: {
       items: [
-        { href: '/subscribe', label: 'Suscríbase' },
+        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase' },
         { href: '/automatizacion', label: 'Automatización' },
         { href: '/empaque', label: 'Empaque' },
         { href: '/procesamiento', label: 'Procesamiento' },
@@ -65,7 +65,7 @@ module.exports = {
       userTools: {
         label: 'Herramientas de usuario',
         items: [
-          { href: '/subscribe', label: 'Suscríbase' },
+          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase' },
           { href: '/page/anuncie', label: 'Anuncie' },
           { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
           { href: '/page/contrato', label: 'Contrato' },
@@ -76,10 +76,10 @@ module.exports = {
       },
     },
   },
-  gtmContainer: '',
+  gtmContainer: 'GTM-WKC3D3X',
   search: {
     engine: 'google',
-    apiKey: '003355913687346718228:mb2grfhfx08',
+    apiKey: '017383739850048358259:ngawhyv_sgi',
   },
   contactUs: {
     branding: {
