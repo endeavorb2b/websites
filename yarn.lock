@@ -619,6 +619,18 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@base-cms/embedded-media@^0.9.55":
+  version "0.9.55"
+  resolved "https://registry.yarnpkg.com/@base-cms/embedded-media/-/embedded-media-0.9.55.tgz#c0c1b95848664854ece5711ef3d03372aa90b92d"
+  integrity sha512-qh4kcm/9IFS/Jy1vL5X5vDU5crPmLRdEa24H6HSNn7dule8wPuLACLqixlNhTuzExaRQSOr8ffITdjxvaUDZxQ==
+  dependencies:
+    "@base-cms/html" "^0.9.44"
+    "@base-cms/image" "^0.9.46"
+    "@base-cms/inflector" "^0.9.0"
+    cheerio "^1.0.0-rc.2"
+    escape-string-regexp "^1.0.5"
+    oembed-parser "^1.2.2"
+
 "@base-cms/env@^0.9.25":
   version "0.9.25"
   resolved "https://registry.yarnpkg.com/@base-cms/env/-/env-0.9.25.tgz#a0275b0a747b53d2ca5c6043c30d8243fec73bf2"
@@ -669,11 +681,12 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.9.53":
-  version "0.9.53"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.53.tgz#890a7927878ed137d8b12ebd993ec97852851a41"
-  integrity sha512-Fy1ZmxTGK2knSZE93xFUQlwL6yn2L6ggpKyKrZZoMwaRV54ojSdp2Mhgw+j8oZAkEY7XELTrZDP5a+hKR+wA1Q==
+"@base-cms/marko-web@^0.9.55":
+  version "0.9.55"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.9.55.tgz#e5a102b5c3eb68da1af5a0874c70c19fd34b974c"
+  integrity sha512-5ZF7dchIg7nGGtjb4hIR6zR/38tlfNIEJqgTxJRs1L8kYZdt6lo9E5ItZnFsswtKdK8lq3lBOZgPEWTEzqwthw==
   dependencies:
+    "@base-cms/embedded-media" "^0.9.55"
     "@base-cms/express-apollo" "^0.9.40"
     "@base-cms/image" "^0.9.46"
     "@base-cms/object-path" "^0.9.40"
@@ -708,10 +721,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.9.40.tgz#81d89d655df0436d23a3c3e233096e0f735208d8"
   integrity sha512-lBFnZJ6Kk8igT/HpH9VYHfSFA52+C7taWL1SgOYdo731Aw+MyARrOvDx7HsQaU5ZXMEa3BS0EdpCuJQrzUn8wg==
 
-"@base-cms/web-cli@^0.9.53":
-  version "0.9.53"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.53.tgz#1164ba9808e95677ae1f29cff4250d8cbb0950c0"
-  integrity sha512-0QOaKti5NP09raSMkTUI2rNWcqjnSl2efCmupZ2WgprItqLe/ZGwWW7OlyuYn2n20u/iQCA0gstGJDF9RwuHeA==
+"@base-cms/web-cli@^0.9.55":
+  version "0.9.55"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.9.55.tgz#5e973257b19bfac1a44ea002dcfd4f0423e3ec49"
+  integrity sha512-Wfwexnl/akNZ7Yj9s+vZ6K0uB7Pi1T42P7IdK+UeUUmHNfF86zdDEJ+YV2qvl6THFYcpfmQJOOD5EjRMz6jOYw==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -719,7 +732,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.9.40"
-    "@base-cms/marko-web" "^0.9.53"
+    "@base-cms/marko-web" "^0.9.55"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -2978,6 +2991,18 @@ cheerio@1.0.0-rc.2:
     lodash "^4.15.0"
     parse5 "^3.0.1"
 
+cheerio@^1.0.0-rc.2:
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
+  integrity sha512-0td5ijfUPuubwLUu0OBoe98gZj8C/AA+RW3v67GPlGOrvxWjZmBXiBCRU+I8VEiNyJzjth40POfHiz2RB3gImA==
+  dependencies:
+    css-select "~1.2.0"
+    dom-serializer "~0.1.1"
+    entities "~1.1.1"
+    htmlparser2 "^3.9.1"
+    lodash "^4.15.0"
+    parse5 "^3.0.1"
+
 chokidar@^2.0.0, chokidar@^2.0.2:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.5.tgz#0ae8434d962281a5f56c72869e79cb6d9d86ad4d"
@@ -4089,7 +4114,7 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-serializer@0, dom-serializer@~0.1.0:
+dom-serializer@0, dom-serializer@~0.1.0, dom-serializer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
   integrity sha512-l0IU0pPzLWSHBcieZbpOKgkIn3ts3vAh7ZuFyXNwJxJXk/c4Gwj9xaTJwIDVQCXawWD0qb3IzMGH5rglQaO0XA==
@@ -7996,6 +8021,14 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
+oembed-parser@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/oembed-parser/-/oembed-parser-1.2.2.tgz#0ababb60eb6bef0538878b690eb71ecb7fdfb4d1"
+  integrity sha512-dFsRPQZTUvIG5EA0Gq9kWCfxxdt+hBk0D9xvYkrGq1lh0NyzJTMWkrJWFXGu7P/9MiP7t2VHvlRFsC4I3SuGPw==
+  dependencies:
+    node-fetch "^2.3.0"
+    promise-wtf "^1.2.4"
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -8980,6 +9013,11 @@ promise-retry@^1.1.1:
   dependencies:
     err-code "^1.0.0"
     retry "^0.10.0"
+
+promise-wtf@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/promise-wtf/-/promise-wtf-1.2.4.tgz#8cbdd31ea10dee074fbb6387cbc96e413993376c"
+  integrity sha512-wOZ+ZUG0/Lsk+muOElLtteIteyvF5B1bNcVLhmlv6PDKcAAQGa5Bf0maN3rj73FWyjJE840MzeQyNE6KOKpgrg==
 
 promise@^8.0.1:
   version "8.0.3"
