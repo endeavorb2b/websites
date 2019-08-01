@@ -29,7 +29,7 @@ module.exports = {
     },
     secondary: {
       items: [
-        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase' },
+        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase', target: '_blank' },
         { href: '/automatizacion', label: 'Automatización' },
         { href: '/empaque', label: 'Empaque' },
         { href: '/procesamiento', label: 'Procesamiento' },
@@ -65,7 +65,7 @@ module.exports = {
       userTools: {
         label: 'Herramientas de usuario',
         items: [
-          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase' },
+          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase', target: '_blank' },
           { href: '/page/anuncie', label: 'Anuncie' },
           { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
           { href: '/page/contrato', label: 'Contrato' },
