@@ -22,6 +22,12 @@ x-env-defaults: &env
   SENDGRID_DEV_TO: developer@endeavorb2b.com
   YARN_CACHE_FOLDER: /.yarn-cache
 
+x-env-caprica: &env-caprica
+  GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
+  RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+
 x-env-picon: &env-picon
   GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
   OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
@@ -602,13 +608,10 @@ services:
     working_dir: /root/sites/clevescene
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12181
       LIVERELOAD_PORT: 35181
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_cs
     ports:
       - "12181:80"
@@ -620,13 +623,10 @@ services:
     working_dir: /root/sites/metrotimes
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12182
       LIVERELOAD_PORT: 35182
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_dmt
     ports:
       - "12182:80"
@@ -638,13 +638,10 @@ services:
     working_dir: /root/sites/outinsa
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12183
       LIVERELOAD_PORT: 35183
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_osa
     ports:
       - "12183:80"
@@ -656,13 +653,10 @@ services:
     working_dir: /root/sites/outinstl
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12184
       LIVERELOAD_PORT: 35184
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_ostl
     ports:
       - "12184:80"
@@ -674,13 +668,10 @@ services:
     working_dir: /root/sites/orlandoweekly
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12185
       LIVERELOAD_PORT: 35185
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_ow
     ports:
       - "12185:80"
@@ -692,13 +683,10 @@ services:
     working_dir: /root/sites/riverfronttimes
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12186
       LIVERELOAD_PORT: 35186
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_rft
     ports:
       - "12186:80"
@@ -710,13 +698,10 @@ services:
     working_dir: /root/sites/sacurrent
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12187
       LIVERELOAD_PORT: 35187
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_sac
     ports:
       - "12187:80"
@@ -728,13 +713,10 @@ services:
     working_dir: /root/sites/forconstructionpros
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12188
       LIVERELOAD_PORT: 35188
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: acbm_fcp
     ports:
       - "12188:80"
@@ -764,13 +746,10 @@ services:
     working_dir: /root/sites/bizbash
     environment:
       <<: *env
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12190
       LIVERELOAD_PORT: 35190
-      SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: bizbash_bzb
     ports:
       - "12190:80"
