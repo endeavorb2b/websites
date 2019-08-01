@@ -22,6 +22,12 @@ x-env-defaults: &env
   SENDGRID_DEV_TO: developer@endeavorb2b.com
   YARN_CACHE_FOLDER: /.yarn-cache
 
+x-env-picon: &env-picon
+  GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
+  RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
+
 x-site-command: &site-cmd
   entrypoint: ["node_modules/.bin/basecms-website"]
   command: ["dev", "index.js"]
@@ -65,13 +71,10 @@ services:
     working_dir: /root/sites/evaluationengineering
     environment:
       <<: *env
+      <<: *env-picon
       PORT: 80
       EXPOSED_PORT: 12151
       LIVERELOAD_PORT: 35151
-      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: ebm_ee
     ports:
       - "12151:80"
@@ -83,13 +86,10 @@ services:
     working_dir: /root/sites/officer
     environment:
       <<: *env
+      <<: *env-picon
       PORT: 80
       EXPOSED_PORT: 12152
       LIVERELOAD_PORT: 35152
-      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: cygnus_ofcr
     ports:
       - "12152:80"
@@ -443,13 +443,10 @@ services:
     working_dir: /root/sites/plasticsmachinerymagazine
     environment:
       <<: *env
+      <<: *env-picon
       PORT: 80
       EXPOSED_PORT: 12172
       LIVERELOAD_PORT: 35172
-      SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
-      RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
-      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
-      GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: ebm_pmm
     ports:
       - "12172:80"
