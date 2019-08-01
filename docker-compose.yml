@@ -70,6 +70,7 @@ services:
       LIVERELOAD_PORT: 35151
       SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: ebm_ee
     ports:
@@ -87,6 +88,7 @@ services:
       LIVERELOAD_PORT: 35152
       SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: cygnus_ofcr
     ports:
@@ -104,6 +106,7 @@ services:
       LIVERELOAD_PORT: 35153
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_up
     ports:
@@ -121,6 +124,7 @@ services:
       LIVERELOAD_PORT: 35154
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_de
     ports:
@@ -138,6 +142,7 @@ services:
       LIVERELOAD_PORT: 35155
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_bow
     ports:
@@ -155,6 +160,7 @@ services:
       LIVERELOAD_PORT: 35156
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_btr
     ports:
@@ -172,6 +178,7 @@ services:
       LIVERELOAD_PORT: 35157
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_cim
     ports:
@@ -189,6 +196,7 @@ services:
       LIVERELOAD_PORT: 35158
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_diq
     ports:
@@ -206,6 +214,7 @@ services:
       LIVERELOAD_PORT: 35159
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_ias
     ports:
@@ -223,6 +232,7 @@ services:
       LIVERELOAD_PORT: 35160
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_ils
     ports:
@@ -240,6 +250,7 @@ services:
       LIVERELOAD_PORT: 35161
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_leds
     ports:
@@ -257,6 +268,7 @@ services:
       LIVERELOAD_PORT: 35162
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_lfw
     ports:
@@ -274,6 +286,7 @@ services:
       LIVERELOAD_PORT: 35163
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_lw
     ports:
@@ -291,6 +304,7 @@ services:
       LIVERELOAD_PORT: 35164
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_mae
     ports:
@@ -308,6 +322,7 @@ services:
       LIVERELOAD_PORT: 35165
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_os
     ports:
@@ -325,6 +340,7 @@ services:
       LIVERELOAD_PORT: 35166
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_ogj
     ports:
@@ -342,6 +358,7 @@ services:
       LIVERELOAD_PORT: 35167
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_rdh
     ports:
@@ -359,6 +376,7 @@ services:
       LIVERELOAD_PORT: 35168
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_pia
     ports:
@@ -376,6 +394,7 @@ services:
       LIVERELOAD_PORT: 35169
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_su
     ports:
@@ -393,6 +412,7 @@ services:
       LIVERELOAD_PORT: 35170
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_vsd
     ports:
@@ -410,6 +430,7 @@ services:
       LIVERELOAD_PORT: 35171
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: ebm_ww
     ports:
@@ -427,6 +448,7 @@ services:
       LIVERELOAD_PORT: 35172
       SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
       TENANT_KEY: ebm_pmm
     ports:
@@ -444,6 +466,7 @@ services:
       LIVERELOAD_PORT: 35173
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: abm_ab
     ports:
@@ -461,6 +484,7 @@ services:
       LIVERELOAD_PORT: 35174
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: abm_am
     ports:
@@ -478,6 +502,7 @@ services:
       LIVERELOAD_PORT: 35175
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: abm_wfb
     ports:
@@ -495,6 +520,7 @@ services:
       LIVERELOAD_PORT: 35176
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_aw
     ports:
@@ -512,6 +538,7 @@ services:
       LIVERELOAD_PORT: 35177
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_hp
     ports:
@@ -529,6 +556,7 @@ services:
       LIVERELOAD_PORT: 35178
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_oem
     ports:
@@ -546,6 +574,7 @@ services:
       LIVERELOAD_PORT: 35179
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_pfw
     ports:
@@ -563,6 +592,7 @@ services:
       LIVERELOAD_PORT: 35180
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_pw
     ports:
@@ -580,6 +610,7 @@ services:
       LIVERELOAD_PORT: 35181
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_cs
     ports:
@@ -597,6 +628,7 @@ services:
       LIVERELOAD_PORT: 35182
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_dmt
     ports:
@@ -614,6 +646,7 @@ services:
       LIVERELOAD_PORT: 35183
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_osa
     ports:
@@ -631,6 +664,7 @@ services:
       LIVERELOAD_PORT: 35184
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_ostl
     ports:
@@ -648,6 +682,7 @@ services:
       LIVERELOAD_PORT: 35185
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_ow
     ports:
@@ -665,6 +700,7 @@ services:
       LIVERELOAD_PORT: 35186
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_rft
     ports:
@@ -682,6 +718,7 @@ services:
       LIVERELOAD_PORT: 35187
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: euclid_sac
     ports:
@@ -699,6 +736,7 @@ services:
       LIVERELOAD_PORT: 35188
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: acbm_fcp
     ports:
@@ -716,6 +754,7 @@ services:
       LIVERELOAD_PORT: 35189
       SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://aerilon.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
       TENANT_KEY: pmmi_mundo
     ports:
@@ -733,6 +772,7 @@ services:
       LIVERELOAD_PORT: 35190
       SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
       RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
+      OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
       GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
       TENANT_KEY: bizbash_bzb
     ports:
