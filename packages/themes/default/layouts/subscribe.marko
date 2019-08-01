@@ -5,7 +5,7 @@ $ const { site } = out.global;
 <theme-default-document>
   <@head>
     <cms-page-title value="Subscribe" />
-    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('subscribe') />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('subscribe') start=false />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
