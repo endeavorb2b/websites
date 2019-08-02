@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/officer",
-  "version": "0.12.17",
+  "version": "0.13.0",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -14,9 +14,9 @@
     "@base-cms/marko-web": "^0.10.0",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.0",
-    "@endeavorb2b/base-website-common": "^0.12.17",
-    "@endeavorb2b/base-website-inquiry": "^0.12.17",
-    "@endeavorb2b/base-website-themes": "^0.12.17",
+    "@endeavorb2b/base-website-common": "^0.13.0",
+    "@endeavorb2b/base-website-inquiry": "^0.13.0",
+    "@endeavorb2b/base-website-themes": "^0.13.0",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",

@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-release-notes",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
   "bin": {
     "website-release-notes-between": "bin/between.js",
