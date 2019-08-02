@@ -8,7 +8,7 @@ $ const page = getAsObject(input, 'page');
   <@head>
     <cms-page-title value=page.title />
     <cms-page-description content=page.description />
-    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('published-content', page) start=false />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('published-content', page) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
