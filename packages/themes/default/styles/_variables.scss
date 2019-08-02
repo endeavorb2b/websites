@@ -1,10 +1,9 @@
 // Fonts
-$theme-font-family-sans-serif: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$theme-font-family-serif: "Georgia", "Cambria", "Times New Roman", "Times", serif !default;
-$theme-font-family-page-title: $theme-font-family-serif !default;
-
+$theme-font-family-sans-serif:  -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$theme-font-family-serif:       "Georgia", "Cambria", "Times New Roman", "Times", serif !default;
+$theme-font-family-page-title:  $theme-font-family-serif !default;
 // Set default Bootstrap font to theme font.
-$font-family-sans-serif: $theme-font-family-sans-serif !default;
+$font-family-sans-serif:        $theme-font-family-sans-serif !default;
 
 $black:           #000 !default;
 $body-color:      $black !default;
@@ -552,7 +551,7 @@ $theme-site-header-font-family: $theme-font-family-sans-serif !default;
 $theme-site-header-opacity:     .98 !default;
 $theme-site-header-z-index:     5000000 !default;
 
-//Navbar
+// Navbar
 @import "variables/navbar";
 
 // Site Footer

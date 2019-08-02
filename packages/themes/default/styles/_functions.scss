@@ -32,12 +32,12 @@
   $breakpoints: get-navbar-breakpoints-for($target-breakpoint);
 
   // Variable defaults.
-  $logo-height: $theme-site-navbar-logo-height;
-  $primary-font-size: $theme-site-navbar-primary-font-size * $theme-site-navbar-primary-line-height;
-  $primary-link-padding: $theme-site-navbar-primary-link-padding * 2;
+  $logo-height:           $theme-site-navbar-logo-height;
+  $primary-font-size:     $theme-site-navbar-primary-font-size * $theme-site-navbar-primary-line-height;
+  $primary-link-padding:  $theme-site-navbar-primary-link-padding * 2;
   // These are constant.
-  $brand-margin: $theme-site-navbar-brand-margin-y * 2;
-  $secondary-padding: $theme-site-navbar-secondary-padding-y * 2;
+  $brand-margin:          $theme-site-navbar-brand-margin-y * 2;
+  $secondary-padding:     $theme-site-navbar-secondary-padding-y * 2;
 
   @if length($breakpoints) == 0 {
     @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
@@ -50,8 +50,8 @@
   }
   @if index($breakpoints, hide-primary) != null {
     // Orverride font size again with hidden height and set padding to none
-    $primary-font-size: $theme-site-navbar-primary-height-sm;
-    $primary-link-padding: 0;
+    $primary-font-size:     $theme-site-navbar-primary-height-sm;
+    $primary-link-padding:  0;
   }
   @return calc(#{$logo-height} + #{$primary-font-size} + #{$brand-margin} + #{$primary-link-padding} + #{$secondary-padding});
 }
