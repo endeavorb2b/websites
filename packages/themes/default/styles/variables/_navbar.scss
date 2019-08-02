@@ -18,6 +18,11 @@ $theme-site-navbar-light-color:         rgba($black, .75) !default;
 $theme-site-navbar-light-hover-color:   $black !default;
 $theme-site-navbar-light-active-color:  $theme-site-navbar-light-hover-color !default;
 
+// Lighter
+$theme-site-navbar-lighter-color:         $black !default;
+$theme-site-navbar-lighter-hover-color:   $primary !default;
+$theme-site-navbar-lighter-active-color:  $theme-site-navbar-lighter-hover-color !default;
+
 // Themes
 $theme-site-navbar-map: (
   dark: (
@@ -29,6 +34,11 @@ $theme-site-navbar-map: (
     default:  $theme-site-navbar-light-color,
     hover:    $theme-site-navbar-light-hover-color,
     active:   $theme-site-navbar-light-active-color
+  ),
+  lighter: (
+    default:  $theme-site-navbar-lighter-color,
+    hover:    $theme-site-navbar-lighter-hover-color,
+    active:   $theme-site-navbar-lighter-active-color
   )
 );
 

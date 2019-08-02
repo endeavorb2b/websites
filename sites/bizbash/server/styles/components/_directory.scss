@@ -104,7 +104,7 @@
     margin-left: auto;
 
     & > .icon {
-      @include theme-navbar-link-color($theme-site-bizbash-map, lighter);
+      @include theme-navbar-link-color($theme-site-navbar-map, lighter);
     }
   }
 }
