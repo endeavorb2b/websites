@@ -11,10 +11,10 @@
     "test": "yarn lint && yarn build"
   },
   "dependencies": {
-    "@base-cms/image": "^0.9.46",
-    "@base-cms/marko-web": "^0.9.55",
-    "@base-cms/object-path": "^0.9.40",
-    "@base-cms/web-cli": "^0.9.55",
+    "@base-cms/image": "^0.10.0",
+    "@base-cms/marko-web": "^0.10.0",
+    "@base-cms/object-path": "^0.10.0",
+    "@base-cms/web-cli": "^0.10.0",
     "@endeavorb2b/base-website-common": "^0.12.17",
     "@endeavorb2b/base-website-inquiry": "^0.12.17",
     "@endeavorb2b/base-website-themes": "^0.12.17",

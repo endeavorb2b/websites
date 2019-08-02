@@ -7,11 +7,11 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/env": "^0.9.25",
-    "@base-cms/image": "^0.9.46",
-    "@base-cms/marko-web": "^0.9.55",
-    "@base-cms/object-path": "^0.9.40",
-    "@base-cms/utils": "^0.9.40",
+    "@base-cms/env": "^0.10.0",
+    "@base-cms/image": "^0.10.0",
+    "@base-cms/marko-web": "^0.10.0",
+    "@base-cms/object-path": "^0.10.0",
+    "@base-cms/utils": "^0.10.0",
     "@endeavorb2b/base-website-identity-x": "^0.12.17",
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",

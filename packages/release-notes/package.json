@@ -11,7 +11,7 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/env": "^0.9.25",
+    "@base-cms/env": "^0.10.0",
     "@octokit/rest": "^16.28.2",
     "numeral": "^2.0.6"
   },
