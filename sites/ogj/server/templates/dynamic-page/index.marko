@@ -23,7 +23,7 @@ $ const page = getAsObject(data, 'page');
           </div>
         </div>
         <div class="page-wrapper__contents">
-          $!{page.body}
+          <cms-content-body tag="div" obj=page />
         </div>
       </div>
     </div>
