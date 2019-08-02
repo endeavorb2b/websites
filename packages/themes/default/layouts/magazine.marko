@@ -7,7 +7,7 @@ $ const description = site.get('magazines.description');
   <@head>
     <cms-page-title value="Magazines" />
     <cms-page-description content=description />
-    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('magazine') start=false />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('magazine') />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">

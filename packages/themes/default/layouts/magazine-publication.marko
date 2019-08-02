@@ -7,7 +7,7 @@ $ const publication = getAsObject(input, 'publication');
 <theme-default-document>
   <@head>
     <cms-page-metadata for="magazine-publication" ...publication />
-    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('publication-issue', publication) start=false />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('publication-issue', publication) />
     <${input.head} />
   </@head>
   <div class="container-fluid-max">
