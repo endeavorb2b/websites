@@ -256,17 +256,13 @@ body {
     }
   }
   &--secondary {
-    #{ $self } {
-      &__link {
-        @include theme-navbar-link-color($theme-site-bizbash-map, light);
-      }
+    #{ $self }__link {
+      @include theme-navbar-link-color($theme-site-bizbash-map, light);
     }
   }
   &--tertiary {
-    #{ $self } {
-      &__link {
-        @include theme-navbar-link-color($theme-site-bizbash-map, dark);
-      }
+    #{ $self }__link {
+      @include theme-navbar-link-color($theme-site-bizbash-map, dark);
     }
   }
 }
