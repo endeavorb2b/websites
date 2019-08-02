@@ -231,7 +231,6 @@ body {
         content: "";
       }
       &__link {
-        @include theme-navbar-link-color($theme-site-navbar-map, dark);
         &::before {
           float: left;
           padding-right: $theme-site-navbar-primary-padding-x - 1;
@@ -244,11 +243,6 @@ body {
   &--secondary {
     #{ $self }__link {
       @include theme-navbar-link-color($theme-site-navbar-map, light);
-    }
-  }
-  &--tertiary {
-    #{ $self }__link {
-      @include theme-navbar-link-color($theme-site-navbar-map, dark);
     }
   }
 }
