@@ -1,17 +1,17 @@
 @import "../../node_modules/bootstrap/scss/functions";
 
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
 @function get-line-height($font-size-px, $line-height-px) {
   @if $line-height-px < $font-size-px {
     @return 1;
   }
   @return $line-height-px / $font-size-px;
-}
-
-@function navbar-link-color($navbar-type, $color-type) {
-  @if $navbar-type == dark {
-    @return map-get($theme-site-navbar-dark-colors, $color-type);
-  }
-  @return map-get($theme-site-navbar-light-colors, $color-type);
 }
 
 @function get-navbar-breakpoints-for($target) {

@@ -1,0 +1,115 @@
+/* Navbar */
+
+//  Spacing
+$theme-site-navbar-padding-x:           16px !default;
+$theme-site-navbar-padding-y:           0 !default;
+$theme-site-navbar-brand-margin-y: 0 !default;
+$theme-site-navbar-brand-margin-x: 12px !default;
+
+// Colors
+
+  // Dark
+  $theme-site-navbar-dark-color:          rgba($white, .75) !default;
+  $theme-site-navbar-dark-hover-color:    $white !default;
+  $theme-site-navbar-dark-active-color:   $theme-site-navbar-dark-hover-color !default;
+
+  // Light
+  $theme-site-navbar-light-color:         rgba($black, .75) !default;
+  $theme-site-navbar-light-hover-color:   $black !default;
+  $theme-site-navbar-light-active-color:  $theme-site-navbar-light-hover-color !default;
+
+// Themes
+$theme-site-navbar-map: (
+  dark: (
+    default: $theme-site-navbar-dark-color,
+    hover: $theme-site-navbar-dark-hover-color,
+    active: $theme-site-navbar-dark-active-color
+  ),
+  light: (
+    default: $theme-site-navbar-light-color,
+    hover: $theme-site-navbar-light-hover-color,
+    active: $theme-site-navbar-light-active-color
+  )
+);
+
+
+// Levels
+
+  // Primary
+  $theme-site-navbar-primary-bg-color:        $primary !default;
+  $theme-site-navbar-primary-font-family:     $theme-site-header-font-family !default;
+  $theme-site-navbar-primary-font-size:       16px !default;
+  $theme-site-navbar-primary-font-size-sm:    $theme-site-navbar-primary-font-size - 2 !default;
+  $theme-site-navbar-primary-font-weight:     $font-weight-normal !default;
+  $theme-site-navbar-primary-height-sm:       4px !default;
+  $theme-site-navbar-primary-line-height:     get-line-height($theme-site-navbar-primary-font-size, 24px) !default;
+  $theme-site-navbar-primary-line-height-sm:  get-line-height($theme-site-navbar-primary-font-size-sm, 21px) !default;
+  $theme-site-navbar-primary-padding-x:       16px !default;
+  $theme-site-navbar-primary-padding-y:       0 !default;
+
+  $theme-site-navbar-primary-link-active-background-color:  initial !default;
+  $theme-site-navbar-primary-link-active-decoration:        underline !default;
+  $theme-site-navbar-primary-link-background-color:         initial !default;
+  $theme-site-navbar-primary-link-decoration:               none !default;
+  $theme-site-navbar-primary-link-hover-background-color:   initial !default;
+  $theme-site-navbar-primary-link-hover-decoration:         underline !default;
+  $theme-site-navbar-primary-link-padding:                  8px !default;
+
+  $theme-site-navbar-primary-decorations: (
+    default: $theme-site-navbar-primary-link-decoration,
+    hover: $theme-site-navbar-primary-link-hover-decoration,
+    active: $theme-site-navbar-primary-link-active-decoration
+  );
+
+  $theme-site-navbar-primary-background-colors: (
+    default: $theme-site-navbar-primary-link-background-color,
+    hover: $theme-site-navbar-primary-link-hover-background-color,
+    active: $theme-site-navbar-primary-link-active-background-color
+  );
+
+
+  // Secondary
+  $theme-site-navbar-secondary-bg-color:        $dark !default;
+  $theme-site-navbar-secondary-font-family:     $theme-site-header-font-family !default;
+  $theme-site-navbar-secondary-font-size:       14px !default;
+  $theme-site-navbar-secondary-font-size-sm:    $theme-site-navbar-secondary-font-size - 2 !default;
+  $theme-site-navbar-secondary-font-weight:     $font-weight-normal !default;
+  $theme-site-navbar-secondary-line-height:     get-line-height($theme-site-navbar-secondary-font-size, 21px) !default;
+  $theme-site-navbar-secondary-line-height-sm:  get-line-height($theme-site-navbar-secondary-font-size-sm, 18px) !default;
+  $theme-site-navbar-secondary-padding-x:       16px !default;
+  $theme-site-navbar-secondary-padding-y:       10px !default;
+  $theme-site-navbar-secondary-type:            dark !default;
+
+  $theme-site-navbar-secondary-link-active-background-color:  initial !default;
+  $theme-site-navbar-secondary-link-active-decoration:        underline !default;
+  $theme-site-navbar-secondary-link-background-color:         initial !default;
+  $theme-site-navbar-secondary-link-decoration:               none !default;
+  $theme-site-navbar-secondary-link-hover-background-color:   initial !default;
+  $theme-site-navbar-secondary-link-hover-decoration:         underline !default;
+  $theme-site-navbar-secondary-link-padding:                  8px !default;
+
+  $theme-site-navbar-secondary-decorations: (
+    default: $theme-site-navbar-secondary-link-decoration,
+    hover: $theme-site-navbar-secondary-link-hover-decoration,
+    active: $theme-site-navbar-secondary-link-active-decoration
+  );
+
+  $theme-site-navbar-secondary-background-colors: (
+    default: $theme-site-navbar-secondary-link-background-color,
+    hover: $theme-site-navbar-secondary-link-hover-background-color,
+    active: $theme-site-navbar-secondary-link-active-background-color
+  );
+
+// Effects
+$theme-site-navbar-link-transition: color ease 300ms, text-decoration ease 300ms, background-color ease 300ms !default;
+
+$theme-site-navbar-logo-drop-shadow:   1px 1px 1px rgba(0, 0, 0, .35) !default;
+$theme-site-navbar-logo-height:        60px !default;
+$theme-site-navbar-logo-height-sm:     $theme-site-navbar-logo-height / 2 !default;
+
+$theme-site-navbar-icon-transition:  fill ease 300ms !default;
+
+$theme-site-navbar-menu-box-shadow:             0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !default;
+$theme-site-navbar-menu-width:                  264px !default;
+$theme-site-navbar-menu-max-width:              75vw !default;
+$theme-site-navbar-menu-hover-background-color: lighten($theme-site-navbar-primary-bg-color, 60%) !default;

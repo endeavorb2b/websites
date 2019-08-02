@@ -19,8 +19,27 @@ $black:     #000;
 $white:     #fff;
 $gray-600:  #4d4d4d;
 
+// Map
+$theme-site-bizbash-map: (
+  dark: (
+    default: $white,
+    hover: $white,
+    active: $white
+  ),
+  light: (
+    default: $primary,
+    hover: $white,
+    active: $white
+  ),
+  lighter: (
+    default: $black,
+    hover: $primary,
+    active: $primary
+  )
+);
+
 // General Settings
-$body-bg:     #fff;
+$body-bg:     $white;
 $body-color:  #333;
 $list-group-border-width: 0;
 $enable-shadows: false;
@@ -104,7 +123,7 @@ $theme-breadcrumbs-font-weight:   600;
 
 // Cards
 $theme-card-header-color:             $primary;
-$theme-card-header-background-color:  #fff;
+$theme-card-header-background-color:  $white;
 $theme-card-header-border:            none;
 $theme-card-header-font-family:       $font-oswald;
 $theme-card-header-font-size:         26.825px;
@@ -142,11 +161,7 @@ $theme-site-navbar-primary-font-size:       18.5px;
 $theme-site-navbar-primary-font-size-sm:    16px;
 $theme-site-navbar-primary-font-weight:     700;
 $theme-site-navbar-primary-line-height:     1;
-
-$theme-site-navbar-primary-link-active-color:       $primary;
 $theme-site-navbar-primary-link-active-decoration:  none;
-$theme-site-navbar-primary-link-color:              #fff;
-$theme-site-navbar-primary-link-hover-color:        #fff;
 
 $theme-site-navbar-secondary-bg-color:      $black;
 $theme-site-navbar-secondary-font-size:     12px;
@@ -154,13 +169,6 @@ $theme-site-navbar-secondary-font-size-sm:  12px;
 $theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
-
-$theme-site-navbar-secondary-link-color:    $primary;
-$theme-site-navbar-secondary-hover-color:   $primary;
-
-$theme-site-navbar-tertiary-link-active-color:  $white;
-$theme-site-navbar-tertiary-link-color:         $white;
-$theme-site-navbar-tertiary-link-hover-color:   $white;
 
 $theme-site-navbar-menu-hover-background-color: lighten($primary, 60%);
 
@@ -237,6 +245,7 @@ body {
         content: "";
       }
       &__link {
+        @include theme-navbar-link-color($theme-site-bizbash-map, dark);
         &::before {
           float: left;
           padding-right: $theme-site-navbar-primary-padding-x - 1;
@@ -246,6 +255,24 @@ body {
       }
     }
   }
+  &--secondary {
+    #{ $self } {
+      &__link {
+        @include theme-navbar-link-color($theme-site-bizbash-map, light);
+      }
+    }
+  }
+  &--tertiary {
+    #{ $self } {
+      &__link {
+        @include theme-navbar-link-color($theme-site-bizbash-map, dark);
+      }
+    }
+  }
+}
+
+.site-navbar-toggler > .icon {
+  @include theme-navbar-link-color($theme-site-bizbash-map, light);
 }
 
 .website-scheduled-content-hero {

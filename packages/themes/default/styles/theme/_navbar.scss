@@ -55,7 +55,7 @@
   margin-bottom: auto;
 
   & > .icon {
-    @include theme-navbar-link-color($theme-site-navbar-secondary-colors);
+    @include theme-navbar-link-color($theme-site-navbar-map, dark);
   }
 }
 
@@ -120,7 +120,7 @@
       }
 
       &__link {
-        @include theme-navbar-link-color($theme-site-navbar-primary-colors);
+        @include theme-navbar-link-color($theme-site-navbar-map, dark);
         @include theme-navbar-link-decoration($theme-site-navbar-primary-decorations);
       }
     }
@@ -152,7 +152,7 @@
         }
       }
       &__link {
-        @include theme-navbar-link-color($theme-site-navbar-secondary-colors);
+        @include theme-navbar-link-color($theme-site-navbar-map, dark);
         @include theme-navbar-link-decoration($theme-site-navbar-secondary-decorations);
         padding: $theme-site-navbar-secondary-link-padding;
         padding-bottom: 0;
@@ -188,7 +188,7 @@
         }
       }
       &__link {
-        @include theme-navbar-link-color($theme-site-navbar-tertiary-colors);
+        @include theme-navbar-link-color($theme-site-navbar-map, dark);
         @include theme-navbar-link-decoration($theme-site-navbar-secondary-decorations);
         padding: $theme-site-navbar-secondary-link-padding;
         padding-top: 0;

@@ -285,10 +285,10 @@
   }
 }
 
-@mixin theme-navbar-link-color($color-map) {
-  $color: map-get($color-map, default);
-  $hover: map-get($color-map, hover);
-  $active: map-get($color-map, active);
+@mixin theme-navbar-link-color($map, $theme) {
+  $color: map-deep-get($map, $theme, default);
+  $hover: map-deep-get($map, $theme, hover);
+  $active: map-deep-get($map, $theme, active);
 
   color: $color;
   svg {

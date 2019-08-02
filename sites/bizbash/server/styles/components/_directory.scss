@@ -104,7 +104,7 @@
     margin-left: auto;
 
     & > .icon {
-      @include theme-navbar-link-color(( active: $primary, hover: $primary, default: $black ));
+      @include theme-navbar-link-color($theme-site-bizbash-map, lighter);
     }
   }
 }
