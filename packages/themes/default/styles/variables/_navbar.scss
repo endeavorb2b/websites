@@ -8,15 +8,15 @@ $theme-site-navbar-brand-margin-x: 12px !default;
 
 // Colors
 
-  // Dark
-  $theme-site-navbar-dark-color:          rgba($white, .75) !default;
-  $theme-site-navbar-dark-hover-color:    $white !default;
-  $theme-site-navbar-dark-active-color:   $theme-site-navbar-dark-hover-color !default;
+// Dark
+$theme-site-navbar-dark-color:          rgba($white, .75) !default;
+$theme-site-navbar-dark-hover-color:    $white !default;
+$theme-site-navbar-dark-active-color:   $theme-site-navbar-dark-hover-color !default;
 
-  // Light
-  $theme-site-navbar-light-color:         rgba($black, .75) !default;
-  $theme-site-navbar-light-hover-color:   $black !default;
-  $theme-site-navbar-light-active-color:  $theme-site-navbar-light-hover-color !default;
+// Light
+$theme-site-navbar-light-color:         rgba($black, .75) !default;
+$theme-site-navbar-light-hover-color:   $black !default;
+$theme-site-navbar-light-active-color:  $theme-site-navbar-light-hover-color !default;
 
 // Themes
 $theme-site-navbar-map: (
