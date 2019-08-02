@@ -7,7 +7,7 @@
     "test": "yarn lint"
   },
   "dependencies": {
-    "@base-cms/marko-web": "^0.9.53",
+    "@base-cms/marko-web": "^0.9.55",
     "@base-cms/object-path": "^0.9.40",
     "@base-cms/utils": "^0.9.40",
     "@endeavorb2b/base-website-routing-utils": "^0.12.0",

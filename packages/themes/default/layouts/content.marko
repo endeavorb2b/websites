@@ -7,7 +7,7 @@ $ const content = getAsObject(input, 'content');
 <theme-default-document>
   <@head>
     <cms-page-metadata for="content" ...content />
-    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('content', content) />
+    <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('content', content) start=false />
     <endeavor-nativex-init />
     <${input.head} />
   </@head>

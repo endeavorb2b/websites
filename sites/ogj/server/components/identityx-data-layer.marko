@@ -1,0 +1,16 @@
+import { getAsObject } from '@base-cms/object-path';
+
+<identity-x|{ isEnabled, mergedTeams, user: userContext }|>
+  <if(isEnabled)>
+    $ const team = getAsObject(mergedTeams, 0);
+    $ const user = userContext || {};
+    <if (user.id || team.id)>
+      <cms-gtm-container-push data={
+        identityx_user_id: user.id,
+        identityx_user_email: user.email,
+        identityx_team_id: team.id,
+        identityx_team_name: team.name,
+      } />
+    </if>
+  </if>
+</identity-x>
