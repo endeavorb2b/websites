@@ -29,10 +29,8 @@ $ const publication = getAsObject(issue, 'publication');
   </div>
 
   <@below-container>
-    <endeavor-load-more-header>
-      Content from ${issue.name}
-    </endeavor-load-more-header>
     <endeavor-content-query-load-more-issue-content
+      header=`Content from ${issue.name}`
       query={ issueId: issue.id }
     />
   </@below-container>
