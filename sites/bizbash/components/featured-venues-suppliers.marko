@@ -1,0 +1,12 @@
+import contentListFragment from '../server/api/fragments/content-list';
+
+<cms-query-related-published-content|{ nodes }| limit=100 content-id=input.contentId include-content-types=["Venue", "Supplier"] query-fragment=contentListFragment>
+  <if(nodes.length)>
+    <endeavor-item-list modifiers=["featured-venues-suppliers", "unjustified"] items=nodes>
+      <@header>Featured Venues/Suppliers:</@header>
+      <@item|{ item }|>
+        <bizbash-list-item-section-name modifiers=["featured-venue-supplier"] content=item />
+      </@item>
+    </endeavor-item-list>
+  </if>
+</cms-query-related-published-content>
