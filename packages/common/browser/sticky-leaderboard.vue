@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min';
 import IconX from '../icons/vue/x.vue';
 
 const buildSizeMapping = sm => sm
@@ -63,6 +64,10 @@ export default {
         { viewport: [320, 0], size: [[300, 50], [320, 50], [300, 100]] },
       ],
     },
+    scrollOffset: {
+      type: Number,
+      default: 1000,
+    },
   },
   data() {
     return {
@@ -70,6 +75,7 @@ export default {
       intervalMs: this.interval * 1000,
       handler: null,
       visible: false,
+      initialized: false,
     };
   },
   computed: {
@@ -94,6 +100,19 @@ export default {
   },
   mounted() {
     if (this.canDisplay) {
+      const controller = new ScrollMagic.Controller();
+      const scene = new ScrollMagic.Scene({ offset: this.scrollOffset });
+      scene.on('enter', () => {
+        if (!this.initialized) this.init();
+      });
+      controller.addScene(scene);
+    }
+  },
+  beforeDestroy() {
+    if (this.canDisplay) clearTimeout(this.handler);
+  },
+  methods: {
+    init() {
       const { googletag } = window;
       googletag.cmd.push(() => {
         googletag.pubads().addEventListener('slotRenderEnded', this.display);
@@ -104,12 +123,8 @@ export default {
           .addService(googletag.pubads());
         googletag.display(this.id);
       });
-    }
-  },
-  beforeDestroy() {
-    if (this.canDisplay) clearTimeout(this.handler);
-  },
-  methods: {
+      this.initialized = true;
+    },
     close() {
       this.visible = false;
       clearTimeout(this.handler);
