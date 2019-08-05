@@ -280,7 +280,8 @@
   &:hover {
     background-color: map-get($background-color-map, hover);
   }
-  &:active {
+  &:active,
+  &--active {
     background-color: map-get($background-color-map, active);
   }
 }
@@ -300,7 +301,8 @@
       fill: $hover;
     }
   }
-  &:active {
+  &:active,
+  &--active {
     color: $active;
     svg {
       fill: $active;
@@ -313,7 +315,8 @@
   &:hover {
     text-decoration: map-get($decoration-map, hover);
   }
-  &:active {
+  &:active,
+  &--active {
     text-decoration: map-get($decoration-map, active);
   }
 }

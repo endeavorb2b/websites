@@ -155,8 +155,9 @@ $theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
 
-$theme-site-navbar-secondary-link-color:    $primary;
-$theme-site-navbar-secondary-hover-color:   $primary;
+$theme-site-navbar-secondary-link-color:              $primary;
+$theme-site-navbar-secondary-link-active-decoration:  none;
+$theme-site-navbar-secondary-hover-color:             $primary;
 
 $theme-site-navbar-tertiary-link-active-color:  $white;
 $theme-site-navbar-tertiary-link-color:         $white;
