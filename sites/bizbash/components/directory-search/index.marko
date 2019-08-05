@@ -28,7 +28,9 @@ $ const searchParams = {
       <input name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
       <if(marketId)><input name="marketId" type="hidden" value=marketId></if>
       <if(topicId)><input name="topicId" type="hidden" value=topicId></if>
-      <input name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
+      <if(input.contentType === 'Venue')>
+        <input name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
+      </if>
       <button type="submit" class="btn btn-primary directory-search__button">Search</button>
     </form>
   </div>
