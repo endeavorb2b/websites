@@ -2,12 +2,12 @@ import { getAsArray } from '@base-cms/object-path';
 import imageFormat from './image-format';
 
 $ const imageOptions = {
+  ar: '16:9',
   fit: 'crop',
   crop: 'focalpoint',
   fpX: 0.5,
   fpY: 0.5,
-  w: 1200,
-  h: 515,
+  w: 1140,
 };
 $ const images = getAsArray(input, 'images').map(node => imageFormat(node, imageOptions));
 
