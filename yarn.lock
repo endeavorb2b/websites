@@ -619,17 +619,16 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@base-cms/embedded-media@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/embedded-media/-/embedded-media-0.10.0.tgz#72fbf5fb3b3b92d47ab8f7004d0acb9aecf174b1"
-  integrity sha512-qClJ6pGRtrc7087IdX+AOryDRWwlzF6tsSWouvYKDTNdKDwb3U/ym2iNKz6XPNy9gzc6hTLGIcnmCOJYQ7Pbwg==
+"@base-cms/embedded-media@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/embedded-media/-/embedded-media-0.10.1.tgz#572dba7e4256bd7f07f5eb23d5f1b4a117df1853"
+  integrity sha512-AkJNUwPA1XqiiX5oxP6GCy1RwLhwL+Y/Ca6pE8s0Zf1+rLqRU3WVhzFswxkmvayM0b83RU7CZmPdiEmonSSXJA==
   dependencies:
     "@base-cms/html" "^0.10.0"
     "@base-cms/image" "^0.10.0"
     "@base-cms/inflector" "^0.10.0"
     cheerio "^1.0.0-rc.2"
     escape-string-regexp "^1.0.5"
-    oembed-parser "^1.2.2"
 
 "@base-cms/env@^0.10.0":
   version "0.10.0"
@@ -681,12 +680,12 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.10.0.tgz#77ee884954e6df4f2310b49a270fda7b74f9d38d"
-  integrity sha512-8GK5R74szm9SfjJty2t6OU10js8C2JKsfaFYxdzfLhq7PIM0q2KCCmYLAgNGwjD8qCATg9Q9dJuwmx7EuQqw4Q==
+"@base-cms/marko-web@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.10.1.tgz#aff2456966c56093757f98264d1184594ecdf543"
+  integrity sha512-J295t+ANZRpFSeP5OBb5veu9j3Ezg1av+iBXBcnwlr/kwZplYnaYcFvo/c080rQIDR0D16N4+ObbgxqVO1NOMA==
   dependencies:
-    "@base-cms/embedded-media" "^0.10.0"
+    "@base-cms/embedded-media" "^0.10.1"
     "@base-cms/express-apollo" "^0.10.0"
     "@base-cms/image" "^0.10.0"
     "@base-cms/object-path" "^0.10.0"
@@ -721,10 +720,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.10.0.tgz#1eef64d69d33ff43db4ed29a7d7b4745f79e1649"
   integrity sha512-QA4t6SU+IQ5j+dBropxRKI8SUHVeoE2tnhLew5qjW74oNibWsrFunMdJxrOWaC4uffYls2bRDY2V/zvFnkkQQg==
 
-"@base-cms/web-cli@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.10.0.tgz#f9c1b35343705559fbe966fe55ba52d88ba442d7"
-  integrity sha512-iQK+ryKDzKDMOUfu+MvV6RpYed/cd/+jpFh3j27pDcCNP4D5M3sF8AAxRYXJcH83WiZHAbEC/oVre5cJR+MYPg==
+"@base-cms/web-cli@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.10.1.tgz#50002802d3dc27a198ea4c984ca7b3bca6b6e5d6"
+  integrity sha512-qOEKoI/zW/RVLOX7RaF1MdPk6T9m7gpaukn3kqETxCK0KfG+xyw7VeIpwu4EK4+AX10Aoi+dITL0ukWAsp25nw==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -732,7 +731,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.10.0"
-    "@base-cms/marko-web" "^0.10.0"
+    "@base-cms/marko-web" "^0.10.1"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -8021,14 +8020,6 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-oembed-parser@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/oembed-parser/-/oembed-parser-1.2.2.tgz#0ababb60eb6bef0538878b690eb71ecb7fdfb4d1"
-  integrity sha512-dFsRPQZTUvIG5EA0Gq9kWCfxxdt+hBk0D9xvYkrGq1lh0NyzJTMWkrJWFXGu7P/9MiP7t2VHvlRFsC4I3SuGPw==
-  dependencies:
-    node-fetch "^2.3.0"
-    promise-wtf "^1.2.4"
-
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -9013,11 +9004,6 @@ promise-retry@^1.1.1:
   dependencies:
     err-code "^1.0.0"
     retry "^0.10.0"
-
-promise-wtf@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/promise-wtf/-/promise-wtf-1.2.4.tgz#8cbdd31ea10dee074fbb6387cbc96e413993376c"
-  integrity sha512-wOZ+ZUG0/Lsk+muOElLtteIteyvF5B1bNcVLhmlv6PDKcAAQGa5Bf0maN3rj73FWyjJE840MzeQyNE6KOKpgrg==
 
 promise@^8.0.1:
   version "8.0.3"
