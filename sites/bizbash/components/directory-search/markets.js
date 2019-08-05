@@ -16,12 +16,20 @@ module.exports = [
     name: 'Boston',
   },
   {
+    id: 3127840,
+    name: 'Calgary',
+  },
+  {
     id: 2000021,
     name: 'Chicago',
   },
   {
     id: 2000030,
     name: 'Dallas/Fort Worth',
+  },
+  {
+    id: 3127841,
+    name: 'Edmonton',
   },
   {
     id: 2000031,
