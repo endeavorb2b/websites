@@ -377,6 +377,15 @@ body {
     }
   }
 
+  &--featured-venue-supplier {
+    #{ $self } {
+      &__contents {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
   &--directory-search-hit {
     padding: 1rem 0;
     img {
@@ -484,7 +493,7 @@ body {
   }
 
   &--featured-venues-suppliers {
-    & .item-list {
+    #{ $self } {
       &__header,
       &__item {
         font-size: 20px;

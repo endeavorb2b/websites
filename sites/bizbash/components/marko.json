@@ -76,7 +76,8 @@
       "@content": {
         "type": "object",
         "required": true
-      }
+      },
+      "@modifiers": "array"
     },
     "bizbash-card-item-overlay": {
       "template": "./card-item-overlay.marko",
