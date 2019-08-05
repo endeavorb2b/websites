@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "native-x-init": {
+      "template": "./init.marko",
+      "@uri": {
+        "type": "string",
+        "required": true
+      },
+      "@script-src": {
+        "type": "string",
+        "default-value": "https://d24bnj4f1s1f8m.cloudfront.net/1.0.0-rc.4.3/fortnight.min.js"
+      }
+    },
+    "native-x-fetch": {
+      "template": "./fetch.marko",
+      "@uri": {
+        "type": "string",
+        "required": true
+      },
+      "@placement-id": {
+        "type": "string",
+        "required": true
+      },
+      "@opts": "object"
+    }
+  }
+}

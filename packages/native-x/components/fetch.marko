@@ -1,0 +1,30 @@
+import fetch from '../fetch';
+
+$ const { onAsyncBlockError, req } = out.global;
+$ const isDevelopment = process.env.NODE_ENV === 'development';
+
+$ const { uri, placementId, opts } = input;
+$ const args = {
+  uri,
+  placementId,
+  opts,
+  req,
+};
+
+<await(fetch(args))>
+  <@then|{ ads }|>
+    <${input.renderBody} ads=ads />
+  </@then>
+  <@catch|err|>
+    $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
+    <if(input.onError)>
+      <${input.onError} err=err />
+    </if>
+    <else>
+      <pre>An unexpected error occurred: ${err.message}</pre>
+      <if(isDevelopment)>
+        <pre>${err.stack}</pre>
+      </if>
+    </else>
+  </@catch>
+</await>
