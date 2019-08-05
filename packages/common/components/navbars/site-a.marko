@@ -1,7 +1,13 @@
 import bem from '../../utils/bem-class';
 import getNavItems from './get-nav-items';
+import isActiveLink from './is-active-link';
 
-$ const { site, config } = out.global;
+$ const { site, config, req } = out.global;
+$ const activeNavMods = (href) => {
+  const mods = [];
+  if (isActiveLink(req.path, href)) mods.push('active');
+  return mods;
+};
 
 $ const navbar = 'site-navbar';
 $ const nav = 'site-navbar-items';
@@ -34,14 +40,14 @@ $ const navMenu = site.getAsObject('navigation.menu');
         <ul class="site-navbar-items site-navbar-items--secondary">
           <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.secondary })>
             <li class=bem(nav, 'item')>
-              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+              <endeavor-link class=bem(nav, 'link', activeNavMods(item.href)) target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
           </for>
         </ul>
         <ul class="site-navbar-items site-navbar-items--tertiary">
           <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.tertiary })>
             <li class=bem(nav, 'item')>
-              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+              <endeavor-link class=bem(nav, 'link', activeNavMods(item.href)) target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
           </for>
           <li class=bem(nav, 'item')>
@@ -58,7 +64,7 @@ $ const navMenu = site.getAsObject('navigation.menu');
         <ul class="site-navbar-items site-navbar-items--primary">
           <for|item| of=getNavItems({ regEnabled, hasUser, items: navigation.primary })>
             <li class=bem(nav, 'item')>
-              <endeavor-link class=bem(nav, 'link') target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
+              <endeavor-link class=bem(nav, 'link', activeNavMods(item.href)) target=item.target title=item.title href=item.href>${item.label}</endeavor-link>
             </li>
           </for>
         </ul>
