@@ -12,7 +12,7 @@ $ const socialLinks = getAsArray(content, 'socialLinks');
 
 $ const fields = ['address1', 'address2', 'city', 'state', 'zip', 'country', 'title', 'website', 'phone', 'mobile', 'tollfree', 'fax'];
 $ if (showEmail) fields.push('publicEmail');
-$ const display = addressFields.some(k => content[k]) || socialLinks.length;
+$ const display = fields.some(k => content[k]) || socialLinks.length;
 
 <if(display)>
   <div class=block>
