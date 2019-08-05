@@ -482,6 +482,16 @@ body {
       }
     }
   }
+
+  &--featured-venues-suppliers {
+    & .item-list {
+      &__header,
+      &__item {
+        font-size: 20px;
+        background-color: $gray-200;
+      }
+    }
+  }
 }
 
 .item-card-deck {
