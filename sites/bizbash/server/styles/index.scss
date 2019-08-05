@@ -520,6 +520,14 @@ body {
   }
 }
 
+.directory-search {
+  &__input {
+    & + & {
+      margin-left: .75rem;
+    }
+  }
+}
+
 .content-attribution {
   display: inline;
   div {

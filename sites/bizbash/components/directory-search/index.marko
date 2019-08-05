@@ -4,7 +4,7 @@ import cloudfront from '../../services/cloud-front-search';
 
 $ const isDevelopment = process.env.NODE_ENV === 'development';
 $ const { req, onAsyncBlockError } = out.global;
-$ const { phrase = '', topicId, marketId } = req.query;
+$ const { phrase = '', topicId, marketId, minimumCapacity } = req.query;
 $ const page = parseInt(req.query.page, 10) || 1;
 
 $ const activeTopic = findActiveFacet(input.topics, topicId);
@@ -16,18 +16,19 @@ $ const searchParams = {
   pageNumber: page,
   size: input.pageSize,
   phrase,
+  minimumCapacity,
   facets: [
     { field: 'market', value: marketId },
     { field: 'topic', value: topicId },
   ]
 };
-
 <div class="row">
   <div class="col mb-block">
     <form class="directory-search">
       <input name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
       <if(marketId)><input name="marketId" type="hidden" value=marketId></if>
       <if(topicId)><input name="topicId" type="hidden" value=topicId></if>
+      <input name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
       <button type="submit" class="btn btn-primary directory-search__button">Search</button>
     </form>
   </div>

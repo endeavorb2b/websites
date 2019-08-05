@@ -11,6 +11,7 @@ module.exports = async ({
   contentType,
   exprFeatured = '_score*((_time > featured_start && _time < featured_end) ? 100 : 1)',
   facets = [],
+  minimumCapacity,
 }) => {
   const start = (pageNumber - 1) * size;
   const params = {
@@ -33,6 +34,11 @@ module.exports = async ({
     arr.push(`(term field=${f.field} '${f.value}')`);
     return arr;
   }, [`(term field=type '${contentType}')`]);
+
+  // Apply minimumCapacity.
+  if (minimumCapacity) {
+    fq.push(`(range field=maxcapacity [${minimumCapacity},})`);
+  }
   params.fq = `(and ${fq.join(' ')})`;
 
   const url = `${API_URI}?${querystring.stringify(params)}`;
