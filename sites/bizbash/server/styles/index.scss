@@ -295,6 +295,10 @@ body {
     background-color: $primary;
   }
 
+  &--shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  }
+
   // @todo Move to core?
   &--latest-issue {
     padding-right: 0;
@@ -322,6 +326,9 @@ body {
         position: relative;
       }
       &__image {
+        &--16by9 {
+          @include theme-embed-responsive(16, 9);
+        }
         &--6by5 {
           @include theme-embed-responsive(6, 5);
         }
