@@ -1,5 +1,12 @@
 @import "../../node_modules/bootstrap/scss/pagination";
 
+@mixin input-font-style {
+  font-family: $font-roboto-condensed;
+  font-size: 13px;
+  line-height: 24px;
+  color: #666;
+}
+
 .directory-facets-toggle {
   display: flex;
   padding: 20px;
@@ -30,7 +37,12 @@
 .directory-facets {
   $color: $gray-200;
   $self: &;
-
+  &__input,
+  &__input:focus {
+    @include input-font-style;
+    margin-bottom: 1.5rem;
+    border: solid 5px $gray-200;
+  }
   @include media-breakpoint-down(sm) {
     display: none;
   }
@@ -115,10 +127,7 @@
   background-color: #f1f1f1;
   &__input {
     width: 80%;
-    font-family: $font-roboto-condensed;
-    font-size: 13px;
-    line-height: 24px;
-    color: #666;
+    @include input-font-style;
     border: none;
     &::placeholder {
       color: #666;

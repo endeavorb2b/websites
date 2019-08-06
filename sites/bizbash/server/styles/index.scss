@@ -440,15 +440,6 @@ body {
   }
 }
 
-// @todo move to core
-.page-right-rail > * {
-  margin-bottom: map-get($spacers, block);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .item-list {
   $self: &;
   // @todo Add to core

@@ -12,4 +12,52 @@ $theme-font-family-page-title: $theme-font-family-sans-serif;
 
 $enable-rounded: false;
 
+$theme-site-header-breakpoints: (
+  hide-primary: 10000px,
+  hide-secondary: 610px,
+  hide-tertiary: 0,
+  small-logo: 667px,
+  small-text-primary: 10000px,
+  small-text-secondary: 740px
+);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
+
+.item-list {
+  $self: &;
+  // @todo Add to core
+  min-height: auto;
+  &__contents {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &--height-100 {
+    // @todo Add to core
+    min-height: 100%;
+  }
+  &--unjustified {
+    #{ $self } {
+      &__contents {
+        flex-grow: 0;
+        justify-content: normal;
+      }
+    }
+  }
+}
+
+.item-card-deck {
+  $self: &;
+  &--with-right-col {
+    #{ $self } {
+      &__col {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+          @include make-col(12);
+        }
+        @include media-breakpoint-up(lg) {
+          @include make-col(6);
+        }
+      }
+    }
+  }
+}

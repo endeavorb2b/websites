@@ -1,0 +1,6 @@
+{
+  "taglib-id": "@endeavorb2b/mundopmmi",
+  "taglib-imports": [
+    "./server/components/marko.json"
+  ]
+}

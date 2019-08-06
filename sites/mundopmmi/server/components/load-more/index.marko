@@ -1,0 +1,8 @@
+$ const query = {
+  limit: 12,
+  ...input.query
+};
+
+<wrapper|{ nodes }| ...input query=query>
+  <mundo-load-more-content-layout ...input.layout nodes=nodes />
+</wrapper>

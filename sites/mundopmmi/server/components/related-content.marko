@@ -1,0 +1,30 @@
+
+$ const itemInput = {
+  imageHeight: 75,
+  imageOptions: { w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
+  imagePosition: 'right',
+  imageWidth: 75,
+};
+
+<cms-query-related-published-content|{ nodes }| limit=10 content-id=input.contentId>
+  <if(nodes.length)>
+    <endeavor-item-list modifiers=["unjustified"] items=nodes>
+      <@header>Relacionado</@header>
+      <@item|{ item }|>
+        <endeavor-content-block-item ...itemInput content=item />
+      </@item>
+    </endeavor-item-list>
+  </if>
+</cms-query-related-published-content>
+
+<if(!['contact', 'company'].includes(input.contentType))>
+  <website-scheduled-content-list
+    query={ sectionId: input.sectionId, excludeContentIds: [input.contentId], limit: 5 }
+    item-list={ modifiers: ["unjustified"] }
+  >
+    <@header>Lo último en ${input.sectionName}</@header>
+    <@item|{ node }|>
+      <endeavor-content-block-item ...itemInput content=node />
+    </@item>
+  </website-scheduled-content-list>
+</if>
