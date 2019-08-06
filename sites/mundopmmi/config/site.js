@@ -38,7 +38,7 @@ module.exports = {
     },
     footer: {
       items: [
-        { href: '/page/anuncie', label: 'Anuncie' },
+        { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anuncie' },
         { href: '/page/contrato', label: 'Contrato' },
         { href: '/page/privacidad', label: 'Privacidad' },
         { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
@@ -58,7 +58,6 @@ module.exports = {
         label: 'Recursos',
         items: [
           { href: '/events', label: 'Eventos' },
-          { href: '/', label: 'Descargas' },
           { href: '/videos', label: 'Vídeos' },
         ],
       },
@@ -66,7 +65,7 @@ module.exports = {
         label: 'Herramientas de usuario',
         items: [
           { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase', target: '_blank' },
-          { href: '/page/anuncie', label: 'Anuncie' },
+          { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anuncie' },
           { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
           { href: '/page/contrato', label: 'Contrato' },
           { href: '/page/privacidad', label: 'Privacidad' },
