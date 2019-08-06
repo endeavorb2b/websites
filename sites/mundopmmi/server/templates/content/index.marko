@@ -52,28 +52,27 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
 
   <@below-container>
     <if(content.type === 'contact')>
-      <endeavor-content-query-load-more-author
-        header=`More from ${content.name}`
+      <mundo-load-more
+        type="all-author-content"
         query={ contactId: content.id }
-        ads={ aliases }
+        layout={ name: "content-page", aliases }
+        header=`More from ${content.name}`
       />
     </if>
     <else-if(content.type === 'company')>
-      <endeavor-content-query-load-more-company
-        header=`More from ${content.name}`
+      <mundo-load-more
+        type="all-company-content"
         query={ companyId: content.id }
-        ads={ aliases }
+        layout={ name: "content-page", aliases }
+        header=`More from ${content.name}`
       />
     </else-if>
     <else-if(section.id)>
-      <endeavor-content-query-load-more
+      <mundo-load-more
+        type="website-scheduled-content"
+        query={ sectionId: section.id, skip: 5, excludeContentIds: [content.id] }
+        layout={ name: "content-page", aliases }
         header=`More in ${section.name}`
-        query={
-          skip: 5,
-          excludeContentIds: [content.id],
-          sectionId: section.id,
-        }
-        ads={ aliases }
       />
     </else-if>
   </@below-container>
