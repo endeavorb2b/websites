@@ -1,0 +1,26 @@
+{
+  "taglib-imports": [
+    "./load-more/marko.json"
+  ],
+  "tags": {
+    "mundo-related-content": {
+      "template": "./related-content.marko",
+      "@content-id": {
+        "type": "number",
+        "required": true
+      },
+      "@content-type": {
+        "type": "string",
+        "required": true
+      },
+      "@section-id": {
+        "type": "number",
+        "required": true
+      },
+      "@section-name": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

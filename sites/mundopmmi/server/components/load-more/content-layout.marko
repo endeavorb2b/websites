@@ -1,0 +1,10 @@
+import { getAsArray } from '@base-cms/object-path';
+import CardDeckNoAdsLayout from './content-layouts/card-deck-no-ads';
+
+$ const layouts = {
+  default: CardDeckNoAdsLayout,
+};
+$ const layout = layouts[input.name] || layouts.default;
+$ const nodes = getAsArray(input, 'nodes');
+
+<${layout} ...input nodes=nodes />

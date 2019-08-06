@@ -1,6 +1,7 @@
 import { getAsObject, get } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const content = getAsObject(data, 'content');
@@ -10,7 +11,6 @@ $ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
@@ -39,44 +39,61 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
       </div>
 
-      <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
-        <if(!['contact', 'company'].includes(content.type))>
-          <endeavor-content-query-related
-            exclude-content-ids=[content.id]
-            section-id=section.id
-          />
-        </if>
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
-
+      <aside class="col-lg-4 page-right-rail">
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+        <mundo-related-content
+          content-id=content.id
+          content-type=content.type
+          section-id=section.id
+          section-name=section.name
+        />
       </aside>
     </div>
   </div>
 
   <@below-container>
     <if(content.type === 'contact')>
-      <endeavor-content-query-load-more-author
-        header=`More from ${content.name}`
-        query={ contactId: content.id }
-        ads={ aliases }
+      <cms-query-all-author-content|{ nodes }|
+        limit=4
+        contact-id=content.id
+        query-fragment=contentListFragment
+      >
+        <pre-load-more-layout nodes=nodes header=`Más de ${content.name}` aliases=aliases />
+      </cms-query-all-author-content>
+      <mundo-load-more
+        type="all-author-content"
+        query={ limit: 12, skip: 4, contactId: content.id }
+        layout={ aliases }
       />
     </if>
     <else-if(content.type === 'company')>
-      <endeavor-content-query-load-more-company
-        header=`More from ${content.name}`
-        query={ companyId: content.id }
-        ads={ aliases }
+      <cms-query-all-company-content|{ nodes }|
+        limit=4
+        company-id=content.id
+        query-fragment=contentListFragment
+      >
+        <pre-load-more-layout nodes=nodes header=`Más de ${content.name}` aliases=aliases />
+      </cms-query-all-company-content>
+      <mundo-load-more
+        type="all-company-content"
+        query={ limit: 12, skip: 4, companyId: content.id }
+        layout={ aliases }
       />
     </else-if>
     <else-if(section.id)>
-      <endeavor-content-query-load-more
-        header=`More in ${section.name}`
-        query={
-          skip: 5,
-          excludeContentIds: [content.id],
-          sectionId: section.id,
-        }
-        ads={ aliases }
+      <cms-query-website-scheduled-content|{ nodes }|
+        section-id=section.id
+        limit=4
+        skip=5
+        exclude-content-ids=[content.id]
+        query-fragment=contentListFragment
+      >
+        <pre-load-more-layout nodes=nodes header=`Más en ${section.name}` aliases=aliases />
+      </cms-query-website-scheduled-content>
+      <mundo-load-more
+        type="website-scheduled-content"
+        query={ limit: 12, skip: 9, sectionId: section.id, excludeContentIds: [content.id] }
+        layout={ aliases }
       />
     </else-if>
   </@below-container>

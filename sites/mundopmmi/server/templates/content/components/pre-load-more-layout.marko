@@ -1,0 +1,25 @@
+import itemInput from '../../../components/card-item-input';
+
+$ const { nodes, header, aliases } = input;
+
+<if(nodes.length)>
+  <if(header)>
+    <endeavor-load-more-header>
+      ${header}
+    </endeavor-load-more-header>
+  </if>
+  <div class="row">
+    <div class="col-md-6 col-lg-8">
+      <endeavor-item-card-deck|{ item }| items=nodes modifiers=["with-right-col"]>
+        <endeavor-content-block-item ...itemInput content=item />
+      </endeavor-item-card-deck>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <endeavor-gam-ad-unit-define-display
+        name="load-more"
+        size=[300, 600]
+        aliases=aliases
+      />
+    </div>
+  </div>
+</if>

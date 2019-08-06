@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "mundo-load-more": {
+      "template": "./index.marko"
+    },
+    "mundo-load-more-content-layout": {
+      "template": "./content-layout.marko"
+    }
+  }
+}

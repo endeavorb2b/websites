@@ -87,3 +87,11 @@
 .dynamic-page {
   margin-bottom: $theme-page-margin-bottom;
 }
+
+.page-right-rail > * {
+  margin-bottom: map-get($spacers, block);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
