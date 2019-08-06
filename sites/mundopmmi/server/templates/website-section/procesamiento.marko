@@ -1,6 +1,7 @@
 import { getAsObject } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
@@ -112,7 +113,7 @@ $ const adSlots = {
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=5
+        limit=4
         skip=5
         section-alias=section.alias
         header={ title: `Más de ${out.global.config.siteName()}` }
@@ -121,15 +122,18 @@ $ const adSlots = {
   </div>
 
   <@below-container>
-    <endeavor-content-query-load-more
-      query={
-        skip: 10,
-        sectionId: section.id,
-      }
-      load-more={
-        maxPages: 0,
-      }
-      ads={ aliases }
+    <cms-query-website-scheduled-content|{ nodes }|
+      section-id=section.id
+      limit=10
+      skip=9
+      query-fragment=contentListFragment
+    >
+      <pre-load-more-layout nodes=nodes header=`Más en ${section.name}` aliases=aliases />
+    </cms-query-website-scheduled-content>
+    <mundo-load-more
+      type="website-scheduled-content"
+      query={ limit: 12, skip: 19, sectionId: section.id }
+      layout={ aliases }
     />
   </@below-container>
 
