@@ -44,3 +44,20 @@ $theme-site-header-breakpoints: (
     }
   }
 }
+
+.item-card-deck {
+  $self: &;
+  &--with-right-col {
+    #{ $self } {
+      &__col {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+          @include make-col(12);
+        }
+        @include media-breakpoint-up(lg) {
+          @include make-col(6);
+        }
+      }
+    }
+  }
+}

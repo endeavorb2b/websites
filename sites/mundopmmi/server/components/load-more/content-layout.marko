@@ -1,9 +1,10 @@
 import { getAsArray } from '@base-cms/object-path';
 import DefaultLayout from './content-layouts/default';
+import ContentPageLayout from './content-layouts/content-page';
 
 $ const layouts = {
   default: DefaultLayout,
-  'content-card-deck': DefaultLayout,
+  'content-page': ContentPageLayout,
 };
 $ const layout = layouts[input.name] || layouts.default;
 $ const nodes = getAsArray(input, 'nodes');
