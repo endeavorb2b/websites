@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./load-more/marko.json"
+  ],
   "tags": {
     "mundo-related-content": {
       "template": "./related-content.marko",

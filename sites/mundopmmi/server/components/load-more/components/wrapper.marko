@@ -1,0 +1,65 @@
+import { getAsArray, getAsObject } from '@base-cms/object-path';
+import AllAuthorContent from '@base-cms/marko-web/src/components/queries/all-author-content';
+import AllCompanyContent from '@base-cms/marko-web/src/components/queries/all-company-content';
+import AllPublishedContent from '@base-cms/marko-web/src/components/queries/all-published-content';
+import RelatedPublishedContent from '@base-cms/marko-web/src/components/queries/related-published-content';
+import WebsiteScheduledContent from '@base-cms/marko-web/src/components/queries/website-scheduled-content';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+
+$ const queries = {
+  'all-author-content': AllAuthorContent,
+  'all-company-content': AllCompanyContent,
+  'all-published-content': AllPublishedContent,
+  'related-published-content': RelatedPublishedContent,
+  'website-scheduled-content': WebsiteScheduledContent,
+};
+$ const fragments = {
+  'all-author-content': contentListFragment,
+  'all-company-content': contentListFragment,
+  'all-published-content': contentListFragment,
+  'related-published-content': contentListFragment,
+  'website-scheduled-content': contentListFragment,
+};
+
+$ const { type } = input;
+$ const pageNumber = input.pageNumber || 1;
+
+$ const query = {
+  queryFragment: fragments[type],
+  ...getAsObject(input, 'query'),
+  queryName: 'LoadMore',
+};
+
+$ const QueryComponent = queries[type];
+
+<${QueryComponent}|{ nodes, pageInfo }| ...query>
+  <if(nodes.length)>
+    <if(input.header && pageNumber === 1)>
+      <endeavor-load-more-header>
+        ${input.header}
+      </endeavor-load-more-header>
+    </if>
+    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+
+    <${input.renderBody} nodes=nodes page-info=pageInfo />
+
+    $ const { endCursor, hasNextPage } = pageInfo;
+    $ delete query.skip;
+    $ delete query.queryFragment;
+    $ delete query.renderBody;
+    $ const provide = {
+      ...input,
+      query: { ...query, after: endCursor },
+    };
+
+    <endeavor-load-more-button
+      append-to=(input.appendTo || '.container-fluid-max')
+      block-name="load-more"
+      label="Load More Content"
+      max-pages=input.maxPages
+      page-number=pageNumber
+      provide=provide
+      show=hasNextPage
+    />
+  </if>
+</>

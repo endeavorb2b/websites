@@ -7,8 +7,12 @@ const publishedLoadMore = require('@endeavorb2b/base-website-common/components/p
 const magazineIssueContent = require('@endeavorb2b/base-website-common/components/content/blocks/query-load-more-issue-content');
 const magazineIssues = require('@endeavorb2b/base-website-common/components/magazine/blocks/query-active-issues');
 
+const loadMore = require('../components/load-more/index');
+
 // Register blocks that support load more...
 const blocks = {
+  'load-more': loadMore,
+
   'content-query-load-more': contentLoadMore,
   'content-query-load-more-author': contentLoadMoreAuthor,
   'content-query-load-more-company': contentLoadMoreCompany,
