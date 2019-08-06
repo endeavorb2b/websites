@@ -1,0 +1,30 @@
+import itemInput from '../../../components/card-item-input';
+
+$ const { nodes, header, aliases } = input;
+
+<if(nodes.length)>
+  <if(header)>
+    <endeavor-load-more-header>
+      ${header}
+    </endeavor-load-more-header>
+  </if>
+  <endeavor-item-card-deck|{ item }| items=nodes>
+    <@slot position="after" index=1>
+      <endeavor-gam-ad-unit-define-display
+        name="load-more"
+        size=[300, 250]
+        aliases=aliases
+        modifiers=["in-card"]
+      />
+    </@slot>
+    <@slot position="after" index=4>
+      <endeavor-gam-ad-unit-define-display
+        name="load-more"
+        size=[300, 250]
+        aliases=aliases
+        modifiers=["in-card"]
+      />
+    </@slot>
+    <endeavor-content-block-item ...itemInput content=item />
+  </endeavor-item-card-deck>
+</if>
