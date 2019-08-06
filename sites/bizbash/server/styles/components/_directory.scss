@@ -132,9 +132,6 @@
     &::placeholder {
       color: #666;
     }
-    & ~ & {
-      margin-left: .5rem;
-    }
   }
   &__button {
     width: 20%;
