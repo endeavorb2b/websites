@@ -1,0 +1,140 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
+};
+
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <endeavor-content-query-hero
+    section-id=section.id
+    option-id=9
+    limit=5
+  />
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/internet-industrial-de-las-cosas-iiot"
+        header={ title: "Internet Industrial de las Cosas (IIoT)", href: "/automatizacion/internet-industrial-de-las-cosas-iiot" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/inteligencia-artificial"
+        header={ title: "Inteligencia artificial", href: "/automatizacion/inteligencia-artificial" }
+      />
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/computacion-en-la-nube"
+        header={ title: "Computación en la nube", href: "/automatizacion/computacion-en-la-nube" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/redes-y-conectividad"
+        header={ title: "Redes y conectividad", href: "/automatizacion/redes-y-conectividad" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/protocolos-estandares-de-comunicacion"
+        header={ title: "Protocolos / estándares de comunicación", href: "/automatizacion/protocolos-estandares-de-comunicacion" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/ciberseguridad"
+        header={ title: "Ciberseguridad", href: "/automatizacion/ciberseguridad" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/robotica"
+        header={ title: "Robótica", href: "/automatizacion/robotica" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/sensores"
+        header={ title: "Sensores", href: "/automatizacion/sensores" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/adquisicion-de-datos"
+        header={ title: "Adquisición de datos", href: "/automatizacion/adquisicion-de-datos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion/inteligencia-de-negocios"
+        header={ title: "Inteligencia de Negocios", href: "/automatizacion/inteligencia-de-negocios" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        skip=5
+        section-alias=section.alias
+        header={ title: `Más de ${out.global.config.siteName()}` }
+      />
+    </div>
+  </div>
+
+  <@below-container>
+    <cms-query-website-scheduled-content|{ nodes }|
+      section-id=section.id
+      limit=10
+      skip=9
+      query-fragment=contentListFragment
+    >
+      <pre-load-more-layout nodes=nodes header=`Más en ${section.name}` aliases=aliases />
+    </cms-query-website-scheduled-content>
+    <mundo-load-more
+      type="website-scheduled-content"
+      query={ limit: 12, skip: 19, sectionId: section.id }
+      layout={ aliases }
+    />
+  </@below-container>
+
+</theme-default-website-section-layout>

@@ -29,7 +29,7 @@ module.exports = {
     },
     secondary: {
       items: [
-        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase', target: '_blank' },
+        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav', label: 'Suscríbase', target: '_blank' },
         { href: '/automatizacion', label: 'Automatización' },
         { href: '/empaque', label: 'Empaque' },
         { href: '/procesamiento', label: 'Procesamiento' },
@@ -38,7 +38,7 @@ module.exports = {
     },
     footer: {
       items: [
-        { href: '/page/anuncie', label: 'Anuncie' },
+        { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anuncie' },
         { href: '/page/contrato', label: 'Contrato' },
         { href: '/page/privacidad', label: 'Privacidad' },
         { href: '/page/condiciones-de-uso', label: 'Condiciones de uso' },
@@ -58,15 +58,14 @@ module.exports = {
         label: 'Recursos',
         items: [
           { href: '/events', label: 'Eventos' },
-          { href: '/', label: 'Descargas' },
           { href: '/videos', label: 'Vídeos' },
         ],
       },
       userTools: {
         label: 'Herramientas de usuario',
         items: [
-          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=mundo-nav', label: 'Suscríbase', target: '_blank' },
-          { href: '/page/anuncie', label: 'Anuncie' },
+          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav', label: 'Suscríbase', target: '_blank' },
+          { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anuncie' },
           { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
           { href: '/page/contrato', label: 'Contrato' },
           { href: '/page/privacidad', label: 'Privacidad' },
