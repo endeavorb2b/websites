@@ -439,6 +439,16 @@ body {
     }
   }
 }
+.directory-facets {
+  & .input-wrapper {
+    width: 100%;
+    padding: .25rem;
+    background-color: $gray-200;
+    & .form-control {
+      width: 100%;
+    }
+  }
+}
 
 // @todo move to core
 .page-right-rail > * {
