@@ -12,4 +12,13 @@ $theme-font-family-page-title: $theme-font-family-sans-serif;
 
 $enable-rounded: false;
 
+$theme-site-header-breakpoints: (
+  hide-primary: 10000px,
+  hide-secondary: 610px,
+  hide-tertiary: 0,
+  small-logo: 667px,
+  small-text-primary: 10000px,
+  small-text-secondary: 740px
+);
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
