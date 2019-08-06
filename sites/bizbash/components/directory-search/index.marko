@@ -22,63 +22,70 @@ $ const searchParams = {
     { field: 'topic', value: topicId },
   ]
 };
-<div class="row">
-  <div class="col mb-block">
-    <form class="directory-search">
-      <input name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
-      <if(marketId)><input name="marketId" type="hidden" value=marketId></if>
-      <if(topicId)><input name="topicId" type="hidden" value=topicId></if>
-      <if(input.contentType === 'Venue')>
-        <input name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
-      </if>
-      <button type="submit" class="btn btn-primary directory-search__button">Search</button>
-    </form>
+<form id="directory-search">
+  <div class="row">
+    <div class="col mb-block">
+      <div class="directory-search">
+        <input form="directory-search" name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
+        <if(marketId)><input form="directory-search" name="marketId" type="hidden" value=marketId></if>
+        <if(topicId)><input form="directory-search" name="topicId" type="hidden" value=topicId></if>
+        <button type="submit" class="btn btn-primary directory-search__button">Search</button>
+      </div>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-5 col-lg-4 mb-block">
-    <div class="directory-facets-toggle">
-      <div class="directory-facets-toggle__label">Show Filters</div>
-      <cms-browser-component
-        name="MenuToggleButton"
-        props={
-          className: "directory-facets-toggle__button",
-          targets: [".directory-facets"],
-          toggleClass: "directory-facets--open",
-          iconModifiers: ["sm"],
-          iconName: "plus",
-          expandedIconName: "dash",
-        }
+  <div class="row">
+    <div class="col-md-5 col-lg-4 mb-block">
+      <div class="directory-facets-toggle">
+        <div class="directory-facets-toggle__label">Show Filters</div>
+        <cms-browser-component
+          name="MenuToggleButton"
+          props={
+            className: "directory-facets-toggle__button",
+            targets: [".directory-facets"],
+            toggleClass: "directory-facets--open",
+            iconModifiers: ["sm"],
+            iconName: "plus",
+            expandedIconName: "dash",
+          }
+        />
+      </div>
+      <if(input.contentType === 'Venue')>
+        <div class="directory-facets">
+          <h3 class="directory-facets__title">Venue Capacity</h3>
+          <div class="input-wrapper">
+            <input form="directory-search" name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
+          </div>
+        </div>
+      </if>
+      <facet-container
+        facets=markets
+        title="Market"
+        param-name="marketId"
+        active-ids=activeMarket.activeIds
+      />
+      <facet-container
+        facets=input.topics
+        title="Category"
+        param-name="topicId"
+        active-ids=activeTopic.activeIds
       />
     </div>
-    <facet-container
-      facets=markets
-      title="Market"
-      param-name="marketId"
-      active-ids=activeMarket.activeIds
-    />
-    <facet-container
-      facets=input.topics
-      title="Category"
-      param-name="topicId"
-      active-ids=activeTopic.activeIds
-    />
+    <div class="col-md-7 col-lg-8 mb-block">
+      <if(page === 1)>
+        <pinned-results market-id=marketId topic-id=topicId />
+      </if>
+      <await(cloudfront(searchParams))>
+        <@then|{ hits }|>
+          <search-hits hits=hits page-size=input.pageSize page-number=page />
+        </@then>
+        <@catch|err|>
+          $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
+          <pre>An unexpected error occurred: ${err.message}</pre>
+          <if(isDevelopment)>
+            <pre>${err.stack}</pre>
+          </if>
+        </@catch>
+      </await>
+    </div>
   </div>
-  <div class="col-md-7 col-lg-8 mb-block">
-    <if(page === 1)>
-      <pinned-results market-id=marketId topic-id=topicId />
-    </if>
-    <await(cloudfront(searchParams))>
-      <@then|{ hits }|>
-        <search-hits hits=hits page-size=input.pageSize page-number=page />
-      </@then>
-      <@catch|err|>
-        $ if (typeof onAsyncBlockError === 'function') onAsyncBlockError(err);
-        <pre>An unexpected error occurred: ${err.message}</pre>
-        <if(isDevelopment)>
-          <pre>${err.stack}</pre>
-        </if>
-      </@catch>
-    </await>
-  </div>
-</div>
+</form>
