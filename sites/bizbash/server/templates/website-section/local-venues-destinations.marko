@@ -1,0 +1,248 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../../api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 600] }),
+};
+
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+    <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  </@above-container>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/alberta-calgary-edmonton", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/alberta-calgary-edmonton">Alberta: Calgary, Edmonton</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/atlanta", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/atlanta">Atlanta</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/boston", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/boston">Boston</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/chicago", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/chicago">Chicago</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/global", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/global">Global</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/las-vegas", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/las-vegas">Las Vegas</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/los-angeles-southern-california", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/los-angeles-southern-california">Los Angeles/Southern California</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/miami-south-florida", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/miami-south-florida">Miami/South Florida</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/montreal", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/montreal">Montreal</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/new-york-city-tri-state-area", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/new-york-city-tri-state-area">New York City & Tri-State Area</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/north-america", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/north-america">North America</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/orlando-central-florida", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/orlando-central-florida">Orlando/Central Florida</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/philadelphia", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/philadelphia">Philadelphia</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/phoenix-scottsdale", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/phoenix-scottsdale">Phoenix/Scottsdale</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/san-francisco-northern-california", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/san-francisco-northern-california">San Francisco/Northern California</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/texas-austin-dallas-fort-worth-houston", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/texas-austin-dallas-fort-worth-houston">Austin, Dallas/Fort Worth, Houston</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/toronto", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/toronto">Toronto</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/toronto", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/toronto">Toronto</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/vancouver", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/vancouver">Vancouver</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+    <div class="col-lg-4 ad-rail">
+      <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations/washington-dc-metro-area", limit: 4, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
+        <@header href="/local-venues-destinations/washington-dc-metro-area">Washington DC Metro Area</@header>
+        <@item|{ node }|>
+          <bizbash-list-item content=node />
+        </@item>
+      </website-scheduled-content-list>
+    </div>
+  </div>
+
+  <@below-container>
+    <bizbash-load-more
+      type="website-scheduled-content"
+      query={ sectionId: section.id }
+      layout={ aliases }
+    />
+  </@below-container>
+
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
+  </@footer>
+</theme-default-website-section-layout>
