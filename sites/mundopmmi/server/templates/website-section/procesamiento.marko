@@ -5,7 +5,6 @@ import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-sec
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
-$ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
@@ -29,12 +28,18 @@ $ const adSlots = {
   />
 
   <div class="row">
-    <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=6
-        skip=5
-        section-id=section.id
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/empaque"
+        header={ title: "Empaque", href: "/procesamiento/empaque" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/sustentabilidad"
+        header={ title: "Sustentabilidad", href: "/procesamiento/sustentabilidad" }
       />
     </div>
     <div class="col-lg-4 ad-rail">
@@ -45,23 +50,72 @@ $ const adSlots = {
   <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/internet-industrial-de-las-cosas-iiot"
-        header={ title: "Internet Industrial de las Cosas (IIoT)", href: "/automatizacion/internet-industrial-de-las-cosas-iiot" }
+        limit=4
+        section-alias="procesamiento/seguridad-en-alimentos"
+        header={ title: "Seguridad en alimentos", href: "/procesamiento/seguridad-en-alimentos" }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/inteligencia-artificial"
-        header={ title: "Inteligencia artificial", href: "/automatizacion/inteligencia-artificial" }
+        limit=4
+        section-alias="procesamiento/internet-industrial-de-las-cosas-iiot"
+        header={ title: "Internet Industrial de las Cosas (IIoT)", href: "/procesamiento/internet-industrial-de-las-cosas-iiot" }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/computacion-en-la-nube"
-        header={ title: "Computación en la nube", href: "/automatizacion/computacion-en-la-nube" }
+        limit=4
+        section-alias="procesamiento/equipos-de-procesamiento-de-alimentos"
+        header={ title: "Equipos de procesamiento de alimentos", href: "/procesamiento/equipos-de-procesamiento-de-alimentos" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/equipos-de-manipulacion-de-alimentos"
+        header={ title: "Equipos de manipulación de alimentos", href: "/procesamiento/equipos-de-manipulacion-de-alimentos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/limpieza-desinfeccion-limpieza-en-sitio-cip"
+        header={ title: "Limpieza / desinfección / Limpieza en sitio (CIP)", href: "/procesamiento/limpieza-desinfeccion-limpieza-en-sitio-cip" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/inspeccion-deteccion-y-controles"
+        header={ title: "Inspección / detección y controles", href: "/procesamiento/inspeccion-deteccion-y-controles" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/ingenieria-diseno-construccion-de-instalaciones"
+        header={ title: "Ingeniería / diseño / construcción de instalaciones", href: "/procesamiento/ingenieria-diseno-construccion-de-instalaciones" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento/inteligencia-de-negocios"
+        header={ title: "Inteligencia de Negocios", href: "/procesamiento/inteligencia-de-negocios" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        skip=5
+        section-alias=section.alias
+        header={ title: `Más de ${out.global.config.siteName()}` }
       />
     </div>
   </div>
@@ -69,7 +123,7 @@ $ const adSlots = {
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 11,
+        skip: 10,
         sectionId: section.id,
       }
       load-more={

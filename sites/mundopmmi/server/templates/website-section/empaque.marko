@@ -5,7 +5,6 @@ import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-sec
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
 $ const aliases = hierarchyAliases(section);
-$ const sections = site.getAsArray('homeSections');
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
@@ -29,12 +28,18 @@ $ const adSlots = {
   />
 
   <div class="row">
-    <div class="col-lg-8">
-      <endeavor-content-query-feed
-        header="Featured"
-        limit=6
-        skip=5
-        section-id=section.id
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/sustentabilidad"
+        header={ title: "Sustentabilidad", href: "/empaque/sustentabilidad" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/comercio-electronico"
+        header={ title: "Comercio electrónico", href: "/empaque/comercio-electronico" }
       />
     </div>
     <div class="col-lg-4 ad-rail">
@@ -45,23 +50,72 @@ $ const adSlots = {
   <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/internet-industrial-de-las-cosas-iiot"
-        header={ title: "Internet Industrial de las Cosas (IIoT)", href: "/automatizacion/internet-industrial-de-las-cosas-iiot" }
+        limit=4
+        section-alias="empaque/internet-industrial-de-las-cosas-iiot"
+        header={ title: "Internet Industrial de las Cosas (IIoT)", href: "/empaque/internet-industrial-de-las-cosas-iiot" }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/inteligencia-artificial"
-        header={ title: "Inteligencia artificial", href: "/automatizacion/inteligencia-artificial" }
+        limit=4
+        section-alias="empaque/maquinaria-de-empaque"
+        header={ title: "Maquinaria de empaque", href: "/empaque/maquinaria-de-empaque" }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
-        limit=3
-        section-alias="automatizacion/computacion-en-la-nube"
-        header={ title: "Computación en la nube", href: "/automatizacion/computacion-en-la-nube" }
+        limit=4
+        section-alias="empaque/maquinaria-de-conversion"
+        header={ title: "Maquinaria de conversión", href: "/empaque/maquinaria-de-conversion" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/impresion-digital"
+        header={ title: "Impresión digital", href: "/empaque/impresion-digital" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/empaques-rigidos"
+        header={ title: "Empaques rígidos", href: "/empaque/empaques-rigidos" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/empaques-flexibles"
+        header={ title: "Empaques flexibles", href: "/empaque/empaques-flexibles" }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/etiquetas"
+        header={ title: "Etiquetas", href: "/empaque/etiquetas" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque/inteligencia-de-negocios"
+        header={ title: "Inteligencia de Negocios", href: "/empaque/inteligencia-de-negocios" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=5
+        skip=5
+        section-alias=section.alias
+        header={ title: `Más de ${out.global.config.siteName()}` }
       />
     </div>
   </div>
@@ -69,7 +123,7 @@ $ const adSlots = {
   <@below-container>
     <endeavor-content-query-load-more
       query={
-        skip: 11,
+        skip: 10,
         sectionId: section.id,
       }
       load-more={
