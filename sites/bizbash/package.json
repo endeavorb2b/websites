@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/bizbash",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
