@@ -26,9 +26,9 @@ $ const searchParams = {
   <div class="row">
     <div class="col mb-block">
       <div class="directory-search">
-        <input form="directory-search" name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
-        <if(marketId)><input form="directory-search" name="marketId" type="hidden" value=marketId></if>
-        <if(topicId)><input form="directory-search" name="topicId" type="hidden" value=topicId></if>
+        <input name="phrase" type="search" class="form-control directory-search__input" placeholder="Enter search phrase..." value=phrase>
+        <if(marketId)><input name="marketId" type="hidden" value=marketId></if>
+        <if(topicId)><input name="topicId" type="hidden" value=topicId></if>
         <button type="submit" class="btn btn-primary directory-search__button">Search</button>
       </div>
     </div>
@@ -53,7 +53,7 @@ $ const searchParams = {
         <div class="directory-facets">
           <h3 class="directory-facets__title">Venue Capacity</h3>
           <div class="input-wrapper">
-            <input form="directory-search" name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
+            <input name="minimumCapacity" type="number" class="form-control directory-search__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
           </div>
         </div>
       </if>
