@@ -22,3 +22,25 @@ $theme-site-header-breakpoints: (
 );
 
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
+
+.item-list {
+  $self: &;
+  // @todo Add to core
+  min-height: auto;
+  &__contents {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &--height-100 {
+    // @todo Add to core
+    min-height: 100%;
+  }
+  &--unjustified {
+    #{ $self } {
+      &__contents {
+        flex-grow: 0;
+        justify-content: normal;
+      }
+    }
+  }
+}
