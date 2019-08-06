@@ -9,7 +9,7 @@ $ const itemInput = {
 <cms-query-related-published-content|{ nodes }| limit=10 content-id=input.contentId>
   <if(nodes.length)>
     <endeavor-item-list modifiers=["unjustified"] items=nodes>
-      <@header>Related</@header>
+      <@header>Relacionado</@header>
       <@item|{ item }|>
         <endeavor-content-block-item ...itemInput content=item />
       </@item>
@@ -22,7 +22,7 @@ $ const itemInput = {
     query={ sectionId: input.sectionId, excludeContentIds: [input.contentId], limit: 5 }
     item-list={ modifiers: ["unjustified"] }
   >
-    <@header>Latest in ${input.sectionName}</@header>
+    <@header>Lo último en ${input.sectionName}</@header>
     <@item|{ node }|>
       <endeavor-content-block-item ...itemInput content=node />
     </@item>
