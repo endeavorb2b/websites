@@ -439,17 +439,6 @@ body {
     }
   }
 }
-.directory-facets {
-  & .input-wrapper {
-    width: 100%;
-    padding: .25rem;
-    margin-bottom: 1.5rem;
-    background-color: $gray-200;
-    & .form-control {
-      width: 100%;
-    }
-  }
-}
 
 // @todo move to core
 .page-right-rail > * {
@@ -527,14 +516,6 @@ body {
           @include make-col(6);
         }
       }
-    }
-  }
-}
-
-.directory-search {
-  &__input {
-    & ~ & {
-      margin-left: .5rem;
     }
   }
 }
