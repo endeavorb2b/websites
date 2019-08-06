@@ -4,13 +4,13 @@ import bem from '../../../utils/bem-class';
 $ const block = 'content-contact-details';
 $ const content = getAsObject(input, 'content');
 $ const { header, showEmail } = input;
-$ const addressFields = ['address1', 'address2', 'city', 'state', 'zip', 'country'];
+$ const addressFields = ['address1', 'address2', 'cityStateZip', 'country'];
 $ const showAddress = addressFields.some(k => content[k]);
 $ if (content.email) content.emailLink = `mailto:${content.email}`;
 $ if (content.publicEmail) content.publicEmailLink = `mailto:${content.publicEmail}`;
 $ const socialLinks = getAsArray(content, 'socialLinks');
 
-$ const fields = ['address1', 'address2', 'city', 'state', 'zip', 'country', 'title', 'website', 'phone', 'mobile', 'tollfree', 'fax'];
+$ const fields = ['address1', 'address2', 'cityStateZip', 'country', 'title', 'website', 'phone', 'mobile', 'tollfree', 'fax'];
 $ if (showEmail) fields.push('publicEmail');
 $ const display = fields.some(k => content[k]) || socialLinks.length;
 
