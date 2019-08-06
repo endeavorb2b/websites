@@ -12,7 +12,7 @@ const CONTENT = {
 const RESKIN = {};
 const WA = {};
 
-const path = unit => `/152023730/${unit}`;
+const path = unit => `/152023730/Mundo/${unit}`;
 
 module.exports = {
   default: {
