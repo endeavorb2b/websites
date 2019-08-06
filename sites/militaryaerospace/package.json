@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/militaryaerospace",
-  "version": "0.13.1",
+  "version": "0.13.3",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -14,8 +14,8 @@
     "@base-cms/marko-web": "^0.10.1",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.1",
-    "@endeavorb2b/base-website-common": "^0.13.1",
-    "@endeavorb2b/base-website-themes": "^0.13.1",
+    "@endeavorb2b/base-website-common": "^0.13.3",
+    "@endeavorb2b/base-website-themes": "^0.13.3",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
