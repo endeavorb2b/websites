@@ -1,7 +1,7 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
-import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list'
+import contentListFragment from '@endeavorb2b/base-website-common/api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
@@ -47,7 +47,7 @@ $ const adSlots = {
   <@below-container>
     <cms-query-website-scheduled-content|{ nodes }|
       section-id=section.id
-      limit=12
+      limit=10
       skip=12
       query-fragment=contentListFragment
     >
@@ -55,7 +55,7 @@ $ const adSlots = {
     </cms-query-website-scheduled-content>
     <mundo-load-more
       type="website-scheduled-content"
-      query={ limit: 12, skip: 24, sectionId: section.id }
+      query={ limit: 12, skip: 22, sectionId: section.id }
       layout={ aliases }
     />
   </@below-container>
