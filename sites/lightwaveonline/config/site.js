@@ -44,6 +44,7 @@ module.exports = {
         { href: '/webcasts', label: 'Webcasts' },
         { href: 'https://buyersguide.lightwaveonline.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
         { href: 'https://lightwavereviews.secure-platform.com/a/organizations/main/home', label: 'Innovation Reviews', target: '_blank' },
+        { href: '/on-topic', label: 'On Topic' },
       ],
     },
     footer: {
