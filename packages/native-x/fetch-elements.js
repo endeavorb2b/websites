@@ -18,5 +18,5 @@ module.exports = async ({
     err.body = json;
     throw err;
   }
-  return response.text();
+  return json;
 };
