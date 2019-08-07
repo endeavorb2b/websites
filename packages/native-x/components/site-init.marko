@@ -1,0 +1,10 @@
+import fromConfig from '../utils/from-config';
+
+$ const { site } = out.global;
+
+$ const uri = input.uri || fromConfig.getURI(site);
+$ const enabled = input.enabled != null ? input.enabled : fromConfig.getEnabled(site);
+
+<if(uri)>
+  <native-x-init enabled=enabled uri=uri />
+</if>

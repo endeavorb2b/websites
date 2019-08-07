@@ -1,4 +1,4 @@
-import fetch from '../fetch';
+import fetchElements from '../fetch-elements';
 
 $ const { onAsyncBlockError, req } = out.global;
 $ const isDevelopment = process.env.NODE_ENV === 'development';
@@ -11,7 +11,7 @@ $ const args = {
   req,
 };
 
-<await(fetch(args))>
+<await(fetchElements(args))>
   <@then|{ ads }|>
     <${input.renderBody} ads=ads />
   </@then>

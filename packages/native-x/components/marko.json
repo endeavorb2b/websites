@@ -2,17 +2,19 @@
   "tags": {
     "native-x-init": {
       "template": "./init.marko",
+      "@enabled":  "boolean",
       "@uri": {
         "type": "string",
         "required": true
-      },
-      "@script-src": {
-        "type": "string",
-        "default-value": "https://d24bnj4f1s1f8m.cloudfront.net/1.0.0-rc.4.3/fortnight.min.js"
       }
     },
-    "native-x-fetch": {
-      "template": "./fetch.marko",
+    "native-x-site-init": {
+      "template": "./site-init.marko",
+      "@enabled": "boolean",
+      "@uri": "string"
+    },
+    "native-x-fetch-elements": {
+      "template": "./fetch-elements.marko",
       "@uri": {
         "type": "string",
         "required": true
@@ -22,6 +24,9 @@
         "required": true
       },
       "@opts": "object"
+    },
+    "native-x-site-render": {
+      "template": "./site-render.marko"
     }
   }
 }

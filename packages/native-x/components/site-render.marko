@@ -1,0 +1,52 @@
+import fromConfig from '../utils/from-config';
+import convertAdToContent from '../utils/convert-ad-to-content';
+
+$ const { site } = out.global;
+$ const { when, name, aliases } = input;
+
+$ const uri = input.uri || fromConfig.getURI(site);
+$ const enabled = input.enabled != null ? input.enabled : fromConfig.getEnabled(site);
+
+$ const isEnabled = () => {
+  if (!enabled) return false;
+  if (!uri) return false;
+  return Boolean(when);
+};
+
+<if(isEnabled())>
+  $ const placementId = input.placementId || fromConfig.getPlacementId(site, { name, aliases });
+  <if(placementId)>
+    <native-x-fetch-elements|{ ads }| uri=uri placement-id=placementId opts=input.opts>
+      $ const hasAd = ads && ads.length && ads[0];
+      <if(hasAd)>
+        $ const ad = ads[0];
+        $ const linkAttrs = { target: "_blank", rel: "noopener", ...ad.attributes.link };
+        <if(ad.hasCampaign)>
+           $ const campaign = convertAdToContent(ad);
+           <${input.whenFound}
+            ad=ad
+            campaign=campaign
+            container-attrs=ad.attributes.container
+            link-attrs=linkAttrs
+          />
+        </if>
+        <else>
+          <${input.onFallback}
+            ad=ad
+            container-attrs=ad.attributes.container
+            link-attrs=ad.attributes.link
+          />
+        </else>
+      </if>
+      <else>
+        <${input.whenNotFound} />
+      </else>
+    </native-x-fetch-elements>
+  </if>
+  <else>
+    <${input.whenNotFound} />
+  </else>
+</if>
+<else>
+  <${input.whenNotFound} />
+</else>
