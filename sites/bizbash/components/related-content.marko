@@ -18,7 +18,7 @@ import contentListFragment from '../server/api/fragments/content-list';
   >
     <@header>Latest in ${input.sectionName}</@header>
     <@item|{ node, index }|>
-      <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: input.aliases } />
+      <bizbash-list-item content=node native-x-render={ when: index === 4, name: "primary", aliases: input.aliases } />
     </@item>
   </website-scheduled-content-list>
 </if>
