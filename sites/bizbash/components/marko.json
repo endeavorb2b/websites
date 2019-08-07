@@ -20,7 +20,8 @@
       "@section-name": {
         "type": "string",
         "required": true
-      }
+      },
+      "@aliases": "array"
     },
     "bizbash-featured-venues-suppliers": {
       "template": "./featured-venues-suppliers.marko",
