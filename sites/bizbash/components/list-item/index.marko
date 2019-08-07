@@ -29,6 +29,7 @@ $ const nativex = getAsObject(input, 'nativeXRender');
       image=campaignImage
       date-format=dateFormat
       attrs=containerAttrs
+      content-link-attrs=linkAttrs
     />
   </@when-found>
   <@on-fallback|{ containerAttrs, linkAttrs }|>
@@ -38,6 +39,7 @@ $ const nativex = getAsObject(input, 'nativeXRender');
       image=fallbackImage
       date-format=dateFormat
       attrs=containerAttrs
+      content-link-attrs=linkAttrs
     />
   </@on-fallback>
   <contents
