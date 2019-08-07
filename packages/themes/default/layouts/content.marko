@@ -3,12 +3,16 @@ import createPageContext from '@endeavorb2b/base-website-common/utils/create-pag
 
 $ const { site } = out.global;
 $ const content = getAsObject(input, 'content');
+$ const initNativeX = input.initNativeX == null ? true : input.initNativeX;
 
 <theme-default-document>
   <@head>
     <cms-page-metadata for="content" ...content />
     <cms-gtm-container container-id=site.get('gtmContainer') push=createPageContext('content', content) />
-    <endeavor-nativex-init />
+    <if(initNativeX)>
+      <!-- @deprecated -->
+      <endeavor-nativex-init />
+    </if>
     <${input.head} />
   </@head>
   <div class="container-fluid-max">

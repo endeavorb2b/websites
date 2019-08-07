@@ -15,7 +15,8 @@ $ const adSlots = {
 $ const images = getAsArray(content, 'images.edges').map(({ node }) => node);
 $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
 
-<theme-default-content-layout content=content>
+<!-- @deprecated init-native-x -->
+<theme-default-content-layout content=content init-native-x=false>
   <@head>
     <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>

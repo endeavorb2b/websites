@@ -20,7 +20,8 @@
       "@section-name": {
         "type": "string",
         "required": true
-      }
+      },
+      "@aliases": "array"
     },
     "bizbash-featured-venues-suppliers": {
       "template": "./featured-venues-suppliers.marko",
@@ -56,12 +57,13 @@
       "@spaces": "array"
     },
     "bizbash-list-item": {
-      "template": "./list-item.marko",
+      "template": "./list-item/index.marko",
       "@content": {
         "type": "object",
         "required": true
       },
-      "@image": "object"
+      "@image": "object",
+      "@native-x-render": "object"
     },
     "bizbash-card-item": {
       "template": "./card-item.marko",
@@ -80,16 +82,18 @@
       "@modifiers": "array"
     },
     "bizbash-card-item-overlay": {
-      "template": "./card-item-overlay.marko",
+      "template": "./card-item-overlay/index.marko",
       "@content": {
         "type": "object",
         "required": true
       },
-      "@image": "object"
+      "@image": "object",
+      "@native-x-render": "object"
     },
     "bizbash-overlay-item": {
       "template": "./overlay-item.marko",
       "@modifiers": "array",
+      "@attrs": "object",
       "<image>": {},
       "<header-left>": {},
       "<header-right>": {},

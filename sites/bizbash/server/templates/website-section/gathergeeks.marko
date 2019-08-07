@@ -9,8 +9,11 @@ $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
   'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
 };
-<theme-default-website-section-layout section=section>
+
+<!-- @deprecated init-native-x -->
+<theme-default-website-section-layout section=section init-native-x=false>
   <@head>
+    <native-x-site-init />
     <endeavor-ad-gam-head slots=adSlots />
   </@head>
   <@above-container>

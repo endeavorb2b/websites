@@ -1,0 +1,44 @@
+{
+  "tags": {
+    "native-x-init": {
+      "template": "./init.marko",
+      "@enabled":  "boolean",
+      "@uri": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "native-x-site-init": {
+      "template": "./site-init.marko",
+      "@enabled": "boolean",
+      "@uri": "string"
+    },
+    "native-x-fetch-elements": {
+      "template": "./fetch-elements.marko",
+      "@uri": {
+        "type": "string",
+        "required": true
+      },
+      "@placement-id": {
+        "type": "string",
+        "required": true
+      },
+      "@opts": "object"
+    },
+    "native-x-site-render": {
+      "template": "./site-render.marko",
+      "<when-found>": {},
+      "<on-fallback>": {},
+      "@when": "boolean",
+      "@name": {
+        "type": "string",
+        "required": true
+      },
+      "@aliases": "array",
+      "@uri": "string",
+      "@enabled": "boolean",
+      "@placement-id": "string",
+      "@opts": "object"
+    }
+  }
+}

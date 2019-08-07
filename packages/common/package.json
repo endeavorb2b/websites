@@ -9,7 +9,7 @@
   "dependencies": {
     "@base-cms/env": "^0.10.0",
     "@base-cms/image": "^0.10.0",
-    "@base-cms/marko-web": "^0.10.1",
+    "@base-cms/marko-web": "^0.10.3-alpha.0",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/utils": "^0.10.0",
     "@endeavorb2b/base-website-identity-x": "^0.13.1",

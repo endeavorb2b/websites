@@ -3,23 +3,18 @@ import { getAsObject } from '@base-cms/object-path';
 $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
 $ const primaryImage = getAsObject(content, 'primaryImage');
-$ const dateFormat = 'MMMM D, YYYY';
-$ const imageInput = {
-  height: 84,
-  image: primaryImage,
-  lazyload: true,
-  linkTo: content,
-  options: { w: 189, h: 126, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
-  position: 'left',
-  usePlaceholder: false,
-  width: 126,
-  ...getAsObject(input, 'image'),
-};
 
-<endeavor-item>
+$ const imageInput = {
+  ...input.image,
+  image: primaryImage,
+}
+
+$ const { dateFormat } = input;
+
+<endeavor-item attrs=input.attrs>
   <@image ...imageInput />
   <@title tag="h5">
-    <cms-content-short-name tag=null obj=content link=true />
+    <cms-content-short-name tag=null obj=content link=true link-attrs=input.contentLinkAttrs />
   </@title>
   <@footer-left|{ block }|>
     <cms-website-section-name tag="span" block=block obj=primarySection link=true />

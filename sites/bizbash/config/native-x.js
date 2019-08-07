@@ -3,34 +3,22 @@ module.exports = {
   uri: 'https://bbm.native-x.io',
   placements: {
     catering: {
-      list2: { id: '5d30cc522ab3e700012d8003' },
-      list1: { id: '5d30cc4c2ab3e700012d7fd4' },
-      card: { id: '5d30cc30990f520001091bcb' },
+      primary: { id: '5d4b04513bb2db00018cfa1a' },
     },
     default: {
-      list2: { id: '5d30cfb22ab3e700012d8fce' },
-      list1: { id: '5d30cfd12ab3e700012d90c2' },
-      card: { id: '5d30cfe5990f520001092d7f' },
+      primary: { id: '5d4af41d2ab3e700014e2dd6' },
     },
     'style-decor': {
-      list2: { id: '5d30cc762ab3e700012d80ea' },
-      list1: { id: '5d30cc7b990f520001091d83' },
-      card: { id: '5d30cc712ab3e700012d80d0' },
+      primary: { id: '5d4b04619f69b200013ab0f4' },
     },
     'production-strategy': {
-      list2: { id: '5d30cc892ab3e700012d8169' },
-      list1: { id: '5d30cc8e990f520001091e1e' },
-      card: { id: '5d30cc85990f520001091dcc' },
+      primary: { id: '5d4b04769f69b200013ab109' },
     },
     'local-venues-destinations': {
-      list2: { id: '5d30cc522ab3e700012d8003' },
-      list1: { id: '5d30cc4c2ab3e700012d7fd4' },
-      card: { id: '5d30cc30990f520001091bcb' },
+      primary: { id: '5d4b04833bb2db00018cfa65' },
     },
     'bizbash-lists': {
-      list2: { id: '5d30cd402ab3e700012d84ba' },
-      list1: { id: '5d30cd4e2ab3e700012d850c' },
-      card: { id: '5d30cd44990f52000109210e' },
+      primary: { id: '5d4b04963bb2db00018cfa7b' },
     },
   },
 };

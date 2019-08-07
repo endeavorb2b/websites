@@ -97,6 +97,9 @@ const convertAdToContent = (ad) => {
   };
 };
 
+/**
+ * @deprecated This service and its related Marko components should be removed.
+ */
 module.exports = {
   convertAdToContent,
   isEnabled,

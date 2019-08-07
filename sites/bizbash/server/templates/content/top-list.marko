@@ -15,8 +15,10 @@ $ const adSlots = {
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
-<theme-default-content-layout content=content>
+<!-- @deprecated init-native-x -->
+<theme-default-content-layout content=content init-native-x=false>
   <@head>
+    <native-x-site-init />
     <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>
 
@@ -51,6 +53,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
           content-type=content.type
           section-id=section.id
           section-name=section.name
+          aliases=aliases
         />
         <endeavor-gam-ad-unit-display id="gpt-ad-rail2" />
       </aside>

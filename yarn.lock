@@ -680,10 +680,10 @@
   dependencies:
     inflected "^2.0.4"
 
-"@base-cms/marko-web@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.10.1.tgz#aff2456966c56093757f98264d1184594ecdf543"
-  integrity sha512-J295t+ANZRpFSeP5OBb5veu9j3Ezg1av+iBXBcnwlr/kwZplYnaYcFvo/c080rQIDR0D16N4+ObbgxqVO1NOMA==
+"@base-cms/marko-web@^0.10.3-alpha.0":
+  version "0.10.3-alpha.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web/-/marko-web-0.10.3-alpha.0.tgz#be5e2e6b803cb126e0faa6578e5272237ccd763a"
+  integrity sha512-jXhnMGwUMQTT08NXthIdsk5CrOQ1IomLWtXQBJu2Zvd5JlZIPmJAxOm4R/w7P2KH0+gimUY6IsOljuBS27WNEg==
   dependencies:
     "@base-cms/embedded-media" "^0.10.1"
     "@base-cms/express-apollo" "^0.10.0"
@@ -698,7 +698,7 @@
     express-http-proxy "^1.5.1"
     http-errors "^1.7.2"
     jquery "^3.4.0"
-    marko "^4.15.2"
+    marko "^4.18.10"
     moment "^2.24.0"
     vue "^2.6.10"
 
@@ -720,10 +720,10 @@
   resolved "https://registry.yarnpkg.com/@base-cms/utils/-/utils-0.10.0.tgz#1eef64d69d33ff43db4ed29a7d7b4745f79e1649"
   integrity sha512-QA4t6SU+IQ5j+dBropxRKI8SUHVeoE2tnhLew5qjW74oNibWsrFunMdJxrOWaC4uffYls2bRDY2V/zvFnkkQQg==
 
-"@base-cms/web-cli@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.10.1.tgz#50002802d3dc27a198ea4c984ca7b3bca6b6e5d6"
-  integrity sha512-qOEKoI/zW/RVLOX7RaF1MdPk6T9m7gpaukn3kqETxCK0KfG+xyw7VeIpwu4EK4+AX10Aoi+dITL0ukWAsp25nw==
+"@base-cms/web-cli@^0.10.3-alpha.0":
+  version "0.10.3-alpha.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/web-cli/-/web-cli-0.10.3-alpha.0.tgz#c45a9b11d8d6e6f9a91eedfc5001b25ce4f13fdf"
+  integrity sha512-XZfCm7IwcfEFsI647KNN+7xJBkD9Tg3b6Pi4p9cd59kCVQd1NQsr+Hk21vKXzzWHqu9ocuwjxlP9O2ud+YesmA==
   dependencies:
     "@babel/core" "^7.4.0"
     "@babel/plugin-transform-runtime" "^7.4.0"
@@ -731,7 +731,7 @@
     "@babel/runtime" "^7.4.2"
     "@babel/runtime-corejs2" "^7.4.2"
     "@base-cms/express-apollo" "^0.10.0"
-    "@base-cms/marko-web" "^0.10.1"
+    "@base-cms/marko-web" "^0.10.3-alpha.0"
     autoprefixer "^9.4.10"
     babel-loader "^8.0.5"
     chalk "^2.4.2"
@@ -3238,10 +3238,17 @@ compare-func@^1.3.1:
     array-ify "^1.0.0"
     dot-prop "^3.0.0"
 
-complain@^1.0.0, complain@^1.3.0:
+complain@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/complain/-/complain-1.3.0.tgz#a182d5003489126c038bbf98b906866acbfa77b2"
   integrity sha512-PA9uGpaS4BXKrhFx3rl2nZMWySnGoW1pWf+dpBqNdDx3uR6PA0EPxjD17H9OxvW5w/bODBSziQ516Guf59rW+w==
+  dependencies:
+    error-stack-parser "^2.0.1"
+
+complain@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/complain/-/complain-1.6.0.tgz#e8a1ff3f7dc03ff2b396b4b3e27af35236a3c25c"
+  integrity sha512-9oBfSEfxveaNmo2eSp/vEPkaBVxUhiJTZVgGYayzBchSAXQM6CK1PAQeV5ICShnSgfT+biYzrN7egKwwX+HkCw==
   dependencies:
     error-stack-parser "^2.0.1"
 
@@ -5826,10 +5833,10 @@ html2plaintext@^2.1.0:
     he "1.2.0"
     plumb "0.1.0"
 
-htmljs-parser@^2.6.5:
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/htmljs-parser/-/htmljs-parser-2.6.6.tgz#e3121346524acdaa7574cd8ce167c90da8985d94"
-  integrity sha512-cwIV9dkA5WgDuhZigrL6Aw1+sGdhlVi5b4csijnGVHe0GATGY0ibHt68q2O7nULTtg5HTMtR8tdvd2yVfPIZxg==
+htmljs-parser@^2.6.7:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/htmljs-parser/-/htmljs-parser-2.6.8.tgz#cce8237aea2b3141dc69cc282f3920f51079fa3f"
+  integrity sha512-il0NrLbNyt29nZuciLbrRKRMBi8VVVjVpv/x37z9qyubQscsoMzcsw3Fp35QvPR9p2eurQ/TBKrfdZ+joDX/rw==
   dependencies:
     char-props "^0.1.5"
     complain "^1.0.0"
@@ -7153,17 +7160,17 @@ markdown-table@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.2.tgz#c78db948fa879903a41bce522e3b96f801c63786"
   integrity sha512-NcWuJFHDA8V3wkDgR/j4+gZx+YQwstPgfQDV8ndUeWWzta3dnDTBxpVzqS9lkmJAuV5YX35lmyojl6HO5JXAgw==
 
-marko@^4.15.2:
-  version "4.16.4"
-  resolved "https://registry.yarnpkg.com/marko/-/marko-4.16.4.tgz#f5ad8040b1874554d434a818098332637044e7f1"
-  integrity sha512-DbYOefQE6ZGrgrDdTHJ5zQtVJthjTMo2rpiJ8nj+PirJ1Kb32+kRl2+6tFiqWb17kdDZmKTNjxysfn8alDTFqg==
+marko@^4.18.10:
+  version "4.18.10"
+  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.10.tgz#02889b00a9dd5d12e064db720080951a3bc0c148"
+  integrity sha512-X2pmJIOBZ/39D2fCQZYtWprIjvrLF+cpEK0vjzMVwxBh13tRCyUhwoqlQO84d8Xif+RMEuR3/9fRDlwnURMSTw==
   dependencies:
     app-module-path "^2.2.0"
     argly "^1.0.0"
     browser-refresh-client "^1.0.0"
     camelcase "^5.0.0"
     char-props "~0.1.5"
-    complain "^1.3.0"
+    complain "^1.6.0"
     deresolve "^1.1.2"
     escodegen "^1.8.1"
     esprima "^4.0.0"
@@ -7171,7 +7178,7 @@ marko@^4.15.2:
     events "^1.0.2"
     events-light "^1.0.0"
     he "^1.1.0"
-    htmljs-parser "^2.6.5"
+    htmljs-parser "^2.6.7"
     lasso-caching-fs "^1.0.1"
     lasso-modules-client "^2.0.4"
     lasso-package-root "^1.0.1"
