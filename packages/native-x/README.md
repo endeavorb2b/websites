@@ -44,7 +44,7 @@ $ const condition = true;
 $ // image options can be sent to determine how NativeX should render images
 $ const imageOptions = {};
 <native-x-site-render
-  when=condition === true
+  when=(condition === true)
   name="name1"
   aliases=["some-alias"]
   opts={ image: imageOptions }
@@ -62,7 +62,7 @@ $ const imageOptions = {};
   </@when-found>
 
   <@on-fallback|{ containerAttrs, linkAttrs }|>
-    <!-- Render no campaign was found, but fallback tracking data is available -->
+    <!-- Render when no campaign was found, but fallback tracking data is available -->
     <!-- Render your content object like normal, but include the container and link attrs -->
     <my-content-item attrs=containerAttrs link-attrs=linkAttrs />
   </@on-fallback>
