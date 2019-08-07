@@ -39,14 +39,14 @@ $ const isEnabled = () => {
         </else>
       </if>
       <else>
-        <${input.whenNotFound} />
+        <${input.renderBody} />
       </else>
     </native-x-fetch-elements>
   </if>
   <else>
-    <${input.whenNotFound} />
+    <${input.renderBody} />
   </else>
 </if>
 <else>
-  <${input.whenNotFound} />
+  <${input.renderBody} />
 </else>
