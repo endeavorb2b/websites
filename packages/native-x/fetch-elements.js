@@ -1,13 +1,6 @@
 const { isObject } = require('@base-cms/utils');
 const fetch = require('node-fetch');
-
-const createHeaders = ({ req }) => {
-  if (!req) return {};
-  return {
-    'x-forwarded-for': req.ip,
-    'user-agent': req.get('user-agent'),
-  };
-};
+const createHeaders = require('./utils/create-headers');
 
 module.exports = async ({
   uri,
