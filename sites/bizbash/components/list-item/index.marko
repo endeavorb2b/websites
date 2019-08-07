@@ -1,0 +1,50 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const content = getAsObject(input, 'content');
+$ const primaryImage = getAsObject(content, 'primaryImage');
+$ const dateFormat = 'MMMM D, YYYY';
+
+$ const imageOptions = { w: 189, h: 126, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
+$ const image = {
+  height: 84,
+  image: primaryImage,
+  lazyload: true,
+  linkTo: content,
+  options: imageOptions,
+  position: 'left',
+  usePlaceholder: false,
+  width: 126,
+  ...getAsObject(input, 'image'),
+};
+
+$ const nativex = getAsObject(input, 'nativeXRender');
+<native-x-site-render
+  when=nativex.when
+  name=nativex.name
+  aliases=nativex.aliases
+  opts={ image: imageOptions }
+>
+  <@when-found|{ containerAttrs, linkAttrs, campaign }|>
+    $ const campaignImage = { ...image, linkAttrs, options: {} };
+    <contents
+      content=campaign
+      image=campaignImage
+      date-format=dateFormat
+      attrs=containerAttrs
+    />
+  </@when-found>
+  <@on-fallback|{ containerAttrs, linkAttrs }|>
+    $ const fallbackImage = { ...image, linkAttrs };
+    <contents
+      content=content
+      image=fallbackImage
+      date-format=dateFormat
+      attrs=containerAttrs
+    />
+  </@on-fallback>
+  <contents
+    content=content
+    image=image
+    date-format=dateFormat
+  />
+</native-x-site-render>

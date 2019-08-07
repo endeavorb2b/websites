@@ -56,12 +56,13 @@
       "@spaces": "array"
     },
     "bizbash-list-item": {
-      "template": "./list-item.marko",
+      "template": "./list-item/index.marko",
       "@content": {
         "type": "object",
         "required": true
       },
-      "@image": "object"
+      "@image": "object",
+      "@native-x-render": "object"
     },
     "bizbash-card-item": {
       "template": "./card-item.marko",
