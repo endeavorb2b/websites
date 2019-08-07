@@ -1,13 +1,11 @@
 import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
-$ const primaryImage = getAsObject(content, 'primaryImage');
 $ const dateFormat = 'MMMM D, YYYY';
 
 $ const imageOptions = { w: 189, h: 126, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 };
 $ const image = {
   height: 84,
-  image: primaryImage,
   lazyload: true,
   linkTo: content,
   options: imageOptions,

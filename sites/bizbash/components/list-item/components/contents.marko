@@ -2,11 +2,17 @@ import { getAsObject } from '@base-cms/object-path';
 
 $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
+$ const primaryImage = getAsObject(content, 'primaryImage');
+
+$ const imageInput = {
+  ...input.image,
+  image: primaryImage,
+}
 
 $ const { dateFormat } = input;
 
 <endeavor-item attrs=input.attrs>
-  <@image ...input.image />
+  <@image ...imageInput />
   <@title tag="h5">
     <cms-content-short-name tag=null obj=content link=true link-attrs=input.contentLinkAttrs />
   </@title>
