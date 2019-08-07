@@ -17,6 +17,7 @@ $ const adSlots = {
 <!-- @deprecated init-native-x -->
 <theme-default-website-section-layout section=section init-native-x=false>
   <@head>
+    <native-x-site-init />
     <endeavor-ad-gam-head slots=adSlots />
   </@head>
 
@@ -43,7 +44,7 @@ $ const adSlots = {
   <div class="row">
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "industry-buzz", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
-        <@header>Industry Buzz</@header>
+        <@header href="/industry-buzz">Industry Buzz</@header>
         <@item|{ node }|>
           <bizbash-list-item content=node />
         </@item>
@@ -52,16 +53,16 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "production-strategy", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/production-strategy">Production & Strategy</@header>
-        <@item|{ node }|>
-          <bizbash-list-item content=node />
+        <@item|{ node, index }|>
+          <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: ["production-strategy"] } />
         </@item>
       </website-scheduled-content-list>
     </div>
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "style-decor", limit: 5, queryFragment: contentListFragment } item-list={ modifiers: ["height-100"] }>
         <@header href="/style-decor">Style & Decor</@header>
-        <@item|{ node }|>
-          <bizbash-list-item content=node />
+        <@item|{ node, index }|>
+          <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: ["style-decor"] } />
         </@item>
       </website-scheduled-content-list>
     </div>
@@ -71,8 +72,8 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "catering", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/catering">Catering</@header>
-        <@item|{ node }|>
-          <bizbash-list-item content=node />
+        <@item|{ node, index }|>
+          <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: ["catering"] } />
         </@item>
       </website-scheduled-content-list>
     </div>
@@ -82,8 +83,8 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "local-venues-destinations", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/local-venues-destinations">Venues & Destinations</@header>
-        <@item|{ node }|>
-          <bizbash-list-item content=node />
+        <@item|{ node, index }|>
+          <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: ["local-venues-destinations"] } />
         </@item>
       </website-scheduled-content-list>
     </div>
@@ -93,8 +94,8 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <website-scheduled-content-list query={ sectionAlias: "bizbash-lists", limit: 5, queryFragment: contentListFragment  } item-list={ modifiers: ["height-100"] }>
         <@header href="/bizbash-lists">BizBash Lists</@header>
-        <@item|{ node }|>
-          <bizbash-list-item content=node />
+        <@item|{ node, index }|>
+          <bizbash-list-item content=node native-x-render={ when: index === 4, name: "list1", aliases: ["bizbash-lists"] } />
         </@item>
       </website-scheduled-content-list>
     </div>
