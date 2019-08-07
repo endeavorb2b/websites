@@ -82,16 +82,18 @@
       "@modifiers": "array"
     },
     "bizbash-card-item-overlay": {
-      "template": "./card-item-overlay.marko",
+      "template": "./card-item-overlay/index.marko",
       "@content": {
         "type": "object",
         "required": true
       },
-      "@image": "object"
+      "@image": "object",
+      "@native-x-render": "object"
     },
     "bizbash-overlay-item": {
       "template": "./overlay-item.marko",
       "@modifiers": "array",
+      "@attrs": "object",
       "<image>": {},
       "<header-left>": {},
       "<header-right>": {},

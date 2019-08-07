@@ -3,22 +3,18 @@ import { getAsObject } from '@base-cms/object-path';
 $ const content = getAsObject(input, 'content');
 $ const primarySection = getAsObject(content, 'primarySection');
 $ const primaryImage = getAsObject(content, 'primaryImage');
-$ const dateFormat = 'MMMM D, YYYY';
-$ const imageInput = {
-  image: primaryImage,
-  lazyload: false,
-  linkTo: content,
-  modifiers: ['fluid', '6by5'],
-  options: { w: 630, h: 525, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 },
-  position: 'top',
-  usePlaceholder: false,
-  ...getAsObject(input, 'image'),
-};
 
-<bizbash-overlay-item modifiers=["card"]>
+$ const imageInput = {
+  ...input.image,
+  image: primaryImage,
+}
+
+$ const { dateFormat } = input;
+
+<bizbash-overlay-item attrs=input.attrs modifiers=["card"]>
   <@image ...imageInput />
   <@title tag="h5" modifiers=["card-deck"]>
-    <cms-content-short-name tag=null obj=content link=true />
+    <cms-content-short-name tag=null obj=content link=true link-attrs=input.contentLinkAttrs />
   </@title>
   <@footer-left|{ block }|>
     <cms-website-section-name tag="span" block=block obj=primarySection link=true />
