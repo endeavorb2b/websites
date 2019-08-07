@@ -12,7 +12,8 @@ $ const adSlots = {
   'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 600] }),
 };
 
-<theme-default-website-section-layout section=section>
+<!-- @deprecated init-native-x -->
+<theme-default-website-section-layout section=section init-native-x=false>
   <@head>
     <endeavor-ad-gam-head slots=adSlots />
   </@head>
