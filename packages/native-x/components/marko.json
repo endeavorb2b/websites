@@ -26,7 +26,19 @@
       "@opts": "object"
     },
     "native-x-site-render": {
-      "template": "./site-render.marko"
+      "template": "./site-render.marko",
+      "<when-found>": {},
+      "<on-fallback>": {},
+      "@when": "boolean",
+      "@name": {
+        "type": "string",
+        "required": true
+      },
+      "@aliases": "array",
+      "@uri": "string",
+      "@enabled": "boolean",
+      "@placement-id": "string",
+      "@opts": "object"
     }
   }
 }
