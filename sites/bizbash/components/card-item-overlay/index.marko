@@ -22,7 +22,7 @@ $ const nativex = getAsObject(input, 'nativeXRender');
   opts={ image: imageOptions }
 >
   <@when-found|{ containerAttrs, linkAttrs, campaign }|>
-    $ const campaignImage = { ...image, linkAttrs, options: {} };
+    $ const campaignImage = { ...image, linkAttrs, linkTo: campaign, options: {} };
     <contents
       content=campaign
       image=campaignImage
