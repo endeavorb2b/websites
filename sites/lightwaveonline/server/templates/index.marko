@@ -36,11 +36,20 @@ $ const adSlots = {
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=3
+            section-alias="on-topic"
+            header={ title: "On Topic", href: "/on-topic" }
+          />
+        </div>
+        <div class="col-lg-6 mb-block">
+          <endeavor-content-query-section-list
+            limit=3
             section-alias="network-design"
             header={ title: "Network Design", href: "/network-design" }
             native-x={ placement: 'list1', aliases: ['network-design'], index: 2 }
           />
         </div>
+      </div>
+      <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=3
@@ -49,22 +58,12 @@ $ const adSlots = {
             native-x={ placement: 'list1', aliases: ['fttx'], index: 2 }
           />
         </div>
-      </div>
-      <div class="row">
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=3
             section-alias="network-automation"
             header={ title: "Network Automation", href: "/network-automation" }
             native-x={ placement: 'list1', aliases: ['network-automation'], index: 2 }
-          />
-        </div>
-        <div class="col-lg-6 mb-block">
-          <endeavor-content-query-section-list
-            limit=3
-            section-alias="data-center"
-            header={ title: "Data Center", href: "/data-center" }
-            native-x={ placement: 'list1', aliases: ['data-center'], index: 2 }
           />
         </div>
       </div>
@@ -76,6 +75,14 @@ $ const adSlots = {
   </div>
 
   <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="data-center"
+        header={ title: "Data Center", href: "/data-center" }
+        native-x={ placement: 'list1', aliases: ['data-center'], index: 2 }
+      />
+    </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=3
@@ -92,6 +99,9 @@ $ const adSlots = {
         native-x={ placement: 'list1', aliases: ['test'], index: 2 }
       />
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=3
@@ -100,9 +110,6 @@ $ const adSlots = {
         native-x={ placement: 'list1', aliases: ['optical-tech'], index: 2 }
       />
     </div>
-  </div>
-
-  <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=3
@@ -122,20 +129,20 @@ $ const adSlots = {
         header={ title: "White Papers", href: "/white-papers" }
       />
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-published-content-query-list
         query={
           requiresImage: false,
           contentTypes: ["Webinar"],
-          limit: 3,
+          limit: 5,
         }
         with-image=false
         header={ title: "Webcasts", href: "/webcasts" }
       />
     </div>
-  </div>
-
-  <div class="row">
     <div class="col-lg-4 mb-block">
       <endeavor-published-content-query-list
         query={
@@ -144,13 +151,6 @@ $ const adSlots = {
           limit: 5,
         }
         header={ title: "Videos", href: "/videos" }
-      />
-    </div>
-    <div class="col-lg-4 mb-block">
-      <endeavor-content-query-section-list
-        limit=5
-        section-alias="on-topic"
-        header={ title: "On Topic", href: "/on-topic" }
       />
     </div>
     <div class="col-lg-4 mb-block">
