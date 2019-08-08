@@ -1,14 +1,17 @@
 import { getAsObject, getAsArray } from '@base-cms/object-path';
-
+$ const { site } = out.global;
+$ const homeTitle = site.get('breadcrumbs.home.title', 'Home');
+$ const homeHref = site.get('breadcrumbs.home.href', '/');
+$ const homeAlias = site.get('breadcrumbs.home.alias', 'home');
 $ const section = getAsObject(input, 'section');
 $ const children = getAsArray(section, 'hierarchy');
 
 <endeavor-breadcrumbs>
   <@item>
-    <endeavor-link href="/" title="Home">Home</endeavor-link>
+    <endeavor-link href=homeHref title=homeTitle>${homeTitle}</endeavor-link>
   </@item>
   <for|child| of=children>
-    <if(section.alias !== 'home')>
+    <if(section.alias !== homeAlias)>
       <@item>
         <endeavor-link title=child.name href=`/${child.alias}`>${child.name}</endeavor-link>
       </@item>

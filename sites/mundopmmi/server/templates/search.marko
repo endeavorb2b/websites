@@ -1,4 +1,4 @@
-$ const { config } = out.global;
+$ const { site, config } = out.global;
 
 <theme-default-search-layout>
   <@head>
@@ -16,7 +16,7 @@ $ const { config } = out.global;
       <div class="col">
         <div class="page-wrapper__header">
           <endeavor-breadcrumbs-search />
-          <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
+          <h1 class="page-wrapper__title">${site.get('breadcrumbs.search.title', 'Search')} ${config.siteName()}</h1>
         </div>
         <div class="page-wrapper__body">
           <endeavor-search-in-page />

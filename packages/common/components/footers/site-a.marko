@@ -37,7 +37,7 @@ $ const footerItems = site.getAsArray('navigation.footer.items');
     </if>
 
     <div class="site-footer__copyright">
-      &copy; ${new Date().getFullYear()} ${site.get('company', 'Endeavor Business Media, LLC')}. All rights reserved.
+      &copy; ${new Date().getFullYear()} ${site.get('company', 'Endeavor Business Media, LLC')}. ${site.get('copyrightNotice', 'All rights reserved')}.
     </div>
 
   </div>

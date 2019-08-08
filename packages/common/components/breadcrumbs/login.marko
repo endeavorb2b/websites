@@ -1,6 +1,11 @@
+$ const { site } = out.global;
+$ const homeTitle = site.get('breadcrumbs.home.title', 'Home');
+$ const homeHref = site.get('breadcrumbs.home.href', '/');
+$ const loginTitle = site.get('breadcrumbs.login.title', 'Login');
+
 <endeavor-breadcrumbs>
   <@item>
-    <endeavor-link href="/" title="Home">Home</endeavor-link>
+    <endeavor-link href=homeHref title=homeTitle>${homeTitle}</endeavor-link>
   </@item>
-  <@item>Login</@item>
+  <@item>${loginTitle}</@item>
 </endeavor-breadcrumbs>

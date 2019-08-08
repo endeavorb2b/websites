@@ -1,13 +1,19 @@
+$ const { site } = out.global;
+$ const homeTitle = site.get('breadcrumbs.home.title', 'Home');
+$ const homeHref = site.get('breadcrumbs.home.href', '/');
+$ const subscribeTitle = site.get('breadcrumbs.subscribe.title', 'subscribe');
+$ const subscribeHref = site.get('breadcrumbs.subscribe.href', '/subscribe');
+
 <endeavor-breadcrumbs>
   <@item>
-    <endeavor-link href="/" title="Home">Home</endeavor-link>
+    <endeavor-link href=homeHref title=homeTitle>${homeTitle}</endeavor-link>
   </@item>
   <@item>
     <if(input.value)>
-      <endeavor-link href="/subscribe" title="Subscribe">Subscribe</endeavor-link>
+      <endeavor-link href=subscribeHref title=subscribeTitle>${subscribeTitle}</endeavor-link>
     </if>
     <else>
-      Subscribe
+      ${subscribe}
     </else>
   </@item>
   <if(input.value)>
