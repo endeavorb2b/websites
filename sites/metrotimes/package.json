@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/metrotimes",
-  "version": "0.13.4",
+  "version": "0.13.6",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -14,8 +14,8 @@
     "@base-cms/marko-web": "^0.10.3-alpha.0",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.3-alpha.0",
-    "@endeavorb2b/base-website-common": "^0.13.4",
-    "@endeavorb2b/base-website-themes": "^0.13.4",
+    "@endeavorb2b/base-website-common": "^0.13.6",
+    "@endeavorb2b/base-website-themes": "^0.13.6",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
