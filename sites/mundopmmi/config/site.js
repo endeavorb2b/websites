@@ -3,6 +3,24 @@ const ads = require('./ads');
 module.exports = {
   ads,
   company: 'PMMI Media Group',
+  copyrightNotice: 'Todos los derechos reservados',
+  breadcrumbs: {
+    home: {
+      title: 'Casa',
+    },
+    login: {
+      title: 'Iniciar sesión',
+    },
+    magazines: {
+      title: 'Revistas',
+    },
+    search: {
+      title: 'Buscar',
+    },
+    subscribe: {
+      title: 'Suscríbase',
+    },
+  },
   logos: {
     navbar: {
       src: 'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
@@ -29,7 +47,7 @@ module.exports = {
     },
     secondary: {
       items: [
-        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav', label: 'Suscríbase', target: '_blank' },
+        { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav&r=@{encrypted_customer_id}', label: 'Suscríbase', target: '_blank' },
         { href: '/automatizacion', label: 'Automatización' },
         { href: '/empaque', label: 'Empaque' },
         { href: '/procesamiento', label: 'Procesamiento' },
@@ -64,7 +82,7 @@ module.exports = {
       userTools: {
         label: 'Herramientas de usuario',
         items: [
-          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav', label: 'Suscríbase', target: '_blank' },
+          { href: 'https://mundopmmi.dragonforms.com/perspectivas?pk=MundoSubNav&r=@{encrypted_customer_id}', label: 'Suscríbase', target: '_blank' },
           { href: 'https://www.pmmimediagroup.com/pw/mundo-pmmi', label: 'Anuncie' },
           { href: '/acerca-de-nosotros', label: 'Acerca de nosotros' },
           { href: '/page/contacto', label: 'Contacto' },

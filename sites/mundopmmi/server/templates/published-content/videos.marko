@@ -2,7 +2,10 @@ import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-co
 
 $ const { config } = out.global;
 $ const query = { contentTypes: ['Video'], limit: 10 };
-$ const page = pageDetails('Videos', config);
+$ const page = {
+  title: 'Vídeos',
+  description: 'Los últimos vídeos de Mundo PMMI'
+};
 
 <theme-default-published-content-layout page=page>
   <@head>

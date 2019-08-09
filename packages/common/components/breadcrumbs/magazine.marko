@@ -1,17 +1,21 @@
 import { getAsObject, getAsArray } from '@base-cms/object-path';
-
+$ const { site } = out.global;
+$ const homeTitle = site.get('breadcrumbs.home.title', 'Home');
+$ const homeHref = site.get('breadcrumbs.home.href', '/');
+$ const magazinesTitle = site.get('breadcrumbs.magazines.title', 'Magazines');
+$ const magazinesHref = site.get('breadcrumbs.magazines.href', '/magazine');
 $ const target = getAsObject(input, 'target');
 
 <endeavor-breadcrumbs>
   <@item>
-    <endeavor-link href="/" title="Home">Home</endeavor-link>
+    <endeavor-link href=homeHref title=homeTitle>${homeTitle}</endeavor-link>
   </@item>
   <@item>
     <if(target.id)>
-      <endeavor-link href="/magazine" title="Magazines">Magazines</endeavor-link>
+      <endeavor-link href=magazinesHref title=magazinesTitle>${magazinesTitle}</endeavor-link>
     </if>
     <else>
-      Magazines
+      ${magazinesTitle}
     </else>
   </@item>
   <if(target.id)>
