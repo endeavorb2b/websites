@@ -44,6 +44,30 @@ $ const adSlots = {
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="automatizacion"
+        header={ title: "Automatización", href: "/automatizacion" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="empaque"
+        header={ title: "Empaque", href: "/empaque" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="procesamiento"
+        header={ title: "Procesamiento", href: "/procesamiento" }
+      />
+    </div>
+  </div>
+
   <@below-container>
     <cms-query-website-scheduled-content|{ nodes }|
       section-id=section.id
