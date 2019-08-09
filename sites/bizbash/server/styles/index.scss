@@ -484,6 +484,7 @@ body {
   }
 
   &--featured-venues-suppliers {
+    margin-bottom: map-get($spacers, block);
     #{ $self } {
       &__header,
       &__item {
