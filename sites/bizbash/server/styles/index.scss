@@ -297,6 +297,10 @@ body {
     background-color: $primary;
   }
 
+  &--shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  }
+
   // @todo Move to core?
   &--latest-issue {
     padding-right: 0;
@@ -324,6 +328,9 @@ body {
         position: relative;
       }
       &__image {
+        &--16by9 {
+          @include theme-embed-responsive(16, 9);
+        }
         &--6by5 {
           @include theme-embed-responsive(6, 5);
         }
@@ -368,6 +375,15 @@ body {
       }
       &__website-section-name {
         margin-right: map-get($spacers, 2);
+      }
+    }
+  }
+
+  &--featured-venue-supplier {
+    #{ $self } {
+      &__contents {
+        padding-right: 0;
+        padding-left: 0;
       }
     }
   }
@@ -426,15 +442,6 @@ body {
   }
 }
 
-// @todo move to core
-.page-right-rail > * {
-  margin-bottom: map-get($spacers, block);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .item-list {
   $self: &;
   // @todo Add to core
@@ -474,6 +481,16 @@ body {
         &:last-child {
           border-bottom: 4px solid $gray-200;
         }
+      }
+    }
+  }
+  &--featured-venues-suppliers {
+    margin-bottom: map-get($spacers, block);
+    #{ $self } {
+      &__header,
+      &__item {
+        font-size: 20px;
+        background-color: $gray-200;
       }
     }
   }
