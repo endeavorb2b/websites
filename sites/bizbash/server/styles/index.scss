@@ -156,7 +156,7 @@ $theme-site-navbar-secondary-font-family:   $font-roboto-condensed;
 $theme-site-navbar-secondary-font-weight:   700;
 $theme-site-navbar-secondary-line-height:   1;
 
-/* Adding these variables back in due to conflicts with merges done since refactor was started. These were replaced in the refactor by the new mixin system. */
+/* Adding these variables back in due to conflicts with merges done since refactor was started. These were replaced in the refactor by the new mixin system. To be removed after conflict is resolved. */
 $theme-site-navbar-primary-link-active-color:       $primary;
 $theme-site-navbar-primary-link-color:              $white;
 $theme-site-navbar-primary-link-hover-color:        $white;
