@@ -3,6 +3,7 @@ import { getAsObject, getAsArray } from '@base-cms/object-path';
 $ const content = getAsObject(input, 'content');
 
 <cms-content-body tag="div" class="content-body-contents" obj=content />
+<cms-content-sidebars obj=content />
 
 <div class="content-body-footer">
   <if(content.type === "whitepaper")>

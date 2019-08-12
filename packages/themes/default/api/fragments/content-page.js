@@ -51,6 +51,9 @@ fragment ContentPageFragment on Content {
     ends
     starts
   }
+  ... on ContentArticle {
+    sidebars
+  }
   ... on ContentWebinar {
     linkUrl
     starts
