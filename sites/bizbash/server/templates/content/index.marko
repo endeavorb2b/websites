@@ -13,6 +13,7 @@ $ const adSlots = {
   'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases }),
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
+$ const displayVenueBox = ['article', 'media-gallery'].includes(content.type) ? true : false;
 
 <!-- @deprecated init-native-x -->
 <theme-default-content-layout content=content init-native-x=false>
@@ -39,7 +40,7 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
     <div class="row">
       <div class="col-lg-8">
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
-        <if(content.type === 'article')>
+        <if(displayVenueBox === true)>
           <bizbash-featured-venues-suppliers content-id=content.id />
         </if>
       </div>
