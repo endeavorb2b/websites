@@ -5,9 +5,6 @@ module.exports = {
   company: 'PMMI Media Group',
   copyrightNotice: 'Todos los derechos reservados',
   breadcrumbs: {
-    home: {
-      title: 'Casa',
-    },
     login: {
       title: 'Iniciar sesión',
     },
