@@ -10,9 +10,11 @@ $ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
   'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
+$ const displayRailAds = ['contact', 'company'].includes(content.type) ? false : true;
+$ const displayRailRelatedContent = ['contact', 'company'].includes(content.type) ? false : true;
 
 <theme-default-content-layout content=content>
   <@head>
@@ -40,13 +42,17 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       </div>
 
       <aside class="col-lg-4 page-right-rail">
-        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+        <if(displayRailAds)>
+          <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+        </if>
+        <if(displayRailRelatedContent)>
         <mundo-related-content
           content-id=content.id
           content-type=content.type
           section-id=section.id
           section-name=section.name
         />
+        </if>
       </aside>
     </div>
   </div>
