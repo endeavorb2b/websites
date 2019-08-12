@@ -82,6 +82,20 @@
   }
 }
 
+.article-sidebars {
+  &__sidebar {
+    @include border-radius($theme-page-border-radius);
+    @include theme-content-body();
+    @include theme-page-body-spacing();
+    padding: map-get($spacers, 4);
+    background-color: $gray-100;
+    border-left: 8px solid $gray-300;
+    &:empty {
+      display: none;
+    }
+  }
+}
+
 .content-page,
 .default-page,
 .dynamic-page {

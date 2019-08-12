@@ -61,3 +61,13 @@ $theme-site-header-breakpoints: (
     }
   }
 }
+
+.item {
+  &__footer-right {
+    text-transform: uppercase;
+  }
+}
+
+.content-published-date {
+  text-transform: uppercase;
+}
