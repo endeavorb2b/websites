@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/cablinginstall",
-  "version": "0.13.7",
+  "version": "0.13.8",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -15,7 +15,7 @@
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.3",
     "@endeavorb2b/base-website-common": "^0.13.7",
-    "@endeavorb2b/base-website-themes": "^0.13.7",
+    "@endeavorb2b/base-website-themes": "^0.13.8",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
