@@ -492,6 +492,10 @@ body {
   &--featured-venues-suppliers {
     margin-bottom: map-get($spacers, block);
     #{ $self } {
+      &__contents {
+        padding-bottom: map-get($spacers, 2);
+        background-color: $gray-200;
+      }
       &__header,
       &__item {
         font-size: 20px;
