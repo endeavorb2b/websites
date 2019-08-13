@@ -378,7 +378,13 @@ body {
   }
 
   &--featured-venue-supplier {
+    padding-top: map-get($spacers, 1);
+    padding-bottom: map-get($spacers, 1);
     #{ $self } {
+      &__title {
+        margin-bottom: 0;
+        line-height: 1rem;
+      }
       &__contents {
         padding-right: 0;
         padding-left: 0;
