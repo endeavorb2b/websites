@@ -15,17 +15,17 @@
 }
 
 @function list-remove($list, $index) {
-  $newList: ();
+  $new-list: ();
   @for $i from 1 through length($list) {
     @if $i != $index {
-      $newList: append($newList, nth($list, $i), "space");
+      $new-list: append($new-list, nth($list, $i), "space");
     }
   }
-  @return $newList;
+  @return $new-list;
 }
 
 @function list-sort($list, $direction: asc) {
-  $sortedlist: ();
+  $sorted-list: ();
   @while length($list) > 0 {
     $value: nth($list, 1);
     @each $item in $list {
@@ -39,10 +39,10 @@
         }
       }
     }
-    $sortedlist: append($sortedlist, $value, "space");
+    $sorted-list: append($sorted-list, $value, "space");
     $list: list-remove($list, index($list, $value));
   }
-  @return $sortedlist;
+  @return $sorted-list;
 }
 
 @function sort-map-by-values($map, $direction: asc) {
