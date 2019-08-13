@@ -219,14 +219,10 @@
   transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear .25s;
   transform: translateX(-#{$theme-site-navbar-menu-width});
 
-  @media (max-width: map-get($theme-site-header-breakpoints, small-logo)) {
-    top: calculate-navbar-height-for(small-logo);
-  }
-  @media (max-width: map-get($theme-site-header-breakpoints, small-text-primary)) {
-    top: calculate-navbar-height-for(small-text-primary);
-  }
-  @media (max-width: map-get($theme-site-header-breakpoints, hide-primary)) {
-    top: calculate-navbar-height-for(hide-primary);
+  @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
+    @media (max-width: $width) {
+      top: calculate-navbar-height-for($breakpoint);
+    }
   }
 
   &--open {
