@@ -48,7 +48,7 @@ module.exports = {
         { href: '/automatizacion', label: 'Automatización' },
         { href: '/empaque', label: 'Empaque' },
         { href: '/procesamiento', label: 'Procesamiento' },
-        { href: '/events', label: 'Eventos' },
+        { href: '/eventos', label: 'Eventos' },
       ],
     },
     footer: {
@@ -72,7 +72,7 @@ module.exports = {
       resources: {
         label: 'Recursos',
         items: [
-          { href: '/events', label: 'Eventos' },
+          { href: '/eventos', label: 'Eventos' },
           { href: '/videos', label: 'Vídeos' },
         ],
       },
