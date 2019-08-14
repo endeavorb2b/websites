@@ -52,7 +52,7 @@ $ const searchParams = {
       <if(input.contentType === 'Venue')>
         <div class="directory-facets">
           <h3 class="directory-facets__title">Venue Capacity</h3>
-            <input name="minimumCapacity" type="number" class="form-control directory-facets__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity>
+            <input name="minimumCapacity" type="number" class="form-control directory-facets__input" placeholder="Enter Minimun Capacity..." value=minimumCapacity min=0>
         </div>
       </if>
       <facet-container
