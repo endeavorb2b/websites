@@ -6,6 +6,7 @@ const contactUsTemplate = require('../templates/website-section/contact-us');
 const automatizacionTemplate = require('../templates/website-section/automatizacion');
 const empaqueTemplate = require('../templates/website-section/empaque');
 const procesamientoTemplate = require('../templates/website-section/procesamiento');
+const eventosTemplate = require('../templates/website-section/eventos');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -25,6 +26,11 @@ module.exports = (app) => {
 
   app.get('/:alias(procesamiento)', withWebsiteSection({
     template: procesamientoTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(eventos)', withWebsiteSection({
+    template: eventosTemplate,
     queryFragment,
   }));
 
