@@ -21,6 +21,8 @@ $theme-site-header-breakpoints: (
   small-text-secondary: 740px
 );
 
+$theme-site-navbar-logo-height: 80px;
+
 @import "../../node_modules/@endeavorb2b/base-website-themes/orion/styles/theme";
 
 .item-list {
