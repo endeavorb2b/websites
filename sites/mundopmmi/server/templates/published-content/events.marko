@@ -1,7 +1,7 @@
 $ const { config } = out.global;
 $ const query = {
   contentTypes: ['Event'],
-  limit: 9,
+  limit: 100,
   sortField: 'startDate',
   sortOrder: 'asc',
   endingAfter: (new Date()).valueOf(),
@@ -39,10 +39,7 @@ $ const page = {
 
   <@below-container>
     <div class="published-content-query-load-more">
-      <endeavor-published-content-query-load-more
-        query=query
-        layout="event"
-      />
+      <endeavor-published-content-query query=query layout="event" />
     </div>
   </@below-container>
 
