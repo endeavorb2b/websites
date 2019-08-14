@@ -7,6 +7,7 @@ const automatizacionTemplate = require('../templates/website-section/automatizac
 const empaqueTemplate = require('../templates/website-section/empaque');
 const procesamientoTemplate = require('../templates/website-section/procesamiento');
 const eventosTemplate = require('../templates/website-section/eventos');
+const companiasTemplate = require('../templates/website-section/companias');
 
 module.exports = (app) => {
   app.get('/:alias(contact-us)', withWebsiteSection({
@@ -31,6 +32,11 @@ module.exports = (app) => {
 
   app.get('/:alias(eventos)', withWebsiteSection({
     template: eventosTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(companias)', withWebsiteSection({
+    template: companiasTemplate,
     queryFragment,
   }));
 
