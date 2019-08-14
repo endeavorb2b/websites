@@ -48,6 +48,7 @@ $ const adCardInput = {
               image-options={ w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
               image-position="top"
               modifiers=["card"]
+              ...input.item
             />
           </div>
           <if(index === 1 || index === 6)>
@@ -75,6 +76,7 @@ $ const adCardInput = {
           image-width=75
           image-height=75
           with-image=input.withImage
+          ...input.item
         />
       </@item>
     </endeavor-item-list>
