@@ -72,6 +72,7 @@ module.exports = {
       resources: {
         label: 'Recursos',
         items: [
+          { href: '/autores', label: 'Autores' },
           { href: '/eventos', label: 'Eventos' },
           { href: '/videos', label: 'Vídeos' },
         ],
