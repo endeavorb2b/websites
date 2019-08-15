@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.athleticbusiness.com/sitemap.xml
+Sitemap: https://www.athleticbusiness.com/sitemap-google-news.xml

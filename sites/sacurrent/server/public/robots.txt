@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.sacurrent.com/sitemap.xml
+Sitemap: https://www.sacurrent.com/sitemap-google-news.xml

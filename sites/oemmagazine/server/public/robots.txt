@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.oemmagazine.org/sitemap.xml
+Sitemap: https://www.oemmagazine.org/sitemap-google-news.xml

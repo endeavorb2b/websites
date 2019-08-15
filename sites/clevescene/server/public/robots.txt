@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.clevescene.com/sitemap.xml
+Sitemap: https://www.clevescene.com/sitemap-google-news.xml

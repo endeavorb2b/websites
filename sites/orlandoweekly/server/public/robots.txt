@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.orlandoweekly.com/sitemap.xml
+Sitemap: https://www.orlandoweekly.com/sitemap-google-news.xml

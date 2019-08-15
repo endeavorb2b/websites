@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.packworld.com/sitemap.xml
+Sitemap: https://www.packworld.com/sitemap-google-news.xml

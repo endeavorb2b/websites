@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.forconstructionpros.com/sitemap.xml
+Sitemap: https://www.forconstructionpros.com/sitemap-google-news.xml

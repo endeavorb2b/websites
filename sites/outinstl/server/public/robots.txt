@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.outinstl.com/sitemap.xml
+Sitemap: https://www.outinstl.com/sitemap-google-news.xml

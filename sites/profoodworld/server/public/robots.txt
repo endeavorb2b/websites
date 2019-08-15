@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.profoodworld.com/sitemap.xml
+Sitemap: https://www.profoodworld.com/sitemap-google-news.xml

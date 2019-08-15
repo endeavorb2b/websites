@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.aquamagazine.com/sitemap.xml
+Sitemap: https://www.aquamagazine.com/sitemap-google-news.xml

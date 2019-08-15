@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.outinsa.com/sitemap.xml
+Sitemap: https://www.outinsa.com/sitemap-google-news.xml

@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.automationworld.com/sitemap.xml
+Sitemap: https://www.automationworld.com/sitemap-google-news.xml

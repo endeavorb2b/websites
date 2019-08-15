@@ -3,3 +3,6 @@
 
 User-agent: *
 Disallow: *
+
+Sitemap: https://www.healthcarepackaging.com/sitemap.xml
+Sitemap: https://www.healthcarepackaging.com/sitemap-google-news.xml
