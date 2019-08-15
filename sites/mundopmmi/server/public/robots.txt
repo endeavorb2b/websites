@@ -4,5 +4,5 @@
 User-agent: *
 Disallow: /load-more
 
-Sitemap: https://www.utilityproducts.com/sitemap.xml
-Sitemap: https://www.utilityproducts.com/sitemap-google-news.xml
+Sitemap: https://www.mundopmmi.com/sitemap.xml
+Sitemap: https://www.mundopmmi.com/sitemap-google-news.xml

@@ -73,3 +73,46 @@ $theme-site-navbar-logo-height: 80px;
 .content-published-date {
   text-transform: uppercase;
 }
+
+.content-attribution {
+  &__content-authors {
+    &::before {
+      content: "Autor";
+    }
+  }
+  &__content-byline {
+    &::before {
+      content: "Por";
+    }
+  }
+
+  &__content-company-name {
+    &::before {
+      content: "De";
+    }
+  }
+
+  &__content-contributors {
+    &::before {
+      content: "Contribuyente";
+    }
+  }
+
+  &__content-photographers {
+    &::before {
+      content: "Fotógrafo";
+    }
+  }
+
+  &__content-source {
+    &::before {
+      content: "Fuente";
+    }
+  }
+
+  &__content-sponsor {
+    &::before {
+      content: "Patrocinador";
+    }
+  }
+}
