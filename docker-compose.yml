@@ -468,7 +468,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12176
       LIVERELOAD_PORT: 35176
-      TENANT_KEY: pmmi_aw
+      TENANT_KEY: pmmi_pmmi
     ports:
       - "12176:80"
       - "35176:35176"
@@ -483,7 +483,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12177
       LIVERELOAD_PORT: 35177
-      TENANT_KEY: pmmi_hp
+      TENANT_KEY: pmmi_pmmi
     ports:
       - "12177:80"
       - "35177:35177"
@@ -498,7 +498,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12178
       LIVERELOAD_PORT: 35178
-      TENANT_KEY: pmmi_oem
+      TENANT_KEY: pmmi_pmmi
     ports:
       - "12178:80"
       - "35178:35178"
@@ -513,7 +513,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12179
       LIVERELOAD_PORT: 35179
-      TENANT_KEY: pmmi_pfw
+      TENANT_KEY: pmmi_pmmi
     ports:
       - "12179:80"
       - "35179:35179"
@@ -528,7 +528,7 @@ services:
       PORT: 80
       EXPOSED_PORT: 12180
       LIVERELOAD_PORT: 35180
-      TENANT_KEY: pmmi_pw
+      TENANT_KEY: pmmi_pmmi
     ports:
       - "12180:80"
       - "35180:35180"
