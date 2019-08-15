@@ -2,7 +2,7 @@
 # www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
 
 User-agent: *
-Disallow: /load-more
+Disallow: *
 
-Sitemap: https://www.utilityproducts.com/sitemap.xml
-Sitemap: https://www.utilityproducts.com/sitemap-google-news.xml
+Sitemap: https://www.sacurrent.com/sitemap.xml
+Sitemap: https://www.sacurrent.com/sitemap-google-news.xml
