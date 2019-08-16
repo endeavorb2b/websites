@@ -18,6 +18,7 @@ module.exports = async () => {
   const head = tags[0];
 
   process.stdout.write(head);
+  process.stdout.write(`\nhttps://github.com/${owner}/${repo}/releases/new?tag=${head}`);
 
   await between({ base, head });
 };
