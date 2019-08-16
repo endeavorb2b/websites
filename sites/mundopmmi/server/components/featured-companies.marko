@@ -1,0 +1,16 @@
+import contentListFragment from '../api/fragments/featured-companies';
+
+<cms-query-related-published-content|{ nodes }| limit=20 content-id=input.contentId include-content-types=["Company"] query-fragment=contentListFragment>
+  <if(nodes.length)>
+    <endeavor-item-list modifiers=["featured-companies", "unjustified"] items=nodes>
+      <@header>Empresa de funciones:</@header>
+      <@item|{ item }|>
+        <endeavor-item modifiers="featured-company">
+          <@title tag="h5">
+            <cms-content-short-name tag=null obj=item link=true />
+          </@title>
+        </endeavor-item>
+      </@item>
+    </endeavor-item-list>
+  </if>
+</cms-query-related-published-content>
