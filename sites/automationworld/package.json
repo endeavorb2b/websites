@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/automationworld",
-  "version": "0.13.9",
+  "version": "0.13.11",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
