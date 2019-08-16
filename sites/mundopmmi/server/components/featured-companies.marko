@@ -1,0 +1,12 @@
+import contentListFragment from '../api/fragments/content-list';
+
+<cms-query-related-published-content|{ nodes }| limit=100 content-id=input.contentId include-content-types=["Company"] query-fragment=contentListFragment>
+  <if(nodes.length)>
+    <endeavor-item-list modifiers=["featured-companies", "unjustified"] items=nodes>
+      <@header>Empresa de funciones:</@header>
+      <@item|{ item }|>
+        <mundopmmi-list-item-name modifiers=["featured-company"] content=item />
+      </@item>
+    </endeavor-item-list>
+  </if>
+</cms-query-related-published-content>

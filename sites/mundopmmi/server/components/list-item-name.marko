@@ -1,0 +1,10 @@
+import { getAsObject } from '@base-cms/object-path';
+
+$ const content = getAsObject(input, 'content');
+$ const primarySection = getAsObject(content, 'primarySection');
+
+<endeavor-item modifiers=input.modifiers>
+  <@title tag="h5">
+    <cms-content-short-name tag=null obj=content link=true />
+  </@title>
+</endeavor-item>
