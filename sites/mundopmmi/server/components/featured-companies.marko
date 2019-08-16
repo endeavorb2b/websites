@@ -1,4 +1,4 @@
-import contentListFragment from '../api/fragments/content-list';
+import contentListFragment from '../api/fragments/featured-companies';
 
 <cms-query-related-published-content|{ nodes }| limit=100 content-id=input.contentId include-content-types=["Company"] query-fragment=contentListFragment>
   <if(nodes.length)>
