@@ -28,14 +28,6 @@
         "type": "number",
         "required": true
       }
-    },
-    "mundopmmi-list-item-name": {
-      "template": "./list-item-name.marko",
-      "@content": {
-        "type": "object",
-        "required": true
-      },
-      "@modifiers": "array"
     }
   }
 }

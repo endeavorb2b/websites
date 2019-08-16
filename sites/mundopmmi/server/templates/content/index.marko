@@ -15,7 +15,6 @@ $ const adSlots = {
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 $ const displayRailAds = ['contact', 'company'].includes(content.type) ? false : true;
 $ const displayRailRelatedContent = false;
-$ const displayCompanyBox = ['article'].includes(content.type) ? true : false;
 
 <theme-default-content-layout content=content>
   <@head>
@@ -40,7 +39,7 @@ $ const displayCompanyBox = ['article'].includes(content.type) ? true : false;
     <div class="row">
       <div class="col-lg-8">
         <endeavor-content-block-page-body content=content display-primary-image=displayPrimaryImage />
-        <if(displayCompanyBox === true)>
+        <if(content.type === 'article')>
           <mundopmmi-featured-companies content-id=content.id />
         </if>
       </div>
