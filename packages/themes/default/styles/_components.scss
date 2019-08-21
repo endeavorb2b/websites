@@ -35,6 +35,7 @@ body {
   @include media-breakpoint-up(xl, $grid-breakpoints) {
     max-width: map-get($grid-breakpoints, xl);
   }
+  position: relative;
   flex-shrink: 0;
   padding-top: calculate-navbar-height-for(default);
   margin-top: map-get($spacers, 4);
