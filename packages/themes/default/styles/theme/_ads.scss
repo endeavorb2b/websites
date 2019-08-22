@@ -1,6 +1,7 @@
 .ad-container {
   text-align: center;
   &--top-of-page {
+    margin-top: calc(#{$theme-ad-margin} - #{($grid-gutter-width / 2)});
     margin-bottom: $theme-ad-margin;
   }
   &--content-page-right {
