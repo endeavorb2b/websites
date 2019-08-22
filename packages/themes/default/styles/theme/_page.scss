@@ -96,6 +96,16 @@
   }
 }
 
+.page-section {
+  @include make-row();
+  background-color: $body-bg;
+  &__contents {
+    @include make-col-ready();
+    @include make-col(12);
+    padding-top: $grid-gutter-width / 2;
+  }
+}
+
 .content-page,
 .default-page,
 .dynamic-page {

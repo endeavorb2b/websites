@@ -46,6 +46,9 @@
           "w": 352, "h": 198, "fit": "crop", "crop": "focalpoint", "fpX": 0.5, "fpY": 0.5
         }
       }
+    },
+    "endeavor-page-section": {
+      "template": "./section.marko"
     }
   }
 }
