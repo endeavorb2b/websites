@@ -1,6 +1,7 @@
 import { getAsObject, getAsArray, get } from '@base-cms/object-path';
 import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
 import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../../api/fragments/content-list';
 
 $ const { site } = out.global;
 $ const section = getAsObject(data, 'section');
@@ -37,10 +38,14 @@ $ const adSlots = {
     </div>
   </div>
 
+  <cms-query-website-scheduled-content|{ nodes }| section-id=section.id limit=14 requires-image=true query-fragment=contentListFragment>
+    <bizbash-load-more-content-layout nodes=nodes layout={ aliases } />
+  </cms-query-website-scheduled-content>
+
   <@below-container>
     <bizbash-load-more
       type="website-scheduled-content"
-      query={ sectionId: section.id }
+      query={ sectionId: section.id, skip: 14 }
       layout={ aliases }
     />
   </@below-container>
