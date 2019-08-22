@@ -53,7 +53,7 @@ module.exports = gql`
           }
         }
       }
-      spaces {
+      spaces(input:{ pagination: { limit: 25 } }) {
         edges {
           node {
             id
