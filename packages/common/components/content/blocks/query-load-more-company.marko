@@ -35,79 +35,81 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
   $ const cardNodes = asArray(nodes.slice(0, 10));
   $ const listNodes = asArray(nodes.slice(10));
   <if(cardNodes.length || listNodes.length)>
-    <if(input.header && pageNumber === 1)>
-      <endeavor-load-more-header>
-        ${input.header}
-      </endeavor-load-more-header>
-    </if>
-    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-    <div class=block>
-      <if(cardNodes.length)>
-        <div class="row">
-          <for|content, index| of=cardNodes>
-            <div class=`${block}__col`>
-              <endeavor-content-block-item
-                content=content
-                image-modifiers=["fluid", "21by9"]
-                image-options=imageOptions
-                image-position="top"
-                modifiers=["card"]
-              />
-            </div>
-            <if(index === 1 || index === 6)>
+    <endeavor-page-section>
+      <if(input.header && pageNumber === 1)>
+        <endeavor-load-more-header>
+          ${input.header}
+        </endeavor-load-more-header>
+      </if>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+      <div class=block>
+        <if(cardNodes.length)>
+          <div class="row">
+            <for|content, index| of=cardNodes>
               <div class=`${block}__col`>
-                <endeavor-gam-ad-unit-define-display ...adCardInput aliases=adAliases />
-              </div>
-            </if>
-          </for>
-        </div>
-      </if>
-
-      <if(listNodes.length)>
-        <div class="row">
-          <div class=`${block}__col-ad`>
-            <endeavor-gam-ad-unit-define-display ...adListInput aliases=adAliases />
-          </div>
-
-          <div class=`${block}__col-list`>
-            <endeavor-item-list flush=true card=true items=listNodes>
-              <@item|{ item }|>
                 <endeavor-content-block-item
-                  content=item
-                  image-position="left"
-                  image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                  image-width=176
-                  image-height=99
+                  content=content
+                  image-modifiers=["fluid", "21by9"]
+                  image-options=imageOptions
+                  image-position="top"
+                  modifiers=["card"]
                 />
-              </@item>
-            </endeavor-item-list>
+              </div>
+              <if(index === 1 || index === 6)>
+                <div class=`${block}__col`>
+                  <endeavor-gam-ad-unit-define-display ...adCardInput aliases=adAliases />
+                </div>
+              </if>
+            </for>
           </div>
-        </div>
-      </if>
-    </div>
-    $ const { endCursor, hasNextPage } = pageInfo;
-    $ delete query.skip;
-    $ delete query.queryFragment;
-    $ delete query.renderBody;
-    $ query.after = endCursor;
-    $ const provide = {
-      ...input,
-      query,
-      ads: {
-        aliases: adAliases,
-        card: adCardInput,
-        list: adListInput,
-      },
-    };
+        </if>
 
-    <endeavor-load-more-button
-      append-to=".container-fluid-max"
-      block-name="content-query-load-more-company"
-      label="Load More Content"
-      max-pages=loadMore.maxPages
-      page-number=pageNumber
-      provide=provide
-      show=hasNextPage
-    />
+        <if(listNodes.length)>
+          <div class="row">
+            <div class=`${block}__col-ad`>
+              <endeavor-gam-ad-unit-define-display ...adListInput aliases=adAliases />
+            </div>
+
+            <div class=`${block}__col-list`>
+              <endeavor-item-list flush=true card=true items=listNodes>
+                <@item|{ item }|>
+                  <endeavor-content-block-item
+                    content=item
+                    image-position="left"
+                    image-options={ w: 176, h: 99, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                    image-width=176
+                    image-height=99
+                  />
+                </@item>
+              </endeavor-item-list>
+            </div>
+          </div>
+        </if>
+      </div>
+      $ const { endCursor, hasNextPage } = pageInfo;
+      $ delete query.skip;
+      $ delete query.queryFragment;
+      $ delete query.renderBody;
+      $ query.after = endCursor;
+      $ const provide = {
+        ...input,
+        query,
+        ads: {
+          aliases: adAliases,
+          card: adCardInput,
+          list: adListInput,
+        },
+      };
+
+      <endeavor-load-more-button
+        append-to=".container-fluid-max"
+        block-name="content-query-load-more-company"
+        label="Load More Content"
+        max-pages=loadMore.maxPages
+        page-number=pageNumber
+        provide=provide
+        show=hasNextPage
+      />
+    </endeavor-page-section>
   </if>
 </cms-query-all-company-content>
