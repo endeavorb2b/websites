@@ -53,7 +53,6 @@ export default {
 
       const revealBackground = $('<a>', { href, target, rel }).addClass('reveal-ad-background').css({ backgroundImage });
       $('body').css({ backgroundColor }).prepend(revealBackground);
-      // Figure this out
       $(adTarget).before(adContainer);
       $(this.target).append(adContainer.clone());
     },
