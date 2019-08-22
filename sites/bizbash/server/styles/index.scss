@@ -197,6 +197,14 @@ body {
   }
 }
 
+.reveal-ad + .page-section {
+  & .ad-container {
+    &--top-of-page {
+      margin-top: map-get($spacers, block);
+    }
+  }
+}
+
 .ad-rail {
   display: flex;
   flex-direction: column;
