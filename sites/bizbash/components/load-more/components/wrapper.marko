@@ -34,32 +34,34 @@ $ const QueryComponent = queries[type];
 
 <${QueryComponent}|{ nodes, pageInfo }| ...query>
   <if(nodes.length)>
-    <if(input.header && pageNumber === 1)>
-      <endeavor-load-more-header>
-        ${input.header}
-      </endeavor-load-more-header>
-    </if>
-    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    <endeavor-page-section>
+      <if(input.header && pageNumber === 1)>
+        <endeavor-load-more-header>
+          ${input.header}
+        </endeavor-load-more-header>
+      </if>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
 
-    <${input.renderBody} nodes=nodes page-info=pageInfo />
+      <${input.renderBody} nodes=nodes page-info=pageInfo />
 
-    $ const { endCursor, hasNextPage } = pageInfo;
-    $ delete query.skip;
-    $ delete query.queryFragment;
-    $ delete query.renderBody;
-    $ const provide = {
-      ...input,
-      query: { ...query, after: endCursor },
-    };
+      $ const { endCursor, hasNextPage } = pageInfo;
+      $ delete query.skip;
+      $ delete query.queryFragment;
+      $ delete query.renderBody;
+      $ const provide = {
+        ...input,
+        query: { ...query, after: endCursor },
+      };
 
-    <endeavor-load-more-button
-      append-to=(input.appendTo || '.container-fluid-max')
-      block-name="load-more"
-      label="Load More Content"
-      max-pages=input.maxPages
-      page-number=pageNumber
-      provide=provide
-      show=hasNextPage
-    />
+      <endeavor-load-more-button
+        append-to=(input.appendTo || '.container-fluid-max')
+        block-name="load-more"
+        label="Load More Content"
+        max-pages=input.maxPages
+        page-number=pageNumber
+        provide=provide
+        show=hasNextPage
+      />
+    </endeavor-page-section>
   </if>
 </>
