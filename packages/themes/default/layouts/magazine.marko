@@ -13,7 +13,9 @@ $ const description = site.get('magazines.description');
   <div class="container-fluid-max">
     <${input.aboveContainer} />
     <cms-page-container for="magazine">
-      <${input.renderBody} />
+      <endeavor-page-section>
+        <${input.renderBody} />
+      </endeavor-page-section>
     </cms-page-container>
     <${input.belowContainer} />
   </div>

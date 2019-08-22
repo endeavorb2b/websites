@@ -35,33 +35,36 @@ $ const adCardInput = {
     pageNumber,
     ads: input.ads,
   };
-
-  <div class=block>
-    <div class="row">
-      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-      <for|issue, index| of=nodes>
-        <div class=`${block}__col`>
-          <endeavor-magazine-issue-item
-            issue=issue
-            image-modifiers=["fluid", "3by4"]
-            image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
-            image-position="top"
-            modifiers=["card"]
-            with-header=false
-            with-footer=false
-          />
+  <if(nodes.length)>
+    <endeavor-page-section>
+      <div class=block>
+        <div class="row">
+          <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+          <for|issue, index| of=nodes>
+            <div class=`${block}__col`>
+              <endeavor-magazine-issue-item
+                issue=issue
+                image-modifiers=["fluid", "3by4"]
+                image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                image-position="top"
+                modifiers=["card"]
+                with-header=false
+                with-footer=false
+              />
+            </div>
+          </for>
         </div>
-      </for>
-    </div>
-  </div>
+      </div>
 
-  <endeavor-load-more-button
-    append-to=".container-fluid-max"
-    block-name=block
-    label="Load More Issues"
-    max-pages=loadMore.maxPages
-    page-number=pageNumber
-    provide=provide
-    show=hasNextPage
-  />
+      <endeavor-load-more-button
+        append-to=".container-fluid-max"
+        block-name=block
+        label="Load More Issues"
+        max-pages=loadMore.maxPages
+        page-number=pageNumber
+        provide=provide
+        show=hasNextPage
+      />
+    </endeavor-page-section>
+  </if>
 </cms-query-magazine-active-issues>

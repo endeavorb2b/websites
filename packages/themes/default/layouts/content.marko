@@ -18,7 +18,9 @@ $ const initNativeX = input.initNativeX == null ? true : input.initNativeX;
   <div class="container-fluid-max">
     <${input.aboveContainer} />
     <cms-page-container for="content" data=content>
-      <${input.renderBody} />
+      <endeavor-page-section>
+        <${input.renderBody} />
+      </endeavor-page-section>
     </cms-page-container>
     <${input.belowContainer} />
   </div>

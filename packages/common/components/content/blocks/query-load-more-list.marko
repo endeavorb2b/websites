@@ -42,52 +42,54 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
 <div class=`${block} mb-block`>
   <cms-query-website-scheduled-content|{ nodes, pageInfo }| ...query>
     <if(nodes.length)>
-      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-      <div class="row">
-        <div class="col-lg-8">
-          <endeavor-item-list flush=true card=true items=nodes>
-            <@item|{ item }|>
-              <endeavor-content-block-item
-                content=item
-                image-position="left"
-                image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
-                image-width=75
-                image-height=75
-                with-image=true
-              />
-            </@item>
-          </endeavor-item-list>
+      <endeavor-page-section>
+        <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+        <div class="row">
+          <div class="col-lg-8">
+            <endeavor-item-list flush=true card=true items=nodes>
+              <@item|{ item }|>
+                <endeavor-content-block-item
+                  content=item
+                  image-position="left"
+                  image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
+                  image-width=75
+                  image-height=75
+                  with-image=true
+                />
+              </@item>
+            </endeavor-item-list>
+          </div>
+          <div class="col-lg-4 ad-rail">
+            <endeavor-gam-ad-unit-define-display ...adList1Input />
+            <endeavor-gam-ad-unit-define-display ...adList2Input />
+          </div>
         </div>
-        <div class="col-lg-4 ad-rail">
-          <endeavor-gam-ad-unit-define-display ...adList1Input />
-          <endeavor-gam-ad-unit-define-display ...adList2Input />
-        </div>
-      </div>
 
-      $ const { endCursor, hasNextPage } = pageInfo;
-      $ delete query.skip;
-      $ delete query.queryFragment;
-      $ delete query.renderBody;
-      $ query.after = endCursor;
-      $ const provide = {
-        ...input,
-        query,
-        ads: {
-          aliases: adAliases,
-          list1: adList1Input,
-          list2: adList2Input,
-        },
-      };
+        $ const { endCursor, hasNextPage } = pageInfo;
+        $ delete query.skip;
+        $ delete query.queryFragment;
+        $ delete query.renderBody;
+        $ query.after = endCursor;
+        $ const provide = {
+          ...input,
+          query,
+          ads: {
+            aliases: adAliases,
+            list1: adList1Input,
+            list2: adList2Input,
+          },
+        };
 
-      <endeavor-load-more-button
-        append-to=".container-fluid-max"
-        block-name=block
-        label="Load More Content"
-        max-pages=loadMore.maxPages
-        page-number=pageNumber
-        provide=provide
-        show=hasNextPage
-      />
+        <endeavor-load-more-button
+          append-to=".container-fluid-max"
+          block-name=block
+          label="Load More Content"
+          max-pages=loadMore.maxPages
+          page-number=pageNumber
+          provide=provide
+          show=hasNextPage
+        />
+      </endeavor-page-section>
     </if>
   </cms-query-website-scheduled-content>
 </div>

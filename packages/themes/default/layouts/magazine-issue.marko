@@ -13,7 +13,9 @@ $ const issue = getAsObject(input, 'issue');
   <div class="container-fluid-max">
     <${input.aboveContainer} />
     <cms-page-container for="magazine-issue" data=issue>
-      <${input.renderBody} />
+      <endeavor-page-section>
+        <${input.renderBody} />
+      </endeavor-page-section>
     </cms-page-container>
     <${input.belowContainer} />
   </div>

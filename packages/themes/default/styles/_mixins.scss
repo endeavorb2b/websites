@@ -11,6 +11,17 @@
   }
 }
 
+
+@mixin theme-line-height-crop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+}
+
 @mixin theme-apply-fonts(
   $font-family: $font-family-sans-serif,
   $font-size-sm: $font-size-sm,
