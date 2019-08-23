@@ -33,7 +33,6 @@ export default {
   methods: {
     display(payload) {
       const options = { ...this.defaults, ...payload };
-      const adTarget = this.target;
       const { adClickUrl: href, backgroundColor, backgroundImagePath } = options;
       const { adImagePath: src, adTitle: alt } = options;
       const backgroundImage = `url("${backgroundImagePath}")`;
@@ -53,8 +52,7 @@ export default {
 
       const revealBackground = $('<a>', { href, target, rel }).addClass('reveal-ad-background').css({ backgroundImage });
       $('body').css({ backgroundColor }).prepend(revealBackground);
-      $(adTarget).before(adContainer);
-      $(this.target).append(adContainer.clone());
+      $(this.target).before(adContainer);
     },
     listener(event) {
       const payload = parseJson(event.data);
