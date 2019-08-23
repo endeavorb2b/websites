@@ -32,7 +32,7 @@ module.exports = {
         { href: '/fiber-optics', label: 'Fiber Optics' },
         { href: '/software-accessories', label: 'Software & Accessories' },
         { href: '/test-measurement', label: 'Test & Measurement' },
-        { href: '/photonics-business', label: 'Photonics Business' }
+        { href: '/photonics-business', label: 'Photonics Business' },
       ],
     },
     secondary: {
@@ -66,7 +66,7 @@ module.exports = {
           { href: '/fiber-optics', label: 'Fiber Optics' },
           { href: '/software-accessories', label: 'Software & Accessories' },
           { href: '/test-measurement', label: 'Test & Measurement' },
-          { href: '/photonics-business', label: 'Photonics Business' }
+          { href: '/photonics-business', label: 'Photonics Business' },
         ],
       },
       resources: {
