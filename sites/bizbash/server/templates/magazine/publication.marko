@@ -1,4 +1,5 @@
 import { getAsObject } from '@base-cms/object-path';
+import queryFragment from '@endeavorb2b/base-website-common/api/fragments/magazine-issue-list';
 
 $ const publication = getAsObject(data, 'publication');
 
@@ -32,9 +33,31 @@ $ const publication = getAsObject(data, 'publication');
     </div>
   </div>
 
+  <cms-query-magazine-active-issues|{ nodes }| publication-id=publication.id limit=12 query-fragment=queryFragment>
+    <if(nodes.length)>
+      <div class="magazine-active-issues">
+        <div class="row">
+          <for|issue, index| of=nodes>
+            <div class="magazine-active-issues__col">
+              <endeavor-magazine-issue-item
+                issue=issue
+                image-modifiers=["fluid", "3by4"]
+                image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
+                image-position="top"
+                modifiers=["card"]
+                with-header=false
+                with-footer=false
+              />
+            </div>
+          </for>
+        </div>
+      </div>
+    </if>
+  </cms-query-magazine-active-issues>
+
   <@below-container>
     <endeavor-magazine-block-query-active-issues
-      query={ publicationId: publication.id }
+      query={ publicationId: publication.id, limit: 12, skip: 12 }
     />
   </@below-container>
 
