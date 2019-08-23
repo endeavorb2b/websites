@@ -56,14 +56,13 @@
 .reveal-ad {
   position: relative;
   width: 100%;
-  margin: 0 auto $theme-ad-margin;
   &--light-shadow {
     @include box-shadow($theme-ad-reveal-box-shadow-light);
   }
   &--dark-shadow {
     @include box-shadow($theme-ad-reveal-box-shadow-dark);
   }
-  & a {
+  a {
     display: block;
     width: 100%;
     text-align: center;
