@@ -55,13 +55,18 @@
 
 .reveal-ad {
   position: relative;
-  width: 300px;
-  margin: 0 auto $theme-ad-margin;
+  width: 100%;
   &--light-shadow {
     @include box-shadow($theme-ad-reveal-box-shadow-light);
   }
   &--dark-shadow {
     @include box-shadow($theme-ad-reveal-box-shadow-dark);
+  }
+  a {
+    display: block;
+    width: 100%;
+    padding: $theme-ad-margin 0;
+    text-align: center;
   }
 }
 
