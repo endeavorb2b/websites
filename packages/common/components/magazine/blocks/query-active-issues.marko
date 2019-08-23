@@ -37,24 +37,9 @@ $ const adCardInput = {
   };
   <if(nodes.length)>
     <endeavor-page-section>
-      <div class=block>
-        <div class="row">
-          <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
-          <for|issue, index| of=nodes>
-            <div class=`${block}__col`>
-              <endeavor-magazine-issue-item
-                issue=issue
-                image-modifiers=["fluid", "3by4"]
-                image-options={ w: 630, h: 840, fit: "crop", crop: "focalpoint", fpX: 0.5, fpY: 0.5 }
-                image-position="top"
-                modifiers=["card"]
-                with-header=false
-                with-footer=false
-              />
-            </div>
-          </for>
-        </div>
-      </div>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+
+      <endeavor-magazine-active-issues-deck nodes=nodes />
 
       <endeavor-load-more-button
         append-to=".container-fluid-max"
