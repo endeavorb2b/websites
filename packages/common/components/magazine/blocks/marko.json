@@ -33,6 +33,10 @@
     },
     "endeavor-magazine-publication-list": {
       "template": "./publication-list.marko"
+    },
+    "endeavor-magazine-active-issues-deck": {
+      "template": "./active-issues-deck.marko",
+      "@nodes": "array"
     }
   }
 }

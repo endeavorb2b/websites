@@ -1,4 +1,5 @@
 import { pageDetails } from '@endeavorb2b/base-website-common/utils/published-content';
+import contentListFragment from '../../api/fragments/content-list';
 
 $ const { config } = out.global;
 $ const page = pageDetails('Events', config);
@@ -30,10 +31,14 @@ $ const now = (new Date()).valueOf();
     </div>
   </div>
 
+  <cms-query-all-published-content|{ nodes }| limit=18 content-types=["Event"] sort-field="startDate" sort-order="asc" ending-after=now query-fragment=contentListFragment>
+    <bizbash-load-more-content-layout nodes=nodes name="card-item-deck" />
+  </cms-query-all-published-content>
+
   <@below-container>
     <bizbash-load-more
       type="all-published-content"
-      query={ contentTypes: ["Event"], sortField: "startDate", sortOrder: "asc", endingAfter: now, limit: 18 }
+      query={ contentTypes: ["Event"], sortField: "startDate", sortOrder: "asc", endingAfter: now, limit: 18, skip: 18 }
       layout={ name: "card-item-deck" }
     />
   </@below-container>
