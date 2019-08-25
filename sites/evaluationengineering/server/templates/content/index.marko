@@ -8,9 +8,9 @@ $ const section = getAsObject(content, 'primarySection');
 $ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'BS', aliases }),
-  'gpt-ad-right1': getAdUnit(site, { name: 'MR', aliases }),
-  'gpt-ad-right2': getAdUnit(site, { name: 'MR', aliases }),
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 
@@ -40,8 +40,8 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       </div>
 
       <aside class="col-lg-4">
-        <endeavor-gam-ad-unit-display id="gpt-ad-right1" modifiers=["content-page-right"] />
-        <endeavor-gam-ad-unit-display id="gpt-ad-right2" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail1" modifiers=["content-page-right"] />
+        <endeavor-gam-ad-unit-display id="gpt-ad-rail2" modifiers=["content-page-right"] />
         <if(!['contact', 'company'].includes(content.type))>
           <endeavor-content-query-related
             exclude-content-ids=[content.id]
@@ -71,16 +71,18 @@ $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.t
       <endeavor-content-query-load-more
         header=`More in ${section.name}`
         query={
+          limit: 10,
           skip: 5,
           excludeContentIds: [content.id],
           sectionId: section.id,
         }
-        ads={
-          aliases,
-          list: { name: "MR" },
-          card: { name: "HP" },
-        }
+        ads={ aliases }
+        native-x={ placement: 'card', aliases, index: 0 }
       />
     </else-if>
   </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
 </theme-default-content-layout>
