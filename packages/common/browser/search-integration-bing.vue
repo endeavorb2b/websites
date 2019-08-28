@@ -1,22 +1,19 @@
 <template>
-  <div>
+  <div class="bing-search">
     <form
-      class="row mb-2"
+      class="bing-search__form"
       @submit="search"
     >
       <input
         v-model="term"
-        class="col-10"
+        class="form-control bing-search__input"
         type="text"
         placeholder="Search"
         autofocus
       >
-      <input
-        class="col-2"
-        type="submit"
-        value="Search"
-        title="search"
-      >
+      <button type="submit" class="btn btn-primary bing-search__button">
+        Search
+      </button>
     </form>
     <div>
       <p
@@ -38,14 +35,27 @@
         No results found.
       </p>
       <div v-else>
-        <div
-          v-for="page in pages"
-          :key="page.url"
-          class="bing-result"
-        >
-          <p><a :href="page.url">{{ page.name }}</a></p>
-          <small>{{ page.displayUrl }}</small>
-          <p>{{ page.snippet }}</p>
+        <div class="published-content-query-load-more">
+          <ul class="item-list">
+            <div
+              v-for="page in pages"
+              :key="page.url"
+              class="item-list__contents bing-result"
+            >
+              <li class="item-list__item">
+                <div class="item">
+                  <div class="item__contents">
+                    <h5 class="item__title">
+                      <a :href="page.url">{{ page.name }}</a>
+                    </h5>
+                    <div class="item__teaser">
+                      {{ page.snippet }}
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </ul>
         </div>
       </div>
     </div>

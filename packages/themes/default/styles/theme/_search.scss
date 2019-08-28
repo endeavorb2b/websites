@@ -1,0 +1,40 @@
+$font-roboto-condensed:   "Roboto Condensed", sans-serif;
+.bing-search {
+  &__form {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+  }
+  &__input {
+    width: 80%;
+    font-family: $font-roboto-condensed;
+    font-size: 13px;
+    line-height: 24px;
+    color: #666;
+    border: none;
+    &::placeholder {
+      color: #666;
+    }
+    border-radius: initial;
+  }
+  &__button {
+    width: 20%;
+    padding: 0;
+    margin-left: .5rem;
+    font-family: $font-roboto-condensed;
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: initial;
+  }
+  .item-list {
+    &__item {
+      border: none;
+      .item {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
