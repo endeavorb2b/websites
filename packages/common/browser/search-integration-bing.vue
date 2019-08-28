@@ -35,28 +35,26 @@
         No results found.
       </p>
       <div v-else>
-        <div class="published-content-query-load-more">
-          <ul class="item-list">
-            <div
-              v-for="page in pages"
-              :key="page.url"
-              class="item-list__contents bing-result"
-            >
-              <li class="item-list__item">
-                <div class="item">
-                  <div class="item__contents">
-                    <h5 class="item__title">
-                      <a :href="page.url">{{ page.name }}</a>
-                    </h5>
-                    <div class="item__teaser">
-                      {{ page.snippet }}
-                    </div>
+        <ul class="item-list">
+          <div
+            v-for="page in pages"
+            :key="page.url"
+            class="item-list__contents bing-result"
+          >
+            <li class="item-list__item">
+              <div class="item">
+                <div class="item__contents">
+                  <h5 class="item__title">
+                    <a :href="page.url">{{ page.name }}</a>
+                  </h5>
+                  <div class="item__description">
+                    {{ page.snippet }}
                   </div>
                 </div>
-              </li>
-            </div>
-          </ul>
-        </div>
+              </div>
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
   </div>
