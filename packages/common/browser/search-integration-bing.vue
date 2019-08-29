@@ -42,7 +42,7 @@
             class="item-list__contents"
           >
             <li class="item-list__item">
-              <div class="item">
+              <div class="item item--bing-search">
                 <div class="item__contents">
                   <h5 class="item__title">
                     <a :href="page.url">{{ page.name }}</a>

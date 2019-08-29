@@ -394,4 +394,13 @@
       content: "\2014";
     }
   }
+  &--bing-search {
+    padding-right: 0;
+    padding-left: 0;
+    #{$self} {
+      &__description {
+        font-size: .75rem;
+      }
+    }
+  }
 }
