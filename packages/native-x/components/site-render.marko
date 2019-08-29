@@ -20,14 +20,13 @@ $ const isEnabled = () => {
       $ const hasAd = ads && ads.length && ads[0];
       <if(hasAd)>
         $ const ad = ads[0];
-        $ const linkAttrs = { target: "_blank", rel: "noopener", ...ad.attributes.link };
         <if(ad.hasCampaign)>
            $ const campaign = convertAdToContent(ad);
            <${input.whenFound}
             ad=ad
             campaign=campaign
             container-attrs=ad.attributes.container
-            link-attrs=linkAttrs
+            link-attrs=ad.attributes.link
           />
         </if>
         <else>
