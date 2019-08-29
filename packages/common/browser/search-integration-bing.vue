@@ -35,11 +35,11 @@
         No results found.
       </p>
       <div v-else>
-        <ul class="item-list">
+        <ul class="item-list item-list--bing-search">
           <div
             v-for="page in pages"
             :key="page.url"
-            class="item-list__contents bing-result"
+            class="item-list__contents"
           >
             <li class="item-list__item">
               <div class="item">

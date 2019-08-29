@@ -32,19 +32,4 @@
       }
     }
   }
-  .item-list {
-    &__item {
-      border-top: 0;
-      border-right: 0;
-      border-left: 0;
-      border-radius: initial;
-      .item {
-        padding-right: 0;
-        padding-left: 0;
-        &__description {
-          font-size: .75rem;
-        }
-      }
-    }
-  }
 }
