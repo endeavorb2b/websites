@@ -13,16 +13,12 @@ $ const { config } = out.global;
   <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
 
   <div class="page-wrapper">
-    <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <endeavor-breadcrumbs-search />
-          <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
-        </div>
-        <div class="page-wrapper__body">
-          <endeavor-search-in-page />
-        </div>
-      </div>
+    <div class="page-wrapper__header">
+      <endeavor-breadcrumbs-search />
+      <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
+    </div>
+    <div class="page-wrapper__body">
+      <endeavor-search-in-page />
     </div>
   </div>
 </theme-default-search-layout>
