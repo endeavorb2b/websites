@@ -21,7 +21,6 @@ $ const itemInput = getAsObject(input, 'item');
     $ const hasAd = ads && ads.length && ads[0];
     <if(hasAd)>
       $ const ad = ads[0];
-      $ const linkAttrs = { target: "_blank", rel: "noopener", ...ad.attributes.link };
       <if(ad.hasCampaign)>
         <!-- Campaign found. Convert the ad to a "content object" and append tracking. -->
         <!-- Note: `image-options` are intentionally reset, as NX handles them directly (see L19) -->
@@ -29,7 +28,7 @@ $ const itemInput = getAsObject(input, 'item');
         <endeavor-content-block-item
           ...itemInput
           attrs=ad.attributes.container
-          content-link-attrs=linkAttrs
+          content-link-attrs=ad.attributes.link
           content=content
           image-options={}
         />
