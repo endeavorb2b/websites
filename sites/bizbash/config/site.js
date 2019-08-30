@@ -90,8 +90,9 @@ module.exports = {
   },
   gtmContainer: 'GTM-5TWCFJ',
   search: {
-    engine: 'google',
-    apiKey: '017383739850048358259:n2wdsrv6_py',
+    engine: 'bing',
+    apiKey: '2682f90e71ea403b9cbf6fa7740bf006',
+    domain: 'bizbash.com',
   },
   subscriptions: {
     newsletters: 'https://www.bizbash.com/subscribe/email',
