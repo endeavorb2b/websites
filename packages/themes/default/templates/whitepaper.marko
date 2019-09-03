@@ -1,0 +1,50 @@
+import { getAsObject, get } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const content = getAsObject(data, 'content');
+$ const section = getAsObject(content, 'primarySection');
+$ const aliases = hierarchyAliases(section);
+$ const block = 'content-page';
+
+$ const { surveyId, surveyType } = getAsObject(input, 'content.gating');
+$ const { fileSrc: target } = getAsObject(input, 'content');
+$ const { userName } = site.getAsObject('wufoo');
+
+$ const wrapClass = (surveyId) ? "row flex-lg-wrap-reverse flex-wrap-reverse" : "row";
+
+<theme-default-content-layout content=content>
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-content-block-page-header content=content />
+        </div>
+      </div>
+    </div>
+
+    <div class=wrapClass>
+      <div class="col-lg-8">
+        <endeavor-content-block-page-body content=content display-primary-image=false />
+      </div>
+
+      <aside class="col-lg-4">
+        <if(surveyId)>
+          <if(surveyType === 'app_form_com')>
+            <cms-browser-component name="GatedDownloadFormDotCom" props={ surveyId, target } />
+          </if>
+          <else-if(surveyType === 'wufoo')>
+            <cms-browser-component name="GatedDownloadWufoo" props={ formHash: surveyId, target, userName } />
+          </else-if>
+        </if>
+        <else-if(content.fileSrc !== 'https://media.baseplatform.io//undefined')>
+          <endeavor-content-block-primary-media content=content display-primary-image=true />
+          <endeavor-content-block-download-button content=content />
+        </else-if>
+      </aside>
+    </div>
+  </div>
+
+</theme-default-content-layout>

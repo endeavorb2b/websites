@@ -1,4 +1,5 @@
 const { withContent } = require('@base-cms/marko-web/middleware');
+const whitepaper = require('@endeavorb2b/base-website-themes/default/templates/whitepaper');
 const queryFragment = require('../api/fragments/content-page');
 const content = require('../templates/content');
 const supplier = require('../templates/content/supplier');
@@ -16,6 +17,10 @@ module.exports = (app) => {
   }));
   app.get('/*?venue/:id(\\d{8})*', withContent({
     template: venue,
+    queryFragment,
+  }));
+  app.get('/*?whitepaper/:id(\\d{8})*', withContent({
+    template: whitepaper,
     queryFragment,
   }));
   app.get('/*?:id(\\d{8})*', withContent({
