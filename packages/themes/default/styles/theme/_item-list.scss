@@ -107,4 +107,14 @@
       }
     }
   }
+  &--bing-search {
+    #{ $self } {
+      &__item {
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-radius: initial;
+      }
+    }
+  }
 }

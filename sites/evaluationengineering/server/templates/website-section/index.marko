@@ -12,8 +12,9 @@ $ const aliases = hierarchyAliases(section);
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
     <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
-    <endeavor-gam-ad-unit-define-display name="BS" aliases=aliases modifiers=["top-of-page"] />
   </@above-container>
+
+  <endeavor-gam-ad-unit-define-display name="lb1" aliases=aliases modifiers=["top-of-page"] />
 
   <endeavor-content-query-hero
     section-id=section.id
@@ -27,11 +28,12 @@ $ const aliases = hierarchyAliases(section);
         skip: 5,
         sectionId: section.id,
       }
-      ads={
-        aliases,
-        list: { name: "MR" },
-        card: { name: "HP" },
-      }
+      ads={ aliases }
+      native-x={ placement: 'card', aliases, index: 0 }
     />
   </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
+  </@footer>
 </theme-default-website-section-layout>

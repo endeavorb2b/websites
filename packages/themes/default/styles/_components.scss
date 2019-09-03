@@ -17,6 +17,7 @@
 @import "theme/navbar";
 @import "theme/page";
 @import "theme/subscribe";
+@import "theme/search";
 @import "theme/website-scheduled-content";
 
 html {
@@ -38,11 +39,15 @@ body {
   position: relative;
   flex-shrink: 0;
   padding-top: calculate-navbar-height-for(default);
-  margin-top: map-get($spacers, 4);
 
   @each $breakpoint, $width in sort-map-by-values($theme-site-header-breakpoints, desc) {
     @media (max-width: $width) {
       padding-top: calculate-navbar-height-for($breakpoint);
     }
+  }
+
+  > .ad-container--top-of-page {
+    margin-top: $theme-ad-margin;
+    margin-bottom: calc(#{$theme-ad-margin} - #{($grid-gutter-width / 2)});
   }
 }

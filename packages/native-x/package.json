@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-native-x",
-  "version": "0.13.4",
+  "version": "0.13.18",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --max-warnings 5 --ignore-path ../../.eslintignore ./",

@@ -8,20 +8,17 @@ $ const { config } = out.global;
   <@above-container>
     <endeavor-gam-ad-unit-out-of-page name="wa" />
     <endeavor-gam-ad-unit-out-of-page name="reskin" />
-    <endeavor-gam-ad-unit-define-display name="BS" modifiers=["top-of-page"] />
   </@above-container>
 
+  <endeavor-gam-ad-unit-define-display name="lb1" modifiers=["top-of-page"] />
+
   <div class="page-wrapper">
-    <div class="row">
-      <div class="col">
-        <div class="page-wrapper__header">
-          <endeavor-breadcrumbs-search />
-          <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
-        </div>
-        <div class="page-wrapper__body">
-          <endeavor-search-in-page />
-        </div>
-      </div>
+    <div class="page-wrapper__header">
+      <endeavor-breadcrumbs-search />
+      <h1 class="page-wrapper__title">Search ${config.siteName()}</h1>
+    </div>
+    <div class="page-wrapper__body">
+      <endeavor-search-in-page />
     </div>
   </div>
 </theme-default-search-layout>
