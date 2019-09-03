@@ -4,15 +4,15 @@ module.exports = {
   ads,
   logos: {
     navbar: {
-      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png 2x',
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
+      src: 'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png',
       srcset: [
-        'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png 2x',
+        'https://base.imgix.net/files/base/ebm/ee/image/static/ee_logo.png 2x',
       ],
     },
   },
@@ -35,7 +35,7 @@ module.exports = {
       items: [
         { href: '/magazine', label: 'In Print' },
         { href: '/subscribe', label: 'Subscribe' },
-        { href: '/advertise', label: 'Advertise' },
+        { href: '/page/advertise', label: 'Advertise' },
         { href: '/page/about-us', label: 'About Us' },
       ],
     },
@@ -75,7 +75,7 @@ module.exports = {
         label: 'User Tools',
         items: [
           { href: '/subscribe', label: 'Subscribe' },
-          { href: '/advertise', label: 'Advertise' },
+          { href: '/page/advertise', label: 'Advertise' },
           { href: '/page/about-us', label: 'About Us' },
           { href: '/contact-us', label: 'Contact Us' },
           { href: 'https://www.endeavorbusinessmedia.com/privacy-policy', label: 'Privacy Policy', target: '_blank' },
