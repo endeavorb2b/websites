@@ -32,7 +32,7 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('data-center/load-more') },
     reskin: { ...RESKIN, path: path('data-center/reskin') },
   },
-  application: {
+  applications: {
     lb1: { ...LB, path: path('applications/lb1') },
     lb2: { ...LB, path: path('applications/lb2') },
     rail1: { ...CONTENT, path: path('applications/rail1') },
