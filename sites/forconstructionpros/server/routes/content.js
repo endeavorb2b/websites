@@ -8,7 +8,7 @@ module.exports = (app) => {
     template: whitepaper,
     queryFragment,
   }));
-  app.get('/:prefix(*):id(\\d{8}):suffix(*)', withContent({
+  app.get('/*?:id(\\d{8})*', withContent({
     template: content,
     queryFragment,
   }));
