@@ -15,7 +15,8 @@
       We just sent an email to <em>{{ user.email }}</em> with your one-time login link.
       To finish logging in, open the email message and click the link within.
     </p>
-    <p>Note: please make sure you check your spam and or clutter/junk folders. If you do not receive this email, it means your Company firewall or ISP has blocked it. The email will be sent from: noreply@identity-x.base-cms.io Please add this domain to your safelist/whitelist and try registering again.</p>
+    <!-- eslint-disable-next-line max-len -->
+    <p>Note: please check your spam/junk folders. If you do not receive this email, your firewall or ISP has likely blocked it. Please add noreply@identity-x.base-cms.io to your whitelist and try registering again.</p>
   </div>
   <div v-else-if="needsInput">
     <p>To complete this sign-on process, please fill out these remaining fields.</p>
