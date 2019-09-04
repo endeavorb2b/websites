@@ -13,6 +13,12 @@ $theme-font-family-page-title: "Cardo", "Georgia", "Cambria", "Times New Roman",
 
 $theme-card-header-letter-spacing: 1px !default;
 
+$theme-item-description-font-size-sm:       11px !default;
+$theme-item-description-font-size:          13px !default;
+$theme-item-description-max-lines:          4 !default;
+$theme-item-description-line-height-sm-px:  17px !default;
+$theme-item-description-line-height-px:     19px !default;
+
 @import "../../default/styles/theme";
 
 // Override classes here.

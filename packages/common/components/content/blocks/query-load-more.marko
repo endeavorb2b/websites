@@ -6,7 +6,7 @@ $ const { site } = out.global;
 $ const pageNumber = input.pageNumber || 1;
 $ const block = 'content-query-load-more';
 $ const query = {
-  limit: 16,
+  limit: 14,
   ...input.query,
   queryFragment: contentListFragment,
   queryName: 'QueryLoadMore',
@@ -58,7 +58,8 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
                     imageModifiers: ["fluid", "21by9"],
                     imageOptions,
                     imagePosition: "top",
-                    modifiers: ["card"]
+                    modifiers: ["card"],
+                    withTeaser: true,
                   }
                 />
               </div>
@@ -86,6 +87,7 @@ $ const imageOptions = { w: 630, h: 270, fit: "crop", crop: "focalpoint", fpX: 0
                     image-options={ w: 120, h: 120, fit: 'crop', crop: 'focalpoint', fpX: 0.5, fpY: 0.5 }
                     image-width=75
                     image-height=75
+                    with-teaser=true
                   />
                 </@item>
               </endeavor-item-list>
