@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-inquiry",
-  "version": "0.13.18",
+  "version": "0.13.19",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
@@ -11,7 +11,7 @@
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/utils": "^0.10.0",
     "@base-cms/web-common": "^0.10.0",
-    "@endeavorb2b/base-website-common": "^0.13.18",
+    "@endeavorb2b/base-website-common": "^0.13.19",
     "@endeavorb2b/base-website-routing-utils": "^0.13.0",
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
