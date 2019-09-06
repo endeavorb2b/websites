@@ -45,6 +45,7 @@ module.exports = {
         { href: '/webcasts', label: 'Webcasts' },
         { href: 'https://buyersguide.cablinginstall.com/', label: 'Buyer\'s Guide', target: '_blank' },
         { href: 'https://cablingawards.secure-platform.com/a', label: 'Awards', target: '_blank' },
+        { href: '/innovators', label: 'Innovators' },
       ],
     },
     footer: {
@@ -79,6 +80,7 @@ module.exports = {
           { href: '/webcasts', label: 'Webcasts' },
           { href: 'https://buyersguide.cablinginstall.com/', label: 'Buyer\'s Guide', target: '_blank' },
           { href: 'https://cablingawards.secure-platform.com/a', label: 'Awards', target: '_blank' },
+          { href: '/innovators', label: 'Innovators' },
         ],
       },
       userTools: {
