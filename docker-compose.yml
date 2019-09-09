@@ -41,10 +41,10 @@ x-env-picon: &env-picon
   SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
 
 x-env-staging: &env-staging
-  GRAPHQL_URI: ${GRAPHQL_URI-http://staging.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-http://staging.graphql.base-cms.io}
-  RSS_URI: ${RSS_URI-http://staging.graphql.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-http://staging.graphql.base-cms.io}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://staging.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://staging.graphql.base-cms.io}
+  RSS_URI: ${RSS_URI-https://staging.graphql.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://staging.graphql.base-cms.io}
 
 x-env-development: &env-development
   GRAPHQL_URI: ${GRAPHQL_URI-http://host.docker.internal:10002}
