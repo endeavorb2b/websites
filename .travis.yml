@@ -101,6 +101,11 @@ jobs:
       install: skip
 
     - stage: deploy
+      name: Industrial Media - Industrial Distribution
+      script: scripts/deploy.js inddist caprica
+      install: skip
+
+    - stage: deploy
       name: PennWell - BioOptics World
       script: scripts/deploy.js bioopticsworld aerilon
       install: skip

@@ -688,3 +688,19 @@ services:
     ports:
       - "12190:80"
       - "35190:35190"
+
+  inddist:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/inddist
+    environment:
+      <<: *env
+      # <<: *env-caprica
+      <<: *env-staging
+      PORT: 80
+      EXPOSED_PORT: 12191
+      LIVERELOAD_PORT: 35191
+      TENANT_KEY: indm_indm
+    ports:
+      - "12191:80"
+      - "35191:35191"
