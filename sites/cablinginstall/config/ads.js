@@ -88,4 +88,12 @@ module.exports = {
     'load-more': { ...CONTENT, path: path('testing/load-more') },
     reskin: { ...RESKIN, path: path('testing/reskin') },
   },
+  innovators: {
+    lb1: { ...LB, path: path('innovators/lb1') },
+    lb2: { ...LB, path: path('innovators/lb2') },
+    rail1: { ...CONTENT, path: path('innovators/rail1') },
+    rail2: { ...CONTENT, path: path('innovators/rail2') },
+    'load-more': { ...CONTENT, path: path('innovators/load-more') },
+    reskin: { ...RESKIN, path: path('innovators/reskin') },
+  },
 };
