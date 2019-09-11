@@ -39,9 +39,11 @@ $ const wrapClass = (surveyId) ? "row flex-lg-wrap-reverse flex-wrap-reverse" : 
             <cms-browser-component name="GatedDownloadWufoo" props={ formHash: surveyId, target, userName } />
           </else-if>
         </if>
-        <else-if(content.fileSrc !== 'https://media.baseplatform.io//undefined')>
+        <else-if(content.fileSrc)>
           <endeavor-content-block-primary-media content=content display-primary-image=true />
-          <endeavor-content-block-download-button content=content />
+          <if(content.fileSrc !== 'https://media.baseplatform.io//undefined')>
+            <endeavor-content-block-download-button content=content />
+          </if>
         </else-if>
       </aside>
     </div>
