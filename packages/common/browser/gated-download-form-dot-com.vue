@@ -44,7 +44,7 @@ export default {
     },
     height: {
       type: String,
-      default: '1000',
+      default: '1200',
     },
     width: {
       type: String,
