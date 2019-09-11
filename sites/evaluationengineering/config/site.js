@@ -91,7 +91,7 @@ module.exports = {
     domain: 'evaluationengineering.com',
   },
   subscriptions: {
-    newsletters: 'https://www.evaluationengineering.com/subscribe/email',
+    newsletters: 'https://endeavor.dragonforms.com/loading.do?omedasite=EE_eNLshort&version=1&page=1',
     publications: {
       '/subscribe/print/ee': 'https://endeavor.dragonforms.com/ee_new',
     },
