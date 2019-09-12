@@ -36,9 +36,8 @@ $ const adSlots = {
         <div class="col-lg-6 mb-block">
           <endeavor-content-query-section-list
             limit=4
-            section-alias="applications"
-            header={ title: "Applications", href: "/applications" }
-            native-x={ placement: 'list1', aliases: ['applications'], index: 3 }
+            section-alias="on-topic"
+            header={ title: "On Topic", href: "/on-topic" }
           />
         </div>
         <div class="col-lg-6 mb-block">
@@ -61,17 +60,17 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=4
-        section-alias="industries"
-        header={ title: "Industries", href: "/industries" }
-        native-x={ placement: 'list1', aliases: ['industries'], index: 3 }
+        section-alias="applications"
+        header={ title: "Applications", href: "/applications" }
+        native-x={ placement: 'list1', aliases: ['applications'], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=4
-        section-alias="test-issues-techniques"
-        header={ title: "Test Issues & Techniques", href: "/test-issues-techniques" }
-        native-x={ placement: 'list1', aliases: ['test-issues-techniques'], index: 3 }
+        section-alias="industries"
+        header={ title: "Industries", href: "/industries" }
+        native-x={ placement: 'list1', aliases: ['industries'], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -88,6 +87,14 @@ $ const adSlots = {
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=4
+        section-alias="test-issues-techniques"
+        header={ title: "Test Issues & Techniques", href: "/test-issues-techniques" }
+        native-x={ placement: 'list1', aliases: ['test-issues-techniques'], index: 3 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
         section-alias="ee-blogs"
         header={ title: "EE Blogs", href: "/ee-blogs" }
       />
@@ -99,6 +106,16 @@ $ const adSlots = {
         header={ title: "Online Exclusives", href: "/online-exclusives" }
       />
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="new-products"
+        header={ title: "New Products", href: "/new-products" }
+      />
+    </div>
     <div class="col-lg-4 mb-block">
       <endeavor-published-content-query-list
         query={
@@ -108,6 +125,13 @@ $ const adSlots = {
         }
         with-image=false
         header={ title: "White Papers", href: "/whitepapers" }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="special-reports"
+        header={ title: "Special Reports", href: "/special-reports" }
       />
     </div>
   </div>
