@@ -36,7 +36,7 @@ module.exports = {
     secondary: {
       items: [
         { href: '/subscribe', label: 'Subscribe' },
-        { href: '/magazine', label: 'Magazine' },
+        { href: 'https://www.laserfocusworld.com/magazine', label: 'Magazine', target: '_blank' },
         { href: '/videos', label: 'Videos' },
         { href: '/white-papers', label: 'White Papers' },
         { href: '/webcasts', label: 'Webcasts' },
@@ -67,7 +67,7 @@ module.exports = {
         label: 'Resources',
         items: [
           { href: '/blogs', label: 'Commentary' },
-          { href: '/magazine', label: 'Magazine' },
+          { href: 'https://www.laserfocusworld.com/magazine', label: 'Magazine', target: '_blank' },
           { href: '/videos', label: 'Videos' },
           { href: '/white-papers', label: 'White Papers' },
           { href: '/webcasts', label: 'Webcasts' },
