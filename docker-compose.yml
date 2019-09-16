@@ -682,3 +682,18 @@ services:
     ports:
       - "12190:80"
       - "35190:35190"
+
+  foresternetwork:
+    <<: *node
+    <<: *site-cmd
+    working_dir: /root/sites/foresternetwork
+    environment:
+      <<: *env
+      <<: *env-picon
+      PORT: 80
+      EXPOSED_PORT: 12191
+      LIVERELOAD_PORT: 15191
+      TENANT_KEY: ebm_frn
+    ports:
+      - "12191:80"
+      - "35191:35191"
