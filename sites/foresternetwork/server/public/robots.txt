@@ -4,5 +4,5 @@
 User-agent: *
 Disallow: /load-more
 
-Sitemap: https://www.laserfocusworld.com/sitemap.xml
-Sitemap: https://www.laserfocusworld.com/sitemap-google-news.xml
+Sitemap: https://www.foresternetwork.com/sitemap.xml
+Sitemap: https://www.foresternetwork.com/sitemap-google-news.xml
