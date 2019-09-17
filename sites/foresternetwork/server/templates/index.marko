@@ -1,0 +1,104 @@
+import { getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const sections = site.getAsArray('homeSections');
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
+};
+
+<theme-default-website-section-layout section=section>
+  <@head>
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
+  </@above-container>
+
+  <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+  <endeavor-content-query-hero
+    section-id=section.id
+    option-id=9
+    limit=5
+  />
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="distributed-energy"
+        header={ title: "Distributed Energy", href: "/distributed-energy" }
+        native-x={ placement: 'list1', aliases: ['distributed-energy'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="erosion-control"
+        header={ title: "Erosion Control", href: "/erosion-control" }
+        native-x={ placement: 'list1', aliases: ['erosion-control'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="grading-excavation-contractor"
+        header={ title: "Grading & Excavation Contractor", href: "/grading-excavation-contractor" }
+        native-x={ placement: 'list1', aliases: ['grading-excavation-contractor'], index: 2 }
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="msw-management"
+        header={ title: "MSW Management", href: "/msw-management" }
+        native-x={ placement: 'list1', aliases: ['msw-management'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="stormwater"
+        header={ title: "Stormwater", href: "/stormwater" }
+        native-x={ placement: 'list1', aliases: ['stormwater'], index: 2 }
+      />
+    </div>
+    <div class="col-lg-4 mb-block">
+      <endeavor-content-query-section-list
+        limit=3
+        section-alias="water-efficiency"
+        header={ title: "Water Efficiency", href: "/water-efficiency" }
+        native-x={ placement: 'list1', aliases: ['water-efficiency'], index: 2 }
+      />
+    </div>
+  </div>
+
+  <@below-container>
+    <endeavor-content-query-load-more
+      query={
+        skip: 5,
+        sectionId: section.id,
+      }
+      load-more={
+        maxPages: 0,
+      }
+      ads={ aliases }
+      native-x={ placement: 'card', aliases, index: 0 }
+    />
+  </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" refreshable=true aliases=aliases />
+  </@footer>
+</theme-default-website-section-layout>
