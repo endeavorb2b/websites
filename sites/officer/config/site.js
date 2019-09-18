@@ -106,6 +106,7 @@ module.exports = {
       bgColor: '#005ea0',
       logo: 'https://base.imgix.net/files/base/cygnus/ofcr/image/static/logo/site_logo.png',
     },
+    to: 'tom@officer.com',
   },
   wufoo: {
     userName: 'cygnuscorporate',

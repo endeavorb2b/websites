@@ -34,20 +34,20 @@ $ const query = {
         <div class="page-wrapper__body">
           <div class="row">
             <div class="col-lg-8">
-          <cms-query-website-scheduled-content|{ nodes }| ...query>
-            <endeavor-item-list flush=true card=false items=nodes>
-              <@item|{ item }|>
-                <endeavor-content-block-item
-                  content=item
-                  flush=true
-                  image-position="left"
-                  image-options={ w: 240 }
-                  image-width=150
-                  image-use-placeholder=false
-                />
-              </@item>
-            </endeavor-item-list>
-          </cms-query-website-scheduled-content>
+              <cms-query-website-scheduled-content|{ nodes }| ...query>
+                <endeavor-item-list flush=true card=false items=nodes>
+                  <@item|{ item }|>
+                    <endeavor-content-block-item
+                      content=item
+                      flush=true
+                      image-position="left"
+                      image-options={ w: 240 }
+                      image-width=150
+                      image-use-placeholder=false
+                    />
+                  </@item>
+                </endeavor-item-list>
+              </cms-query-website-scheduled-content>
             </div>
             <div class="col-lg-4">
               <cms-browser-component name="ContactUsForm" />
