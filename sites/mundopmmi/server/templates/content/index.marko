@@ -9,8 +9,8 @@ $ const section = getAsObject(content, 'primarySection');
 $ const aliases = hierarchyAliases(section);
 $ const block = 'content-page';
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
+  'gpt-ad-leaderboard': getAdUnit(site, { name: 'leaderboard', aliases }),
+  'gpt-ad-imu1': getAdUnit(site, { name: 'imu1', aliases }),
 };
 $ const displayPrimaryImage = ['whitepaper', 'media-gallery'].includes(content.type) ? false : true;
 $ const displayRailAds = ['contact', 'company'].includes(content.type) ? false : true;
@@ -21,12 +21,7 @@ $ const displayRailRelatedContent = false;
     <endeavor-ad-gam-head slots=adSlots targeting={ cont_id: content.id, cont_type: content.type } />
   </@head>
 
-  <@above-container>
-    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
-    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases />
-  </@above-container>
-
-  <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+  <endeavor-gam-ad-unit-display id="gpt-ad-leaderboard" modifiers=["top-of-page"] />
 
   <div class="page-wrapper">
     <div class="row">
@@ -47,7 +42,7 @@ $ const displayRailRelatedContent = false;
 
       <aside class="col-lg-4 page-right-rail">
         <if(displayRailAds)>
-          <endeavor-gam-ad-unit-display id="gpt-ad-rail1" />
+          <endeavor-gam-ad-unit-display id="gpt-ad-imu1" />
         </if>
         <div id="gtm-content-rail1"></div>
         <if(displayRailRelatedContent)>
