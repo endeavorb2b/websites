@@ -21,7 +21,7 @@ module.exports = {
   socialMediaLinks: [
     { provider: 'linkedin', href: 'https://www.linkedin.com/company/4000113' },
     { provider: 'twitter', href: 'https://twitter.com/ILS_for_Mfg' },
-    { provider: 'facebook', href: 'https://www.facebook.com/industriallasersolutionsformanufacturing' },
+    { provider: 'facebook', href: 'https://www.facebook.com/industriallasersolutions/' },
   ],
   navigation: {
     primary: {
