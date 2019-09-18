@@ -104,6 +104,7 @@ module.exports = {
       bgColor: '#d71920',
       logo: 'https://base.imgix.net/files/base/ebm/ee/image/static/logo/site_logo_bare.png',
     },
+    to: 'kcormier@evaluationengineering.com',
   },
   wufoo: {
     userName: 'cygnuscorporate',
