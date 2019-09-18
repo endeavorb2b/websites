@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/foresternetwork",
-  "version": "0.13.19",
+  "version": "0.13.23",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
