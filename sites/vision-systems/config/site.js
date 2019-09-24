@@ -80,6 +80,7 @@ module.exports = {
           { href: '/webcasts', label: 'Webcasts' },
           { href: 'https://buyersguide.vision-systems.com/index.html', label: 'Buyer\'s Guide', target: '_blank' },
           { href: 'https://visionsystemsdesigninnovators.secure-platform.com/a', label: 'Awards', target: '_blank' },
+          { href: '/knowledge-zone', label: 'Knowledge Zone' },
         ],
       },
       userTools: {
