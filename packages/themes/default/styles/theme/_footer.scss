@@ -1,4 +1,5 @@
 .site-footer {
+  z-index: 1; //needed to prevent reveal ad from overlaying footer
   margin-top: auto;
   font-family: $theme-site-footer-font-family;
   font-size: $theme-site-footer-font-size;
@@ -6,7 +7,6 @@
   line-height: $theme-site-footer-line-height;
   box-shadow: $theme-site-footer-box-shadow;
   opacity: $theme-site-footer-opacity;
-  z-index: 1; //needed to prevent reveal ad from overlaying footer
 
   &__container {
     @include make-container();
