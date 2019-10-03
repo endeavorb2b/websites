@@ -7,7 +7,7 @@ import ImageSlider from './image-slider.vue';
 inquiry(Browser, { component: InquiryForm });
 Browser.registerComponent('ImageSlider', ImageSlider);
 
-window.jQuery = window.$;
+window.jQuery = jQuery;
 window.$ = jQuery;
 
 export default Browser;
