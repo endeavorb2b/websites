@@ -26,3 +26,11 @@
     margin-bottom: 0;
   }
 }
+
+// Carousel Overrides
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: rgba(0, 0, 0, .3);
+  opacity: initial;
+}
