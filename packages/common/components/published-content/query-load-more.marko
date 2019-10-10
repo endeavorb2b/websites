@@ -5,7 +5,7 @@ $ input.pageNumber = input.pageNumber || 1;
 $ const block = 'published-content-query-load-more';
 $ const appendTo = input.appendTo || `.${block}`;
 
-<endeavor-published-content-query|{ nodes, loadMore }| ...input>
+<endeavor-published-content-query|{ nodes, loadMore }| ...input track-page-load=true>
   $ const { endCursor, hasNextPage, provide } = loadMore;
   <endeavor-load-more-button
     append-to=appendTo
