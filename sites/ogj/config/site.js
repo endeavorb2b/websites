@@ -85,6 +85,7 @@ module.exports = {
           { href: '/ogj-survey-downloads', label: 'Surveys' },
           { href: '/industry-statistics', label: 'Industry Statistics' },
           { href: '/page/submit-article', label: 'Submit an Article' },
+          { href: '/page/rss', label: 'RSS Feed' },
         ],
       },
       userTools: {
