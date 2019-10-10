@@ -9,6 +9,7 @@ $ const { endingAfter, endingBefore } = input.query;
 $ const layout = input.layout || 'grid';
 $ const ads = getAsObject(input, 'ads');
 $ const header = getAsObject(input, 'header');
+$ const trackPageLoad = input.trackPageLoad === true ? true : false;
 $ input.withImage = input.withImage === false ? false : true;
 $ input.withCard = input.withCard === true ? true : false;
 
@@ -37,7 +38,9 @@ $ const adCardInput = {
   $ const loadMore = { endCursor, hasNextPage, provide: { layout, query, ads } };
   <if(layout === "grid")>
     $ const block = 'published-content-query';
-    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    <if(trackPageLoad)>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    </if>
     <div class=block>
       <div class="row">
         <for|content, index| of=nodes>
@@ -61,7 +64,9 @@ $ const adCardInput = {
     </div>
   </if>
   <else>
-    <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    <if(trackPageLoad)>
+      <cms-gtm-track-inview-event name="page_load" vars={ page_number: pageNumber + 1 } />
+    </if>
     <endeavor-item-list flush=true card=true items=nodes>
       <if(header.title)>
         <@header href=header.href target=header.target>
