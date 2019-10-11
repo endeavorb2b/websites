@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/oemmagazine",
-  "version": "0.13.22",
+  "version": "0.13.26",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -14,8 +14,8 @@
     "@base-cms/marko-web": "^0.10.3",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.3",
-    "@endeavorb2b/base-website-common": "^0.13.21",
-    "@endeavorb2b/base-website-themes": "^0.13.22",
+    "@endeavorb2b/base-website-common": "^0.13.26",
+    "@endeavorb2b/base-website-themes": "^0.13.26",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
