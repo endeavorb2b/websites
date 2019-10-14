@@ -80,7 +80,7 @@ module.exports = {
           { href: 'https://www.strategiesinlight.com/index.html', label: 'Strategies in Light', target: '_blank' },
           { href: 'https://sapphireawards.secure-platform.com/a/', label: 'Sapphire Awards', target: '_blank' },
           { href: 'http://horticulturelightingconference.com', label: 'Horticultural Conference', target: '_blank' },
-          { href: 'https://www.strategies-u.com/index.html', label: 'Research', target: '_blank' },
+          { href: '/page/advertise', label: 'Advertise' },
         ],
       },
       userTools: {
