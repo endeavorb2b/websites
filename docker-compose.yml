@@ -659,7 +659,7 @@ services:
     working_dir: /root/sites/mundopmmi
     environment:
       <<: *env
-      <<: *env-aerilon
+      <<: *env-caprica
       PORT: 80
       EXPOSED_PORT: 12189
       LIVERELOAD_PORT: 35189

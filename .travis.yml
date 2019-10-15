@@ -162,5 +162,5 @@ jobs:
 
     - stage: deploy
       name: PMMI - mundo
-      script: scripts/deploy.js mundopmmi aerilon
+      script: scripts/deploy.js mundopmmi caprica
       install: skip
