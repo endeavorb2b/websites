@@ -8,14 +8,17 @@
       display: block;
       width: 100%;
     }
-    .carousel-caption {
-      right: 0;
-      bottom: 0;
-      left: 0;
+  }
+
+  .carousel-caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: $theme-carousel-caption-padding;
+    text-shadow: $theme-carousel-caption-text-shadow;
+    background: $theme-carousel-caption-background;
+    p {
       display: none;
-      padding-bottom: $theme-carousel-caption-padding;
-      text-shadow: $theme-carousel-caption-text-shadow;
-      background: $theme-carousel-caption-background;
       @include media-breakpoint-up(md) {
         display: block;
       }
@@ -31,6 +34,9 @@
 
 .carousel-control-next,
 .carousel-control-prev {
-  background-color: rgba(0, 0, 0, .3);
+  top: initial;
+  bottom: 8px;
+  z-index: 16;
+  justify-content: space-around;
   opacity: initial;
 }
