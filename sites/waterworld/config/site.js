@@ -27,7 +27,7 @@ module.exports = {
     primary: {
       items: [
         { href: '/municipal', label: 'Municipal' },
-        { href: '/industrial', label: 'Industrial' },
+        { href: 'https://www.watertechonline.com', label: 'Industrial', target: '_blank' },
         { href: '/international', label: 'International' },
         { href: '/municipal/technologies', label: 'Technologies' },
         { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
@@ -56,7 +56,7 @@ module.exports = {
         label: 'Topics',
         items: [
           { href: '/municipal', label: 'Municipal' },
-          { href: '/industrial', label: 'Industrial' },
+          { href: 'https://www.watertechonline.com', label: 'Industrial', target: '_blank' },
           { href: '/international', label: 'International' },
           { href: '/municipal/technologies', label: 'Technologies' },
           { href: '/global-thought-leaders', label: 'Global Thought Leaders' },
