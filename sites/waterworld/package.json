@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/waterworld",
-  "version": "0.13.26",
+  "version": "0.13.28",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
