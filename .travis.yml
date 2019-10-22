@@ -80,80 +80,80 @@ jobs:
     #   script: scripts/deploy.js riverfronttimes caprica
     #   install: skip
 
-    - stage: deploy
-      name: Euclid - San Antonio Current
-      script: scripts/deploy.js sacurrent caprica
-      install: skip
+    # - stage: deploy
+    #   name: Euclid - San Antonio Current
+    #   script: scripts/deploy.js sacurrent caprica
+    #   install: skip
 
-    - stage: deploy
-      name: Endeavor - Evaluation Engineering
-      script: scripts/deploy.js evaluationengineering picon
-      install: skip
+    # - stage: deploy
+    #   name: Endeavor - Evaluation Engineering
+    #   script: scripts/deploy.js evaluationengineering picon
+    #   install: skip
 
-    - stage: deploy
-      name: Endeavor - Forester Network
-      script: scripts/deploy.js foresternetwork picon
-      install: skip
+    # - stage: deploy
+    #   name: Endeavor - Forester Network
+    #   script: scripts/deploy.js foresternetwork picon
+    #   install: skip
 
-    - stage: deploy
-      name: Endeavor - Officer
-      script: scripts/deploy.js officer picon
-      install: skip
+    # - stage: deploy
+    #   name: Endeavor - Officer
+    #   script: scripts/deploy.js officer picon
+    #   install: skip
 
-    - stage: deploy
-      name: Endeavor - Plastics Machinery Magazine
-      script: scripts/deploy.js plasticsmachinerymagazine picon
-      install: skip
+    # - stage: deploy
+    #   name: Endeavor - Plastics Machinery Magazine
+    #   script: scripts/deploy.js plasticsmachinerymagazine picon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - BioOptics World
-      script: scripts/deploy.js bioopticsworld aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - BioOptics World
+    #   script: scripts/deploy.js bioopticsworld aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Broadband Technology Report
-      script: scripts/deploy.js broadbandtechreport aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Broadband Technology Report
+    #   script: scripts/deploy.js broadbandtechreport aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Dental Economics
-      script: scripts/deploy.js dentaleconomics aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Dental Economics
+    #   script: scripts/deploy.js dentaleconomics aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - DentistryIQ
-      script: scripts/deploy.js dentistryiq aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - DentistryIQ
+    #   script: scripts/deploy.js dentistryiq aerilon
+    #   install: skip
 
     - stage: deploy
       name: PennWell - Oil & Gas Journal
       script: scripts/deploy.js ogj aerilon
       install: skip
 
-    - stage: deploy
-      name: PennWell - Offshore Magazine
-      script: scripts/deploy.js offshore-mag aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Offshore Magazine
+    #   script: scripts/deploy.js offshore-mag aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Perio-Implant Advisory
-      script: scripts/deploy.js perioimplantadvisory aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Perio-Implant Advisory
+    #   script: scripts/deploy.js perioimplantadvisory aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Registered Dental Hygienist
-      script: scripts/deploy.js rdhmag aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Registered Dental Hygienist
+    #   script: scripts/deploy.js rdhmag aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Strategies Unlimited
-      script: scripts/deploy.js strategies-u aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Strategies Unlimited
+    #   script: scripts/deploy.js strategies-u aerilon
+    #   install: skip
 
-    - stage: deploy
-      name: PennWell - Utility Products
-      script: scripts/deploy.js utilityproducts aerilon
-      install: skip
+    # - stage: deploy
+    #   name: PennWell - Utility Products
+    #   script: scripts/deploy.js utilityproducts aerilon
+    #   install: skip
 
     - stage: deploy
       name: PennWell - WaterWorld
