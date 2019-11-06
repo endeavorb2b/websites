@@ -1,1 +1,0 @@
-# Vision Systems Design Website

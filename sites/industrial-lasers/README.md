@@ -1,1 +1,0 @@
-# Industrial Laser Solutions Website
