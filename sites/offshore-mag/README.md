@@ -1,1 +1,0 @@
-# Offshore Magazine Website
