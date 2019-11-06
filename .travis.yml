@@ -36,11 +36,6 @@ jobs:
       install: skip
 
     - stage: deploy
-      name: PennWell - WaterWorld
-      script: scripts/deploy.js waterworld aerilon
-      install: skip
-
-    - stage: deploy
       name: PMMI - mundo
       script: scripts/deploy.js mundopmmi caprica
       install: skip

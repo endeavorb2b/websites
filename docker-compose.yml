@@ -98,21 +98,6 @@ services:
       - "12166:80"
       - "35166:35166"
 
-  waterworld:
-    <<: *node
-    <<: *site-cmd
-    working_dir: /root/sites/waterworld
-    environment:
-      <<: *env
-      <<: *env-aerilon
-      PORT: 80
-      EXPOSED_PORT: 12171
-      LIVERELOAD_PORT: 35171
-      TENANT_KEY: ebm_ww
-    ports:
-      - "12171:80"
-      - "35171:35171"
-
   mundopmmi:
     <<: *node
     <<: *site-cmd
