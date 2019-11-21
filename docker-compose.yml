@@ -23,22 +23,22 @@ x-env-defaults: &env
   YARN_CACHE_FOLDER: /.yarn-cache
 
 x-env-aerilon: &env-aerilon
-  GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://aerilon.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://aerilon.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon.sitemaps.base-cms.io}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon-v0x.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://aerilon-v0x.oembed.base-cms.io}
+  RSS_URI: ${RSS_URI-https://aerilon-v0x.rss.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon-v0x.sitemaps.base-cms.io}
 
 x-env-caprica: &env-caprica
-  GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://caprica.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base-cms.io}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://caprica-v0x.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://caprica-v0x.oembed.base-cms.io}
+  RSS_URI: ${RSS_URI-https://caprica-v0x.rss.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://caprica-v0x.sitemaps.base-cms.io}
 
 x-env-picon: &env-picon
-  GRAPHQL_URI: ${GRAPHQL_URI-https://picon.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://picon.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://picon.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://picon.sitemaps.base-cms.io}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://picon-v0x.graphql.base-cms.io}
+  OEMBED_URI: ${OEMBED_URI-https://picon-v0x.oembed.base-cms.io}
+  RSS_URI: ${RSS_URI-https://picon-v0x.rss.base-cms.io}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://picon-v0x.sitemaps.base-cms.io}
 
 x-env-development: &env-development
   GRAPHQL_URI: ${GRAPHQL_URI-http://host.docker.internal:10002}
