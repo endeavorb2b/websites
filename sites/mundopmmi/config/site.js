@@ -26,9 +26,9 @@ module.exports = {
       ],
     },
     footer: {
-      src: 'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=60',
+      src: 'https://base.imgix.net/files/base/pmmi/mundo/footerLogos_white.png?h=60',
       srcset: [
-        'https://base.imgix.net/files/base/pmmi/mundo/MundoPMMI_logo_White_notag.png?h=120 2x',
+        'https://base.imgix.net/files/base/pmmi/mundo/footerLogos_white.png?h=120 2x',
       ],
     },
   },
