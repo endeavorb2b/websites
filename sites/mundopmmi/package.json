@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/mundopmmi",
-  "version": "0.13.26",
+  "version": "0.13.29",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
