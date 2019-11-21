@@ -67,6 +67,7 @@ module.exports = {
       resources: {
         label: 'Resources',
         items: [
+          { href: '/eventplannerschoice', label: "Event Planner's Choice" },
           { href: '/gathergeeks', label: 'GatherGeeks' },
           { href: '/page/our-events', label: 'Our Events & Awards' },
           { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },

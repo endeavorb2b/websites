@@ -1,0 +1,56 @@
+import { get, getAsObject } from '@base-cms/object-path';
+import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
+import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import contentListFragment from '../../api/fragments/content-list';
+
+$ const { site } = out.global;
+$ const section = getAsObject(data, 'section');
+$ const aliases = hierarchyAliases(section);
+$ const adSlots = {
+  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
+  'gpt-ad-lb2': getAdUnit(site, { name: 'lb2', aliases }),
+};
+
+<!-- @deprecated init-native-x -->
+<theme-default-website-section-layout section=section init-native-x=false>
+  <@head>
+    <native-x-site-init />
+    <endeavor-ad-gam-head slots=adSlots />
+  </@head>
+  <@above-container>
+    <endeavor-gam-ad-unit-out-of-page name="wa" aliases=aliases />
+    <endeavor-gam-ad-unit-out-of-page name="reskin" aliases=aliases  />
+  </@above-container>
+
+  <endeavor-gam-ad-unit-display id="gpt-ad-lb1" modifiers=["top-of-page"] />
+
+  <div class="page-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="page-wrapper__header">
+          <endeavor-breadcrumbs-website-section section=section />
+          <h1 class="page-wrapper__title">${section.name}</h1>
+          <if(section.description)>
+            <p class="page-wrapper__description">$!{section.description}</p>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <cms-query-website-scheduled-content|{ nodes }| section-id=section.id limit=25 requires-image=true query-fragment=contentListFragment>
+    <bizbash-load-more-content-layout name="list-large" nodes=nodes layout={ aliases } />
+  </cms-query-website-scheduled-content>
+
+  <@below-container>
+    <bizbash-load-more
+      type="website-scheduled-content"
+      query={ sectionId: section.id, limit: 25, skip: 25 }
+      layout={ name: "list-large", aliases }
+    />
+  </@below-container>
+
+  <@footer>
+    <endeavor-gam-ad-sticky-leaderboard name="lb2" aliases=aliases refreshable=false />
+  </@footer>
+</theme-default-website-section-layout>

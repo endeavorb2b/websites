@@ -1,6 +1,7 @@
 const queryFragment = require('@endeavorb2b/base-website-themes/default/api/fragments/website-section-page');
 const { withWebsiteSection } = require('@base-cms/marko-web/middleware');
 const section = require('../templates/website-section');
+const eventplannerschoiceTemplate = require('../templates/website-section/eventplannerschoice');
 const gatherGeeksTemplate = require('../templates/website-section/gathergeeks');
 const productionStrategyTemplate = require('../templates/website-section/production-strategy');
 const styleDecorTemplate = require('../templates/website-section/style-decor');
@@ -25,6 +26,11 @@ module.exports = (app) => {
 
   app.get('/:alias(gathergeeks)', withWebsiteSection({
     template: gatherGeeksTemplate,
+    queryFragment,
+  }));
+
+  app.get('/:alias(eventplannerschoice)', withWebsiteSection({
+    template: eventplannerschoiceTemplate,
     queryFragment,
   }));
 
