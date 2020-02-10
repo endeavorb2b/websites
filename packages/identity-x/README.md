@@ -13,7 +13,7 @@ module.exports = {
     // The IdentityX application ID to use for this website
     appId: '[your-app-id-here]',
     // The IdentityX GraphQL API uri
-    uri: 'https://identity-x.base-cms.io/graphql', // or use an env variable
+    uri: 'https://identity-x.io/graphql', // or use an env variable
     // The mount point for backend JSON handlers
     // This is optional. If left blank will automatically mount to `/__idx`
     mountTo: '/__idx',
