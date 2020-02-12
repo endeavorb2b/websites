@@ -1,0 +1,12 @@
+$ const { req } = out.global;
+$ const { identityX } = req;
+
+<identity-x-context|{ user, isEnabled }|>
+  $ const props = {
+    activeUser: user,
+    endpoints: identityX.config.getEndpoints(),
+  };
+  <if(isEnabled)>
+    <marko-web-browser-component name="IdentityXLogin" props=props />
+  </if>
+</identity-x-context>

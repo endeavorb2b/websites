@@ -1,23 +1,28 @@
 {
-  "tags": {
-    "identity-x": {
-      "template": "./index.marko",
-      "<on-error>": {},
-      "@enabled": {
-        "type": "boolean",
-        "default-value": true
-      }
-    },
-    "identity-x-access": {
-      "template": "./access.marko",
-      "<on-error>": {},
-      "@enabled": {
-        "type": "boolean",
-        "default-value": true
-      },
-      "@required-access-level-ids": {
-        "type": "array"
-      }
-    }
+  "<identity-x-access>": {
+    "template": "./access.marko",
+    "<on-error>": {},
+    "@required-access-level-ids": "array"
+  },
+  "<identity-x-context>": {
+    "<on-error>": {},
+    "template": "./context.marko"
+  },
+  "<identity-x-form-authenticate>": {
+    "template": "./form-authenticate.marko"
+  },
+  "<identity-x-form-login>": {
+    "template": "./form-login.marko"
+  },
+  "<identity-x-form-logout>": {
+    "template": "./form-logout.marko"
+  },
+  "<identity-x-form-register>": {
+    "template": "./form-register.marko"
+  },
+  "<identity-x-form-profile>": {
+    "template": "./form-profile.marko",
+    "@call-to-action": "string",
+    "@reload-page-on-submit": "boolean"
   }
 }

@@ -1,11 +1,11 @@
-import { getAsArray } from '@base-cms/object-path';
+import { getAsArray } from "@base-cms/object-path";
 
 $ const { req, onAsyncBlockError } = out.global;
 $ const isDevelopment = process.env.NODE_ENV === 'development';
 $ const { identityX } = req;
 
 $ const requiredAccessLevelIds = getAsArray(input.requiredAccessLevelIds);
-$ const params = { isEnabled: input.enabled, requiredAccessLevelIds };
+$ const params = { requiredAccessLevelIds };
 
 $ const checkContentAccess = async () => (Boolean(req.identityX) ? identityX.checkContentAccess(params) : {
   canAccess: true,
@@ -13,6 +13,7 @@ $ const checkContentAccess = async () => (Boolean(req.identityX) ? identityX.che
   hasRequiredAccessLevel: false,
   requiresAccessLevel: false,
   requiredAccessLevels: [],
+  requiresUserInput: false,
   messages: {},
 });
 
