@@ -4,17 +4,8 @@ import Login from './login.vue';
 import Profile from './profile.vue';
 
 export default (Browser) => {
-  const { EventBus } = Browser;
-  Browser.register('IdentityXAuthenticate', Authenticate, {
-    on: { action: (...args) => EventBus.$emit('identity-x-authenticate', ...args) },
-  });
-  Browser.register('IdentityXLogin', Login, {
-    on: { action: (...args) => EventBus.$emit('identity-x-logout', ...args) },
-  });
-  Browser.register('IdentityXLogout', Logout, {
-    on: { action: (...args) => EventBus.$emit('identity-x-logout', ...args) },
-  });
-  Browser.register('IdentityXProfile', Profile, {
-    on: { action: (...args) => EventBus.$emit('identity-x-profile', ...args) },
-  });
+  Browser.registerComponent('IdentityXAuthenticate', Authenticate);
+  Browser.registerComponent('IdentityXLogin', Login);
+  Browser.registerComponent('IdentityXLogout', Logout);
+  Browser.registerComponent('IdentityXProfile', Profile);
 };
