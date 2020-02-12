@@ -7,6 +7,6 @@ $ const { identityX } = req;
     endpoints: identityX.config.getEndpoints(),
   };
   <if(isEnabled)>
-    <marko-web-browser-component name="IdentityXLogin" props=props />
+    <cms-browser-component name="IdentityXLogin" props=props />
   </if>
 </identity-x-context>
