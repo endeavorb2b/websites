@@ -13,7 +13,7 @@ x-node-defaults: &node
     - yarn-cache:/.yarn-cache
 
 x-env-defaults: &env
-  IDENTITYX_GRAPHQL_URI: ${IDENTITYX_GRAPHQL_URI-https://identity-x.base-cms.io/graphql}
+  IDENTITYX_GRAPHQL_URI: ${IDENTITYX_GRAPHQL_URI-https://identity-x.io/graphql}
   NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
   NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY-(unset)}
   NODE_ENV: development
