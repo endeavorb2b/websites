@@ -1,4 +1,4 @@
-import { getAsArray } from '@base-cms/object-path';
+import { getAsArray } from "@base-cms/object-path";
 
 $ const { req, onAsyncBlockError } = out.global;
 $ const isDevelopment = process.env.NODE_ENV === 'development';
@@ -13,6 +13,7 @@ $ const checkContentAccess = async () => (Boolean(req.identityX) ? identityX.che
   hasRequiredAccessLevel: false,
   requiresAccessLevel: false,
   requiredAccessLevels: [],
+  requiresUserInput: false,
   messages: {},
 });
 

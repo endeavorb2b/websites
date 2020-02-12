@@ -1,20 +1,8 @@
 const IdentityX = require('./service');
 
-module.exports = ({
-  uri,
-  appId,
-  config,
-  linkConfig,
-} = {}) => (req, res, next) => {
-  const identityX = new IdentityX({
-    req,
-    res,
-    uri,
-    appId,
-    config,
-    linkConfig,
-  });
-  req.identityX = identityX;
-  res.locals.identityX = identityX;
+module.exports = config => (req, res, next) => {
+  const service = new IdentityX({ req, res, config });
+  req.identityX = service;
+  res.locals.identityX = service;
   next();
 };

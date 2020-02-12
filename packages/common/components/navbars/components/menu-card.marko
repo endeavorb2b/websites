@@ -3,7 +3,7 @@ import getNavItems from '../get-nav-items';
 
 $ const { block } = input;
 
-<identity-x|{ isEnabled: regEnabled, hasUser }|>
+<identity-x-context|{ isEnabled: regEnabled, hasUser }|>
   $ const items = getNavItems({ regEnabled, hasUser, items: input.for });
   <if(items.length)>
     <div class=`${bem(block, 'card-header')} card-header`>
@@ -23,4 +23,4 @@ $ const { block } = input;
       </for>
     </div>
   </if>
-</identity-x>
+</identity-x-context>

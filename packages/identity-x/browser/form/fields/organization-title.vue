@@ -1,34 +1,42 @@
 <template>
   <form-group>
-    <label :for="id">{{ label }}</label>
+    <form-label :for="id" :required="required">
+      {{ label }}
+    </form-label>
     <input
       :id="id"
-      v-model="familyName"
+      v-model="organizationTitle"
       class="form-control"
       type="text"
-      :required="true"
+      :required="required"
       :disabled="disabled"
       :placeholder="placeholder"
-      autocomplete="family-name"
+      autocomplete="organization-title"
     >
   </form-group>
 </template>
 
 <script>
 import FormGroup from '../common/form-group.vue';
+import FormLabel from '../common/form-label.vue';
 
 export default {
   components: {
     FormGroup,
+    FormLabel,
   },
   props: {
     disabled: {
       type: Boolean,
       default: false,
     },
+    required: {
+      type: Boolean,
+      default: false,
+    },
     label: {
       type: String,
-      default: 'Last Name',
+      default: 'Job Title',
     },
     placeholder: {
       type: String,
@@ -40,15 +48,15 @@ export default {
     },
   },
   data: () => ({
-    id: 'sign-on-family-name',
+    id: 'sign-on-organization-title',
   }),
   computed: {
-    familyName: {
+    organizationTitle: {
       get() {
-        return this.value;
+        return this.value || '';
       },
-      set(familyName) {
-        this.$emit('input', familyName);
+      set(organizationTitle) {
+        this.$emit('input', organizationTitle || null);
       },
     },
   },

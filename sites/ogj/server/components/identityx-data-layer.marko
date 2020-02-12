@@ -1,6 +1,6 @@
 import { getAsObject } from '@base-cms/object-path';
 
-<identity-x|{ isEnabled, mergedTeams, user: userContext }|>
+<identity-x-context|{ isEnabled, mergedTeams, user: userContext }|>
   <if(isEnabled)>
     $ const team = getAsObject(mergedTeams, 0);
     $ const user = userContext || {};
@@ -13,4 +13,4 @@ import { getAsObject } from '@base-cms/object-path';
       } />
     </if>
   </if>
-</identity-x>
+</identity-x-context>
