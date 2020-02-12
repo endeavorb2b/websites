@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/base-website-identity-x",
-  "version": "0.13.19",
+  "version": "0.14.0",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --max-warnings 5 --ignore-path ../../.eslintignore ./",
@@ -10,7 +10,7 @@
     "@base-cms/marko-web": "^0.10.3",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/utils": "^0.10.0",
-    "@endeavorb2b/base-website-routing-utils": "^0.13.0",
+    "@endeavorb2b/base-website-routing-utils": "^0.14.0",
     "apollo-cache-inmemory": "^1.6.0",
     "apollo-client": "^2.6.0",
     "apollo-link-http": "^1.5.14",
