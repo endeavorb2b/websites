@@ -12,6 +12,7 @@ $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(
     requiresAccessLevel,
     hasRequiredAccessLevel,
     messages,
+    requiresUserInput,
   } = context;
 
   <div class="page-wrapper__body">
@@ -29,13 +30,17 @@ $ const { isRequired: requiresReg, accessLevels: accessLevelIds } = getAsObject(
       </else-if>
       <else-if(!isLoggedIn)>
         <h5>You must be logged-in to access this content.</h5>
-        <cms-browser-component name="IdentitySignInForm" />
+        <identity-x-form-login />
       </else-if>
     </if>
+    <else-if(isLoggedIn && requiresUserInput)>
+      <h5>Please complete your profile to view this content.</h5>
+      <identity-x-form-profile reload-page-on-submit=true />
+    </else-if>
   </div>
 
   <div class="page-wrapper__contents">
-    <if(canAccess)>
+    <if(canAccess && !requiresUserInput)>
       <endeavor-content-block-page-body-contents content=content />
     </if>
   </div>

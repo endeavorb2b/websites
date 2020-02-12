@@ -21,7 +21,7 @@ $ const navigation = {
 $ const navMenu = site.getAsObject('navigation.menu');
 
 <header class=navbar>
-  <identity-x|{ isEnabled: regEnabled, hasUser }|>
+  <identity-x-context|{ isEnabled: regEnabled, hasUser }|>
     <nav class=bem(navbar, 'secondary')>
       <div class="site-navbar-container">
         <cms-browser-component
@@ -70,7 +70,7 @@ $ const navMenu = site.getAsObject('navigation.menu');
         </ul>
       </div>
     </nav>
-  </identity-x>
+  </identity-x-context>
 </header>
 
 <aside class=menu>

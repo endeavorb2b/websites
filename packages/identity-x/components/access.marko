@@ -5,7 +5,7 @@ $ const isDevelopment = process.env.NODE_ENV === 'development';
 $ const { identityX } = req;
 
 $ const requiredAccessLevelIds = getAsArray(input.requiredAccessLevelIds);
-$ const params = { requiredAccessLevelIds };
+$ const params = { isEnabled: input.enabled, requiredAccessLevelIds };
 
 $ const checkContentAccess = async () => (Boolean(req.identityX) ? identityX.checkContentAccess(params) : {
   canAccess: true,

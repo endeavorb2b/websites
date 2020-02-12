@@ -2,6 +2,10 @@
   "<identity-x-access>": {
     "template": "./access.marko",
     "<on-error>": {},
+    "@enabled": {
+      "type": "boolean",
+      "default-value": true
+    },
     "@required-access-level-ids": "array"
   },
   "<identity-x-context>": {

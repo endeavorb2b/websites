@@ -1,6 +1,6 @@
 import Browser from '@endeavorb2b/base-website-common/browser';
-import identityX from '@endeavorb2b/base-website-identity-x/browser';
+import IdentityX from '@endeavorb2b/base-website-identity-x/browser';
 
-identityX(Browser);
+IdentityX(Browser);
 
 export default Browser;
