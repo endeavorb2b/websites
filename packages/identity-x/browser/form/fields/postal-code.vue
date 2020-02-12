@@ -1,34 +1,42 @@
 <template>
   <form-group>
-    <label :for="id">{{ label }}</label>
+    <form-label :for="id" :required="required">
+      {{ label }}
+    </form-label>
     <input
       :id="id"
-      v-model="email"
+      v-model="postalCode"
       class="form-control"
-      type="email"
-      :required="true"
+      type="text"
+      :required="required"
       :disabled="disabled"
       :placeholder="placeholder"
-      autocomplete="email"
+      autocomplete="postal-code"
     >
   </form-group>
 </template>
 
 <script>
 import FormGroup from '../common/form-group.vue';
+import FormLabel from '../common/form-label.vue';
 
 export default {
   components: {
     FormGroup,
+    FormLabel,
   },
   props: {
     disabled: {
       type: Boolean,
       default: false,
     },
+    required: {
+      type: Boolean,
+      default: false,
+    },
     label: {
       type: String,
-      default: 'Email Address',
+      default: 'Postal/ZIP Code',
     },
     placeholder: {
       type: String,
@@ -40,15 +48,15 @@ export default {
     },
   },
   data: () => ({
-    id: 'sign-on-email',
+    id: 'sign-on-postal-code',
   }),
   computed: {
-    email: {
+    postalCode: {
       get() {
-        return this.value;
+        return this.value || '';
       },
-      set(email) {
-        this.$emit('input', email);
+      set(postalCode) {
+        this.$emit('input', postalCode || null);
       },
     },
   },
