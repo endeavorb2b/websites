@@ -1,6 +1,6 @@
 const gql = require('graphql-tag');
 const { asyncRoute } = require('@base-cms/utils');
-const tokenCookie = require('../../utils/token-cookie');
+const tokenCookie = require('../utils/token-cookie');
 
 const logoutAppUser = gql`
   mutation LogoutAppUser($input: LogoutAppUserMutationInput!) {

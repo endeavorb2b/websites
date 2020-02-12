@@ -1,18 +1,14 @@
 const identityX = require('./index');
-const { actionsRouter } = require('./routers');
+const routes = require('./routes');
 
 const { log } = console;
 
 module.exports = (app) => {
   const { site } = app.locals;
-  const idx = site.getAsObject('identityX');
-  if (idx.enabled && idx.uri && idx.appId) {
-    app.use(identityX({
-      uri: idx.uri,
-      appId: idx.appId,
-    }));
-    const mountTo = idx.mountTo || '/__idx';
-    app.use(mountTo, actionsRouter);
-    if (idx.debug) log(`IdentityX mounted on ${mountTo} using app ${idx.appId} (API: ${idx.uri})`);
+  const config = site.getAsObject('identityX');
+  if (config.appId) {
+    app.use(identityX(config));
+    app.use('/__idx', routes);
+    log(`IdentityX mounted on /__idx using app ${config.appId}`);
   }
 };

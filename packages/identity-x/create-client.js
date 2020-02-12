@@ -10,7 +10,6 @@ const rootConfig = {
 
 module.exports = ({
   req,
-  uri,
   token,
   appId,
   config,
@@ -31,7 +30,7 @@ module.exports = ({
     ...rootConfig,
     link: createHttpLink({
       ...linkConfig,
-      uri,
+      uri: process.env.IDENTITYX_GRAPHQL_URI || 'https://identity-x.io/graphql',
       fetch,
       headers,
     }),
