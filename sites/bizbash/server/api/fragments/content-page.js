@@ -41,6 +41,7 @@ module.exports = gql`
       }
     }
     ... on ContentVenue {
+      enableRmi
       images(input:{ pagination: { limit: 100 }, sort: { order: values } }) {
         edges {
           node {
