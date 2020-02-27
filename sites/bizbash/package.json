@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/bizbash",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -16,7 +16,7 @@
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.3",
     "@endeavorb2b/base-website-common": "^0.14.0",
-    "@endeavorb2b/base-website-inquiry": "^0.14.0",
+    "@endeavorb2b/base-website-inquiry": "^0.14.2",
     "@endeavorb2b/base-website-native-x": "^0.14.0",
     "@endeavorb2b/base-website-themes": "^0.14.0",
     "@newrelic/native-metrics": "^4.1.0",
