@@ -118,5 +118,8 @@ module.exports = {
     sendBcc: 'emailactivity@cygnus.com',
     logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
     bgColor: '#25292d', // @todo Move to styling!
+    blockedEmails: [
+      'salmanibrahim010@gmail.com',
+    ],
   },
 };
