@@ -14,8 +14,12 @@ module.exports = ({ queryFragment, notification, confirmation }) => asyncRoute(a
     sendTo: to,
     directSend,
   } = site.getAsObject('inquiry');
+  const blocks = site.getAsArray('inquiry.blockedEmails');
   const $global = buildMarkoGlobal(res);
   const { apollo, body: payload } = req;
+  if (payload.email && blocks.includes(payload.email)) {
+    throw new Error(`The email address "${payload.email}" cannot be used.`);
+  }
   const content = await contentLoader(apollo, { id: req.params.id, queryFragment });
   const emails = getAsArray(content, 'inquiryEmails');
   const addresses = {
