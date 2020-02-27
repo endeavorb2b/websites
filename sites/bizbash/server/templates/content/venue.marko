@@ -41,7 +41,8 @@ $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
     </div>
 
     <div class="row">
-      <div class="col-lg-8">
+      $ const containerClass = content.enableRmi ? 'col-lg-8' : 'col';
+      <div class=containerClass>
         <endeavor-content-block-page-body
           content=content
           display-primary-image=false
@@ -52,9 +53,11 @@ $ const spaces = getAsArray(content, 'spaces.edges').map(({ node }) => node);
         </div>
       </div>
 
-      <aside class="col-lg-4 page-right-rail">
-        <bizbash-inquiry-form content=content />
-      </aside>
+      <if(content.enableRmi)>
+        <aside class="col-lg-4 page-right-rail">
+          <bizbash-inquiry-form content=content />
+        </aside>
+      </if>
     </div>
   </div>
 
