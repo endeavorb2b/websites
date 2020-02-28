@@ -247,6 +247,16 @@ body {
       }
     }
   }
+
+  &--secondary {
+    #{ $self } {
+      &__link {
+        &--white {
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 .item {
