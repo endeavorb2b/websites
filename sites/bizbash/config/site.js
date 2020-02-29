@@ -39,10 +39,12 @@ module.exports = {
       items: [
         { href: '/gathergeeks', label: 'GatherGeeks' },
         { href: '/page/our-events', label: 'Our Events & Awards' },
-        { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
+        { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz', target: '_blank' },
         { href: '/venue-directory', label: 'Find A Venue', modifiers: ['white'] },
         { href: '/supplier-directory', label: 'Find Suppliers', modifiers: ['white'] },
         { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
+        { href: 'http://www.masterplanneronline.com', label: 'Masterplanner', target: '_blank' },
+        { href: 'https://jobs.bizbash.com', label: 'Careers', target: '_blank' },
       ],
     },
     footer: {
@@ -70,11 +72,13 @@ module.exports = {
           { href: '/eventplannerschoice', label: "Event Planner's Choice" },
           { href: '/gathergeeks', label: 'GatherGeeks' },
           { href: '/page/our-events', label: 'Our Events & Awards' },
-          { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz' },
+          { href: 'http://go2.bizbash.com/Get-Listed-Directory', label: 'List Your Biz', target: '_blank' },
           { href: '/venue-directory', label: 'Find A Venue' },
           { href: '/supplier-directory', label: 'Find Suppliers' },
           { href: '/bermuda', label: 'Bermuda Event Planner\'s Guide' },
           { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
+          { href: 'http://www.masterplanneronline.com', label: 'Masterplanner', target: '_blank' },
+          { href: 'https://jobs.bizbash.com', label: 'Careers', target: '_blank' },
         ],
       },
       userTools: {
