@@ -124,6 +124,7 @@ module.exports = {
     bgColor: '#25292d', // @todo Move to styling!
     blockedEmails: [
       'salmanibrahim010@gmail.com',
+      'elhameedhamza@gmail.com',
     ],
   },
 };
