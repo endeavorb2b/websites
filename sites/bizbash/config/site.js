@@ -125,6 +125,7 @@ module.exports = {
     blockedEmails: [
       'salmanibrahim010@gmail.com',
       'elhameedhamza@gmail.com',
+      'elhameedhamza95@gmail.com',
     ],
   },
 };
