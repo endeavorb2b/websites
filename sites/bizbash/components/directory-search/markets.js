@@ -28,6 +28,10 @@ module.exports = [
     name: 'Dallas/Fort Worth',
   },
   {
+    id: 3146671,
+    name: 'Denver',
+  },
+  {
     id: 3127841,
     name: 'Edmonton',
   },
