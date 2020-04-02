@@ -126,6 +126,7 @@ module.exports = {
       'salmanibrahim010@gmail.com',
       'elhameedhamza@gmail.com',
       'elhameedhamza95@gmail.com',
+      'alahmadianaktor@gmail.com',
     ],
   },
 };
