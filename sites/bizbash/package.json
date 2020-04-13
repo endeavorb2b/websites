@@ -1,6 +1,6 @@
 {
   "name": "@endeavorb2b/bizbash",
-  "version": "0.14.11",
+  "version": "0.15.0",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
@@ -15,10 +15,10 @@
     "@base-cms/marko-web": "^0.10.11",
     "@base-cms/object-path": "^0.10.0",
     "@base-cms/web-cli": "^0.10.11",
-    "@endeavorb2b/base-website-common": "^0.14.3",
-    "@endeavorb2b/base-website-inquiry": "^0.14.3",
-    "@endeavorb2b/base-website-native-x": "^0.14.0",
-    "@endeavorb2b/base-website-themes": "^0.14.3",
+    "@endeavorb2b/base-website-common": "^0.15.0",
+    "@endeavorb2b/base-website-inquiry": "^0.15.0",
+    "@endeavorb2b/base-website-native-x": "^0.15.0",
+    "@endeavorb2b/base-website-themes": "^0.15.0",
     "@newrelic/native-metrics": "^4.1.0",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
