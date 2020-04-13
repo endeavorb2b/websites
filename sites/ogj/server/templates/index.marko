@@ -1,15 +1,15 @@
-import { getAsObject } from '@base-cms/object-path';
-import getAdUnit from '@endeavorb2b/base-website-common/utils/gam/get-adunit';
-import hierarchyAliases from '@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases';
+import { getAsObject } from "@base-cms/object-path";
+import getAdUnit from "@endeavorb2b/base-website-common/utils/gam/get-adunit";
+import hierarchyAliases from "@endeavorb2b/base-website-common/utils/website-section/hierarchy-aliases";
 
 $ const { site } = out.global;
-$ const section = getAsObject(data, 'section');
+$ const section = getAsObject(data, "section");
 $ const aliases = hierarchyAliases(section);
-$ const sections = site.getAsArray('homeSections');
+$ const sections = site.getAsArray("homeSections");
 $ const adSlots = {
-  'gpt-ad-lb1': getAdUnit(site, { name: 'lb1', aliases }),
-  'gpt-ad-rail1': getAdUnit(site, { name: 'rail1', aliases, size: [300, 250] }),
-  'gpt-ad-rail2': getAdUnit(site, { name: 'rail2', aliases, size: [300, 600] }),
+  "gpt-ad-lb1": getAdUnit(site, { name: "lb1", aliases }),
+  "gpt-ad-rail1": getAdUnit(site, { name: "rail1", aliases, size: [300, 250] }),
+  "gpt-ad-rail2": getAdUnit(site, { name: "rail2", aliases, size: [300, 600] }),
 };
 
 <theme-default-website-section-layout section=section>
@@ -111,7 +111,7 @@ $ const adSlots = {
         header={ title: "General Interest", href: "/general-interest" }
         requires-image=false
         use-placeholder=false
-        native-x={ placement: 'list1', aliases: ['general-interest'], index: 3 }
+        native-x={ placement: "list1", aliases: ["general-interest"], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -121,7 +121,7 @@ $ const adSlots = {
         header={ title: "Exploration & Development", href: "/exploration-development" }
         requires-image=false
         use-placeholder=false
-        native-x={ placement: 'list1', aliases: ['exploration-development'], index: 3 }
+        native-x={ placement: "list1", aliases: ["exploration-development"], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -131,7 +131,7 @@ $ const adSlots = {
         header={ title: "Drilling & Production", href: "/drilling-production" }
         requires-image=false
         use-placeholder=false
-        native-x={ placement: 'list1', aliases: ['drilling-production'], index: 3 }
+        native-x={ placement: "list1", aliases: ["drilling-production"], index: 3 }
       />
     </div>
   </div>
@@ -144,7 +144,7 @@ $ const adSlots = {
         header={ title: "Refining & Processing", href: "/refining-processing" }
         requires-image=false
         use-placeholder=false
-        native-x={ placement: 'list1', aliases: ['refining-processing'], index: 3 }
+        native-x={ placement: "list1", aliases: ["refining-processing"], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
@@ -154,28 +154,29 @@ $ const adSlots = {
         header={ title: "Pipelines & Transportation", href: "/pipelines-transportation" }
         requires-image=false
         use-placeholder=false
-        native-x={ placement: 'list1', aliases: ['pipelines-transportation'], index: 3 }
+        native-x={ placement: "list1", aliases: ["pipelines-transportation"], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
       <endeavor-content-query-section-list
         limit=4
-        section-alias="editors-perspective"
+        section-alias="covid-19"
         requires-image=false
         use-placeholder=false
-        header={ title: "Editor's Perspective", href: "/editors-perspective" }
+        header={ title: "COVID-19", href: "/covid-19" }
       />
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-4 mb-block">
-      <endeavor-published-content-query-list
-        query={
-          contentTypes: ["Video"],
-          limit: 4,
-        }
-        header={ title: "Videos", href: "/videos" }
+      <endeavor-content-query-section-list
+        limit=4
+        section-alias="pipelines-transportation/lng"
+        header={ title: "LNG", href: "/pipelines-transportation/lng" }
+        requires-image=false
+        use-placeholder=false
+        native-x={ placement: "list1", aliases: ["pipelines-transportation/lng"], index: 3 }
       />
     </div>
     <div class="col-lg-4 mb-block">
