@@ -128,6 +128,9 @@ module.exports = {
       'elhameedhamza95@gmail.com',
       'alahmadianaktor@gmail.com',
       'zamansman@gmail.com',
+      'brand@weare4evr.com',
+      'hello@weare4evr.com',
+      'hello@weare4EVR.com',
     ],
   },
 };
