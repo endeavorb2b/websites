@@ -123,6 +123,7 @@ module.exports = {
     logo: 'https://base.imgix.net/files/base/bizbash/bzb/image/static/logo/site_logo.png?h=60',
     bgColor: '#25292d', // @todo Move to styling!
     blockedEmails: [
+      'salmanibhram@gmail.com',
       'salmanibrahim010@gmail.com',
       'elhameedhamza@gmail.com',
       'elhameedhamza95@gmail.com',
