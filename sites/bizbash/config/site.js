@@ -80,7 +80,7 @@ module.exports = {
           { href: 'http://www.masterplanneronline.com', label: 'Masterplanner', target: '_blank' },
           { href: 'https://jobs.bizbash.com', label: 'Careers', target: '_blank' },
           { href: '/production-strategy/virtual-events', label: 'Virtual Events' },
-      ],
+        ],
       },
       userTools: {
         label: 'User Tools',
