@@ -39,7 +39,10 @@ module.exports = [
     id: 2000031,
     name: 'Houston',
   },
-
+  {
+    id: 3148620,
+    name: 'International',
+  },
   {
     id: 2000024,
     name: 'Las Vegas',
