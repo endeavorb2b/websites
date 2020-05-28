@@ -45,6 +45,7 @@ module.exports = {
         { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
         { href: 'http://www.masterplanneronline.com', label: 'Masterplanner', target: '_blank' },
         { href: 'https://jobs.bizbash.com', label: 'Careers', target: '_blank' },
+        { href: 'https://www.bizbashvirtualeventguide.com/', label: 'Virtual Event Guide', target: '_blank' },
       ],
     },
     footer: {
