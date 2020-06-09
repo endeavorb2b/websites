@@ -1,7 +1,9 @@
 import { get, getAsObject } from '@base-cms/object-path';
 
+$ const { req } = out.global;
 $ const targeting = { ...getAsObject(input, 'targeting') };
 $ targeting.env = process.env.NODE_ENV;
+$ targeting.path = req.path;
 
 $ if (input.targetingIncludeUri) {
   targeting.uri = get(out, 'global.req.url');
