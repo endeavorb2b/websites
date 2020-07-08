@@ -86,7 +86,7 @@ module.exports = {
       userTools: {
         label: 'User Tools',
         items: [
-          { href: '/subscribe', label: 'Subscribe' },
+          { href: 'http://www.pages03.net/collinsonpublishing/BizBashBuzz/', label: 'Subscribe' },
           { href: '/page/advertise', label: 'Advertise' },
           { href: '/page/about-us', label: 'About Us' },
           { href: '/page/contact-us', label: 'Contact Us' },
