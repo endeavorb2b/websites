@@ -9,7 +9,7 @@ module.exports = [
   },
   {
     id: 2000029,
-    name: 'Austin',
+    name: 'Austin/San Antonio',
   },
   {
     id: 2000023,
