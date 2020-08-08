@@ -27,31 +27,11 @@ const namespace = process.argv[3];
 const sitePath = join('sites', site, 'package.json');
 const image = `endeavorb2b/website-${site}`;
 
-const error = (message) => {
+const error = async (message) => {
   log(`ERROR: ${message}`);
-  const text = `Deployment of \`${image}\` @ \`${version}\` to production FAILED!\n${message}`;
-  const payload = JSON.stringify({ attachments: [{ color: 'danger', text }] });
-  const req = https.request({
-    hostname: 'hooks.slack.com',
-    path: '/services/TDA6JTAKC/BGCT0SNGY/vJSPL4S2NQN8SDAjCPilP773',
-    port: 443,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Content-Length': payload.length,
-    }
-  }, (res) => {
-    res.on('data', () => {
-      log('Slack notified.');
-      process.exit(1);
-    });
-  });
-
-  req.on('error', e => log(e));
-  req.write(payload);
-  req.end();
-
-}
+  await spawnSync('npx', ['@base-cms/website-deployment-tool', 'notify-failed', message], { stdio: 'inherit' });
+  process.exit(1);
+};
 
 if (TRAVIS_TAG !== version) error(`Tagged version ${TRAVIS_TAG} differs from lerna version ${version}, aborting!`);
 if (!site) error('You must specify the site folder to deploy.');

@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-[[ $RANCHER_CLUSTERID = "c-rc5kp" ]] && ENVIRONMENT="staging" || ENVIRONMENT="production"
+[[ $RANCHER_CLUSTERID = "c-njflm" ]] && ENVIRONMENT="staging" || ENVIRONMENT="production"
 
 payload="{
   \"attachments\": [{

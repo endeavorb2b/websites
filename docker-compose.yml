@@ -13,38 +13,20 @@ x-node-defaults: &node
     - yarn-cache:/.yarn-cache
 
 x-env-defaults: &env
-  IDENTITYX_GRAPHQL_URI: ${IDENTITYX_GRAPHQL_URI-https://identity-x.io/graphql}
+  IDENTITYX_GRAPHQL_URI: ${IDENTITYX_GRAPHQL_URI-https://idx.parameter1.io/graphql}
   NEW_RELIC_ENABLED: ${NEW_RELIC_ENABLED-0}
   NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY-(unset)}
   NODE_ENV: development
   RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY-(unset)}
   SENDGRID_API_KEY: ${SENDGRID_API_KEY-(unset)}
-  SENDGRID_DEV_TO: developer@endeavorb2b.com
+  SENDGRID_DEV_TO: support@parameter1.com
   YARN_CACHE_FOLDER: /.yarn-cache
 
-x-env-aerilon: &env-aerilon
-  GRAPHQL_URI: ${GRAPHQL_URI-https://aerilon-v0x.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://aerilon-v0x.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://aerilon-v0x.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://aerilon-v0x.sitemaps.base-cms.io}
-
 x-env-caprica: &env-caprica
-  GRAPHQL_URI: ${GRAPHQL_URI-https://caprica-v0x.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://caprica-v0x.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://caprica-v0x.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://caprica-v0x.sitemaps.base-cms.io}
-
-x-env-picon: &env-picon
-  GRAPHQL_URI: ${GRAPHQL_URI-https://picon-v0x.graphql.base-cms.io}
-  OEMBED_URI: ${OEMBED_URI-https://picon-v0x.oembed.base-cms.io}
-  RSS_URI: ${RSS_URI-https://picon-v0x.rss.base-cms.io}
-  SITEMAPS_URI: ${SITEMAPS_URI-https://picon-v0x.sitemaps.base-cms.io}
-
-x-env-development: &env-development
-  GRAPHQL_URI: ${GRAPHQL_URI-http://host.docker.internal:10002}
-  OEMBED_URI: ${OEMBED_URI-http://host.docker.internal:10013}
-  RSS_URI: ${RSS_URI-http://host.docker.internal:10011}
-  SITEMAPS_URI: ${SITEMAPS_URI-http://host.docker.internal:10009}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://caprica.graphql.base.parameter1.com}
+  OEMBED_URI: ${OEMBED_URI-https://caprica.oembed.base.parameter1.com}
+  RSS_URI: ${RSS_URI-https://caprica.rss.base.parameter1.com}
+  SITEMAPS_URI: ${SITEMAPS_URI-https://caprica.sitemaps.base.parameter1.com}
 
 x-site-command: &site-cmd
   entrypoint: ["node_modules/.bin/basecms-website"]
@@ -82,21 +64,6 @@ services:
     command: ["run", "lint"]
     environment:
       <<: *env
-
-  ogj:
-    <<: *node
-    <<: *site-cmd
-    working_dir: /root/sites/ogj
-    environment:
-      <<: *env
-      <<: *env-aerilon
-      PORT: 80
-      EXPOSED_PORT: 12166
-      LIVERELOAD_PORT: 35166
-      TENANT_KEY: ebm_ogj
-    ports:
-      - "12166:80"
-      - "35166:35166"
 
   mundopmmi:
     <<: *node
