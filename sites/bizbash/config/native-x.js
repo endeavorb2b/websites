@@ -1,5 +1,5 @@
 module.exports = {
-  enabled: true,
+  enabled: false,
   uri: 'https://bbm.native-x.io',
   placements: {
     catering: {

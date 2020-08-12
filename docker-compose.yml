@@ -76,6 +76,8 @@ services:
       EXPOSED_PORT: 12189
       LIVERELOAD_PORT: 35189
       TENANT_KEY: pmmi_mundo
+      CDN_IMAGE_HOSTNAME: ${CDN_IMAGE_HOSTNAME-img.mundopmmi.com}
+      CDN_ASSET_HOSTNAME: ${CDN_ASSET_HOSTNAME-cdn.mundopmmi.com}
     ports:
       - "12189:80"
       - "35189:35189"
@@ -91,6 +93,8 @@ services:
       EXPOSED_PORT: 12190
       LIVERELOAD_PORT: 35190
       TENANT_KEY: bizbash_bzb
+      CDN_IMAGE_HOSTNAME: ${CDN_IMAGE_HOSTNAME-img.bizbash.com}
+      CDN_ASSET_HOSTNAME: ${CDN_ASSET_HOSTNAME-cdn.bizbash.com}
     ports:
       - "12190:80"
       - "35190:35190"
