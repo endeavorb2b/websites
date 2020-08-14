@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const querystring = require('querystring');
 
-const API_URI = 'https://nwmj632le8.execute-api.us-east-1.amazonaws.com/test';
+const API_URI = 'https://js3prmqswl.execute-api.us-east-1.amazonaws.com/production';
 
 module.exports = async ({
   phrase,
