@@ -1,6 +1,6 @@
 module.exports = {
   enabled: true,
-  uri: 'https://bbm.native-x.io',
+  uri: 'https://bizbash.native-x.parameter1.com',
   placements: {
     catering: {
       primary: { id: '5d4b04513bb2db00018cfa1a' },
