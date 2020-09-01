@@ -1,6 +1,6 @@
 {
   "name": "@parameter1-websites/bizbash",
-  "version": "0.15.18",
+  "version": "0.15.19",
   "private": true,
   "scripts": {
     "dev": "basecms-website dev index.js",
