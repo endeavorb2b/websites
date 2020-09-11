@@ -44,7 +44,7 @@ module.exports = {
         { href: '/supplier-directory', label: 'Find Suppliers', modifiers: ['white'] },
         { href: '/magazine/5b2a4e6c0305572b008b45ae', label: 'Our Publications' },
         { href: 'http://www.masterplanneronline.com', label: 'Masterplanner', target: '_blank' },
-        { href: 'https://www.bizbashvirtualeventguide.com/', label: 'Virtual Event Guide', target: '_blank' },
+        { href: 'https://www.bizbashvirtualsitevisits.com', label: 'Virtual Site Visits', target: '_blank' },
       ],
     },
     footer: {
