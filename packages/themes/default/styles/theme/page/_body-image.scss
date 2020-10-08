@@ -17,4 +17,13 @@
       height: auto;
     }
   }
+
+  .primary-image-inline {
+    float: right;
+    max-width: 250px;
+    margin-top: calc((#{$theme-page-body-line-height} - 1) * .5em);
+    margin-bottom: 0;
+    margin-left: .75rem;
+  }
+
 }
