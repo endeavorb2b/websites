@@ -4,8 +4,8 @@ const section = require('../templates/website-section');
 const eventplannerschoiceTemplate = require('../templates/website-section/eventplannerschoice');
 const gatherGeeksTemplate = require('../templates/website-section/gathergeeks');
 const productionStrategyTemplate = require('../templates/website-section/production-strategy');
-const styleDecorTemplate = require('../templates/website-section/style-decor');
-const cateringTemplate = require('../templates/website-section/catering');
+const cateringDesignTemplate = require('../templates/website-section/catering-design');
+const eventTechVirtualTemplate = require('../templates/website-section/event-tech-virtual');
 const supplierDirectory = require('../templates/website-section/supplier-directory');
 const venueDirectory = require('../templates/website-section/venue-directory');
 const bermudaTemplate = require('../templates/website-section/bermuda');
@@ -39,13 +39,13 @@ module.exports = (app) => {
     queryFragment,
   }));
 
-  app.get('/:alias(style-decor)', withWebsiteSection({
-    template: styleDecorTemplate,
+  app.get('/:alias(catering-design)', withWebsiteSection({
+    template: cateringDesignTemplate,
     queryFragment,
   }));
 
-  app.get('/:alias(catering)', withWebsiteSection({
-    template: cateringTemplate,
+  app.get('/:alias(event-tech-virtual)', withWebsiteSection({
+    template: eventTechVirtualTemplate,
     queryFragment,
   }));
 
