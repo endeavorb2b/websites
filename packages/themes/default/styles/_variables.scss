@@ -552,6 +552,7 @@ $theme-site-header-breakpoints: map-merge(
 $theme-site-header-box-shadow:  $theme-box-shadow-lg !default;
 $theme-site-header-font-family: $theme-font-family-sans-serif !default;
 $theme-site-header-opacity:     .98 !default;
+$theme-site-header-z-index: 500000 !default;
 
 $theme-site-navbar-dark-color:          rgba($white, .75) !default;
 $theme-site-navbar-dark-hover-color:    $white !default;
@@ -561,7 +562,6 @@ $theme-site-navbar-light-hover-color:   $black !default;
 $theme-site-navbar-light-active-color:  $theme-site-navbar-light-hover-color !default;
 $theme-site-navbar-padding-x:           16px !default;
 $theme-site-navbar-padding-y:           0 !default;
-$theme-site-header-z-index: 500000 !default;
 
 $theme-site-navbar-dark-colors: (
   default: $theme-site-navbar-dark-color,
