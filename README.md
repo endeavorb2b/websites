@@ -19,7 +19,7 @@ Each site managed by Endeavor Business Media resides within the `sites/` directo
 ### Requirements
 This project has a hard dependency on [Docker Compose](https://docs.docker.com/compose/overview/) (minmum Docker version 18.06.0). The best way to get Docker is to install [Docker Desktop](https://www.docker.com/products/docker-desktop) -- [see this](https://github.com/cygnusb2b/base-platform/wiki/Docker-&-Kitematic) for a high level overview of using Docker and Compose for development.
 
-Docker Compose provides a homogenous build and development environment across all platforms, meaning code and dependencies run the same developing on Linux, MacOS, and Windows, and match the same environment used in production.
+Docker Compose provides a homogeneous build and development environment across all platforms, meaningful codes and dependencies run the same development on Linux, MacOS, and Windows, and match the same environment used in production.
 
 Additionally, we recommend the following tools/utilities:
 - [VSCode](https://code.visualstudio.com/) - a modular IDE
