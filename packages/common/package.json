@@ -18,7 +18,7 @@
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",
     "helmet": "^3.16.0",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^3.1.1",
     "scrollmagic": "^2.0.7",
     "vue-recaptcha": "^1.1.1"
   },
